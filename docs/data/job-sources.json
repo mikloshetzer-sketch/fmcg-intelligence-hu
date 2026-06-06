@@ -1,0 +1,182 @@
+[
+  {
+    "id": "lidl",
+    "company": "Lidl",
+    "sources": [
+      {
+        "name": "Career Site",
+        "type": "career_site",
+        "url": "https://karrier.lidl.hu",
+        "priority": 1,
+        "confidence": "high",
+        "enabled": true
+      },
+      {
+        "name": "Profession",
+        "type": "job_portal",
+        "url": "https://www.profession.hu",
+        "priority": 2,
+        "confidence": "high",
+        "enabled": true
+      },
+      {
+        "name": "LinkedIn Jobs",
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/jobs",
+        "priority": 3,
+        "confidence": "medium",
+        "enabled": true
+      },
+      {
+        "name": "Indeed",
+        "type": "indeed",
+        "url": "https://hu.indeed.com",
+        "priority": 4,
+        "confidence": "medium",
+        "enabled": true
+      }
+    ]
+  },
+  {
+    "id": "aldi",
+    "company": "ALDI",
+    "sources": [
+      {
+        "name": "Career Site",
+        "type": "career_site",
+        "url": "https://www.aldi-karrier.hu",
+        "priority": 1,
+        "confidence": "high",
+        "enabled": true
+      },
+      {
+        "name": "Profession",
+        "type": "job_portal",
+        "url": "https://www.profession.hu",
+        "priority": 2,
+        "confidence": "high",
+        "enabled": true
+      },
+      {
+        "name": "LinkedIn Jobs",
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/jobs",
+        "priority": 3,
+        "confidence": "medium",
+        "enabled": true
+      }
+    ]
+  },
+  {
+    "id": "spar",
+    "company": "SPAR",
+    "sources": [
+      {
+        "name": "Career Site",
+        "type": "career_site",
+        "url": "https://karrier.spar.hu",
+        "priority": 1,
+        "confidence": "high",
+        "enabled": true
+      },
+      {
+        "name": "Profession",
+        "type": "job_portal",
+        "url": "https://www.profession.hu",
+        "priority": 2,
+        "confidence": "high",
+        "enabled": true
+      },
+      {
+        "name": "LinkedIn Jobs",
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/jobs",
+        "priority": 3,
+        "confidence": "medium",
+        "enabled": true
+      }
+    ]
+  },
+  {
+    "id": "tesco",
+    "company": "Tesco",
+    "sources": [
+      {
+        "name": "Career Site",
+        "type": "career_site",
+        "url": "https://tesco-karrier.hu",
+        "priority": 1,
+        "confidence": "high",
+        "enabled": true
+      },
+      {
+        "name": "Profession",
+        "type": "job_portal",
+        "url": "https://www.profession.hu",
+        "priority": 2,
+        "confidence": "high",
+        "enabled": true
+      },
+      {
+        "name": "LinkedIn Jobs",
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/jobs",
+        "priority": 3,
+        "confidence": "medium",
+        "enabled": true
+      }
+    ]
+  },
+  {
+    "id": "penny",
+    "company": "PENNY",
+    "sources": [
+      {
+        "name": "Career Site",
+        "type": "career_site",
+        "url": "https://karrier.penny.hu",
+        "priority": 1,
+        "confidence": "high",
+        "enabled": true
+      },
+      {
+        "name": "Profession",
+        "type": "job_portal",
+        "url": "https://www.profession.hu",
+        "priority": 2,
+        "confidence": "high",
+        "enabled": true
+      }
+    ]
+  },
+  {
+    "id": "auchan",
+    "company": "Auchan",
+    "sources": [
+      {
+        "name": "Career Site",
+        "type": "career_site",
+        "url": "https://auchan.hu/karrier",
+        "priority": 1,
+        "confidence": "high",
+        "enabled": true
+      },
+      {
+        "name": "Profession",
+        "type": "job_portal",
+        "url": "https://www.profession.hu",
+        "priority": 2,
+        "confidence": "high",
+        "enabled": true
+      },
+      {
+        "name": "LinkedIn Jobs",
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/jobs",
+        "priority": 3,
+        "confidence": "medium",
+        "enabled": true
+      }
+    ]
+  }
+]
