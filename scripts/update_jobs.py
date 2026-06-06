@@ -27,14 +27,28 @@ REQUEST_TIMEOUT = 20
 REQUEST_DELAY_SECONDS = 2
 
 
+JOB_TERMS = [
+    "eladó", "pénztáros", "árufeltöltő", "bolti munkatárs", "boltimunkatárs",
+    "hentes", "csemegepult eladó", "csemegepultos", "pék", "cukrász",
+    "pékcsomagoló", "pikker", "komissiózó", "raktáros", "raktári dolgozó",
+    "targoncavezető", "műszaki eladó", "higiénikus", "higiéniai munkatárs",
+    "üzletvezető", "üzletvezető-helyettes", "boltvezető", "boltvezető-helyettes",
+    "műszakvezető", "részlegvezető", "osztályvezető", "manager", "menedzser",
+    "specialista", "asszisztens", "beszerző", "kontroller", "elemző", "hr munkatárs"
+]
+
+
 KEYWORDS = {
     "store": [
-        "eladó", "pénztáros", "árufeltöltő", "bolti", "üzleti", "áruházi",
-        "csemegepult", "pékáru", "zöldség", "frissáru", "hentes"
+        "eladó", "pénztáros", "árufeltöltő", "bolti", "boltimunkatárs",
+        "bolti munkatárs", "áruházi", "csemegepult", "csemegepultos",
+        "hentes", "pék", "cukrász", "pékcsomagoló", "műszaki eladó",
+        "higiénikus", "higiéniai munkatárs", "frissáru"
     ],
     "warehouse": [
-        "raktár", "raktáros", "komissiózó", "logisztika", "targonca",
-        "árukiadó", "árufogadó", "kiszállítás"
+        "raktár", "raktáros", "raktári dolgozó", "komissiózó", "pikker",
+        "logisztika", "targonca", "targoncavezető", "árukiadó",
+        "árufogadó", "kiszállítás"
     ],
     "office": [
         "iroda", "központ", "beszerző", "kontroller", "marketing",
@@ -42,9 +56,22 @@ KEYWORDS = {
     ],
     "management": [
         "vezető", "manager", "menedzser", "műszakvezető", "üzletvezető",
+        "üzletvezető-helyettes", "boltvezető", "boltvezető-helyettes",
         "áruházvezető", "osztályvezető", "részlegvezető", "team leader"
     ]
 }
+
+
+BAD_FRAGMENTS = [
+    "süti", "cookie", "adatvédelem", "impresszum", "rendezvényeink",
+    "történetünk", "kapcsolat", "juttatásaink", "díjaink",
+    "kiválasztási folyamat", "betanulás", "pályázatodhoz",
+    "munkáltató", "életkörülménye", "karrier nálunk",
+    "értékeink", "jelentkezési folyamat", "adatkezelés",
+    "felhasználási feltételek", "hírlevél", "social media",
+    "facebook", "linkedin", "youtube", "instagram", "megnézem az állást",
+    "részletek elrejtése", "előresorolva", "állás dátuma"
+]
 
 
 def load_json(path, default):
@@ -98,36 +125,60 @@ def make_search_url(source_type, company):
     return None
 
 
+def normalize_title(title):
+    title = title.strip(" -|•,.;:")
+    title = re.sub(r"\s+", " ", title)
+    title = re.sub(r"^(ma|tegnap|új|állás|részletek)\s+", "", title, flags=re.I)
+    title = title.strip(" -|•,.;:")
+    return title
+
+
+def is_valid_job_title(title, company):
+    if not title:
+        return False
+
+    title = normalize_title(title)
+    lower = title.lower()
+
+    if len(title) < 4:
+        return False
+
+    if len(title) > 95:
+        return False
+
+    if company.lower() in lower and len(title) < 18:
+        return False
+
+    if any(bad in lower for bad in BAD_FRAGMENTS):
+        return False
+
+    if not any(term in lower for term in JOB_TERMS):
+        return False
+
+    word_count = len(title.split())
+    if word_count > 9:
+        return False
+
+    return True
+
+
 def extract_possible_job_titles(html, company):
     text = clean_text(html)
     titles = []
 
-    patterns = [
-        r"([A-ZÁÉÍÓÖŐÚÜŰa-záéíóöőúüű0-9 \-/]{4,90}(?:eladó|pénztáros|árufeltöltő|raktáros|vezető|manager|specialista|asszisztens|munkatárs)[A-ZÁÉÍÓÖŐÚÜŰa-záéíóöőúüű0-9 \-/]{0,90})",
-        r"((?:eladó|pénztáros|árufeltöltő|raktáros|vezető|manager|specialista|asszisztens|munkatárs)[A-ZÁÉÍÓÖŐÚÜŰa-záéíóöőúüű0-9 \-/]{4,90})"
-    ]
+    escaped_terms = [re.escape(term) for term in sorted(JOB_TERMS, key=len, reverse=True)]
+    term_pattern = "|".join(escaped_terms)
 
-    bad_fragments = [
-        "süti", "cookie", "adatvédelem", "impresszum", "rendezvényeink",
-        "történetünk", "kapcsolat", "juttatásaink", "díjaink",
-        "kiválasztási folyamat", "betanulás", "pályázatodhoz"
+    patterns = [
+        rf"([A-ZÁÉÍÓÖŐÚÜŰa-záéíóöőúüű0-9 /\-]{0,35}(?:{term_pattern})[A-ZÁÉÍÓÖŐÚÜŰa-záéíóöőúüű0-9 /\-]{{0,45}})",
+        r"([A-ZÁÉÍÓÖŐÚÜŰa-záéíóöőúüű0-9 /\-]{3,70}\s-\s[A-ZÁÉÍÓÖŐÚÜŰa-záéíóöőúüű0-9 /\-]{3,35})"
     ]
 
     for pattern in patterns:
         for match in re.findall(pattern, text, flags=re.I):
-            title = match.strip(" -|•,.;:")
-            lower = title.lower()
+            title = normalize_title(match)
 
-            if len(title) < 4:
-                continue
-
-            if len(title) > 140:
-                continue
-
-            if company.lower() in lower:
-                continue
-
-            if any(bad in lower for bad in bad_fragments):
+            if not is_valid_job_title(title, company):
                 continue
 
             titles.append(title)
@@ -141,14 +192,10 @@ def extract_possible_job_titles(html, company):
             unique.append(title)
             seen.add(key)
 
-    return unique[:40]
+    return unique[:50]
 
 
 def extract_count_hint(html):
-    """
-    Count hint is only a weak helper.
-    It must not accept years like 2024/2025/2026 as job counts.
-    """
     text = clean_text(html).lower()
 
     patterns = [
@@ -288,7 +335,7 @@ def collect_from_source(company_id, company_name, source):
             "source_type": source_type,
             "title": title,
             "category": category,
-            "location": None,
+            "location": extract_location_from_title(title),
             "salary_min_huf": salary["salary_min_huf"] if salary else None,
             "salary_max_huf": salary["salary_max_huf"] if salary else None,
             "salary_visible": salary is not None,
@@ -303,6 +350,26 @@ def collect_from_source(company_id, company_name, source):
 
     time.sleep(REQUEST_DELAY_SECONDS)
     return result
+
+
+def extract_location_from_title(title):
+    if " - " not in title:
+        return None
+
+    parts = [p.strip() for p in title.split(" - ") if p.strip()]
+
+    if len(parts) < 2:
+        return None
+
+    possible_location = parts[-1]
+
+    if len(possible_location) > 40:
+        return None
+
+    if any(term in possible_location.lower() for term in JOB_TERMS):
+        return None
+
+    return possible_location
 
 
 def summarize_company(company, source_results, collected_at):
@@ -346,11 +413,7 @@ def summarize_company(company, source_results, collected_at):
     ]
 
     parsed_postings_count = len(postings)
-
-    total_verified_ads = parsed_postings_count
-
     external_count_hint = max(count_hints) if count_hints else None
-
     salary_visible_ads = sum(1 for p in postings if p.get("salary_visible") is True)
 
     return {
@@ -358,7 +421,7 @@ def summarize_company(company, source_results, collected_at):
         "company": company_name,
         "snapshot_date": collected_at,
 
-        "total_verified_ads": total_verified_ads,
+        "total_verified_ads": parsed_postings_count,
         "parsed_postings_count": parsed_postings_count,
         "external_count_hint": external_count_hint,
 
@@ -455,7 +518,7 @@ def main():
         "postings_parsed": len(all_postings),
         "history_file": f"{month_name}.json",
         "raw_file": f"{month_name}.json",
-        "mode": "weekly_preliminary_public_web_collection_fixed_count_logic"
+        "mode": "weekly_public_web_collection_stricter_title_filter"
     }
 
     save_json(STATUS_FILE, status)
