@@ -1,0 +1,226 @@
+[
+  {
+    "source_id": "company_career_site",
+    "source_name": "Vállalati karrieroldal",
+    "tier": 1,
+    "confidence_score": 100,
+    "source_type": "primary",
+    "data_available": {
+      "active_job_count": true,
+      "position_title": true,
+      "location": true,
+      "salary": "sometimes",
+      "benefits": true,
+      "working_hours": true,
+      "requirements": true,
+      "reviews": false
+    },
+    "automation_feasibility": "medium",
+    "recommended_frequency": "monthly",
+    "risk_note": "Minden vállalat karrieroldala eltérő szerkezetű, ezért cégenként külön parser kellhet."
+  },
+  {
+    "source_id": "profession",
+    "source_name": "Profession.hu",
+    "tier": 2,
+    "confidence_score": 95,
+    "source_type": "job_portal",
+    "data_available": {
+      "active_job_count": true,
+      "position_title": true,
+      "location": true,
+      "salary": "sometimes",
+      "benefits": true,
+      "working_hours": true,
+      "requirements": true,
+      "reviews": false
+    },
+    "automation_feasibility": "medium",
+    "recommended_frequency": "monthly",
+    "risk_note": "A találatszám és cégnév alapján jól használható, de duplikáció és közvetítői hirdetés előfordulhat."
+  },
+  {
+    "source_id": "linkedin_jobs",
+    "source_name": "LinkedIn Jobs",
+    "tier": 2,
+    "confidence_score": 90,
+    "source_type": "job_portal",
+    "data_available": {
+      "active_job_count": true,
+      "position_title": true,
+      "location": true,
+      "salary": "rare",
+      "benefits": "sometimes",
+      "working_hours": "sometimes",
+      "requirements": true,
+      "reviews": false
+    },
+    "automation_feasibility": "low",
+    "recommended_frequency": "monthly",
+    "risk_note": "Jó a fehérgalléros és központi pozíciókhoz, de automatizált lekérés korlátozott lehet."
+  },
+  {
+    "source_id": "indeed_jobs",
+    "source_name": "Indeed Jobs",
+    "tier": 2,
+    "confidence_score": 85,
+    "source_type": "job_portal",
+    "data_available": {
+      "active_job_count": true,
+      "position_title": true,
+      "location": true,
+      "salary": "sometimes",
+      "benefits": "sometimes",
+      "working_hours": "sometimes",
+      "requirements": true,
+      "reviews": false
+    },
+    "automation_feasibility": "medium-low",
+    "recommended_frequency": "monthly",
+    "risk_note": "Hasznos másodlagos állásforrás, de duplikáció és régi hirdetés előfordulhat."
+  },
+  {
+    "source_id": "facebook_jobs",
+    "source_name": "Facebook karrier- és álláshirdetések",
+    "tier": 2,
+    "confidence_score": 80,
+    "source_type": "social_media",
+    "data_available": {
+      "active_job_count": "sometimes",
+      "position_title": true,
+      "location": true,
+      "salary": "rare",
+      "benefits": "sometimes",
+      "working_hours": "sometimes",
+      "requirements": "sometimes",
+      "reviews": false,
+      "campaign_activity": true
+    },
+    "automation_feasibility": "low",
+    "recommended_frequency": "monthly",
+    "risk_note": "Erős helyi és kampányjellegű forrás, de automatizálása nehéz és a struktúra nem egységes."
+  },
+  {
+    "source_id": "jooble",
+    "source_name": "Jooble",
+    "tier": 3,
+    "confidence_score": 70,
+    "source_type": "aggregator",
+    "data_available": {
+      "active_job_count": true,
+      "position_title": true,
+      "location": true,
+      "salary": "sometimes",
+      "benefits": "sometimes",
+      "working_hours": "sometimes",
+      "requirements": "sometimes",
+      "reviews": false
+    },
+    "automation_feasibility": "medium",
+    "recommended_frequency": "monthly",
+    "risk_note": "Aggregátor, ezért duplikációk és régi hirdetések előfordulhatnak. Kontrollforrásként jó."
+  },
+  {
+    "source_id": "careerjet",
+    "source_name": "Careerjet",
+    "tier": 3,
+    "confidence_score": 68,
+    "source_type": "aggregator",
+    "data_available": {
+      "active_job_count": true,
+      "position_title": true,
+      "location": true,
+      "salary": "sometimes",
+      "benefits": "sometimes",
+      "working_hours": "sometimes",
+      "requirements": "sometimes",
+      "reviews": false
+    },
+    "automation_feasibility": "medium",
+    "recommended_frequency": "monthly",
+    "risk_note": "Másodlagos aggregátor. Elsősorban kontroll- és összevetési forrásként érdemes használni."
+  },
+  {
+    "source_id": "jobrapido",
+    "source_name": "Jobrapido",
+    "tier": 3,
+    "confidence_score": 65,
+    "source_type": "aggregator",
+    "data_available": {
+      "active_job_count": true,
+      "position_title": true,
+      "location": true,
+      "salary": "rare",
+      "benefits": "sometimes",
+      "working_hours": "sometimes",
+      "requirements": "sometimes",
+      "reviews": false
+    },
+    "automation_feasibility": "medium-low",
+    "recommended_frequency": "monthly",
+    "risk_note": "Aggregátor jelleg miatt csak kiegészítő forrásként javasolt."
+  },
+  {
+    "source_id": "glassdoor",
+    "source_name": "Glassdoor",
+    "tier": 4,
+    "confidence_score": 75,
+    "source_type": "employer_review",
+    "data_available": {
+      "active_job_count": false,
+      "position_title": false,
+      "location": false,
+      "salary": "sometimes",
+      "benefits": "sometimes",
+      "working_hours": false,
+      "requirements": false,
+      "reviews": true,
+      "rating": true
+    },
+    "automation_feasibility": "low",
+    "recommended_frequency": "quarterly",
+    "risk_note": "Reputációs és dolgozói értékelési forrás, nem elsődleges álláshirdetési adatforrás."
+  },
+  {
+    "source_id": "indeed_reviews",
+    "source_name": "Indeed Reviews",
+    "tier": 4,
+    "confidence_score": 72,
+    "source_type": "employer_review",
+    "data_available": {
+      "active_job_count": false,
+      "position_title": false,
+      "location": false,
+      "salary": "sometimes",
+      "benefits": "sometimes",
+      "working_hours": false,
+      "requirements": false,
+      "reviews": true,
+      "rating": true
+    },
+    "automation_feasibility": "low",
+    "recommended_frequency": "quarterly",
+    "risk_note": "Dolgozói értékelésekhez és reputációs trendekhez használható, de nem helyettesíti a hivatalos HR adatokat."
+  },
+  {
+    "source_id": "kununu",
+    "source_name": "Kununu",
+    "tier": 4,
+    "confidence_score": 70,
+    "source_type": "employer_review",
+    "data_available": {
+      "active_job_count": false,
+      "position_title": false,
+      "location": false,
+      "salary": "sometimes",
+      "benefits": "sometimes",
+      "working_hours": false,
+      "requirements": false,
+      "reviews": true,
+      "rating": true
+    },
+    "automation_feasibility": "low",
+    "recommended_frequency": "quarterly",
+    "risk_note": "Főként reputációs háttérforrásként kezelendő."
+  }
+]
