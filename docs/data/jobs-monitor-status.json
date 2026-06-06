@@ -2,8 +2,18 @@
   "last_update": "2026-06-06",
   "companies_tracked": 6,
   "summaries_written": 6,
-  "postings_parsed": 52,
   "history_file": "2026-06.json",
   "raw_file": "2026-06.json",
-  "mode": "weekly_public_web_collection_hybrid_fmcg_parser_v3"
+  "mode": "multi_source_portal_count_monitor_v1",
+  "active_portals": [
+    "Profession",
+    "Jobline",
+    "CVOnline",
+    "Jooble"
+  ],
+  "temporarily_disabled": [
+    "career_site",
+    "linkedin",
+    "indeed"
+  ]
 }
