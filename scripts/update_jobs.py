@@ -21,10 +21,22 @@ SOURCES_FILE = DATA_DIR / "job-sources.json"
 JOBS_FILE = DATA_DIR / "jobs.json"
 CURRENT_POSTINGS_FILE = DATA_DIR / "job-postings-current.json"
 STATUS_FILE = DATA_DIR / "jobs-monitor-status.json"
+EMPLOYER_REVIEWS_FILE = DATA_DIR / "employer-reviews.json"
+BENEFITS_FILE = DATA_DIR / "benefits.json"
 
 USER_AGENT = "Mozilla/5.0 (compatible; FMCG-Intelligence-Hungary/1.0)"
 REQUEST_TIMEOUT = 20
 REQUEST_DELAY_SECONDS = 2
+
+
+PROFESSION_COMPANY_URLS = {
+    "lidl": "https://www.profession.hu/allasok/lidl-magyarorszag-bt/1,0,0,0,0,0,0,0,0,0,5644",
+    "aldi": "https://www.profession.hu/allasok/aldi-magyarorszag-elelmiszer-bt/1,0,0,0,0,0,0,0,0,0,43793",
+    "spar": "https://www.profession.hu/allasok/1,0,0,0,0,0,0,0,0,0,4719_112707",
+    "tesco": "https://www.profession.hu/allasok/tesco-global-zrt/1,0,0,0,0,0,0,0,0,0,3710",
+    "penny": "https://www.profession.hu/allasok/1,0,0,penny%401%401?keywordsearch",
+    "auchan": "https://www.profession.hu/allasok/auchan-retail-magyarorszag/1,0,0,0,0,0,0,0,0,0,7267"
+}
 
 
 FMCG_JOB_TERMS = [
@@ -105,6 +117,19 @@ CATEGORY_KEYWORDS = {
 }
 
 
+BENEFIT_KEYWORDS = {
+    "cafeteria": ["cafeteria", "szép kártya", "szep kártya"],
+    "commuting_support": ["munkába járás", "bejárás támogatás", "utazási támogatás", "bérlet támogatás"],
+    "bonus": ["bónusz", "jutalom", "prémium"],
+    "health_insurance": ["egészségbiztosítás", "magánegészségügy", "egészségügyi biztosítás"],
+    "sport_support": ["sport támogatás", "sportolási támogatás", "sport"],
+    "life_insurance": ["életbiztosítás", "balesetbiztosítás"],
+    "training": ["képzés", "betanulás", "fejlődési lehetőség", "tréning"],
+    "language_support": ["nyelvtanulás", "nyelvi képzés", "nyelvoktatás"],
+    "employee_discount": ["dolgozói kedvezmény", "munkavállalói kedvezmény"]
+}
+
+
 def load_json(path, default):
     if not path.exists():
         return default
@@ -143,7 +168,10 @@ def clean_text(text):
     return text.strip()
 
 
-def make_search_url(source_type, company):
+def make_search_url(source_type, company, company_id=None):
+    if source_type == "job_portal" and company_id in PROFESSION_COMPANY_URLS:
+        return PROFESSION_COMPANY_URLS[company_id]
+
     q = urllib.parse.quote_plus(company + " állás")
 
     if source_type == "job_portal":
@@ -304,6 +332,84 @@ def extract_count_hint(html):
     return max(numbers)
 
 
+def extract_employer_review_data(html, company_id, company_name, source_url):
+    text = clean_text(html)
+    lower = text.lower()
+
+    rating = None
+    review_count = None
+    opinion_count = None
+
+    rating_patterns = [
+        r"(\d[,.]\d)\s*(?:/|ből)?\s*5",
+        r"értékelés\s*(\d[,.]\d)",
+        r"(\d[,.]\d)\s*értékelés"
+    ]
+
+    for pattern in rating_patterns:
+        match = re.search(pattern, lower)
+        if match:
+            try:
+                rating = float(match.group(1).replace(",", "."))
+                if not (1 <= rating <= 5):
+                    rating = None
+                else:
+                    break
+            except ValueError:
+                rating = None
+
+    review_patterns = [
+        r"(\d{1,5})\s*értékelés",
+        r"értékelések\s*száma\s*(\d{1,5})"
+    ]
+
+    for pattern in review_patterns:
+        match = re.search(pattern, lower)
+        if match:
+            try:
+                review_count = int(match.group(1))
+                break
+            except ValueError:
+                review_count = None
+
+    opinion_patterns = [
+        r"(\d{1,5})\s*vélemény",
+        r"vélemények\s*száma\s*(\d{1,5})"
+    ]
+
+    for pattern in opinion_patterns:
+        match = re.search(pattern, lower)
+        if match:
+            try:
+                opinion_count = int(match.group(1))
+                break
+            except ValueError:
+                opinion_count = None
+
+    return {
+        "id": company_id,
+        "company": company_name,
+        "source": "Profession",
+        "source_url": source_url,
+        "rating": rating,
+        "review_count": review_count,
+        "opinion_count": opinion_count,
+        "source_status": "parsed" if any(v is not None for v in [rating, review_count, opinion_count]) else "not_found",
+        "notes": "Profession cégoldalról automatikusan kinyert munkáltatói értékelési adat. Ha null, akkor az adat nem volt stabilan olvasható a HTML-ben."
+    }
+
+
+def extract_benefits_from_text(text):
+    lower = text.lower()
+    result = {}
+
+    for benefit, keywords in BENEFIT_KEYWORDS.items():
+        result[benefit] = any(keyword in lower for keyword in keywords)
+
+    result["benefits_detected_count"] = sum(1 for key, value in result.items() if key != "benefits_detected_count" and value is True)
+    return result
+
+
 def detect_category(title):
     lower = title.lower()
 
@@ -400,6 +506,8 @@ def collect_from_source(company_id, company_name, source):
         "status": "skipped",
         "count_hint": None,
         "postings": [],
+        "employer_review": None,
+        "benefits": None,
         "error": None
     }
 
@@ -413,7 +521,7 @@ def collect_from_source(company_id, company_name, source):
         return result
 
     if source_type in ["job_portal", "indeed"]:
-        url = make_search_url(source_type, company_name)
+        url = make_search_url(source_type, company_name, company_id)
     elif source_type == "career_site":
         url = base_url
     else:
@@ -432,6 +540,17 @@ def collect_from_source(company_id, company_name, source):
 
     result["status"] = "fetched"
     result["count_hint"] = extract_count_hint(html)
+
+    if source_type == "job_portal":
+        result["employer_review"] = extract_employer_review_data(html, company_id, company_name, url)
+        result["benefits"] = {
+            "id": company_id,
+            "company": company_name,
+            "source": "Profession",
+            "source_url": url,
+            **extract_benefits_from_text(clean_text(html)),
+            "notes": "Profession cégoldal / hirdetéslista HTML alapján előzetesen érzékelt juttatási kulcsszavak."
+        }
 
     titles = extract_possible_job_titles(html, company_id, company_name, source_type)
 
@@ -470,6 +589,8 @@ def summarize_company(company, source_results, collected_at):
 
     postings = []
     source_statuses = []
+    employer_review = None
+    benefits = None
 
     for result in source_results:
         postings.extend(result.get("postings", []))
@@ -480,6 +601,12 @@ def summarize_company(company, source_results, collected_at):
             "count_hint": result.get("count_hint"),
             "error": result.get("error")
         })
+
+        if result.get("employer_review") and result["employer_review"].get("source_status") == "parsed":
+            employer_review = result["employer_review"]
+
+        if result.get("benefits"):
+            benefits = result["benefits"]
 
     unique_postings = {}
     for posting in postings:
@@ -512,6 +639,30 @@ def summarize_company(company, source_results, collected_at):
     external_count_hint = max(count_hints) if count_hints else None
     salary_visible_ads = sum(1 for p in postings if p.get("salary_visible") is True)
 
+    if employer_review is None:
+        employer_review = {
+            "id": company_id,
+            "company": company_name,
+            "source": "Profession",
+            "source_url": PROFESSION_COMPANY_URLS.get(company_id),
+            "rating": None,
+            "review_count": None,
+            "opinion_count": None,
+            "source_status": "not_found",
+            "notes": "Nem sikerült stabilan kinyerni értékelési adatot."
+        }
+
+    if benefits is None:
+        benefits = {
+            "id": company_id,
+            "company": company_name,
+            "source": "Profession",
+            "source_url": PROFESSION_COMPANY_URLS.get(company_id),
+            **{key: False for key in BENEFIT_KEYWORDS.keys()},
+            "benefits_detected_count": 0,
+            "notes": "Nem sikerült stabilan kinyerni juttatási adatot."
+        }
+
     return {
         "id": company_id,
         "company": company_name,
@@ -540,24 +691,24 @@ def summarize_company(company, source_results, collected_at):
         "indeed_present": any(s.get("type") == "indeed" for s in company.get("sources", [])),
 
         "career_site_active_ads": None,
-        "profession_active_ads": None,
+        "profession_active_ads": external_count_hint,
         "linkedin_active_ads": None,
         "indeed_active_ads": None,
 
         "salary_visible_in_examples": salary_visible_ads > 0,
-        "benefits_visible_in_examples": None,
-        "commuting_support_visible": None,
-        "cafeteria_visible": None,
-        "bonus_visible": None,
-        "training_visible": None,
+        "benefits_visible_in_examples": benefits.get("benefits_detected_count", 0) > 0,
+        "commuting_support_visible": benefits.get("commuting_support"),
+        "cafeteria_visible": benefits.get("cafeteria"),
+        "bonus_visible": benefits.get("bonus"),
+        "training_visible": benefits.get("training"),
         "full_time_visible": None,
         "part_time_visible": None,
 
-        "source_confidence": "medium" if parsed_postings_count > 0 else "low",
+        "source_confidence": "medium" if parsed_postings_count > 0 or external_count_hint is not None else "low",
         "labor_pressure_status": "automatikus gyűjtés előzetes",
         "source_statuses": source_statuses,
-        "notes": "Automatikusan gyűjtött előzetes adat. Az external_count_hint a találati oldal becsült darabszáma; a total_verified_ads a részletesen kinyert rekordok száma."
-    }, postings
+        "notes": "Automatikusan gyűjtött előzetes adat. Profession esetén cégprofil URL-eket használ."
+    }, postings, employer_review, benefits
 
 
 def main():
@@ -569,6 +720,8 @@ def main():
 
     all_summaries = []
     all_postings = []
+    all_reviews = []
+    all_benefits = []
     raw_results = []
 
     for company in companies:
@@ -581,10 +734,12 @@ def main():
             result = collect_from_source(company_id, company_name, source)
             source_results.append(result)
 
-        summary, postings = summarize_company(company, source_results, collected_at)
+        summary, postings, employer_review, benefits = summarize_company(company, source_results, collected_at)
 
         all_summaries.append(summary)
         all_postings.extend(postings)
+        all_reviews.append(employer_review)
+        all_benefits.append(benefits)
 
         raw_results.append({
             "id": company_id,
@@ -596,11 +751,15 @@ def main():
 
     save_json(JOBS_FILE, all_summaries)
     save_json(CURRENT_POSTINGS_FILE, all_postings)
+    save_json(EMPLOYER_REVIEWS_FILE, all_reviews)
+    save_json(BENEFITS_FILE, all_benefits)
 
     save_json(HISTORY_DIR / f"{month_name}.json", {
         "snapshot_date": collected_at,
         "companies": all_summaries,
-        "postings": all_postings
+        "postings": all_postings,
+        "employer_reviews": all_reviews,
+        "benefits": all_benefits
     })
 
     save_json(RAW_DIR / f"{month_name}.json", {
@@ -613,9 +772,11 @@ def main():
         "companies_tracked": len(companies),
         "summaries_written": len(all_summaries),
         "postings_parsed": len(all_postings),
+        "employer_reviews_written": len(all_reviews),
+        "benefits_written": len(all_benefits),
         "history_file": f"{month_name}.json",
         "raw_file": f"{month_name}.json",
-        "mode": "weekly_public_web_collection_hybrid_fmcg_parser_v3_restored"
+        "mode": "profession_company_profile_jobs_reviews_benefits_v1"
     }
 
     save_json(STATUS_FILE, status)
