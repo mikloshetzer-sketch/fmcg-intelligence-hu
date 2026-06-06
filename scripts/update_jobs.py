@@ -27,51 +27,87 @@ REQUEST_TIMEOUT = 20
 REQUEST_DELAY_SECONDS = 2
 
 
-JOB_TERMS = [
-    "eladó", "pénztáros", "árufeltöltő", "bolti munkatárs", "boltimunkatárs",
-    "hentes", "csemegepult eladó", "csemegepultos", "pék", "cukrász",
-    "pékcsomagoló", "pikker", "komissiózó", "raktáros", "raktári dolgozó",
-    "targoncavezető", "műszaki eladó", "higiénikus", "higiéniai munkatárs",
-    "üzletvezető", "üzletvezető-helyettes", "boltvezető", "boltvezető-helyettes",
-    "műszakvezető", "részlegvezető", "osztályvezető", "manager", "menedzser",
-    "specialista", "asszisztens", "beszerző", "kontroller", "elemző", "hr munkatárs"
+FMCG_JOB_TERMS = [
+    "eladó", "pénztáros", "kasszás", "árufeltöltő",
+    "bolti munkatárs", "boltimunkatárs", "áruházi munkatárs",
+    "kereskedelmi munkatárs",
+
+    "hentes", "húspult", "sajtpult", "halpult",
+    "csemegepult", "csemegepult eladó", "csemegepultos",
+    "frissáru", "frissáru eladó", "zöldség", "zöldség-gyümölcs",
+    "pék", "cukrász", "pékcsomagoló",
+
+    "raktár", "raktári dolgozó", "raktáros", "komissiózó",
+    "pikker", "targoncavezető", "árufogadó", "áruátvevő",
+    "árukiadó", "logisztikai ügyintéző",
+
+    "higiénikus", "higiéniai munkatárs",
+    "műszaki eladó",
+
+    "üzletvezető", "üzletvezető-helyettes",
+    "boltvezető", "boltvezető-helyettes",
+    "áruházvezető", "műszakvezető", "részlegvezető",
+    "osztályvezető", "területi vezető", "régióvezető",
+    "manager", "menedzser", "team leader",
+
+    "beszerző", "kontroller", "elemző", "specialista",
+    "asszisztens", "hr munkatárs", "bér-tb"
 ]
 
 
-KEYWORDS = {
-    "store": [
-        "eladó", "pénztáros", "árufeltöltő", "bolti", "boltimunkatárs",
-        "bolti munkatárs", "áruházi", "csemegepult", "csemegepultos",
-        "hentes", "pék", "cukrász", "pékcsomagoló", "műszaki eladó",
-        "higiénikus", "higiéniai munkatárs", "frissáru"
-    ],
-    "warehouse": [
-        "raktár", "raktáros", "raktári dolgozó", "komissiózó", "pikker",
-        "logisztika", "targonca", "targoncavezető", "árukiadó",
-        "árufogadó", "kiszállítás"
-    ],
-    "office": [
-        "iroda", "központ", "beszerző", "kontroller", "marketing",
-        "hr", "pénzügy", "it", "elemző", "specialista", "asszisztens"
-    ],
-    "management": [
-        "vezető", "manager", "menedzser", "műszakvezető", "üzletvezető",
-        "üzletvezető-helyettes", "boltvezető", "boltvezető-helyettes",
-        "áruházvezető", "osztályvezető", "részlegvezető", "team leader"
-    ]
+COMPANY_ALIASES = {
+    "lidl": ["lidl"],
+    "aldi": ["aldi"],
+    "spar": ["spar", "interspar"],
+    "tesco": ["tesco", "tesco-bst"],
+    "penny": ["penny", "penny-market", "penny market"],
+    "auchan": ["auchan"]
 }
 
 
-BAD_FRAGMENTS = [
-    "süti", "cookie", "adatvédelem", "impresszum", "rendezvényeink",
-    "történetünk", "kapcsolat", "juttatásaink", "díjaink",
-    "kiválasztási folyamat", "betanulás", "pályázatodhoz",
-    "munkáltató", "életkörülménye", "karrier nálunk",
-    "értékeink", "jelentkezési folyamat", "adatkezelés",
-    "felhasználási feltételek", "hírlevél", "social media",
-    "facebook", "linkedin", "youtube", "instagram", "megnézem az állást",
-    "részletek elrejtése", "előresorolva", "állás dátuma"
+BAD_TERMS = [
+    "cookie", "süti", "adatvédelem", "adatkezelés", "impresszum",
+    "kapcsolat", "rendezvényeink", "történetünk", "értékeink",
+    "juttatásaink", "díjaink", "karrier nálunk", "kiválasztási folyamat",
+    "jelentkezési folyamat", "betanulás", "pályázatodhoz",
+    "munkáltató", "életkörülménye", "felhasználási feltételek",
+    "hírlevél", "social media", "facebook", "linkedin", "youtube",
+    "instagram", "megnézem az állást", "részletek elrejtése",
+    "előresorolva", "állás dátuma", "főbb feladatok", "nem kell nyelvtudás",
+    "magyar középfok", "angol középfok", "feladva május", "feladva június",
+    "dinamikusan fejlődő csapatába", "munkatársak szakmai képzésének"
 ]
+
+
+CATEGORY_KEYWORDS = {
+    "store": [
+        "eladó", "pénztáros", "kasszás", "árufeltöltő",
+        "bolti", "boltimunkatárs", "áruházi munkatárs",
+        "kereskedelmi munkatárs", "hentes", "húspult", "sajtpult",
+        "halpult", "csemegepult", "csemegepultos", "frissáru",
+        "zöldség", "pék", "cukrász", "pékcsomagoló",
+        "higiénikus", "higiéniai munkatárs", "műszaki eladó"
+    ],
+    "warehouse": [
+        "raktár", "raktári", "raktáros", "komissiózó", "pikker",
+        "targoncavezető", "árufogadó", "áruátvevő", "árukiadó",
+        "logisztikai ügyintéző"
+    ],
+    "office": [
+        "iroda", "központ", "beszerző", "kontroller", "marketing",
+        "hr", "pénzügy", "it", "elemző", "specialista", "asszisztens",
+        "bér-tb"
+    ],
+    "management": [
+        "üzletvezető", "üzletvezető-helyettes", "boltvezető",
+        "boltvezető-helyettes", "áruházvezető", "műszakvezető",
+        "részlegvezető", "osztályvezető", "területi vezető",
+        "régióvezető", "manager", "menedzser", "team leader"
+    ],
+    "recruitment_event": [
+        "toborzónap", "nyílt nap", "karriernap", "állásbörze"
+    ]
+}
 
 
 def load_json(path, default):
@@ -117,8 +153,10 @@ def make_search_url(source_type, company):
 
     if source_type == "job_portal":
         return f"https://www.profession.hu/allasok/1,0,0,{q}"
+
     if source_type == "indeed":
         return f"https://hu.indeed.com/jobs?q={q}"
+
     if source_type == "linkedin":
         return f"https://www.linkedin.com/jobs/search/?keywords={urllib.parse.quote_plus(company)}"
 
@@ -126,61 +164,110 @@ def make_search_url(source_type, company):
 
 
 def normalize_title(title):
-    title = title.strip(" -|•,.;:")
+    title = unescape(title)
     title = re.sub(r"\s+", " ", title)
-    title = re.sub(r"^(ma|tegnap|új|állás|részletek)\s+", "", title, flags=re.I)
+    title = re.sub(r"^\d{4}\s+", "", title)
+    title = re.sub(r"^\d{1,2}\s+", "", title)
+    title = re.sub(r"\s+\d{1,2}$", "", title)
+    title = re.sub(r"^(ma|tegnap|új|állás|részletek|feladva)\s+", "", title, flags=re.I)
     title = title.strip(" -|•,.;:")
     return title
 
 
-def is_valid_job_title(title, company):
-    if not title:
-        return False
+def contains_job_term(title):
+    lower = title.lower()
+    return any(term in lower for term in FMCG_JOB_TERMS)
 
+
+def contains_bad_term(title):
+    lower = title.lower()
+    return any(term in lower for term in BAD_TERMS)
+
+
+def company_match(company_id, company_name, title, source_type):
+    """
+    Career sites are company-owned, so strict company matching is not required.
+    Job portals are mixed pages, so we need company alias confirmation unless the title is a very clean FMCG role.
+    """
+    if source_type == "career_site":
+        return True
+
+    lower = title.lower()
+    aliases = COMPANY_ALIASES.get(company_id, [company_name.lower()])
+
+    if any(alias in lower for alias in aliases):
+        return True
+
+    clean_role_patterns = [
+        r"^(eladó|bolti eladó|eladó-pénztáros|pénztáros|árufeltöltő)",
+        r"^(higiéniai munkatárs|higiénikus)",
+        r"^(üzletvezető|üzletvezető-helyettes|boltvezető|boltvezető-helyettes)",
+        r"^(raktári dolgozó|raktáros|targoncavezető|pikker|komissiózó)",
+        r"^(hentes|pék|cukrász|pékcsomagoló|csemegepult)"
+    ]
+
+    return any(re.search(pattern, lower) for pattern in clean_role_patterns)
+
+
+def is_valid_job_title(title, company_id, company_name, source_type):
     title = normalize_title(title)
     lower = title.lower()
 
-    if len(title) < 4:
+    if not title:
         return False
 
-    if len(title) > 95:
+    if len(title) < 4 or len(title) > 90:
         return False
 
-    if company.lower() in lower and len(title) < 18:
+    if len(title.split()) > 8:
         return False
 
-    if any(bad in lower for bad in BAD_FRAGMENTS):
+    if contains_bad_term(title):
         return False
 
-    if not any(term in lower for term in JOB_TERMS):
+    if not contains_job_term(title):
         return False
 
-    word_count = len(title.split())
-    if word_count > 9:
+    if not company_match(company_id, company_name, title, source_type):
+        return False
+
+    if lower in ["eladótérben", "munkatárs", "vezető", "manager", "asszisztens"]:
         return False
 
     return True
 
 
-def extract_possible_job_titles(html, company):
+def extract_candidate_lines(text):
+    separators = r"[\n\r\t]| {2,}| • | \| "
+    parts = re.split(separators, text)
+    candidates = []
+
+    for part in parts:
+        part = normalize_title(part)
+        if part:
+            candidates.append(part)
+
+    return candidates
+
+
+def extract_possible_job_titles(html, company_id, company_name, source_type):
     text = clean_text(html)
+    candidates = extract_candidate_lines(text)
+
     titles = []
 
-    escaped_terms = [re.escape(term) for term in sorted(JOB_TERMS, key=len, reverse=True)]
+    escaped_terms = [re.escape(term) for term in sorted(FMCG_JOB_TERMS, key=len, reverse=True)]
     term_pattern = "|".join(escaped_terms)
 
-    patterns = [
-        rf"([A-ZÁÉÍÓÖŐÚÜŰa-záéíóöőúüű0-9 /\-]{0,35}(?:{term_pattern})[A-ZÁÉÍÓÖŐÚÜŰa-záéíóöőúüű0-9 /\-]{{0,45}})",
-        r"([A-ZÁÉÍÓÖŐÚÜŰa-záéíóöőúüű0-9 /\-]{3,70}\s-\s[A-ZÁÉÍÓÖŐÚÜŰa-záéíóöőúüű0-9 /\-]{3,35})"
-    ]
+    for candidate in candidates:
+        if is_valid_job_title(candidate, company_id, company_name, source_type):
+            titles.append(normalize_title(candidate))
 
-    for pattern in patterns:
-        for match in re.findall(pattern, text, flags=re.I):
-            title = normalize_title(match)
+    short_window_pattern = rf"([A-ZÁÉÍÓÖŐÚÜŰa-záéíóöőúüű0-9 /\-]{{0,20}}(?:{term_pattern})[A-ZÁÉÍÓÖŐÚÜŰa-záéíóöőúüű0-9 /\-]{{0,35}})"
 
-            if not is_valid_job_title(title, company):
-                continue
-
+    for match in re.findall(short_window_pattern, text, flags=re.I):
+        title = normalize_title(match)
+        if is_valid_job_title(title, company_id, company_name, source_type):
             titles.append(title)
 
     unique = []
@@ -192,7 +279,7 @@ def extract_possible_job_titles(html, company):
             unique.append(title)
             seen.add(key)
 
-    return unique[:50]
+    return unique[:80]
 
 
 def extract_count_hint(html):
@@ -229,8 +316,13 @@ def extract_count_hint(html):
 def detect_category(title):
     lower = title.lower()
 
+    if any(word in lower for word in CATEGORY_KEYWORDS["recruitment_event"]):
+        return "recruitment_event"
+
     scores = {}
-    for category, words in KEYWORDS.items():
+    for category, words in CATEGORY_KEYWORDS.items():
+        if category == "recruitment_event":
+            continue
         scores[category] = sum(1 for word in words if word in lower)
 
     best = max(scores, key=scores.get)
@@ -268,6 +360,35 @@ def detect_salary(text):
         "salary_min_huf": min(values),
         "salary_max_huf": max(values)
     }
+
+
+def extract_location_from_title(title):
+    if " - " not in title:
+        return None
+
+    parts = [p.strip() for p in title.split(" - ") if p.strip()]
+
+    if len(parts) < 2:
+        return None
+
+    possible_location = parts[-1]
+    possible_location = re.sub(r"\s+\d{1,2}$", "", possible_location).strip()
+
+    bad_location_terms = [
+        "franchise", "feladva", "magyarország", "élelmisz", "sway",
+        "rossma", "sinsay", "tesco-bst"
+    ]
+
+    if len(possible_location) > 35:
+        return None
+
+    if any(term in possible_location.lower() for term in bad_location_terms):
+        return None
+
+    if contains_job_term(possible_location):
+        return None
+
+    return possible_location
 
 
 def posting_id(company_id, source_name, title):
@@ -321,7 +442,7 @@ def collect_from_source(company_id, company_name, source):
     result["status"] = "fetched"
     result["count_hint"] = extract_count_hint(html)
 
-    titles = extract_possible_job_titles(html, company_name)
+    titles = extract_possible_job_titles(html, company_id, company_name, source_type)
 
     for title in titles:
         category = detect_category(title)
@@ -352,26 +473,6 @@ def collect_from_source(company_id, company_name, source):
     return result
 
 
-def extract_location_from_title(title):
-    if " - " not in title:
-        return None
-
-    parts = [p.strip() for p in title.split(" - ") if p.strip()]
-
-    if len(parts) < 2:
-        return None
-
-    possible_location = parts[-1]
-
-    if len(possible_location) > 40:
-        return None
-
-    if any(term in possible_location.lower() for term in JOB_TERMS):
-        return None
-
-    return possible_location
-
-
 def summarize_company(company, source_results, collected_at):
     company_id = company["id"]
     company_name = company["company"]
@@ -400,11 +501,15 @@ def summarize_company(company, source_results, collected_at):
         "warehouse": 0,
         "office": 0,
         "management": 0,
+        "recruitment_event": 0,
         "unknown": 0
     }
 
     for posting in postings:
-        category_counts[posting.get("category", "unknown")] += 1
+        category = posting.get("category", "unknown")
+        if category not in category_counts:
+            category = "unknown"
+        category_counts[category] += 1
 
     count_hints = [
         result.get("count_hint")
@@ -429,6 +534,7 @@ def summarize_company(company, source_results, collected_at):
         "warehouse_jobs": category_counts["warehouse"],
         "office_jobs": category_counts["office"],
         "management_jobs": category_counts["management"],
+        "recruitment_events": category_counts["recruitment_event"],
         "unknown_jobs": category_counts["unknown"],
 
         "salary_visible_ads": salary_visible_ads,
@@ -459,7 +565,7 @@ def summarize_company(company, source_results, collected_at):
         "source_confidence": "medium" if parsed_postings_count > 0 else "low",
         "labor_pressure_status": "automatikus gyűjtés előzetes",
         "source_statuses": source_statuses,
-        "notes": "Automatikusan gyűjtött előzetes adat. A total_verified_ads a ténylegesen kinyert hirdetésszerű rekordok száma; az external_count_hint csak tájékoztató."
+        "notes": "Automatikusan gyűjtött előzetes adat. Az external_count_hint a találati oldal becsült darabszáma; a total_verified_ads a részletesen kinyert rekordok száma."
     }, postings
 
 
@@ -518,7 +624,7 @@ def main():
         "postings_parsed": len(all_postings),
         "history_file": f"{month_name}.json",
         "raw_file": f"{month_name}.json",
-        "mode": "weekly_public_web_collection_stricter_title_filter"
+        "mode": "weekly_public_web_collection_hybrid_fmcg_parser_v3"
     }
 
     save_json(STATUS_FILE, status)
