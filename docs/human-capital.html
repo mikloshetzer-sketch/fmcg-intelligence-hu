@@ -71,6 +71,30 @@
       <div class="kpi-sub" id="kpiJobPressureSub">munkaerőpiaci nyomás indikátor</div>
     </div>
 
+    <div class="card span3">
+      <div class="kpi-label">Legjobb árbevétel / fő</div>
+      <div class="kpi" id="kpiRevenuePerEmployeeLeader">–</div>
+      <div class="kpi-sub" id="kpiRevenuePerEmployeeSub">nettó árbevétel / dolgozó</div>
+    </div>
+
+    <div class="card span3">
+      <div class="kpi-label">Legjobb profit / fő</div>
+      <div class="kpi" id="kpiProfitPerEmployeeLeader">–</div>
+      <div class="kpi-sub" id="kpiProfitPerEmployeeSub">adózott eredmény / dolgozó</div>
+    </div>
+
+    <div class="card span3">
+      <div class="kpi-label">Legjobb profit / munkaóra</div>
+      <div class="kpi" id="kpiProfitPerHourLeader">–</div>
+      <div class="kpi-sub" id="kpiProfitPerHourSub">adózott eredmény / becsült munkaóra</div>
+    </div>
+
+    <div class="card span3">
+      <div class="kpi-label">Legjobb profit / üzlet</div>
+      <div class="kpi" id="kpiProfitPerStoreLeader">–</div>
+      <div class="kpi-sub" id="kpiProfitPerStoreSub">adózott eredmény / üzlet</div>
+    </div>
+
     <div class="card span5">
       <div class="section-title">
         <h2>Employer Ranking</h2>
@@ -116,6 +140,26 @@
       </div>
       <div class="chartbox">
         <canvas id="workHourEfficiencyChart"></canvas>
+      </div>
+    </div>
+
+    <div class="card span6">
+      <div class="section-title">
+        <h2>Árbevétel és profit / fő</h2>
+        <span>financials.json + workforce.json</span>
+      </div>
+      <div class="chartbox">
+        <canvas id="financialPerEmployeeChart"></canvas>
+      </div>
+    </div>
+
+    <div class="card span6">
+      <div class="section-title">
+        <h2>Profit hatékonyság</h2>
+        <span>profit / üzlet és profit / munkaóra</span>
+      </div>
+      <div class="chartbox">
+        <canvas id="profitEfficiencyChart"></canvas>
       </div>
     </div>
 
@@ -231,6 +275,16 @@
 
     <div class="card span12">
       <div class="section-title">
+        <h2>Pénzügyi hatékonysági adattábla</h2>
+        <span>financials.json + workforce.json + stores.json</span>
+      </div>
+      <div style="overflow:auto">
+        <table id="financialEfficiencyTable"></table>
+      </div>
+    </div>
+
+    <div class="card span12">
+      <div class="section-title">
         <h2>Munkaerő-hatékonysági adattábla</h2>
         <span>workforce.json + stores.json + jobs.json</span>
       </div>
@@ -256,7 +310,7 @@
       </div>
       <div class="notice">
         A munkaóra-alapú hatékonyság becslésként kezelendő: létszám × 40 óra × 52 hét.
-        Az álláshirdetési adatok 2026.06.06-i pillanatképet jelentenek. A franchise jellegű hálózatoknál
+        Az álláshirdetési adatok 2026.06.06-i pillanatképet jelentenek. A profit- és árbevétel-alapú hatékonysági mutatók a financials.json és workforce.json alapján számolt indikátorok. A franchise jellegű hálózatoknál
         a hirdetések több külön munkáltatóhoz kapcsolódhatnak, ezért az összehasonlítás korlátozottabb.
       </div>
     </div>
@@ -273,6 +327,7 @@ const salariesUrl = './data/salaries.json';
 const workforceUrl = './data/workforce.json';
 const storesUrl = './data/stores.json';
 const jobsUrl = './data/jobs.json';
+const financialsUrl = './data/financials.json';
 
 let charts = {};
 let state = {
@@ -280,7 +335,8 @@ let state = {
   salaries: [],
   workforce: [],
   stores: [],
-  jobs: []
+  jobs: [],
+  financials: []
 };
 
 function n(v){
@@ -306,6 +362,11 @@ function fmtHuf(v){
 function fmtNum(v){
   if(v === null || v === undefined || v === '') return 'n.a.';
   return Number(v).toLocaleString('hu-HU');
+}
+
+function fmtBn(v){
+  if(v === null || v === undefined || v === '') return 'n.a.';
+  return Number(v).toLocaleString('hu-HU', {maximumFractionDigits:2}) + ' mrd Ft';
 }
 
 function fmtDecimal(v){
@@ -364,29 +425,33 @@ async function fetchJson(url){
 
 async function loadData(){
   try{
-    const [companies, salaries, workforce, stores, jobs] = await Promise.all([
+    const [companies, salaries, workforce, stores, jobs, financials] = await Promise.all([
       fetchJson(companiesUrl),
       fetchJson(salariesUrl),
       fetchJson(workforceUrl),
       fetchJson(storesUrl),
-      fetchJson(jobsUrl)
+      fetchJson(jobsUrl),
+      fetchJson(financialsUrl)
     ]);
 
     const salaryById = new Map(salaries.map(s => [s.id, s]));
     const workforceById = new Map(workforce.map(w => [w.id, w]));
     const storesById = new Map(stores.map(s => [s.id, s]));
     const jobsById = new Map(jobs.map(j => [j.id, j]));
+    const financialsById = new Map(financials.map(f => [f.id, f]));
 
     companies.forEach(c => {
       const salary = salaryById.get(c.id);
       const wf = workforceById.get(c.id);
       const store = storesById.get(c.id);
       const job = jobsById.get(c.id);
+      const fin = financialsById.get(c.id);
 
       c.salary_data = salary || null;
       c.workforce_data = wf || null;
       c.store_data = store || null;
       c.jobs_data = job || null;
+      c.financials_data = fin || null;
 
       c.employer_score = employerScore(c);
       c.salary_position_score = salary ? num(salary.salary_position_score, 0) : 0;
@@ -405,6 +470,16 @@ async function loadData(){
       c.career_site_active_ads = job ? num(job.career_site_active_ads, 0) : 0;
       c.ads_per_store = c.stores_count > 0 ? c.total_verified_ads / c.stores_count : null;
       c.ads_per_1000_employees = c.employees_reported > 0 ? c.total_verified_ads / c.employees_reported * 1000 : null;
+
+      c.fin_revenue_bn = fin && fin.revenue_bn_huf !== null && fin.revenue_bn_huf !== undefined ? num(fin.revenue_bn_huf, 0) : num(c.revenue_2024_bn_huf, 0);
+      c.net_profit_bn = fin && fin.net_profit_bn_huf !== null && fin.net_profit_bn_huf !== undefined ? num(fin.net_profit_bn_huf, 0) : null;
+      c.profit_margin_pct = fin && fin.profit_margin_pct !== null && fin.profit_margin_pct !== undefined ? num(fin.profit_margin_pct, 0) : null;
+      c.financial_confidence = fin ? n(fin.confidence) : 'n.a.';
+      c.revenue_per_employee_huf = c.employees_reported > 0 && c.fin_revenue_bn ? (c.fin_revenue_bn * 1000000000) / c.employees_reported : null;
+      c.profit_per_employee_huf = c.employees_reported > 0 && c.net_profit_bn !== null ? (c.net_profit_bn * 1000000000) / c.employees_reported : null;
+      c.revenue_per_store_bn = c.stores_count > 0 && c.fin_revenue_bn ? c.fin_revenue_bn / c.stores_count : null;
+      c.profit_per_store_bn = c.stores_count > 0 && c.net_profit_bn !== null ? c.net_profit_bn / c.stores_count : null;
+      c.profit_per_work_hour_huf = wf && wf.estimated_annual_hours && c.net_profit_bn !== null ? (c.net_profit_bn * 1000000000) / num(wf.estimated_annual_hours, 0) : null;
     });
 
     state.companies = companies;
@@ -412,8 +487,9 @@ async function loadData(){
     state.workforce = workforce;
     state.stores = stores;
     state.jobs = jobs;
+    state.financials = financials;
 
-    renderPage(companies, salaries, workforce, stores, jobs);
+    renderPage(companies, salaries, workforce, stores, jobs, financials);
   }catch(error){
     showError(
       '<b>Adatbetöltési hiba.</b><br>' +
@@ -423,18 +499,23 @@ async function loadData(){
       '<b>/fmcg-intelligence-hu/data/salaries.json</b><br>' +
       '<b>/fmcg-intelligence-hu/data/workforce.json</b><br>' +
       '<b>/fmcg-intelligence-hu/data/stores.json</b><br>' +
-      '<b>/fmcg-intelligence-hu/data/jobs.json</b>'
+      '<b>/fmcg-intelligence-hu/data/jobs.json</b><br>' +
+      '<b>/fmcg-intelligence-hu/data/financials.json</b>'
     );
     console.error(error);
   }
 }
 
-function renderPage(companies, salaries, workforce, stores, jobs){
+function renderPage(companies, salaries, workforce, stores, jobs, financials){
   const byEmployees = [...companies].filter(c => c.employees_reported > 0).sort((a,b) => b.employees_reported - a.employees_reported);
   const byEmployer = [...companies].sort((a,b) => b.employer_score - a.employer_score);
   const byEfficiency = [...companies].filter(c => c.work_hour_efficiency > 0).sort((a,b) => b.work_hour_efficiency - a.work_hour_efficiency);
   const byJobAds = [...companies].filter(c => c.total_verified_ads > 0).sort((a,b) => b.total_verified_ads - a.total_verified_ads);
   const byAdsPer1000 = [...companies].filter(c => c.ads_per_1000_employees !== null).sort((a,b) => b.ads_per_1000_employees - a.ads_per_1000_employees);
+  const byRevenuePerEmployee = [...companies].filter(c => c.revenue_per_employee_huf !== null).sort((a,b) => b.revenue_per_employee_huf - a.revenue_per_employee_huf);
+  const byProfitPerEmployee = [...companies].filter(c => c.profit_per_employee_huf !== null).sort((a,b) => b.profit_per_employee_huf - a.profit_per_employee_huf);
+  const byProfitPerHour = [...companies].filter(c => c.profit_per_work_hour_huf !== null).sort((a,b) => b.profit_per_work_hour_huf - a.profit_per_work_hour_huf);
+  const byProfitPerStore = [...companies].filter(c => c.profit_per_store_bn !== null).sort((a,b) => b.profit_per_store_bn - a.profit_per_store_bn);
 
   document.getElementById('kpiEmployeeLeader').textContent = byEmployees[0] ? byEmployees[0].company : 'n.a.';
   document.getElementById('kpiEmployeeSub').textContent = byEmployees[0] ? fmtNum(byEmployees[0].employees_reported) + ' fő' : 'jelentett vagy becsült dolgozói létszám';
@@ -448,13 +529,26 @@ function renderPage(companies, salaries, workforce, stores, jobs){
   document.getElementById('kpiJobPressureLeader').textContent = byAdsPer1000[0] ? byAdsPer1000[0].company : 'n.a.';
   document.getElementById('kpiJobPressureSub').textContent = byAdsPer1000[0] ? fmtDecimal(byAdsPer1000[0].ads_per_1000_employees) + ' hirdetés / 1000 fő' : 'munkaerőpiaci nyomás indikátor';
 
+  document.getElementById('kpiRevenuePerEmployeeLeader').textContent = byRevenuePerEmployee[0] ? byRevenuePerEmployee[0].company : 'n.a.';
+  document.getElementById('kpiRevenuePerEmployeeSub').textContent = byRevenuePerEmployee[0] ? fmtHuf(Math.round(byRevenuePerEmployee[0].revenue_per_employee_huf)) + ' / fő' : 'nettó árbevétel / dolgozó';
+
+  document.getElementById('kpiProfitPerEmployeeLeader').textContent = byProfitPerEmployee[0] ? byProfitPerEmployee[0].company : 'n.a.';
+  document.getElementById('kpiProfitPerEmployeeSub').textContent = byProfitPerEmployee[0] ? fmtHuf(Math.round(byProfitPerEmployee[0].profit_per_employee_huf)) + ' / fő' : 'adózott eredmény / dolgozó';
+
+  document.getElementById('kpiProfitPerHourLeader').textContent = byProfitPerHour[0] ? byProfitPerHour[0].company : 'n.a.';
+  document.getElementById('kpiProfitPerHourSub').textContent = byProfitPerHour[0] ? fmtHuf(Math.round(byProfitPerHour[0].profit_per_work_hour_huf)) + ' / munkaóra' : 'adózott eredmény / becsült munkaóra';
+
+  document.getElementById('kpiProfitPerStoreLeader').textContent = byProfitPerStore[0] ? byProfitPerStore[0].company : 'n.a.';
+  document.getElementById('kpiProfitPerStoreSub').textContent = byProfitPerStore[0] ? fmtBn(byProfitPerStore[0].profit_per_store_bn) + ' / üzlet' : 'adózott eredmény / üzlet';
+
   renderEmployerRanking(byEmployer);
   renderCharts(companies, byEmployer);
   renderSalaryModule();
-  renderInsight(byEmployees, byEmployer, byEfficiency, byJobAds, byAdsPer1000);
+  renderInsight(byEmployees, byEmployer, byEfficiency, byJobAds, byAdsPer1000, byRevenuePerEmployee, byProfitPerEmployee, byProfitPerHour);
   renderJobPresence(jobs);
   renderJobTransparency(jobs);
   renderJobsTable(companies);
+  renderFinancialTable(companies);
   renderWorkforceTable(companies);
   renderHumanTable(byEmployer);
 
@@ -498,6 +592,16 @@ function renderCharts(companies, byEmployer){
 
   makeChart('workHourEfficiencyChart','bar',companies.map(c => c.company),[
     {label:'Nettó árbevétel / becsült munkaóra, Ft', data:companies.map(c => num(c.work_hour_efficiency,0))}
+  ]);
+
+  makeChart('financialPerEmployeeChart','bar',companies.map(c => c.company),[
+    {label:'Árbevétel / fő, Ft', data:companies.map(c => c.revenue_per_employee_huf !== null ? Math.round(c.revenue_per_employee_huf) : 0)},
+    {label:'Profit / fő, Ft', data:companies.map(c => c.profit_per_employee_huf !== null ? Math.round(c.profit_per_employee_huf) : 0)}
+  ]);
+
+  makeChart('profitEfficiencyChart','bar',companies.map(c => c.company),[
+    {label:'Profit / üzlet, mrd Ft', data:companies.map(c => c.profit_per_store_bn !== null ? Number(c.profit_per_store_bn.toFixed(3)) : 0)},
+    {label:'Profit / munkaóra, Ft', data:companies.map(c => c.profit_per_work_hour_huf !== null ? Math.round(c.profit_per_work_hour_huf) : 0)}
   ]);
 
   makeChart('employerChart','bar',byEmployer.map(c => c.company),[
@@ -573,7 +677,7 @@ function renderSalaryModule(){
   ]);
 }
 
-function renderInsight(byEmployees, byEmployer, byEfficiency, byJobAds, byAdsPer1000){
+function renderInsight(byEmployees, byEmployer, byEfficiency, byJobAds, byAdsPer1000, byRevenuePerEmployee, byProfitPerEmployee, byProfitPerHour){
   let text = '';
 
   if(byEmployees[0]){
@@ -590,6 +694,18 @@ function renderInsight(byEmployees, byEmployer, byEfficiency, byJobAds, byAdsPer
 
   if(byJobAds[0]){
     text += `A legtöbb ellenőrzött álláshirdetés jelenleg <b>${byJobAds[0].company}</b> esetében látható, ${fmtNum(byJobAds[0].total_verified_ads)} hirdetéssel. `;
+  }
+
+  if(byRevenuePerEmployee[0]){
+    text += `Árbevétel / fő mutatóban <b>${byRevenuePerEmployee[0].company}</b> áll az élen, ${fmtHuf(Math.round(byRevenuePerEmployee[0].revenue_per_employee_huf))} / fő értékkel. `;
+  }
+
+  if(byProfitPerEmployee[0]){
+    text += `Profit / fő alapján <b>${byProfitPerEmployee[0].company}</b> emelkedik ki a rendelkezésre álló adatok között. `;
+  }
+
+  if(byProfitPerHour[0]){
+    text += `Profit / becsült munkaóra mutatóban <b>${byProfitPerHour[0].company}</b> mutatja a legjobb értéket. `;
   }
 
   if(byAdsPer1000[0]){
@@ -676,6 +792,44 @@ function renderJobsTable(companies){
   document.getElementById('jobsTable').innerHTML = html;
 }
 
+
+function renderFinancialTable(companies){
+  const html = `
+    <thead>
+      <tr>
+        <th>Cég</th>
+        <th>Árbevétel</th>
+        <th>Adózott eredmény</th>
+        <th>Profit margin</th>
+        <th>Árbevétel / fő</th>
+        <th>Profit / fő</th>
+        <th>Árbevétel / üzlet</th>
+        <th>Profit / üzlet</th>
+        <th>Profit / munkaóra</th>
+        <th>Forrásbizalom</th>
+      </tr>
+    </thead>
+    <tbody>
+      ${companies.map(c => `
+        <tr>
+          <td><b>${n(c.company)}</b></td>
+          <td>${fmtBn(c.fin_revenue_bn)}</td>
+          <td>${fmtBn(c.net_profit_bn)}</td>
+          <td>${c.profit_margin_pct !== null ? fmtDecimal(c.profit_margin_pct) + '%' : 'n.a.'}</td>
+          <td>${c.revenue_per_employee_huf !== null ? fmtHuf(Math.round(c.revenue_per_employee_huf)) : 'n.a.'}</td>
+          <td>${c.profit_per_employee_huf !== null ? fmtHuf(Math.round(c.profit_per_employee_huf)) : 'n.a.'}</td>
+          <td>${c.revenue_per_store_bn !== null ? fmtBn(c.revenue_per_store_bn) : 'n.a.'}</td>
+          <td>${c.profit_per_store_bn !== null ? fmtBn(c.profit_per_store_bn) : 'n.a.'}</td>
+          <td>${c.profit_per_work_hour_huf !== null ? fmtHuf(Math.round(c.profit_per_work_hour_huf)) : 'n.a.'}</td>
+          <td>${n(c.financial_confidence)}</td>
+        </tr>
+      `).join('')}
+    </tbody>
+  `;
+
+  document.getElementById('financialEfficiencyTable').innerHTML = html;
+}
+
 function renderWorkforceTable(companies){
   const html = `
     <thead>
@@ -688,6 +842,8 @@ function renderWorkforceTable(companies){
         <th>Hirdetés / 1000 fő</th>
         <th>Éves becsült munkaóra</th>
         <th>Nettó árbevétel / munkaóra</th>
+        <th>Árbevétel / fő</th>
+        <th>Profit / fő</th>
         <th>Adatbizalom</th>
       </tr>
     </thead>
@@ -704,6 +860,8 @@ function renderWorkforceTable(companies){
             <td>${fmtDecimal(c.ads_per_1000_employees)}</td>
             <td>${fmtNum(w.estimated_annual_hours)}</td>
             <td><b>${fmtHuf(w.estimated_revenue_per_work_hour_huf)}</b></td>
+            <td>${c.revenue_per_employee_huf !== null ? fmtHuf(Math.round(c.revenue_per_employee_huf)) : 'n.a.'}</td>
+            <td>${c.profit_per_employee_huf !== null ? fmtHuf(Math.round(c.profit_per_employee_huf)) : 'n.a.'}</td>
             <td>${n(w.data_confidence_score)}<div class="bar"><div class="fill-orange" style="width:${num(w.data_confidence_score,0)}%"></div></div></td>
           </tr>
         `;
@@ -727,6 +885,8 @@ function renderHumanTable(companies){
         <th>Employee Rating</th>
         <th>Fluktuáció</th>
         <th>Munkaóra-hatékonyság</th>
+        <th>Árbevétel / fő</th>
+        <th>Profit / fő</th>
         <th>Hirdetés / 1000 fő</th>
       </tr>
     </thead>
@@ -742,6 +902,8 @@ function renderHumanTable(companies){
           <td>${n(c.employee_rating)}</td>
           <td>${n(c.turnover_risk_score)}</td>
           <td>${fmtHuf(c.work_hour_efficiency)}</td>
+          <td>${c.revenue_per_employee_huf !== null ? fmtHuf(Math.round(c.revenue_per_employee_huf)) : 'n.a.'}</td>
+          <td>${c.profit_per_employee_huf !== null ? fmtHuf(Math.round(c.profit_per_employee_huf)) : 'n.a.'}</td>
           <td>${fmtDecimal(c.ads_per_1000_employees)}</td>
         </tr>
       `).join('')}
