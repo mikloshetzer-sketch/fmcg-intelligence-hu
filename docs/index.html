@@ -29,11 +29,10 @@
   <section class="hero">
     <div class="hero-box">
       <div class="hero-kicker">Executive dashboard</div>
-      <h1>Magyar FMCG szereplők üzleti és munkáltatói összehasonlítása</h1>
+      <h1>Magyar FMCG szereplők gazdasági és hálózati összehasonlítása</h1>
       <p>
-        A főoldal vezetői áttekintést ad a magyar FMCG piac kiemelt szereplőiről.
-        A rendszer a gazdasági teljesítményt, a munkáltatói mutatókat, a bérezési pozíciót,
-        az adatminőséget és a később bővülő supply chain, valamint hírfigyelő adatokat kapcsolja össze.
+        A főoldal a gazdasági főmutatókat és az üzlethálózati adatokat mutatja.
+        A humán mutatók külön oldalon szerepelnek, hogy a fő dashboard tiszta vezetői áttekintés maradjon.
       </p>
 
       <div class="btn-row">
@@ -55,15 +54,15 @@
       </div>
 
       <div class="card span3">
-        <div class="kpi-label">Legjobb munkáltatói pontszám</div>
-        <div class="kpi" id="kpiEmployerLeader">–</div>
-        <div class="kpi-sub">benefit, értékelés, bér és fluktuáció alapján</div>
+        <div class="kpi-label">Legnagyobb üzlethálózat</div>
+        <div class="kpi" id="kpiStoreLeader">–</div>
+        <div class="kpi-sub" id="kpiStoreLeaderSub">üzletszám alapján</div>
       </div>
 
       <div class="card span3">
-        <div class="kpi-label">Legjobb bérpozíció</div>
-        <div class="kpi" id="kpiSalaryLeader">–</div>
-        <div class="kpi-sub" id="kpiSalaryLeaderSub">salaries.json alapján</div>
+        <div class="kpi-label">Legjobb árbevétel / üzlet</div>
+        <div class="kpi" id="kpiRevenuePerStoreLeader">–</div>
+        <div class="kpi-sub" id="kpiRevenuePerStoreSub">nettó árbevétel / üzlet</div>
       </div>
 
       <div class="card span3">
@@ -75,15 +74,15 @@
       <div class="card span5">
         <div class="section-title">
           <h2>FMCG Intelligence Index</h2>
-          <span>összesített vezetői mutató</span>
+          <span>gazdasági és adatminőségi index</span>
         </div>
         <div id="rankingTable"></div>
       </div>
 
       <div class="card span7">
         <div class="section-title">
-          <h2>Vállalati erőviszonyok</h2>
-          <span>Power Score és Employer Score</span>
+          <h2>Gazdasági erőviszonyok</h2>
+          <span>árbevétel, eredmény, index</span>
         </div>
         <div class="chartbox">
           <canvas id="scoreChart"></canvas>
@@ -102,12 +101,30 @@
 
       <div class="card span6">
         <div class="section-title">
-          <h2>Munkáltatói pozíció</h2>
-          <span>benefit, rating, fluktuáció</span>
+          <h2>Üzlethálózat</h2>
+          <span>üzletek száma</span>
         </div>
         <div class="chartbox">
-          <canvas id="employerChart"></canvas>
+          <canvas id="storeChart"></canvas>
         </div>
+      </div>
+
+      <div class="card span6">
+        <div class="section-title">
+          <h2>Árbevétel / üzlet</h2>
+          <span>hálózati hatékonysági mutató</span>
+        </div>
+        <div class="chartbox">
+          <canvas id="revenuePerStoreChart"></canvas>
+        </div>
+      </div>
+
+      <div class="card span6">
+        <div class="section-title">
+          <h2>Üzletformátumok</h2>
+          <span>diszkont, hipermarket, franchise</span>
+        </div>
+        <div id="formatBox"></div>
       </div>
 
       <div class="card span8">
@@ -147,8 +164,8 @@
 
       <div class="card span12">
         <div class="section-title">
-          <h2>Vezetői adattábla</h2>
-          <span>companies.json + salaries.json</span>
+          <h2>Gazdasági és hálózati adattábla</h2>
+          <span>companies.json + stores.json</span>
         </div>
         <div style="overflow:auto">
           <table id="summaryTable"></table>
@@ -161,23 +178,22 @@
           <span>következő bővítési kör</span>
         </div>
         <div class="notice">
-          A következő adatgyűjtési körben érdemes bevonni a KSH, e-beszámoló, vállalati beszámolók,
-          álláshirdetések, sajtóközlemények, valamint nyilvánosan elérhető piackutatói anyagok
-          adatait. Ide tartozhatnak például NielsenIQ, Circana, Trade Magazin, Store Insider,
-          Portfolio és vállalati sajtóoldalak.
+          A fő dashboardon a gazdasági főmutatók és az üzlethálózati adatok jelennek meg.
+          A humán mutatókat külön oldalon kezeljük. A következő adatgyűjtési körben érdemes bevonni
+          a KSH, e-beszámoló, vállalati beszámolók, álláshirdetések, sajtóközlemények,
+          NielsenIQ, Circana, Trade Magazin, Store Insider és Portfolio nyilvános adatait.
         </div>
       </div>
     </div>
   </main>
 
   <footer class="footer">
-    FMCG Intelligence Hungary – elemzői dashboard. A becsült HR- és bérmutatók nem hivatalos vállalati adatok,
-    hanem összehasonlító indikátorok.
+    FMCG Intelligence Hungary – fő dashboard. A dashboard a gazdasági és hálózati mutatókat különíti el a humán mutatóktól.
   </footer>
 
   <script>
     const companiesUrl = './data/companies.json';
-    const salariesUrl = './data/salaries.json';
+    const storesUrl = './data/stores.json';
 
     function n(v){
       return v === null || v === undefined || v === '' ? 'n.a.' : v;
@@ -193,9 +209,9 @@
       return Number(v).toLocaleString('hu-HU', {maximumFractionDigits:1}) + ' mrd Ft';
     }
 
-    function fmtHuf(v){
+    function fmtNum(v){
       if(v === null || v === undefined || v === '') return 'n.a.';
-      return Number(v).toLocaleString('hu-HU') + ' Ft';
+      return Number(v).toLocaleString('hu-HU');
     }
 
     function fmtPct(v){
@@ -211,36 +227,17 @@
 
     function score(c){
       const revenue = num(c.revenue_2024_bn_huf, 0);
-      const salary = num(c.avg_salary_huf_month, 0);
-      const benefit = c.benefits_score ?? 55;
-      const turnoverRisk = c.turnover_risk_score ?? 45;
-      const reputation = c.employee_rating ? c.employee_rating * 20 : 60;
+      const growth = c.revenue_growth_pct !== null && c.revenue_growth_pct !== undefined ? Math.max(0, Math.min(100, 50 + num(c.revenue_growth_pct,0) * 3)) : 40;
+      const profit = c.profit_2024_bn_huf !== null && c.profit_2024_bn_huf !== undefined ? Math.max(0, Math.min(100, 50 + num(c.profit_2024_bn_huf,0))) : 40;
       const quality = c.data_quality_score ?? 50;
-
       const revenueScore = revenue > 0 ? Math.min(100, revenue / 13.5) : 35;
-      const salaryScore = salary > 0 ? Math.min(100, salary / 8500) : 50;
-      const turnoverScore = 100 - turnoverRisk;
 
       return Math.round(
-        revenueScore * 0.25 +
-        salaryScore * 0.15 +
-        benefit * 0.15 +
-        turnoverScore * 0.15 +
-        reputation * 0.15 +
-        quality * 0.15
+        revenueScore * 0.40 +
+        growth * 0.20 +
+        profit * 0.15 +
+        quality * 0.25
       );
-    }
-
-    function employerScore(c){
-      const benefit = c.benefits_score ?? 55;
-      const reputation = c.employee_rating ? c.employee_rating * 20 : 60;
-      const turnover = 100 - (c.turnover_risk_score ?? 45);
-      const salary = c.avg_salary_huf_month ? Math.min(100, c.avg_salary_huf_month / 8500) : 50;
-      return Math.round(benefit * .30 + reputation * .25 + turnover * .25 + salary * .20);
-    }
-
-    function salaryLeaderScore(s){
-      return num(s.salary_position_score, 0);
     }
 
     async function fetchJson(url){
@@ -253,53 +250,56 @@
 
     async function loadData(){
       try{
-        const [companies, salaries] = await Promise.all([
+        const [companies, stores] = await Promise.all([
           fetchJson(companiesUrl),
-          fetchJson(salariesUrl)
+          fetchJson(storesUrl)
         ]);
 
-        const salaryById = new Map(salaries.map(s => [s.id, s]));
+        const storesById = new Map(stores.map(s => [s.id, s]));
 
         companies.forEach(c => {
-          const s = salaryById.get(c.id);
-          c.salary_data = s || null;
-          c.power_score = score(c);
-          c.employer_score = employerScore(c);
-          c.salary_position_score = s ? salaryLeaderScore(s) : 0;
+          const store = storesById.get(c.id);
+          c.store_data = store || null;
+          c.stores_count = store ? num(store.stores, 0) : 0;
+          c.store_confidence = store ? n(store.confidence) : 'n.a.';
+          c.market_score = score(c);
+          c.revenue_per_store = c.revenue_2024_bn_huf && c.stores_count ? c.revenue_2024_bn_huf / c.stores_count : null;
         });
 
-        renderDashboard(companies, salaries);
+        renderDashboard(companies);
       }catch(error){
         showError(
           '<b>Adatbetöltési hiba.</b><br>' +
           error.message +
           '<br><br>Ellenőrizd, hogy elérhető-e:<br>' +
           '<b>/fmcg-intelligence-hu/data/companies.json</b><br>' +
-          '<b>/fmcg-intelligence-hu/data/salaries.json</b>'
+          '<b>/fmcg-intelligence-hu/data/stores.json</b>'
         );
         console.error(error);
       }
     }
 
-    function renderDashboard(companies, salaries){
-      const ranked = [...companies].sort((a,b) => b.power_score - a.power_score);
+    function renderDashboard(companies){
+      const ranked = [...companies].sort((a,b) => b.market_score - a.market_score);
       const byRevenue = [...companies].filter(c => c.revenue_2024_bn_huf).sort((a,b) => b.revenue_2024_bn_huf - a.revenue_2024_bn_huf);
-      const byEmployer = [...companies].sort((a,b) => b.employer_score - a.employer_score);
-      const bySalary = [...companies].filter(c => c.salary_position_score).sort((a,b) => b.salary_position_score - a.salary_position_score);
+      const byStores = [...companies].filter(c => c.stores_count > 0).sort((a,b) => b.stores_count - a.stores_count);
+      const byRevenuePerStore = [...companies].filter(c => c.revenue_per_store).sort((a,b) => b.revenue_per_store - a.revenue_per_store);
 
       document.getElementById('kpiCompanies').textContent = companies.length;
 
       document.getElementById('kpiMarketLeader').textContent = byRevenue[0] ? byRevenue[0].company : 'n.a.';
       document.getElementById('kpiMarketLeaderSub').textContent = byRevenue[0] ? fmtBn(byRevenue[0].revenue_2024_bn_huf) + ' nettó árbevétel' : 'nettó árbevétel alapján';
 
-      document.getElementById('kpiEmployerLeader').textContent = byEmployer[0] ? byEmployer[0].company + ' ' + byEmployer[0].employer_score : 'n.a.';
+      document.getElementById('kpiStoreLeader').textContent = byStores[0] ? byStores[0].company : 'n.a.';
+      document.getElementById('kpiStoreLeaderSub').textContent = byStores[0] ? fmtNum(byStores[0].stores_count) + ' üzlet' : 'üzletszám alapján';
 
-      document.getElementById('kpiSalaryLeader').textContent = bySalary[0] ? bySalary[0].company : 'n.a.';
-      document.getElementById('kpiSalaryLeaderSub').textContent = bySalary[0] ? bySalary[0].salary_position_score + '/100 bérpozíció' : 'salaries.json alapján';
+      document.getElementById('kpiRevenuePerStoreLeader').textContent = byRevenuePerStore[0] ? byRevenuePerStore[0].company : 'n.a.';
+      document.getElementById('kpiRevenuePerStoreSub').textContent = byRevenuePerStore[0] ? fmtBn(byRevenuePerStore[0].revenue_per_store) + ' / üzlet' : 'nettó árbevétel / üzlet';
 
       renderRanking(ranked);
       renderCharts(ranked, companies);
-      renderInsight(ranked, byRevenue, byEmployer, bySalary);
+      renderFormatBox(companies);
+      renderInsight(ranked, byRevenue, byStores, byRevenuePerStore);
       renderSummaryTable(ranked);
     }
 
@@ -314,8 +314,8 @@
               <div class="small">${n(c.model)}</div>
             </div>
             <div>
-              <div class="metric-value">${c.power_score}/100</div>
-              <div class="bar"><div class="fill" style="width:${c.power_score}%"></div></div>
+              <div class="metric-value">${c.market_score}/100</div>
+              <div class="bar"><div class="fill" style="width:${c.market_score}%"></div></div>
             </div>
           </div>
         `;
@@ -330,8 +330,8 @@
         data:{
           labels:ranked.map(c => c.company),
           datasets:[
-            {label:'Power Score', data:ranked.map(c => c.power_score)},
-            {label:'Employer Score', data:ranked.map(c => c.employer_score)}
+            {label:'Gazdasági index', data:ranked.map(c => c.market_score)},
+            {label:'Adatminőség', data:ranked.map(c => num(c.data_quality_score,0))}
           ]
         },
         options:{
@@ -365,14 +365,12 @@
         }
       });
 
-      new Chart(document.getElementById('employerChart'), {
-        type:'radar',
+      new Chart(document.getElementById('storeChart'), {
+        type:'bar',
         data:{
-          labels:ranked.slice(0,6).map(c => c.company),
+          labels:companies.map(c => c.company),
           datasets:[
-            {label:'Benefit Score', data:ranked.slice(0,6).map(c => num(c.benefits_score,0))},
-            {label:'Employee Rating x20', data:ranked.slice(0,6).map(c => c.employee_rating ? c.employee_rating * 20 : 0)},
-            {label:'Fluktuáció fordított pontszám', data:ranked.slice(0,6).map(c => 100 - num(c.turnover_risk_score,45))}
+            {label:'Üzletek száma', data:companies.map(c => num(c.stores_count,0))}
           ]
         },
         options:{
@@ -380,44 +378,86 @@
           maintainAspectRatio:false,
           plugins:{legend:{labels:{color:'#16324f'}}},
           scales:{
-            r:{
-              suggestedMin:0,
-              suggestedMax:100,
-              ticks:{color:'#64748b',backdropColor:'transparent'},
-              pointLabels:{color:'#16324f'},
-              grid:{color:'#dbe4ee'},
-              angleLines:{color:'#dbe4ee'}
-            }
+            x:{ticks:{color:'#64748b'},grid:{color:'#eef3f7'}},
+            y:{ticks:{color:'#64748b'},grid:{color:'#eef3f7'}}
+          }
+        }
+      });
+
+      new Chart(document.getElementById('revenuePerStoreChart'), {
+        type:'bar',
+        data:{
+          labels:companies.map(c => c.company),
+          datasets:[
+            {label:'Nettó árbevétel / üzlet, mrd Ft', data:companies.map(c => c.revenue_per_store ? Number(c.revenue_per_store.toFixed(2)) : 0)}
+          ]
+        },
+        options:{
+          responsive:true,
+          maintainAspectRatio:false,
+          plugins:{legend:{labels:{color:'#16324f'}}},
+          scales:{
+            x:{ticks:{color:'#64748b'},grid:{color:'#eef3f7'}},
+            y:{ticks:{color:'#64748b'},grid:{color:'#eef3f7'}}
           }
         }
       });
     }
 
-    function renderInsight(ranked, byRevenue, byEmployer, bySalary){
-      const leader = ranked[0];
-      const marketLeader = byRevenue[0];
-      const employerLeader = byEmployer[0];
-      const salaryLeader = bySalary[0];
+    function renderFormatBox(companies){
+      const formats = {};
 
+      companies.forEach(c => {
+        const model = String(c.model || 'ismeretlen');
+        let key = 'Egyéb';
+
+        if(model.toLowerCase().includes('diszkont')) key = 'Diszkont';
+        else if(model.toLowerCase().includes('hipermarket')) key = 'Hipermarket / online';
+        else if(model.toLowerCase().includes('franchise')) key = 'Franchise / hazai lánc';
+        else if(model.toLowerCase().includes('szupermarket')) key = 'Szupermarket';
+
+        if(!formats[key]){
+          formats[key] = {count:0, revenue:0, stores:0};
+        }
+
+        formats[key].count += 1;
+        formats[key].revenue += num(c.revenue_2024_bn_huf,0);
+        formats[key].stores += num(c.stores_count,0);
+      });
+
+      const html = Object.entries(formats).map(([name, data]) => `
+        <div class="metric-row">
+          <span class="metric-name">${name}</span>
+          <span class="metric-value">${data.count} szereplő</span>
+        </div>
+        <div class="small" style="margin-bottom:10px">
+          Ismert árbevétel: ${fmtBn(data.revenue)} | Üzletszám: ${fmtNum(data.stores)}
+        </div>
+      `).join('');
+
+      document.getElementById('formatBox').innerHTML = html;
+    }
+
+    function renderInsight(ranked, byRevenue, byStores, byRevenuePerStore){
       let text = '';
 
-      if(leader){
-        text += `Az összesített FMCG Intelligence Index alapján jelenleg <b>${leader.company}</b> áll az első helyen. `;
+      if(ranked[0]){
+        text += `A gazdasági index alapján jelenleg <b>${ranked[0].company}</b> áll az első helyen. `;
       }
 
-      if(marketLeader){
-        text += `Gazdasági súly alapján a legerősebb szereplő <b>${marketLeader.company}</b>, ismert nettó árbevétele ${fmtBn(marketLeader.revenue_2024_bn_huf)}. `;
+      if(byRevenue[0]){
+        text += `Nettó árbevétel alapján a legerősebb szereplő <b>${byRevenue[0].company}</b>, ismert árbevétele ${fmtBn(byRevenue[0].revenue_2024_bn_huf)}. `;
       }
 
-      if(employerLeader){
-        text += `A munkáltatói mutatók szerint <b>${employerLeader.company}</b> rendelkezik a legerősebb pozícióval az aktuális indikátorok alapján. `;
+      if(byStores[0]){
+        text += `Az üzlethálózat mérete alapján <b>${byStores[0].company}</b> rendelkezik a legnagyobb lefedettséggel, ${fmtNum(byStores[0].stores_count)} üzlettel. `;
       }
 
-      if(salaryLeader){
-        text += `Bérpozíció alapján a legjobb értéket jelenleg <b>${salaryLeader.company}</b> mutatja. `;
+      if(byRevenuePerStore[0]){
+        text += `Az árbevétel / üzlet mutatóban <b>${byRevenuePerStore[0].company}</b> emelkedik ki, ${fmtBn(byRevenuePerStore[0].revenue_per_store)} / üzlet értékkel. `;
       }
 
-      text += `A következő fejlesztési szintet a supply chain adatok, a nyilvános piackutatói trendek, valamint a hír- és social media figyelés bekapcsolása adja.`;
+      text += `A humán mutatók külön oldalon szerepelnek, így a fő dashboard tisztán a gazdasági és hálózati képet mutatja.`;
 
       document.getElementById('autoInsight').innerHTML = text;
     }
@@ -431,9 +471,9 @@
             <th>Árbevétel</th>
             <th>Növekedés</th>
             <th>Eredmény</th>
-            <th>Employer</th>
-            <th>Bérpozíció</th>
-            <th>Index</th>
+            <th>Üzletszám</th>
+            <th>Árbevétel / üzlet</th>
+            <th>Gazdasági index</th>
             <th>Adatstátusz</th>
           </tr>
         </thead>
@@ -445,10 +485,10 @@
               <td>${fmtBn(c.revenue_2024_bn_huf)}</td>
               <td>${fmtPct(c.revenue_growth_pct)}</td>
               <td>${fmtBn(c.profit_2024_bn_huf)}</td>
-              <td><b>${c.employer_score}</b><div class="bar"><div class="fill" style="width:${c.employer_score}%"></div></div></td>
-              <td><b>${c.salary_position_score}</b><div class="bar"><div class="fill-orange" style="width:${c.salary_position_score}%"></div></div></td>
-              <td><b>${c.power_score}</b><div class="bar"><div class="fill" style="width:${c.power_score}%"></div></div></td>
-              <td>${n(c.source_status)}</td>
+              <td>${fmtNum(c.stores_count)}</td>
+              <td>${fmtBn(c.revenue_per_store)}</td>
+              <td><b>${c.market_score}</b><div class="bar"><div class="fill" style="width:${c.market_score}%"></div></div></td>
+              <td>${n(c.source_status)}<br><span class="small">Üzletszám bizalom: ${n(c.store_confidence)}</span></td>
             </tr>
           `).join('')}
         </tbody>
