@@ -22,7 +22,7 @@ JOBS_FILE = DATA_DIR / "jobs.json"
 CURRENT_POSTINGS_FILE = DATA_DIR / "job-postings-current.json"
 STATUS_FILE = DATA_DIR / "jobs-monitor-status.json"
 
-USER_AGENT = "Mozilla/5.0 (compatible; FMCG-Intelligence-Hungary/1.0; +https://github.com/mikloshetzer-sketch/fmcg-intelligence-hu)"
+USER_AGENT = "Mozilla/5.0 (compatible; FMCG-Intelligence-Hungary/1.0)"
 REQUEST_TIMEOUT = 20
 REQUEST_DELAY_SECONDS = 2
 
@@ -72,7 +72,7 @@ def fetch_url(url):
         with urllib.request.urlopen(request, timeout=REQUEST_TIMEOUT) as response:
             charset = response.headers.get_content_charset() or "utf-8"
             return response.read().decode(charset, errors="ignore")
-    except Exception as exc:
+    except Exception:
         return None
 
 
@@ -94,10 +94,6 @@ def make_search_url(source_type, company):
         return f"https://hu.indeed.com/jobs?q={q}"
     if source_type == "linkedin":
         return f"https://www.linkedin.com/jobs/search/?keywords={urllib.parse.quote_plus(company)}"
-    if source_type == "facebook":
-        return None
-    if source_type == "career_site":
-        return None
 
     return None
 
@@ -107,15 +103,34 @@ def extract_possible_job_titles(html, company):
     titles = []
 
     patterns = [
-        r"([A-ZÁÉÍÓÖŐÚÜŰa-záéíóöőúüű0-9 \-/]{4,80}(?:eladó|pénztáros|árufeltöltő|raktáros|vezető|manager|specialista|asszisztens|munkatárs)[A-ZÁÉÍÓÖŐÚÜŰa-záéíóöőúüű0-9 \-/]{0,80})",
-        r"((?:eladó|pénztáros|árufeltöltő|raktáros|vezető|manager|specialista|asszisztens|munkatárs)[A-ZÁÉÍÓÖŐÚÜŰa-záéíóöőúüű0-9 \-/]{4,80})"
+        r"([A-ZÁÉÍÓÖŐÚÜŰa-záéíóöőúüű0-9 \-/]{4,90}(?:eladó|pénztáros|árufeltöltő|raktáros|vezető|manager|specialista|asszisztens|munkatárs)[A-ZÁÉÍÓÖŐÚÜŰa-záéíóöőúüű0-9 \-/]{0,90})",
+        r"((?:eladó|pénztáros|árufeltöltő|raktáros|vezető|manager|specialista|asszisztens|munkatárs)[A-ZÁÉÍÓÖŐÚÜŰa-záéíóöőúüű0-9 \-/]{4,90})"
+    ]
+
+    bad_fragments = [
+        "süti", "cookie", "adatvédelem", "impresszum", "rendezvényeink",
+        "történetünk", "kapcsolat", "juttatásaink", "díjaink",
+        "kiválasztási folyamat", "betanulás", "pályázatodhoz"
     ]
 
     for pattern in patterns:
         for match in re.findall(pattern, text, flags=re.I):
             title = match.strip(" -|•,.;:")
-            if len(title) >= 4 and company.lower() not in title.lower():
-                titles.append(title)
+            lower = title.lower()
+
+            if len(title) < 4:
+                continue
+
+            if len(title) > 140:
+                continue
+
+            if company.lower() in lower:
+                continue
+
+            if any(bad in lower for bad in bad_fragments):
+                continue
+
+            titles.append(title)
 
     unique = []
     seen = set()
@@ -126,24 +141,35 @@ def extract_possible_job_titles(html, company):
             unique.append(title)
             seen.add(key)
 
-    return unique[:30]
+    return unique[:40]
 
 
 def extract_count_hint(html):
+    """
+    Count hint is only a weak helper.
+    It must not accept years like 2024/2025/2026 as job counts.
+    """
     text = clean_text(html).lower()
 
     patterns = [
-        r"(\d+)\s+(?:állás|találat|hirdetés)",
-        r"(?:állás|találat|hirdetés)[^\d]{0,20}(\d+)"
+        r"(\d{1,4})\s+(?:állás|találat|hirdetés)",
+        r"(?:állás|találat|hirdetés)[^\d]{0,20}(\d{1,4})"
     ]
 
     numbers = []
+    current_year = datetime.now(timezone.utc).year
+
     for pattern in patterns:
         for match in re.findall(pattern, text):
             try:
                 value = int(match)
-                if 0 <= value <= 5000:
+
+                if value in {current_year - 1, current_year, current_year + 1}:
+                    continue
+
+                if 0 <= value <= 1000:
                     numbers.append(value)
+
             except ValueError:
                 pass
 
@@ -170,6 +196,7 @@ def detect_category(title):
 
 def detect_salary(text):
     lower = text.lower()
+
     salary_patterns = [
         r"(\d{3})\s?000\s?ft",
         r"(\d{3})\s?ezer\s?ft",
@@ -177,6 +204,7 @@ def detect_salary(text):
     ]
 
     values = []
+
     for pattern in salary_patterns:
         for match in re.findall(pattern, lower):
             try:
@@ -225,12 +253,11 @@ def collect_from_source(company_id, company_name, source):
         result["error"] = "Ez a forrás automatizáltan korlátozottan gyűjthető."
         return result
 
-    url = base_url
-
     if source_type in ["job_portal", "indeed"]:
         url = make_search_url(source_type, company_name)
-
-    if source_type == "career_site":
+    elif source_type == "career_site":
+        url = base_url
+    else:
         url = base_url
 
     if not url:
@@ -318,12 +345,11 @@ def summarize_company(company, source_results, collected_at):
         if isinstance(result.get("count_hint"), int)
     ]
 
-    total_verified_ads = len(postings)
+    parsed_postings_count = len(postings)
 
-    if count_hints:
-        total_ads_hint = max(count_hints)
-    else:
-        total_ads_hint = total_verified_ads if total_verified_ads > 0 else None
+    total_verified_ads = parsed_postings_count
+
+    external_count_hint = max(count_hints) if count_hints else None
 
     salary_visible_ads = sum(1 for p in postings if p.get("salary_visible") is True)
 
@@ -331,8 +357,10 @@ def summarize_company(company, source_results, collected_at):
         "id": company_id,
         "company": company_name,
         "snapshot_date": collected_at,
-        "total_verified_ads": total_ads_hint,
-        "parsed_postings_count": len(postings),
+
+        "total_verified_ads": total_verified_ads,
+        "parsed_postings_count": parsed_postings_count,
+        "external_count_hint": external_count_hint,
 
         "store_jobs": category_counts["store"],
         "warehouse_jobs": category_counts["warehouse"],
@@ -365,10 +393,10 @@ def summarize_company(company, source_results, collected_at):
         "full_time_visible": None,
         "part_time_visible": None,
 
-        "source_confidence": "medium" if total_ads_hint is not None else "low",
+        "source_confidence": "medium" if parsed_postings_count > 0 else "low",
         "labor_pressure_status": "automatikus gyűjtés előzetes",
         "source_statuses": source_statuses,
-        "notes": "Automatikusan gyűjtött előzetes adat. A portálok szerkezete változhat, ezért kézi ellenőrzés javasolt."
+        "notes": "Automatikusan gyűjtött előzetes adat. A total_verified_ads a ténylegesen kinyert hirdetésszerű rekordok száma; az external_count_hint csak tájékoztató."
     }, postings
 
 
@@ -408,11 +436,13 @@ def main():
 
     save_json(JOBS_FILE, all_summaries)
     save_json(CURRENT_POSTINGS_FILE, all_postings)
+
     save_json(HISTORY_DIR / f"{month_name}.json", {
         "snapshot_date": collected_at,
         "companies": all_summaries,
         "postings": all_postings
     })
+
     save_json(RAW_DIR / f"{month_name}.json", {
         "snapshot_date": collected_at,
         "raw_results": raw_results
@@ -425,7 +455,7 @@ def main():
         "postings_parsed": len(all_postings),
         "history_file": f"{month_name}.json",
         "raw_file": f"{month_name}.json",
-        "mode": "weekly_preliminary_public_web_collection"
+        "mode": "weekly_preliminary_public_web_collection_fixed_count_logic"
     }
 
     save_json(STATUS_FILE, status)
