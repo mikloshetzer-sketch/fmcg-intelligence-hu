@@ -24,9 +24,14 @@ STATUS_FILE = DATA_DIR / "jobs-monitor-status.json"
 EMPLOYER_REVIEWS_FILE = DATA_DIR / "employer-reviews.json"
 BENEFITS_FILE = DATA_DIR / "benefits.json"
 
-USER_AGENT = "Mozilla/5.0 (compatible; FMCG-Intelligence-Hungary/1.0)"
-REQUEST_TIMEOUT = 20
-REQUEST_DELAY_SECONDS = 2
+USER_AGENT = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) "
+    "Chrome/125.0.0.0 Safari/537.36"
+)
+
+REQUEST_TIMEOUT = 25
+REQUEST_DELAY_SECONDS = 3
 
 
 PROFESSION_COMPANY_URLS = {
@@ -152,30 +157,16 @@ BAD_TEXT_PARTS = [
 def load_json(path, default):
     if not path.exists():
         return default
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return default
 
 
 def save_json(path, data):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
-
-
-def fetch_url(url):
-    request = urllib.request.Request(
-        url,
-        headers={
-            "User-Agent": USER_AGENT,
-            "Accept-Language": "hu-HU,hu;q=0.9,en;q=0.8"
-        }
-    )
-
-    try:
-        with urllib.request.urlopen(request, timeout=REQUEST_TIMEOUT) as response:
-            charset = response.headers.get_content_charset() or "utf-8"
-            return response.read().decode(charset, errors="ignore")
-    except Exception:
-        return None
 
 
 def clean_text(text):
@@ -185,6 +176,31 @@ def clean_text(text):
     text = unescape(text)
     text = re.sub(r"\s+", " ", text)
     return text.strip()
+
+
+def fetch_url(url):
+    headers = {
+        "User-Agent": USER_AGENT,
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "hu-HU,hu;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Cache-Control": "no-cache",
+        "Pragma": "no-cache"
+    }
+
+    for attempt in range(3):
+        try:
+            request = urllib.request.Request(url, headers=headers)
+            with urllib.request.urlopen(request, timeout=REQUEST_TIMEOUT) as response:
+                charset = response.headers.get_content_charset() or "utf-8"
+                html = response.read().decode(charset, errors="ignore")
+
+                if len(html) > 500:
+                    return html
+
+        except Exception:
+            time.sleep(2 + attempt)
+
+    return None
 
 
 def make_search_url(source_type, company, company_id=None):
@@ -222,7 +238,7 @@ def is_bad_fragment(text):
     if any(bad in lower for bad in BAD_TEXT_PARTS):
         return True
 
-    if len(text.split()) > 7:
+    if len(text.split()) > 8:
         return True
 
     if text[:1].islower() and not text.lower().startswith(("áru", "eladó", "pék", "hentes")):
@@ -249,7 +265,8 @@ def extract_location_from_title(title):
 
     bad_location_terms = [
         "franchise", "feladva", "magyarország", "élelmisz",
-        "rossmann", "sinsay", "tesco-bst", "kft", "zrt", "bt"
+        "rossmann", "sinsay", "tesco-bst", "kft", "zrt", "bt",
+        "aldi", "auchan", "spar", "tesco", "penny", "lidl"
     ]
 
     if len(location) > 35:
@@ -261,20 +278,8 @@ def extract_location_from_title(title):
     return location
 
 
-def strip_location_from_title(title):
-    if " - " not in title:
-        return title
-
-    parts = [p.strip() for p in title.split(" - ") if p.strip()]
-    if not parts:
-        return title
-
-    return parts[0]
-
-
 def extract_known_jobs_from_text(company_id, company_name, source_name, source_type, url, html):
     text = clean_text(html)
-    lower = text.lower()
     results = []
 
     known_jobs = KNOWN_JOBS.get(company_id, [])
@@ -289,12 +294,12 @@ def extract_known_jobs_from_text(company_id, company_name, source_name, source_t
             window = normalize_title(text[start:end])
 
             location = extract_location_from_title(window)
-
             title = job_name
+            item_category = category
 
             if "toborzónap" in window.lower():
                 title = f"{job_name} toborzónap"
-                category = "recruitment_event"
+                item_category = "recruitment_event"
 
             if is_bad_fragment(window) and source_type == "career_site":
                 if "toborzónap" not in window.lower():
@@ -307,7 +312,7 @@ def extract_known_jobs_from_text(company_id, company_name, source_name, source_t
                 "source": source_name,
                 "source_type": source_type,
                 "title": title,
-                "category": category,
+                "category": item_category,
                 "location": location,
                 "salary_min_huf": None,
                 "salary_max_huf": None,
@@ -393,7 +398,7 @@ def extract_employer_review_data(html, company_id, company_name, source_url):
         "review_count": review_count,
         "opinion_count": opinion_count,
         "source_status": "parsed" if any(v is not None for v in [rating, review_count, opinion_count]) else "not_found",
-        "notes": "Profession cégoldalról automatikusan kinyert munkáltatói értékelési adat. Ha null, akkor az adat nem volt stabilan olvasható a HTML-ben."
+        "notes": "Profession cégoldalról automatikusan kinyert munkáltatói értékelési adat."
     }
 
 
@@ -410,6 +415,77 @@ def extract_benefits_from_text(text):
     )
 
     return result
+
+
+def last_good_jobs():
+    previous = {}
+
+    current = load_json(JOBS_FILE, [])
+    if isinstance(current, list):
+        for row in current:
+            if row.get("id"):
+                previous[row["id"]] = row
+
+    for path in sorted(HISTORY_DIR.glob("*.json"), reverse=True):
+        data = load_json(path, {})
+        companies = data.get("companies", [])
+        if isinstance(companies, list):
+            for row in companies:
+                company_id = row.get("id")
+                if not company_id:
+                    continue
+
+                has_good_profession = (
+                    isinstance(row.get("profession_active_ads"), int)
+                    or isinstance(row.get("external_count_hint"), int)
+                )
+
+                if has_good_profession:
+                    previous[company_id] = row
+
+    return previous
+
+
+def last_good_reviews():
+    previous = {}
+
+    current = load_json(EMPLOYER_REVIEWS_FILE, [])
+    if isinstance(current, list):
+        for row in current:
+            if row.get("id"):
+                previous[row["id"]] = row
+
+    for path in sorted(HISTORY_DIR.glob("*.json"), reverse=True):
+        data = load_json(path, {})
+        reviews = data.get("employer_reviews", [])
+        if isinstance(reviews, list):
+            for row in reviews:
+                company_id = row.get("id")
+                if company_id and row.get("source_status") == "parsed":
+                    previous[company_id] = row
+
+    return previous
+
+
+def last_good_benefits():
+    previous = {}
+
+    current = load_json(BENEFITS_FILE, [])
+    if isinstance(current, list):
+        for row in current:
+            if row.get("id"):
+                previous[row["id"]] = row
+
+    for path in sorted(HISTORY_DIR.glob("*.json"), reverse=True):
+        data = load_json(path, {})
+        benefits = data.get("benefits", [])
+        if isinstance(benefits, list):
+            for row in benefits:
+                company_id = row.get("id")
+                if company_id and row.get("benefits_detected_count", 0) > 0:
+                    previous[company_id] = row
+
+    return previous
 
 
 def collect_from_source(company_id, company_name, source):
@@ -450,6 +526,7 @@ def collect_from_source(company_id, company_name, source):
         result["status"] = "no_url"
         return result
 
+    result["source_url"] = url
     html = fetch_url(url)
 
     if not html:
@@ -468,7 +545,7 @@ def collect_from_source(company_id, company_name, source):
             "source": "Profession",
             "source_url": url,
             **extract_benefits_from_text(clean_text(html)),
-            "notes": "Profession cégoldal / hirdetéslista HTML alapján előzetesen érzékelt juttatási kulcsszavak."
+            "notes": "Profession HTML alapján előzetesen érzékelt juttatási kulcsszavak."
         }
 
     result["postings"] = extract_known_jobs_from_text(
@@ -484,7 +561,7 @@ def collect_from_source(company_id, company_name, source):
     return result
 
 
-def summarize_company(company, source_results, collected_at):
+def summarize_company(company, source_results, collected_at, fallback_jobs, fallback_reviews, fallback_benefits):
     company_id = company["id"]
     company_name = company["company"]
 
@@ -493,8 +570,11 @@ def summarize_company(company, source_results, collected_at):
     employer_review = None
     benefits = None
 
+    profession_fetched = False
+
     for result in source_results:
         postings.extend(result.get("postings", []))
+
         source_statuses.append({
             "source_name": result.get("source_name"),
             "source_type": result.get("source_type"),
@@ -502,6 +582,9 @@ def summarize_company(company, source_results, collected_at):
             "count_hint": result.get("count_hint"),
             "error": result.get("error")
         })
+
+        if result.get("source_type") == "job_portal" and result.get("status") == "fetched":
+            profession_fetched = True
 
         if result.get("employer_review") and result["employer_review"].get("source_status") == "parsed":
             employer_review = result["employer_review"]
@@ -538,7 +621,28 @@ def summarize_company(company, source_results, collected_at):
 
     parsed_postings_count = len(postings)
     external_count_hint = max(count_hints) if count_hints else None
+    profession_active_ads = external_count_hint
+
+    previous_job = fallback_jobs.get(company_id, {})
+
+    if profession_active_ads is None:
+        profession_active_ads = previous_job.get("profession_active_ads")
+        if profession_active_ads is None:
+            profession_active_ads = previous_job.get("external_count_hint")
+
+    if external_count_hint is None and isinstance(profession_active_ads, int):
+        external_count_hint = profession_active_ads
+
+    active_ads_for_dashboard = (
+        profession_active_ads
+        if isinstance(profession_active_ads, int)
+        else parsed_postings_count
+    )
+
     salary_visible_ads = sum(1 for p in postings if p.get("salary_visible") is True)
+
+    if employer_review is None:
+        employer_review = fallback_reviews.get(company_id)
 
     if employer_review is None:
         employer_review = {
@@ -554,6 +658,9 @@ def summarize_company(company, source_results, collected_at):
         }
 
     if benefits is None:
+        benefits = fallback_benefits.get(company_id)
+
+    if benefits is None:
         benefits = {
             "id": company_id,
             "company": company_name,
@@ -564,12 +671,19 @@ def summarize_company(company, source_results, collected_at):
             "notes": "Nem sikerült stabilan kinyerni juttatási adatot."
         }
 
+    if not profession_fetched and isinstance(profession_active_ads, int):
+        source_confidence = "medium-stale"
+        notes = "Profession aktuálisan nem volt letölthető, ezért az utolsó jó hirdetésszámot tartotta meg a rendszer."
+    else:
+        source_confidence = "medium" if active_ads_for_dashboard > 0 else "low"
+        notes = "Automatikusan gyűjtött előzetes adat. A Profession cégprofilokat és cégspecifikus karrieroldal-parserrel szűrt munkaköröket használ."
+
     return {
         "id": company_id,
         "company": company_name,
         "snapshot_date": collected_at,
 
-        "total_verified_ads": parsed_postings_count,
+        "total_verified_ads": active_ads_for_dashboard,
         "parsed_postings_count": parsed_postings_count,
         "external_count_hint": external_count_hint,
 
@@ -592,7 +706,7 @@ def summarize_company(company, source_results, collected_at):
         "indeed_present": any(s.get("type") == "indeed" for s in company.get("sources", [])),
 
         "career_site_active_ads": None,
-        "profession_active_ads": external_count_hint,
+        "profession_active_ads": profession_active_ads,
         "linkedin_active_ads": None,
         "indeed_active_ads": None,
 
@@ -605,19 +719,24 @@ def summarize_company(company, source_results, collected_at):
         "full_time_visible": None,
         "part_time_visible": None,
 
-        "source_confidence": "medium" if parsed_postings_count > 0 or external_count_hint is not None else "low",
-        "labor_pressure_status": "automatikus gyűjtés előzetes, cégspecifikus karrieroldal-parserrel",
+        "source_confidence": source_confidence,
+        "labor_pressure_status": "automatikus gyűjtés előzetes, fallback védelemmel",
         "source_statuses": source_statuses,
-        "notes": "Automatikusan gyűjtött előzetes adat. A karrieroldalaknál ismert munkakörlistás szűrést használ."
+        "notes": notes
     }, postings, employer_review, benefits
 
 
 def main():
     collected_at = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    month_name = datetime.now(timezone.utc).strftime("%Y-%m")
 
     companies = load_json(SOURCES_FILE, [])
     if not companies:
         raise RuntimeError("Hiányzik vagy üres a docs/data/job-sources.json fájl.")
+
+    fallback_jobs = last_good_jobs()
+    fallback_reviews = last_good_reviews()
+    fallback_benefits = last_good_benefits()
 
     all_summaries = []
     all_postings = []
@@ -635,7 +754,14 @@ def main():
             result = collect_from_source(company_id, company_name, source)
             source_results.append(result)
 
-        summary, postings, employer_review, benefits = summarize_company(company, source_results, collected_at)
+        summary, postings, employer_review, benefits = summarize_company(
+            company,
+            source_results,
+            collected_at,
+            fallback_jobs,
+            fallback_reviews,
+            fallback_benefits
+        )
 
         all_summaries.append(summary)
         all_postings.extend(postings)
@@ -647,8 +773,6 @@ def main():
             "company": company_name,
             "sources": source_results
         })
-
-    month_name = datetime.now(timezone.utc).strftime("%Y-%m")
 
     save_json(JOBS_FILE, all_summaries)
     save_json(CURRENT_POSTINGS_FILE, all_postings)
@@ -677,7 +801,7 @@ def main():
         "benefits_written": len(all_benefits),
         "history_file": f"{month_name}.json",
         "raw_file": f"{month_name}.json",
-        "mode": "career_site_known_jobs_parser_v1_with_profession_optional"
+        "mode": "profession_retry_with_last_good_fallback_v2"
     }
 
     save_json(STATUS_FILE, status)
