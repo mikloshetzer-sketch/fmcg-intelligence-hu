@@ -39,80 +39,78 @@ PROFESSION_COMPANY_URLS = {
 }
 
 
-FMCG_JOB_TERMS = [
-    "eladó", "pénztáros", "kasszás", "árufeltöltő",
-    "bolti munkatárs", "boltimunkatárs", "áruházi munkatárs",
-    "kereskedelmi munkatárs",
-    "hentes", "húspult", "sajtpult", "halpult",
-    "csemegepult", "csemegepult eladó", "csemegepultos",
-    "frissáru", "frissáru eladó", "zöldség", "zöldség-gyümölcs",
-    "pék", "cukrász", "pékcsomagoló",
-    "raktár", "raktári dolgozó", "raktáros", "komissiózó",
-    "pikker", "targoncavezető", "árufogadó", "áruátvevő",
-    "árukiadó", "logisztikai ügyintéző",
-    "higiénikus", "higiéniai munkatárs",
-    "műszaki eladó",
-    "üzletvezető", "üzletvezető-helyettes",
-    "boltvezető", "boltvezető-helyettes",
-    "áruházvezető", "műszakvezető", "részlegvezető",
-    "osztályvezető", "területi vezető", "régióvezető",
-    "manager", "menedzser", "team leader",
-    "beszerző", "kontroller", "elemző", "specialista",
-    "asszisztens", "hr munkatárs", "bér-tb"
-]
-
-
-COMPANY_ALIASES = {
-    "lidl": ["lidl"],
-    "aldi": ["aldi"],
-    "spar": ["spar", "interspar"],
-    "tesco": ["tesco", "tesco-bst"],
-    "penny": ["penny", "penny-market", "penny market"],
-    "auchan": ["auchan"]
-}
-
-
-BAD_TERMS = [
-    "cookie", "süti", "adatvédelem", "adatkezelés", "impresszum",
-    "kapcsolat", "rendezvényeink", "történetünk", "értékeink",
-    "juttatásaink", "díjaink", "karrier nálunk", "kiválasztási folyamat",
-    "jelentkezési folyamat", "betanulás", "pályázatodhoz",
-    "munkáltató", "életkörülménye", "felhasználási feltételek",
-    "hírlevél", "social media", "facebook", "linkedin", "youtube",
-    "instagram", "megnézem az állást", "részletek elrejtése",
-    "előresorolva", "állás dátuma", "főbb feladatok", "nem kell nyelvtudás",
-    "magyar középfok", "angol középfok", "feladva május", "feladva június",
-    "dinamikusan fejlődő csapatába", "munkatársak szakmai képzésének"
-]
-
-
-CATEGORY_KEYWORDS = {
-    "store": [
-        "eladó", "pénztáros", "kasszás", "árufeltöltő",
-        "bolti", "boltimunkatárs", "áruházi munkatárs",
-        "kereskedelmi munkatárs", "hentes", "húspult", "sajtpult",
-        "halpult", "csemegepult", "csemegepultos", "frissáru",
-        "zöldség", "pék", "cukrász", "pékcsomagoló",
-        "higiénikus", "higiéniai munkatárs", "műszaki eladó"
+KNOWN_JOBS = {
+    "lidl": [
+        ("Bolti dolgozó", "store"),
+        ("Higiéniai munkatárs", "store"),
+        ("Üzletvezető", "management"),
+        ("Üzletvezető-helyettes", "management"),
+        ("Területi értékesítési vezető", "management"),
+        ("Raktári dolgozó", "warehouse"),
+        ("Targoncavezető", "warehouse"),
+        ("Áruösszekészítő", "warehouse"),
+        ("Raktári csoportvezető", "warehouse"),
+        ("Raktári csoportvezető-helyettes", "warehouse")
     ],
-    "warehouse": [
-        "raktár", "raktári", "raktáros", "komissiózó", "pikker",
-        "targoncavezető", "árufogadó", "áruátvevő", "árukiadó",
-        "logisztikai ügyintéző"
+    "aldi": [
+        ("Bolti eladó", "store"),
+        ("Árufeltöltő", "store"),
+        ("Pénztáros", "store"),
+        ("Raktári dolgozó", "warehouse"),
+        ("Logisztikai munkatárs", "warehouse"),
+        ("Üzletvezető", "management"),
+        ("Üzletvezető-helyettes", "management"),
+        ("Manager", "management"),
+        ("Asszisztens", "office")
     ],
-    "office": [
-        "iroda", "központ", "beszerző", "kontroller", "marketing",
-        "hr", "pénzügy", "it", "elemző", "specialista", "asszisztens",
-        "bér-tb"
+    "spar": [
+        ("Eladó-pénztáros", "store"),
+        ("Bolti eladó", "store"),
+        ("Shop eladó", "store"),
+        ("Pék", "store"),
+        ("Hentes", "store"),
+        ("Csemegepultos", "store"),
+        ("Raktári munkatárs", "warehouse"),
+        ("Raktáros", "warehouse"),
+        ("Boltvezető", "management"),
+        ("Boltvezető-helyettes", "management"),
+        ("Műszak részlegvezető", "management"),
+        ("Műszak-részlegvezető", "management")
     ],
-    "management": [
-        "üzletvezető", "üzletvezető-helyettes", "boltvezető",
-        "boltvezető-helyettes", "áruházvezető", "műszakvezető",
-        "részlegvezető", "osztályvezető", "területi vezető",
-        "régióvezető", "manager", "menedzser", "team leader"
+    "tesco": [
+        ("Eladó", "store"),
+        ("Árufeltöltő", "store"),
+        ("Pénztáros", "store"),
+        ("Online bevásárlás összekészítő", "store"),
+        ("Raktáros", "warehouse"),
+        ("Raktári munkatárs", "warehouse"),
+        ("Manager", "management"),
+        ("Buying Manager", "management"),
+        ("Bér-TB szenior specialista", "office"),
+        ("Specialista", "office")
     ],
-    "recruitment_event": [
-        "toborzónap", "nyílt nap", "karriernap", "állásbörze"
+    "penny": [
+        ("Eladó-pénztáros", "store"),
+        ("Bolti dolgozó", "store"),
+        ("Üzletvezető", "management"),
+        ("Üzletvezető-helyettes", "management"),
+        ("Osztályvezető", "management"),
+        ("Csoportvezető", "management"),
+        ("Targoncavezető", "warehouse"),
+        ("Raktári dolgozó", "warehouse"),
+        ("Asszisztens", "office"),
+        ("Elemző", "office")
+    ],
+    "auchan": [
+        ("Eladó", "store"),
+        ("Eladó/Pénztáros", "store"),
+        ("Árufeltöltő", "store"),
+        ("Áruátvevő", "warehouse"),
+        ("Raktár", "warehouse"),
+        ("Kamion leszedő munkatárs", "warehouse"),
+        ("Kereskedelmi manager", "management"),
+        ("Üzletvezető-helyettes", "management"),
+        ("Manager", "management")
     ]
 }
 
@@ -122,12 +120,33 @@ BENEFIT_KEYWORDS = {
     "commuting_support": ["munkába járás", "bejárás támogatás", "utazási támogatás", "bérlet támogatás"],
     "bonus": ["bónusz", "jutalom", "prémium"],
     "health_insurance": ["egészségbiztosítás", "magánegészségügy", "egészségügyi biztosítás"],
-    "sport_support": ["sport támogatás", "sportolási támogatás", "sport"],
+    "sport_support": ["sport támogatás", "sportolási támogatás"],
     "life_insurance": ["életbiztosítás", "balesetbiztosítás"],
     "training": ["képzés", "betanulás", "fejlődési lehetőség", "tréning"],
     "language_support": ["nyelvtanulás", "nyelvi képzés", "nyelvoktatás"],
     "employee_discount": ["dolgozói kedvezmény", "munkavállalói kedvezmény"]
 }
+
+
+BAD_TEXT_PARTS = [
+    "áttekintés",
+    "karrier",
+    "értékesítés",
+    "raktár / logisztika",
+    "raktár/logisztika",
+    "központi irodaház",
+    "vállalati kommunikáció",
+    "beszerzés marketing",
+    "munkatársaik",
+    "életkörülményeiről",
+    "adatvédelem",
+    "cookie",
+    "süti",
+    "impresszum",
+    "kapcsolat",
+    "rendezvényeink",
+    "történetünk"
+]
 
 
 def load_json(path, default):
@@ -192,125 +211,131 @@ def normalize_title(title):
     title = re.sub(r"^\d{4}\s+", "", title)
     title = re.sub(r"^\d{1,2}\s+", "", title)
     title = re.sub(r"\s+\d{1,2}$", "", title)
-    title = re.sub(r"^(ma|tegnap|új|állás|részletek|feladva)\s+", "", title, flags=re.I)
+    title = re.sub(r"^(ma|tegnap|új|állás|részletek|feladva|tipp)\s+", "", title, flags=re.I)
     title = title.strip(" -|•,.;:")
     return title
 
 
-def contains_job_term(title):
-    lower = title.lower()
-    return any(term in lower for term in FMCG_JOB_TERMS)
+def is_bad_fragment(text):
+    lower = text.lower()
 
-
-def contains_bad_term(title):
-    lower = title.lower()
-    return any(term in lower for term in BAD_TERMS)
-
-
-def company_match(company_id, company_name, title, source_type):
-    if source_type == "career_site":
+    if any(bad in lower for bad in BAD_TEXT_PARTS):
         return True
 
-    lower = title.lower()
-    aliases = COMPANY_ALIASES.get(company_id, [company_name.lower()])
-
-    if any(alias in lower for alias in aliases):
+    if len(text.split()) > 7:
         return True
 
-    clean_role_patterns = [
-        r"^(eladó|bolti eladó|eladó-pénztáros|pénztáros|árufeltöltő)",
-        r"^(higiéniai munkatárs|higiénikus)",
-        r"^(üzletvezető|üzletvezető-helyettes|boltvezető|boltvezető-helyettes)",
-        r"^(raktári dolgozó|raktáros|targoncavezető|pikker|komissiózó)",
-        r"^(hentes|pék|cukrász|pékcsomagoló|csemegepult)"
+    if text[:1].islower() and not text.lower().startswith(("áru", "eladó", "pék", "hentes")):
+        return True
+
+    return False
+
+
+def posting_id(company_id, source_name, title, location=None):
+    raw = f"{company_id}|{source_name}|{title}|{location or ''}".lower()
+    return hashlib.sha1(raw.encode("utf-8")).hexdigest()[:16]
+
+
+def extract_location_from_title(title):
+    if " - " not in title:
+        return None
+
+    parts = [p.strip() for p in title.split(" - ") if p.strip()]
+    if len(parts) < 2:
+        return None
+
+    location = parts[-1]
+    location = re.sub(r"\s+\d{1,2}$", "", location).strip()
+
+    bad_location_terms = [
+        "franchise", "feladva", "magyarország", "élelmisz",
+        "rossmann", "sinsay", "tesco-bst", "kft", "zrt", "bt"
     ]
 
-    return any(re.search(pattern, lower) for pattern in clean_role_patterns)
+    if len(location) > 35:
+        return None
+
+    if any(term in location.lower() for term in bad_location_terms):
+        return None
+
+    return location
 
 
-def is_valid_job_title(title, company_id, company_name, source_type):
-    title = normalize_title(title)
-    lower = title.lower()
+def strip_location_from_title(title):
+    if " - " not in title:
+        return title
 
-    if not title:
-        return False
+    parts = [p.strip() for p in title.split(" - ") if p.strip()]
+    if not parts:
+        return title
 
-    if len(title) < 4 or len(title) > 90:
-        return False
-
-    if len(title.split()) > 8:
-        return False
-
-    if contains_bad_term(title):
-        return False
-
-    if not contains_job_term(title):
-        return False
-
-    if not company_match(company_id, company_name, title, source_type):
-        return False
-
-    if lower in ["eladótérben", "munkatárs", "vezető", "manager", "asszisztens"]:
-        return False
-
-    return True
+    return parts[0]
 
 
-def extract_candidate_lines(text):
-    separators = r"[\n\r\t]| {2,}| • | \| "
-    parts = re.split(separators, text)
-    candidates = []
-
-    for part in parts:
-        part = normalize_title(part)
-        if part:
-            candidates.append(part)
-
-    return candidates
-
-
-def extract_possible_job_titles(html, company_id, company_name, source_type):
+def extract_known_jobs_from_text(company_id, company_name, source_name, source_type, url, html):
     text = clean_text(html)
-    candidates = extract_candidate_lines(text)
+    lower = text.lower()
+    results = []
 
-    titles = []
+    known_jobs = KNOWN_JOBS.get(company_id, [])
 
-    escaped_terms = [re.escape(term) for term in sorted(FMCG_JOB_TERMS, key=len, reverse=True)]
-    term_pattern = "|".join(escaped_terms)
+    for job_name, category in known_jobs:
+        pattern = re.escape(job_name)
+        matches = list(re.finditer(pattern, text, flags=re.I))
 
-    for candidate in candidates:
-        if is_valid_job_title(candidate, company_id, company_name, source_type):
-            titles.append(normalize_title(candidate))
+        for match in matches:
+            start = max(0, match.start() - 45)
+            end = min(len(text), match.end() + 55)
+            window = normalize_title(text[start:end])
 
-    short_window_pattern = rf"([A-ZÁÉÍÓÖŐÚÜŰa-záéíóöőúüű0-9 /\-]{{0,20}}(?:{term_pattern})[A-ZÁÉÍÓÖŐÚÜŰa-záéíóöőúüű0-9 /\-]{{0,35}})"
+            location = extract_location_from_title(window)
 
-    for match in re.findall(short_window_pattern, text, flags=re.I):
-        title = normalize_title(match)
-        if is_valid_job_title(title, company_id, company_name, source_type):
-            titles.append(title)
+            title = job_name
 
-    unique = []
-    seen = set()
+            if "toborzónap" in window.lower():
+                title = f"{job_name} toborzónap"
+                category = "recruitment_event"
 
-    for title in titles:
-        key = title.lower()
-        if key not in seen:
-            unique.append(title)
-            seen.add(key)
+            if is_bad_fragment(window) and source_type == "career_site":
+                if "toborzónap" not in window.lower():
+                    continue
 
-    return unique[:80]
+            results.append({
+                "posting_id": posting_id(company_id, source_name, title, location),
+                "company_id": company_id,
+                "company": company_name,
+                "source": source_name,
+                "source_type": source_type,
+                "title": title,
+                "category": category,
+                "location": location,
+                "salary_min_huf": None,
+                "salary_max_huf": None,
+                "salary_visible": False,
+                "benefits_visible": None,
+                "commuting_support_visible": None,
+                "full_time_visible": None,
+                "part_time_visible": None,
+                "url": url
+            })
+
+    unique = {}
+    for item in results:
+        unique[item["posting_id"]] = item
+
+    return list(unique.values())
 
 
 def extract_count_hint(html):
     text = clean_text(html).lower()
+    current_year = datetime.now(timezone.utc).year
 
     patterns = [
         r"(\d{1,4})\s+(?:állás|találat|hirdetés)",
-        r"(?:állás|találat|hirdetés)[^\d]{0,20}(\d{1,4})"
+        r"(?:állás|találat|hirdetés)[^\d]{0,25}(\d{1,4})"
     ]
 
     numbers = []
-    current_year = datetime.now(timezone.utc).year
 
     for pattern in patterns:
         for match in re.findall(pattern, text):
@@ -326,65 +351,38 @@ def extract_count_hint(html):
             except ValueError:
                 pass
 
-    if not numbers:
-        return None
-
-    return max(numbers)
+    return max(numbers) if numbers else None
 
 
 def extract_employer_review_data(html, company_id, company_name, source_url):
-    text = clean_text(html)
-    lower = text.lower()
+    text = clean_text(html).lower()
 
     rating = None
     review_count = None
     opinion_count = None
 
-    rating_patterns = [
-        r"(\d[,.]\d)\s*(?:/|ből)?\s*5",
-        r"értékelés\s*(\d[,.]\d)",
-        r"(\d[,.]\d)\s*értékelés"
-    ]
+    rating_match = re.search(r"(\d[,.]\d)", text)
+    if rating_match:
+        try:
+            candidate = float(rating_match.group(1).replace(",", "."))
+            if 1 <= candidate <= 5:
+                rating = candidate
+        except ValueError:
+            rating = None
 
-    for pattern in rating_patterns:
-        match = re.search(pattern, lower)
-        if match:
-            try:
-                rating = float(match.group(1).replace(",", "."))
-                if not (1 <= rating <= 5):
-                    rating = None
-                else:
-                    break
-            except ValueError:
-                rating = None
+    review_match = re.search(r"(\d{1,5})\s*értékelés", text)
+    if review_match:
+        try:
+            review_count = int(review_match.group(1))
+        except ValueError:
+            review_count = None
 
-    review_patterns = [
-        r"(\d{1,5})\s*értékelés",
-        r"értékelések\s*száma\s*(\d{1,5})"
-    ]
-
-    for pattern in review_patterns:
-        match = re.search(pattern, lower)
-        if match:
-            try:
-                review_count = int(match.group(1))
-                break
-            except ValueError:
-                review_count = None
-
-    opinion_patterns = [
-        r"(\d{1,5})\s*vélemény",
-        r"vélemények\s*száma\s*(\d{1,5})"
-    ]
-
-    for pattern in opinion_patterns:
-        match = re.search(pattern, lower)
-        if match:
-            try:
-                opinion_count = int(match.group(1))
-                break
-            except ValueError:
-                opinion_count = None
+    opinion_match = re.search(r"(\d{1,5})\s*vélemény", text)
+    if opinion_match:
+        try:
+            opinion_count = int(opinion_match.group(1))
+        except ValueError:
+            opinion_count = None
 
     return {
         "id": company_id,
@@ -406,91 +404,12 @@ def extract_benefits_from_text(text):
     for benefit, keywords in BENEFIT_KEYWORDS.items():
         result[benefit] = any(keyword in lower for keyword in keywords)
 
-    result["benefits_detected_count"] = sum(1 for key, value in result.items() if key != "benefits_detected_count" and value is True)
+    result["benefits_detected_count"] = sum(
+        1 for key, value in result.items()
+        if key != "benefits_detected_count" and value is True
+    )
+
     return result
-
-
-def detect_category(title):
-    lower = title.lower()
-
-    if any(word in lower for word in CATEGORY_KEYWORDS["recruitment_event"]):
-        return "recruitment_event"
-
-    scores = {}
-    for category, words in CATEGORY_KEYWORDS.items():
-        if category == "recruitment_event":
-            continue
-        scores[category] = sum(1 for word in words if word in lower)
-
-    best = max(scores, key=scores.get)
-
-    if scores[best] == 0:
-        return "unknown"
-
-    return best
-
-
-def detect_salary(text):
-    lower = text.lower()
-
-    salary_patterns = [
-        r"(\d{3})\s?000\s?ft",
-        r"(\d{3})\s?ezer\s?ft",
-        r"bruttó\s+(\d{3})"
-    ]
-
-    values = []
-
-    for pattern in salary_patterns:
-        for match in re.findall(pattern, lower):
-            try:
-                value = int(match) * 1000
-                if 250000 <= value <= 2500000:
-                    values.append(value)
-            except ValueError:
-                pass
-
-    if not values:
-        return None
-
-    return {
-        "salary_min_huf": min(values),
-        "salary_max_huf": max(values)
-    }
-
-
-def extract_location_from_title(title):
-    if " - " not in title:
-        return None
-
-    parts = [p.strip() for p in title.split(" - ") if p.strip()]
-
-    if len(parts) < 2:
-        return None
-
-    possible_location = parts[-1]
-    possible_location = re.sub(r"\s+\d{1,2}$", "", possible_location).strip()
-
-    bad_location_terms = [
-        "franchise", "feladva", "magyarország", "élelmisz", "sway",
-        "rossma", "sinsay", "tesco-bst"
-    ]
-
-    if len(possible_location) > 35:
-        return None
-
-    if any(term in possible_location.lower() for term in bad_location_terms):
-        return None
-
-    if contains_job_term(possible_location):
-        return None
-
-    return possible_location
-
-
-def posting_id(company_id, source_name, title):
-    raw = f"{company_id}|{source_name}|{title}".lower()
-    return hashlib.sha1(raw.encode("utf-8")).hexdigest()[:16]
 
 
 def collect_from_source(company_id, company_name, source):
@@ -552,32 +471,14 @@ def collect_from_source(company_id, company_name, source):
             "notes": "Profession cégoldal / hirdetéslista HTML alapján előzetesen érzékelt juttatási kulcsszavak."
         }
 
-    titles = extract_possible_job_titles(html, company_id, company_name, source_type)
-
-    for title in titles:
-        category = detect_category(title)
-        salary = detect_salary(title)
-
-        posting = {
-            "posting_id": posting_id(company_id, source_name, title),
-            "company_id": company_id,
-            "company": company_name,
-            "source": source_name,
-            "source_type": source_type,
-            "title": title,
-            "category": category,
-            "location": extract_location_from_title(title),
-            "salary_min_huf": salary["salary_min_huf"] if salary else None,
-            "salary_max_huf": salary["salary_max_huf"] if salary else None,
-            "salary_visible": salary is not None,
-            "benefits_visible": None,
-            "commuting_support_visible": None,
-            "full_time_visible": None,
-            "part_time_visible": None,
-            "url": url
-        }
-
-        result["postings"].append(posting)
+    result["postings"] = extract_known_jobs_from_text(
+        company_id=company_id,
+        company_name=company_name,
+        source_name=source_name,
+        source_type=source_type,
+        url=url,
+        html=html
+    )
 
     time.sleep(REQUEST_DELAY_SECONDS)
     return result
@@ -705,9 +606,9 @@ def summarize_company(company, source_results, collected_at):
         "part_time_visible": None,
 
         "source_confidence": "medium" if parsed_postings_count > 0 or external_count_hint is not None else "low",
-        "labor_pressure_status": "automatikus gyűjtés előzetes",
+        "labor_pressure_status": "automatikus gyűjtés előzetes, cégspecifikus karrieroldal-parserrel",
         "source_statuses": source_statuses,
-        "notes": "Automatikusan gyűjtött előzetes adat. Profession esetén cégprofil URL-eket használ."
+        "notes": "Automatikusan gyűjtött előzetes adat. A karrieroldalaknál ismert munkakörlistás szűrést használ."
     }, postings, employer_review, benefits
 
 
@@ -776,7 +677,7 @@ def main():
         "benefits_written": len(all_benefits),
         "history_file": f"{month_name}.json",
         "raw_file": f"{month_name}.json",
-        "mode": "profession_company_profile_jobs_reviews_benefits_v1"
+        "mode": "career_site_known_jobs_parser_v1_with_profession_optional"
     }
 
     save_json(STATUS_FILE, status)
