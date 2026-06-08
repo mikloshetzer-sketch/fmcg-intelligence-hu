@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FMCG Intelligence Hungary – News & Social Monitor</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="./css/style.css" />
+  <style>
+    :root{
+      --ns-navy:#05284f;
+      --ns-blue:#0ea5e9;
+      --ns-green:#22c55e;
+      --ns-orange:#f97316;
+      --ns-red:#ef4444;
+      --ns-border:#d7e4ef;
+      --ns-muted:#5b708f;
+      --ns-shadow:0 18px 45px rgba(15,42,75,.10);
+      --ns-warn:#fff7ed;
+      --ns-warn-border:#fed7aa;
+    }
+    body{background:linear-gradient(110deg,#e5f6ff 0%,#eefdf4 100%);}
+    .main{max-width:1440px;margin:0 auto;padding:26px 18px 60px;}
+    .hero-box{max-width:1440px;margin:0 auto;border-radius:28px;background:rgba(255,255,255,.68);box-shadow:var(--ns-shadow);}
+    .dashboard-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:18px;align-items:stretch;}
+    .span12{grid-column:span 12}.span8{grid-column:span 8}.span7{grid-column:span 7}.span6{grid-column:span 6}.span5{grid-column:span 5}.span4{grid-column:span 4}.span3{grid-column:span 3}
+    .card{border:1px solid var(--ns-border);box-shadow:var(--ns-shadow);background:rgba(255,255,255,.94);}
+    .executive-card{min-height:132px;position:relative;overflow:hidden;background:linear-gradient(145deg,#fff,#f7fbff);}
+    .executive-card:after{content:"";position:absolute;right:-26px;top:-35px;width:95px;height:95px;border-radius:50%;background:rgba(14,165,233,.12)}
+    .kpi{font-size:27px;line-height:1.05;color:var(--ns-navy);font-weight:950;}
+    .kpi-sub{margin-top:8px;color:var(--ns-muted);}
+    .section-title{border-bottom:1px solid #e6eef6;padding-bottom:10px;margin-bottom:12px;}
+    .section-title h2{font-size:20px;margin-bottom:2px;}
+    .chartbox{height:315px;}
+    .chartbox.small{height:255px;}
+    .chartbox.compact{height:260px;}
+    .weekly-box{background:linear-gradient(145deg,#eef9ff,#f0fdf4);border:1px solid #cce9f6;border-radius:22px;padding:18px 20px;line-height:1.75;color:#12345a;}
+    .weekly-box b{color:var(--ns-navy)}
+    .chart-insight{margin-top:12px;padding:13px 15px;border-radius:16px;background:#f0fdfa;border:1px solid #c7f1e8;color:#0b315d;font-size:13px;line-height:1.6;}
+    .chart-insight b{color:var(--ns-navy);}
+    .formula-box{margin-top:12px;padding:13px 15px;border-radius:16px;background:#f8fafc;border:1px solid #dbe7f2;color:#334155;font-size:13px;line-height:1.55;}
+    .rank-row{display:grid;grid-template-columns:44px 1fr 120px;gap:12px;padding:12px 0;border-bottom:1px solid #e5edf5;align-items:center;}
+    .rank{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:12px;font-weight:900;background:#eef3f8;color:var(--ns-navy)}
+    .rank.one{background:#ffedd5;color:#c2410c}.rank.two{background:#e0f2fe;color:#0369a1}.rank.three{background:#dcfce7;color:#15803d}
+    .reputation-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:8px;}
+    .reputation-tile{border:1px solid #e2edf6;border-radius:16px;background:#fbfdff;padding:14px;}
+    .reputation-value{font-size:24px;font-weight:950;color:var(--ns-navy);margin-top:5px;}
+    .matrix-wrap{overflow:auto;}
+    .matrix-table{width:100%;border-collapse:collapse;font-size:13px;}
+    .matrix-table th,.matrix-table td{padding:10px;border-bottom:1px solid #e2edf6;text-align:center;white-space:nowrap;}
+    .matrix-table th:first-child,.matrix-table td:first-child{text-align:left;font-weight:900;color:var(--ns-navy);position:sticky;left:0;background:#fff;}
+    .dot{display:inline-block;width:16px;height:16px;border-radius:50%;background:#cbd5e1;vertical-align:middle}.dot.pos{background:#22c55e}.dot.neu{background:#f97316}.dot.neg{background:#ef4444}.dot.na{background:#cbd5e1}
+    .risk-low{color:#166534;font-weight:900}.risk-mid{color:#9a3412;font-weight:900}.risk-high{color:#991b1b;font-weight:900}
+    .audit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+    .audit-tile{border:1px solid #e2edf6;border-radius:16px;background:#fbfdff;padding:14px;}
+    .audit-value{font-size:22px;font-weight:950;color:var(--ns-navy);margin-top:4px;}
+    .quality-bars{display:grid;gap:10px;margin-top:8px;}
+    .quality-row{display:grid;grid-template-columns:140px 1fr 52px;gap:10px;align-items:center;font-size:13px;}
+    .qbar{height:10px;border-radius:999px;background:#e2e8f0;overflow:hidden}.qfill{height:100%;background:linear-gradient(90deg,#0ea5e9,#22c55e)}
+    details{border:1px solid #dbe7f2;border-radius:18px;background:white;box-shadow:var(--ns-shadow);overflow:hidden;}
+    details+details{margin-top:14px;}
+    summary{cursor:pointer;padding:18px 20px;font-weight:950;color:var(--ns-navy);list-style:none;display:flex;justify-content:space-between;align-items:center;}
+    summary::-webkit-details-marker{display:none} summary:after{content:"+";font-size:22px;color:var(--ns-blue)} details[open] summary:after{content:"−";}
+    .details-body{padding:0 18px 18px;overflow:auto;}
+    table{font-size:13px;} th{letter-spacing:.04em;}
+    .notice{background:var(--ns-warn);border-color:var(--ns-warn-border);}
+    @media(max-width:1000px){.span8,.span7,.span6,.span5,.span4,.span3{grid-column:span 12}.chartbox{height:280px}.reputation-grid,.audit-grid{grid-template-columns:1fr}.quality-row{grid-template-columns:110px 1fr 48px}}
+  </style>
+</head>
+<body>
+<header class="header">
+  <div class="header-inner">
+    <div class="brand">
+      <div class="brand-title">FMCG Intelligence Hungary</div>
+      <div class="brand-subtitle">News & Social Monitor – híraktivitás, narratívák, reputációs kockázat és social signal</div>
+    </div>
+    <nav class="nav">
+      <a href="./index.html">Dashboard</a>
+      <a href="./human-capital.html">Human Capital</a>
+      <a href="./supply-chain.html">Supply Chain</a>
+      <a class="active" href="./news-social.html">News & Social</a>
+      <a href="./methodology.html">Methodology</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-box">
+    <div class="hero-kicker">News & Social Intelligence V1</div>
+    <h1>Hírek, narratívák és reputációs jelek az FMCG szereplőknél</h1>
+    <p>
+      A modul a médiamegjelenéseket, a domináns narratívákat, a social signalokat és a reputációs kockázatot követi.
+      A felépítés a regionális monitorok logikáját követi, de FMCG vállalatokra és fogyasztói-kiskereskedelmi témákra szabva.
+    </p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="./index.html">Vissza a fő dashboardra</a>
+      <a class="btn" href="./human-capital.html">Human Capital oldal</a>
+      <a class="btn" href="./supply-chain.html">Supply Chain oldal</a>
+    </div>
+  </div>
+</section>
+
+<main class="main">
+  <div id="errorBox" style="display:none" class="error"></div>
+  <div class="dashboard-grid">
+    <div class="card span3 executive-card"><div class="kpi-label">Reputációs Leader</div><div class="kpi" id="kpiReputationLeader">–</div><div class="kpi-sub" id="kpiReputationSub">legalacsonyabb kockázat</div></div>
+    <div class="card span3 executive-card"><div class="kpi-label">Legnagyobb médiafigyelem</div><div class="kpi" id="kpiMediaLeader">–</div><div class="kpi-sub" id="kpiMediaSub">cikk / 30 nap</div></div>
+    <div class="card span3 executive-card"><div class="kpi-label">Domináns narratíva</div><div class="kpi" id="kpiNarrativeLeader">–</div><div class="kpi-sub" id="kpiNarrativeSub">legtöbb azonosított jel</div></div>
+    <div class="card span3 executive-card"><div class="kpi-label">Adatbizalom</div><div class="kpi" id="kpiDataQuality">–</div><div class="kpi-sub" id="kpiDataQualitySub">news/social fedettség</div></div>
+
+    <div class="card span3 executive-card"><div class="kpi-label">Legnagyobb reputációs kockázat</div><div class="kpi" id="kpiRiskLeader">–</div><div class="kpi-sub" id="kpiRiskSub">risk index</div></div>
+    <div class="card span3 executive-card"><div class="kpi-label">Legpozitívabb hangulat</div><div class="kpi" id="kpiPositiveLeader">–</div><div class="kpi-sub" id="kpiPositiveSub">pozitív arány</div></div>
+    <div class="card span3 executive-card"><div class="kpi-label">Social Signal Leader</div><div class="kpi" id="kpiSocialLeader">–</div><div class="kpi-sub" id="kpiSocialSub">social említés / aktivitás</div></div>
+    <div class="card span3 executive-card"><div class="kpi-label">Figyelendő téma</div><div class="kpi" id="kpiWatchTopic">–</div><div class="kpi-sub" id="kpiWatchSub">emelkedő kockázati narratíva</div></div>
+
+    <div class="card span12">
+      <div class="section-title"><h2>FMCG Weekly Media Insight</h2><span>automatikus vezetői összefoglaló</span></div>
+      <div class="weekly-box" id="weeklyInsight">Adatok betöltése...</div>
+    </div>
+
+    <div class="card span7">
+      <div class="section-title"><h2>Reputációs kockázati rangsor</h2><span>hírek, narratívák és sentiment alapján</span></div>
+      <div id="riskRanking"></div>
+      <div class="formula-box"><b>Risk Score értelmezés:</b> 0–30 alacsony, 31–60 közepes, 61 felett magasabb figyelmet igénylő reputációs kockázat. A pontszám nem hivatalos minősítés, hanem nyilvános hír- és social jelekből képzett indikátor.</div>
+    </div>
+    <div class="card span5">
+      <div class="section-title"><h2>Media & Social Snapshot</h2><span>coverage + sentiment + social</span></div>
+      <div id="snapshotBox"></div>
+    </div>
+
+    <div class="card span6">
+      <div class="section-title"><h2>Médiaaktivitás</h2><span>cikkek száma / 7 és 30 nap</span></div>
+      <div class="chartbox"><canvas id="mediaActivityChart"></canvas></div>
+      <div class="chart-insight" id="mediaActivityInsight">Adatok betöltése...</div>
+    </div>
+    <div class="card span6">
+      <div class="section-title"><h2>Sentiment Monitor</h2><span>pozitív, semleges és negatív jelzések</span></div>
+      <div class="chartbox"><canvas id="sentimentChart"></canvas></div>
+      <div class="chart-insight" id="sentimentInsight">Adatok betöltése...</div>
+    </div>
+
+    <div class="card span8">
+      <div class="section-title"><h2>Domináns narratívák</h2><span>árak, infláció, bérek, munkaerő, terjeszkedés, fenntarthatóság</span></div>
+      <div class="chartbox"><canvas id="narrativeChart"></canvas></div>
+      <div class="chart-insight" id="narrativeInsight">Adatok betöltése...</div>
+    </div>
+    <div class="card span4">
+      <div class="section-title"><h2>Social Signal</h2><span>nyilvános social és közösségi jelek</span></div>
+      <div class="chartbox compact"><canvas id="socialChart"></canvas></div>
+      <div class="chart-insight" id="socialInsight">Adatok betöltése...</div>
+    </div>
+
+    <div class="card span12">
+      <div class="section-title"><h2>Narratíva Matrix</h2><span>cégek és témák kapcsolódása</span></div>
+      <div id="narrativeMatrix" class="matrix-wrap">Adatok betöltése...</div>
+      <div class="chart-insight" id="matrixInsight">Adatok betöltése...</div>
+    </div>
+
+    <div class="card span6">
+      <div class="section-title"><h2>Top események</h2><span>legfontosabb azonosított hírek és reputációs jelek</span></div>
+      <div id="topEventsBox">Adatok betöltése...</div>
+    </div>
+    <div class="card span6">
+      <div class="section-title"><h2>Data Quality Center</h2><span>forrásfedettség és módszertani korlátok</span></div>
+      <div id="dataQualityBox">Adatok betöltése...</div>
+    </div>
+
+    <div class="card span12">
+      <div class="section-title"><h2>Trend Intelligence</h2><span>news-social-history alapján bővíthető</span></div>
+      <div id="trendBox" class="chart-insight">Adatok betöltése...</div>
+    </div>
+
+    <div class="span12">
+      <details open><summary>News & Social adattábla <span class="small">news-social.json</span></summary><div class="details-body"><table id="newsSocialTable"></table></div></details>
+      <details><summary>Top események adattábla <span class="small">news-social-events.json vagy news-social.json/events</span></summary><div class="details-body"><table id="eventsTable"></table></div></details>
+    </div>
+
+    <div class="card span12">
+      <div class="section-title"><h2>Adatmegbízhatósági megjegyzés</h2><span>fontos értelmezési keret</span></div>
+      <div class="notice">
+        A News & Social Monitor reputációs és médiafigyelési indikátorokat mutat. A social signal nem teljes közösségi média scrapinget jelent, hanem nyilvánosan elérhető vagy kézzel ellenőrizhető jelekből képzett trendmutatót. A sentiment- és narratíva-besorolás előzetes, elemzői ellenőrzést igényelhet.
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">FMCG Intelligence Hungary – News & Social Monitor V1 modul.</footer>
+
+<script>
+const newsSocialUrl = './data/news-social.json';
+const statusUrl = './data/news-social-status.json';
+const historyUrl = './data/news-social-history/current.json';
+
+let charts = {};
+let state = {items:[], events:[], status:null, history:null};
+
+const DEFAULT_ITEMS = [
+  {id:'lidl',company:'Lidl',articles_7d:12,articles_30d:48,positive:9,neutral:31,negative:8,social_mentions:84,risk_score:32,data_confidence:70,narratives:{prices:14,inflation:7,wages:4,labor:6,expansion:5,promotions:13,sustainability:3,suppliers:2}},
+  {id:'aldi',company:'ALDI',articles_7d:8,articles_30d:35,positive:10,neutral:20,negative:5,social_mentions:58,risk_score:24,data_confidence:68,narratives:{prices:12,inflation:6,wages:4,labor:3,expansion:4,promotions:10,sustainability:2,suppliers:1}},
+  {id:'spar',company:'SPAR',articles_7d:10,articles_30d:44,positive:7,neutral:24,negative:13,social_mentions:65,risk_score:45,data_confidence:64,narratives:{prices:9,inflation:7,wages:6,labor:7,expansion:3,promotions:8,sustainability:5,suppliers:4}},
+  {id:'tesco',company:'Tesco',articles_7d:7,articles_30d:31,positive:6,neutral:20,negative:5,social_mentions:51,risk_score:36,data_confidence:62,narratives:{prices:7,inflation:5,wages:4,labor:4,expansion:2,promotions:7,sustainability:4,suppliers:2}},
+  {id:'penny',company:'PENNY',articles_7d:6,articles_30d:27,positive:7,neutral:16,negative:4,social_mentions:42,risk_score:29,data_confidence:60,narratives:{prices:8,inflation:4,wages:3,labor:5,expansion:2,promotions:6,sustainability:2,suppliers:1}},
+  {id:'auchan',company:'Auchan',articles_7d:5,articles_30d:23,positive:8,neutral:12,negative:3,social_mentions:39,risk_score:27,data_confidence:61,narratives:{prices:5,inflation:4,wages:3,labor:3,expansion:1,promotions:5,sustainability:4,suppliers:2}},
+  {id:'coop',company:'COOP',articles_7d:3,articles_30d:16,positive:3,neutral:10,negative:3,social_mentions:18,risk_score:38,data_confidence:40,narratives:{prices:4,inflation:3,wages:1,labor:2,expansion:1,promotions:3,sustainability:1,suppliers:2}},
+  {id:'cba',company:'CBA',articles_7d:2,articles_30d:14,positive:2,neutral:9,negative:3,social_mentions:15,risk_score:41,data_confidence:38,narratives:{prices:3,inflation:3,wages:1,labor:2,expansion:1,promotions:2,sustainability:1,suppliers:1}}
+];
+const DEFAULT_EVENTS = [
+  {date:'2026-06-08',company:'Lidl',title:'Árverseny és akciós kommunikáció erősödése',type:'prices',sentiment:'neutral',risk:'medium',source:'demo'},
+  {date:'2026-06-08',company:'SPAR',title:'Munkaerőpiaci és bérnarratívák emelkedése',type:'labor',sentiment:'negative',risk:'medium',source:'demo'},
+  {date:'2026-06-07',company:'Auchan',title:'Benefit és munkáltatói kommunikáció láthatósága',type:'wages',sentiment:'positive',risk:'low',source:'demo'},
+  {date:'2026-06-06',company:'ALDI',title:'Diszkont árpozíció és fogyasztói költségérzékenység',type:'prices',sentiment:'neutral',risk:'low',source:'demo'}
+];
+
+function num(v,fallback=0){const x=Number(v);return Number.isFinite(x)?x:fallback;}
+function fmtNum(v){if(v===null||v===undefined||v==='')return'n.a.';return Number(v).toLocaleString('hu-HU');}
+function fmtPct(v){if(v===null||v===undefined||v==='')return'n.a.';return Number(v).toLocaleString('hu-HU',{maximumFractionDigits:0})+'%';}
+function cacheBust(url){return url+'?v='+Date.now();}
+function showError(message){const box=document.getElementById('errorBox');box.style.display='block';box.innerHTML=message;}
+function setText(id,value){const el=document.getElementById(id);if(el)el.textContent=value;}
+function destroyChart(id){if(charts[id]){charts[id].destroy();delete charts[id];}}
+function makeChart(id,type,labels,datasets,opts={}){destroyChart(id);const el=document.getElementById(id);if(!el)return null;charts[id]=new Chart(el,{type,data:{labels,datasets},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:'#16324f'}}},scales:{x:{ticks:{color:'#64748b'},grid:{color:'#eef3f7'}},y:{ticks:{color:'#64748b'},grid:{color:'#eef3f7'}}},...opts}});return charts[id];}
+async function fetchJson(url,optional=false){try{const r=await fetch(cacheBust(url),{cache:'no-store'});if(!r.ok){if(optional)return null;throw new Error(url+' HTTP '+r.status);}return await r.json();}catch(e){if(optional)return null;throw e;}}
+function riskClass(score){if(score<=30)return'risk-low';if(score<=60)return'risk-mid';return'risk-high';}
+function narrativeTotal(item){return Object.values(item.narratives||{}).reduce((a,b)=>a+num(b),0);}
+function totalSentiment(item){return num(item.positive)+num(item.neutral)+num(item.negative);}
+function positiveShare(item){const t=totalSentiment(item);return t?num(item.positive)/t*100:0;}
+function negativeShare(item){const t=totalSentiment(item);return t?num(item.negative)/t*100:0;}
+function dominantNarrative(items){const sums={prices:0,inflation:0,wages:0,labor:0,expansion:0,promotions:0,sustainability:0,suppliers:0};items.forEach(i=>Object.keys(sums).forEach(k=>sums[k]+=num(i.narratives?.[k])));return Object.entries(sums).sort((a,b)=>b[1]-a[1])[0]||['n.a.',0];}
+function narrativeLabel(key){return {prices:'Árak',inflation:'Infláció',wages:'Bérek',labor:'Munkaerő',expansion:'Terjeszkedés',promotions:'Akciók',sustainability:'Fenntarthatóság',suppliers:'Beszállítók'}[key]||key;}
+
+async function loadData(){
+  const data = await fetchJson(newsSocialUrl,true);
+  const status = await fetchJson(statusUrl,true);
+  const history = await fetchJson(historyUrl,true);
+  let items = DEFAULT_ITEMS, events = DEFAULT_EVENTS;
+  if(Array.isArray(data)) items = data;
+  if(data && Array.isArray(data.companies)) items = data.companies;
+  if(data && Array.isArray(data.events)) events = data.events;
+  state={items,events,status,history};
+  renderPage(items,events,status,history);
+}
+
+function renderPage(items,events,status,history){
+  const byRisk=[...items].sort((a,b)=>num(b.risk_score)-num(a.risk_score));
+  const byLowRisk=[...items].sort((a,b)=>num(a.risk_score)-num(b.risk_score));
+  const byMedia=[...items].sort((a,b)=>num(b.articles_30d)-num(a.articles_30d));
+  const byPositive=[...items].sort((a,b)=>positiveShare(b)-positiveShare(a));
+  const bySocial=[...items].sort((a,b)=>num(b.social_mentions)-num(a.social_mentions));
+  const byQuality=[...items].sort((a,b)=>num(b.data_confidence)-num(a.data_confidence));
+  const avgQuality=Math.round(items.reduce((a,i)=>a+num(i.data_confidence),0)/Math.max(1,items.length));
+  const dom=dominantNarrative(items);
+
+  setText('kpiReputationLeader',byLowRisk[0]?.company||'n.a.'); setText('kpiReputationSub',byLowRisk[0]?`${byLowRisk[0].risk_score}/100 kockázat`:'legalacsonyabb kockázat');
+  setText('kpiMediaLeader',byMedia[0]?.company||'n.a.'); setText('kpiMediaSub',byMedia[0]?`${fmtNum(byMedia[0].articles_30d)} cikk / 30 nap`:'cikk / 30 nap');
+  setText('kpiNarrativeLeader',narrativeLabel(dom[0])); setText('kpiNarrativeSub',`${fmtNum(dom[1])} jel`);
+  setText('kpiDataQuality',avgQuality+'%'); setText('kpiDataQualitySub',byQuality[0]?`legjobb: ${byQuality[0].company} (${byQuality[0].data_confidence}%)`:'news/social fedettség');
+  setText('kpiRiskLeader',byRisk[0]?.company||'n.a.'); setText('kpiRiskSub',byRisk[0]?`${byRisk[0].risk_score}/100 risk index`:'risk index');
+  setText('kpiPositiveLeader',byPositive[0]?.company||'n.a.'); setText('kpiPositiveSub',byPositive[0]?`${fmtPct(positiveShare(byPositive[0]))} pozitív arány`:'pozitív arány');
+  setText('kpiSocialLeader',bySocial[0]?.company||'n.a.'); setText('kpiSocialSub',bySocial[0]?`${fmtNum(bySocial[0].social_mentions)} social jel`:'social említés / aktivitás');
+  setText('kpiWatchTopic',narrativeLabel(dom[0])); setText('kpiWatchSub','domináns narratíva');
+
+  renderWeeklyInsight(items,events,byMedia,byRisk,byPositive,bySocial,dom,avgQuality);
+  renderRiskRanking(byRisk);
+  renderSnapshot(items,events,avgQuality);
+  renderCharts(items);
+  renderNarrativeMatrix(items);
+  renderTopEvents(events);
+  renderDataQuality(items,avgQuality);
+  renderTrend(history,items);
+  renderTables(items,events);
+}
+function renderWeeklyInsight(items,events,byMedia,byRisk,byPositive,bySocial,dom,avgQuality){
+  const text=`Az elmúlt időszakban a legerősebb médiafigyelem <b>${byMedia[0]?.company||'n.a.'}</b> körül látható, ${fmtNum(byMedia[0]?.articles_30d||0)} azonosított megjelenéssel. A domináns narratíva jelenleg <b>${narrativeLabel(dom[0])}</b>, ami az árérzékeny fogyasztói környezetet és az FMCG verseny erősödését jelzi. A legnagyobb reputációs kockázati index <b>${byRisk[0]?.company||'n.a.'}</b> esetében jelenik meg, míg a legpozitívabb sentiment arány <b>${byPositive[0]?.company||'n.a.'}</b> oldalán látható. A social jelzések alapján <b>${bySocial[0]?.company||'n.a.'}</b> a legaktívabb szereplő. Az átlagos adatbizalom <b>${avgQuality}%</b>, ezért a blokk trendjelzőként, nem végleges reputációs minősítésként értelmezendő.`;
+  document.getElementById('weeklyInsight').innerHTML=text;
+}
+function renderRiskRanking(items){
+  document.getElementById('riskRanking').innerHTML=items.map((c,i)=>{const cls=i===0?'one':i===1?'two':i===2?'three':'';return `<div class="rank-row"><div class="rank ${cls}">${i+1}</div><div><div style="font-weight:900;color:var(--ns-navy)">${c.company}</div><div class="small">30 napos cikk: ${fmtNum(c.articles_30d)} • negatív arány: ${fmtPct(negativeShare(c))} • social: ${fmtNum(c.social_mentions)}</div></div><div><div class="metric-value ${riskClass(c.risk_score)}">${c.risk_score}/100</div><div class="bar"><div class="fill-orange" style="width:${c.risk_score}%"></div></div></div></div>`}).join('');
+}
+function renderSnapshot(items,events,avgQuality){
+  const totalNews=items.reduce((a,c)=>a+num(c.articles_30d),0); const totalSocial=items.reduce((a,c)=>a+num(c.social_mentions),0); const totalNeg=items.reduce((a,c)=>a+num(c.negative),0); const highRisk=items.filter(c=>num(c.risk_score)>60).length;
+  document.getElementById('snapshotBox').innerHTML=`<div class="reputation-grid"><div class="reputation-tile"><div class="kpi-label">Cikkek</div><div class="reputation-value">${fmtNum(totalNews)}</div><div class="small">30 nap / összesen</div></div><div class="reputation-tile"><div class="kpi-label">Social jel</div><div class="reputation-value">${fmtNum(totalSocial)}</div><div class="small">azonosított említés</div></div><div class="reputation-tile"><div class="kpi-label">Negatív jel</div><div class="reputation-value">${fmtNum(totalNeg)}</div><div class="small">sentiment mintában</div></div><div class="reputation-tile"><div class="kpi-label">Magas kockázat</div><div class="reputation-value">${highRisk}</div><div class="small">60 pont feletti cég</div></div></div><div class="source-note">Az aktuális V1 oldal demo/fallback adatokkal is működik. Automata script után a news-social.json veszi át a szerepet.</div>`;
+}
+function renderCharts(items){
+  makeChart('mediaActivityChart','bar',items.map(c=>c.company),[{label:'Cikk / 7 nap',data:items.map(c=>num(c.articles_7d))},{label:'Cikk / 30 nap',data:items.map(c=>num(c.articles_30d))}]);
+  makeChart('sentimentChart','bar',items.map(c=>c.company),[{label:'Pozitív',data:items.map(c=>num(c.positive))},{label:'Semleges',data:items.map(c=>num(c.neutral))},{label:'Negatív',data:items.map(c=>num(c.negative))}],{scales:{x:{stacked:true,ticks:{color:'#64748b'},grid:{color:'#eef3f7'}},y:{stacked:true,ticks:{color:'#64748b'},grid:{color:'#eef3f7'}}}});
+  const keys=['prices','inflation','wages','labor','expansion','promotions','sustainability','suppliers'];
+  makeChart('narrativeChart','bar',items.map(c=>c.company),keys.map(k=>({label:narrativeLabel(k),data:items.map(c=>num(c.narratives?.[k]))})),{scales:{x:{stacked:true,ticks:{color:'#64748b'},grid:{color:'#eef3f7'}},y:{stacked:true,ticks:{color:'#64748b'},grid:{color:'#eef3f7'}}}});
+  makeChart('socialChart','bar',items.map(c=>c.company),[{label:'Social signal',data:items.map(c=>num(c.social_mentions))}]);
+  const mediaLeader=[...items].sort((a,b)=>num(b.articles_30d)-num(a.articles_30d))[0]; const riskLeader=[...items].sort((a,b)=>num(b.risk_score)-num(a.risk_score))[0]; const socialLeader=[...items].sort((a,b)=>num(b.social_mentions)-num(a.social_mentions))[0]; const dom=dominantNarrative(items);
+  document.getElementById('mediaActivityInsight').innerHTML=`<b>${mediaLeader.company}</b> körül látható a legnagyobb médiafigyelem. A 7 és 30 napos bontás segít elkülöníteni a friss hírhullámot a tartós láthatóságtól. A magas cikkmennyiség önmagában nem negatív, de reputációs figyelmet igényel.`;
+  document.getElementById('sentimentInsight').innerHTML=`A sentiment monitor a pozitív, semleges és negatív jelzéseket választja szét. A negatív arány emelkedése figyelmeztető jel lehet, főleg ha munkaügyi, ár- vagy hatósági témával párosul. A minta trendjelző, kézi ellenőrzést igényel.`;
+  document.getElementById('narrativeInsight').innerHTML=`A domináns narratíva jelenleg <b>${narrativeLabel(dom[0])}</b>. Ez megmutatja, hogy a médiában és social térben mely témák kapcsolódnak leginkább az FMCG szereplőkhöz. A mátrix a reputációs és piaci nyomás értelmezéséhez ad kontextust.`;
+  document.getElementById('socialInsight').innerHTML=`A legerősebb social signal <b>${socialLeader.company}</b> esetében látható. A social jel nem teljes scraping, hanem nyilvános vagy ellenőrizhető aktivitási indikátor. A magas érték lehet kampány, fogyasztói érdeklődés vagy reputációs vita jele is.`;
+}
+function renderNarrativeMatrix(items){
+  const keys=['prices','inflation','wages','labor','expansion','promotions','sustainability','suppliers'];
+  document.getElementById('narrativeMatrix').innerHTML=`<table class="matrix-table"><thead><tr><th>Narratíva</th>${items.map(c=>`<th>${c.company}</th>`).join('')}</tr></thead><tbody>${keys.map(k=>`<tr><td>${narrativeLabel(k)}</td>${items.map(c=>{const v=num(c.narratives?.[k]);return `<td><b>${v}</b></td>`}).join('')}</tr>`).join('')}<tr><td>Összes jel</td>${items.map(c=>`<td><b>${narrativeTotal(c)}</b></td>`).join('')}</tr></tbody></table>`;
+  const dom=dominantNarrative(items); document.getElementById('matrixInsight').innerHTML=`A narratíva mátrix azt mutatja, hogy egy-egy vállalathoz milyen témák kapcsolódnak. A legerősebb összesített téma jelenleg <b>${narrativeLabel(dom[0])}</b>. A magas érték nem feltétlenül negatív, hanem médiatérben érzékelhető tematikus jelenlétet jelent.`;
+}
+function renderTopEvents(events){
+  document.getElementById('topEventsBox').innerHTML=`<table><thead><tr><th>Dátum</th><th>Cég</th><th>Esemény</th><th>Típus</th><th>Kockázat</th></tr></thead><tbody>${events.slice(0,10).map(e=>`<tr><td>${e.date||'n.a.'}</td><td><b>${e.company||'n.a.'}</b></td><td>${e.title||'n.a.'}</td><td>${narrativeLabel(e.type)||e.type||'n.a.'}</td><td>${e.risk||'n.a.'}</td></tr>`).join('')}</tbody></table><div class="chart-insight">A top események blokk vezetői gyorsnézet. Később ide kerülhetnek a friss cikkek címei, linkjei és rövid AI-összefoglalói.</div>`;
+}
+function renderDataQuality(items,avgQuality){
+  const avgNews=Math.round(items.filter(c=>num(c.articles_30d)>0).length/items.length*100); const avgSocial=Math.round(items.filter(c=>num(c.social_mentions)>0).length/items.length*100); const avgSent=Math.round(items.filter(c=>totalSentiment(c)>0).length/items.length*100); const avgEvents=70;
+  document.getElementById('dataQualityBox').innerHTML=`<div class="quality-bars">${[['News coverage',avgNews],['Social coverage',avgSocial],['Sentiment coverage',avgSent],['Event coverage',avgEvents],['Overall confidence',avgQuality]].map(([label,v])=>`<div class="quality-row"><b>${label}</b><div class="qbar"><div class="qfill" style="width:${v}%"></div></div><span>${v}%</span></div>`).join('')}</div><div class="chart-insight">Az adatbizalom azt jelzi, hogy mennyi jel áll rendelkezésre. Nem azt jelenti, hogy egy vállalat jobb vagy rosszabb, hanem azt, hogy az adott következtetés mennyire stabil.</div>`;
+}
+function renderTrend(history,items){
+  const total=items.reduce((a,c)=>a+num(c.articles_30d),0); document.getElementById('trendBox').innerHTML=`<b>Aktuális 30 napos médiamegjelenés összesen:</b> ${fmtNum(total)}. A trendmodul a news-social-history mentések után tud heti vagy havi változást mutatni. Az első V1 verzió már előkészíti ezt a réteget, de valódi trendhez több futás szükséges.`;
+}
+function renderTables(items,events){
+  document.getElementById('newsSocialTable').innerHTML=`<thead><tr><th>Cég</th><th>7 nap cikk</th><th>30 nap cikk</th><th>Pozitív</th><th>Semleges</th><th>Negatív</th><th>Social</th><th>Risk</th><th>Adatbizalom</th><th>Domináns téma</th></tr></thead><tbody>${items.map(c=>{const dom=Object.entries(c.narratives||{}).sort((a,b)=>num(b[1])-num(a[1]))[0]||['n.a.',0];return `<tr><td><b>${c.company}</b></td><td>${fmtNum(c.articles_7d)}</td><td>${fmtNum(c.articles_30d)}</td><td>${fmtNum(c.positive)}</td><td>${fmtNum(c.neutral)}</td><td>${fmtNum(c.negative)}</td><td>${fmtNum(c.social_mentions)}</td><td class="${riskClass(c.risk_score)}">${c.risk_score}</td><td>${c.data_confidence}%</td><td>${narrativeLabel(dom[0])}</td></tr>`}).join('')}</tbody>`;
+  document.getElementById('eventsTable').innerHTML=`<thead><tr><th>Dátum</th><th>Cég</th><th>Cím</th><th>Típus</th><th>Sentiment</th><th>Kockázat</th><th>Forrás</th></tr></thead><tbody>${events.map(e=>`<tr><td>${e.date||'n.a.'}</td><td><b>${e.company||'n.a.'}</b></td><td>${e.title||'n.a.'}</td><td>${narrativeLabel(e.type)||e.type||'n.a.'}</td><td>${e.sentiment||'n.a.'}</td><td>${e.risk||'n.a.'}</td><td>${e.source||'n.a.'}</td></tr>`).join('')}</tbody>`;
+}
+loadData().catch(e=>{showError('<b>Adatbetöltési hiba.</b><br>'+e.message+'<br><br>A V1 oldal fallback demo adatokkal is működik, ha a news-social.json még nem készült el.'); console.error(e); renderPage(DEFAULT_ITEMS,DEFAULT_EVENTS,null,null);});
+</script>
+</body>
+</html>
