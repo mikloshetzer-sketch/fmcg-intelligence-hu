@@ -606,6 +606,46 @@
       </div>
     </div>
 
+
+    <div class="card span12">
+      <div class="section-title">
+        <h2>Company Historical Intelligence</h2>
+        <span>cégenkénti történeti pálya: mi történt, milyen irányba mozdul a szereplő</span>
+      </div>
+
+      <div class="formula-box">
+        <b>Válassz piaci szereplőt:</b>
+        <select id="companyHistorySelect" style="padding:8px 12px;border-radius:12px;border:1px solid #cbd5e1;margin-left:8px;font-weight:800;color:#05284f;background:white;"></select>
+      </div>
+
+      <div id="companyHistoryProfile" class="chart-insight">Cégprofil betöltése...</div>
+
+      <div class="dashboard-grid" style="margin-top:14px;">
+        <div class="span6">
+          <div class="chartbox"><canvas id="companyHistoricalMediaChart"></canvas></div>
+          <div class="chart-insight" id="companyHistoricalMediaInsight">Adatok betöltése...</div>
+        </div>
+
+        <div class="span6">
+          <div class="chartbox"><canvas id="companyHistoricalRiskChart"></canvas></div>
+          <div class="chart-insight" id="companyHistoricalRiskInsight">Adatok betöltése...</div>
+        </div>
+
+        <div class="span12">
+          <div class="chartbox tall"><canvas id="companyHistoricalNarrativeChart"></canvas></div>
+          <div class="chart-insight" id="companyHistoricalNarrativeInsight">Adatok betöltése...</div>
+        </div>
+
+        <div class="span12">
+          <div class="section-title" style="margin-top:8px;">
+            <h2>Company Key Events Timeline</h2>
+            <span>az adott szereplő legfontosabb történeti eseményei</span>
+          </div>
+          <div id="companyHistoricalEvents" class="timeline">Adatok betöltése...</div>
+        </div>
+      </div>
+    </div>
+
     <div class="card span12">
       <div class="section-title">
         <h2>Kiemelt cikkek és stratégiai események</h2>
@@ -872,6 +912,7 @@ function renderPage(current,currentStatus,history,historyStatus){
   renderMediaSocial(companies,current);
   renderHistoricalContext(history,current);
   renderHistoricalTrends(history);
+  renderCompanyHistoricalModule(history,current);
   renderTopEvents(events,current);
   renderBusinessMatrix(companies,current);
   renderNarrativeMatrix(companies,current);
@@ -1158,6 +1199,212 @@ function renderHistoricalTrends(history){
     `A narratíva trend havi bontásban mutatja a top 5 stratégiai témát. Így látható, hogy a piaci verseny, növekedés, munkaerő vagy védekezés mikor erősödött fel.`;
 }
 
+
+function buildCompanyMonthlyHistory(company){
+  const months = {};
+
+  (company?.articles || []).forEach(article => {
+    const m = monthKey(article.published_at);
+    if(m === 'n.a.') return;
+
+    if(!months[m]){
+      months[m] = {
+        month:m,
+        media_score:0,
+        news_count:0,
+        risk_sum:0,
+        critical_count:0,
+        high_count:0,
+        narratives:{},
+        business_impacts:{},
+        events:[]
+      };
+    }
+
+    months[m].news_count += 1;
+    months[m].media_score += num(article.source_weight);
+    months[m].risk_sum += num(article.article_risk_score);
+
+    if(article.impact === 'critical') months[m].critical_count += 1;
+    if(article.impact === 'high' || article.impact === 'critical') months[m].high_count += 1;
+
+    const n = article.strategic_narrative || 'general';
+    const b = article.business_impact || 'general';
+
+    months[m].narratives[n] = (months[m].narratives[n] || 0) + 1;
+    months[m].business_impacts[b] = (months[m].business_impacts[b] || 0) + 1;
+    months[m].events.push(article);
+  });
+
+  return Object.values(months).sort((a,b)=>a.month.localeCompare(b.month));
+}
+
+function renderCompanyHistoricalModule(history,current){
+  const select = document.getElementById('companyHistorySelect');
+  if(!select) return;
+
+  if(!history || !history.companies || !history.companies.length){
+    document.getElementById('companyHistoryProfile').innerHTML =
+      'A cégenkénti történeti modulhoz szükséges a <b>news-social-history-2026.json</b> fájl.';
+    return;
+  }
+
+  const companies = history.companies || [];
+  select.innerHTML = companies
+    .map(c => `<option value="${c.id}">${c.company}</option>`)
+    .join('');
+
+  const currentCompanies = current.companies || [];
+  const preferred = current.summary?.media_impact_leader || companies[0]?.company;
+  const preferredCompany = companies.find(c => c.company === preferred) || companies[0];
+
+  if(preferredCompany){
+    select.value = preferredCompany.id;
+    renderSelectedCompanyHistory(preferredCompany.id, history, current);
+  }
+
+  select.onchange = () => renderSelectedCompanyHistory(select.value, history, current);
+}
+
+function renderSelectedCompanyHistory(companyId, history, current){
+  const company = (history.companies || []).find(c => c.id === companyId);
+  const currentCompany = (current.companies || []).find(c => c.id === companyId);
+
+  if(!company){
+    document.getElementById('companyHistoryProfile').innerHTML = 'Nincs adat ehhez a szereplőhöz.';
+    return;
+  }
+
+  const monthly = buildCompanyMonthlyHistory(company);
+  const labels = monthly.map(m => m.month);
+
+  const mediaData = monthly.map(m => m.media_score);
+  const newsData = monthly.map(m => m.news_count);
+  const riskAvgData = monthly.map(m => Math.round(m.risk_sum / Math.max(1,m.news_count)));
+  const criticalData = monthly.map(m => m.critical_count);
+
+  const firstMonth = monthly[0];
+  const lastMonth = monthly[monthly.length - 1];
+
+  const firstMedia = num(firstMonth?.media_score);
+  const lastMedia = num(lastMonth?.media_score);
+  const firstRisk = firstMonth ? Math.round(firstMonth.risk_sum / Math.max(1,firstMonth.news_count)) : 0;
+  const lastRisk = lastMonth ? Math.round(lastMonth.risk_sum / Math.max(1,lastMonth.news_count)) : 0;
+
+  const mediaDirection = lastMedia > firstMedia ? 'emelkedő' : lastMedia < firstMedia ? 'csökkenő' : 'stabil';
+  const riskDirection = lastRisk > firstRisk ? 'emelkedő' : lastRisk < firstRisk ? 'csökkenő' : 'stabil';
+
+  const historicalNarrative = company.dominant_market_narrative || company.dominant_strategic_narrative_label || 'n.a.';
+  const currentNarrative = currentCompany?.dominant_market_narrative || currentCompany?.dominant_strategic_narrative_label || 'n.a.';
+
+  document.getElementById('companyHistoryProfile').innerHTML = `
+    <b>${company.company} történeti profil:</b>
+    2026.01.01 óta <b>${fmtNum(company.news_count)}</b> hír,
+    <b>${fmtNum(company.media_impact_score)}</b> történeti médiahatás-pont,
+    történeti risk: <b>${fmtNum(company.risk_index ?? company.risk_score)}</b>.
+    A történeti domináns narratíva: <b>${historicalNarrative}</b>.
+    A friss domináns narratíva: <b>${currentNarrative}</b>.
+    A médiaaktivitás iránya: <b>${mediaDirection}</b>, a kockázati pálya: <b>${riskDirection}</b>.
+  `;
+
+  makeChart(
+    'companyHistoricalMediaChart',
+    'line',
+    labels,
+    [
+      {label:`${company.company} Media Score`,data:mediaData,tension:.3},
+      {label:`${company.company} News Count`,data:newsData,tension:.3}
+    ],
+    {}
+  );
+
+  makeChart(
+    'companyHistoricalRiskChart',
+    'line',
+    labels,
+    [
+      {label:'Átlagos Risk / cikk',data:riskAvgData,tension:.3},
+      {label:'Critical események',data:criticalData,tension:.3}
+    ],
+    {}
+  );
+
+  const narrativeTotals = {};
+  monthly.forEach(m => {
+    Object.entries(m.narratives || {}).forEach(([k,v]) => {
+      if(k === 'general' || k === 'n.a.') return;
+      narrativeTotals[k] = (narrativeTotals[k] || 0) + num(v);
+    });
+  });
+
+  const topNarratives = Object.entries(narrativeTotals)
+    .sort((a,b)=>b[1]-a[1])
+    .slice(0,5)
+    .map(x=>x[0]);
+
+  makeChart(
+    'companyHistoricalNarrativeChart',
+    'bar',
+    labels,
+    topNarratives.map(k => ({
+      label:narrativeLabel(k,history),
+      data:monthly.map(m => num(m.narratives?.[k]))
+    })),
+    {scales:{x:{stacked:true,ticks:{color:'#64748b'},grid:{color:'#eef3f7'}},y:{stacked:true,ticks:{color:'#64748b'},grid:{color:'#eef3f7'}}}}
+  );
+
+  const strongestMonth = [...monthly].sort((a,b)=>b.media_score-a.media_score)[0];
+  const riskiestMonth = [...monthly].sort((a,b)=>(b.risk_sum/Math.max(1,b.news_count))-(a.risk_sum/Math.max(1,a.news_count)))[0];
+  const dominantNarrative = topNarratives[0] || 'n.a.';
+
+  document.getElementById('companyHistoricalMediaInsight').innerHTML = `
+    <b>${company.company}</b> esetében a legerősebb média hónap: <b>${strongestMonth?.month || 'n.a.'}</b>.
+    Ez mutatja, mikor került a szereplő erősebben a hírtérbe.
+  `;
+
+  document.getElementById('companyHistoricalRiskInsight').innerHTML = `
+    A legmagasabb átlagos kockázati hónap: <b>${riskiestMonth?.month || 'n.a.'}</b>.
+    Ha ez közel van a friss időszakhoz, akkor a reputációs kockázat nem csak egyszeri, hanem erősödő jel lehet.
+  `;
+
+  document.getElementById('companyHistoricalNarrativeInsight').innerHTML = `
+    A történeti narratívák alapján <b>${company.company}</b> legerősebb témája:
+    <b>${narrativeLabel(dominantNarrative,history)}</b>.
+    Ezt érdemes összevetni a friss domináns narratívával.
+  `;
+
+  renderCompanyHistoricalEvents(company, history);
+}
+
+function renderCompanyHistoricalEvents(company, history){
+  const events = [...(company.articles || [])]
+    .sort((a,b)=>
+      num(b.article_risk_score)-num(a.article_risk_score) ||
+      num(b.source_weight)-num(a.source_weight) ||
+      String(b.published_at).localeCompare(String(a.published_at))
+    )
+    .slice(0,10);
+
+  document.getElementById('companyHistoricalEvents').innerHTML = events.map(e => {
+    const cls = e.impact === 'critical' ? 'critical' : e.impact === 'high' ? 'high' : '';
+    return `
+      <div class="event-card ${cls}">
+        <div class="event-title">${e.title || 'n.a.'}</div>
+        <div class="event-meta">
+          <span class="pill gray">${e.published_at || 'n.a.'}</span>
+          <span class="pill gray">${e.source || 'n.a.'}</span>
+          ${sentimentPill(e.sentiment)}
+          ${impactPill(e.impact)}
+          <span class="pill purple">${businessImpactLabel(e.business_impact,history)}</span>
+          <span class="pill green">${narrativeLabel(e.strategic_narrative,history)}</span>
+          <span class="pill red">risk ${fmtNum(e.article_risk_score)}</span>
+        </div>
+      </div>
+    `;
+  }).join('') || 'Nincs történeti esemény ehhez a szereplőhöz.';
+}
+
+
 function renderTopEvents(events,data){
   const sorted = [...(events || [])]
     .sort((a,b)=>
@@ -1290,4 +1537,3 @@ loadData();
 </script>
 </body>
 </html>
-
