@@ -64,74 +64,90 @@ SOURCE_WEIGHTS = {
 
 EVENT_TYPES = {
     "financial": [
-        "árbevétel", "forgalom", "eredmény", "profit", "veszteség",
-        "árrés", "árrésstop", "bevétel", "növekedés", "visszaesés",
-        "milliárd", "forintra nőtt", "minuszban", "veszteséges"
+        "árbevétel", "forgalom", "forgalma", "forgalma nőtt",
+        "forgalma emelkedett", "eredmény", "profit", "veszteség",
+        "árrés", "árrésstop", "bevétel", "árbevétele", "árbevétele nőtt",
+        "növekedés", "visszaesés", "milliárd", "milliárd forint",
+        "forintra nőtt", "mínuszban", "minuszban", "veszteséges",
+        "legnagyobb forgalmú", "piacvezető", "vezető szerep",
+        "elsőség", "részesedés", "piaci részesedés", "helyezett",
+        "helyen végzett", "rangsor"
     ],
     "expansion": [
         "új üzlet", "üzletnyitás", "áruháznyitás", "beruházás",
         "fejlesztés", "logisztikai központ", "terjeszkedés",
-        "franchise hálózat", "franchise", "bővítés", "nyitott",
-        "újra kinyitott", "kinyitott"
+        "franchise hálózat", "franchise", "bővítés", "bővült",
+        "nyitott", "újra kinyitott", "kinyitott", "új áruház",
+        "új üzletformátum"
     ],
     "promotion": [
         "akció", "kedvezmény", "olcsóbb", "leárazás", "sztártermék",
         "árak", "árverseny", "kupon", "előrendelés", "akciós újság",
-        "fél áron", "37 százalékkal", "43 százalékkal"
+        "fél áron", "37 százalékkal", "43 százalékkal", "árengedmény"
     ],
     "workforce": [
         "munkaerő", "bér", "fizetés", "dolgozó", "állás",
         "sztrájk", "munkavállaló", "toborzás", "karrier",
-        "munkaerőpiac"
+        "munkaerőpiac", "kasszás", "pénztáros"
     ],
     "regulatory": [
         "GVH", "NAV", "hatóság", "bírság", "vizsgálat",
         "plázastop", "plázabizottság", "döntés", "engedély",
-        "nem építhet"
+        "nem építhet", "előírták", "hatósági"
     ],
     "reputation": [
         "panasz", "kritika", "visszahívás", "botrány",
-        "nem örülnek", "pofont kapott", "durva", "áll a bál"
+        "nem örülnek", "pofont kapott", "durva", "áll a bál",
+        "falnak ment"
     ],
     "sustainability": [
         "fenntartható", "fenntarthatóság", "zöld", "energia",
         "napelem", "környezet", "újrahasznosítás"
     ],
     "supplier": [
-        "beszállító", "hazai kkv", "termelő", "ellátási lánc",
-        "hazai termék", "partner", "logisztika"
+        "beszállító", "hazai kkv", "kkv", "termelő", "ellátási lánc",
+        "hazai termék", "partner", "logisztika", "magyar termelő",
+        "hazai beszállító"
     ]
 }
 
 
 BUSINESS_IMPACT = {
     "revenue": [
-        "akció", "árverseny", "forgalom", "árbevétel", "bevétel",
-        "kedvezmény", "leárazás", "árrés", "árrésstop"
+        "akció", "árverseny", "forgalom", "forgalma", "forgalma nőtt",
+        "forgalma emelkedett", "árbevétel", "árbevétele", "árbevétele nőtt",
+        "bevétel", "kedvezmény", "leárazás", "árrés", "árrésstop",
+        "legnagyobb forgalmú", "milliárd forint", "piacvezető",
+        "részesedés", "piaci részesedés", "elsőség",
+        "növelte részesedését", "rangsor", "helyezett"
     ],
     "cost": [
         "bér", "energia", "infláció", "költség", "munkaerőhiány",
-        "veszteség", "minuszban", "veszteséges"
+        "veszteség", "mínuszban", "minuszban", "veszteséges",
+        "falnak ment"
     ],
     "reputation": [
         "panasz", "bírság", "visszahívás", "botrány", "pofont kapott",
-        "nem örülnek", "áll a bál", "kritika"
+        "nem örülnek", "áll a bál", "kritika", "durva"
     ],
     "expansion": [
         "új üzlet", "üzletnyitás", "áruháznyitás", "beruházás",
-        "terjeszkedés", "franchise", "bővítés", "nyitott"
+        "terjeszkedés", "franchise", "bővítés", "bővült",
+        "nyitott", "újra kinyitott", "új áruház", "új üzletformátum"
     ],
     "regulation": [
         "GVH", "NAV", "hatóság", "plázastop", "plázabizottság",
-        "engedély", "nem építhet", "döntés"
+        "engedély", "nem építhet", "döntés", "bírság", "vizsgálat"
     ],
     "supply_chain": [
         "beszállító", "ellátási lánc", "készlethiány",
-        "hazai kkv", "logisztika", "termelő"
+        "hazai kkv", "kkv", "logisztika", "termelő",
+        "magyar termelő", "hazai beszállító", "hazai termék"
     ],
     "workforce": [
         "munkaerő", "bér", "fizetés", "dolgozó", "állás",
-        "sztrájk", "munkavállaló", "toborzás", "karrier"
+        "sztrájk", "munkavállaló", "toborzás", "karrier",
+        "kasszás", "pénztáros"
     ]
 }
 
@@ -139,31 +155,38 @@ BUSINESS_IMPACT = {
 STRATEGIC_NARRATIVES = {
     "growth": [
         "beruházás", "új üzlet", "üzletnyitás", "terjeszkedés",
-        "franchise", "bővítés", "újra kinyitott", "nyitott"
+        "franchise", "bővítés", "bővült", "újra kinyitott",
+        "nyitott", "forgalma nőtt", "piacvezető", "elsőség",
+        "vezető szerep", "növelte részesedését", "helyezett",
+        "rekord", "legnagyobb forgalmú"
     ],
     "competition": [
         "akció", "árverseny", "kedvezmény", "olcsóbb",
-        "leárazás", "árrésstop", "sztártermék"
+        "leárazás", "árrésstop", "sztártermék", "részesedés",
+        "piaci verseny", "verseny", "megelőzte", "visszaszorult",
+        "elsőség", "piacvezető", "rangsor"
     ],
     "reputation": [
         "panasz", "botrány", "visszahívás", "pofont kapott",
-        "nem örülnek", "áll a bál", "kritika"
+        "nem örülnek", "áll a bál", "kritika", "durva"
     ],
     "workforce": [
         "munkaerő", "bér", "toborzás", "állás", "dolgozó",
-        "munkaerőpiac"
+        "munkaerőpiac", "kasszás", "pénztáros"
     ],
     "supply_chain": [
         "beszállító", "logisztika", "ellátási lánc", "hazai kkv",
-        "termelő"
+        "kkv", "termelő", "magyar termelő", "hazai termék"
     ],
     "regulation": [
         "GVH", "NAV", "hatóság", "plázastop",
-        "plázabizottság", "engedély", "nem építhet"
+        "plázabizottság", "engedély", "nem építhet", "bírság",
+        "vizsgálat"
     ],
     "defensive": [
         "veszteség", "bezárás", "költségcsökkentés",
-        "visszaesés", "eltűnik", "minuszban", "veszteséges"
+        "visszaesés", "eltűnik", "mínuszban", "minuszban",
+        "veszteséges", "falnak ment", "visszaszorult"
     ]
 }
 
@@ -176,7 +199,8 @@ NARRATIVE_LABELS = {
     "supply_chain": "Ellátási lánc",
     "regulation": "Szabályozás",
     "defensive": "Védekezés",
-    "general": "Általános"
+    "general": "Általános",
+    "n.a.": "n.a."
 }
 
 
@@ -188,15 +212,17 @@ BUSINESS_IMPACT_LABELS = {
     "regulation": "Szabályozási hatás",
     "supply_chain": "Ellátási lánc hatás",
     "workforce": "Munkaerő hatás",
-    "general": "Általános hatás"
+    "general": "Általános hatás",
+    "n.a.": "n.a."
 }
 
 
 POSITIVE_WORDS = [
-    "fejlesztés", "beruházás", "nyitás", "bővítés", "növekedés",
-    "kedvezmény", "elismerés", "díj", "fenntartható", "támogatás",
-    "szakmai díj", "nyert", "új ügyvezető", "forgalma nőtt",
-    "kinyitja kapuit", "hazai kkv", "újra kinyitott", "vezetése bővült"
+    "fejlesztés", "beruházás", "nyitás", "bővítés", "bővült",
+    "növekedés", "kedvezmény", "elismerés", "díj", "fenntartható",
+    "támogatás", "szakmai díj", "nyert", "új ügyvezető",
+    "forgalma nőtt", "kinyitja kapuit", "hazai kkv", "újra kinyitott",
+    "vezetése bővült", "piacvezető", "elsőség"
 ]
 
 NEGATIVE_WORDS = [
@@ -205,7 +231,7 @@ NEGATIVE_WORDS = [
     "hatóság", "GVH", "NAV", "nem építhet", "pofont kapott",
     "nem örülnek", "visszaszorult", "eltűnik", "előírták",
     "vizsgálat", "plázastop", "plázabizottság", "áll a bál",
-    "falnak ment", "mínuszban", "veszteséges"
+    "falnak ment", "mínuszban", "minuszban", "veszteséges"
 ]
 
 
@@ -215,6 +241,13 @@ DOMAIN_EXCLUDE_PATTERNS = [
     "szlovák",
     "slovakia",
     "slovensko"
+]
+
+
+NON_SPECIFIC_TITLE_PATTERNS = [
+    "meddig marad még egyensúlyban a munkaerőpiac",
+    "munkaerőpiac?",
+    "munkaerőpiac ?"
 ]
 
 
@@ -237,6 +270,10 @@ def clean_text(text):
     text = re.sub(r"&nbsp;", " ", text)
     text = re.sub(r"\s+", " ", text)
     return text.strip()
+
+
+def normalize_text(text):
+    return clean_text(text).lower()
 
 
 def make_google_news_rss(query):
@@ -268,18 +305,27 @@ def source_weight(source):
     return 2
 
 
-def is_bad_match(company_id, text):
-    lower = text.lower()
+def is_bad_match(company_id, company_name, title, summary):
+    full_text = normalize_text(f"{title} {summary}")
+    title_lower = normalize_text(title)
+    company_lower = normalize_text(company_name)
 
     if company_id == "coop":
-        if any(pattern in lower for pattern in DOMAIN_EXCLUDE_PATTERNS):
+        if any(pattern in full_text for pattern in DOMAIN_EXCLUDE_PATTERNS):
             return True
+
+    if any(pattern in title_lower for pattern in NON_SPECIFIC_TITLE_PATTERNS):
+        if company_lower not in title_lower:
+            return True
+
+    if company_lower not in full_text:
+        return True
 
     return False
 
 
 def score_dictionary(text, dictionary):
-    lower = text.lower()
+    lower = normalize_text(text)
     scores = {}
 
     for category, words in dictionary.items():
@@ -290,17 +336,22 @@ def score_dictionary(text, dictionary):
     return scores
 
 
-def detect_best_category(text, dictionary, default="general"):
+def detect_best_category(text, dictionary, default="general", min_score=1):
     scores = score_dictionary(text, dictionary)
 
     if not scores:
         return default
 
-    return max(scores.items(), key=lambda x: x[1])[0]
+    best_key = max(scores, key=scores.get)
+
+    if scores[best_key] < min_score:
+        return default
+
+    return best_key
 
 
 def classify_sentiment(text):
-    lower = text.lower()
+    lower = normalize_text(text)
     pos = sum(1 for w in POSITIVE_WORDS if w.lower() in lower)
     neg = sum(1 for w in NEGATIVE_WORDS if w.lower() in lower)
 
@@ -312,15 +363,15 @@ def classify_sentiment(text):
 
 
 def detect_event_type(text):
-    return detect_best_category(text, EVENT_TYPES, "general")
+    return detect_best_category(text, EVENT_TYPES, "general", min_score=1)
 
 
 def detect_business_impact(text):
-    return detect_best_category(text, BUSINESS_IMPACT, "general")
+    return detect_best_category(text, BUSINESS_IMPACT, "general", min_score=1)
 
 
 def detect_strategic_narrative(text):
-    return detect_best_category(text, STRATEGIC_NARRATIVES, "general")
+    return detect_best_category(text, STRATEGIC_NARRATIVES, "general", min_score=1)
 
 
 def detect_impact_level(event_type, business_impact, strategic_narrative, source_weight_value, sentiment):
@@ -338,7 +389,10 @@ def detect_impact_level(event_type, business_impact, strategic_narrative, source
     if event_type in ["expansion", "supplier"]:
         score += 1
 
-    if business_impact in ["expansion", "supply_chain"]:
+    if business_impact in ["expansion", "supply_chain", "revenue"]:
+        score += 1
+
+    if strategic_narrative in ["growth", "competition", "supply_chain"]:
         score += 1
 
     if sentiment == "negative":
@@ -407,10 +461,20 @@ def count_values(articles, field):
     return result
 
 
-def dominant_from_counts(counts):
+def dominant_from_counts(counts, ignore_general=False):
     if not counts:
         return "n.a."
-    return max(counts.items(), key=lambda x: x[1])[0]
+
+    cleaned = dict(counts)
+
+    if ignore_general:
+        cleaned.pop("general", None)
+        cleaned.pop("n.a.", None)
+
+    if not cleaned:
+        return "general" if "general" in counts else "n.a."
+
+    return max(cleaned.items(), key=lambda x: x[1])[0]
 
 
 def collect_company(company):
@@ -433,10 +497,10 @@ def collect_company(company):
             if published_at < TODAY - timedelta(days=DAYS_BACK):
                 continue
 
-            full_text = f"{title} {summary}"
-
-            if is_bad_match(company_id, full_text):
+            if is_bad_match(company_id, company_name, title, summary):
                 continue
+
+            full_text = f"{title} {summary}"
 
             sentiment = classify_sentiment(full_text)
             event_type = detect_event_type(full_text)
@@ -488,9 +552,9 @@ def collect_company(company):
     business_impact_counts = count_values(articles, "business_impact")
     strategic_narrative_counts = count_values(articles, "strategic_narrative")
 
-    dominant_event_type = dominant_from_counts(event_type_counts)
-    dominant_business_impact = dominant_from_counts(business_impact_counts)
-    dominant_strategic_narrative = dominant_from_counts(strategic_narrative_counts)
+    dominant_event_type = dominant_from_counts(event_type_counts, ignore_general=True)
+    dominant_business_impact = dominant_from_counts(business_impact_counts, ignore_general=True)
+    dominant_strategic_narrative = dominant_from_counts(strategic_narrative_counts, ignore_general=True)
 
     media_impact_score = sum(a["source_weight"] for a in articles)
     high_impact_articles = [a for a in articles if a["impact"] in ["high", "critical"]]
@@ -576,17 +640,20 @@ def build_executive_intelligence(companies):
     all_business = aggregate_counts(companies, "business_impacts")
     all_narratives = aggregate_counts(companies, "strategic_narratives")
 
-    dominant_business = dominant_from_counts(all_business)
-    dominant_narrative = dominant_from_counts(all_narratives)
+    dominant_business = dominant_from_counts(all_business, ignore_general=True)
+    dominant_narrative = dominant_from_counts(all_narratives, ignore_general=True)
 
     top_impact = by_impact[0]
     top_risk = by_risk[0]
     top_high = by_high_impact[0]
 
+    business_label = BUSINESS_IMPACT_LABELS.get(dominant_business, dominant_business)
+    narrative_label = NARRATIVE_LABELS.get(dominant_narrative, dominant_narrative)
+
     market_situation = (
         f"Az elmúlt 30 nap médiaképe alapján a legerősebb üzleti hatás "
-        f"'{BUSINESS_IMPACT_LABELS.get(dominant_business, dominant_business)}' kategóriában jelent meg. "
-        f"A stratégiai narratívák közül a '{NARRATIVE_LABELS.get(dominant_narrative, dominant_narrative)}' dominált. "
+        f"'{business_label}' kategóriában jelent meg. "
+        f"A stratégiai narratívák közül a '{narrative_label}' dominált. "
         f"A legnagyobb médiahatás-pontszámot {top_impact['company']} érte el "
         f"{top_impact['media_impact_score']} ponttal."
     )
@@ -605,8 +672,8 @@ def build_executive_intelligence(companies):
 
     expected_trend = (
         f"A következő hetekben várhatóan a "
-        f"'{NARRATIVE_LABELS.get(dominant_narrative, dominant_narrative)}' és "
-        f"'{BUSINESS_IMPACT_LABELS.get(dominant_business, dominant_business)}' témák maradhatnak meghatározók. "
+        f"'{narrative_label}' és "
+        f"'{business_label}' témák maradhatnak meghatározók. "
         f"A social media adatgyűjtés továbbra sem aktív, ezért a társadalmi visszhangot külön fejlesztési körben kell kezelni."
     )
 
@@ -662,8 +729,8 @@ def data_quality_summary(companies):
         "business_impact_coverage_pct": p(with_business),
         "strategic_narrative_coverage_pct": p(with_narrative),
         "social_coverage_pct": 0,
-        "classification_method": "keyword_based_v3",
-        "notes": "A sentiment, business impact és strategic narrative mezők kulcsszavas gépi osztályozáson alapulnak."
+        "classification_method": "keyword_based_v3_1",
+        "notes": "A sentiment, business impact és strategic narrative mezők kulcsszavas gépi osztályozáson alapulnak. A general kategória az Executive Intelligence számításánál háttérbe kerül."
     }
 
 
@@ -680,7 +747,7 @@ def main():
 
     output = {
         "snapshot_date": TODAY.strftime("%Y-%m-%d"),
-        "mode": "public_news_rss_collection_v3_business_impact_strategy",
+        "mode": "public_news_rss_collection_v3_1_business_impact_strategy",
         "social_status": "not_collected",
         "companies": collected,
         "weekly_insight": build_weekly_insight(collected),
@@ -708,7 +775,7 @@ def main():
     status = {
         "last_update": TODAY.strftime("%Y-%m-%d"),
         "companies_tracked": len(collected),
-        "mode": "public_news_rss_collection_v3_business_impact_strategy",
+        "mode": "public_news_rss_collection_v3_1_business_impact_strategy",
         "output_file": "news-social.json",
         "history_file": f"{TODAY.strftime('%Y-%m')}.json",
         "social_status": "not_collected"
