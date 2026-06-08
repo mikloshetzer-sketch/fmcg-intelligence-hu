@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FMCG Intelligence Hungary – Human Capital V3</title>
+  <title>FMCG Intelligence Hungary – Human Capital V3.1</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="./css/style.css" />
   <style>
@@ -34,6 +34,8 @@
     .section-title h2{font-size:20px;margin-bottom:2px;}
     .chartbox{height:315px;}
     .chartbox.small{height:255px;}
+    .chartbox.compact{height:260px;}
+    .source-note{font-size:12px;color:var(--hc-muted);margin-top:10px;line-height:1.45;}
     .chartbox.tall{height:370px;}
     .rank-row{display:grid;grid-template-columns:44px 1fr 120px;gap:12px;padding:12px 0;border-bottom:1px solid #e5edf5;align-items:center;}
     .rank{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:12px;font-weight:900;background:#eef3f8;color:var(--hc-navy)}
@@ -96,7 +98,7 @@
 
 <section class="hero">
   <div class="hero-box">
-    <div class="hero-kicker">Human Capital Intelligence V3</div>
+    <div class="hero-kicker">Human Capital Intelligence V3.1</div>
     <h1>Munkaerő, reputáció, juttatások és toborzási nyomás az FMCG szereplőknél</h1>
     <p>
       A V3 nézet a meglévő HR, pénzügyi és álláshirdetési adatokból vezetői dashboardot készít:
@@ -132,7 +134,7 @@
     <div class="card span7">
       <div class="section-title"><h2>Employer Ranking</h2><span>összesített munkáltatói index</span></div>
       <div id="employerRanking"></div>
-      <div class="formula-box"><b>Employer Score képlet:</b> 30% reputáció, 25% juttatási jel, 20% fluktuációs kockázat fordított értéke, 15% bérpozíció, 10% toborzási nyomás. Az index összehasonlító indikátor, nem hivatalos rangsor.</div>
+      <div class="formula-box"><b>Employer Score képlet:</b> 30% reputáció, 25% juttatási jel, 20% fluktuációs kockázat fordított értéke, 15% bérpozíció, 10% toborzási nyomás. Az index adatbizalom-korrekciót is kap, ezért a hiányos adatú szereplők nem kerülnek indokolatlanul előre. Az index összehasonlító indikátor, nem hivatalos rangsor.</div>
     </div>
     <div class="card span5">
       <div class="section-title"><h2>Employer Reputation</h2><span>Profession rating + vélemények + benefit score</span></div>
@@ -144,10 +146,15 @@
       <div class="chartbox"><canvas id="recruitmentMixChart"></canvas></div>
       <div class="chart-insight" id="recruitmentMixInsight">Adatok betöltése...</div>
     </div>
-    <div class="card span6">
-      <div class="section-title"><h2>Munkaerőpiaci nyomás</h2><span>hirdetés / üzlet és hirdetés / 1000 dolgozó</span></div>
-      <div class="chartbox"><canvas id="pressureChart"></canvas></div>
-      <div class="chart-insight" id="pressureInsight">Adatok betöltése...</div>
+    <div class="card span3">
+      <div class="section-title"><h2>Hirdetés / üzlet</h2><span>üzlethálózatra vetített toborzási nyomás</span></div>
+      <div class="chartbox compact"><canvas id="pressureStoreChart"></canvas></div>
+      <div class="chart-insight" id="pressureStoreInsight">Adatok betöltése...</div>
+    </div>
+    <div class="card span3">
+      <div class="section-title"><h2>Hirdetés / 1000 fő</h2><span>dolgozói létszámra vetített toborzási nyomás</span></div>
+      <div class="chartbox compact"><canvas id="pressureEmployeeChart"></canvas></div>
+      <div class="chart-insight" id="pressureEmployeeInsight">Adatok betöltése...</div>
     </div>
 
     <div class="card span12">
@@ -172,10 +179,15 @@
       <div class="chartbox"><canvas id="workHourEfficiencyChart"></canvas></div>
       <div class="chart-insight" id="workHourInsight">Adatok betöltése...</div>
     </div>
-    <div class="card span6">
-      <div class="section-title"><h2>Árbevétel és profit / fő</h2><span>financials.json + workforce.json</span></div>
-      <div class="chartbox"><canvas id="financialPerEmployeeChart"></canvas></div>
-      <div class="chart-insight" id="financialPerEmployeeInsight">Adatok betöltése...</div>
+    <div class="card span3">
+      <div class="section-title"><h2>Árbevétel / fő</h2><span>financials.json + workforce.json</span></div>
+      <div class="chartbox compact"><canvas id="revenuePerEmployeeChart"></canvas></div>
+      <div class="chart-insight" id="revenuePerEmployeeInsight">Adatok betöltése...</div>
+    </div>
+    <div class="card span3">
+      <div class="section-title"><h2>Profit / fő</h2><span>adózott eredmény / dolgozó</span></div>
+      <div class="chartbox compact"><canvas id="profitPerEmployeeChart"></canvas></div>
+      <div class="chart-insight" id="profitPerEmployeeInsight">Adatok betöltése...</div>
     </div>
 
     <div class="card span6">
@@ -237,13 +249,13 @@
       <div class="notice">
         A munkaóra-alapú hatékonyság becslésként kezelendő: létszám × 40 óra × 52 hét.
         Az álláshirdetési és Profession-adatok pillanatképek. Ha egy forrás átmenetileg nem tölthető le,
-        a scraper az utolsó jó adatot is megtarthatja; ezt a source_confidence mező jelzi. A benefit matrix az azonosított kategóriák jelenlétét mutatja, nem a juttatások pénzbeli értékét.
+        a scraper az utolsó jó adatot is megtarthatja; ezt a source_confidence mező jelzi. A benefit matrix az azonosított kategóriák jelenlétét mutatja, nem a juttatások pénzbeli értékét. A Tesco létszám pótlása frontend-korrekcióként szerepel: 8256 fő, közepesen magas megbízhatósággal.
       </div>
     </div>
   </div>
 </main>
 
-<footer class="footer">FMCG Intelligence Hungary – Human Capital V3 modul.</footer>
+<footer class="footer">FMCG Intelligence Hungary – Human Capital V3.1 modul.</footer>
 
 <script>
 const companiesUrl = './data/companies.json';
@@ -286,7 +298,10 @@ function computeEmployerScore(c){
   const turnover = 100 - num(c.turnover_risk_score,45);
   const salary = c.salary_position_score ? num(c.salary_position_score,0) : (c.avg_salary_huf_month ? Math.min(100, c.avg_salary_huf_month/8500) : 50);
   const recruit = c.ads_per_1000_employees !== null ? Math.min(100, c.ads_per_1000_employees * 12) : 35;
-  return Math.round(reputation*.30 + benefit*.25 + turnover*.20 + salary*.15 + recruit*.10);
+  const rawScore = Math.round(reputation*.30 + benefit*.25 + turnover*.20 + salary*.15 + recruit*.10);
+  const quality = Number.isFinite(c.data_quality_score) ? c.data_quality_score : 60;
+  const qualityFactor = 0.55 + (quality / 100) * 0.45;
+  return Math.round(rawScore * qualityFactor);
 }
 function dataQualityScore(c){
   const weights = [
@@ -345,6 +360,11 @@ async function loadData(){
       c.salary_position_score = salary ? num(salary.salary_position_score,0) : num(c.salary_position_score,0);
       c.employees_reported = wf ? num(wf.employees_reported,0) : 0;
       c.employees_confidence = wf ? n(wf.employees_confidence) : 'n.a.';
+      if(c.id === 'tesco' && (!c.employees_reported || c.employees_reported <= 0)){
+        c.employees_reported = 8256;
+        c.employees_confidence = 'medium-high / Portfolio 2025';
+        c.workforce_data = { ...(c.workforce_data || {}), employees_reported: 8256, employees_confidence: c.employees_confidence, estimated_annual_hours: 8256 * 40 * 52 };
+      }
       c.work_hour_efficiency = wf ? num(wf.estimated_revenue_per_work_hour_huf,0) : 0;
       c.workforce_confidence = wf ? num(wf.data_confidence_score,0) : 0;
       c.salary_transparency_score = wf ? num(wf.salary_transparency_score,0) : 0;
@@ -369,6 +389,11 @@ async function loadData(){
       c.profession_benefits_score = benefit && benefit.benefits_detected_count ? Number(benefit.benefits_detected_count) : 0;
 
       c.fin_revenue_bn = fin && fin.revenue_bn_huf !== null && fin.revenue_bn_huf !== undefined ? num(fin.revenue_bn_huf,0) : num(c.revenue_2024_bn_huf,0);
+      if(c.id === 'tesco' && c.employees_reported > 0 && c.fin_revenue_bn){
+        const tescoHours = c.employees_reported * 40 * 52;
+        c.work_hour_efficiency = Math.round((c.fin_revenue_bn * 1000000000) / tescoHours);
+        c.workforce_data = { ...(c.workforce_data || {}), estimated_annual_hours: tescoHours, estimated_revenue_per_work_hour_huf: c.work_hour_efficiency };
+      }
       c.net_profit_bn = fin && fin.net_profit_bn_huf !== null && fin.net_profit_bn_huf !== undefined ? num(fin.net_profit_bn_huf,0) : null;
       c.profit_margin_pct = fin && fin.profit_margin_pct !== null && fin.profit_margin_pct !== undefined ? num(fin.profit_margin_pct,0) : null;
       c.financial_confidence = fin ? n(fin.confidence) : 'n.a.';
@@ -378,8 +403,8 @@ async function loadData(){
       c.profit_per_store_bn = c.stores_count > 0 && c.net_profit_bn !== null ? c.net_profit_bn/c.stores_count : null;
       c.profit_per_work_hour_huf = wf && wf.estimated_annual_hours && c.net_profit_bn !== null ? (c.net_profit_bn*1000000000)/num(wf.estimated_annual_hours,0) : null;
 
-      c.employer_score = computeEmployerScore(c);
       c.data_quality_score = dataQualityScore(c);
+      c.employer_score = computeEmployerScore(c);
       c.data_quality_parts = dataQualityBreakdown(c);
     });
 
@@ -482,20 +507,29 @@ function renderCharts(companies, byEmployer){
     {label:'Irodai', data:companies.map(c=>num(c.office_jobs,0))}
   ],{scales:{x:{stacked:true,ticks:{color:'#64748b'},grid:{color:'#eef3f7'}},y:{stacked:true,ticks:{color:'#64748b'},grid:{color:'#eef3f7'}}}});
 
-  makeChart('pressureChart','bar',companies.map(c=>c.company),[
-    {label:'Hirdetés / üzlet', data:companies.map(c=>c.ads_per_store!==null?Number(c.ads_per_store.toFixed(3)):0)},
-    {label:'Hirdetés / 1000 dolgozó', data:companies.map(c=>c.ads_per_1000_employees!==null?Number(c.ads_per_1000_employees.toFixed(2)):0)}
+  const withStores = companies.filter(c=>c.ads_per_store !== null);
+  makeChart('pressureStoreChart','bar',withStores.map(c=>c.company),[
+    {label:'Hirdetés / üzlet', data:withStores.map(c=>Number(c.ads_per_store.toFixed(3)))}
+  ]);
+  const withEmployees = companies.filter(c=>c.ads_per_1000_employees !== null);
+  makeChart('pressureEmployeeChart','bar',withEmployees.map(c=>c.company),[
+    {label:'Hirdetés / 1000 dolgozó', data:withEmployees.map(c=>Number(c.ads_per_1000_employees.toFixed(2)))}
   ]);
 
-  makeChart('employeeCountChart','bar',companies.map(c=>c.company),[{label:'Dolgozói létszám, fő', data:companies.map(c=>num(c.employees_reported,0))}]);
+  const withEmployeeCount = companies.filter(c=>c.employees_reported > 0);
+  makeChart('employeeCountChart','bar',withEmployeeCount.map(c=>c.company),[{label:'Dolgozói létszám, fő', data:withEmployeeCount.map(c=>num(c.employees_reported,0))}]);
   makeChart('collarChart','bar',companies.map(c=>c.company),[
     {label:'Kékgalléros %', data:companies.map(c=>num(c.blue_collar_pct,0))},
     {label:'Fehérgalléros %', data:companies.map(c=>num(c.white_collar_pct,0))}
   ],{scales:{x:{stacked:true,ticks:{color:'#64748b'},grid:{color:'#eef3f7'}},y:{stacked:true,max:100,ticks:{color:'#64748b'},grid:{color:'#eef3f7'}}}});
   makeChart('workHourEfficiencyChart','bar',companies.map(c=>c.company),[{label:'Nettó árbevétel / becsült munkaóra, Ft', data:companies.map(c=>num(c.work_hour_efficiency,0))}]);
-  makeChart('financialPerEmployeeChart','bar',companies.map(c=>c.company),[
-    {label:'Árbevétel / fő, Ft', data:companies.map(c=>c.revenue_per_employee_huf!==null?Math.round(c.revenue_per_employee_huf):0)},
-    {label:'Profit / fő, Ft', data:companies.map(c=>c.profit_per_employee_huf!==null?Math.round(c.profit_per_employee_huf):0)}
+  const withRevenueEmployee = companies.filter(c=>c.revenue_per_employee_huf !== null);
+  makeChart('revenuePerEmployeeChart','bar',withRevenueEmployee.map(c=>c.company),[
+    {label:'Árbevétel / fő, Ft', data:withRevenueEmployee.map(c=>Math.round(c.revenue_per_employee_huf))}
+  ]);
+  const withProfitEmployee = companies.filter(c=>c.profit_per_employee_huf !== null);
+  makeChart('profitPerEmployeeChart','bar',withProfitEmployee.map(c=>c.company),[
+    {label:'Profit / fő, Ft', data:withProfitEmployee.map(c=>Math.round(c.profit_per_employee_huf))}
   ]);
   makeChart('employerChart','bar',byEmployer.map(c=>c.company),[
     {label:'Employer Score', data:byEmployer.map(c=>c.employer_score)},
@@ -509,7 +543,7 @@ function renderBenefitMatrix(companies){
     ['cafeteria','Cafeteria'], ['commuting_support','Bejárás'], ['bonus','Bónusz'], ['health_insurance','Egészségbiztosítás'], ['sport_support','Sport'], ['life_insurance','Élet/baleset'], ['training','Képzés'], ['language_support','Nyelvképzés'], ['employee_discount','Dolgozói kedvezmény']
   ];
   const rows = benefitLabels.map(([key,label])=>`<tr><td>${label}</td>${companies.map(c=>{const b=c.benefit_data||{}; const val=b[key]; return `<td><span title="${yesNo(val)}" class="dot ${val===true?'yes':val===false?'no':'na'}"></span></td>`}).join('')}</tr>`).join('');
-  document.getElementById('benefitMatrix').innerHTML = `<table class="matrix-table"><thead><tr><th>Benefit kategória</th>${companies.map(c=>`<th>${c.company}</th>`).join('')}</tr></thead><tbody>${rows}<tr><td>Összesített score</td>${companies.map(c=>`<td><b>${c.profession_benefits_score}/${BENEFIT_MAX_CATEGORIES}</b><br><span class="small">${benefitPercent(c)}%</span></td>`).join('')}</tr></tbody></table>`;
+  document.getElementById('benefitMatrix').innerHTML = `<table class="matrix-table"><thead><tr><th>Benefit kategória</th>${companies.map(c=>`<th>${c.company}</th>`).join('')}</tr></thead><tbody>${rows}<tr><td>Benefit adatbizalom</td>${companies.map(c=>`<td><b>${c.profession_benefits_score>0?'közepes':'alacsony'}</b><br><span class="small">${c.profession_benefits_score>0?'azonosított':'hiányos'}</span></td>`).join('')}</tr><tr><td>Összesített score</td>${companies.map(c=>`<td><b>${c.profession_benefits_score}/${BENEFIT_MAX_CATEGORIES}</b><br><span class="small">${benefitPercent(c)}%</span></td>`).join('')}</tr></tbody></table>`;
 }
 
 function renderDataQualityBreakdown(companies){
@@ -538,7 +572,8 @@ function renderChartInsights(companies, byEmployer, byRating, byRecruit, byEmplo
   const collarLeader=[...companies].filter(c=>num(c.blue_collar_pct,0)>0).sort((a,b)=>num(b.blue_collar_pct,0)-num(a.blue_collar_pct,0))[0];
   document.getElementById('collarInsight').innerHTML = collarLeader ? `<b>${collarLeader.company}</b> mutatja a legmagasabb kékgalléros arányt. Ez természetes az üzlethálózati és raktári működésben. A fehérgalléros arány magasabb értéke erősebb központi, logisztikai vagy adminisztratív súlyt jelezhet. Ez becsült szerkezeti mutató, nem hivatalos HR-statisztika.` : `A kékgalléros és fehérgalléros megoszlás jelenleg nem áll rendelkezésre kellő részletességgel.`;
   document.getElementById('workHourInsight').innerHTML = byEfficiency[0] ? `<b>${byEfficiency[0].company}</b> mutatja a legmagasabb becsült árbevételt munkaóránként. A mutató a nettó árbevételt a becsült éves ledolgozott órával osztja. A diszkont modell jellemzően magasabb munkaóra-hatékonyságot eredményezhet. A hiányzó létszámú cégek itt torzulhatnak vagy kimaradhatnak.` : `A munkaóra-hatékonyság nem számítható stabilan, mert hiányoznak az alapadatok.`;
-  document.getElementById('financialPerEmployeeInsight').innerHTML = byRevenuePerEmployee[0] ? `<b>${byRevenuePerEmployee[0].company}</b> vezeti az árbevétel / fő mutatót. Ez a hatékonyságot és az üzleti modellt egyszerre tükrözi, de nem azonos a dolgozói termelékenység teljes képével. A profit / fő mutató különösen érzékeny az egyszeri pénzügyi hatásokra. Negatív profit esetén a vállalat működési éve vagy beruházási ciklusa is magyarázó tényező lehet.` : `Az árbevétel és profit / fő összehasonlításhoz nem áll rendelkezésre elég pénzügyi és létszámadat.`;
+  document.getElementById('revenuePerEmployeeInsight').innerHTML = byRevenuePerEmployee[0] ? `<b>${byRevenuePerEmployee[0].company}</b> vezeti az árbevétel / fő mutatót. Ez a hatékonyságot és az üzleti modellt egyszerre tükrözi, de nem azonos a dolgozói termelékenység teljes képével. A mutató létszámadat nélkül nem értelmezhető, ezért a hiányzó cégek kimaradnak.` : `Az árbevétel / fő összehasonlításhoz nem áll rendelkezésre elég adat.`;
+  document.getElementById('profitPerEmployeeInsight').innerHTML = byProfitPerEmployee[0] ? `<b>${byProfitPerEmployee[0].company}</b> mutatja a legjobb profit / fő értéket. A profit / fő különösen érzékeny az egyszeri pénzügyi hatásokra, veszteséges évre vagy beruházási ciklusra. Ezért ezt a mutatót az árbevétel / fő és a munkaóra-hatékonyság mellett érdemes értelmezni.` : `A profit / fő összehasonlításhoz nem áll rendelkezésre elég adat.`;
   document.getElementById('employerCompareInsight').innerHTML = byEmployer[0] ? `Az Employer Score élén <b>${byEmployer[0].company}</b> áll. A diagram külön mutatja az összesített indexet, a Profession ratingből számolt reputációs értéket és a benefit kategóriákból becsült juttatási intenzitást. A mutató nem hivatalos minősítés, hanem összehasonlító vezetői indikátor. A hiányzó rating vagy benefit adat csökkentheti az összehasonlítás pontosságát.` : `Az Employer Score nem számítható stabilan.`;
   document.getElementById('salaryInsight').innerHTML = `A bérdiagram munkakörönként hasonlítja össze a bruttó havi bérszinteket. A legmagasabb érték és a mezőny átlaga segít látni a bérpozíciót. A bérkülönbség azt jelzi, mekkora a távolság a legerősebb és a legalacsonyabb megfigyelt érték között. Ezek összehasonlító adatok, nem minden esetben hivatalos bérsávok.`;
 }
@@ -554,7 +589,7 @@ function renderDataAudit(companies, byDataQuality, avgDataQuality){
     <div class="audit-tile"><div class="kpi-label">Legjobb adatfedettség</div><div class="audit-value">${best?best.company:'n.a.'}</div><div class="small">${best?best.data_quality_score+'%':'n.a.'}</div></div>
     <div class="audit-tile"><div class="kpi-label">Leggyengébb adatfedettség</div><div class="audit-value">${worst?worst.company:'n.a.'}</div><div class="small">${worst?worst.data_quality_score+'%':'n.a.'}</div></div>
     <div class="audit-tile"><div class="kpi-label">Pontosítandó létszám</div><div class="audit-value">${missingEmployees.length}</div><div class="small">${listText(missingEmployees)}</div></div>
-  </div><div class="chart-insight" style="margin-top:12px"><b>Pontosítandó adatok:</b> létszám: ${listText(missingEmployees)}. Profession rating: ${listText(missingRating)}. Aktív hirdetés: ${listText(missingAds)}. Benefit kategória: ${listText(missingBenefits)}. A COOP és CBA franchise jellegű hálózatoknál a becslés külön jelölést igényel; a Tesco létszámát külön forrásból érdemes pótolni.</div>`;
+  </div><div class="chart-insight" style="margin-top:12px"><b>Pontosítandó adatok:</b> létszám: ${listText(missingEmployees)}. Profession rating: ${listText(missingRating)}. Aktív hirdetés: ${listText(missingAds)}. Benefit kategória: ${listText(missingBenefits)}. A COOP és CBA franchise jellegű hálózatoknál a létszámadatot nem érdemes becsülni a fő rangsorokban. A Tesco létszáma a V3.1 felületen 8256 fővel szerepel, külön forrásjelöléssel.</div>`;
 }
 
 function renderTrendBox(companies){
@@ -566,7 +601,7 @@ function renderTrendBox(companies){
   const histCompanies = history.companies || [];
   const histTotal = histCompanies.reduce((a,c)=>a+num(c.profession_active_ads,num(c.external_count_hint,num(c.total_verified_ads,0))),0);
   const currentTotal = companies.reduce((a,c)=>a+num(c.active_ads,0),0);
-  document.getElementById('trendBox').innerHTML = `<b>Aktuális aktív hirdetések összesen:</b> ${fmtNum(currentTotal)}. <b>History fájlban rögzített érték:</b> ${fmtNum(histTotal)}. Ha a history több időpontot tartalmaz, ebből később heti/havi trendgrafikon készíthető. A jelenlegi V3 modul már előkészíti ezt az értelmezési réteget.`;
+  document.getElementById('trendBox').innerHTML = `<b>Aktuális aktív hirdetések összesen:</b> ${fmtNum(currentTotal)}. <b>History fájlban rögzített érték:</b> ${fmtNum(histTotal)}. A trendmodul építés alatt áll: az első valóban összehasonlítható trendek 4–6 heti futás után jelennek meg. Addig ez a blokk csak az aktuális mentés meglétét és az adatgyűjtési réteg működését jelzi.`;
 }
 
 function renderTables(companies){renderReputationTable(companies);renderJobsTable(companies);renderWorkforceTable(companies);renderFinancialTable(companies);renderHumanTable(companies);}
