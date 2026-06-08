@@ -3,13 +3,13 @@
     "id": "lidl",
     "company": "Lidl",
     "snapshot_date": "2026-06-08",
-    "total_verified_ads": 4,
-    "parsed_postings_count": 4,
-    "external_count_hint": null,
-    "store_jobs": 0,
+    "total_verified_ads": 130,
+    "parsed_postings_count": 8,
+    "external_count_hint": 130,
+    "store_jobs": 2,
     "warehouse_jobs": 0,
     "office_jobs": 0,
-    "management_jobs": 0,
+    "management_jobs": 2,
     "recruitment_events": 4,
     "unknown_jobs": 0,
     "salary_visible_ads": 0,
@@ -22,19 +22,19 @@
     "linkedin_jobs_present": true,
     "indeed_present": true,
     "career_site_active_ads": null,
-    "profession_active_ads": null,
+    "profession_active_ads": 130,
     "linkedin_active_ads": null,
     "indeed_active_ads": null,
     "salary_visible_in_examples": false,
-    "benefits_visible_in_examples": false,
-    "commuting_support_visible": false,
+    "benefits_visible_in_examples": true,
+    "commuting_support_visible": true,
     "cafeteria_visible": false,
-    "bonus_visible": false,
-    "training_visible": false,
+    "bonus_visible": true,
+    "training_visible": true,
     "full_time_visible": null,
     "part_time_visible": null,
     "source_confidence": "medium",
-    "labor_pressure_status": "automatikus gyűjtés előzetes, cégspecifikus karrieroldal-parserrel",
+    "labor_pressure_status": "automatikus gyűjtés előzetes, fallback védelemmel",
     "source_statuses": [
       {
         "source_name": "Career Site",
@@ -46,9 +46,9 @@
       {
         "source_name": "Profession",
         "source_type": "job_portal",
-        "status": "fetch_failed",
-        "count_hint": null,
-        "error": "Nem sikerült letölteni az oldalt."
+        "status": "fetched",
+        "count_hint": 130,
+        "error": null
       },
       {
         "source_name": "LinkedIn Jobs",
@@ -65,17 +65,17 @@
         "error": "Nem sikerült letölteni az oldalt."
       }
     ],
-    "notes": "Automatikusan gyűjtött előzetes adat. A karrieroldalaknál ismert munkakörlistás szűrést használ."
+    "notes": "Automatikusan gyűjtött előzetes adat. A Profession cégprofilokat és cégspecifikus karrieroldal-parserrel szűrt munkaköröket használ."
   },
   {
     "id": "aldi",
     "company": "ALDI",
     "snapshot_date": "2026-06-08",
-    "total_verified_ads": 0,
-    "parsed_postings_count": 0,
-    "external_count_hint": null,
-    "store_jobs": 0,
-    "warehouse_jobs": 0,
+    "total_verified_ads": 4,
+    "parsed_postings_count": 3,
+    "external_count_hint": 4,
+    "store_jobs": 2,
+    "warehouse_jobs": 1,
     "office_jobs": 0,
     "management_jobs": 0,
     "recruitment_events": 0,
@@ -90,19 +90,19 @@
     "linkedin_jobs_present": true,
     "indeed_present": false,
     "career_site_active_ads": null,
-    "profession_active_ads": null,
+    "profession_active_ads": 4,
     "linkedin_active_ads": null,
     "indeed_active_ads": null,
     "salary_visible_in_examples": false,
-    "benefits_visible_in_examples": false,
-    "commuting_support_visible": false,
+    "benefits_visible_in_examples": true,
+    "commuting_support_visible": true,
     "cafeteria_visible": false,
-    "bonus_visible": false,
+    "bonus_visible": true,
     "training_visible": false,
     "full_time_visible": null,
     "part_time_visible": null,
-    "source_confidence": "low",
-    "labor_pressure_status": "automatikus gyűjtés előzetes, cégspecifikus karrieroldal-parserrel",
+    "source_confidence": "medium",
+    "labor_pressure_status": "automatikus gyűjtés előzetes, fallback védelemmel",
     "source_statuses": [
       {
         "source_name": "Career Site",
@@ -114,9 +114,9 @@
       {
         "source_name": "Profession",
         "source_type": "job_portal",
-        "status": "fetch_failed",
-        "count_hint": null,
-        "error": "Nem sikerült letölteni az oldalt."
+        "status": "fetched",
+        "count_hint": 4,
+        "error": null
       },
       {
         "source_name": "LinkedIn Jobs",
@@ -126,17 +126,17 @@
         "error": "Ez a forrás automatizáltan korlátozottan gyűjthető."
       }
     ],
-    "notes": "Automatikusan gyűjtött előzetes adat. A karrieroldalaknál ismert munkakörlistás szűrést használ."
+    "notes": "Automatikusan gyűjtött előzetes adat. A Profession cégprofilokat és cégspecifikus karrieroldal-parserrel szűrt munkaköröket használ."
   },
   {
     "id": "spar",
     "company": "SPAR",
     "snapshot_date": "2026-06-08",
-    "total_verified_ads": 0,
-    "parsed_postings_count": 0,
-    "external_count_hint": null,
-    "store_jobs": 0,
-    "warehouse_jobs": 0,
+    "total_verified_ads": 73,
+    "parsed_postings_count": 4,
+    "external_count_hint": 73,
+    "store_jobs": 2,
+    "warehouse_jobs": 2,
     "office_jobs": 0,
     "management_jobs": 0,
     "recruitment_events": 0,
@@ -151,19 +151,19 @@
     "linkedin_jobs_present": true,
     "indeed_present": false,
     "career_site_active_ads": null,
-    "profession_active_ads": null,
+    "profession_active_ads": 73,
     "linkedin_active_ads": null,
     "indeed_active_ads": null,
     "salary_visible_in_examples": false,
-    "benefits_visible_in_examples": false,
+    "benefits_visible_in_examples": true,
     "commuting_support_visible": false,
     "cafeteria_visible": false,
-    "bonus_visible": false,
-    "training_visible": false,
+    "bonus_visible": true,
+    "training_visible": true,
     "full_time_visible": null,
     "part_time_visible": null,
-    "source_confidence": "low",
-    "labor_pressure_status": "automatikus gyűjtés előzetes, cégspecifikus karrieroldal-parserrel",
+    "source_confidence": "medium",
+    "labor_pressure_status": "automatikus gyűjtés előzetes, fallback védelemmel",
     "source_statuses": [
       {
         "source_name": "Career Site",
@@ -175,9 +175,9 @@
       {
         "source_name": "Profession",
         "source_type": "job_portal",
-        "status": "fetch_failed",
-        "count_hint": null,
-        "error": "Nem sikerült letölteni az oldalt."
+        "status": "fetched",
+        "count_hint": 73,
+        "error": null
       },
       {
         "source_name": "LinkedIn Jobs",
@@ -187,19 +187,19 @@
         "error": "Ez a forrás automatizáltan korlátozottan gyűjthető."
       }
     ],
-    "notes": "Automatikusan gyűjtött előzetes adat. A karrieroldalaknál ismert munkakörlistás szűrést használ."
+    "notes": "Automatikusan gyűjtött előzetes adat. A Profession cégprofilokat és cégspecifikus karrieroldal-parserrel szűrt munkaköröket használ."
   },
   {
     "id": "tesco",
     "company": "Tesco",
     "snapshot_date": "2026-06-08",
-    "total_verified_ads": 0,
-    "parsed_postings_count": 0,
-    "external_count_hint": null,
-    "store_jobs": 0,
+    "total_verified_ads": 41,
+    "parsed_postings_count": 5,
+    "external_count_hint": 41,
+    "store_jobs": 2,
     "warehouse_jobs": 0,
-    "office_jobs": 0,
-    "management_jobs": 0,
+    "office_jobs": 1,
+    "management_jobs": 2,
     "recruitment_events": 0,
     "unknown_jobs": 0,
     "salary_visible_ads": 0,
@@ -212,19 +212,19 @@
     "linkedin_jobs_present": true,
     "indeed_present": false,
     "career_site_active_ads": null,
-    "profession_active_ads": null,
+    "profession_active_ads": 41,
     "linkedin_active_ads": null,
     "indeed_active_ads": null,
     "salary_visible_in_examples": false,
-    "benefits_visible_in_examples": false,
+    "benefits_visible_in_examples": true,
     "commuting_support_visible": false,
     "cafeteria_visible": false,
-    "bonus_visible": false,
-    "training_visible": false,
+    "bonus_visible": true,
+    "training_visible": true,
     "full_time_visible": null,
     "part_time_visible": null,
-    "source_confidence": "low",
-    "labor_pressure_status": "automatikus gyűjtés előzetes, cégspecifikus karrieroldal-parserrel",
+    "source_confidence": "medium",
+    "labor_pressure_status": "automatikus gyűjtés előzetes, fallback védelemmel",
     "source_statuses": [
       {
         "source_name": "Career Site",
@@ -236,9 +236,9 @@
       {
         "source_name": "Profession",
         "source_type": "job_portal",
-        "status": "fetch_failed",
-        "count_hint": null,
-        "error": "Nem sikerült letölteni az oldalt."
+        "status": "fetched",
+        "count_hint": 41,
+        "error": null
       },
       {
         "source_name": "LinkedIn Jobs",
@@ -248,19 +248,19 @@
         "error": "Ez a forrás automatizáltan korlátozottan gyűjthető."
       }
     ],
-    "notes": "Automatikusan gyűjtött előzetes adat. A karrieroldalaknál ismert munkakörlistás szűrést használ."
+    "notes": "Automatikusan gyűjtött előzetes adat. A Profession cégprofilokat és cégspecifikus karrieroldal-parserrel szűrt munkaköröket használ."
   },
   {
     "id": "penny",
     "company": "PENNY",
     "snapshot_date": "2026-06-08",
-    "total_verified_ads": 0,
-    "parsed_postings_count": 0,
-    "external_count_hint": null,
-    "store_jobs": 0,
+    "total_verified_ads": 52,
+    "parsed_postings_count": 4,
+    "external_count_hint": 52,
+    "store_jobs": 1,
     "warehouse_jobs": 0,
-    "office_jobs": 0,
-    "management_jobs": 0,
+    "office_jobs": 1,
+    "management_jobs": 2,
     "recruitment_events": 0,
     "unknown_jobs": 0,
     "salary_visible_ads": 0,
@@ -273,19 +273,19 @@
     "linkedin_jobs_present": false,
     "indeed_present": false,
     "career_site_active_ads": null,
-    "profession_active_ads": null,
+    "profession_active_ads": 52,
     "linkedin_active_ads": null,
     "indeed_active_ads": null,
     "salary_visible_in_examples": false,
-    "benefits_visible_in_examples": false,
-    "commuting_support_visible": false,
-    "cafeteria_visible": false,
-    "bonus_visible": false,
-    "training_visible": false,
+    "benefits_visible_in_examples": true,
+    "commuting_support_visible": true,
+    "cafeteria_visible": true,
+    "bonus_visible": true,
+    "training_visible": true,
     "full_time_visible": null,
     "part_time_visible": null,
-    "source_confidence": "low",
-    "labor_pressure_status": "automatikus gyűjtés előzetes, cégspecifikus karrieroldal-parserrel",
+    "source_confidence": "medium",
+    "labor_pressure_status": "automatikus gyűjtés előzetes, fallback védelemmel",
     "source_statuses": [
       {
         "source_name": "Career Site",
@@ -297,24 +297,24 @@
       {
         "source_name": "Profession",
         "source_type": "job_portal",
-        "status": "fetch_failed",
-        "count_hint": null,
-        "error": "Nem sikerült letölteni az oldalt."
+        "status": "fetched",
+        "count_hint": 52,
+        "error": null
       }
     ],
-    "notes": "Automatikusan gyűjtött előzetes adat. A karrieroldalaknál ismert munkakörlistás szűrést használ."
+    "notes": "Automatikusan gyűjtött előzetes adat. A Profession cégprofilokat és cégspecifikus karrieroldal-parserrel szűrt munkaköröket használ."
   },
   {
     "id": "auchan",
     "company": "Auchan",
     "snapshot_date": "2026-06-08",
-    "total_verified_ads": 0,
-    "parsed_postings_count": 0,
-    "external_count_hint": null,
-    "store_jobs": 0,
-    "warehouse_jobs": 0,
+    "total_verified_ads": 11,
+    "parsed_postings_count": 7,
+    "external_count_hint": 11,
+    "store_jobs": 2,
+    "warehouse_jobs": 3,
     "office_jobs": 0,
-    "management_jobs": 0,
+    "management_jobs": 2,
     "recruitment_events": 0,
     "unknown_jobs": 0,
     "salary_visible_ads": 0,
@@ -327,19 +327,19 @@
     "linkedin_jobs_present": true,
     "indeed_present": false,
     "career_site_active_ads": null,
-    "profession_active_ads": null,
+    "profession_active_ads": 11,
     "linkedin_active_ads": null,
     "indeed_active_ads": null,
     "salary_visible_in_examples": false,
-    "benefits_visible_in_examples": false,
-    "commuting_support_visible": false,
-    "cafeteria_visible": false,
-    "bonus_visible": false,
-    "training_visible": false,
+    "benefits_visible_in_examples": true,
+    "commuting_support_visible": true,
+    "cafeteria_visible": true,
+    "bonus_visible": true,
+    "training_visible": true,
     "full_time_visible": null,
     "part_time_visible": null,
-    "source_confidence": "low",
-    "labor_pressure_status": "automatikus gyűjtés előzetes, cégspecifikus karrieroldal-parserrel",
+    "source_confidence": "medium",
+    "labor_pressure_status": "automatikus gyűjtés előzetes, fallback védelemmel",
     "source_statuses": [
       {
         "source_name": "Career Site",
@@ -351,9 +351,9 @@
       {
         "source_name": "Profession",
         "source_type": "job_portal",
-        "status": "fetch_failed",
-        "count_hint": null,
-        "error": "Nem sikerült letölteni az oldalt."
+        "status": "fetched",
+        "count_hint": 11,
+        "error": null
       },
       {
         "source_name": "LinkedIn Jobs",
@@ -363,6 +363,6 @@
         "error": "Ez a forrás automatizáltan korlátozottan gyűjthető."
       }
     ],
-    "notes": "Automatikusan gyűjtött előzetes adat. A karrieroldalaknál ismert munkakörlistás szűrést használ."
+    "notes": "Automatikusan gyűjtött előzetes adat. A Profession cégprofilokat és cégspecifikus karrieroldal-parserrel szűrt munkaköröket használ."
   }
 ]
