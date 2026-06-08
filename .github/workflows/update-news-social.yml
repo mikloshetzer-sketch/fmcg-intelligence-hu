@@ -1,0 +1,54 @@
+name: Update News and Social Monitor
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: "30 5 * * 1"
+
+permissions:
+  contents: write
+
+jobs:
+  update-news-social:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository letöltése
+        uses: actions/checkout@v4
+
+      - name: Python telepítése
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Python csomagok telepítése
+        run: |
+          python -m pip install --upgrade pip
+          pip install feedparser
+
+      - name: News & Social monitor futtatása
+        run: |
+          python scripts/update_news_social.py
+
+      - name: Ellenőrzés
+        run: |
+          ls -la docs/data/
+          ls -la docs/data/news-social-history/
+
+      - name: Git beállítás
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Fájlok commitolása
+        run: |
+          git add docs/data/news-social.json
+          git add docs/data/news-social-status.json
+          git add docs/data/news-social-history/
+
+          git diff --cached --quiet || git commit -m "Automated News and Social Monitor update"
+
+      - name: Push
+        run: |
+          git push
