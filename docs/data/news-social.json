@@ -1,6 +1,6 @@
 {
   "snapshot_date": "2026-06-08",
-  "mode": "public_news_rss_collection_v1",
+  "mode": "public_news_rss_collection_v2_event_impact_risk",
   "social_status": "not_collected",
   "companies": [
     {
@@ -8,17 +8,26 @@
       "company": "Lidl",
       "snapshot_date": "2026-06-08",
       "news_count_7d": 2,
-      "news_count_30d": 3,
+      "news_count_30d": 4,
+      "media_impact_score": 13,
+      "high_impact_count": 1,
       "social_mentions": null,
       "social_signal_status": "not_collected",
       "positive_count": 0,
       "neutral_count": 3,
-      "negative_count": 0,
-      "risk_score": 0,
+      "negative_count": 1,
+      "risk_score": 23,
       "dominant_narrative": "árverseny",
+      "dominant_event_type": "general",
       "narratives": {
-        "általános": 1,
-        "árverseny": 2
+        "reputációs kockázat": 1,
+        "árverseny": 2,
+        "általános": 1
+      },
+      "event_types": {
+        "regulatory": 1,
+        "general": 2,
+        "promotion": 1
       },
       "source_confidence": "medium",
       "articles": [
@@ -27,13 +36,17 @@
           "company_id": "lidl",
           "company": "Lidl",
           "title": "Meglepő bejelentés: óriási pofont kapott a Lidl Magyarországon, nem építhet új boltot – a semmiből jött a plázabizottság döntése - Világgazdaság",
-          "summary": "Meglepő bejelentés: óriási pofont kapott a Lidl Magyarországon, nem építhet új boltot – a semmiből jött a plázabizottság döntése &nbsp;&nbsp; Világgazdaság",
+          "summary": "Meglepő bejelentés: óriási pofont kapott a Lidl Magyarországon, nem építhet új boltot – a semmiből jött a plázabizottság döntése Világgazdaság",
           "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQck1TeGhyTGtaNnB2TEZBSGNCM2hrWENCS0tuRzZMSUMxczdCaFhKeFpYSUxqcl9ELVNUSE4tRXBXT2JCZlkyaEVnbW54aFR1Z1dXc1RjektWbkNiSElXREJFWUxOR0pnWFRRaVZfb3k0OVVKdlc5ZlVOR2N1alVwNmlzVjBjd3k4WnF6dkIzdzZ1MlNjclk3Xy1YcGE0TFE?oc=5",
           "source": "Világgazdaság",
+          "source_weight": 4,
           "published_at": "2026-06-06",
-          "sentiment": "neutral",
+          "sentiment": "negative",
+          "event_type": "regulatory",
+          "impact": "high",
+          "article_risk_score": 73,
           "narratives": [
-            "általános"
+            "reputációs kockázat"
           ],
           "query": "Lidl áruház Magyarország"
         },
@@ -42,30 +55,57 @@
           "company_id": "lidl",
           "company": "Lidl",
           "title": "Új digitális vásárlási megoldással kísérletezik a Lidl - Store Insider",
-          "summary": "Új digitális vásárlási megoldással kísérletezik a Lidl &nbsp;&nbsp; Store Insider",
+          "summary": "Új digitális vásárlási megoldással kísérletezik a Lidl Store Insider",
           "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQQW1NRG9aSk9pUTVMY0gxU1kzZEtYbGJBQUtWdXJQZEpOaGwzNzZPSTVQNTV1Nm9DZnFEYUtORmxmSlQzUWVJaVpTazhKVkVNSjBELUZmYVpLbEtqZ1NYQWZOc0wydVZoWldNZ1ZRRHpyTk1zT3JkZ3pMNTEzb3ZjSDVTdUY1a2cwNlBQRW93?oc=5",
           "source": "Store Insider",
+          "source_weight": 3,
           "published_at": "2026-06-04",
           "sentiment": "neutral",
+          "event_type": "general",
+          "impact": "low",
+          "article_risk_score": 6,
           "narratives": [
             "árverseny"
           ],
           "query": "Lidl áruház Magyarország"
         },
         {
+          "id": "ee137a4eb913c75b",
+          "company_id": "lidl",
+          "company": "Lidl",
+          "title": "Átrendeződött a magyar kiskereskedelem: a Lidl elsősége megkérdőjelezhetetlen, van viszont nagy visszatérő - Világgazdaság",
+          "summary": "Átrendeződött a magyar kiskereskedelem: a Lidl elsősége megkérdőjelezhetetlen, van viszont nagy visszatérő Világgazdaság",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPRG12d3Joc18xUEJjTVU5ZFZlbGIxYXlzM0hzTFBwNWlacnM2SWItTkxHTW9QMm1CTlZySUNnM2NLZG02cWlyUE1ZcHc0QnFYUU0zNmxmYzJiOGZYeXZXWG1XVGJXOXhZbnFYd3o2RTBoWFFYLUJwYzhSNHJyRnhScTBiWWkzRXYxazJlVUNYcGhfOUhjWW81bzRpVWhGbzA?oc=5",
+          "source": "Világgazdaság",
+          "source_weight": 4,
+          "published_at": "2026-06-01",
+          "sentiment": "neutral",
+          "event_type": "general",
+          "impact": "medium",
+          "article_risk_score": 8,
+          "narratives": [
+            "általános"
+          ],
+          "query": "Lidl élelmiszer kiskereskedelem Magyarország"
+        },
+        {
           "id": "a5ead2c8a5619526",
           "company_id": "lidl",
           "company": "Lidl",
           "title": "Ilyen akció még nem volt a magyarországi Lidl-ben: olyan sztártermék érkezik, amit csakis előrendeléssel lehet megvenni - Pénzcentrum",
-          "summary": "Ilyen akció még nem volt a magyarországi Lidl-ben: olyan sztártermék érkezik, amit csakis előrendeléssel lehet megvenni &nbsp;&nbsp; Pénzcentrum",
+          "summary": "Ilyen akció még nem volt a magyarországi Lidl-ben: olyan sztártermék érkezik, amit csakis előrendeléssel lehet megvenni Pénzcentrum",
           "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxNWXEydHQ0YnRuU250RE84Wi1xRXJ2MDIwUy1uZWQ2REljMFlaVlA4T1VtRnQ1N0tuZlhkOGxza3lBSm54R2YtT29VTE96U2tXVlc4cm9MNnZ5eU9jMEZmR0d5Z2xvNXFJMTlhekN2U2M2VnJwd3NHZVpmaUt6T3ZIUFNUQ1Y5RXp4V01UenVkWFJJdVR3RGZOS0VnU0p3ZW1kcExCS1dXbUlzZjhjM3hsV05POXpNR1hxMFhsckpTYWpyT1BuS01fNHFBZkFuUHZNcW1zazRqdjVRdHRURm43dEZHQVE5VURVV04wcEtPMks0dF92ZC1QVGd4S09pQ1nSAYQCQVVfeXFMTWVnUHFUbmJmSF9rZHhqYmdFUktPeUhGRXRhakVVMmpxY285UWxqTFFGYkVBbUVZZ1Z1ZGhnX1N0bURZRS1tN3hIaHpKNlVPNlZzZW1oaDY5Vk44Y2ZGbGowcDJvR1Q0N1RPbjdDdzg4UDVwMFZVdkgyMTJfcVc0SUJfaDExUEpPbjA5VG1BSGhjT0hMNkF1MU1xaVdsa1d5NWxIR0cyYmFwYnpYLVpmaTJhb1RhUnRVRnQ3MDdDanpIRTYyUy1KbmZGZVFXbUhXYWdzbEs2ZThFTHkwN3JuWUhCRzBtaFhuWF9OWEhIZTJvcVNYX2Y0QUJKa2FmV0llVVdzYkc?oc=5",
           "source": "Pénzcentrum",
+          "source_weight": 2,
           "published_at": "2026-05-20",
           "sentiment": "neutral",
+          "event_type": "promotion",
+          "impact": "low",
+          "article_risk_score": 4,
           "narratives": [
             "árverseny"
           ],
-          "query": "Lidl áruház Magyarország"
+          "query": "Lidl akció árak Magyarország"
         }
       ]
     },
@@ -73,125 +113,84 @@
       "id": "aldi",
       "company": "ALDI",
       "snapshot_date": "2026-06-08",
-      "news_count_7d": 1,
-      "news_count_30d": 7,
+      "news_count_7d": 0,
+      "news_count_30d": 3,
+      "media_impact_score": 10,
+      "high_impact_count": 1,
       "social_mentions": null,
       "social_signal_status": "not_collected",
       "positive_count": 0,
-      "neutral_count": 7,
-      "negative_count": 0,
-      "risk_score": 0,
-      "dominant_narrative": "árverseny",
+      "neutral_count": 2,
+      "negative_count": 1,
+      "risk_score": 13,
+      "dominant_narrative": "általános",
+      "dominant_event_type": "general",
       "narratives": {
-        "árverseny": 5,
+        "árverseny": 1,
         "általános": 2
+      },
+      "event_types": {
+        "promotion": 1,
+        "general": 2
       },
       "source_confidence": "medium",
       "articles": [
-        {
-          "id": "0be9ed5136a9c0ed",
-          "company_id": "aldi",
-          "company": "ALDI",
-          "title": "G7: Az árrésstop ellenére nőtt az Aldi, az Auchan és a Spar összesített árrése - Telex",
-          "summary": "G7: Az árrésstop ellenére nőtt az Aldi, az Auchan és a Spar összesített árrése &nbsp;&nbsp; Telex",
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOd0pIZl9zRi1kTzVTNTJqN002LU1OOTRLUGlIVUdtR19GWWczS3U3TkZBTHdGbktWc1JjRXd1XzFHUEhiazRodzZmVGlwWGgzdW4wbW5ybU92VzEydXNYWFpiXy0yZ1FTSHc0YWtpdU9nTFBwdEVMa1dwLTlXRnJILVNqT2ZrQ21DSmlaQi05eDFwUk5tSmNNNHFwZ3Z2RGdNQndWWA?oc=5",
-          "source": "Telex",
-          "published_at": "2026-06-02",
-          "sentiment": "neutral",
-          "narratives": [
-            "árverseny"
-          ],
-          "query": "ALDI élelmiszer kiskereskedelem"
-        },
         {
           "id": "8625770f092ce451",
           "company_id": "aldi",
           "company": "ALDI",
           "title": "Non-food leárazási akció az ALDI középső során - Store Insider",
-          "summary": "Non-food leárazási akció az ALDI középső során &nbsp;&nbsp; Store Insider",
+          "summary": "Non-food leárazási akció az ALDI középső során Store Insider",
           "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOQ0dGQUtvcFh1dHctcG1qeEVqS2JEd1A0WGIxbmRrbjF5cVdTTW1pOWtvV3ZtSjk1amM1RUxBSTNtclZ2MjdTRk91YmNHaFJwcFlhSTY1eXVDSk81LVFyWDg3Z1VlM004YjUwdXREQl9TNXVNcUcwSTFzdklZZlpjSA?oc=5",
           "source": "Store Insider",
+          "source_weight": 3,
           "published_at": "2026-05-26",
           "sentiment": "neutral",
+          "event_type": "promotion",
+          "impact": "low",
+          "article_risk_score": 6,
           "narratives": [
             "árverseny"
           ],
-          "query": "ALDI akció árak"
-        },
-        {
-          "id": "677ae63f09e13285",
-          "company_id": "aldi",
-          "company": "ALDI",
-          "title": "Roham az Aldiba: 2 az 1-ben háztartási gép érkezik, csütörtöktől 37 százalékkal olcsóbban adják - Startlap",
-          "summary": "Roham az Aldiba: 2 az 1-ben háztartási gép érkezik, csütörtöktől 37 százalékkal olcsóbban adják &nbsp;&nbsp; Startlap",
-          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE14RXhtR3BaLVpwdzNTb3hlSjFUdHFzaUVkWmpsTGhHYjBiMUJjdW4wYVo1SnBabDFSUUc2bzNwMktPOUZYdVdEajJQYmw0S2lVR2JTVGRfTGRPR0VvSWpIQndGeW9KYkhZY2VN?oc=5",
-          "source": "Startlap",
-          "published_at": "2026-05-24",
-          "sentiment": "neutral",
-          "narratives": [
-            "árverseny"
-          ],
-          "query": "ALDI akció árak"
-        },
-        {
-          "id": "9e196fc06cce6e1e",
-          "company_id": "aldi",
-          "company": "ALDI",
-          "title": "Nyári kincs kapható az ALDI-ban, ráadásul most közel 43 százalékkal olcsóbban vihetjük haza - Mindmegette.hu",
-          "summary": "Nyári kincs kapható az ALDI-ban, ráadásul most közel 43 százalékkal olcsóbban vihetjük haza &nbsp;&nbsp; Mindmegette.hu",
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1RcFN4N3lzU3JFSFJEWVNRdV9jUnRMN0IwZFp2bjBvaGNNcjVhSTllRW5yY0lfWGQ5R1hkNGN2Ym1MNnpvWTJIYW5UUXZLTHB1TXRid3I4NEJIR2p1TVIyVjA2N1JqVDNFaUdaUjBXLVA?oc=5",
-          "source": "Mindmegette.hu",
-          "published_at": "2026-05-22",
-          "sentiment": "neutral",
-          "narratives": [
-            "árverseny"
-          ],
-          "query": "ALDI akció árak"
+          "query": "ALDI akció árak Magyarország"
         },
         {
           "id": "66605b440458634f",
           "company_id": "aldi",
           "company": "ALDI",
           "title": "Eltűnik több termék az Aldi-üzletekből - Ezeket hamarosan hiába keresed - Portfolio.hu",
-          "summary": "Eltűnik több termék az Aldi-üzletekből - Ezeket hamarosan hiába keresed &nbsp;&nbsp; Portfolio.hu",
+          "summary": "Eltűnik több termék az Aldi-üzletekből - Ezeket hamarosan hiába keresed Portfolio.hu",
           "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOMGJodV9qZE1aeEJTWkdiSjJuWTJoY3d2Ny1HdGtGMGdrTzl2T2d4LUR0cENCeUpkMnF1ampDcFdUTmhpQ2dUbERDYUNvMUFLTUM5ZFNzQkJ4UGllLVd2YXBLcC1VdW5fZWZWa2QtZHIyRjZHOWNhTUkxYTVEOXo2SHpMXzh1SDRPR19PNzJTRUFTalBXTkFZS2FUUTIwSEFFTXQ5YVlRRHp6eTlWdWJUSVdXZW1YQWd4WVNz0gHAAUFVX3lxTE1rM3ZsbGtIa3gwTkthM0k5ZlZIbEFaQXdvcjJrTlBkTUZ1N1c5WXBST1Y5VG9oU0FvWlNMa2c3bEFtNUo5dDRvSnd5X0lndVRoS3kybVUwZU9LaGFrV1RiZGdPdjVRbWg3MkR6XzFEU004RnFGUDFIcHVUU3ZRVFJpWmJuYlE5YS1GdUZrUlpMY01WenpfOUpqQUpGSW5oclZfSGxzNjZkUDc3QlBuNGhsOVFVNFJVTHJVUlg5ZTZNRw?oc=5",
           "source": "Portfolio.hu",
+          "source_weight": 5,
           "published_at": "2026-05-20",
-          "sentiment": "neutral",
+          "sentiment": "negative",
+          "event_type": "general",
+          "impact": "high",
+          "article_risk_score": 30,
           "narratives": [
             "általános"
           ],
-          "query": "ALDI élelmiszer kiskereskedelem"
+          "query": "ALDI élelmiszer kiskereskedelem Magyarország"
         },
         {
           "id": "60feeb619599c79c",
           "company_id": "aldi",
           "company": "ALDI",
           "title": "Hamarosan minden magyarországi ALDI-ból eltűnnek az újságok - Media1",
-          "summary": "Hamarosan minden magyarországi ALDI-ból eltűnnek az újságok &nbsp;&nbsp; Media1",
+          "summary": "Hamarosan minden magyarországi ALDI-ból eltűnnek az újságok Media1",
           "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE4xRkJEajd5TG9TNG1CcWl3Z2duTHhRSmNIOXljeG1vdXpJSE9XaWo1Rmh3NDJvbUxOektlOVJuQTdLTkhSS00xMXpPNExXaFBtWDhHa2ktWkQzOGdOb3g2RzJ1T1dfT3V5eV90YUQtNXVzOWFGVzhYYkxGNV96dw?oc=5",
           "source": "Media1",
+          "source_weight": 2,
           "published_at": "2026-05-20",
           "sentiment": "neutral",
+          "event_type": "general",
+          "impact": "low",
+          "article_risk_score": 4,
           "narratives": [
             "általános"
           ],
           "query": "ALDI áruház Magyarország"
-        },
-        {
-          "id": "8a766e5bdef82f27",
-          "company_id": "aldi",
-          "company": "ALDI",
-          "title": "Roham indulhat hétfőn az Aldiba: jön a 6999 forintos sztártermék - most van igazán értelme beszerezni - Startlap",
-          "summary": "Roham indulhat hétfőn az Aldiba: jön a 6999 forintos sztártermék - most van igazán értelme beszerezni &nbsp;&nbsp; Startlap",
-          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1WZldLVFdWTFdsTUJubzI1eDJuMm9YcHZPcy1mZGMxWUpHWEV0RXRxLTAtWmc4TC0tSHRKY2RZQVV3eVRITEJkVXMwNWFJeE1xYjZRQ3JVdndBejVIaFMxYTlQZmNWZzB6Z25nS3Zibl9TMUk3VEFj?oc=5",
-          "source": "Startlap",
-          "published_at": "2026-05-12",
-          "sentiment": "neutral",
-          "narratives": [
-            "árverseny"
-          ],
-          "query": "ALDI akció árak"
         }
       ]
     },
@@ -200,17 +199,26 @@
       "company": "SPAR",
       "snapshot_date": "2026-06-08",
       "news_count_7d": 2,
-      "news_count_30d": 6,
+      "news_count_30d": 8,
+      "media_impact_score": 26,
+      "high_impact_count": 0,
       "social_mentions": null,
       "social_signal_status": "not_collected",
-      "positive_count": 1,
-      "neutral_count": 5,
+      "positive_count": 2,
+      "neutral_count": 6,
       "negative_count": 0,
-      "risk_score": 0,
+      "risk_score": 6,
       "dominant_narrative": "általános",
+      "dominant_event_type": "general",
       "narratives": {
         "általános": 4,
-        "árverseny": 2
+        "terjeszkedés": 1,
+        "árverseny": 3
+      },
+      "event_types": {
+        "general": 4,
+        "financial": 2,
+        "promotion": 2
       },
       "source_confidence": "medium",
       "articles": [
@@ -219,11 +227,15 @@
           "company_id": "spar",
           "company": "SPAR",
           "title": "Új ügyvezetővel bővült a SPAR Magyarország vezetése - Store Insider",
-          "summary": "Új ügyvezetővel bővült a SPAR Magyarország vezetése &nbsp;&nbsp; Store Insider",
+          "summary": "Új ügyvezetővel bővült a SPAR Magyarország vezetése Store Insider",
           "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOOUtoYmtXX0VLcm1vYnlVZEZzR2I1XzZ1allkSkhwN2s5QnFTTU9zSjhUZXhpZW1iQS1WR0NtN25uWTNIMWdiclFTdFRZM3htLVFpUTc2eDBVZmUwOXJZa0FhVkFxUXBGWHBVQzNoWXVFZWxIekJsMkVJbjlwY0IyejF1a0h1bDQ?oc=5",
           "source": "Store Insider",
+          "source_weight": 3,
           "published_at": "2026-06-04",
-          "sentiment": "neutral",
+          "sentiment": "positive",
+          "event_type": "general",
+          "impact": "low",
+          "article_risk_score": 6,
           "narratives": [
             "általános"
           ],
@@ -234,13 +246,17 @@
           "company_id": "spar",
           "company": "SPAR",
           "title": "A SPAR növelné franchise hálózatát - Piac&Profit",
-          "summary": "A SPAR növelné franchise hálózatát &nbsp;&nbsp; Piac&amp;Profit",
+          "summary": "A SPAR növelné franchise hálózatát Piac&amp;Profit",
           "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOa3FxdGlBQXROdlhVN1VPUzRyeE9jNkhLdC1TVzdBRE1XRWJ0S3JVcy1BeFlvU1hWUjdfOWk0VzlQOGV0NEFEREpjV0ZRcWlvMmU0N09POGVmSl83MmJMX0VCS3RRTHQyN29HX2NrQmlXSE12bkFvNEtYNFFybTZrTmpFRHQ5dw?oc=5",
           "source": "Piac&Profit",
+          "source_weight": 4,
           "published_at": "2026-06-02",
           "sentiment": "neutral",
+          "event_type": "financial",
+          "impact": "medium",
+          "article_risk_score": 8,
           "narratives": [
-            "általános"
+            "terjeszkedés"
           ],
           "query": "SPAR áruház Magyarország"
         },
@@ -249,11 +265,15 @@
           "company_id": "spar",
           "company": "SPAR",
           "title": "Robogott a magyarországi SPAR a múlt évben - Piac&Profit",
-          "summary": "Robogott a magyarországi SPAR a múlt évben &nbsp;&nbsp; Piac&amp;Profit",
+          "summary": "Robogott a magyarországi SPAR a múlt évben Piac&amp;Profit",
           "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQZHFoYngxdm55cmkzVk1KUGZCUDlhYWpSTjZ6aGtGVjUzaEViZTNOTkNaTkxSbi1GMmRteFg3YWV2cDJOOHZWNTFiaHZYSVFXbVJJQmd2X25xdWZmWU5xTWh0eS1yMEpDVURqZy1rdzQteFdHZ19lamg3YW9IUnZScmNsWGlVTGFORzBrcTZLazc?oc=5",
           "source": "Piac&Profit",
+          "source_weight": 4,
           "published_at": "2026-06-01",
           "sentiment": "neutral",
+          "event_type": "financial",
+          "impact": "medium",
+          "article_risk_score": 8,
           "narratives": [
             "általános"
           ],
@@ -264,11 +284,15 @@
           "company_id": "spar",
           "company": "SPAR",
           "title": "1185,5 milliárd forintra nőtt a SPAR forgalma 2025-ben - Trade magazin",
-          "summary": "1185,5 milliárd forintra nőtt a SPAR forgalma 2025-ben &nbsp;&nbsp; Trade magazin",
+          "summary": "1185,5 milliárd forintra nőtt a SPAR forgalma 2025-ben Trade magazin",
           "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPSk9SMFl3RTQxMER0ZkQxWlgzMjhsRlF5VjcybmpxaWJVSW9vTm9PZzJuRTd1djY4SUFsaWhRamNvRURIelRWRjBDMXdHYWlCUnVqU0JIUEpyOXZXX05MN2ZhYjN6R2hXQ3lwRW1aN3FacFktZVJNaVVVQUZUcGVZdTkzTTlDVllm?oc=5",
           "source": "Trade magazin",
+          "source_weight": 4,
           "published_at": "2026-06-01",
           "sentiment": "neutral",
+          "event_type": "general",
+          "impact": "medium",
+          "article_risk_score": 8,
           "narratives": [
             "árverseny"
           ],
@@ -279,30 +303,76 @@
           "company_id": "spar",
           "company": "SPAR",
           "title": "Szakmai díjakat nyert a SPAR - Store Insider",
-          "summary": "Szakmai díjakat nyert a SPAR &nbsp;&nbsp; Store Insider",
+          "summary": "Szakmai díjakat nyert a SPAR Store Insider",
           "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFA0cGhCSGRueGU1ZkpYV1FWUF9sUzRqVkQtQWNkaXZueDM3elNscHNFVExNSGZ2N3NtN3prSTdkUFc5V1M4X1U1WURhS0JiaXRQLUVGRk9mM0xUWE4wWTY5OHBoRGJacTNu?oc=5",
           "source": "Store Insider",
+          "source_weight": 3,
           "published_at": "2026-05-29",
           "sentiment": "positive",
+          "event_type": "general",
+          "impact": "low",
+          "article_risk_score": 6,
           "narratives": [
             "általános"
           ],
           "query": "SPAR áruház Magyarország"
         },
         {
-          "id": "22aa9beac3e96b07",
+          "id": "f4e737cce579767a",
           "company_id": "spar",
           "company": "SPAR",
-          "title": "Sokan nem örülnek a Spar lépésének: durva, milyen tojás került itt a boltokba - Agrárszektor",
-          "summary": "Sokan nem örülnek a Spar lépésének: durva, milyen tojás került itt a boltokba &nbsp;&nbsp; Agrárszektor",
-          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxORWpBcnVEb3hxYTZvbTJFd1o3ZGpaUEFEWU1yOVZvNGJvWGxkZVFhZ1MwMXllUjNVYUc1OHJCd0NmUERkSHllVzlzOU1pNVo5MmR2MWxTWmR2ank3M010RThfMDhLTmlVZl9tUEhWV19kaHFSZF9FYWdROG43RHItQTNLN2RFbTBFZjdOMkxxdUhyUG1vVF9MSnRTQnRzcFdlcXp2Y0VVbXZtVWdxZDZnWVJfOEtUbWFjMnV4ejgyaEFYYjhUdFA4UQ?oc=5",
-          "source": "Agrárszektor",
-          "published_at": "2026-05-25",
+          "title": "Gyereknapi akció: most olcsóbban juthatunk a gyerekek kedvenceihez - FEOL",
+          "summary": "Gyereknapi akció: most olcsóbban juthatunk a gyerekek kedvenceihez FEOL",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNSWtjMHl5VW5LZGhZNFA2UU5BVG5zNUJEM1JYZGlpZUs4dEgwNy1sY3hqRDZRTE1CU2tXbC1YbjJ3dHp1VmM0eF9ZUHJsdDY1ZEZxeUdCQngzZkFUbUZDaGtNdUlWQVUzM2U5V01yMjQxREVZS3hCZklJdmFFczNmOEg1bGNIWEgzZ0swUW02VWFNLXV0?oc=5",
+          "source": "FEOL",
+          "source_weight": 2,
+          "published_at": "2026-05-28",
           "sentiment": "neutral",
+          "event_type": "promotion",
+          "impact": "low",
+          "article_risk_score": 4,
           "narratives": [
             "árverseny"
           ],
-          "query": "SPAR élelmiszer kiskereskedelem"
+          "query": "SPAR akció árak Magyarország"
+        },
+        {
+          "id": "39b9449da678cacd",
+          "company_id": "spar",
+          "company": "SPAR",
+          "title": "Bejelentették a SPAR új vezérigazgatóját, őt választották ki – ez egész Magyarországnak nagyon fontos - Világgazdaság",
+          "summary": "Bejelentették a SPAR új vezérigazgatóját, őt választották ki – ez egész Magyarországnak nagyon fontos Világgazdaság",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPTjNTdzhFNnd1TlBVNGtRTnE0TUkxa2MwOVFWa2VhbV9SbWJmYWJoak1xVVBHVlVkd2U4TVhWY241TmxxQ01JdlJSMXQwYWpFaDFIbmUzTl9SUTl6MS1peTJTSzBqRU5ZcTluc2ZsUGE4Y2JuV0Vkbm5QLU9zVndIV1RaSXZKVkNheHZrNjcwR2cxYThmNkt5OWwtcFBjVjE2ek1B?oc=5",
+          "source": "Világgazdaság",
+          "source_weight": 4,
+          "published_at": "2026-05-26",
+          "sentiment": "neutral",
+          "event_type": "general",
+          "impact": "medium",
+          "article_risk_score": 8,
+          "narratives": [
+            "általános"
+          ],
+          "query": "SPAR élelmiszer kiskereskedelem Magyarország"
+        },
+        {
+          "id": "fdc6026980d989a7",
+          "company_id": "spar",
+          "company": "SPAR",
+          "title": "Nagyot akciózik a SPAR: most fél áron lehet lecsapni erre a népszerű konyhai gépre - FEOL",
+          "summary": "Nagyot akciózik a SPAR: most fél áron lehet lecsapni erre a népszerű konyhai gépre FEOL",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQelUxczZGQVFDX1lmS1I3QWVDVDZTc1JuUHlreTJsUV9oOUpuMlRMVzQzU2N2VE0ybWM1SkRYdVV6cTQ0S2Rad0RiNGdTYVJrLWlfTmdZbEJkd0JyY0J1SHFuUDVDQThta2RMR1BVWUFiN2REUkdEMWhBc19yYlJmVU9JaVFYYTNSLU1zN2RqLV9jaHhUdTQyTXpYZVFuc2ctSGZfdl9pNmNoR3o3dFAxUW43alFDT2F3bUxSaGtiMWk?oc=5",
+          "source": "FEOL",
+          "source_weight": 2,
+          "published_at": "2026-05-15",
+          "sentiment": "neutral",
+          "event_type": "promotion",
+          "impact": "low",
+          "article_risk_score": 4,
+          "narratives": [
+            "árverseny"
+          ],
+          "query": "SPAR akció árak Magyarország"
         }
       ]
     },
@@ -311,94 +381,64 @@
       "company": "Tesco",
       "snapshot_date": "2026-06-08",
       "news_count_7d": 0,
-      "news_count_30d": 5,
+      "news_count_30d": 2,
+      "media_impact_score": 7,
+      "high_impact_count": 0,
       "social_mentions": null,
       "social_signal_status": "not_collected",
-      "positive_count": 0,
-      "neutral_count": 5,
+      "positive_count": 1,
+      "neutral_count": 1,
       "negative_count": 0,
-      "risk_score": 0,
-      "dominant_narrative": "árverseny",
+      "risk_score": 7,
+      "dominant_narrative": "általános",
+      "dominant_event_type": "expansion",
       "narratives": {
-        "árverseny": 3,
-        "általános": 2
+        "általános": 1,
+        "munkaerő": 1
+      },
+      "event_types": {
+        "expansion": 1,
+        "financial": 1
       },
       "source_confidence": "medium",
       "articles": [
-        {
-          "id": "8e6be6232c5daced",
-          "company_id": "tesco",
-          "company": "Tesco",
-          "title": "Nem várt fordulat a hazai kiskereskedelemben: feltört a CBA, visszaszorult a Tesco - 24.hu",
-          "summary": "Nem várt fordulat a hazai kiskereskedelemben: feltört a CBA, visszaszorult a Tesco &nbsp;&nbsp; 24.hu",
-          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPdUJlUUVrMUZXeDd4M2pHN1d5cmI4c0lHTE01Umc1eE0wLVh5eHlHSmhnRG1hRmhGV3lIREFRSkJIalJJek1RRndfTDVrRUdrdWlQbHhWNnZ0a2lKaFhNeW5uZkdETlN2XzkyZjNuNFoxTUxBY0M5S3JWcHQxeHI3VFNKbkNRUQ?oc=5",
-          "source": "24.hu",
-          "published_at": "2026-06-01",
-          "sentiment": "neutral",
-          "narratives": [
-            "árverseny"
-          ],
-          "query": "Tesco élelmiszer kiskereskedelem"
-        },
-        {
-          "id": "180a361bb9d66239",
-          "company_id": "tesco",
-          "company": "Tesco",
-          "title": "Mit keres tiszás propagandakiadvány a Tesco polcain? - magyarjelen.hu",
-          "summary": "Mit keres tiszás propagandakiadvány a Tesco polcain? &nbsp;&nbsp; magyarjelen.hu",
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQRng5NVBnMFJmSk0yRlFVSEJqdnhTbHNfYjZZSjAzQzRwakhvaHVBUjA4MVM2N09TMU4wZWVBbVBRdnhzTG5HSVNRLTFwZjJNS0g4UHlUVENKOWhveW9DaklhWTZqdEFrZUFROThVNm0tMnVQcXZxSzBXeENDVktYdGQ1QjdIc19SQmhfNHZpY0V0QW8?oc=5",
-          "source": "magyarjelen.hu",
-          "published_at": "2026-05-27",
-          "sentiment": "neutral",
-          "narratives": [
-            "általános"
-          ],
-          "query": "Tesco áruház Magyarország"
-        },
         {
           "id": "27b789a428903892",
           "company_id": "tesco",
           "company": "Tesco",
           "title": "Olyan üzletet nyitott a Tesco, amilyen még nem volt Magyarországon - Portfolio.hu",
-          "summary": "Olyan üzletet nyitott a Tesco, amilyen még nem volt Magyarországon &nbsp;&nbsp; Portfolio.hu",
+          "summary": "Olyan üzletet nyitott a Tesco, amilyen még nem volt Magyarországon Portfolio.hu",
           "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQMHpnaExEX29rTHM0bDFWSHRYOVdDTXdnaFVjMV9yNmZIblhmYlBaeHFZNTlsRGhWckl6bHB2OWtJTFJOd1ptc25lNDJmaHZOd2VCZ3M2M1hic0gwMFNLNHpUbG9vdzh4YzBFMGJJS3pmVHEzUTdWMWx5QlhKYWRrZTNHSUVIcVNDZXNONjVkdmxxMk5EMXFOandXd01FdjJuVEdYTG1jSHFvbURSa0pWbGVIZEs1d9IBuwFBVV95cUxPcXhGQmlmLTRfUUFVVFhvbUJBVHNIcGxPcXpDZE9uck5VNmVId1BZcTExMkdRdVBFV0hlcmUxMzlPZjNlMV9LUmZzSUNQYTA5dWxDekZKUWxpLWo1aU1RaHd3VlhLWFgxdW1pUjZDanZTamNKQ0w1SkFJNWZGc1lPdzNrdW5CM0oxZ1gyOEY3UERIWVBHa1k3UTUycTZhTnd3OVV0QWQwNkkwQTZ1WGtJeUtfeXpWMzN5RjJn?oc=5",
           "source": "Portfolio.hu",
+          "source_weight": 5,
           "published_at": "2026-05-21",
           "sentiment": "neutral",
+          "event_type": "expansion",
+          "impact": "medium",
+          "article_risk_score": 10,
           "narratives": [
             "általános"
           ],
-          "query": "Tesco élelmiszer kiskereskedelem"
+          "query": "Tesco élelmiszer kiskereskedelem Magyarország"
         },
         {
-          "id": "e5f8f9ab873f7e85",
+          "id": "8a8a4c9b5e2d0fc9",
           "company_id": "tesco",
           "company": "Tesco",
-          "title": "Ideje korán eldőlt a nyári boltháború? Sztárterméket akciózott le a Lidl és a Tesco - az egyik boltban viszont jobban jársz - Pénzcentrum",
-          "summary": "Ideje korán eldőlt a nyári boltháború? Sztárterméket akciózott le a Lidl és a Tesco - az egyik boltban viszont jobban jársz &nbsp;&nbsp; Pénzcentrum",
-          "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOMWo4bk9FbDBUeVpRNzVXV1N1MEFnWE9SeVdraGdRckNfZTFHYzRyLVRzVHhVUk5sdVRreXU2Wm81YWd6RlJBaURFWDZaeElyalhXZ0FrWmtraGliTDAzOU5oY3BjU0JpVjB5emc0bnhBbGVsUWxxTmZrdE1WazRhQVBhWFRfNS1uaVloRHZPLUtqVXpXTmw2UTVzRXRvLUo0OXZySHd5Z0Raa3ZjSlgwSW84QnQ2SnBwSlEzYVRaeTVXN2ZWa2NxWlQ2VG1JaVdKZjB4OEJobVdMMVdhVmVFVm8wZExTOUhEaTR4TG9iczh4Q0Z5WnNlRUppOFozamJsVGFn0gGIAkFVX3lxTE5iemVUTHpYVGhlZXNoXzI1THJxT1NibTdwN3RCQW0yRWNsUWpfbklfMHp3UTRDR2EtWXR5V290bVhYd09odHJwSVNUOWh1MXpMaVRpX3RTOFA3d1phTmdhQW9DdUxEZkE3MUhKXzViNEdQT21pTGJhb0ZKcDlWV2xBOUR4NmkwbTRCLWxUa1dpVU5DZWw5U0R1RWdpaUhmLUpaQ0dvanhxc2MzWWJ2ZGlrLXZHWC1KdTA2am51U2RFOFNvakVKZy1vTW9kU2NULU5HNHZMTVg5NlljV1l2d19lak1Eb014Q241NHhtQWg0QkhPdXRERTVMTU1ETzNtUGVGbFd2ZFBlXw?oc=5",
-          "source": "Pénzcentrum",
-          "published_at": "2026-05-21",
-          "sentiment": "neutral",
+          "title": "Meddig marad még egyensúlyban a munkaerőpiac? - Növekedés.hu",
+          "summary": "Meddig marad még egyensúlyban a munkaerőpiac? Növekedés.hu",
+          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBwNFNYMVhacGZLdTdtVlExVHB3N2lVX0xhbExDZUx5ckkwc0p5VVNDYm8tbEVCcHB4N0F0YktQWGlGc1p3YzhsUlpOYXFib3FrNXRwSEVKZk5nWER6UnJKWnp1V2xDTDNlNUFrckl0LVJTNHNia0NwcnQzTQ?oc=5",
+          "source": "Növekedés.hu",
+          "source_weight": 2,
+          "published_at": "2026-05-11",
+          "sentiment": "positive",
+          "event_type": "financial",
+          "impact": "medium",
+          "article_risk_score": 4,
           "narratives": [
-            "árverseny"
+            "munkaerő"
           ],
-          "query": "Tesco akció árak"
-        },
-        {
-          "id": "47f1a1c60a7887da",
-          "company_id": "tesco",
-          "company": "Tesco",
-          "title": "Új boltlánc érkezik hozzánk – kiderült, hol nyílik az első áruház - nlc",
-          "summary": "Új boltlánc érkezik hozzánk – kiderült, hol nyílik az első áruház &nbsp;&nbsp; nlc",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5TYm5oaXFTaV9zYUFhbk12N2RRc3M2WFVvc1NYNXdkZlM5Ul8xdDE2SXZSRVNSWGt6X09rMXV3R1FtdTBxR2pBdW1WOXJ2UXJLajBtdjBQNmNMMUR4bkdJSUpBeWpPNnZsa3c1RjVCX3FrWWV2alE3X2lseHd3Tnc?oc=5",
-          "source": "nlc",
-          "published_at": "2026-05-15",
-          "sentiment": "neutral",
-          "narratives": [
-            "árverseny"
-          ],
-          "query": "Tesco áruház Magyarország"
+          "query": "Tesco munkaerő bér állás Magyarország"
         }
       ]
     },
@@ -406,18 +446,25 @@
       "id": "penny",
       "company": "PENNY",
       "snapshot_date": "2026-06-08",
-      "news_count_7d": 3,
+      "news_count_7d": 2,
       "news_count_30d": 4,
+      "media_impact_score": 15,
+      "high_impact_count": 0,
       "social_mentions": null,
       "social_signal_status": "not_collected",
       "positive_count": 0,
-      "neutral_count": 4,
-      "negative_count": 0,
-      "risk_score": 0,
+      "neutral_count": 3,
+      "negative_count": 1,
+      "risk_score": 12,
       "dominant_narrative": "általános",
+      "dominant_event_type": "general",
       "narratives": {
-        "általános": 2,
-        "árverseny": 2
+        "általános": 3,
+        "árverseny": 1
+      },
+      "event_types": {
+        "general": 3,
+        "financial": 1
       },
       "source_confidence": "medium",
       "articles": [
@@ -426,60 +473,76 @@
           "company_id": "penny",
           "company": "PENNY",
           "title": "Gazdaság: A Lidltől a Tescóig: választottak a magyarok, szétszóródtak a boltláncok - | hvg.hu",
-          "summary": "Gazdaság: A Lidltől a Tescóig: választottak a magyarok, szétszóródtak a boltláncok &nbsp;&nbsp; | hvg.hu",
+          "summary": "Gazdaság: A Lidltől a Tescóig: választottak a magyarok, szétszóródtak a boltláncok | hvg.hu",
           "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNaURHcWFzTXdreXZvd3BJRFdUVkhWN3ZmVDdSeFJVNGJVbDZzaXhEekhzRGxXQUc5M2xocVhZa1Ixa25yY2M2YVYtZXJQMUlYdGQxNVJXZGdRMlhvN2NrMFZNakp1RHNmV3phVVVyZ3NtcVZnT0x5Y1cyVEJaazhhUkNpR0pFb2N4TjJnQWVXbW0?oc=5",
           "source": "| hvg.hu",
+          "source_weight": 5,
           "published_at": "2026-06-06",
           "sentiment": "neutral",
+          "event_type": "general",
+          "impact": "medium",
+          "article_risk_score": 10,
           "narratives": [
             "általános"
           ],
-          "query": "PENNY élelmiszer kiskereskedelem"
+          "query": "PENNY élelmiszer kiskereskedelem Magyarország"
         },
         {
           "id": "6a8c94d65149a281",
           "company_id": "penny",
           "company": "PENNY",
           "title": "30 éves a PENNY Magyarországon - Store Insider",
-          "summary": "30 éves a PENNY Magyarországon &nbsp;&nbsp; Store Insider",
+          "summary": "30 éves a PENNY Magyarországon Store Insider",
           "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE80UUV2SEZNNFNEZWxNZ2Rud0NvWlBDUUdSMmtmVGZmNXFNbEJpX3RNZUJ3SjJ2bXRETEZUYnUzMU8wQWVVTzdPR1MtMjNzM1J6TW8yLVAwRFZyTmtMN0xBbm9Kc0U5SlN6WGZz?oc=5",
           "source": "Store Insider",
+          "source_weight": 3,
           "published_at": "2026-06-05",
           "sentiment": "neutral",
+          "event_type": "general",
+          "impact": "low",
+          "article_risk_score": 6,
           "narratives": [
             "általános"
           ],
           "query": "PENNY áruház Magyarország"
         },
         {
-          "id": "05fd17feae2a91a9",
-          "company_id": "penny",
-          "company": "PENNY",
-          "title": "G7: Az árrésstop ellenére nőtt az Aldi, az Auchan és a Spar összesített árrése - Telex",
-          "summary": "G7: Az árrésstop ellenére nőtt az Aldi, az Auchan és a Spar összesített árrése &nbsp;&nbsp; Telex",
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOd0pIZl9zRi1kTzVTNTJqN002LU1OOTRLUGlIVUdtR19GWWczS3U3TkZBTHdGbktWc1JjRXd1XzFHUEhiazRodzZmVGlwWGgzdW4wbW5ybU92VzEydXNYWFpiXy0yZ1FTSHc0YWtpdU9nTFBwdEVMa1dwLTlXRnJILVNqT2ZrQ21DSmlaQi05eDFwUk5tSmNNNHFwZ3Z2RGdNQndWWA?oc=5",
-          "source": "Telex",
-          "published_at": "2026-06-02",
-          "sentiment": "neutral",
-          "narratives": [
-            "árverseny"
-          ],
-          "query": "PENNY élelmiszer kiskereskedelem"
-        },
-        {
           "id": "15be867eb7b113ae",
           "company_id": "penny",
           "company": "PENNY",
           "title": "Vállalkozás: A Lidl utcahosszal vezeti a magyar kiskermezőnyt, a Penny már az Aldi előtt - | hvg.hu",
-          "summary": "Vállalkozás: A Lidl utcahosszal vezeti a magyar kiskermezőnyt, a Penny már az Aldi előtt &nbsp;&nbsp; | hvg.hu",
+          "summary": "Vállalkozás: A Lidl utcahosszal vezeti a magyar kiskermezőnyt, a Penny már az Aldi előtt | hvg.hu",
           "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFB6SUxsVlpIRENMNFRfVE5QdlpwalVacnJXa2ZSWENzWGF2LXVtM0V0RjhsbUpwN3h4RmFrWnB4dzlxMjRMdlZfRUIxX0pyS2xseTItWmtMbGh0X2hMdTJkNkdxd2RtcmxscGd1dDVtR25CNDBrU192ZnN3?oc=5",
           "source": "| hvg.hu",
+          "source_weight": 5,
           "published_at": "2026-06-01",
           "sentiment": "neutral",
+          "event_type": "general",
+          "impact": "medium",
+          "article_risk_score": 10,
           "narratives": [
             "árverseny"
           ],
-          "query": "PENNY élelmiszer kiskereskedelem"
+          "query": "PENNY élelmiszer kiskereskedelem Magyarország"
+        },
+        {
+          "id": "140c22e4b1fce897",
+          "company_id": "penny",
+          "company": "PENNY",
+          "title": "Áll a bál a magyar boltláncoknál: brutálisan veszteséges a Spar, falnak ment a Penny, az Aldi is mínuszban van – eddig csak egy lánc úszta meg - Pénzcentrum",
+          "summary": "Áll a bál a magyar boltláncoknál: brutálisan veszteséges a Spar, falnak ment a Penny, az Aldi is mínuszban van – eddig csak egy lánc úszta meg Pénzcentrum",
+          "url": "https://news.google.com/rss/articles/CBMingJBVV95cUxOSjRab3RfMlRValNFQ3VuWnVNNUJIZ3lWTEFheE5EdlZWckkwd2VzUi1ISjRyUG5LcG1OeWMtTHNHYW9rZ2JTWi1naWhJek03U0liM3JXUVdsOUFILVFrakd5WGdkYTNCR0h3c2g1N3IzVU1veEk1cUJWWGlheVMtYWV3dTdrOThhV1lwYnRfR1QzQ0JSNFBJZW5Xd2xZNHJyNE42Yk1TMHQ0Y2MzVkFOaFBxUWFtYnZrWmxEZ3I3RXJSR3dLZjRpdmdiTERCRXJmZU9uRWNOMTRpVVdreENZRVZ1RmRZU0FpMXhTMV9HOTVjUGxCd1kzZUVIWDBrRklnMlNONXhFeU02VG5zNVh4N1Q2aFpHZFgzT2Fuc0p30gGjAkFVX3lxTE5OeDNvdmhScDc0RFRrNm42V2VtbEkyZXNfeVJ4aTZvbHl6bmdPNzB3RXAwQUZqbHdpa0NaSXJnX2VvZkJjTTdQTGpmVTFsR2x3TmNjRDlPOEltWWJ5V2lXWE5rdUgxX0VkOW5UdE9rb3dCMkpBNjNFN1Fod3R6UHY3QmhvRHpfajBsb1pPZ3Q5VWwwSXBuTGhhZ09NclZBdUZMMWxvNkhQZTRpRnZaR3pjS250UEI1ek91VjBlVnR3VExRd2NPZWF4ZVJhSVUtRnl1UWpXWTUxaHVBWG9SRFAtNzA5cTFMTW16dDdaRUtzTUl0NVBWaFM0a01aOXNBcEZla2E0SUl5WDEyZ0Y1ZjhaS3FWNWhZSGQ5TGtZdVdJVl9KSQ?oc=5",
+          "source": "Pénzcentrum",
+          "source_weight": 2,
+          "published_at": "2026-06-01",
+          "sentiment": "negative",
+          "event_type": "financial",
+          "impact": "medium",
+          "article_risk_score": 24,
+          "narratives": [
+            "általános"
+          ],
+          "query": "PENNY élelmiszer kiskereskedelem Magyarország"
         }
       ]
     },
@@ -487,50 +550,44 @@
       "id": "auchan",
       "company": "Auchan",
       "snapshot_date": "2026-06-08",
-      "news_count_7d": 1,
-      "news_count_30d": 2,
+      "news_count_7d": 0,
+      "news_count_30d": 1,
+      "media_impact_score": 3,
+      "high_impact_count": 0,
       "social_mentions": null,
       "social_signal_status": "not_collected",
-      "positive_count": 0,
-      "neutral_count": 2,
+      "positive_count": 1,
+      "neutral_count": 0,
       "negative_count": 0,
-      "risk_score": 0,
-      "dominant_narrative": "árverseny",
+      "risk_score": 6,
+      "dominant_narrative": "beszállítók",
+      "dominant_event_type": "supplier",
       "narratives": {
-        "árverseny": 1,
-        "általános": 1
+        "beszállítók": 1
+      },
+      "event_types": {
+        "supplier": 1
       },
       "source_confidence": "medium",
       "articles": [
-        {
-          "id": "88302e1aa0d4cd9f",
-          "company_id": "auchan",
-          "company": "Auchan",
-          "title": "G7: Az árrésstop ellenére nőtt az Aldi, az Auchan és a Spar összesített árrése - Telex",
-          "summary": "G7: Az árrésstop ellenére nőtt az Aldi, az Auchan és a Spar összesített árrése &nbsp;&nbsp; Telex",
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOd0pIZl9zRi1kTzVTNTJqN002LU1OOTRLUGlIVUdtR19GWWczS3U3TkZBTHdGbktWc1JjRXd1XzFHUEhiazRodzZmVGlwWGgzdW4wbW5ybU92VzEydXNYWFpiXy0yZ1FTSHc0YWtpdU9nTFBwdEVMa1dwLTlXRnJILVNqT2ZrQ21DSmlaQi05eDFwUk5tSmNNNHFwZ3Z2RGdNQndWWA?oc=5",
-          "source": "Telex",
-          "published_at": "2026-06-02",
-          "sentiment": "neutral",
-          "narratives": [
-            "árverseny"
-          ],
-          "query": "Auchan élelmiszer kiskereskedelem"
-        },
         {
           "id": "8c1951377dbf137b",
           "company_id": "auchan",
           "company": "Auchan",
           "title": "Az Auchan kinyitja kapuit a hazai kkv-k előtt - Store Insider",
-          "summary": "Az Auchan kinyitja kapuit a hazai kkv-k előtt &nbsp;&nbsp; Store Insider",
+          "summary": "Az Auchan kinyitja kapuit a hazai kkv-k előtt Store Insider",
           "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBxbEY3dDJ4R3B3cHdHUGVTc0Q4QkVoZzdVZnljLUl1MzcwU1FLWmlpYTNjVVBEaUEzSkZFbXllbFBod3BFaGp3R0ExUzd0M1dtNmxIWVVnZ25HZUFhZWtNWC1UNGdBbWpzVmVmYTlsRVBZQ1IyZzlON1BTLURhcW8?oc=5",
           "source": "Store Insider",
+          "source_weight": 3,
           "published_at": "2026-05-26",
-          "sentiment": "neutral",
+          "sentiment": "positive",
+          "event_type": "supplier",
+          "impact": "medium",
+          "article_risk_score": 6,
           "narratives": [
-            "általános"
+            "beszállítók"
           ],
-          "query": "Auchan élelmiszer kiskereskedelem"
+          "query": "Auchan élelmiszer kiskereskedelem Magyarország"
         }
       ]
     },
@@ -540,32 +597,42 @@
       "snapshot_date": "2026-06-08",
       "news_count_7d": 0,
       "news_count_30d": 1,
+      "media_impact_score": 2,
+      "high_impact_count": 0,
       "social_mentions": null,
       "social_signal_status": "not_collected",
       "positive_count": 0,
       "neutral_count": 1,
       "negative_count": 0,
-      "risk_score": 0,
-      "dominant_narrative": "árverseny",
+      "risk_score": 4,
+      "dominant_narrative": "általános",
+      "dominant_event_type": "expansion",
       "narratives": {
-        "árverseny": 1
+        "általános": 1
+      },
+      "event_types": {
+        "expansion": 1
       },
       "source_confidence": "medium",
       "articles": [
         {
-          "id": "43474bf4e72618e2",
+          "id": "31987b9bcff79736",
           "company_id": "coop",
           "company": "COOP",
-          "title": "Lapozza át a COOP Jednota Dunaszerdahely májusi akciós újságát! - Paraméter",
-          "summary": "Lapozza át a COOP Jednota Dunaszerdahely májusi akciós újságát! &nbsp;&nbsp; Paraméter",
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOOGV1VmdSYzNWM25nR19UM2hpLUhGcklRbkQyMUo1YUZZYzRCQk5pTUpfV2pFOHBVNG95YzZCdDZ6bDA4bklLWE0zd3lmdG1vSnI1a2tFRTdkVDZKSjBfQ1pSVEpJUHVfalhYTF82NGgxN09IZnppbExNQVVjY1FPWS1SVWtYOHNaUzlZazNUVkJERFlwd3dTclNR?oc=5",
-          "source": "Paraméter",
-          "published_at": "2026-05-25",
+          "title": "Újra kinyitott Bélapátfalva legnagyobb élelmiszerüzlete - HEOL",
+          "summary": "Újra kinyitott Bélapátfalva legnagyobb élelmiszerüzlete HEOL",
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5PNktYVWhKSmduMHJhYTBWZG1qVXpxbWd0djN3QUs2bEZZa0V2RHc4VnJ6bHdCQTg0bWdEWXk5NXdpWGh4N2lta1lDT285LUxidHEyOS01WVUwOW9tUF9mcXpLQ1FaTE94Mk5fNUNnRjJCQQ?oc=5",
+          "source": "HEOL",
+          "source_weight": 2,
+          "published_at": "2026-05-15",
           "sentiment": "neutral",
+          "event_type": "expansion",
+          "impact": "low",
+          "article_risk_score": 4,
           "narratives": [
-            "árverseny"
+            "általános"
           ],
-          "query": "COOP akció árak"
+          "query": "COOP áruház Magyarország"
         }
       ]
     },
@@ -573,99 +640,298 @@
       "id": "cba",
       "company": "CBA",
       "snapshot_date": "2026-06-08",
-      "news_count_7d": 2,
-      "news_count_30d": 5,
+      "news_count_7d": 0,
+      "news_count_30d": 4,
+      "media_impact_score": 15,
+      "high_impact_count": 0,
       "social_mentions": null,
       "social_signal_status": "not_collected",
       "positive_count": 0,
-      "neutral_count": 5,
+      "neutral_count": 4,
       "negative_count": 0,
-      "risk_score": 0,
-      "dominant_narrative": "általános",
+      "risk_score": 8,
+      "dominant_narrative": "árverseny",
+      "dominant_event_type": "general",
       "narratives": {
         "árverseny": 2,
-        "általános": 3
+        "általános": 2
+      },
+      "event_types": {
+        "general": 4
       },
       "source_confidence": "medium",
       "articles": [
         {
-          "id": "3e1b42684f0bc9bb",
+          "id": "ad4208220d9e3860",
           "company_id": "cba",
           "company": "CBA",
-          "title": "Előírták a legkisebb árat, most számilliókat fizethetnek - Infostart",
-          "summary": "Előírták a legkisebb árat, most számilliókat fizethetnek &nbsp;&nbsp; Infostart",
-          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxORkNmMGRhclRwY2FqV2VQelk2OW9Xamw3OU9FdGtUaDZuNDlTTFQxQ2RoVFFvNXNBVDdTd3NxOEdBdFgtY2NxOVVwblZGWE0tUEZDTlFRcjNrLXNjYXdNYWVMczcyMmZKQUl4NXB5R1lNR0dPM2dXLTVXQ0Q5VjR4LW5LZDg2Vkl4al80SkJLdW16MHAzcUltb21sYzJMRXRYS3fSAaIBQVVfeXFMTkZDZjBkYXJUcGNhaldlUHpZNjlvV2psNzlPRXRrVGg2bjQ5U0xUMUNkaFRRbzVzQVQ3U3dzcThHQXRYLWNjcTlVcG5WRlhNLVBGQ05RUXIzay1zY2F3TWFlTHM3MjJmSkFJeDVweUdZTUdHTzNnVy01V0NEOVY0eC1uS2Q4NlZJeGpfNEpCS3VtejBwM3FJbW9tbGMyTEV0WEt3?oc=5",
-          "source": "Infostart",
-          "published_at": "2026-06-08",
+          "title": "Vállalkozás: A Lidl utcahosszal vezeti a magyar kiskermezőnyt, a Penny már az Aldi előtt - | hvg.hu",
+          "summary": "Vállalkozás: A Lidl utcahosszal vezeti a magyar kiskermezőnyt, a Penny már az Aldi előtt | hvg.hu",
+          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFB6SUxsVlpIRENMNFRfVE5QdlpwalVacnJXa2ZSWENzWGF2LXVtM0V0RjhsbUpwN3h4RmFrWnB4dzlxMjRMdlZfRUIxX0pyS2xseTItWmtMbGh0X2hMdTJkNkdxd2RtcmxscGd1dDVtR25CNDBrU192ZnN3?oc=5",
+          "source": "| hvg.hu",
+          "source_weight": 5,
+          "published_at": "2026-06-01",
           "sentiment": "neutral",
+          "event_type": "general",
+          "impact": "medium",
+          "article_risk_score": 10,
           "narratives": [
             "árverseny"
           ],
-          "query": "CBA akció árak"
-        },
-        {
-          "id": "9d86772532a4b018",
-          "company_id": "cba",
-          "company": "CBA",
-          "title": "Gazdaság: A Lidltől a Tescóig: választottak a magyarok, szétszóródtak a boltláncok - | hvg.hu",
-          "summary": "Gazdaság: A Lidltől a Tescóig: választottak a magyarok, szétszóródtak a boltláncok &nbsp;&nbsp; | hvg.hu",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNaURHcWFzTXdreXZvd3BJRFdUVkhWN3ZmVDdSeFJVNGJVbDZzaXhEekhzRGxXQUc5M2xocVhZa1Ixa25yY2M2YVYtZXJQMUlYdGQxNVJXZGdRMlhvN2NrMFZNakp1RHNmV3phVVVyZ3NtcVZnT0x5Y1cyVEJaazhhUkNpR0pFb2N4TjJnQWVXbW0?oc=5",
-          "source": "| hvg.hu",
-          "published_at": "2026-06-06",
-          "sentiment": "neutral",
-          "narratives": [
-            "általános"
-          ],
-          "query": "CBA élelmiszer kiskereskedelem"
+          "query": "CBA áruház Magyarország"
         },
         {
           "id": "a15685cdc96cc1d5",
           "company_id": "cba",
           "company": "CBA",
           "title": "A CBA lett Magyarország legnagyobb forgalmú hazai tulajdonú élelmiszer-kereskedelmi hálózata, az összesített rangsor harmadik helyezettje - Trade magazin",
-          "summary": "A CBA lett Magyarország legnagyobb forgalmú hazai tulajdonú élelmiszer-kereskedelmi hálózata, az összesített rangsor harmadik helyezettje &nbsp;&nbsp; Trade magazin",
+          "summary": "A CBA lett Magyarország legnagyobb forgalmú hazai tulajdonú élelmiszer-kereskedelmi hálózata, az összesített rangsor harmadik helyezettje Trade magazin",
           "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNbEQzOGs5dFBYVzVUX0VsYjdkaHppQkVkQThUd3UtQTlsSXp1Nmh5NFBJR0VMT2tBYjluM2NMNG1zckhqeHA2SmNVUjFVa0p6ZWE3d0tRdHNFVXpnREhKUWpfQVEwSTh0MW1pUTJjVFFkWnBJY1I2VlZXT0xkM0hhWndlXzVfMjFybXZnQlpnb3QxN19FQk1sZ2dFalA4NU9CTkFrNkZ0QlhMUXo5UzdRaEd3dlF6emRrWE9saUVTV1RmX0dvSXU5VzBQZTVYRHpaYWJfMWdUSVJ4ZW52aFJSczh6WkdncTJiTno5NW5xdFgzbnFQWEtB?oc=5",
           "source": "Trade magazin",
+          "source_weight": 4,
           "published_at": "2026-06-01",
           "sentiment": "neutral",
+          "event_type": "general",
+          "impact": "medium",
+          "article_risk_score": 8,
           "narratives": [
             "általános"
           ],
-          "query": "CBA élelmiszer kiskereskedelem"
-        },
-        {
-          "id": "adbc62cf441154eb",
-          "company_id": "cba",
-          "company": "CBA",
-          "title": "Nem várt fordulat a hazai kiskereskedelemben: feltört a CBA, visszaszorult a Tesco - 24.hu",
-          "summary": "Nem várt fordulat a hazai kiskereskedelemben: feltört a CBA, visszaszorult a Tesco &nbsp;&nbsp; 24.hu",
-          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPdUJlUUVrMUZXeDd4M2pHN1d5cmI4c0lHTE01Umc1eE0wLVh5eHlHSmhnRG1hRmhGV3lIREFRSkJIalJJek1RRndfTDVrRUdrdWlQbHhWNnZ0a2lKaFhNeW5uZkdETlN2XzkyZjNuNFoxTUxBY0M5S3JWcHQxeHI3VFNKbkNRUQ?oc=5",
-          "source": "24.hu",
-          "published_at": "2026-06-01",
-          "sentiment": "neutral",
-          "narratives": [
-            "árverseny"
-          ],
-          "query": "CBA élelmiszer kiskereskedelem"
+          "query": "CBA áruház Magyarország"
         },
         {
           "id": "e133a6e01dfd629a",
           "company_id": "cba",
           "company": "CBA",
           "title": "Átrendeződött a magyar kiskereskedelem: a Lidl elsősége megkérdőjelezhetetlen, van viszont nagy visszatérő - Világgazdaság",
-          "summary": "Átrendeződött a magyar kiskereskedelem: a Lidl elsősége megkérdőjelezhetetlen, van viszont nagy visszatérő &nbsp;&nbsp; Világgazdaság",
+          "summary": "Átrendeződött a magyar kiskereskedelem: a Lidl elsősége megkérdőjelezhetetlen, van viszont nagy visszatérő Világgazdaság",
           "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPRG12d3Joc18xUEJjTVU5ZFZlbGIxYXlzM0hzTFBwNWlacnM2SWItTkxHTW9QMm1CTlZySUNnM2NLZG02cWlyUE1ZcHc0QnFYUU0zNmxmYzJiOGZYeXZXWG1XVGJXOXhZbnFYd3o2RTBoWFFYLUJwYzhSNHJyRnhScTBiWWkzRXYxazJlVUNYcGhfOUhjWW81bzRpVWhGbzA?oc=5",
           "source": "Világgazdaság",
+          "source_weight": 4,
           "published_at": "2026-06-01",
           "sentiment": "neutral",
+          "event_type": "general",
+          "impact": "medium",
+          "article_risk_score": 8,
           "narratives": [
             "általános"
           ],
-          "query": "CBA élelmiszer kiskereskedelem"
+          "query": "CBA élelmiszer kiskereskedelem Magyarország"
+        },
+        {
+          "id": "294d4239b9ec2bb4",
+          "company_id": "cba",
+          "company": "CBA",
+          "title": "Kiderült, melyik boltban vásárol a legtöbb magyar - ORIGO",
+          "summary": "Kiderült, melyik boltban vásárol a legtöbb magyar ORIGO",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBwRHFORXViSWVSZ2pCaEw2OXJKTXo5UmpQU0gzcS11VjZ3MTFuVE9rVDZxUGtkT185aklkUHN5OEx4UXN0ZVFfSmRQUE1FSGZYem5hcVZfSUpTYlVVRVM2M2h3VV9BYkFZT25ZSFBrWXFIdVJTLXBIaHlXclZrY0U?oc=5",
+          "source": "ORIGO",
+          "source_weight": 2,
+          "published_at": "2026-06-01",
+          "sentiment": "neutral",
+          "event_type": "general",
+          "impact": "low",
+          "article_risk_score": 4,
+          "narratives": [
+            "árverseny"
+          ],
+          "query": "CBA áruház Magyarország"
         }
       ]
     }
   ],
-  "weekly_insight": "Az elmúlt 30 nap nyilvános hírforrásai alapján a legnagyobb médiaaktivitás ALDI körül látható, 7 azonosított megjelenéssel. A legmagasabb reputációs kockázati jelzés Lidl esetében jelent meg, 0/100 értékkel. A legtöbb pozitív jellegű említés SPAR oldalán látható. A social media adatgyűjtés ebben a verzióban még nem aktív, ezért a social signal külön fejlesztési körben kezelendő.",
-  "notes": "Az adatok Google News RSS keresésekből származó nyilvános hírmegjelenések. A sentiment és narrative kategorizálás egyszerű kulcsszavas előzetes osztályozás, nem teljes AI-minősítés. A social media adatok ebben a verzióban még nem kerülnek gyűjtésre."
+  "weekly_insight": "Az elmúlt 30 nap nyilvános hírforrásai alapján a legtöbb azonosított megjelenés SPAR körül látható, 8 cikkel. A legnagyobb médiahatás-pontszámot SPAR érte el, 26 ponttal, amely már a forrásminőséget is figyelembe veszi. A legmagasabb reputációs kockázati jelzés Lidl esetében jelent meg, 23/100 értékkel. A legtöbb pozitív jellegű említés SPAR oldalán látható. A social media adatgyűjtés ebben a verzióban még nem aktív, ezért a social signal külön fejlesztési körben kezelendő.",
+  "top_events": [
+    {
+      "id": "719196c83169e9cd",
+      "company_id": "lidl",
+      "company": "Lidl",
+      "title": "Meglepő bejelentés: óriási pofont kapott a Lidl Magyarországon, nem építhet új boltot – a semmiből jött a plázabizottság döntése - Világgazdaság",
+      "summary": "Meglepő bejelentés: óriási pofont kapott a Lidl Magyarországon, nem építhet új boltot – a semmiből jött a plázabizottság döntése Világgazdaság",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQck1TeGhyTGtaNnB2TEZBSGNCM2hrWENCS0tuRzZMSUMxczdCaFhKeFpYSUxqcl9ELVNUSE4tRXBXT2JCZlkyaEVnbW54aFR1Z1dXc1RjektWbkNiSElXREJFWUxOR0pnWFRRaVZfb3k0OVVKdlc5ZlVOR2N1alVwNmlzVjBjd3k4WnF6dkIzdzZ1MlNjclk3Xy1YcGE0TFE?oc=5",
+      "source": "Világgazdaság",
+      "source_weight": 4,
+      "published_at": "2026-06-06",
+      "sentiment": "negative",
+      "event_type": "regulatory",
+      "impact": "high",
+      "article_risk_score": 73,
+      "narratives": [
+        "reputációs kockázat"
+      ],
+      "query": "Lidl áruház Magyarország"
+    },
+    {
+      "id": "66605b440458634f",
+      "company_id": "aldi",
+      "company": "ALDI",
+      "title": "Eltűnik több termék az Aldi-üzletekből - Ezeket hamarosan hiába keresed - Portfolio.hu",
+      "summary": "Eltűnik több termék az Aldi-üzletekből - Ezeket hamarosan hiába keresed Portfolio.hu",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOMGJodV9qZE1aeEJTWkdiSjJuWTJoY3d2Ny1HdGtGMGdrTzl2T2d4LUR0cENCeUpkMnF1ampDcFdUTmhpQ2dUbERDYUNvMUFLTUM5ZFNzQkJ4UGllLVd2YXBLcC1VdW5fZWZWa2QtZHIyRjZHOWNhTUkxYTVEOXo2SHpMXzh1SDRPR19PNzJTRUFTalBXTkFZS2FUUTIwSEFFTXQ5YVlRRHp6eTlWdWJUSVdXZW1YQWd4WVNz0gHAAUFVX3lxTE1rM3ZsbGtIa3gwTkthM0k5ZlZIbEFaQXdvcjJrTlBkTUZ1N1c5WXBST1Y5VG9oU0FvWlNMa2c3bEFtNUo5dDRvSnd5X0lndVRoS3kybVUwZU9LaGFrV1RiZGdPdjVRbWg3MkR6XzFEU004RnFGUDFIcHVUU3ZRVFJpWmJuYlE5YS1GdUZrUlpMY01WenpfOUpqQUpGSW5oclZfSGxzNjZkUDc3QlBuNGhsOVFVNFJVTHJVUlg5ZTZNRw?oc=5",
+      "source": "Portfolio.hu",
+      "source_weight": 5,
+      "published_at": "2026-05-20",
+      "sentiment": "negative",
+      "event_type": "general",
+      "impact": "high",
+      "article_risk_score": 30,
+      "narratives": [
+        "általános"
+      ],
+      "query": "ALDI élelmiszer kiskereskedelem Magyarország"
+    },
+    {
+      "id": "140c22e4b1fce897",
+      "company_id": "penny",
+      "company": "PENNY",
+      "title": "Áll a bál a magyar boltláncoknál: brutálisan veszteséges a Spar, falnak ment a Penny, az Aldi is mínuszban van – eddig csak egy lánc úszta meg - Pénzcentrum",
+      "summary": "Áll a bál a magyar boltláncoknál: brutálisan veszteséges a Spar, falnak ment a Penny, az Aldi is mínuszban van – eddig csak egy lánc úszta meg Pénzcentrum",
+      "url": "https://news.google.com/rss/articles/CBMingJBVV95cUxOSjRab3RfMlRValNFQ3VuWnVNNUJIZ3lWTEFheE5EdlZWckkwd2VzUi1ISjRyUG5LcG1OeWMtTHNHYW9rZ2JTWi1naWhJek03U0liM3JXUVdsOUFILVFrakd5WGdkYTNCR0h3c2g1N3IzVU1veEk1cUJWWGlheVMtYWV3dTdrOThhV1lwYnRfR1QzQ0JSNFBJZW5Xd2xZNHJyNE42Yk1TMHQ0Y2MzVkFOaFBxUWFtYnZrWmxEZ3I3RXJSR3dLZjRpdmdiTERCRXJmZU9uRWNOMTRpVVdreENZRVZ1RmRZU0FpMXhTMV9HOTVjUGxCd1kzZUVIWDBrRklnMlNONXhFeU02VG5zNVh4N1Q2aFpHZFgzT2Fuc0p30gGjAkFVX3lxTE5OeDNvdmhScDc0RFRrNm42V2VtbEkyZXNfeVJ4aTZvbHl6bmdPNzB3RXAwQUZqbHdpa0NaSXJnX2VvZkJjTTdQTGpmVTFsR2x3TmNjRDlPOEltWWJ5V2lXWE5rdUgxX0VkOW5UdE9rb3dCMkpBNjNFN1Fod3R6UHY3QmhvRHpfajBsb1pPZ3Q5VWwwSXBuTGhhZ09NclZBdUZMMWxvNkhQZTRpRnZaR3pjS250UEI1ek91VjBlVnR3VExRd2NPZWF4ZVJhSVUtRnl1UWpXWTUxaHVBWG9SRFAtNzA5cTFMTW16dDdaRUtzTUl0NVBWaFM0a01aOXNBcEZla2E0SUl5WDEyZ0Y1ZjhaS3FWNWhZSGQ5TGtZdVdJVl9KSQ?oc=5",
+      "source": "Pénzcentrum",
+      "source_weight": 2,
+      "published_at": "2026-06-01",
+      "sentiment": "negative",
+      "event_type": "financial",
+      "impact": "medium",
+      "article_risk_score": 24,
+      "narratives": [
+        "általános"
+      ],
+      "query": "PENNY élelmiszer kiskereskedelem Magyarország"
+    },
+    {
+      "id": "6ef6f1456265d7e7",
+      "company_id": "penny",
+      "company": "PENNY",
+      "title": "Gazdaság: A Lidltől a Tescóig: választottak a magyarok, szétszóródtak a boltláncok - | hvg.hu",
+      "summary": "Gazdaság: A Lidltől a Tescóig: választottak a magyarok, szétszóródtak a boltláncok | hvg.hu",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNaURHcWFzTXdreXZvd3BJRFdUVkhWN3ZmVDdSeFJVNGJVbDZzaXhEekhzRGxXQUc5M2xocVhZa1Ixa25yY2M2YVYtZXJQMUlYdGQxNVJXZGdRMlhvN2NrMFZNakp1RHNmV3phVVVyZ3NtcVZnT0x5Y1cyVEJaazhhUkNpR0pFb2N4TjJnQWVXbW0?oc=5",
+      "source": "| hvg.hu",
+      "source_weight": 5,
+      "published_at": "2026-06-06",
+      "sentiment": "neutral",
+      "event_type": "general",
+      "impact": "medium",
+      "article_risk_score": 10,
+      "narratives": [
+        "általános"
+      ],
+      "query": "PENNY élelmiszer kiskereskedelem Magyarország"
+    },
+    {
+      "id": "15be867eb7b113ae",
+      "company_id": "penny",
+      "company": "PENNY",
+      "title": "Vállalkozás: A Lidl utcahosszal vezeti a magyar kiskermezőnyt, a Penny már az Aldi előtt - | hvg.hu",
+      "summary": "Vállalkozás: A Lidl utcahosszal vezeti a magyar kiskermezőnyt, a Penny már az Aldi előtt | hvg.hu",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFB6SUxsVlpIRENMNFRfVE5QdlpwalVacnJXa2ZSWENzWGF2LXVtM0V0RjhsbUpwN3h4RmFrWnB4dzlxMjRMdlZfRUIxX0pyS2xseTItWmtMbGh0X2hMdTJkNkdxd2RtcmxscGd1dDVtR25CNDBrU192ZnN3?oc=5",
+      "source": "| hvg.hu",
+      "source_weight": 5,
+      "published_at": "2026-06-01",
+      "sentiment": "neutral",
+      "event_type": "general",
+      "impact": "medium",
+      "article_risk_score": 10,
+      "narratives": [
+        "árverseny"
+      ],
+      "query": "PENNY élelmiszer kiskereskedelem Magyarország"
+    },
+    {
+      "id": "ad4208220d9e3860",
+      "company_id": "cba",
+      "company": "CBA",
+      "title": "Vállalkozás: A Lidl utcahosszal vezeti a magyar kiskermezőnyt, a Penny már az Aldi előtt - | hvg.hu",
+      "summary": "Vállalkozás: A Lidl utcahosszal vezeti a magyar kiskermezőnyt, a Penny már az Aldi előtt | hvg.hu",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFB6SUxsVlpIRENMNFRfVE5QdlpwalVacnJXa2ZSWENzWGF2LXVtM0V0RjhsbUpwN3h4RmFrWnB4dzlxMjRMdlZfRUIxX0pyS2xseTItWmtMbGh0X2hMdTJkNkdxd2RtcmxscGd1dDVtR25CNDBrU192ZnN3?oc=5",
+      "source": "| hvg.hu",
+      "source_weight": 5,
+      "published_at": "2026-06-01",
+      "sentiment": "neutral",
+      "event_type": "general",
+      "impact": "medium",
+      "article_risk_score": 10,
+      "narratives": [
+        "árverseny"
+      ],
+      "query": "CBA áruház Magyarország"
+    },
+    {
+      "id": "27b789a428903892",
+      "company_id": "tesco",
+      "company": "Tesco",
+      "title": "Olyan üzletet nyitott a Tesco, amilyen még nem volt Magyarországon - Portfolio.hu",
+      "summary": "Olyan üzletet nyitott a Tesco, amilyen még nem volt Magyarországon Portfolio.hu",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQMHpnaExEX29rTHM0bDFWSHRYOVdDTXdnaFVjMV9yNmZIblhmYlBaeHFZNTlsRGhWckl6bHB2OWtJTFJOd1ptc25lNDJmaHZOd2VCZ3M2M1hic0gwMFNLNHpUbG9vdzh4YzBFMGJJS3pmVHEzUTdWMWx5QlhKYWRrZTNHSUVIcVNDZXNONjVkdmxxMk5EMXFOandXd01FdjJuVEdYTG1jSHFvbURSa0pWbGVIZEs1d9IBuwFBVV95cUxPcXhGQmlmLTRfUUFVVFhvbUJBVHNIcGxPcXpDZE9uck5VNmVId1BZcTExMkdRdVBFV0hlcmUxMzlPZjNlMV9LUmZzSUNQYTA5dWxDekZKUWxpLWo1aU1RaHd3VlhLWFgxdW1pUjZDanZTamNKQ0w1SkFJNWZGc1lPdzNrdW5CM0oxZ1gyOEY3UERIWVBHa1k3UTUycTZhTnd3OVV0QWQwNkkwQTZ1WGtJeUtfeXpWMzN5RjJn?oc=5",
+      "source": "Portfolio.hu",
+      "source_weight": 5,
+      "published_at": "2026-05-21",
+      "sentiment": "neutral",
+      "event_type": "expansion",
+      "impact": "medium",
+      "article_risk_score": 10,
+      "narratives": [
+        "általános"
+      ],
+      "query": "Tesco élelmiszer kiskereskedelem Magyarország"
+    },
+    {
+      "id": "ee59a1551e031804",
+      "company_id": "spar",
+      "company": "SPAR",
+      "title": "A SPAR növelné franchise hálózatát - Piac&Profit",
+      "summary": "A SPAR növelné franchise hálózatát Piac&amp;Profit",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOa3FxdGlBQXROdlhVN1VPUzRyeE9jNkhLdC1TVzdBRE1XRWJ0S3JVcy1BeFlvU1hWUjdfOWk0VzlQOGV0NEFEREpjV0ZRcWlvMmU0N09POGVmSl83MmJMX0VCS3RRTHQyN29HX2NrQmlXSE12bkFvNEtYNFFybTZrTmpFRHQ5dw?oc=5",
+      "source": "Piac&Profit",
+      "source_weight": 4,
+      "published_at": "2026-06-02",
+      "sentiment": "neutral",
+      "event_type": "financial",
+      "impact": "medium",
+      "article_risk_score": 8,
+      "narratives": [
+        "terjeszkedés"
+      ],
+      "query": "SPAR áruház Magyarország"
+    },
+    {
+      "id": "ee137a4eb913c75b",
+      "company_id": "lidl",
+      "company": "Lidl",
+      "title": "Átrendeződött a magyar kiskereskedelem: a Lidl elsősége megkérdőjelezhetetlen, van viszont nagy visszatérő - Világgazdaság",
+      "summary": "Átrendeződött a magyar kiskereskedelem: a Lidl elsősége megkérdőjelezhetetlen, van viszont nagy visszatérő Világgazdaság",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPRG12d3Joc18xUEJjTVU5ZFZlbGIxYXlzM0hzTFBwNWlacnM2SWItTkxHTW9QMm1CTlZySUNnM2NLZG02cWlyUE1ZcHc0QnFYUU0zNmxmYzJiOGZYeXZXWG1XVGJXOXhZbnFYd3o2RTBoWFFYLUJwYzhSNHJyRnhScTBiWWkzRXYxazJlVUNYcGhfOUhjWW81bzRpVWhGbzA?oc=5",
+      "source": "Világgazdaság",
+      "source_weight": 4,
+      "published_at": "2026-06-01",
+      "sentiment": "neutral",
+      "event_type": "general",
+      "impact": "medium",
+      "article_risk_score": 8,
+      "narratives": [
+        "általános"
+      ],
+      "query": "Lidl élelmiszer kiskereskedelem Magyarország"
+    },
+    {
+      "id": "393f9f909124b6f8",
+      "company_id": "spar",
+      "company": "SPAR",
+      "title": "Robogott a magyarországi SPAR a múlt évben - Piac&Profit",
+      "summary": "Robogott a magyarországi SPAR a múlt évben Piac&amp;Profit",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQZHFoYngxdm55cmkzVk1KUGZCUDlhYWpSTjZ6aGtGVjUzaEViZTNOTkNaTkxSbi1GMmRteFg3YWV2cDJOOHZWNTFiaHZYSVFXbVJJQmd2X25xdWZmWU5xTWh0eS1yMEpDVURqZy1rdzQteFdHZ19lamg3YW9IUnZScmNsWGlVTGFORzBrcTZLazc?oc=5",
+      "source": "Piac&Profit",
+      "source_weight": 4,
+      "published_at": "2026-06-01",
+      "sentiment": "neutral",
+      "event_type": "financial",
+      "impact": "medium",
+      "article_risk_score": 8,
+      "narratives": [
+        "általános"
+      ],
+      "query": "SPAR áruház Magyarország"
+    }
+  ],
+  "notes": "Az adatok Google News RSS keresésekből származó nyilvános hírmegjelenések. A sentiment, event_type, impact és risk_score mezők kulcsszavas, előzetes gépi osztályozáson alapulnak. A media_impact_score a forrás súlyát is figyelembe veszi. A social media adatok ebben a verzióban még nem kerülnek gyűjtésre."
 }
