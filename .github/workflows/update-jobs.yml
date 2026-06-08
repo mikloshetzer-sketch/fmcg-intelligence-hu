@@ -1,16 +1,16 @@
-name: Update FMCG Jobs History
+name: Update FMCG Human Capital Monitor
 
 on:
   workflow_dispatch:
 
   schedule:
-    - cron: "0 4 1 * *"
+    - cron: "0 5 * * 1"
 
 permissions:
   contents: write
 
 jobs:
-  update-jobs:
+  update-human-capital:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,18 +22,35 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Jobs snapshot generálása
-        run: python scripts/update_jobs.py
+      - name: Python csomagok telepítése
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
 
-      - name: Változások commitolása
+      - name: Jobs monitor futtatása
+        run: |
+          python scripts/update_jobs.py
+
+      - name: Ellenőrzés
+        run: |
+          ls -la docs/data/
+
+      - name: Git beállítás
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add docs/data/jobs-history/
+      - name: Fájlok commitolása
+        run: |
+          git add docs/data/jobs.json
+          git add docs/data/job-postings-current.json
+          git add docs/data/employer-reviews.json
+          git add docs/data/benefits.json
           git add docs/data/jobs-monitor-status.json
+          git add docs/data/jobs-history/
+          git add docs/data/jobs-raw/
 
-          git diff --cached --quiet || git commit -m "Automated jobs snapshot update"
+          git diff --cached --quiet || git commit -m "Automated Human Capital update"
 
       - name: Push
         run: |
