@@ -1,36 +1,68 @@
 {
   "snapshot_date": "2026-06-08",
-  "mode": "public_news_rss_collection_v2_event_impact_risk",
+  "mode": "public_news_rss_collection_v3_business_impact_strategy",
   "social_status": "not_collected",
   "companies": [
     {
       "id": "lidl",
       "company": "Lidl",
       "snapshot_date": "2026-06-08",
-      "news_count_7d": 2,
-      "news_count_30d": 4,
-      "media_impact_score": 13,
+      "news_count_7d": 3,
+      "news_count_30d": 5,
+      "media_impact_score": 17,
       "high_impact_count": 1,
+      "critical_impact_count": 1,
       "social_mentions": null,
       "social_signal_status": "not_collected",
       "positive_count": 0,
-      "neutral_count": 3,
+      "neutral_count": 4,
       "negative_count": 1,
-      "risk_score": 23,
-      "dominant_narrative": "árverseny",
+      "risk_score": 37,
       "dominant_event_type": "general",
-      "narratives": {
-        "reputációs kockázat": 1,
-        "árverseny": 2,
-        "általános": 1
-      },
+      "dominant_business_impact": "general",
+      "dominant_business_impact_label": "Általános hatás",
+      "dominant_strategic_narrative": "general",
+      "dominant_strategic_narrative_label": "Általános",
       "event_types": {
+        "workforce": 1,
         "regulatory": 1,
         "general": 2,
         "promotion": 1
       },
+      "business_impacts": {
+        "workforce": 1,
+        "regulation": 1,
+        "general": 2,
+        "revenue": 1
+      },
+      "strategic_narratives": {
+        "workforce": 1,
+        "regulation": 1,
+        "general": 2,
+        "competition": 1
+      },
       "source_confidence": "medium",
       "articles": [
+        {
+          "id": "a82ba5805ae4cf3f",
+          "company_id": "lidl",
+          "company": "Lidl",
+          "title": "Kasszás Erzsi helyét átveszi az AI – a sorban állás csökkentésére hoz innovációt a Lidl - Világgazdaság",
+          "summary": "Kasszás Erzsi helyét átveszi az AI – a sorban állás csökkentésére hoz innovációt a Lidl Világgazdaság",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNTDVBM0lSVXlwUnk0RHNDUTVCS2JGdHJHYWpVSVpRcDJXT2hwaTBYazBfSkluQnd0UDJPNDZPekYyLUZQOEdnSWItTGctWG5Pb3BYcUhLNC1JZ2txbnk1NjlWVkhwQjRrX1EwWFBPaU9FN0dWTXJUdld4R2NlTEFCS1BsUEZvandxd1Y2NEtrZ3puYmhaSFVLM3BURV9KVVBQc202S21DY2U?oc=5",
+          "source": "Világgazdaság",
+          "source_weight": 4,
+          "published_at": "2026-06-08",
+          "sentiment": "neutral",
+          "event_type": "workforce",
+          "business_impact": "workforce",
+          "business_impact_label": "Munkaerő hatás",
+          "strategic_narrative": "workforce",
+          "strategic_narrative_label": "Munkaerő",
+          "impact": "medium",
+          "article_risk_score": 14,
+          "query": "Lidl munkaerő bér állás Magyarország"
+        },
         {
           "id": "719196c83169e9cd",
           "company_id": "lidl",
@@ -43,11 +75,12 @@
           "published_at": "2026-06-06",
           "sentiment": "negative",
           "event_type": "regulatory",
-          "impact": "high",
-          "article_risk_score": 73,
-          "narratives": [
-            "reputációs kockázat"
-          ],
+          "business_impact": "regulation",
+          "business_impact_label": "Szabályozási hatás",
+          "strategic_narrative": "regulation",
+          "strategic_narrative_label": "Szabályozás",
+          "impact": "critical",
+          "article_risk_score": 100,
           "query": "Lidl áruház Magyarország"
         },
         {
@@ -62,11 +95,12 @@
           "published_at": "2026-06-04",
           "sentiment": "neutral",
           "event_type": "general",
+          "business_impact": "general",
+          "business_impact_label": "Általános hatás",
+          "strategic_narrative": "general",
+          "strategic_narrative_label": "Általános",
           "impact": "low",
           "article_risk_score": 6,
-          "narratives": [
-            "árverseny"
-          ],
           "query": "Lidl áruház Magyarország"
         },
         {
@@ -81,11 +115,12 @@
           "published_at": "2026-06-01",
           "sentiment": "neutral",
           "event_type": "general",
+          "business_impact": "general",
+          "business_impact_label": "Általános hatás",
+          "strategic_narrative": "general",
+          "strategic_narrative_label": "Általános",
           "impact": "medium",
-          "article_risk_score": 8,
-          "narratives": [
-            "általános"
-          ],
+          "article_risk_score": 14,
           "query": "Lidl élelmiszer kiskereskedelem Magyarország"
         },
         {
@@ -100,11 +135,12 @@
           "published_at": "2026-05-20",
           "sentiment": "neutral",
           "event_type": "promotion",
+          "business_impact": "revenue",
+          "business_impact_label": "Bevételi hatás",
+          "strategic_narrative": "competition",
+          "strategic_narrative_label": "Piaci verseny",
           "impact": "low",
           "article_risk_score": 4,
-          "narratives": [
-            "árverseny"
-          ],
           "query": "Lidl akció árak Magyarország"
         }
       ]
@@ -113,28 +149,57 @@
       "id": "aldi",
       "company": "ALDI",
       "snapshot_date": "2026-06-08",
-      "news_count_7d": 0,
-      "news_count_30d": 3,
-      "media_impact_score": 10,
+      "news_count_7d": 1,
+      "news_count_30d": 5,
+      "media_impact_score": 15,
       "high_impact_count": 1,
+      "critical_impact_count": 1,
       "social_mentions": null,
       "social_signal_status": "not_collected",
       "positive_count": 0,
-      "neutral_count": 2,
+      "neutral_count": 4,
       "negative_count": 1,
-      "risk_score": 13,
-      "dominant_narrative": "általános",
-      "dominant_event_type": "general",
-      "narratives": {
-        "árverseny": 1,
-        "általános": 2
-      },
+      "risk_score": 27,
+      "dominant_event_type": "promotion",
+      "dominant_business_impact": "general",
+      "dominant_business_impact_label": "Általános hatás",
+      "dominant_strategic_narrative": "competition",
+      "dominant_strategic_narrative_label": "Piaci verseny",
       "event_types": {
-        "promotion": 1,
+        "promotion": 3,
         "general": 2
+      },
+      "business_impacts": {
+        "revenue": 2,
+        "general": 3
+      },
+      "strategic_narratives": {
+        "competition": 3,
+        "defensive": 1,
+        "general": 1
       },
       "source_confidence": "medium",
       "articles": [
+        {
+          "id": "c888dfcc0eb13e00",
+          "company_id": "aldi",
+          "company": "ALDI",
+          "title": "Élen az árversenyben, élen az innovációban - Trade magazin",
+          "summary": "Élen az árversenyben, élen az innovációban Trade magazin",
+          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE0yV1FRdUJIcGtKT01kZ20tbVhYaTN5VXJ3RzFTWmJYeWI5VjZVMEc4ZS1FczQtU0psVmNMZzNfLWdILUgtTHFlV0E1QWw3Q0FNX1BOODlMM0hRa0ozR0QzcHVLYndrSjhaMVFkZkZUaDdrYWthN0RTLQ?oc=5",
+          "source": "Trade magazin",
+          "source_weight": 4,
+          "published_at": "2026-06-04",
+          "sentiment": "neutral",
+          "event_type": "promotion",
+          "business_impact": "revenue",
+          "business_impact_label": "Bevételi hatás",
+          "strategic_narrative": "competition",
+          "strategic_narrative_label": "Piaci verseny",
+          "impact": "medium",
+          "article_risk_score": 14,
+          "query": "ALDI akció árak Magyarország"
+        },
         {
           "id": "8625770f092ce451",
           "company_id": "aldi",
@@ -147,11 +212,32 @@
           "published_at": "2026-05-26",
           "sentiment": "neutral",
           "event_type": "promotion",
+          "business_impact": "revenue",
+          "business_impact_label": "Bevételi hatás",
+          "strategic_narrative": "competition",
+          "strategic_narrative_label": "Piaci verseny",
           "impact": "low",
           "article_risk_score": 6,
-          "narratives": [
-            "árverseny"
-          ],
+          "query": "ALDI akció árak Magyarország"
+        },
+        {
+          "id": "677ae63f09e13285",
+          "company_id": "aldi",
+          "company": "ALDI",
+          "title": "Roham az Aldiba: 2 az 1-ben háztartási gép érkezik, csütörtöktől 37 százalékkal olcsóbban adják - Startlap",
+          "summary": "Roham az Aldiba: 2 az 1-ben háztartási gép érkezik, csütörtöktől 37 százalékkal olcsóbban adják Startlap",
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE14RXhtR3BaLVpwdzNTb3hlSjFUdHFzaUVkWmpsTGhHYjBiMUJjdW4wYVo1SnBabDFSUUc2bzNwMktPOUZYdVdEajJQYmw0S2lVR2JTVGRfTGRPR0VvSWpIQndGeW9KYkhZY2VN?oc=5",
+          "source": "Startlap",
+          "source_weight": 1,
+          "published_at": "2026-05-24",
+          "sentiment": "neutral",
+          "event_type": "promotion",
+          "business_impact": "general",
+          "business_impact_label": "Általános hatás",
+          "strategic_narrative": "competition",
+          "strategic_narrative_label": "Piaci verseny",
+          "impact": "low",
+          "article_risk_score": 2,
           "query": "ALDI akció árak Magyarország"
         },
         {
@@ -166,11 +252,12 @@
           "published_at": "2026-05-20",
           "sentiment": "negative",
           "event_type": "general",
-          "impact": "high",
-          "article_risk_score": 30,
-          "narratives": [
-            "általános"
-          ],
+          "business_impact": "general",
+          "business_impact_label": "Általános hatás",
+          "strategic_narrative": "defensive",
+          "strategic_narrative_label": "Védekezés",
+          "impact": "critical",
+          "article_risk_score": 66,
           "query": "ALDI élelmiszer kiskereskedelem Magyarország"
         },
         {
@@ -185,11 +272,12 @@
           "published_at": "2026-05-20",
           "sentiment": "neutral",
           "event_type": "general",
+          "business_impact": "general",
+          "business_impact_label": "Általános hatás",
+          "strategic_narrative": "general",
+          "strategic_narrative_label": "Általános",
           "impact": "low",
           "article_risk_score": 4,
-          "narratives": [
-            "általános"
-          ],
           "query": "ALDI áruház Magyarország"
         }
       ]
@@ -199,26 +287,36 @@
       "company": "SPAR",
       "snapshot_date": "2026-06-08",
       "news_count_7d": 2,
-      "news_count_30d": 8,
-      "media_impact_score": 26,
+      "news_count_30d": 7,
+      "media_impact_score": 23,
       "high_impact_count": 0,
+      "critical_impact_count": 0,
       "social_mentions": null,
       "social_signal_status": "not_collected",
-      "positive_count": 2,
+      "positive_count": 1,
       "neutral_count": 6,
       "negative_count": 0,
-      "risk_score": 6,
-      "dominant_narrative": "általános",
+      "risk_score": 10,
       "dominant_event_type": "general",
-      "narratives": {
-        "általános": 4,
-        "terjeszkedés": 1,
-        "árverseny": 3
-      },
+      "dominant_business_impact": "general",
+      "dominant_business_impact_label": "Általános hatás",
+      "dominant_strategic_narrative": "general",
+      "dominant_strategic_narrative_label": "Általános",
       "event_types": {
-        "general": 4,
+        "general": 2,
+        "expansion": 1,
         "financial": 2,
         "promotion": 2
+      },
+      "business_impacts": {
+        "general": 4,
+        "expansion": 1,
+        "revenue": 2
+      },
+      "strategic_narratives": {
+        "general": 4,
+        "growth": 1,
+        "competition": 2
       },
       "source_confidence": "medium",
       "articles": [
@@ -234,11 +332,12 @@
           "published_at": "2026-06-04",
           "sentiment": "positive",
           "event_type": "general",
+          "business_impact": "general",
+          "business_impact_label": "Általános hatás",
+          "strategic_narrative": "general",
+          "strategic_narrative_label": "Általános",
           "impact": "low",
           "article_risk_score": 6,
-          "narratives": [
-            "általános"
-          ],
           "query": "SPAR áruház Magyarország"
         },
         {
@@ -252,12 +351,13 @@
           "source_weight": 4,
           "published_at": "2026-06-02",
           "sentiment": "neutral",
-          "event_type": "financial",
+          "event_type": "expansion",
+          "business_impact": "expansion",
+          "business_impact_label": "Terjeszkedési hatás",
+          "strategic_narrative": "growth",
+          "strategic_narrative_label": "Növekedés",
           "impact": "medium",
-          "article_risk_score": 8,
-          "narratives": [
-            "terjeszkedés"
-          ],
+          "article_risk_score": 14,
           "query": "SPAR áruház Magyarország"
         },
         {
@@ -272,11 +372,12 @@
           "published_at": "2026-06-01",
           "sentiment": "neutral",
           "event_type": "financial",
+          "business_impact": "general",
+          "business_impact_label": "Általános hatás",
+          "strategic_narrative": "general",
+          "strategic_narrative_label": "Általános",
           "impact": "medium",
-          "article_risk_score": 8,
-          "narratives": [
-            "általános"
-          ],
+          "article_risk_score": 14,
           "query": "SPAR áruház Magyarország"
         },
         {
@@ -290,31 +391,13 @@
           "source_weight": 4,
           "published_at": "2026-06-01",
           "sentiment": "neutral",
-          "event_type": "general",
+          "event_type": "financial",
+          "business_impact": "general",
+          "business_impact_label": "Általános hatás",
+          "strategic_narrative": "general",
+          "strategic_narrative_label": "Általános",
           "impact": "medium",
-          "article_risk_score": 8,
-          "narratives": [
-            "árverseny"
-          ],
-          "query": "SPAR áruház Magyarország"
-        },
-        {
-          "id": "b630d51cd530c6c4",
-          "company_id": "spar",
-          "company": "SPAR",
-          "title": "Szakmai díjakat nyert a SPAR - Store Insider",
-          "summary": "Szakmai díjakat nyert a SPAR Store Insider",
-          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFA0cGhCSGRueGU1ZkpYV1FWUF9sUzRqVkQtQWNkaXZueDM3elNscHNFVExNSGZ2N3NtN3prSTdkUFc5V1M4X1U1WURhS0JiaXRQLUVGRk9mM0xUWE4wWTY5OHBoRGJacTNu?oc=5",
-          "source": "Store Insider",
-          "source_weight": 3,
-          "published_at": "2026-05-29",
-          "sentiment": "positive",
-          "event_type": "general",
-          "impact": "low",
-          "article_risk_score": 6,
-          "narratives": [
-            "általános"
-          ],
+          "article_risk_score": 14,
           "query": "SPAR áruház Magyarország"
         },
         {
@@ -329,11 +412,12 @@
           "published_at": "2026-05-28",
           "sentiment": "neutral",
           "event_type": "promotion",
+          "business_impact": "revenue",
+          "business_impact_label": "Bevételi hatás",
+          "strategic_narrative": "competition",
+          "strategic_narrative_label": "Piaci verseny",
           "impact": "low",
           "article_risk_score": 4,
-          "narratives": [
-            "árverseny"
-          ],
           "query": "SPAR akció árak Magyarország"
         },
         {
@@ -348,11 +432,12 @@
           "published_at": "2026-05-26",
           "sentiment": "neutral",
           "event_type": "general",
+          "business_impact": "general",
+          "business_impact_label": "Általános hatás",
+          "strategic_narrative": "general",
+          "strategic_narrative_label": "Általános",
           "impact": "medium",
-          "article_risk_score": 8,
-          "narratives": [
-            "általános"
-          ],
+          "article_risk_score": 14,
           "query": "SPAR élelmiszer kiskereskedelem Magyarország"
         },
         {
@@ -367,11 +452,12 @@
           "published_at": "2026-05-15",
           "sentiment": "neutral",
           "event_type": "promotion",
+          "business_impact": "revenue",
+          "business_impact_label": "Bevételi hatás",
+          "strategic_narrative": "competition",
+          "strategic_narrative_label": "Piaci verseny",
           "impact": "low",
           "article_risk_score": 4,
-          "narratives": [
-            "árverseny"
-          ],
           "query": "SPAR akció árak Magyarország"
         }
       ]
@@ -383,22 +469,30 @@
       "news_count_7d": 0,
       "news_count_30d": 2,
       "media_impact_score": 7,
-      "high_impact_count": 0,
+      "high_impact_count": 1,
+      "critical_impact_count": 0,
       "social_mentions": null,
       "social_signal_status": "not_collected",
       "positive_count": 1,
       "neutral_count": 1,
       "negative_count": 0,
-      "risk_score": 7,
-      "dominant_narrative": "általános",
+      "risk_score": 18,
       "dominant_event_type": "expansion",
-      "narratives": {
-        "általános": 1,
-        "munkaerő": 1
-      },
+      "dominant_business_impact": "expansion",
+      "dominant_business_impact_label": "Terjeszkedési hatás",
+      "dominant_strategic_narrative": "growth",
+      "dominant_strategic_narrative_label": "Növekedés",
       "event_types": {
         "expansion": 1,
-        "financial": 1
+        "workforce": 1
+      },
+      "business_impacts": {
+        "expansion": 1,
+        "workforce": 1
+      },
+      "strategic_narratives": {
+        "growth": 1,
+        "workforce": 1
       },
       "source_confidence": "medium",
       "articles": [
@@ -414,11 +508,12 @@
           "published_at": "2026-05-21",
           "sentiment": "neutral",
           "event_type": "expansion",
-          "impact": "medium",
-          "article_risk_score": 10,
-          "narratives": [
-            "általános"
-          ],
+          "business_impact": "expansion",
+          "business_impact_label": "Terjeszkedési hatás",
+          "strategic_narrative": "growth",
+          "strategic_narrative_label": "Növekedés",
+          "impact": "high",
+          "article_risk_score": 22,
           "query": "Tesco élelmiszer kiskereskedelem Magyarország"
         },
         {
@@ -432,12 +527,13 @@
           "source_weight": 2,
           "published_at": "2026-05-11",
           "sentiment": "positive",
-          "event_type": "financial",
-          "impact": "medium",
+          "event_type": "workforce",
+          "business_impact": "workforce",
+          "business_impact_label": "Munkaerő hatás",
+          "strategic_narrative": "workforce",
+          "strategic_narrative_label": "Munkaerő",
+          "impact": "low",
           "article_risk_score": 4,
-          "narratives": [
-            "munkaerő"
-          ],
           "query": "Tesco munkaerő bér állás Magyarország"
         }
       ]
@@ -449,22 +545,30 @@
       "news_count_7d": 2,
       "news_count_30d": 4,
       "media_impact_score": 15,
-      "high_impact_count": 0,
+      "high_impact_count": 1,
+      "critical_impact_count": 1,
       "social_mentions": null,
       "social_signal_status": "not_collected",
       "positive_count": 0,
       "neutral_count": 3,
       "negative_count": 1,
-      "risk_score": 12,
-      "dominant_narrative": "általános",
+      "risk_score": 38,
       "dominant_event_type": "general",
-      "narratives": {
-        "általános": 3,
-        "árverseny": 1
-      },
+      "dominant_business_impact": "general",
+      "dominant_business_impact_label": "Általános hatás",
+      "dominant_strategic_narrative": "general",
+      "dominant_strategic_narrative_label": "Általános",
       "event_types": {
         "general": 3,
         "financial": 1
+      },
+      "business_impacts": {
+        "general": 3,
+        "cost": 1
+      },
+      "strategic_narratives": {
+        "general": 3,
+        "defensive": 1
       },
       "source_confidence": "medium",
       "articles": [
@@ -480,11 +584,12 @@
           "published_at": "2026-06-06",
           "sentiment": "neutral",
           "event_type": "general",
+          "business_impact": "general",
+          "business_impact_label": "Általános hatás",
+          "strategic_narrative": "general",
+          "strategic_narrative_label": "Általános",
           "impact": "medium",
-          "article_risk_score": 10,
-          "narratives": [
-            "általános"
-          ],
+          "article_risk_score": 16,
           "query": "PENNY élelmiszer kiskereskedelem Magyarország"
         },
         {
@@ -499,11 +604,12 @@
           "published_at": "2026-06-05",
           "sentiment": "neutral",
           "event_type": "general",
+          "business_impact": "general",
+          "business_impact_label": "Általános hatás",
+          "strategic_narrative": "general",
+          "strategic_narrative_label": "Általános",
           "impact": "low",
           "article_risk_score": 6,
-          "narratives": [
-            "általános"
-          ],
           "query": "PENNY áruház Magyarország"
         },
         {
@@ -518,11 +624,12 @@
           "published_at": "2026-06-01",
           "sentiment": "neutral",
           "event_type": "general",
+          "business_impact": "general",
+          "business_impact_label": "Általános hatás",
+          "strategic_narrative": "general",
+          "strategic_narrative_label": "Általános",
           "impact": "medium",
-          "article_risk_score": 10,
-          "narratives": [
-            "árverseny"
-          ],
+          "article_risk_score": 16,
           "query": "PENNY élelmiszer kiskereskedelem Magyarország"
         },
         {
@@ -537,11 +644,12 @@
           "published_at": "2026-06-01",
           "sentiment": "negative",
           "event_type": "financial",
-          "impact": "medium",
-          "article_risk_score": 24,
-          "narratives": [
-            "általános"
-          ],
+          "business_impact": "cost",
+          "business_impact_label": "Költséghatás",
+          "strategic_narrative": "defensive",
+          "strategic_narrative_label": "Védekezés",
+          "impact": "critical",
+          "article_risk_score": 78,
           "query": "PENNY élelmiszer kiskereskedelem Magyarország"
         }
       ]
@@ -554,19 +662,26 @@
       "news_count_30d": 1,
       "media_impact_score": 3,
       "high_impact_count": 0,
+      "critical_impact_count": 0,
       "social_mentions": null,
       "social_signal_status": "not_collected",
       "positive_count": 1,
       "neutral_count": 0,
       "negative_count": 0,
-      "risk_score": 6,
-      "dominant_narrative": "beszállítók",
+      "risk_score": 12,
       "dominant_event_type": "supplier",
-      "narratives": {
-        "beszállítók": 1
-      },
+      "dominant_business_impact": "supply_chain",
+      "dominant_business_impact_label": "Ellátási lánc hatás",
+      "dominant_strategic_narrative": "supply_chain",
+      "dominant_strategic_narrative_label": "Ellátási lánc",
       "event_types": {
         "supplier": 1
+      },
+      "business_impacts": {
+        "supply_chain": 1
+      },
+      "strategic_narratives": {
+        "supply_chain": 1
       },
       "source_confidence": "medium",
       "articles": [
@@ -582,11 +697,12 @@
           "published_at": "2026-05-26",
           "sentiment": "positive",
           "event_type": "supplier",
+          "business_impact": "supply_chain",
+          "business_impact_label": "Ellátási lánc hatás",
+          "strategic_narrative": "supply_chain",
+          "strategic_narrative_label": "Ellátási lánc",
           "impact": "medium",
-          "article_risk_score": 6,
-          "narratives": [
-            "beszállítók"
-          ],
+          "article_risk_score": 12,
           "query": "Auchan élelmiszer kiskereskedelem Magyarország"
         }
       ]
@@ -596,71 +712,78 @@
       "company": "COOP",
       "snapshot_date": "2026-06-08",
       "news_count_7d": 0,
-      "news_count_30d": 1,
-      "media_impact_score": 2,
+      "news_count_30d": 0,
+      "media_impact_score": 0,
       "high_impact_count": 0,
+      "critical_impact_count": 0,
       "social_mentions": null,
       "social_signal_status": "not_collected",
       "positive_count": 0,
-      "neutral_count": 1,
+      "neutral_count": 0,
       "negative_count": 0,
-      "risk_score": 4,
-      "dominant_narrative": "általános",
-      "dominant_event_type": "expansion",
-      "narratives": {
-        "általános": 1
-      },
-      "event_types": {
-        "expansion": 1
-      },
-      "source_confidence": "medium",
-      "articles": [
-        {
-          "id": "31987b9bcff79736",
-          "company_id": "coop",
-          "company": "COOP",
-          "title": "Újra kinyitott Bélapátfalva legnagyobb élelmiszerüzlete - HEOL",
-          "summary": "Újra kinyitott Bélapátfalva legnagyobb élelmiszerüzlete HEOL",
-          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5PNktYVWhKSmduMHJhYTBWZG1qVXpxbWd0djN3QUs2bEZZa0V2RHc4VnJ6bHdCQTg0bWdEWXk5NXdpWGh4N2lta1lDT285LUxidHEyOS01WVUwOW9tUF9mcXpLQ1FaTE94Mk5fNUNnRjJCQQ?oc=5",
-          "source": "HEOL",
-          "source_weight": 2,
-          "published_at": "2026-05-15",
-          "sentiment": "neutral",
-          "event_type": "expansion",
-          "impact": "low",
-          "article_risk_score": 4,
-          "narratives": [
-            "általános"
-          ],
-          "query": "COOP áruház Magyarország"
-        }
-      ]
+      "risk_score": 0,
+      "dominant_event_type": "n.a.",
+      "dominant_business_impact": "n.a.",
+      "dominant_business_impact_label": "n.a.",
+      "dominant_strategic_narrative": "n.a.",
+      "dominant_strategic_narrative_label": "n.a.",
+      "event_types": {},
+      "business_impacts": {},
+      "strategic_narratives": {},
+      "source_confidence": "low",
+      "articles": []
     },
     {
       "id": "cba",
       "company": "CBA",
       "snapshot_date": "2026-06-08",
-      "news_count_7d": 0,
-      "news_count_30d": 4,
-      "media_impact_score": 15,
+      "news_count_7d": 1,
+      "news_count_30d": 5,
+      "media_impact_score": 21,
       "high_impact_count": 0,
+      "critical_impact_count": 0,
       "social_mentions": null,
       "social_signal_status": "not_collected",
       "positive_count": 0,
       "neutral_count": 4,
-      "negative_count": 0,
-      "risk_score": 8,
-      "dominant_narrative": "árverseny",
+      "negative_count": 1,
+      "risk_score": 22,
       "dominant_event_type": "general",
-      "narratives": {
-        "árverseny": 2,
-        "általános": 2
-      },
+      "dominant_business_impact": "general",
+      "dominant_business_impact_label": "Általános hatás",
+      "dominant_strategic_narrative": "general",
+      "dominant_strategic_narrative_label": "Általános",
       "event_types": {
-        "general": 4
+        "general": 5
+      },
+      "business_impacts": {
+        "general": 5
+      },
+      "strategic_narratives": {
+        "general": 5
       },
       "source_confidence": "medium",
       "articles": [
+        {
+          "id": "9d86772532a4b018",
+          "company_id": "cba",
+          "company": "CBA",
+          "title": "Gazdaság: A Lidltől a Tescóig: választottak a magyarok, szétszóródtak a boltláncok - | hvg.hu",
+          "summary": "Gazdaság: A Lidltől a Tescóig: választottak a magyarok, szétszóródtak a boltláncok | hvg.hu",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNaURHcWFzTXdreXZvd3BJRFdUVkhWN3ZmVDdSeFJVNGJVbDZzaXhEekhzRGxXQUc5M2xocVhZa1Ixa25yY2M2YVYtZXJQMUlYdGQxNVJXZGdRMlhvN2NrMFZNakp1RHNmV3phVVVyZ3NtcVZnT0x5Y1cyVEJaazhhUkNpR0pFb2N4TjJnQWVXbW0?oc=5",
+          "source": "| hvg.hu",
+          "source_weight": 5,
+          "published_at": "2026-06-06",
+          "sentiment": "neutral",
+          "event_type": "general",
+          "business_impact": "general",
+          "business_impact_label": "Általános hatás",
+          "strategic_narrative": "general",
+          "strategic_narrative_label": "Általános",
+          "impact": "medium",
+          "article_risk_score": 16,
+          "query": "CBA élelmiszer kiskereskedelem Magyarország"
+        },
         {
           "id": "ad4208220d9e3860",
           "company_id": "cba",
@@ -673,12 +796,13 @@
           "published_at": "2026-06-01",
           "sentiment": "neutral",
           "event_type": "general",
+          "business_impact": "general",
+          "business_impact_label": "Általános hatás",
+          "strategic_narrative": "general",
+          "strategic_narrative_label": "Általános",
           "impact": "medium",
-          "article_risk_score": 10,
-          "narratives": [
-            "árverseny"
-          ],
-          "query": "CBA áruház Magyarország"
+          "article_risk_score": 16,
+          "query": "CBA élelmiszer kiskereskedelem Magyarország"
         },
         {
           "id": "a15685cdc96cc1d5",
@@ -692,11 +816,12 @@
           "published_at": "2026-06-01",
           "sentiment": "neutral",
           "event_type": "general",
+          "business_impact": "general",
+          "business_impact_label": "Általános hatás",
+          "strategic_narrative": "general",
+          "strategic_narrative_label": "Általános",
           "impact": "medium",
-          "article_risk_score": 8,
-          "narratives": [
-            "általános"
-          ],
+          "article_risk_score": 14,
           "query": "CBA áruház Magyarország"
         },
         {
@@ -711,36 +836,44 @@
           "published_at": "2026-06-01",
           "sentiment": "neutral",
           "event_type": "general",
+          "business_impact": "general",
+          "business_impact_label": "Általános hatás",
+          "strategic_narrative": "general",
+          "strategic_narrative_label": "Általános",
           "impact": "medium",
-          "article_risk_score": 8,
-          "narratives": [
-            "általános"
-          ],
+          "article_risk_score": 14,
           "query": "CBA élelmiszer kiskereskedelem Magyarország"
         },
         {
-          "id": "294d4239b9ec2bb4",
+          "id": "adbc62cf441154eb",
           "company_id": "cba",
           "company": "CBA",
-          "title": "Kiderült, melyik boltban vásárol a legtöbb magyar - ORIGO",
-          "summary": "Kiderült, melyik boltban vásárol a legtöbb magyar ORIGO",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBwRHFORXViSWVSZ2pCaEw2OXJKTXo5UmpQU0gzcS11VjZ3MTFuVE9rVDZxUGtkT185aklkUHN5OEx4UXN0ZVFfSmRQUE1FSGZYem5hcVZfSUpTYlVVRVM2M2h3VV9BYkFZT25ZSFBrWXFIdVJTLXBIaHlXclZrY0U?oc=5",
-          "source": "ORIGO",
-          "source_weight": 2,
+          "title": "Nem várt fordulat a hazai kiskereskedelemben: feltört a CBA, visszaszorult a Tesco - 24.hu",
+          "summary": "Nem várt fordulat a hazai kiskereskedelemben: feltört a CBA, visszaszorult a Tesco 24.hu",
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPdUJlUUVrMUZXeDd4M2pHN1d5cmI4c0lHTE01Umc1eE0wLVh5eHlHSmhnRG1hRmhGV3lIREFRSkJIalJJek1RRndfTDVrRUdrdWlQbHhWNnZ0a2lKaFhNeW5uZkdETlN2XzkyZjNuNFoxTUxBY0M5S3JWcHQxeHI3VFNKbkNRUQ?oc=5",
+          "source": "24.hu",
+          "source_weight": 3,
           "published_at": "2026-06-01",
-          "sentiment": "neutral",
+          "sentiment": "negative",
           "event_type": "general",
-          "impact": "low",
-          "article_risk_score": 4,
-          "narratives": [
-            "árverseny"
-          ],
-          "query": "CBA áruház Magyarország"
+          "business_impact": "general",
+          "business_impact_label": "Általános hatás",
+          "strategic_narrative": "general",
+          "strategic_narrative_label": "Általános",
+          "impact": "medium",
+          "article_risk_score": 32,
+          "query": "CBA élelmiszer kiskereskedelem Magyarország"
         }
       ]
     }
   ],
-  "weekly_insight": "Az elmúlt 30 nap nyilvános hírforrásai alapján a legtöbb azonosított megjelenés SPAR körül látható, 8 cikkel. A legnagyobb médiahatás-pontszámot SPAR érte el, 26 ponttal, amely már a forrásminőséget is figyelembe veszi. A legmagasabb reputációs kockázati jelzés Lidl esetében jelent meg, 23/100 értékkel. A legtöbb pozitív jellegű említés SPAR oldalán látható. A social media adatgyűjtés ebben a verzióban még nem aktív, ezért a social signal külön fejlesztési körben kezelendő.",
+  "weekly_insight": "Az elmúlt 30 nap nyilvános hírforrásai alapján a legtöbb azonosított megjelenés SPAR körül látható, 7 cikkel. A legnagyobb médiahatás-pontszámot SPAR érte el, 23 ponttal. A legmagasabb reputációs kockázati jelzés PENNY esetében jelent meg, 38/100 értékkel. A legtöbb magas hatású esemény Lidl körül azonosítható. A social media adatgyűjtés ebben a verzióban még nem aktív.",
+  "executive_intelligence": {
+    "market_situation": "Az elmúlt 30 nap médiaképe alapján a legerősebb üzleti hatás 'Általános hatás' kategóriában jelent meg. A stratégiai narratívák közül a 'Általános' dominált. A legnagyobb médiahatás-pontszámot SPAR érte el 23 ponttal.",
+    "main_risk": "A legmagasabb reputációs és üzleti kockázati jelzés PENNY esetében látható, 38/100 értékkel. A kockázati pontszám a negatív, szabályozási, reputációs és költséghatású híreket súlyozza.",
+    "main_event": "A legnagyobb számú magas hatású esemény Lidl körül jelent meg (1 darab). Ezek a hírek nagyobb üzleti vagy reputációs figyelmet indokolnak, mint az egyszerű promóciós megjelenések.",
+    "expected_trend": "A következő hetekben várhatóan a 'Általános' és 'Általános hatás' témák maradhatnak meghatározók. A social media adatgyűjtés továbbra sem aktív, ezért a társadalmi visszhangot külön fejlesztési körben kell kezelni."
+  },
   "top_events": [
     {
       "id": "719196c83169e9cd",
@@ -754,31 +887,13 @@
       "published_at": "2026-06-06",
       "sentiment": "negative",
       "event_type": "regulatory",
-      "impact": "high",
-      "article_risk_score": 73,
-      "narratives": [
-        "reputációs kockázat"
-      ],
+      "business_impact": "regulation",
+      "business_impact_label": "Szabályozási hatás",
+      "strategic_narrative": "regulation",
+      "strategic_narrative_label": "Szabályozás",
+      "impact": "critical",
+      "article_risk_score": 100,
       "query": "Lidl áruház Magyarország"
-    },
-    {
-      "id": "66605b440458634f",
-      "company_id": "aldi",
-      "company": "ALDI",
-      "title": "Eltűnik több termék az Aldi-üzletekből - Ezeket hamarosan hiába keresed - Portfolio.hu",
-      "summary": "Eltűnik több termék az Aldi-üzletekből - Ezeket hamarosan hiába keresed Portfolio.hu",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOMGJodV9qZE1aeEJTWkdiSjJuWTJoY3d2Ny1HdGtGMGdrTzl2T2d4LUR0cENCeUpkMnF1ampDcFdUTmhpQ2dUbERDYUNvMUFLTUM5ZFNzQkJ4UGllLVd2YXBLcC1VdW5fZWZWa2QtZHIyRjZHOWNhTUkxYTVEOXo2SHpMXzh1SDRPR19PNzJTRUFTalBXTkFZS2FUUTIwSEFFTXQ5YVlRRHp6eTlWdWJUSVdXZW1YQWd4WVNz0gHAAUFVX3lxTE1rM3ZsbGtIa3gwTkthM0k5ZlZIbEFaQXdvcjJrTlBkTUZ1N1c5WXBST1Y5VG9oU0FvWlNMa2c3bEFtNUo5dDRvSnd5X0lndVRoS3kybVUwZU9LaGFrV1RiZGdPdjVRbWg3MkR6XzFEU004RnFGUDFIcHVUU3ZRVFJpWmJuYlE5YS1GdUZrUlpMY01WenpfOUpqQUpGSW5oclZfSGxzNjZkUDc3QlBuNGhsOVFVNFJVTHJVUlg5ZTZNRw?oc=5",
-      "source": "Portfolio.hu",
-      "source_weight": 5,
-      "published_at": "2026-05-20",
-      "sentiment": "negative",
-      "event_type": "general",
-      "impact": "high",
-      "article_risk_score": 30,
-      "narratives": [
-        "általános"
-      ],
-      "query": "ALDI élelmiszer kiskereskedelem Magyarország"
     },
     {
       "id": "140c22e4b1fce897",
@@ -792,12 +907,73 @@
       "published_at": "2026-06-01",
       "sentiment": "negative",
       "event_type": "financial",
-      "impact": "medium",
-      "article_risk_score": 24,
-      "narratives": [
-        "általános"
-      ],
+      "business_impact": "cost",
+      "business_impact_label": "Költséghatás",
+      "strategic_narrative": "defensive",
+      "strategic_narrative_label": "Védekezés",
+      "impact": "critical",
+      "article_risk_score": 78,
       "query": "PENNY élelmiszer kiskereskedelem Magyarország"
+    },
+    {
+      "id": "66605b440458634f",
+      "company_id": "aldi",
+      "company": "ALDI",
+      "title": "Eltűnik több termék az Aldi-üzletekből - Ezeket hamarosan hiába keresed - Portfolio.hu",
+      "summary": "Eltűnik több termék az Aldi-üzletekből - Ezeket hamarosan hiába keresed Portfolio.hu",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOMGJodV9qZE1aeEJTWkdiSjJuWTJoY3d2Ny1HdGtGMGdrTzl2T2d4LUR0cENCeUpkMnF1ampDcFdUTmhpQ2dUbERDYUNvMUFLTUM5ZFNzQkJ4UGllLVd2YXBLcC1VdW5fZWZWa2QtZHIyRjZHOWNhTUkxYTVEOXo2SHpMXzh1SDRPR19PNzJTRUFTalBXTkFZS2FUUTIwSEFFTXQ5YVlRRHp6eTlWdWJUSVdXZW1YQWd4WVNz0gHAAUFVX3lxTE1rM3ZsbGtIa3gwTkthM0k5ZlZIbEFaQXdvcjJrTlBkTUZ1N1c5WXBST1Y5VG9oU0FvWlNMa2c3bEFtNUo5dDRvSnd5X0lndVRoS3kybVUwZU9LaGFrV1RiZGdPdjVRbWg3MkR6XzFEU004RnFGUDFIcHVUU3ZRVFJpWmJuYlE5YS1GdUZrUlpMY01WenpfOUpqQUpGSW5oclZfSGxzNjZkUDc3QlBuNGhsOVFVNFJVTHJVUlg5ZTZNRw?oc=5",
+      "source": "Portfolio.hu",
+      "source_weight": 5,
+      "published_at": "2026-05-20",
+      "sentiment": "negative",
+      "event_type": "general",
+      "business_impact": "general",
+      "business_impact_label": "Általános hatás",
+      "strategic_narrative": "defensive",
+      "strategic_narrative_label": "Védekezés",
+      "impact": "critical",
+      "article_risk_score": 66,
+      "query": "ALDI élelmiszer kiskereskedelem Magyarország"
+    },
+    {
+      "id": "27b789a428903892",
+      "company_id": "tesco",
+      "company": "Tesco",
+      "title": "Olyan üzletet nyitott a Tesco, amilyen még nem volt Magyarországon - Portfolio.hu",
+      "summary": "Olyan üzletet nyitott a Tesco, amilyen még nem volt Magyarországon Portfolio.hu",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQMHpnaExEX29rTHM0bDFWSHRYOVdDTXdnaFVjMV9yNmZIblhmYlBaeHFZNTlsRGhWckl6bHB2OWtJTFJOd1ptc25lNDJmaHZOd2VCZ3M2M1hic0gwMFNLNHpUbG9vdzh4YzBFMGJJS3pmVHEzUTdWMWx5QlhKYWRrZTNHSUVIcVNDZXNONjVkdmxxMk5EMXFOandXd01FdjJuVEdYTG1jSHFvbURSa0pWbGVIZEs1d9IBuwFBVV95cUxPcXhGQmlmLTRfUUFVVFhvbUJBVHNIcGxPcXpDZE9uck5VNmVId1BZcTExMkdRdVBFV0hlcmUxMzlPZjNlMV9LUmZzSUNQYTA5dWxDekZKUWxpLWo1aU1RaHd3VlhLWFgxdW1pUjZDanZTamNKQ0w1SkFJNWZGc1lPdzNrdW5CM0oxZ1gyOEY3UERIWVBHa1k3UTUycTZhTnd3OVV0QWQwNkkwQTZ1WGtJeUtfeXpWMzN5RjJn?oc=5",
+      "source": "Portfolio.hu",
+      "source_weight": 5,
+      "published_at": "2026-05-21",
+      "sentiment": "neutral",
+      "event_type": "expansion",
+      "business_impact": "expansion",
+      "business_impact_label": "Terjeszkedési hatás",
+      "strategic_narrative": "growth",
+      "strategic_narrative_label": "Növekedés",
+      "impact": "high",
+      "article_risk_score": 22,
+      "query": "Tesco élelmiszer kiskereskedelem Magyarország"
+    },
+    {
+      "id": "adbc62cf441154eb",
+      "company_id": "cba",
+      "company": "CBA",
+      "title": "Nem várt fordulat a hazai kiskereskedelemben: feltört a CBA, visszaszorult a Tesco - 24.hu",
+      "summary": "Nem várt fordulat a hazai kiskereskedelemben: feltört a CBA, visszaszorult a Tesco 24.hu",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPdUJlUUVrMUZXeDd4M2pHN1d5cmI4c0lHTE01Umc1eE0wLVh5eHlHSmhnRG1hRmhGV3lIREFRSkJIalJJek1RRndfTDVrRUdrdWlQbHhWNnZ0a2lKaFhNeW5uZkdETlN2XzkyZjNuNFoxTUxBY0M5S3JWcHQxeHI3VFNKbkNRUQ?oc=5",
+      "source": "24.hu",
+      "source_weight": 3,
+      "published_at": "2026-06-01",
+      "sentiment": "negative",
+      "event_type": "general",
+      "business_impact": "general",
+      "business_impact_label": "Általános hatás",
+      "strategic_narrative": "general",
+      "strategic_narrative_label": "Általános",
+      "impact": "medium",
+      "article_risk_score": 32,
+      "query": "CBA élelmiszer kiskereskedelem Magyarország"
     },
     {
       "id": "6ef6f1456265d7e7",
@@ -811,12 +987,33 @@
       "published_at": "2026-06-06",
       "sentiment": "neutral",
       "event_type": "general",
+      "business_impact": "general",
+      "business_impact_label": "Általános hatás",
+      "strategic_narrative": "general",
+      "strategic_narrative_label": "Általános",
       "impact": "medium",
-      "article_risk_score": 10,
-      "narratives": [
-        "általános"
-      ],
+      "article_risk_score": 16,
       "query": "PENNY élelmiszer kiskereskedelem Magyarország"
+    },
+    {
+      "id": "9d86772532a4b018",
+      "company_id": "cba",
+      "company": "CBA",
+      "title": "Gazdaság: A Lidltől a Tescóig: választottak a magyarok, szétszóródtak a boltláncok - | hvg.hu",
+      "summary": "Gazdaság: A Lidltől a Tescóig: választottak a magyarok, szétszóródtak a boltláncok | hvg.hu",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNaURHcWFzTXdreXZvd3BJRFdUVkhWN3ZmVDdSeFJVNGJVbDZzaXhEekhzRGxXQUc5M2xocVhZa1Ixa25yY2M2YVYtZXJQMUlYdGQxNVJXZGdRMlhvN2NrMFZNakp1RHNmV3phVVVyZ3NtcVZnT0x5Y1cyVEJaazhhUkNpR0pFb2N4TjJnQWVXbW0?oc=5",
+      "source": "| hvg.hu",
+      "source_weight": 5,
+      "published_at": "2026-06-06",
+      "sentiment": "neutral",
+      "event_type": "general",
+      "business_impact": "general",
+      "business_impact_label": "Általános hatás",
+      "strategic_narrative": "general",
+      "strategic_narrative_label": "Általános",
+      "impact": "medium",
+      "article_risk_score": 16,
+      "query": "CBA élelmiszer kiskereskedelem Magyarország"
     },
     {
       "id": "15be867eb7b113ae",
@@ -830,11 +1027,12 @@
       "published_at": "2026-06-01",
       "sentiment": "neutral",
       "event_type": "general",
+      "business_impact": "general",
+      "business_impact_label": "Általános hatás",
+      "strategic_narrative": "general",
+      "strategic_narrative_label": "Általános",
       "impact": "medium",
-      "article_risk_score": 10,
-      "narratives": [
-        "árverseny"
-      ],
+      "article_risk_score": 16,
       "query": "PENNY élelmiszer kiskereskedelem Magyarország"
     },
     {
@@ -849,89 +1047,66 @@
       "published_at": "2026-06-01",
       "sentiment": "neutral",
       "event_type": "general",
+      "business_impact": "general",
+      "business_impact_label": "Általános hatás",
+      "strategic_narrative": "general",
+      "strategic_narrative_label": "Általános",
       "impact": "medium",
-      "article_risk_score": 10,
-      "narratives": [
-        "árverseny"
-      ],
-      "query": "CBA áruház Magyarország"
+      "article_risk_score": 16,
+      "query": "CBA élelmiszer kiskereskedelem Magyarország"
     },
     {
-      "id": "27b789a428903892",
-      "company_id": "tesco",
-      "company": "Tesco",
-      "title": "Olyan üzletet nyitott a Tesco, amilyen még nem volt Magyarországon - Portfolio.hu",
-      "summary": "Olyan üzletet nyitott a Tesco, amilyen még nem volt Magyarországon Portfolio.hu",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQMHpnaExEX29rTHM0bDFWSHRYOVdDTXdnaFVjMV9yNmZIblhmYlBaeHFZNTlsRGhWckl6bHB2OWtJTFJOd1ptc25lNDJmaHZOd2VCZ3M2M1hic0gwMFNLNHpUbG9vdzh4YzBFMGJJS3pmVHEzUTdWMWx5QlhKYWRrZTNHSUVIcVNDZXNONjVkdmxxMk5EMXFOandXd01FdjJuVEdYTG1jSHFvbURSa0pWbGVIZEs1d9IBuwFBVV95cUxPcXhGQmlmLTRfUUFVVFhvbUJBVHNIcGxPcXpDZE9uck5VNmVId1BZcTExMkdRdVBFV0hlcmUxMzlPZjNlMV9LUmZzSUNQYTA5dWxDekZKUWxpLWo1aU1RaHd3VlhLWFgxdW1pUjZDanZTamNKQ0w1SkFJNWZGc1lPdzNrdW5CM0oxZ1gyOEY3UERIWVBHa1k3UTUycTZhTnd3OVV0QWQwNkkwQTZ1WGtJeUtfeXpWMzN5RjJn?oc=5",
-      "source": "Portfolio.hu",
-      "source_weight": 5,
-      "published_at": "2026-05-21",
-      "sentiment": "neutral",
-      "event_type": "expansion",
-      "impact": "medium",
-      "article_risk_score": 10,
-      "narratives": [
-        "általános"
-      ],
-      "query": "Tesco élelmiszer kiskereskedelem Magyarország"
-    },
-    {
-      "id": "ee59a1551e031804",
-      "company_id": "spar",
-      "company": "SPAR",
-      "title": "A SPAR növelné franchise hálózatát - Piac&Profit",
-      "summary": "A SPAR növelné franchise hálózatát Piac&amp;Profit",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOa3FxdGlBQXROdlhVN1VPUzRyeE9jNkhLdC1TVzdBRE1XRWJ0S3JVcy1BeFlvU1hWUjdfOWk0VzlQOGV0NEFEREpjV0ZRcWlvMmU0N09POGVmSl83MmJMX0VCS3RRTHQyN29HX2NrQmlXSE12bkFvNEtYNFFybTZrTmpFRHQ5dw?oc=5",
-      "source": "Piac&Profit",
-      "source_weight": 4,
-      "published_at": "2026-06-02",
-      "sentiment": "neutral",
-      "event_type": "financial",
-      "impact": "medium",
-      "article_risk_score": 8,
-      "narratives": [
-        "terjeszkedés"
-      ],
-      "query": "SPAR áruház Magyarország"
-    },
-    {
-      "id": "ee137a4eb913c75b",
+      "id": "a82ba5805ae4cf3f",
       "company_id": "lidl",
       "company": "Lidl",
-      "title": "Átrendeződött a magyar kiskereskedelem: a Lidl elsősége megkérdőjelezhetetlen, van viszont nagy visszatérő - Világgazdaság",
-      "summary": "Átrendeződött a magyar kiskereskedelem: a Lidl elsősége megkérdőjelezhetetlen, van viszont nagy visszatérő Világgazdaság",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPRG12d3Joc18xUEJjTVU5ZFZlbGIxYXlzM0hzTFBwNWlacnM2SWItTkxHTW9QMm1CTlZySUNnM2NLZG02cWlyUE1ZcHc0QnFYUU0zNmxmYzJiOGZYeXZXWG1XVGJXOXhZbnFYd3o2RTBoWFFYLUJwYzhSNHJyRnhScTBiWWkzRXYxazJlVUNYcGhfOUhjWW81bzRpVWhGbzA?oc=5",
+      "title": "Kasszás Erzsi helyét átveszi az AI – a sorban állás csökkentésére hoz innovációt a Lidl - Világgazdaság",
+      "summary": "Kasszás Erzsi helyét átveszi az AI – a sorban állás csökkentésére hoz innovációt a Lidl Világgazdaság",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNTDVBM0lSVXlwUnk0RHNDUTVCS2JGdHJHYWpVSVpRcDJXT2hwaTBYazBfSkluQnd0UDJPNDZPekYyLUZQOEdnSWItTGctWG5Pb3BYcUhLNC1JZ2txbnk1NjlWVkhwQjRrX1EwWFBPaU9FN0dWTXJUdld4R2NlTEFCS1BsUEZvandxd1Y2NEtrZ3puYmhaSFVLM3BURV9KVVBQc202S21DY2U?oc=5",
       "source": "Világgazdaság",
       "source_weight": 4,
-      "published_at": "2026-06-01",
+      "published_at": "2026-06-08",
       "sentiment": "neutral",
-      "event_type": "general",
+      "event_type": "workforce",
+      "business_impact": "workforce",
+      "business_impact_label": "Munkaerő hatás",
+      "strategic_narrative": "workforce",
+      "strategic_narrative_label": "Munkaerő",
       "impact": "medium",
-      "article_risk_score": 8,
-      "narratives": [
-        "általános"
-      ],
-      "query": "Lidl élelmiszer kiskereskedelem Magyarország"
-    },
-    {
-      "id": "393f9f909124b6f8",
-      "company_id": "spar",
-      "company": "SPAR",
-      "title": "Robogott a magyarországi SPAR a múlt évben - Piac&Profit",
-      "summary": "Robogott a magyarországi SPAR a múlt évben Piac&amp;Profit",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQZHFoYngxdm55cmkzVk1KUGZCUDlhYWpSTjZ6aGtGVjUzaEViZTNOTkNaTkxSbi1GMmRteFg3YWV2cDJOOHZWNTFiaHZYSVFXbVJJQmd2X25xdWZmWU5xTWh0eS1yMEpDVURqZy1rdzQteFdHZ19lamg3YW9IUnZScmNsWGlVTGFORzBrcTZLazc?oc=5",
-      "source": "Piac&Profit",
-      "source_weight": 4,
-      "published_at": "2026-06-01",
-      "sentiment": "neutral",
-      "event_type": "financial",
-      "impact": "medium",
-      "article_risk_score": 8,
-      "narratives": [
-        "általános"
-      ],
-      "query": "SPAR áruház Magyarország"
+      "article_risk_score": 14,
+      "query": "Lidl munkaerő bér állás Magyarország"
     }
   ],
-  "notes": "Az adatok Google News RSS keresésekből származó nyilvános hírmegjelenések. A sentiment, event_type, impact és risk_score mezők kulcsszavas, előzetes gépi osztályozáson alapulnak. A media_impact_score a forrás súlyát is figyelembe veszi. A social media adatok ebben a verzióban még nem kerülnek gyűjtésre."
+  "data_quality": {
+    "news_coverage_pct": 88,
+    "impact_coverage_pct": 88,
+    "risk_coverage_pct": 88,
+    "business_impact_coverage_pct": 88,
+    "strategic_narrative_coverage_pct": 88,
+    "social_coverage_pct": 0,
+    "classification_method": "keyword_based_v3",
+    "notes": "A sentiment, business impact és strategic narrative mezők kulcsszavas gépi osztályozáson alapulnak."
+  },
+  "labels": {
+    "business_impact": {
+      "revenue": "Bevételi hatás",
+      "cost": "Költséghatás",
+      "reputation": "Reputációs hatás",
+      "expansion": "Terjeszkedési hatás",
+      "regulation": "Szabályozási hatás",
+      "supply_chain": "Ellátási lánc hatás",
+      "workforce": "Munkaerő hatás",
+      "general": "Általános hatás"
+    },
+    "strategic_narrative": {
+      "growth": "Növekedés",
+      "competition": "Piaci verseny",
+      "reputation": "Reputáció",
+      "workforce": "Munkaerő",
+      "supply_chain": "Ellátási lánc",
+      "regulation": "Szabályozás",
+      "defensive": "Védekezés",
+      "general": "Általános"
+    }
+  },
+  "notes": "Az adatok Google News RSS keresésekből származó nyilvános hírmegjelenések. A sentiment, event_type, business_impact, strategic_narrative, impact és risk_score mezők kulcsszavas, előzetes gépi osztályozáson alapulnak. A media_impact_score a forrás súlyát is figyelembe veszi. A social media adatok ebben a verzióban még nem kerülnek gyűjtésre."
 }
