@@ -3,19 +3,75 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FMCG Intelligence Hungary – Human Capital</title>
+  <title>FMCG Intelligence Hungary – Human Capital V2</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="./css/style.css" />
+  <style>
+    :root{
+      --hc-navy:#05284f;
+      --hc-blue:#0ea5e9;
+      --hc-green:#22c55e;
+      --hc-mint:#dff8f2;
+      --hc-soft:#f8fbff;
+      --hc-border:#d7e4ef;
+      --hc-muted:#5b708f;
+      --hc-warn:#fff7ed;
+      --hc-warn-border:#fed7aa;
+      --hc-shadow:0 18px 45px rgba(15,42,75,.10);
+    }
+    body{background:linear-gradient(110deg,#e5f6ff 0%,#eefdf4 100%);}
+    .main{max-width:1400px;margin:0 auto;padding:26px 18px 60px;}
+    .hero-box{max-width:1400px;margin:0 auto;border-radius:28px;background:rgba(255,255,255,.58);box-shadow:var(--hc-shadow);}
+    .dashboard-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:18px;align-items:stretch;}
+    .card{border:1px solid var(--hc-border);box-shadow:var(--hc-shadow);}
+    .span12{grid-column:span 12}.span8{grid-column:span 8}.span7{grid-column:span 7}.span6{grid-column:span 6}.span5{grid-column:span 5}.span4{grid-column:span 4}.span3{grid-column:span 3}
+    .executive-card{min-height:132px;position:relative;overflow:hidden;background:linear-gradient(145deg,#fff,#f7fbff);}
+    .executive-card:after{content:"";position:absolute;right:-26px;top:-35px;width:95px;height:95px;border-radius:50%;background:rgba(14,165,233,.12)}
+    .kpi{font-size:28px;line-height:1.05;color:var(--hc-navy);}
+    .kpi-sub{margin-top:8px;color:var(--hc-muted);}
+    .section-title{border-bottom:1px solid #e6eef6;padding-bottom:10px;margin-bottom:12px;}
+    .section-title h2{font-size:20px;}
+    .chartbox{height:310px;}
+    .chartbox.small{height:250px;}
+    .chartbox.tall{height:360px;}
+    .rank-row{grid-template-columns:44px 1fr 120px;gap:12px;padding:12px 0;border-bottom:1px solid #e5edf5;}
+    .rank{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:12px;font-weight:900;background:#eef3f8;color:var(--hc-navy)}
+    .rank.one{background:#ffedd5;color:#c2410c}.rank.two{background:#e0f2fe;color:#0369a1}.rank.three{background:#dcfce7;color:#15803d}
+    .mini-list{display:grid;gap:10px;}
+    .mini-row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid #e5edf5;}
+    .mini-row strong{color:var(--hc-navy)}
+    .pill{display:inline-flex;align-items:center;border-radius:999px;padding:4px 9px;font-size:12px;font-weight:800;background:#e0f2fe;color:#075985;white-space:nowrap;}
+    .pill.green{background:#dcfce7;color:#166534}.pill.orange{background:#ffedd5;color:#9a3412}.pill.gray{background:#eef2f7;color:#475569}.pill.red{background:#fee2e2;color:#991b1b}
+    .reputation-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:8px;}
+    .reputation-tile{border:1px solid #e2edf6;border-radius:16px;background:#fbfdff;padding:14px;}
+    .reputation-value{font-size:24px;font-weight:950;color:var(--hc-navy);margin-top:5px;}
+    .heatmap{overflow:auto;}
+    .heatmap table{width:100%;border-collapse:collapse;}
+    .heatmap th,.heatmap td{padding:10px;border-bottom:1px solid #e2edf6;text-align:center;white-space:nowrap;}
+    .heatmap th:first-child,.heatmap td:first-child{text-align:left;font-weight:900;color:var(--hc-navy);}
+    .dot{display:inline-block;width:16px;height:16px;border-radius:50%;background:#cbd5e1;vertical-align:middle}.dot.yes{background:#22c55e}.dot.no{background:#ef4444}.dot.na{background:#cbd5e1}
+    details{border:1px solid #dbe7f2;border-radius:18px;background:white;box-shadow:var(--hc-shadow);overflow:hidden;}
+    details+details{margin-top:14px;}
+    summary{cursor:pointer;padding:18px 20px;font-weight:950;color:var(--hc-navy);list-style:none;display:flex;justify-content:space-between;align-items:center;}
+    summary::-webkit-details-marker{display:none}
+    summary:after{content:"+";font-size:22px;color:var(--hc-blue)}
+    details[open] summary:after{content:"−";}
+    .details-body{padding:0 18px 18px;overflow:auto;}
+    table{font-size:13px;}
+    th{letter-spacing:.04em;}
+    .notice{background:var(--hc-warn);border-color:var(--hc-warn-border);}
+    .insight{font-size:15px;line-height:1.75;}
+    .source-note{font-size:12px;color:var(--hc-muted);margin-top:8px;}
+    @media(max-width:1000px){.span8,.span7,.span6,.span5,.span4,.span3{grid-column:span 12}.chartbox{height:280px}.reputation-grid{grid-template-columns:1fr}}
+  </style>
 </head>
-
 <body>
 <header class="header">
   <div class="header-inner">
     <div class="brand">
       <div class="brand-title">FMCG Intelligence Hungary</div>
-      <div class="brand-subtitle">Humán mutatók, munkaerő-hatékonyság, bérezés és toborzási aktivitás</div>
+      <div class="brand-subtitle">Human Capital Dashboard V2 – reputáció, toborzás, hatékonyság</div>
     </div>
-
     <nav class="nav">
       <a href="./index.html">Dashboard</a>
       <a class="active" href="./human-capital.html">Human Capital</a>
@@ -29,12 +85,11 @@
 <section class="hero">
   <div class="hero-box">
     <div class="hero-kicker">Human Capital Intelligence</div>
-    <h1>Munkaerő, létszám, bérezés és toborzási nyomás az FMCG szereplőknél</h1>
+    <h1>Munkaerő, reputáció és toborzási nyomás az FMCG szereplőknél</h1>
     <p>
-      Ez az oldal a munkáltatói mutatókat bér, juttatás, fluktuációs kockázat,
-      létszám, becsült munkaóra-hatékonyság, álláshirdetési aktivitás és adatmegbízhatóság alapján vizsgálja.
+      A V2 elrendezés a vezetői áttekintést helyezi előre: munkáltatói rangsor, Profession-alapú reputáció,
+      aktív hirdetések, juttatási jelek, létszám és hatékonyság.
     </p>
-
     <div class="btn-row">
       <a class="btn btn-primary" href="./index.html">Vissza a fő dashboardra</a>
       <a class="btn" href="./supply-chain.html">Tovább a Supply Chain oldalra</a>
@@ -46,184 +101,76 @@
 <main class="main">
   <div id="errorBox" style="display:none" class="error"></div>
 
-  <div class="grid">
-    <div class="card span3">
-      <div class="kpi-label">Legnagyobb létszám</div>
-      <div class="kpi" id="kpiEmployeeLeader">–</div>
-      <div class="kpi-sub" id="kpiEmployeeSub">jelentett vagy becsült dolgozói létszám</div>
+  <div class="dashboard-grid">
+    <div class="card span3 executive-card">
+      <div class="kpi-label">Employer Champion</div>
+      <div class="kpi" id="kpiEmployerChampion">–</div>
+      <div class="kpi-sub" id="kpiEmployerChampionSub">összesített munkáltatói index</div>
     </div>
-
-    <div class="card span3">
-      <div class="kpi-label">Legjobb munkaóra-hatékonyság</div>
-      <div class="kpi" id="kpiEfficiencyLeader">–</div>
-      <div class="kpi-sub" id="kpiEfficiencySub">nettó árbevétel / becsült munkaóra</div>
-    </div>
-
-    <div class="card span3">
-      <div class="kpi-label">Legnagyobb toborzási aktivitás</div>
-      <div class="kpi" id="kpiJobAdsLeader">–</div>
-      <div class="kpi-sub" id="kpiJobAdsSub">aktív ellenőrzött hirdetések</div>
-    </div>
-
-    <div class="card span3">
+    <div class="card span3 executive-card">
       <div class="kpi-label">Legjobb munkáltatói értékelés</div>
       <div class="kpi" id="kpiRatingLeader">–</div>
       <div class="kpi-sub" id="kpiRatingSub">Profession értékelés</div>
     </div>
-
-    <div class="card span3">
-      <div class="kpi-label">Legnagyobb hirdetés / 1000 fő</div>
-      <div class="kpi" id="kpiJobPressureLeader">–</div>
-      <div class="kpi-sub" id="kpiJobPressureSub">munkaerőpiaci nyomás indikátor</div>
+    <div class="card span3 executive-card">
+      <div class="kpi-label">Legnagyobb toborzási aktivitás</div>
+      <div class="kpi" id="kpiRecruitmentLeader">–</div>
+      <div class="kpi-sub" id="kpiRecruitmentSub">aktív hirdetés / Profession</div>
     </div>
-
-    <div class="card span3">
-      <div class="kpi-label">Legjobb árbevétel / fő</div>
-      <div class="kpi" id="kpiRevenuePerEmployeeLeader">–</div>
-      <div class="kpi-sub" id="kpiRevenuePerEmployeeSub">nettó árbevétel / dolgozó</div>
-    </div>
-
-    <div class="card span3">
-      <div class="kpi-label">Legjobb profit / fő</div>
-      <div class="kpi" id="kpiProfitPerEmployeeLeader">–</div>
-      <div class="kpi-sub" id="kpiProfitPerEmployeeSub">adózott eredmény / dolgozó</div>
-    </div>
-
-    <div class="card span3">
-      <div class="kpi-label">Legjobb profit / munkaóra</div>
-      <div class="kpi" id="kpiProfitPerHourLeader">–</div>
-      <div class="kpi-sub" id="kpiProfitPerHourSub">adózott eredmény / becsült munkaóra</div>
-    </div>
-
-    <div class="card span3">
-      <div class="kpi-label">Legjobb profit / üzlet</div>
-      <div class="kpi" id="kpiProfitPerStoreLeader">–</div>
-      <div class="kpi-sub" id="kpiProfitPerStoreSub">adózott eredmény / üzlet</div>
-    </div>
-
-    <div class="card span5">
-      <div class="section-title">
-        <h2>Employer Ranking</h2>
-        <span>összesített munkáltatói index</span>
-      </div>
-      <div id="employerRanking"></div>
+    <div class="card span3 executive-card">
+      <div class="kpi-label">Legnagyobb munkáltató</div>
+      <div class="kpi" id="kpiEmployeeLeader">–</div>
+      <div class="kpi-sub" id="kpiEmployeeSub">jelentett vagy becsült létszám</div>
     </div>
 
     <div class="card span7">
-      <div class="section-title">
-        <h2>Dolgozói létszám</h2>
-        <span>reported employees / workforce.json</span>
-      </div>
-      <div class="chartbox">
-        <canvas id="employeeCountChart"></canvas>
-      </div>
+      <div class="section-title"><h2>Employer Ranking</h2><span>összesített munkáltatói index</span></div>
+      <div id="employerRanking"></div>
+    </div>
+    <div class="card span5">
+      <div class="section-title"><h2>Employer Reputation</h2><span>Profession rating + vélemények + benefit score</span></div>
+      <div id="reputationSummary"></div>
     </div>
 
     <div class="card span6">
-      <div class="section-title">
-        <h2>Toborzási aktivitás</h2>
-        <span>aktív ellenőrzött álláshirdetések</span>
-      </div>
-      <div class="chartbox">
-        <canvas id="jobAdsChart"></canvas>
-      </div>
+      <div class="section-title"><h2>Recruitment Intelligence</h2><span>aktív hirdetések és részletesen azonosított munkakörcsoportok</span></div>
+      <div class="chartbox"><canvas id="recruitmentChart"></canvas></div>
+    </div>
+    <div class="card span6">
+      <div class="section-title"><h2>Munkaerőpiaci nyomás</h2><span>hirdetés / üzlet és hirdetés / 1000 dolgozó</span></div>
+      <div class="chartbox"><canvas id="pressureChart"></canvas></div>
     </div>
 
     <div class="card span6">
-      <div class="section-title">
-        <h2>Munkaerőpiaci nyomás</h2>
-        <span>hirdetés / üzlet és hirdetés / 1000 dolgozó</span>
-      </div>
-      <div class="chartbox">
-        <canvas id="jobPressureChart"></canvas>
-      </div>
+      <div class="section-title"><h2>Dolgozói létszám</h2><span>workforce.json</span></div>
+      <div class="chartbox"><canvas id="employeeCountChart"></canvas></div>
+    </div>
+    <div class="card span6">
+      <div class="section-title"><h2>Munkaerő szerkezete</h2><span>kékgalléros / fehérgalléros arány</span></div>
+      <div class="chartbox"><canvas id="collarChart"></canvas></div>
     </div>
 
     <div class="card span6">
-      <div class="section-title">
-        <h2>Munkaóra-hatékonyság</h2>
-        <span>nettó árbevétel / becsült éves ledolgozott óra</span>
-      </div>
-      <div class="chartbox">
-        <canvas id="workHourEfficiencyChart"></canvas>
-      </div>
+      <div class="section-title"><h2>Munkaóra-hatékonyság</h2><span>nettó árbevétel / becsült éves ledolgozott óra</span></div>
+      <div class="chartbox"><canvas id="workHourEfficiencyChart"></canvas></div>
+    </div>
+    <div class="card span6">
+      <div class="section-title"><h2>Árbevétel és profit / fő</h2><span>financials.json + workforce.json</span></div>
+      <div class="chartbox"><canvas id="financialPerEmployeeChart"></canvas></div>
     </div>
 
     <div class="card span6">
-      <div class="section-title">
-        <h2>Árbevétel és profit / fő</h2>
-        <span>financials.json + workforce.json</span>
-      </div>
-      <div class="chartbox">
-        <canvas id="financialPerEmployeeChart"></canvas>
-      </div>
+      <div class="section-title"><h2>Munkáltatói értékelések</h2><span>Profession rating, régi employee rating, benefits score</span></div>
+      <div class="chartbox"><canvas id="employerChart"></canvas></div>
     </div>
-
     <div class="card span6">
-      <div class="section-title">
-        <h2>Profit hatékonyság</h2>
-        <span>profit / üzlet és profit / munkaóra</span>
-      </div>
-      <div class="chartbox">
-        <canvas id="profitEfficiencyChart"></canvas>
-      </div>
-    </div>
-
-    <div class="card span6">
-      <div class="section-title">
-        <h2>Munkáltatói összehasonlítás</h2>
-        <span>Employer Score, Benefit, Rating</span>
-      </div>
-      <div class="chartbox">
-        <canvas id="employerChart"></canvas>
-      </div>
-    </div>
-
-    <div class="card span6">
-      <div class="section-title">
-        <h2>Employer Reputation Monitor</h2>
-        <span>Profession értékelés, értékelések és vélemények száma</span>
-      </div>
-      <div class="chartbox">
-        <canvas id="employerReputationChart"></canvas>
-      </div>
-    </div>
-
-    <div class="card span6">
-      <div class="section-title">
-        <h2>Juttatási intenzitás</h2>
-        <span>benefits.json alapján érzékelt juttatási kulcsszavak</span>
-      </div>
-      <div class="chartbox">
-        <canvas id="benefitsChart"></canvas>
-      </div>
-    </div>
-
-    <div class="card span6">
-      <div class="section-title">
-        <h2>Transzparencia és adatbizalom</h2>
-        <span>bér, benefit, adatmegbízhatóság</span>
-      </div>
-      <div class="chartbox">
-        <canvas id="transparencyChart"></canvas>
-      </div>
-    </div>
-
-    <div class="card span6">
-      <div class="section-title">
-        <h2>Álláshirdetési transzparencia</h2>
-        <span>bér, juttatás, bejárás, munkaidő</span>
-      </div>
-      <div id="jobTransparencyBox"></div>
+      <div class="section-title"><h2>Transzparencia heatmap</h2><span>bér, juttatás, bejárás, bónusz, képzés</span></div>
+      <div id="transparencyHeatmap" class="heatmap"></div>
     </div>
 
     <div class="card span12 card-soft">
-      <div class="section-title">
-        <h2>Bérezési összehasonlítás munkakör szerint</h2>
-        <span>salaries.json</span>
-      </div>
-
-      <div class="grid">
+      <div class="section-title"><h2>Bérezési összehasonlítás munkakör szerint</h2><span>salaries.json</span></div>
+      <div class="dashboard-grid">
         <div class="span4">
           <div class="kpi-label">Munkakör kiválasztása</div>
           <select id="salaryRoleSelect">
@@ -236,7 +183,6 @@
             <option value="warehouse_worker_huf_month">Raktári dolgozó</option>
             <option value="office_specialist_huf_month">Központi specialista</option>
           </select>
-
           <div style="margin-top:14px">
             <div class="metric-row"><span class="metric-name">Legmagasabb érték</span><span class="metric-value" id="salaryTopCompany">–</span></div>
             <div class="metric-row"><span class="metric-name">Legmagasabb bér</span><span class="metric-value" id="salaryTopValue">–</span></div>
@@ -244,118 +190,50 @@
             <div class="metric-row"><span class="metric-name">Bérkülönbség</span><span class="metric-value" id="salaryGap">–</span></div>
           </div>
         </div>
-
-        <div class="span8">
-          <div class="chartbox">
-            <canvas id="salaryChart"></canvas>
-          </div>
-        </div>
+        <div class="span8"><div class="chartbox small"><canvas id="salaryChart"></canvas></div></div>
       </div>
     </div>
 
-    <div class="card span6">
-      <div class="section-title">
-        <h2>Fluktuációs kockázat</h2>
-        <span>alacsonyabb érték kedvezőbb</span>
-      </div>
-      <div class="chartbox">
-        <canvas id="turnoverChart"></canvas>
-      </div>
-    </div>
-
-    <div class="card span6">
-      <div class="section-title">
-        <h2>Munkaerő szerkezete</h2>
-        <span>kékgalléros / fehérgalléros arány</span>
-      </div>
-      <div class="chartbox">
-        <canvas id="collarChart"></canvas>
-      </div>
-    </div>
-
-    <div class="card span8">
-      <div class="section-title">
-        <h2>Human Capital Insight</h2>
-        <span>automatikus rövid értelmezés</span>
-      </div>
+    <div class="card span12">
+      <div class="section-title"><h2>Human Capital Insight</h2><span>automatikus rövid értelmezés</span></div>
       <div class="insight" id="humanInsight">Adatok betöltése...</div>
     </div>
 
-    <div class="card span4">
-      <div class="section-title">
-        <h2>Álláshirdetési jelenlét</h2>
-        <span>források szerint</span>
-      </div>
-      <div id="jobPresenceBox"></div>
+    <div class="span12">
+      <details open>
+        <summary>Employer Reputation adattábla <span class="small">employer-reviews.json + benefits.json</span></summary>
+        <div class="details-body"><table id="reputationTable"></table></div>
+      </details>
+      <details>
+        <summary>Álláshirdetési adattábla <span class="small">jobs.json</span></summary>
+        <div class="details-body"><table id="jobsTable"></table></div>
+      </details>
+      <details>
+        <summary>Munkaerő-hatékonysági adattábla <span class="small">workforce.json + stores.json + jobs.json</span></summary>
+        <div class="details-body"><table id="workforceTable"></table></div>
+      </details>
+      <details>
+        <summary>Pénzügyi hatékonysági adattábla <span class="small">financials.json + workforce.json + stores.json</span></summary>
+        <div class="details-body"><table id="financialEfficiencyTable"></table></div>
+      </details>
+      <details>
+        <summary>Humán adattábla <span class="small">companies.json + salaries.json + workforce.json</span></summary>
+        <div class="details-body"><table id="humanTable"></table></div>
+      </details>
     </div>
 
     <div class="card span12">
-      <div class="section-title">
-        <h2>Álláshirdetési adattábla</h2>
-        <span>jobs.json</span>
-      </div>
-      <div style="overflow:auto">
-        <table id="jobsTable"></table>
-      </div>
-    </div>
-
-    <div class="card span12">
-      <div class="section-title">
-        <h2>Pénzügyi hatékonysági adattábla</h2>
-        <span>financials.json + workforce.json + stores.json</span>
-      </div>
-      <div style="overflow:auto">
-        <table id="financialEfficiencyTable"></table>
-      </div>
-    </div>
-
-    <div class="card span12">
-      <div class="section-title">
-        <h2>Munkaerő-hatékonysági adattábla</h2>
-        <span>workforce.json + stores.json + jobs.json</span>
-      </div>
-      <div style="overflow:auto">
-        <table id="workforceTable"></table>
-      </div>
-    </div>
-
-    <div class="card span12">
-      <div class="section-title">
-        <h2>Humán adattábla</h2>
-        <span>companies.json + salaries.json + workforce.json</span>
-      </div>
-      <div style="overflow:auto">
-        <table id="humanTable"></table>
-      </div>
-    </div>
-
-    <div class="card span12">
-      <div class="section-title">
-        <h2>Employer Reputation adattábla</h2>
-        <span>employer-reviews.json + benefits.json</span>
-      </div>
-      <div style="overflow:auto">
-        <table id="employerReputationTable"></table>
-      </div>
-    </div>
-
-    <div class="card span12">
-      <div class="section-title">
-        <h2>Adatmegbízhatósági megjegyzés</h2>
-        <span>fontos értelmezési keret</span>
-      </div>
+      <div class="section-title"><h2>Adatmegbízhatósági megjegyzés</h2><span>fontos értelmezési keret</span></div>
       <div class="notice">
         A munkaóra-alapú hatékonyság becslésként kezelendő: létszám × 40 óra × 52 hét.
-        Az álláshirdetési adatok 2026.06.06-i pillanatképet jelentenek. A profit- és árbevétel-alapú hatékonysági mutatók a financials.json és workforce.json alapján számolt indikátorok. A franchise jellegű hálózatoknál
-        a hirdetések több külön munkáltatóhoz kapcsolódhatnak, ezért az összehasonlítás korlátozottabb.
+        Az álláshirdetési és Profession-adatok pillanatképek. Ha egy forrás átmenetileg nem tölthető le,
+        a scraper az utolsó jó adatot is megtarthatja; ezt a source_confidence mező jelzi.
       </div>
     </div>
   </div>
 </main>
 
-<footer class="footer">
-  FMCG Intelligence Hungary – Human Capital modul. A bér-, HR-, létszám-, munkaóra-hatékonysági és toborzási mutatók elemzői indikátorok.
-</footer>
+<footer class="footer">FMCG Intelligence Hungary – Human Capital V2 modul.</footer>
 
 <script>
 const companiesUrl = './data/companies.json';
@@ -368,727 +246,202 @@ const employerReviewsUrl = './data/employer-reviews.json';
 const benefitsUrl = './data/benefits.json';
 
 let charts = {};
-let state = {
-  companies: [],
-  salaries: [],
-  workforce: [],
-  stores: [],
-  jobs: [],
-  financials: [],
-  employerReviews: [],
-  benefits: []
-};
+let state = {companies:[], salaries:[], workforce:[], stores:[], jobs:[], financials:[], reviews:[], benefits:[]};
 
-function n(v){
-  return v === null || v === undefined || v === '' ? 'n.a.' : v;
-}
+function n(v){return v===null||v===undefined||v===''?'n.a.':v;}
+function num(v,fallback=0){const x=Number(v);return Number.isFinite(x)?x:fallback;}
+function yesNo(v){if(v===true)return'Igen';if(v===false)return'Nem';return'n.a.';}
+function fmtNum(v){if(v===null||v===undefined||v==='')return'n.a.';return Number(v).toLocaleString('hu-HU');}
+function fmtHuf(v){if(v===null||v===undefined||v==='')return'n.a.';return Number(v).toLocaleString('hu-HU')+' Ft';}
+function fmtBn(v){if(v===null||v===undefined||v==='')return'n.a.';return Number(v).toLocaleString('hu-HU',{maximumFractionDigits:2})+' mrd Ft';}
+function fmtDecimal(v){if(v===null||v===undefined||v===''||!Number.isFinite(Number(v)))return'n.a.';return Number(v).toLocaleString('hu-HU',{maximumFractionDigits:2});}
+function cacheBust(url){return url + (url.includes('?')?'&':'?') + 'v=' + Date.now();}
+function showError(message){const box=document.getElementById('errorBox');box.style.display='block';box.innerHTML=message;}
+async function fetchJson(url, fallback=[]){const r=await fetch(cacheBust(url),{cache:'no-store'});if(!r.ok){if(fallback!==undefined)return fallback;throw new Error('Nem sikerült betölteni: '+url+' | HTTP státusz: '+r.status);}return await r.json();}
+function destroyChart(id){if(charts[id]){charts[id].destroy();delete charts[id];}}
+function makeChart(id,type,labels,datasets,opts={}){destroyChart(id);const el=document.getElementById(id);charts[id]=new Chart(el,{type,data:{labels,datasets},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:'#16324f'}}},scales:{x:{ticks:{color:'#64748b'},grid:{color:'#eef3f7'}},y:{ticks:{color:'#64748b'},grid:{color:'#eef3f7'}}},...opts}});return charts[id];}
 
-function yesNo(v){
-  if(v === true) return 'Igen';
-  if(v === false) return 'Nem';
-  return 'n.a.';
-}
-
-function num(v, fallback = 0){
-  const x = Number(v);
-  return Number.isFinite(x) ? x : fallback;
-}
-
-function fmtHuf(v){
-  if(v === null || v === undefined || v === '') return 'n.a.';
-  return Number(v).toLocaleString('hu-HU') + ' Ft';
-}
-
-function fmtNum(v){
-  if(v === null || v === undefined || v === '') return 'n.a.';
-  return Number(v).toLocaleString('hu-HU');
-}
-
-function fmtBn(v){
-  if(v === null || v === undefined || v === '') return 'n.a.';
-  return Number(v).toLocaleString('hu-HU', {maximumFractionDigits:2}) + ' mrd Ft';
-}
-
-function fmtDecimal(v){
-  if(v === null || v === undefined || v === '') return 'n.a.';
-  return Number(v).toLocaleString('hu-HU', {maximumFractionDigits:2});
-}
-
-function showError(message){
-  const box = document.getElementById('errorBox');
-  box.style.display = 'block';
-  box.innerHTML = message;
-}
-
-function destroyChart(id){
-  if(charts[id]){
-    charts[id].destroy();
-    delete charts[id];
-  }
-}
-
-function makeChart(id,type,labels,datasets,opts = {}){
-  destroyChart(id);
-  const el = document.getElementById(id);
-  charts[id] = new Chart(el, {
-    type,
-    data:{labels,datasets},
-    options:{
-      responsive:true,
-      maintainAspectRatio:false,
-      plugins:{legend:{labels:{color:'#16324f'}}},
-      scales:{
-        x:{ticks:{color:'#64748b'},grid:{color:'#eef3f7'}},
-        y:{ticks:{color:'#64748b'},grid:{color:'#eef3f7'}}
-      },
-      ...opts
-    }
-  });
-  return charts[id];
-}
-
+function jobActive(c){return num(c.profession_active_ads ?? c.external_count_hint ?? c.total_verified_ads,0);}
 function employerScore(c){
-  const benefit =
-    c.profession_benefits_score > 0
-      ? Math.min(100, c.profession_benefits_score * 12.5)
-      : (c.benefits_score ?? 55);
-
-  const reputation =
-    c.profession_rating
-      ? c.profession_rating * 20
-      : (c.employee_rating ? c.employee_rating * 20 : 60);
-
+  const benefitScore = c.profession_benefits_score > 0 ? Math.min(100,c.profession_benefits_score*12.5) : (c.benefits_score ?? 55);
+  const reputation = c.profession_rating ? c.profession_rating*20 : (c.employee_rating ? c.employee_rating*20 : 60);
+  const recruitmentPenalty = Math.min(12, (c.ads_per_1000_employees || 0) * 3);
   const turnover = 100 - (c.turnover_risk_score ?? 45);
-  const salary = c.avg_salary_huf_month ? Math.min(100, c.avg_salary_huf_month / 8500) : 50;
-  return Math.round(benefit * .30 + reputation * .25 + turnover * .25 + salary * .20);
-}
-
-async function fetchJson(url){
-  const cacheBust = 'v=' + Date.now();
-  const finalUrl = url + (url.includes('?') ? '&' : '?') + cacheBust;
-  const response = await fetch(finalUrl, {cache:'no-store'});
-  if(!response.ok){
-    throw new Error('Nem sikerült betölteni: ' + url + ' | HTTP státusz: ' + response.status);
-  }
-  return await response.json();
+  const salary = c.avg_salary_huf_month ? Math.min(100,c.avg_salary_huf_month/8500) : 50;
+  return Math.round(benefitScore*.25 + reputation*.30 + turnover*.20 + salary*.15 + (100-recruitmentPenalty)*.10);
 }
 
 async function loadData(){
   try{
-    const [
-      companies,
-      salaries,
-      workforce,
-      stores,
-      jobs,
-      financials,
-      employerReviews,
-      benefits
-    ] = await Promise.all([
-      fetchJson(companiesUrl),
-      fetchJson(salariesUrl),
-      fetchJson(workforceUrl),
-      fetchJson(storesUrl),
-      fetchJson(jobsUrl),
-      fetchJson(financialsUrl),
-      fetchJson(employerReviewsUrl),
-      fetchJson(benefitsUrl)
+    const [companies,salaries,workforce,stores,jobs,financials,reviews,benefits] = await Promise.all([
+      fetchJson(companiesUrl), fetchJson(salariesUrl), fetchJson(workforceUrl), fetchJson(storesUrl),
+      fetchJson(jobsUrl), fetchJson(financialsUrl), fetchJson(employerReviewsUrl, []), fetchJson(benefitsUrl, [])
     ]);
+    const salaryById=new Map(salaries.map(s=>[s.id,s]));
+    const workforceById=new Map(workforce.map(w=>[w.id,w]));
+    const storesById=new Map(stores.map(s=>[s.id,s]));
+    const jobsById=new Map(jobs.map(j=>[j.id,j]));
+    const financialsById=new Map(financials.map(f=>[f.id,f]));
+    const reviewsById=new Map(reviews.map(r=>[r.id,r]));
+    const benefitsById=new Map(benefits.map(b=>[b.id,b]));
 
-    const salaryById = new Map(salaries.map(s => [s.id, s]));
-    const workforceById = new Map(workforce.map(w => [w.id, w]));
-    const storesById = new Map(stores.map(s => [s.id, s]));
-    const jobsById = new Map(jobs.map(j => [j.id, j]));
-    const financialsById = new Map(financials.map(f => [f.id, f]));
-    const reviewsById = new Map(employerReviews.map(r => [r.id, r]));
-    const benefitsById = new Map(benefits.map(b => [b.id, b]));
-
-    companies.forEach(c => {
-      const salary = salaryById.get(c.id);
-      const wf = workforceById.get(c.id);
-      const store = storesById.get(c.id);
-      const job = jobsById.get(c.id);
-      const fin = financialsById.get(c.id);
-      const review = reviewsById.get(c.id);
-      const benefit = benefitsById.get(c.id);
-
-      c.salary_data = salary || null;
-      c.workforce_data = wf || null;
-      c.store_data = store || null;
-      c.jobs_data = job || null;
-      c.financials_data = fin || null;
-      c.review_data = review || null;
-      c.benefit_data = benefit || null;
-
-      c.profession_rating = review && review.rating !== null && review.rating !== undefined ? Number(review.rating) : null;
-      c.profession_review_count = review && review.review_count !== null && review.review_count !== undefined ? Number(review.review_count) : 0;
-      c.profession_opinion_count = review && review.opinion_count !== null && review.opinion_count !== undefined ? Number(review.opinion_count) : 0;
-      c.profession_review_status = review ? n(review.source_status) : 'not_found';
-      c.profession_benefits_score = benefit && benefit.benefits_detected_count !== null && benefit.benefits_detected_count !== undefined ? Number(benefit.benefits_detected_count) : 0;
-
-      c.employer_score = employerScore(c);
-      c.salary_position_score = salary ? num(salary.salary_position_score, 0) : 0;
-
-      c.work_hour_efficiency = wf ? num(wf.estimated_revenue_per_work_hour_huf, 0) : 0;
-      c.workforce_confidence = wf ? num(wf.data_confidence_score, 0) : 0;
-      c.salary_transparency_score = wf ? num(wf.salary_transparency_score, 0) : 0;
-      c.benefit_transparency_score = wf ? num(wf.benefit_transparency_score, 0) : 0;
-      c.employees_reported = wf ? num(wf.employees_reported, 0) : 0;
-      c.employees_confidence = wf ? n(wf.employees_confidence) : 'n.a.';
-
-      c.stores_count = store ? num(store.stores, 0) : 0;
-
-      c.total_verified_ads = job ? num(job.total_verified_ads, 0) : 0;
-      c.parsed_postings_count = job ? num(job.parsed_postings_count, c.total_verified_ads) : 0;
-      c.external_count_hint = job ? num(job.external_count_hint, 0) : 0;
-      c.profession_active_ads = job ? num(job.profession_active_ads, 0) : 0;
-      c.career_site_active_ads = job ? num(job.career_site_active_ads, 0) : 0;
-
-      // Dashboardon ezt használjuk fő hirdetésszámként.
-      // A total_verified_ads csak a részletesen kinyert munkakörtípusok száma,
-      // a Profession / external_count_hint viszont az aktív hirdetési aktivitást méri.
-      c.effective_job_ads = Math.max(
-        c.profession_active_ads,
-        c.external_count_hint,
-        c.total_verified_ads
-      );
-
-      c.ads_per_store = c.stores_count > 0 ? c.effective_job_ads / c.stores_count : null;
-      c.ads_per_1000_employees = c.employees_reported > 0 ? c.effective_job_ads / c.employees_reported * 1000 : null;
-
-      c.fin_revenue_bn = fin && fin.revenue_bn_huf !== null && fin.revenue_bn_huf !== undefined ? num(fin.revenue_bn_huf, 0) : num(c.revenue_2024_bn_huf, 0);
-      c.net_profit_bn = fin && fin.net_profit_bn_huf !== null && fin.net_profit_bn_huf !== undefined ? num(fin.net_profit_bn_huf, 0) : null;
-      c.profit_margin_pct = fin && fin.profit_margin_pct !== null && fin.profit_margin_pct !== undefined ? num(fin.profit_margin_pct, 0) : null;
-      c.financial_confidence = fin ? n(fin.confidence) : 'n.a.';
-      c.revenue_per_employee_huf = c.employees_reported > 0 && c.fin_revenue_bn ? (c.fin_revenue_bn * 1000000000) / c.employees_reported : null;
-      c.profit_per_employee_huf = c.employees_reported > 0 && c.net_profit_bn !== null ? (c.net_profit_bn * 1000000000) / c.employees_reported : null;
-      c.revenue_per_store_bn = c.stores_count > 0 && c.fin_revenue_bn ? c.fin_revenue_bn / c.stores_count : null;
-      c.profit_per_store_bn = c.stores_count > 0 && c.net_profit_bn !== null ? c.net_profit_bn / c.stores_count : null;
-      c.profit_per_work_hour_huf = wf && wf.estimated_annual_hours && c.net_profit_bn !== null ? (c.net_profit_bn * 1000000000) / num(wf.estimated_annual_hours, 0) : null;
+    companies.forEach(c=>{
+      const salary=salaryById.get(c.id), wf=workforceById.get(c.id), store=storesById.get(c.id), job=jobsById.get(c.id), fin=financialsById.get(c.id), review=reviewsById.get(c.id), benefit=benefitsById.get(c.id);
+      c.salary_data=salary||null;c.workforce_data=wf||null;c.store_data=store||null;c.jobs_data=job||null;c.financials_data=fin||null;c.review_data=review||null;c.benefit_data=benefit||null;
+      c.profession_rating=review&&review.rating!==null&&review.rating!==undefined?Number(review.rating):null;
+      c.profession_review_count=review?num(review.review_count,0):0;
+      c.profession_opinion_count=review?num(review.opinion_count,0):0;
+      c.profession_review_status=review?n(review.source_status):'not_found';
+      c.profession_benefits_score=benefit?num(benefit.benefits_detected_count,0):0;
+      c.salary_position_score=salary?num(salary.salary_position_score,0):0;
+      c.work_hour_efficiency=wf?num(wf.estimated_revenue_per_work_hour_huf,0):0;
+      c.workforce_confidence=wf?num(wf.data_confidence_score,0):0;
+      c.salary_transparency_score=wf?num(wf.salary_transparency_score,0):0;
+      c.benefit_transparency_score=wf?num(wf.benefit_transparency_score,0):0;
+      c.employees_reported=wf?num(wf.employees_reported,0):0;
+      c.employees_confidence=wf?n(wf.employees_confidence):'n.a.';
+      c.stores_count=store?num(store.stores,0):0;
+      c.total_verified_ads=job?num(job.total_verified_ads,0):0;
+      c.profession_active_ads=job?num(job.profession_active_ads ?? job.external_count_hint,0):0;
+      c.active_ads=jobActive(c);
+      c.career_site_active_ads=job?num(job.career_site_active_ads,0):0;
+      c.store_jobs=job?num(job.store_jobs,0):0;c.warehouse_jobs=job?num(job.warehouse_jobs,0):0;c.management_jobs=job?num(job.management_jobs,0):0;c.recruitment_events=job?num(job.recruitment_events,0):0;
+      c.ads_per_store=c.stores_count>0?c.active_ads/c.stores_count:null;
+      c.ads_per_1000_employees=c.employees_reported>0?c.active_ads/c.employees_reported*1000:null;
+      c.fin_revenue_bn=fin&&fin.revenue_bn_huf!==null&&fin.revenue_bn_huf!==undefined?num(fin.revenue_bn_huf,0):num(c.revenue_2024_bn_huf,0);
+      c.net_profit_bn=fin&&fin.net_profit_bn_huf!==null&&fin.net_profit_bn_huf!==undefined?num(fin.net_profit_bn_huf,0):null;
+      c.profit_margin_pct=fin&&fin.profit_margin_pct!==null&&fin.profit_margin_pct!==undefined?num(fin.profit_margin_pct,0):null;
+      c.financial_confidence=fin?n(fin.confidence):'n.a.';
+      c.revenue_per_employee_huf=c.employees_reported>0&&c.fin_revenue_bn?(c.fin_revenue_bn*1e9)/c.employees_reported:null;
+      c.profit_per_employee_huf=c.employees_reported>0&&c.net_profit_bn!==null?(c.net_profit_bn*1e9)/c.employees_reported:null;
+      c.revenue_per_store_bn=c.stores_count>0&&c.fin_revenue_bn?c.fin_revenue_bn/c.stores_count:null;
+      c.profit_per_store_bn=c.stores_count>0&&c.net_profit_bn!==null?c.net_profit_bn/c.stores_count:null;
+      c.profit_per_work_hour_huf=wf&&wf.estimated_annual_hours&&c.net_profit_bn!==null?(c.net_profit_bn*1e9)/num(wf.estimated_annual_hours,0):null;
+      c.employer_score=employerScore(c);
     });
-
-    state.companies = companies;
-    state.salaries = salaries;
-    state.workforce = workforce;
-    state.stores = stores;
-    state.jobs = jobs;
-    state.financials = financials;
-    state.employerReviews = employerReviews;
-    state.benefits = benefits;
-
-    renderPage(companies, salaries, workforce, stores, jobs, financials);
-  }catch(error){
-    showError(
-      '<b>Adatbetöltési hiba.</b><br>' +
-      error.message +
-      '<br><br>Ellenőrizd, hogy elérhető-e:<br>' +
-      '<b>/fmcg-intelligence-hu/data/companies.json</b><br>' +
-      '<b>/fmcg-intelligence-hu/data/salaries.json</b><br>' +
-      '<b>/fmcg-intelligence-hu/data/workforce.json</b><br>' +
-      '<b>/fmcg-intelligence-hu/data/stores.json</b><br>' +
-      '<b>/fmcg-intelligence-hu/data/jobs.json</b><br>' +
-      '<b>/fmcg-intelligence-hu/data/financials.json</b><br>' +
-      '<b>/fmcg-intelligence-hu/data/employer-reviews.json</b><br>' +
-      '<b>/fmcg-intelligence-hu/data/benefits.json</b>'
-    );
-    console.error(error);
-  }
+    state={companies,salaries,workforce,stores,jobs,financials,reviews,benefits};
+    renderPage(companies);
+  }catch(e){showError('<b>Adatbetöltési hiba.</b><br>'+e.message);console.error(e);}
 }
 
-function renderPage(companies, salaries, workforce, stores, jobs, financials){
-  const byEmployees = [...companies].filter(c => c.employees_reported > 0).sort((a,b) => b.employees_reported - a.employees_reported);
-  const byEmployer = [...companies].sort((a,b) => b.employer_score - a.employer_score);
-  const byEfficiency = [...companies].filter(c => c.work_hour_efficiency > 0).sort((a,b) => b.work_hour_efficiency - a.work_hour_efficiency);
-  const byJobAds = [...companies].filter(c => c.effective_job_ads > 0).sort((a,b) => b.effective_job_ads - a.effective_job_ads);
-  const byRating = [...companies].filter(c => c.profession_rating !== null).sort((a,b) => b.profession_rating - a.profession_rating);
-  const byAdsPer1000 = [...companies].filter(c => c.ads_per_1000_employees !== null).sort((a,b) => b.ads_per_1000_employees - a.ads_per_1000_employees);
-  const byRevenuePerEmployee = [...companies].filter(c => c.revenue_per_employee_huf !== null).sort((a,b) => b.revenue_per_employee_huf - a.revenue_per_employee_huf);
-  const byProfitPerEmployee = [...companies].filter(c => c.profit_per_employee_huf !== null).sort((a,b) => b.profit_per_employee_huf - a.profit_per_employee_huf);
-  const byProfitPerHour = [...companies].filter(c => c.profit_per_work_hour_huf !== null).sort((a,b) => b.profit_per_work_hour_huf - a.profit_per_work_hour_huf);
-  const byProfitPerStore = [...companies].filter(c => c.profit_per_store_bn !== null).sort((a,b) => b.profit_per_store_bn - a.profit_per_store_bn);
+function renderPage(companies){
+  const byEmployer=[...companies].sort((a,b)=>b.employer_score-a.employer_score);
+  const byRating=[...companies].filter(c=>c.profession_rating!==null).sort((a,b)=>b.profession_rating-a.profession_rating);
+  const byRecruit=[...companies].filter(c=>c.active_ads>0).sort((a,b)=>b.active_ads-a.active_ads);
+  const byEmployees=[...companies].filter(c=>c.employees_reported>0).sort((a,b)=>b.employees_reported-a.employees_reported);
+  const byEfficiency=[...companies].filter(c=>c.work_hour_efficiency>0).sort((a,b)=>b.work_hour_efficiency-a.work_hour_efficiency);
+  const byPressure=[...companies].filter(c=>c.ads_per_1000_employees!==null).sort((a,b)=>b.ads_per_1000_employees-a.ads_per_1000_employees);
 
-  document.getElementById('kpiEmployeeLeader').textContent = byEmployees[0] ? byEmployees[0].company : 'n.a.';
-  document.getElementById('kpiEmployeeSub').textContent = byEmployees[0] ? fmtNum(byEmployees[0].employees_reported) + ' fő' : 'jelentett vagy becsült dolgozói létszám';
-
-  document.getElementById('kpiEfficiencyLeader').textContent = byEfficiency[0] ? byEfficiency[0].company : 'n.a.';
-  document.getElementById('kpiEfficiencySub').textContent = byEfficiency[0] ? fmtHuf(byEfficiency[0].work_hour_efficiency) + ' / becsült munkaóra' : 'nettó árbevétel / munkaóra';
-
-  document.getElementById('kpiJobAdsLeader').textContent = byJobAds[0] ? byJobAds[0].company : 'n.a.';
-  document.getElementById('kpiJobAdsSub').textContent = byJobAds[0] ? fmtNum(byJobAds[0].effective_job_ads) + ' aktív hirdetés' : 'aktív ellenőrzött hirdetések';
-
-  document.getElementById('kpiRatingLeader').textContent = byRating[0] ? byRating[0].company : 'n.a.';
-  document.getElementById('kpiRatingSub').textContent = byRating[0] ? byRating[0].profession_rating + ' / 5 · ' + fmtNum(byRating[0].profession_review_count) + ' értékelés' : 'Profession értékelés';
-
-  document.getElementById('kpiJobPressureLeader').textContent = byAdsPer1000[0] ? byAdsPer1000[0].company : 'n.a.';
-  document.getElementById('kpiJobPressureSub').textContent = byAdsPer1000[0] ? fmtDecimal(byAdsPer1000[0].ads_per_1000_employees) + ' hirdetés / 1000 fő' : 'munkaerőpiaci nyomás indikátor';
-
-  document.getElementById('kpiRevenuePerEmployeeLeader').textContent = byRevenuePerEmployee[0] ? byRevenuePerEmployee[0].company : 'n.a.';
-  document.getElementById('kpiRevenuePerEmployeeSub').textContent = byRevenuePerEmployee[0] ? fmtHuf(Math.round(byRevenuePerEmployee[0].revenue_per_employee_huf)) + ' / fő' : 'nettó árbevétel / dolgozó';
-
-  document.getElementById('kpiProfitPerEmployeeLeader').textContent = byProfitPerEmployee[0] ? byProfitPerEmployee[0].company : 'n.a.';
-  document.getElementById('kpiProfitPerEmployeeSub').textContent = byProfitPerEmployee[0] ? fmtHuf(Math.round(byProfitPerEmployee[0].profit_per_employee_huf)) + ' / fő' : 'adózott eredmény / dolgozó';
-
-  document.getElementById('kpiProfitPerHourLeader').textContent = byProfitPerHour[0] ? byProfitPerHour[0].company : 'n.a.';
-  document.getElementById('kpiProfitPerHourSub').textContent = byProfitPerHour[0] ? fmtHuf(Math.round(byProfitPerHour[0].profit_per_work_hour_huf)) + ' / munkaóra' : 'adózott eredmény / becsült munkaóra';
-
-  document.getElementById('kpiProfitPerStoreLeader').textContent = byProfitPerStore[0] ? byProfitPerStore[0].company : 'n.a.';
-  document.getElementById('kpiProfitPerStoreSub').textContent = byProfitPerStore[0] ? fmtBn(byProfitPerStore[0].profit_per_store_bn) + ' / üzlet' : 'adózott eredmény / üzlet';
+  document.getElementById('kpiEmployerChampion').textContent=byEmployer[0]?byEmployer[0].company:'n.a.';
+  document.getElementById('kpiEmployerChampionSub').textContent=byEmployer[0]?byEmployer[0].employer_score+'/100':'összesített munkáltatói index';
+  document.getElementById('kpiRatingLeader').textContent=byRating[0]?byRating[0].company:'n.a.';
+  document.getElementById('kpiRatingSub').textContent=byRating[0]?byRating[0].profession_rating+'/5 · '+fmtNum(byRating[0].profession_review_count)+' értékelés':'Profession értékelés';
+  document.getElementById('kpiRecruitmentLeader').textContent=byRecruit[0]?byRecruit[0].company:'n.a.';
+  document.getElementById('kpiRecruitmentSub').textContent=byRecruit[0]?fmtNum(byRecruit[0].active_ads)+' aktív hirdetés':'aktív hirdetés / Profession';
+  document.getElementById('kpiEmployeeLeader').textContent=byEmployees[0]?byEmployees[0].company:'n.a.';
+  document.getElementById('kpiEmployeeSub').textContent=byEmployees[0]?fmtNum(byEmployees[0].employees_reported)+' fő':'jelentett vagy becsült létszám';
 
   renderEmployerRanking(byEmployer);
+  renderReputationSummary(companies, byRating, byRecruit, byEfficiency, byPressure);
   renderCharts(companies, byEmployer);
   renderSalaryModule();
-  renderInsight(byEmployees, byEmployer, byEfficiency, byJobAds, byAdsPer1000, byRevenuePerEmployee, byProfitPerEmployee, byProfitPerHour);
-  renderJobPresence(jobs);
-  renderJobTransparency(jobs);
-  renderJobsTable(companies);
-  renderFinancialTable(companies);
-  renderWorkforceTable(companies);
-  renderHumanTable(byEmployer);
-  renderEmployerReputationTable(companies);
-
+  renderInsight(companies, byEmployer, byRating, byRecruit, byEmployees, byEfficiency, byPressure);
+  renderHeatmap(companies);
+  renderTables(companies);
   document.getElementById('salaryRoleSelect').addEventListener('change', renderSalaryModule);
 }
 
 function renderEmployerRanking(companies){
-  const rows = companies.map((c,i) => {
-    const cls = i === 0 ? 'one' : i === 1 ? 'two' : i === 2 ? 'three' : '';
-    return `
-      <div class="rank-row">
-        <div class="rank ${cls}">${i+1}</div>
-        <div>
-          <div style="font-weight:900;color:var(--navy)">${c.company}</div>
-          <div class="small">${n(c.model)}</div>
-        </div>
-        <div>
-          <div class="metric-value">${c.employer_score}/100</div>
-          <div class="bar"><div class="fill" style="width:${c.employer_score}%"></div></div>
-        </div>
-      </div>
-    `;
-  }).join('');
+  document.getElementById('employerRanking').innerHTML=companies.map((c,i)=>`
+    <div class="rank-row">
+      <div class="rank ${i===0?'one':i===1?'two':i===2?'three':''}">${i+1}</div>
+      <div><div style="font-weight:950;color:var(--hc-navy)">${c.company}</div><div class="small">${n(c.model)}</div></div>
+      <div><div class="metric-value">${c.employer_score}/100</div><div class="bar"><div class="fill" style="width:${c.employer_score}%"></div></div></div>
+    </div>`).join('');
+}
 
-  document.getElementById('employerRanking').innerHTML = rows;
+function renderReputationSummary(companies, byRating, byRecruit, byEfficiency, byPressure){
+  const reviewSum=companies.reduce((s,c)=>s+c.profession_review_count,0);
+  const opinionSum=companies.reduce((s,c)=>s+c.profession_opinion_count,0);
+  const benefitLeader=[...companies].sort((a,b)=>b.profession_benefits_score-a.profession_benefits_score)[0];
+  document.getElementById('reputationSummary').innerHTML=`
+    <div class="reputation-grid">
+      <div class="reputation-tile"><div class="kpi-label">Legjobb rating</div><div class="reputation-value">${byRating[0]?byRating[0].company:'n.a.'}</div><div class="small">${byRating[0]?byRating[0].profession_rating+'/5':'n.a.'}</div></div>
+      <div class="reputation-tile"><div class="kpi-label">Értékelések</div><div class="reputation-value">${fmtNum(reviewSum)}</div><div class="small">összes Profession értékelés</div></div>
+      <div class="reputation-tile"><div class="kpi-label">Vélemények</div><div class="reputation-value">${fmtNum(opinionSum)}</div><div class="small">szöveges vélemények</div></div>
+      <div class="reputation-tile"><div class="kpi-label">Benefit leader</div><div class="reputation-value">${benefitLeader?benefitLeader.company:'n.a.'}</div><div class="small">${benefitLeader?benefitLeader.profession_benefits_score+' jelzett elem':'n.a.'}</div></div>
+    </div>
+    <div class="source-note">A rating és benefit adatok a Profession oldalról gyűjtött, automatikusan értelmezett indikátorok.</div>`;
 }
 
 function renderCharts(companies, byEmployer){
-  makeChart('employeeCountChart','bar',companies.map(c => c.company),[
-    {label:'Dolgozói létszám, fő', data:companies.map(c => num(c.employees_reported,0))}
+  const labels=companies.map(c=>c.company);
+  makeChart('recruitmentChart','bar',labels,[
+    {label:'Aktív hirdetés',data:companies.map(c=>c.active_ads)},
+    {label:'Bolti',data:companies.map(c=>c.store_jobs)},
+    {label:'Raktári',data:companies.map(c=>c.warehouse_jobs)},
+    {label:'Vezetői',data:companies.map(c=>c.management_jobs)}
   ]);
-
-  makeChart('jobAdsChart','bar',companies.map(c => c.company),[
-    {label:'Profession / becsült aktív hirdetés', data:companies.map(c => num(c.effective_job_ads,0))}
+  makeChart('pressureChart','bar',labels,[
+    {label:'Hirdetés / üzlet',data:companies.map(c=>c.ads_per_store!==null?Number(c.ads_per_store.toFixed(2)):0)},
+    {label:'Hirdetés / 1000 fő',data:companies.map(c=>c.ads_per_1000_employees!==null?Number(c.ads_per_1000_employees.toFixed(2)):0)}
   ]);
-
-  makeChart('jobPressureChart','bar',companies.map(c => c.company),[
-    {label:'Hirdetés / üzlet', data:companies.map(c => c.ads_per_store !== null ? Number(c.ads_per_store.toFixed(3)) : 0)},
-    {label:'Hirdetés / 1000 dolgozó', data:companies.map(c => c.ads_per_1000_employees !== null ? Number(c.ads_per_1000_employees.toFixed(2)) : 0)}
+  makeChart('employeeCountChart','bar',labels,[{label:'Dolgozói létszám, fő',data:companies.map(c=>c.employees_reported)}]);
+  makeChart('collarChart','bar',labels,[
+    {label:'Kékgalléros %',data:companies.map(c=>num(c.blue_collar_pct,0))},
+    {label:'Fehérgalléros %',data:companies.map(c=>num(c.white_collar_pct,0))}
+  ],{scales:{x:{stacked:true,ticks:{color:'#64748b'},grid:{color:'#eef3f7'}},y:{stacked:true,max:100,ticks:{color:'#64748b'},grid:{color:'#eef3f7'}}}});
+  makeChart('workHourEfficiencyChart','bar',labels,[{label:'Nettó árbevétel / becsült munkaóra, Ft',data:companies.map(c=>c.work_hour_efficiency)}]);
+  makeChart('financialPerEmployeeChart','bar',labels,[
+    {label:'Árbevétel / fő, Ft',data:companies.map(c=>c.revenue_per_employee_huf!==null?Math.round(c.revenue_per_employee_huf):0)},
+    {label:'Profit / fő, Ft',data:companies.map(c=>c.profit_per_employee_huf!==null?Math.round(c.profit_per_employee_huf):0)}
   ]);
-
-  makeChart('workHourEfficiencyChart','bar',companies.map(c => c.company),[
-    {label:'Nettó árbevétel / becsült munkaóra, Ft', data:companies.map(c => num(c.work_hour_efficiency,0))}
-  ]);
-
-  makeChart('financialPerEmployeeChart','bar',companies.map(c => c.company),[
-    {label:'Árbevétel / fő, Ft', data:companies.map(c => c.revenue_per_employee_huf !== null ? Math.round(c.revenue_per_employee_huf) : 0)},
-    {label:'Profit / fő, Ft', data:companies.map(c => c.profit_per_employee_huf !== null ? Math.round(c.profit_per_employee_huf) : 0)}
-  ]);
-
-  makeChart('profitEfficiencyChart','bar',companies.map(c => c.company),[
-    {label:'Profit / üzlet, mrd Ft', data:companies.map(c => c.profit_per_store_bn !== null ? Number(c.profit_per_store_bn.toFixed(3)) : 0)},
-    {label:'Profit / munkaóra, Ft', data:companies.map(c => c.profit_per_work_hour_huf !== null ? Math.round(c.profit_per_work_hour_huf) : 0)}
-  ]);
-
-  makeChart('employerChart','bar',companies.map(c => c.company),[
-    {label:'Employer Score', data:companies.map(c => c.employer_score)},
-    {label:'Profession Rating ×20', data:companies.map(c => c.profession_rating ? c.profession_rating * 20 : 0)},
-    {label:'Benefits Score ×12,5', data:companies.map(c => c.profession_benefits_score ? c.profession_benefits_score * 12.5 : 0)}
-  ],{
-    scales:{
-      x:{ticks:{color:'#64748b'},grid:{color:'#eef3f7'}},
-      y:{ticks:{color:'#64748b'},grid:{color:'#eef3f7'},max:100}
-    }
-  });
-
-  makeChart('employerReputationChart','bar',companies.map(c => c.company),[
-    {label:'Profession Rating ×20', data:companies.map(c => c.profession_rating ? c.profession_rating * 20 : 0)},
-    {label:'Értékelések száma /10', data:companies.map(c => c.profession_review_count ? Number((c.profession_review_count / 10).toFixed(1)) : 0)},
-    {label:'Vélemények száma', data:companies.map(c => c.profession_opinion_count || 0)}
-  ]);
-
-  makeChart('benefitsChart','bar',companies.map(c => c.company),[
-    {label:'Érzékelt juttatási elemek száma', data:companies.map(c => c.profession_benefits_score || 0)}
-  ],{
-    scales:{
-      x:{ticks:{color:'#64748b'},grid:{color:'#eef3f7'}},
-      y:{ticks:{color:'#64748b'},grid:{color:'#eef3f7'},max:9}
-    }
-  });
-
-  makeChart('transparencyChart','bar',companies.map(c => c.company),[
-    {label:'Bértranszparencia', data:companies.map(c => num(c.salary_transparency_score,0))},
-    {label:'Benefit transzparencia', data:companies.map(c => num(c.benefit_transparency_score,0))},
-    {label:'Adatmegbízhatóság', data:companies.map(c => num(c.workforce_confidence,0))}
-  ],{
-    scales:{
-      x:{ticks:{color:'#64748b'},grid:{color:'#eef3f7'}},
-      y:{ticks:{color:'#64748b'},grid:{color:'#eef3f7'},max:100}
-    }
-  });
-
-  makeChart('turnoverChart','bar',companies.map(c => c.company),[
-    {label:'Fluktuációs kockázat', data:companies.map(c => num(c.turnover_risk_score,0))}
-  ],{
-    scales:{
-      x:{ticks:{color:'#64748b'},grid:{color:'#eef3f7'}},
-      y:{ticks:{color:'#64748b'},grid:{color:'#eef3f7'},max:100}
-    }
-  });
-
-  makeChart('collarChart','bar',companies.map(c => c.company),[
-    {label:'Kékgalléros %', data:companies.map(c => num(c.blue_collar_pct,0))},
-    {label:'Fehérgalléros %', data:companies.map(c => num(c.white_collar_pct,0))}
-  ],{
-    scales:{
-      x:{stacked:true,ticks:{color:'#64748b'},grid:{color:'#eef3f7'}},
-      y:{stacked:true,max:100,ticks:{color:'#64748b'},grid:{color:'#eef3f7'}}
-    }
-  });
+  makeChart('employerChart','bar',labels,[
+    {label:'Employer Score',data:companies.map(c=>c.employer_score)},
+    {label:'Profession Rating ×20',data:companies.map(c=>c.profession_rating?c.profession_rating*20:0)},
+    {label:'Benefits Score ×12,5',data:companies.map(c=>c.profession_benefits_score*12.5)}
+  ],{scales:{x:{ticks:{color:'#64748b'},grid:{color:'#eef3f7'}},y:{ticks:{color:'#64748b'},grid:{color:'#eef3f7'},max:100}}});
 }
 
 function renderSalaryModule(){
-  const role = document.getElementById('salaryRoleSelect').value;
-  const salaries = state.salaries
-    .map(s => ({...s, selected_salary: num(s[role], 0)}))
-    .filter(s => s.selected_salary > 0)
-    .sort((a,b) => b.selected_salary - a.selected_salary);
-
-  if(salaries.length === 0){
-    document.getElementById('salaryTopCompany').textContent = 'n.a.';
-    document.getElementById('salaryTopValue').textContent = 'n.a.';
-    document.getElementById('salaryAverage').textContent = 'n.a.';
-    document.getElementById('salaryGap').textContent = 'n.a.';
-    return;
-  }
-
-  const top = salaries[0];
-  const min = salaries[salaries.length - 1];
-  const values = salaries.map(s => s.selected_salary);
-  const avg = values.reduce((a,b) => a+b,0) / values.length;
-  const gap = top.selected_salary - min.selected_salary;
-
-  document.getElementById('salaryTopCompany').textContent = top.company;
-  document.getElementById('salaryTopValue').textContent = fmtHuf(top.selected_salary);
-  document.getElementById('salaryAverage').textContent = fmtHuf(Math.round(avg));
-  document.getElementById('salaryGap').textContent = fmtHuf(gap);
-
-  makeChart('salaryChart','bar',salaries.map(s => s.company),[
-    {label:'Bruttó havi bér', data:salaries.map(s => s.selected_salary)}
-  ]);
+  const role=document.getElementById('salaryRoleSelect').value;
+  const salaries=state.salaries.map(s=>({...s,selected_salary:num(s[role],0)})).filter(s=>s.selected_salary>0).sort((a,b)=>b.selected_salary-a.selected_salary);
+  if(!salaries.length)return;
+  const top=salaries[0],min=salaries[salaries.length-1],values=salaries.map(s=>s.selected_salary),avg=values.reduce((a,b)=>a+b,0)/values.length;
+  document.getElementById('salaryTopCompany').textContent=top.company;
+  document.getElementById('salaryTopValue').textContent=fmtHuf(top.selected_salary);
+  document.getElementById('salaryAverage').textContent=fmtHuf(Math.round(avg));
+  document.getElementById('salaryGap').textContent=fmtHuf(top.selected_salary-min.selected_salary);
+  makeChart('salaryChart','bar',salaries.map(s=>s.company),[{label:'Bruttó havi bér',data:salaries.map(s=>s.selected_salary)}]);
 }
 
-function renderInsight(byEmployees, byEmployer, byEfficiency, byJobAds, byAdsPer1000, byRevenuePerEmployee, byProfitPerEmployee, byProfitPerHour){
-  let text = '';
-
-  if(byEmployees[0]){
-    text += `A legnagyobb dolgozói létszám jelenleg <b>${byEmployees[0].company}</b> esetében szerepel, ${fmtNum(byEmployees[0].employees_reported)} fővel. `;
-  }
-
-  if(byEmployer[0]){
-    text += `Az aktuális indikátorok alapján a legerősebb munkáltatói pozíciót <b>${byEmployer[0].company}</b> mutatja. `;
-  }
-
-  const rated = [...state.companies].filter(c => c.profession_rating !== null).sort((a,b) => b.profession_rating - a.profession_rating);
-  if(rated[0]){
-    text += `A Profession értékelések alapján a legjobb látható munkáltatói reputáció <b>${rated[0].company}</b> esetében mérhető (${rated[0].profession_rating}/5). `;
-  }
-
-  if(byEfficiency[0]){
-    text += `A becsült munkaóra-hatékonyságban <b>${byEfficiency[0].company}</b> áll az első helyen, ${fmtHuf(byEfficiency[0].work_hour_efficiency)} / munkaóra értékkel. `;
-  }
-
-  if(byJobAds[0]){
-    text += `A legtöbb ellenőrzött álláshirdetés jelenleg <b>${byJobAds[0].company}</b> esetében látható, ${fmtNum(byJobAds[0].effective_job_ads)} hirdetéssel. `;
-  }
-
-  if(byRevenuePerEmployee[0]){
-    text += `Árbevétel / fő mutatóban <b>${byRevenuePerEmployee[0].company}</b> áll az élen, ${fmtHuf(Math.round(byRevenuePerEmployee[0].revenue_per_employee_huf))} / fő értékkel. `;
-  }
-
-  if(byProfitPerEmployee[0]){
-    text += `Profit / fő alapján <b>${byProfitPerEmployee[0].company}</b> emelkedik ki a rendelkezésre álló adatok között. `;
-  }
-
-  if(byProfitPerHour[0]){
-    text += `Profit / becsült munkaóra mutatóban <b>${byProfitPerHour[0].company}</b> mutatja a legjobb értéket. `;
-  }
-
-  if(byAdsPer1000[0]){
-    text += `Dolgozói létszámra vetítve a legnagyobb toborzási nyomás <b>${byAdsPer1000[0].company}</b> esetében mutatkozik, ${fmtDecimal(byAdsPer1000[0].ads_per_1000_employees)} hirdetés / 1000 fő értékkel. `;
-  }
-
-  text += `A franchise jellegű szereplők esetében az álláshirdetési adatok óvatosan értelmezendők, mert a hirdetések több külön munkáltatóhoz is kapcsolódhatnak.`;
-
-  document.getElementById('humanInsight').innerHTML = text;
+function renderHeatmap(companies){
+  const cell=v=>`<span class="dot ${v===true?'yes':v===false?'no':'na'}"></span>`;
+  document.getElementById('transparencyHeatmap').innerHTML=`<table><thead><tr><th>Cég</th><th>Rating</th><th>Benefit</th><th>Bejárás</th><th>Cafeteria</th><th>Bónusz</th><th>Képzés</th></tr></thead><tbody>${companies.map(c=>{
+    const b=c.benefit_data||{};return `<tr><td>${c.company}</td><td>${c.profession_rating?c.profession_rating+'/5':'n.a.'}</td><td><span class="pill ${c.profession_benefits_score>3?'green':c.profession_benefits_score>0?'orange':'gray'}">${c.profession_benefits_score}</span></td><td>${cell(b.commuting_support)}</td><td>${cell(b.cafeteria)}</td><td>${cell(b.bonus)}</td><td>${cell(b.training)}</td></tr>`}).join('')}</tbody></table>`;
 }
 
-function renderJobPresence(jobs){
-  const total = jobs.length;
-  const career = jobs.filter(j => j.career_site_present === true).length;
-  const profession = jobs.filter(j => j.profession_present === true).length;
-  const linkedInKnown = jobs.filter(j => j.linkedin_jobs_present !== null).length;
-  const indeedKnown = jobs.filter(j => j.indeed_present !== null).length;
-
-  document.getElementById('jobPresenceBox').innerHTML = `
-    <div class="metric-row"><span class="metric-name">Karrieroldal jelenlét</span><span class="metric-value">${career}/${total}</span></div>
-    <div class="metric-row"><span class="metric-name">Profession jelenlét</span><span class="metric-value">${profession}/${total}</span></div>
-    <div class="metric-row"><span class="metric-name">LinkedIn Jobs adat ismert</span><span class="metric-value">${linkedInKnown}/${total}</span></div>
-    <div class="metric-row"><span class="metric-name">Indeed adat ismert</span><span class="metric-value">${indeedKnown}/${total}</span></div>
-    <div class="notice" style="margin-top:12px">
-      A jobs.json pillanatképet rögzít. A későbbi automatizálásnál dátum szerint archiválható lesz,
-      így trend is számolható a hirdetésszámokból.
-    </div>
-  `;
+function renderInsight(companies, byEmployer, byRating, byRecruit, byEmployees, byEfficiency, byPressure){
+  let text='';
+  if(byEmployer[0]) text+=`Az összesített munkáltatói index alapján jelenleg <b>${byEmployer[0].company}</b> áll az első helyen (${byEmployer[0].employer_score}/100). `;
+  if(byRating[0]) text+=`A legjobb Profession értékelést <b>${byRating[0].company}</b> mutatja (${byRating[0].profession_rating}/5). `;
+  if(byRecruit[0]) text+=`A legnagyobb toborzási aktivitás <b>${byRecruit[0].company}</b> esetében látható, ${fmtNum(byRecruit[0].active_ads)} aktív hirdetéssel. `;
+  if(byEmployees[0]) text+=`A legnagyobb dolgozói létszám <b>${byEmployees[0].company}</b> esetében szerepel, ${fmtNum(byEmployees[0].employees_reported)} fővel. `;
+  if(byEfficiency[0]) text+=`Munkaóra-hatékonyságban <b>${byEfficiency[0].company}</b> vezet (${fmtHuf(byEfficiency[0].work_hour_efficiency)} / munkaóra). `;
+  if(byPressure[0]) text+=`Dolgozói létszámra vetítve a legerősebb toborzási nyomás <b>${byPressure[0].company}</b> esetében jelenik meg. `;
+  text+='Az adatok automatikusan gyűjtött és becsült mutatók, ezért trendként és összehasonlító indikátorként érdemes használni őket.';
+  document.getElementById('humanInsight').innerHTML=text;
 }
 
-function renderJobTransparency(jobs){
-  const companies = state.companies || [];
-  const salaryVisible = jobs.filter(j => j.salary_visible_in_examples === true).length;
-  const benefitVisible = companies.filter(c => c.profession_benefits_score > 0 || (c.jobs_data && c.jobs_data.benefits_visible_in_examples === true)).length;
-  const commutingVisible = companies.filter(c => c.benefit_data && c.benefit_data.commuting_support === true).length;
-  const cafeteriaVisible = companies.filter(c => c.benefit_data && c.benefit_data.cafeteria === true).length;
-  const bonusVisible = companies.filter(c => c.benefit_data && c.benefit_data.bonus === true).length;
-  const trainingVisible = companies.filter(c => c.benefit_data && c.benefit_data.training === true).length;
-
-  document.getElementById('jobTransparencyBox').innerHTML = `
-    <div class="metric-row"><span class="metric-name">Bér szerepel példahirdetésben</span><span class="metric-value">${salaryVisible}/${jobs.length}</span></div>
-    <div class="metric-row"><span class="metric-name">Juttatás szerepel</span><span class="metric-value">${benefitVisible}/${companies.length}</span></div>
-    <div class="metric-row"><span class="metric-name">Bejárási támogatás szerepel</span><span class="metric-value">${commutingVisible}/${companies.length}</span></div>
-    <div class="metric-row"><span class="metric-name">Cafeteria szerepel</span><span class="metric-value">${cafeteriaVisible}/${companies.length}</span></div>
-    <div class="metric-row"><span class="metric-name">Bónusz szerepel</span><span class="metric-value">${bonusVisible}/${companies.length}</span></div>
-    <div class="metric-row"><span class="metric-name">Képzés szerepel</span><span class="metric-value">${trainingVisible}/${companies.length}</span></div>
-  `;
-}
-
-function renderJobsTable(companies){
-  const html = `
-    <thead>
-      <tr>
-        <th>Cég</th>
-        <th>Snapshot</th>
-        <th>Aktív hirdetés</th>
-        <th>Profession</th>
-        <th>Bolti</th>
-        <th>Raktári</th>
-        <th>Vezetői</th>
-        <th>Toborzónap</th>
-        <th>Karrieroldal</th>
-        <th>Hirdetés / üzlet</th>
-        <th>Hirdetés / 1000 fő</th>
-        <th>Bér látható</th>
-        <th>Juttatás látható</th>
-        <th>Forrásbizalom</th>
-      </tr>
-    </thead>
-    <tbody>
-      ${companies.map(c => {
-        const j = c.jobs_data || {};
-        return `
-          <tr>
-            <td><b>${n(c.company)}</b></td>
-            <td>${n(j.snapshot_date)}</td>
-            <td><b>${fmtNum(c.effective_job_ads)}</b></td>
-            <td>${fmtNum(j.profession_active_ads)}</td>
-            <td>${fmtNum(j.store_jobs)}</td>
-            <td>${fmtNum(j.warehouse_jobs)}</td>
-            <td>${fmtNum(j.management_jobs)}</td>
-            <td>${fmtNum(j.recruitment_events)}</td>
-            <td>${fmtNum(j.career_site_active_ads)}</td>
-            <td>${fmtDecimal(c.ads_per_store)}</td>
-            <td>${fmtDecimal(c.ads_per_1000_employees)}</td>
-            <td>${yesNo(j.salary_visible_in_examples)}</td>
-            <td>${yesNo(j.benefits_visible_in_examples)}</td>
-            <td>${n(j.source_confidence)}</td>
-          </tr>
-        `;
-      }).join('')}
-    </tbody>
-  `;
-
-  document.getElementById('jobsTable').innerHTML = html;
-}
-
-
-function renderFinancialTable(companies){
-  const html = `
-    <thead>
-      <tr>
-        <th>Cég</th>
-        <th>Árbevétel</th>
-        <th>Adózott eredmény</th>
-        <th>Profit margin</th>
-        <th>Árbevétel / fő</th>
-        <th>Profit / fő</th>
-        <th>Árbevétel / üzlet</th>
-        <th>Profit / üzlet</th>
-        <th>Profit / munkaóra</th>
-        <th>Forrásbizalom</th>
-      </tr>
-    </thead>
-    <tbody>
-      ${companies.map(c => `
-        <tr>
-          <td><b>${n(c.company)}</b></td>
-          <td>${fmtBn(c.fin_revenue_bn)}</td>
-          <td>${fmtBn(c.net_profit_bn)}</td>
-          <td>${c.profit_margin_pct !== null ? fmtDecimal(c.profit_margin_pct) + '%' : 'n.a.'}</td>
-          <td>${c.revenue_per_employee_huf !== null ? fmtHuf(Math.round(c.revenue_per_employee_huf)) : 'n.a.'}</td>
-          <td>${c.profit_per_employee_huf !== null ? fmtHuf(Math.round(c.profit_per_employee_huf)) : 'n.a.'}</td>
-          <td>${c.revenue_per_store_bn !== null ? fmtBn(c.revenue_per_store_bn) : 'n.a.'}</td>
-          <td>${c.profit_per_store_bn !== null ? fmtBn(c.profit_per_store_bn) : 'n.a.'}</td>
-          <td>${c.profit_per_work_hour_huf !== null ? fmtHuf(Math.round(c.profit_per_work_hour_huf)) : 'n.a.'}</td>
-          <td>${n(c.financial_confidence)}</td>
-        </tr>
-      `).join('')}
-    </tbody>
-  `;
-
-  document.getElementById('financialEfficiencyTable').innerHTML = html;
-}
-
-function renderWorkforceTable(companies){
-  const html = `
-    <thead>
-      <tr>
-        <th>Cég</th>
-        <th>Létszám</th>
-        <th>Üzlet</th>
-        <th>Hirdetés</th>
-        <th>Hirdetés / üzlet</th>
-        <th>Hirdetés / 1000 fő</th>
-        <th>Éves becsült munkaóra</th>
-        <th>Nettó árbevétel / munkaóra</th>
-        <th>Árbevétel / fő</th>
-        <th>Profit / fő</th>
-        <th>Adatbizalom</th>
-      </tr>
-    </thead>
-    <tbody>
-      ${companies.map(c => {
-        const w = c.workforce_data || {};
-        return `
-          <tr>
-            <td><b>${n(c.company)}</b></td>
-            <td>${fmtNum(w.employees_reported)}</td>
-            <td>${fmtNum(c.stores_count)}</td>
-            <td>${fmtNum(c.effective_job_ads)}</td>
-            <td>${fmtDecimal(c.ads_per_store)}</td>
-            <td>${fmtDecimal(c.ads_per_1000_employees)}</td>
-            <td>${fmtNum(w.estimated_annual_hours)}</td>
-            <td><b>${fmtHuf(w.estimated_revenue_per_work_hour_huf)}</b></td>
-            <td>${c.revenue_per_employee_huf !== null ? fmtHuf(Math.round(c.revenue_per_employee_huf)) : 'n.a.'}</td>
-            <td>${c.profit_per_employee_huf !== null ? fmtHuf(Math.round(c.profit_per_employee_huf)) : 'n.a.'}</td>
-            <td>${n(w.data_confidence_score)}<div class="bar"><div class="fill-orange" style="width:${num(w.data_confidence_score,0)}%"></div></div></td>
-          </tr>
-        `;
-      }).join('')}
-    </tbody>
-  `;
-
-  document.getElementById('workforceTable').innerHTML = html;
-}
-
-function renderHumanTable(companies){
-  const html = `
-    <thead>
-      <tr>
-        <th>Cég</th>
-        <th>Létszám</th>
-        <th>Employer Score</th>
-        <th>Bérpozíció</th>
-        <th>Átlagbér</th>
-        <th>Benefit</th>
-        <th>Employee Rating</th>
-        <th>Profession rating</th>
-        <th>Értékelések</th>
-        <th>Benefits score</th>
-        <th>Fluktuáció</th>
-        <th>Munkaóra-hatékonyság</th>
-        <th>Árbevétel / fő</th>
-        <th>Profit / fő</th>
-        <th>Hirdetés / 1000 fő</th>
-      </tr>
-    </thead>
-    <tbody>
-      ${companies.map(c => `
-        <tr>
-          <td><b>${n(c.company)}</b></td>
-          <td>${fmtNum(c.employees_reported)}</td>
-          <td><b>${c.employer_score}</b><div class="bar"><div class="fill" style="width:${c.employer_score}%"></div></div></td>
-          <td><b>${c.salary_position_score}</b><div class="bar"><div class="fill-orange" style="width:${c.salary_position_score}%"></div></div></td>
-          <td>${fmtHuf(c.avg_salary_huf_month)}</td>
-          <td>${n(c.benefits_score)}</td>
-          <td>${n(c.employee_rating)}</td>
-          <td>${c.profession_rating !== null ? c.profession_rating + ' / 5' : 'n.a.'}</td>
-          <td>${fmtNum(c.profession_review_count)}</td>
-          <td>${fmtNum(c.profession_benefits_score)}</td>
-          <td>${n(c.turnover_risk_score)}</td>
-          <td>${fmtHuf(c.work_hour_efficiency)}</td>
-          <td>${c.revenue_per_employee_huf !== null ? fmtHuf(Math.round(c.revenue_per_employee_huf)) : 'n.a.'}</td>
-          <td>${c.profit_per_employee_huf !== null ? fmtHuf(Math.round(c.profit_per_employee_huf)) : 'n.a.'}</td>
-          <td>${fmtDecimal(c.ads_per_1000_employees)}</td>
-        </tr>
-      `).join('')}
-    </tbody>
-  `;
-
-  document.getElementById('humanTable').innerHTML = html;
-}
-
-function renderEmployerReputationTable(companies){
-  const html = `
-    <thead>
-      <tr>
-        <th>Cég</th>
-        <th>Profession rating</th>
-        <th>Értékelések</th>
-        <th>Vélemények</th>
-        <th>Juttatási elemek</th>
-        <th>Cafeteria</th>
-        <th>Bejárás</th>
-        <th>Bónusz</th>
-        <th>Egészségbiztosítás</th>
-        <th>Sport</th>
-        <th>Képzés</th>
-        <th>Adatstátusz</th>
-      </tr>
-    </thead>
-    <tbody>
-      ${companies.map(c => {
-        const b = c.benefit_data || {};
-        return `
-          <tr>
-            <td><b>${n(c.company)}</b></td>
-            <td><b>${c.profession_rating !== null ? c.profession_rating + ' / 5' : 'n.a.'}</b></td>
-            <td>${fmtNum(c.profession_review_count)}</td>
-            <td>${fmtNum(c.profession_opinion_count)}</td>
-            <td><b>${fmtNum(c.profession_benefits_score)}</b></td>
-            <td>${yesNo(b.cafeteria)}</td>
-            <td>${yesNo(b.commuting_support)}</td>
-            <td>${yesNo(b.bonus)}</td>
-            <td>${yesNo(b.health_insurance)}</td>
-            <td>${yesNo(b.sport_support)}</td>
-            <td>${yesNo(b.training)}</td>
-            <td>${n(c.profession_review_status)}</td>
-          </tr>
-        `;
-      }).join('')}
-    </tbody>
-  `;
-
-  document.getElementById('employerReputationTable').innerHTML = html;
-}
+function renderTables(companies){renderReputationTable(companies);renderJobsTable(companies);renderWorkforceTable(companies);renderFinancialTable(companies);renderHumanTable(companies);}
+function renderReputationTable(companies){document.getElementById('reputationTable').innerHTML=`<thead><tr><th>Cég</th><th>Profession Rating</th><th>Értékelések</th><th>Vélemények</th><th>Juttatási elemek</th><th>Cafeteria</th><th>Bejárás</th><th>Bónusz</th><th>Egészségbiztosítás</th><th>Képzés</th><th>Adatstátusz</th></tr></thead><tbody>${companies.map(c=>{const b=c.benefit_data||{};return `<tr><td><b>${c.company}</b></td><td><b>${c.profession_rating?c.profession_rating:'n.a.'}</b></td><td>${fmtNum(c.profession_review_count)}</td><td>${fmtNum(c.profession_opinion_count)}</td><td><b>${c.profession_benefits_score}</b></td><td>${yesNo(b.cafeteria)}</td><td>${yesNo(b.commuting_support)}</td><td>${yesNo(b.bonus)}</td><td>${yesNo(b.health_insurance)}</td><td>${yesNo(b.training)}</td><td>${c.profession_review_status}</td></tr>`}).join('')}</tbody>`;}
+function renderJobsTable(companies){document.getElementById('jobsTable').innerHTML=`<thead><tr><th>Cég</th><th>Snapshot</th><th>Aktív hirdetés</th><th>Profession</th><th>Bolti</th><th>Raktári</th><th>Vezetői</th><th>Toborzónap</th><th>Hirdetés / üzlet</th><th>Hirdetés / 1000 fő</th><th>Forrásbizalom</th></tr></thead><tbody>${companies.map(c=>{const j=c.jobs_data||{};return `<tr><td><b>${c.company}</b></td><td>${n(j.snapshot_date)}</td><td><b>${fmtNum(c.active_ads)}</b></td><td>${fmtNum(c.profession_active_ads)}</td><td>${fmtNum(c.store_jobs)}</td><td>${fmtNum(c.warehouse_jobs)}</td><td>${fmtNum(c.management_jobs)}</td><td>${fmtNum(c.recruitment_events)}</td><td>${fmtDecimal(c.ads_per_store)}</td><td>${fmtDecimal(c.ads_per_1000_employees)}</td><td>${n(j.source_confidence)}</td></tr>`}).join('')}</tbody>`;}
+function renderWorkforceTable(companies){document.getElementById('workforceTable').innerHTML=`<thead><tr><th>Cég</th><th>Létszám</th><th>Üzlet</th><th>Aktív hirdetés</th><th>Hirdetés / üzlet</th><th>Hirdetés / 1000 fő</th><th>Éves becsült munkaóra</th><th>Nettó árbevétel / munkaóra</th><th>Árbevétel / fő</th><th>Profit / fő</th><th>Adatbizalom</th></tr></thead><tbody>${companies.map(c=>{const w=c.workforce_data||{};return `<tr><td><b>${c.company}</b></td><td>${fmtNum(w.employees_reported)}</td><td>${fmtNum(c.stores_count)}</td><td>${fmtNum(c.active_ads)}</td><td>${fmtDecimal(c.ads_per_store)}</td><td>${fmtDecimal(c.ads_per_1000_employees)}</td><td>${fmtNum(w.estimated_annual_hours)}</td><td><b>${fmtHuf(w.estimated_revenue_per_work_hour_huf)}</b></td><td>${c.revenue_per_employee_huf!==null?fmtHuf(Math.round(c.revenue_per_employee_huf)):'n.a.'}</td><td>${c.profit_per_employee_huf!==null?fmtHuf(Math.round(c.profit_per_employee_huf)):'n.a.'}</td><td>${n(w.data_confidence_score)}</td></tr>`}).join('')}</tbody>`;}
+function renderFinancialTable(companies){document.getElementById('financialEfficiencyTable').innerHTML=`<thead><tr><th>Cég</th><th>Árbevétel</th><th>Adózott eredmény</th><th>Profit margin</th><th>Árbevétel / fő</th><th>Profit / fő</th><th>Árbevétel / üzlet</th><th>Profit / üzlet</th><th>Profit / munkaóra</th><th>Forrásbizalom</th></tr></thead><tbody>${companies.map(c=>`<tr><td><b>${c.company}</b></td><td>${fmtBn(c.fin_revenue_bn)}</td><td>${fmtBn(c.net_profit_bn)}</td><td>${c.profit_margin_pct!==null?fmtDecimal(c.profit_margin_pct)+'%':'n.a.'}</td><td>${c.revenue_per_employee_huf!==null?fmtHuf(Math.round(c.revenue_per_employee_huf)):'n.a.'}</td><td>${c.profit_per_employee_huf!==null?fmtHuf(Math.round(c.profit_per_employee_huf)):'n.a.'}</td><td>${c.revenue_per_store_bn!==null?fmtBn(c.revenue_per_store_bn):'n.a.'}</td><td>${c.profit_per_store_bn!==null?fmtBn(c.profit_per_store_bn):'n.a.'}</td><td>${c.profit_per_work_hour_huf!==null?fmtHuf(Math.round(c.profit_per_work_hour_huf)):'n.a.'}</td><td>${n(c.financial_confidence)}</td></tr>`).join('')}</tbody>`;}
+function renderHumanTable(companies){const ordered=[...companies].sort((a,b)=>b.employer_score-a.employer_score);document.getElementById('humanTable').innerHTML=`<thead><tr><th>Cég</th><th>Létszám</th><th>Employer Score</th><th>Bérpozíció</th><th>Átlagbér</th><th>Profession Rating</th><th>Értékelések</th><th>Benefits Score</th><th>Fluktuáció</th><th>Munkaóra-hatékonyság</th><th>Árbevétel / fő</th><th>Profit / fő</th><th>Hirdetés / 1000 fő</th></tr></thead><tbody>${ordered.map(c=>`<tr><td><b>${c.company}</b></td><td>${fmtNum(c.employees_reported)}</td><td><b>${c.employer_score}</b><div class="bar"><div class="fill" style="width:${c.employer_score}%"></div></div></td><td>${c.salary_position_score}</td><td>${fmtHuf(c.avg_salary_huf_month)}</td><td>${c.profession_rating?c.profession_rating:'n.a.'}</td><td>${fmtNum(c.profession_review_count)}</td><td>${c.profession_benefits_score}</td><td>${n(c.turnover_risk_score)}</td><td>${fmtHuf(c.work_hour_efficiency)}</td><td>${c.revenue_per_employee_huf!==null?fmtHuf(Math.round(c.revenue_per_employee_huf)):'n.a.'}</td><td>${c.profit_per_employee_huf!==null?fmtHuf(Math.round(c.profit_per_employee_huf)):'n.a.'}</td><td>${fmtDecimal(c.ads_per_1000_employees)}</td></tr>`).join('')}</tbody>`;}
 
 loadData();
 </script>
 </body>
 </html>
+
