@@ -464,7 +464,9 @@ function employerScore(c){
 }
 
 async function fetchJson(url){
-  const response = await fetch(url, {cache:'no-store'});
+  const cacheBust = 'v=' + Date.now();
+  const finalUrl = url + (url.includes('?') ? '&' : '?') + cacheBust;
+  const response = await fetch(finalUrl, {cache:'no-store'});
   if(!response.ok){
     throw new Error('Nem sikerült betölteni: ' + url + ' | HTTP státusz: ' + response.status);
   }
@@ -537,10 +539,22 @@ async function loadData(){
       c.stores_count = store ? num(store.stores, 0) : 0;
 
       c.total_verified_ads = job ? num(job.total_verified_ads, 0) : 0;
+      c.parsed_postings_count = job ? num(job.parsed_postings_count, c.total_verified_ads) : 0;
+      c.external_count_hint = job ? num(job.external_count_hint, 0) : 0;
       c.profession_active_ads = job ? num(job.profession_active_ads, 0) : 0;
       c.career_site_active_ads = job ? num(job.career_site_active_ads, 0) : 0;
-      c.ads_per_store = c.stores_count > 0 ? c.total_verified_ads / c.stores_count : null;
-      c.ads_per_1000_employees = c.employees_reported > 0 ? c.total_verified_ads / c.employees_reported * 1000 : null;
+
+      // Dashboardon ezt használjuk fő hirdetésszámként.
+      // A total_verified_ads csak a részletesen kinyert munkakörtípusok száma,
+      // a Profession / external_count_hint viszont az aktív hirdetési aktivitást méri.
+      c.effective_job_ads = Math.max(
+        c.profession_active_ads,
+        c.external_count_hint,
+        c.total_verified_ads
+      );
+
+      c.ads_per_store = c.stores_count > 0 ? c.effective_job_ads / c.stores_count : null;
+      c.ads_per_1000_employees = c.employees_reported > 0 ? c.effective_job_ads / c.employees_reported * 1000 : null;
 
       c.fin_revenue_bn = fin && fin.revenue_bn_huf !== null && fin.revenue_bn_huf !== undefined ? num(fin.revenue_bn_huf, 0) : num(c.revenue_2024_bn_huf, 0);
       c.net_profit_bn = fin && fin.net_profit_bn_huf !== null && fin.net_profit_bn_huf !== undefined ? num(fin.net_profit_bn_huf, 0) : null;
@@ -585,7 +599,7 @@ function renderPage(companies, salaries, workforce, stores, jobs, financials){
   const byEmployees = [...companies].filter(c => c.employees_reported > 0).sort((a,b) => b.employees_reported - a.employees_reported);
   const byEmployer = [...companies].sort((a,b) => b.employer_score - a.employer_score);
   const byEfficiency = [...companies].filter(c => c.work_hour_efficiency > 0).sort((a,b) => b.work_hour_efficiency - a.work_hour_efficiency);
-  const byJobAds = [...companies].filter(c => c.total_verified_ads > 0).sort((a,b) => b.total_verified_ads - a.total_verified_ads);
+  const byJobAds = [...companies].filter(c => c.effective_job_ads > 0).sort((a,b) => b.effective_job_ads - a.effective_job_ads);
   const byRating = [...companies].filter(c => c.profession_rating !== null).sort((a,b) => b.profession_rating - a.profession_rating);
   const byAdsPer1000 = [...companies].filter(c => c.ads_per_1000_employees !== null).sort((a,b) => b.ads_per_1000_employees - a.ads_per_1000_employees);
   const byRevenuePerEmployee = [...companies].filter(c => c.revenue_per_employee_huf !== null).sort((a,b) => b.revenue_per_employee_huf - a.revenue_per_employee_huf);
@@ -600,7 +614,7 @@ function renderPage(companies, salaries, workforce, stores, jobs, financials){
   document.getElementById('kpiEfficiencySub').textContent = byEfficiency[0] ? fmtHuf(byEfficiency[0].work_hour_efficiency) + ' / becsült munkaóra' : 'nettó árbevétel / munkaóra';
 
   document.getElementById('kpiJobAdsLeader').textContent = byJobAds[0] ? byJobAds[0].company : 'n.a.';
-  document.getElementById('kpiJobAdsSub').textContent = byJobAds[0] ? fmtNum(byJobAds[0].total_verified_ads) + ' hirdetés' : 'aktív ellenőrzött hirdetések';
+  document.getElementById('kpiJobAdsSub').textContent = byJobAds[0] ? fmtNum(byJobAds[0].effective_job_ads) + ' aktív hirdetés' : 'aktív ellenőrzött hirdetések';
 
   document.getElementById('kpiRatingLeader').textContent = byRating[0] ? byRating[0].company : 'n.a.';
   document.getElementById('kpiRatingSub').textContent = byRating[0] ? byRating[0].profession_rating + ' / 5 · ' + fmtNum(byRating[0].profession_review_count) + ' értékelés' : 'Profession értékelés';
@@ -662,7 +676,7 @@ function renderCharts(companies, byEmployer){
   ]);
 
   makeChart('jobAdsChart','bar',companies.map(c => c.company),[
-    {label:'Aktív ellenőrzött hirdetések', data:companies.map(c => num(c.total_verified_ads,0))}
+    {label:'Profession / becsült aktív hirdetés', data:companies.map(c => num(c.effective_job_ads,0))}
   ]);
 
   makeChart('jobPressureChart','bar',companies.map(c => c.company),[
@@ -793,7 +807,7 @@ function renderInsight(byEmployees, byEmployer, byEfficiency, byJobAds, byAdsPer
   }
 
   if(byJobAds[0]){
-    text += `A legtöbb ellenőrzött álláshirdetés jelenleg <b>${byJobAds[0].company}</b> esetében látható, ${fmtNum(byJobAds[0].total_verified_ads)} hirdetéssel. `;
+    text += `A legtöbb ellenőrzött álláshirdetés jelenleg <b>${byJobAds[0].company}</b> esetében látható, ${fmtNum(byJobAds[0].effective_job_ads)} hirdetéssel. `;
   }
 
   if(byRevenuePerEmployee[0]){
@@ -837,18 +851,21 @@ function renderJobPresence(jobs){
 }
 
 function renderJobTransparency(jobs){
+  const companies = state.companies || [];
   const salaryVisible = jobs.filter(j => j.salary_visible_in_examples === true).length;
-  const benefitVisible = jobs.filter(j => j.benefits_visible_in_examples === true).length;
-  const commutingVisible = jobs.filter(j => j.commuting_support_visible === true).length;
-  const fullTimeVisible = jobs.filter(j => j.full_time_visible === true).length;
-  const partTimeVisible = jobs.filter(j => j.part_time_visible === true).length;
+  const benefitVisible = companies.filter(c => c.profession_benefits_score > 0 || (c.jobs_data && c.jobs_data.benefits_visible_in_examples === true)).length;
+  const commutingVisible = companies.filter(c => c.benefit_data && c.benefit_data.commuting_support === true).length;
+  const cafeteriaVisible = companies.filter(c => c.benefit_data && c.benefit_data.cafeteria === true).length;
+  const bonusVisible = companies.filter(c => c.benefit_data && c.benefit_data.bonus === true).length;
+  const trainingVisible = companies.filter(c => c.benefit_data && c.benefit_data.training === true).length;
 
   document.getElementById('jobTransparencyBox').innerHTML = `
     <div class="metric-row"><span class="metric-name">Bér szerepel példahirdetésben</span><span class="metric-value">${salaryVisible}/${jobs.length}</span></div>
-    <div class="metric-row"><span class="metric-name">Juttatás szerepel</span><span class="metric-value">${benefitVisible}/${jobs.length}</span></div>
-    <div class="metric-row"><span class="metric-name">Bejárási támogatás szerepel</span><span class="metric-value">${commutingVisible}/${jobs.length}</span></div>
-    <div class="metric-row"><span class="metric-name">Teljes munkaidő szerepel</span><span class="metric-value">${fullTimeVisible}/${jobs.length}</span></div>
-    <div class="metric-row"><span class="metric-name">Részmunkaidő szerepel</span><span class="metric-value">${partTimeVisible}/${jobs.length}</span></div>
+    <div class="metric-row"><span class="metric-name">Juttatás szerepel</span><span class="metric-value">${benefitVisible}/${companies.length}</span></div>
+    <div class="metric-row"><span class="metric-name">Bejárási támogatás szerepel</span><span class="metric-value">${commutingVisible}/${companies.length}</span></div>
+    <div class="metric-row"><span class="metric-name">Cafeteria szerepel</span><span class="metric-value">${cafeteriaVisible}/${companies.length}</span></div>
+    <div class="metric-row"><span class="metric-name">Bónusz szerepel</span><span class="metric-value">${bonusVisible}/${companies.length}</span></div>
+    <div class="metric-row"><span class="metric-name">Képzés szerepel</span><span class="metric-value">${trainingVisible}/${companies.length}</span></div>
   `;
 }
 
@@ -858,7 +875,7 @@ function renderJobsTable(companies){
       <tr>
         <th>Cég</th>
         <th>Snapshot</th>
-        <th>Összes ellenőrzött hirdetés</th>
+        <th>Aktív hirdetés</th>
         <th>Profession</th>
         <th>Bolti</th>
         <th>Raktári</th>
@@ -879,7 +896,7 @@ function renderJobsTable(companies){
           <tr>
             <td><b>${n(c.company)}</b></td>
             <td>${n(j.snapshot_date)}</td>
-            <td><b>${fmtNum(j.total_verified_ads)}</b></td>
+            <td><b>${fmtNum(c.effective_job_ads)}</b></td>
             <td>${fmtNum(j.profession_active_ads)}</td>
             <td>${fmtNum(j.store_jobs)}</td>
             <td>${fmtNum(j.warehouse_jobs)}</td>
@@ -963,7 +980,7 @@ function renderWorkforceTable(companies){
             <td><b>${n(c.company)}</b></td>
             <td>${fmtNum(w.employees_reported)}</td>
             <td>${fmtNum(c.stores_count)}</td>
-            <td>${fmtNum(c.total_verified_ads)}</td>
+            <td>${fmtNum(c.effective_job_ads)}</td>
             <td>${fmtDecimal(c.ads_per_store)}</td>
             <td>${fmtDecimal(c.ads_per_1000_employees)}</td>
             <td>${fmtNum(w.estimated_annual_hours)}</td>
