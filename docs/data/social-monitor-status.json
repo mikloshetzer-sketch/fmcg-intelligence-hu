@@ -1,30 +1,48 @@
 {
-  "updated_at": "2026-06-09T07:32:23.853725+00:00",
+  "updated_at": "2026-06-09T09:45:43.704673+00:00",
   "status": "ok",
-  "version": "social-signal-layer-v1.3-profile-based",
+  "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "companies": [
     {
       "company": "Lidl",
-      "mentions": 19,
-      "weighted_mentions": 13.75,
-      "hu_relevant_mentions": 12,
-      "index": 52,
+      "mentions": 9,
+      "raw_mentions": 9,
+      "dashboard_mentions": 8,
+      "background_mentions": 1,
+      "discarded_mentions": 0,
+      "weighted_mentions": 8.5,
+      "hu_relevant_mentions": 8,
+      "index": 48,
       "sources": {
-        "reddit": 16,
-        "youtube": 2,
+        "reddit": 8,
+        "youtube": 0,
         "mastodon": 1
       },
-      "sentiment": "positive",
+      "raw_sources": {
+        "reddit": 8,
+        "youtube": 0,
+        "mastodon": 1
+      },
+      "sentiment": "neutral",
       "topic": "árak és akciók",
       "errors": []
     },
     {
       "company": "SPAR",
       "mentions": 2,
-      "weighted_mentions": 1.25,
+      "raw_mentions": 2,
+      "dashboard_mentions": 1,
+      "background_mentions": 1,
+      "discarded_mentions": 0,
+      "weighted_mentions": 1.5,
       "hu_relevant_mentions": 1,
       "index": 16,
       "sources": {
+        "reddit": 0,
+        "youtube": 2,
+        "mastodon": 0
+      },
+      "raw_sources": {
         "reddit": 0,
         "youtube": 2,
         "mastodon": 0
@@ -35,26 +53,44 @@
     },
     {
       "company": "Tesco",
-      "mentions": 19,
-      "weighted_mentions": 8.5,
+      "mentions": 7,
+      "raw_mentions": 19,
+      "dashboard_mentions": 5,
+      "background_mentions": 2,
+      "discarded_mentions": 12,
+      "weighted_mentions": 6.0,
       "hu_relevant_mentions": 5,
-      "index": 44,
+      "index": 29,
       "sources": {
+        "reddit": 7,
+        "youtube": 0,
+        "mastodon": 0
+      },
+      "raw_sources": {
         "reddit": 19,
         "youtube": 0,
         "mastodon": 0
       },
       "sentiment": "positive",
-      "topic": "bolti élmény",
+      "topic": "árak és akciók",
       "errors": []
     },
     {
       "company": "ALDI",
       "mentions": 6,
+      "raw_mentions": 6,
+      "dashboard_mentions": 6,
+      "background_mentions": 0,
+      "discarded_mentions": 0,
       "weighted_mentions": 6.0,
       "hu_relevant_mentions": 6,
       "index": 29,
       "sources": {
+        "reddit": 6,
+        "youtube": 0,
+        "mastodon": 0
+      },
+      "raw_sources": {
         "reddit": 6,
         "youtube": 0,
         "mastodon": 0
@@ -66,10 +102,19 @@
     {
       "company": "Penny",
       "mentions": 0,
+      "raw_mentions": 0,
+      "dashboard_mentions": 0,
+      "background_mentions": 0,
+      "discarded_mentions": 0,
       "weighted_mentions": 0,
       "hu_relevant_mentions": 0,
       "index": 0,
       "sources": {
+        "reddit": 0,
+        "youtube": 0,
+        "mastodon": 0
+      },
+      "raw_sources": {
         "reddit": 0,
         "youtube": 0,
         "mastodon": 0
@@ -81,10 +126,19 @@
     {
       "company": "Auchan",
       "mentions": 0,
+      "raw_mentions": 0,
+      "dashboard_mentions": 0,
+      "background_mentions": 0,
+      "discarded_mentions": 0,
       "weighted_mentions": 0,
       "hu_relevant_mentions": 0,
       "index": 0,
       "sources": {
+        "reddit": 0,
+        "youtube": 0,
+        "mastodon": 0
+      },
+      "raw_sources": {
         "reddit": 0,
         "youtube": 0,
         "mastodon": 0
@@ -96,10 +150,19 @@
     {
       "company": "CBA",
       "mentions": 2,
+      "raw_mentions": 2,
+      "dashboard_mentions": 2,
+      "background_mentions": 0,
+      "discarded_mentions": 0,
       "weighted_mentions": 2.0,
       "hu_relevant_mentions": 2,
       "index": 16,
       "sources": {
+        "reddit": 0,
+        "youtube": 2,
+        "mastodon": 0
+      },
+      "raw_sources": {
         "reddit": 0,
         "youtube": 2,
         "mastodon": 0
@@ -119,7 +182,10 @@
     "max_items_per_source_per_company": 40,
     "company_context_filter": true,
     "hungarian_relevance_weighting": true,
+    "dashboard_relevance_threshold": 0.8,
+    "background_relevance_threshold": 0.5,
+    "discard_below": 0.5,
     "company_profiles": "/home/runner/work/fmcg-intelligence-hu/fmcg-intelligence-hu/docs/data/company-profiles.json"
   },
-  "method_note": "Social Signal Layer V1.3 profile-based. Óvatos, nyílt forrású jelzőrendszer frissességi, relevancia- és magyar piaci súlyozással."
+  "method_note": "Social Signal Layer V1.4. Óvatos, nyílt forrású jelzőrendszer szigorúbb HU relevancia-szűréssel, dashboard/background/discarded bontással és topic-szintű sentiment réteggel."
 }
