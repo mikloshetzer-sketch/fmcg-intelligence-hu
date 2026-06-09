@@ -129,7 +129,22 @@ def region_from_city(city):
     return REGION_CITY_MAP.get((city or "").lower(), "n.a.")
 
 
-def build_overpass_query(brand_values):
+def load_existing_stores():
+    if not OUT_FILE.exists():
+        return []
+
+    try:
+        payload = json.loads(OUT_FILE.read_text(encoding="utf-8"))
+        return payload.get("stores", [])
+    except Exception:
+        return []
+
+
+def stores_by_company(stores, company):
+    return [store for store in stores if store.get("company") == company]
+
+
+def build_brand_query(brand_values):
     filters = []
 
     for value in brand_values:
@@ -152,16 +167,39 @@ out center tags;
 """
 
 
-def fetch_overpass(query):
+def build_safe_name_operator_query(company):
+    escaped = company.replace('"', '\\"')
+
+    return f"""
+[out:json][timeout:120];
+area["ISO3166-1"="HU"][admin_level=2]->.searchArea;
+(
+  node["shop"="supermarket"]["name"~"^{escaped}$",i](area.searchArea);
+  way["shop"="supermarket"]["name"~"^{escaped}$",i](area.searchArea);
+  relation["shop"="supermarket"]["name"~"^{escaped}$",i](area.searchArea);
+
+  node["shop"="convenience"]["name"~"^{escaped}$",i](area.searchArea);
+  way["shop"="convenience"]["name"~"^{escaped}$",i](area.searchArea);
+  relation["shop"="convenience"]["name"~"^{escaped}$",i](area.searchArea);
+
+  node["shop"="supermarket"]["operator"~"^{escaped}$",i](area.searchArea);
+  way["shop"="supermarket"]["operator"~"^{escaped}$",i](area.searchArea);
+  relation["shop"="supermarket"]["operator"~"^{escaped}$",i](area.searchArea);
+);
+out center tags;
+"""
+
+
+def fetch_overpass(query, timeout=220):
     headers = {
-        "User-Agent": "fmcg-intelligence-hu-store-network-builder/1.4"
+        "User-Agent": "fmcg-intelligence-hu-store-network-builder/1.5"
     }
 
     response = requests.post(
         OVERPASS_URL,
         data={"data": query},
         headers=headers,
-        timeout=240
+        timeout=timeout
     )
 
     response.raise_for_status()
@@ -210,20 +248,24 @@ def extract_address(tags):
     return ", ".join(parts) if parts else "n.a."
 
 
-def normalize_company_from_brand(raw_brand, expected_company):
-    raw = (raw_brand or "").lower()
+def normalize_company_from_tags(tags, expected_company):
+    text = " ".join([
+        tags.get("brand", ""),
+        tags.get("name", ""),
+        tags.get("operator", "")
+    ]).lower()
 
-    if "lidl" in raw:
+    if "lidl" in text:
         return "Lidl"
-    if "aldi" in raw:
+    if "aldi" in text:
         return "ALDI"
-    if "spar" in raw:
+    if "spar" in text:
         return "SPAR"
-    if "tesco" in raw:
+    if "tesco" in text:
         return "Tesco"
-    if "auchan" in raw:
+    if "auchan" in text:
         return "Auchan"
-    if "penny" in raw:
+    if "penny" in text:
         return "Penny"
 
     return expected_company
@@ -236,10 +278,8 @@ def parse_osm_element(element, expected_company):
     if lat is None or lon is None:
         return None
 
-    raw_brand = tags.get("brand") or expected_company
-    company = normalize_company_from_brand(raw_brand, expected_company)
-
-    name = tags.get("name") or f"{company} üzlet"
+    company = normalize_company_from_tags(tags, expected_company)
+    name = tags.get("name") or tags.get("brand") or f"{company} üzlet"
     city = extract_city(tags)
     address = extract_address(tags)
 
@@ -259,7 +299,8 @@ def parse_osm_element(element, expected_company):
         "source": "openstreetmap_overpass",
         "osm_type": osm_type,
         "osm_id": osm_id,
-        "brand": raw_brand,
+        "brand": tags.get("brand", ""),
+        "operator": tags.get("operator", ""),
         "keywords": [
             name,
             f"{company} {city}",
@@ -328,48 +369,79 @@ def deduplicate(stores):
     return result
 
 
-def collect_osm_stores():
+def fetch_company_stores(company, brand_values):
+    stores = []
+    notes = []
+
+    try:
+        data = fetch_overpass(build_brand_query(brand_values), timeout=220)
+
+        for element in data.get("elements", []):
+            store = parse_osm_element(element, company)
+            if store:
+                stores.append(store)
+
+        stores = deduplicate(stores)
+        notes.append(f"brand_query={len(stores)}")
+
+    except Exception as exc:
+        notes.append(f"brand_query_error={exc}")
+
+    # Lidl esetében óvatos extra próbálkozás.
+    # Nem használunk tág contains keresést, mert az akasztotta meg korábban a workflow-t.
+    if company == "Lidl" and len(stores) == 0:
+        try:
+            data = fetch_overpass(build_safe_name_operator_query("Lidl"), timeout=150)
+
+            for element in data.get("elements", []):
+                store = parse_osm_element(element, company)
+                if store:
+                    stores.append(store)
+
+            stores = deduplicate(stores)
+            notes.append(f"safe_name_operator_query={len(stores)}")
+
+        except Exception as exc:
+            notes.append(f"safe_name_operator_error={exc}")
+
+    return stores, notes
+
+
+def collect_osm_stores(existing_stores):
     stores = []
     status_companies = []
 
     for company, brand_values in BRANDS.items():
         print(f"Fetching {company} from OSM...")
 
-        try:
-            query = build_overpass_query(brand_values)
-            data = fetch_overpass(query)
+        company_stores, notes = fetch_company_stores(company, brand_values)
 
-            company_stores = []
+        if len(company_stores) == 0:
+            previous = stores_by_company(existing_stores, company)
 
-            for element in data.get("elements", []):
-                store = parse_osm_element(element, company)
-                if store:
-                    company_stores.append(store)
+            if previous:
+                company_stores = previous
+                source_mode = "fallback_previous_store_network"
+                status = "fallback_previous"
+            else:
+                source_mode = "openstreetmap_overpass"
+                status = "empty"
+        else:
+            source_mode = "openstreetmap_overpass"
+            status = "ok"
 
-            company_stores = deduplicate(company_stores)
-            stores.extend(company_stores)
+        stores.extend(company_stores)
 
-            status_companies.append({
-                "company": company,
-                "source": "openstreetmap_overpass",
-                "status": "ok",
-                "stores": len(company_stores),
-                "brand_values": brand_values
-            })
+        status_companies.append({
+            "company": company,
+            "source": source_mode,
+            "status": status,
+            "stores": len(company_stores),
+            "brand_values": brand_values,
+            "notes": notes
+        })
 
-            print(f"{company}: {len(company_stores)} stores")
-
-        except Exception as exc:
-            status_companies.append({
-                "company": company,
-                "source": "openstreetmap_overpass",
-                "status": "error",
-                "stores": 0,
-                "brand_values": brand_values,
-                "error": str(exc)
-            })
-
-            print(f"{company}: ERROR {exc}")
+        print(f"{company}: {len(company_stores)} stores ({status})")
 
         time.sleep(FETCH_SLEEP)
 
@@ -381,7 +453,8 @@ def main():
 
     updated_at = now_iso()
 
-    osm_stores, status_companies = collect_osm_stores()
+    existing_stores = load_existing_stores()
+    osm_stores, status_companies = collect_osm_stores(existing_stores)
     override_stores = load_overrides()
 
     all_stores = deduplicate(osm_stores + override_stores)
@@ -399,12 +472,13 @@ def main():
 
     payload = {
         "updated_at": updated_at,
-        "version": "store-network-hu-v1.4-osm-safe-plus-overrides",
-        "scope": "Hungarian FMCG store network from OSM + optional overrides",
+        "version": "store-network-hu-v1.5-safe-osm-with-fallback",
+        "scope": "Hungarian FMCG store network from OSM + fallback + optional overrides",
         "method_note": (
-            "Az országos bolthálózati adatbázis biztonságos OSM/Overpass brand alapú lekérdezésekből "
-            "és opcionális manuális override fájlból épül. Ez a verzió nem használ tág name/operator regexet, "
-            "ezért nem akasztja meg az Overpass szervert. Az adatok nem hivatalos teljes üzletlisták."
+            "Az országos bolthálózati adatbázis biztonságos OSM/Overpass lekérdezésekből, "
+            "korábbi sikeres lekérdezések visszatartásából és opcionális override fájlból épül. "
+            "Ha egy új OSM futás egy láncra 0 találatot ad, a script megtartja a korábbi store-network-hu.json "
+            "adott láncra vonatkozó adatait. Ez stabilabb, mint a túl tág name/operator keresés."
         ),
         "stores": all_stores
     }
@@ -412,8 +486,8 @@ def main():
     status = {
         "updated_at": updated_at,
         "status": "ok",
-        "version": "store-network-hu-v1.4-osm-safe-plus-overrides",
-        "source": "openstreetmap_overpass_plus_optional_overrides",
+        "version": "store-network-hu-v1.5-safe-osm-with-fallback",
+        "source": "openstreetmap_overpass_plus_fallback_plus_optional_overrides",
         "store_count": len(all_stores),
         "company_totals": company_totals,
         "source_totals": source_totals,
@@ -423,7 +497,8 @@ def main():
             "osm_shop": ["supermarket", "convenience"],
             "searched_tag": "brand",
             "brands": BRANDS,
-            "override_file": str(OVERRIDE_FILE)
+            "override_file": str(OVERRIDE_FILE),
+            "fallback_previous_store_network": True
         }
     }
 
