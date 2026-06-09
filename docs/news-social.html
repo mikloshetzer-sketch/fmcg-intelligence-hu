@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FMCG Intelligence Hungary – News, Reputation & Social Monitor V6.5</title>
+  <title>FMCG Intelligence Hungary – News, Reputation & Social Monitor V6.6.6.5</title>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="./css/style.css" />
@@ -96,6 +96,14 @@
     .risk-high{color:#b91c1c;font-weight:900}.risk-medium{color:#c2410c;font-weight:900}.risk-low{color:#166534;font-weight:900}
     .error{margin-bottom:18px;border:1px solid #fecaca;background:#fef2f2;color:#991b1b;border-radius:16px;padding:16px;line-height:1.6;}
 
+
+    .ownership-table td,.ownership-table th{font-size:12px;}
+    .ownership-cell{min-width:88px;}
+    .ownership-value{font-weight:950;color:var(--navy);font-size:12px;}
+    .ownership-bar{height:6px;background:#e5edf5;border-radius:99px;overflow:hidden;margin-top:5px;}
+    .ownership-fill{height:100%;background:linear-gradient(90deg,var(--blue),var(--green));}
+    .ownership-topic{max-width:210px;white-space:normal!important;line-height:1.25;}
+
     details{border:1px solid #dbe7f2;border-radius:18px;background:white;box-shadow:var(--shadow);overflow:hidden;}
     details+details{margin-top:14px;}
     summary{cursor:pointer;padding:18px 20px;font-weight:950;color:var(--navy);list-style:none;display:flex;justify-content:space-between;align-items:center;}
@@ -165,7 +173,7 @@
   <div class="header-inner">
     <div class="brand">
       <div class="brand-title">FMCG Intelligence Hungary</div>
-      <div class="brand-subtitle">News, Reputation & Social Monitor V6.5</div>
+      <div class="brand-subtitle">News, Reputation & Social Monitor V6.6.5</div>
     </div>
     <nav class="nav">
       <a href="./index.html">Dashboard</a>
@@ -179,7 +187,7 @@
 
 <section class="hero">
   <div class="hero-box">
-    <div class="hero-kicker">News, Reputation & Social Intelligence V6.5</div>
+    <div class="hero-kicker">News, Reputation & Social Intelligence V6.6.5</div>
     <h1>FMCG média-, kockázati-, social- és reputációs intelligence központ</h1>
     <p>
       A friss hírmonitor a <b>news-social.json</b> fájlból dolgozik. A történeti háttér a
@@ -353,6 +361,21 @@
 
     <div class="card span6">
       <div class="section-title">
+        <h2>Narrative Ownership Matrix</h2>
+        <span>melyik lánc milyen arányban jelenik meg az egyes médiatémákban</span>
+      </div>
+      <div id="narrativeOwnershipMatrix" class="matrix-wrap compact-table">Adatok betöltése...</div>
+      <div class="chart-insight" id="narrativeOwnershipInsight">Adatok betöltése...</div>
+      <div class="block-explain">
+        <b>Mit látunk?</b> Ez a blokk azt mutatja, hogy az egyes piaci narratívák mely láncokhoz kötődnek a legerősebben.
+        Nem piaci részesedést mér, hanem médiamegjelenési koncentrációt.
+        Így látszik, hogy például a verseny, növekedés, munkaerő vagy ellátási lánc témákban ki uralja a hírtér egy részét.
+        Ez segít megérteni, nemcsak miről szól a piac, hanem azt is, kiről szól az adott téma.
+      </div>
+    </div>
+
+    <div class="card span6">
+      <div class="section-title">
         <h2>Top Social Topics</h2>
         <span>social monitor alapján</span>
       </div>
@@ -363,6 +386,21 @@
         Más képet adhat, mint a médiatér: a vásárlói panaszok, akciók vagy bolti élmények itt erősebben megjelenhetnek.
         A témapontszám kulcsszavas súlyozásból készül.
         A blokk célja annak megértése, hogy miről beszélnek az emberek, nem csak miről ír a sajtó.
+      </div>
+    </div>
+
+    <div class="card span6">
+      <div class="section-title">
+        <h2>Social Topic Ownership Matrix</h2>
+        <span>melyik lánc körül jelennek meg az egyes social témák</span>
+      </div>
+      <div id="socialOwnershipMatrix" class="matrix-wrap compact-table">Adatok betöltése...</div>
+      <div class="chart-insight" id="socialOwnershipInsight">Adatok betöltése...</div>
+      <div class="block-explain">
+        <b>Mit látunk?</b> Ez a mátrix azt mutatja, hogy egy-egy social téma mely szereplőkhöz kapcsolódik leginkább.
+        A social térben az árak, bolti élmények, digitalizáció vagy munkaerő más arányban jelenhet meg, mint a hírekben.
+        Az arányok a social-monitor.json top témáiból készülnek.
+        A blokk célja, hogy látszódjon, kiről beszélnek az emberek az adott témában.
       </div>
     </div>
 
@@ -570,7 +608,7 @@
   </div>
 </main>
 
-<footer class="footer">FMCG Intelligence Hungary – News, Reputation & Social Monitor V6.5.</footer>
+<footer class="footer">FMCG Intelligence Hungary – News, Reputation & Social Monitor V6.6.6.5.</footer>
 
 <script>
 const currentUrl = './data/news-social.json';
@@ -709,7 +747,9 @@ function renderPage(current,currentStatus,history,historyStatus,social,socialSta
   renderRiskRanking(companies);
   renderSocialRanking(social);
   renderCurrentNarratives(companies,current);
+  renderNarrativeOwnershipMatrix(companies,current);
   renderSocialTopics(social);
+  renderSocialTopicOwnershipMatrix(social);
   renderMediaSocial(companies,current,socialMap);
   renderSocialHistory(socialHistory);
   renderHuSocialItems(social);
@@ -836,6 +876,7 @@ function renderStoreReputationSummary(storeData){
 
   const leader=[...companies].sort((a,b)=>num(b.review_signal_index)-num(a.review_signal_index))[0];
   const mostDiscussed=[...stores].sort((a,b)=>num(b.store_mentions)-num(a.store_mentions))[0];
+  const topChainByMentions=[...companies].sort((a,b)=>num(b.store_mentions)-num(a.store_mentions))[0];
   const warningStores=stores.filter(s=>num(s.review_signal_index)>=40 || s.review_sentiment==='negative' || s.review_sentiment==='mixed');
 
   const topicCounts={};
@@ -866,6 +907,11 @@ function renderStoreReputationSummary(storeData){
         <div class="kpi-label">Dominant Store Topic</div>
         <div class="reputation-value">${dominantTopic}</div>
         <div class="small">áruházi reputációs téma</div>
+      </div>
+      <div class="reputation-tile">
+        <div class="kpi-label">Top Store Chain</div>
+        <div class="reputation-value">${topChainByMentions?.company || 'n.a.'}</div>
+        <div class="small">összes említés: ${fmtNum(topChainByMentions?.store_mentions || 0)}</div>
       </div>
     </div>
   `;
@@ -1000,6 +1046,86 @@ function renderCurrentNarratives(companies,data){
   document.getElementById('currentNarrativeInsight').innerHTML=`A friss hírekben a legerősebb piaci narratíva: <b>${labels[0]||'n.a.'}</b>.`;
 }
 
+
+
+function buildOwnershipTable(rows, labels, titleLabel){
+  if(!rows.length || !labels.length){
+    return '<div class="notice">Nincs elég adat az ownership mátrixhoz.</div>';
+  }
+
+  return `
+    <table class="matrix-table ownership-table">
+      <thead>
+        <tr>
+          <th>${titleLabel}</th>
+          ${labels.map(label=>`<th>${label}</th>`).join('')}
+        </tr>
+      </thead>
+      <tbody>
+        ${rows.map(row=>`
+          <tr>
+            <td class="ownership-topic"><b>${row.topic}</b><div class="small">összes súly: ${fmtNum(row.total)}</div></td>
+            ${labels.map(label=>{
+              const pct=num(row.percentages[label]);
+              const value=num(row.values[label]);
+              return `
+                <td class="ownership-cell">
+                  <div class="ownership-value">${pct ? Math.round(pct) + '%' : '–'}</div>
+                  <div class="small">${value ? fmtNum(value) : ''}</div>
+                  <div class="ownership-bar"><div class="ownership-fill" style="width:${Math.min(100,pct)}%"></div></div>
+                </td>
+              `;
+            }).join('')}
+          </tr>
+        `).join('')}
+      </tbody>
+    </table>
+  `;
+}
+
+function renderNarrativeOwnershipMatrix(companies,data){
+  const companyLabels=companies.map(c=>c.company);
+  const topicTotals={};
+
+  companies.forEach(c=>{
+    Object.entries(c.strategic_narratives || {}).forEach(([topic,value])=>{
+      if(topic==='general' || topic==='n.a.') return;
+      topicTotals[topic]=(topicTotals[topic]||0)+num(value);
+    });
+  });
+
+  const topTopics=Object.entries(topicTotals)
+    .sort((a,b)=>b[1]-a[1])
+    .slice(0,7)
+    .map(([topic])=>topic);
+
+  const rows=topTopics.map(topic=>{
+    const values={};
+    let total=0;
+    companies.forEach(c=>{
+      const value=num(c.strategic_narratives?.[topic]);
+      values[c.company]=value;
+      total+=value;
+    });
+    const percentages={};
+    companies.forEach(c=>{
+      percentages[c.company]=total ? (values[c.company]/total)*100 : 0;
+    });
+    return {topic:narrativeLabel(topic,data), rawTopic:topic, total, values, percentages};
+  });
+
+  document.getElementById('narrativeOwnershipMatrix').innerHTML=buildOwnershipTable(rows,companyLabels,'Narratíva');
+
+  const strongest=rows.map(row=>{
+    const leader=companyLabels.map(c=>({company:c,pct:num(row.percentages[c])})).sort((a,b)=>b.pct-a.pct)[0];
+    return {topic:row.topic, leader:leader?.company, pct:leader?.pct || 0};
+  }).sort((a,b)=>b.pct-a.pct)[0];
+
+  document.getElementById('narrativeOwnershipInsight').innerHTML=
+    strongest ? `A legerősebb narratíva-tulajdonosi jel: <b>${strongest.topic}</b> témában <b>${strongest.leader}</b> jelenik meg a legnagyobb arányban (${Math.round(strongest.pct)}%).` :
+    'Nincs elég adat a narratíva-tulajdonosi arányokhoz.';
+}
+
 function renderSocialTopics(social){
   const totals={};
   socialItems(social).forEach(s=>{
@@ -1010,6 +1136,53 @@ function renderSocialTopics(social){
   const rows=Object.entries(totals).sort((a,b)=>b[1]-a[1]).slice(0,8);
   makeChart('socialTopicChart','bar',rows.map(r=>r[0]),[{label:'Social topic score',data:rows.map(r=>r[1])}],{indexAxis:'y'});
   document.getElementById('socialTopicInsight').innerHTML=`A legerősebb social téma: <b>${rows[0]?.[0]||'n.a.'}</b>. Ez nem médiatéma, hanem nyílt social visszhang.`;
+}
+
+
+
+function renderSocialTopicOwnershipMatrix(social){
+  const items=socialItems(social);
+  const companyLabels=items.map(s=>s.company);
+  const topicTotals={};
+
+  items.forEach(s=>{
+    (s.top_social_topics || []).forEach(topicItem=>{
+      const topic=topicItem.topic;
+      topicTotals[topic]=(topicTotals[topic]||0)+num(topicItem.score);
+    });
+  });
+
+  const topTopics=Object.entries(topicTotals)
+    .sort((a,b)=>b[1]-a[1])
+    .slice(0,7)
+    .map(([topic])=>topic);
+
+  const rows=topTopics.map(topic=>{
+    const values={};
+    let total=0;
+    items.forEach(s=>{
+      const match=(s.top_social_topics || []).find(x=>x.topic===topic);
+      const value=num(match?.score);
+      values[s.company]=value;
+      total+=value;
+    });
+    const percentages={};
+    items.forEach(s=>{
+      percentages[s.company]=total ? (values[s.company]/total)*100 : 0;
+    });
+    return {topic, total, values, percentages};
+  });
+
+  document.getElementById('socialOwnershipMatrix').innerHTML=buildOwnershipTable(rows,companyLabels,'Social téma');
+
+  const strongest=rows.map(row=>{
+    const leader=companyLabels.map(c=>({company:c,pct:num(row.percentages[c])})).sort((a,b)=>b.pct-a.pct)[0];
+    return {topic:row.topic, leader:leader?.company, pct:leader?.pct || 0};
+  }).sort((a,b)=>b.pct-a.pct)[0];
+
+  document.getElementById('socialOwnershipInsight').innerHTML=
+    strongest ? `A legerősebb social téma-tulajdonosi jel: <b>${strongest.topic}</b> témában <b>${strongest.leader}</b> kapcsolódik a legnagyobb arányban (${Math.round(strongest.pct)}%).` :
+    'Nincs elég adat a social téma-tulajdonosi arányokhoz.';
 }
 
 function renderMediaSocial(companies,data,socialMap){
