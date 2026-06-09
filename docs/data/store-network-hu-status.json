@@ -1,52 +1,49 @@
 {
-  "updated_at": "2026-06-09T12:52:22.128596+00:00",
+  "updated_at": "2026-06-09T13:21:25.205649+00:00",
   "status": "ok",
-  "version": "store-network-hu-v1.4-osm-safe-plus-overrides",
-  "source": "openstreetmap_overpass_plus_optional_overrides",
-  "store_count": 448,
+  "version": "store-network-hu-v2.0-non-lidl-osm",
+  "source": "openstreetmap_overpass_non_lidl_plus_fallback_plus_optional_overrides",
+  "store_count": 1156,
   "company_totals": {
+    "ALDI": 188,
     "Auchan": 24,
     "Penny": 242,
+    "SPAR": 520,
     "Tesco": 182
   },
   "source_totals": {
-    "openstreetmap_overpass": 448
+    "openstreetmap_overpass": 1156
   },
   "companies": [
     {
-      "company": "Lidl",
-      "source": "openstreetmap_overpass",
-      "status": "error",
-      "stores": 0,
-      "brand_values": [
-        "Lidl",
-        "LIDL"
-      ],
-      "error": "504 Server Error: Gateway Timeout for url: https://overpass-api.de/api/interpreter"
-    },
-    {
       "company": "ALDI",
       "source": "openstreetmap_overpass",
-      "status": "error",
-      "stores": 0,
+      "status": "ok",
+      "stores": 188,
       "brand_values": [
         "ALDI",
         "Aldi"
       ],
-      "error": "504 Server Error: Gateway Timeout for url: https://overpass-api.de/api/interpreter"
+      "notes": [
+        "exact_brand_error=HTTPSConnectionPool(host='overpass.kumi.systems', port=443): Read timed out. (read timeout=150)",
+        "regex_brand=188 via https://overpass-api.de/api/interpreter"
+      ]
     },
     {
       "company": "SPAR",
       "source": "openstreetmap_overpass",
-      "status": "error",
-      "stores": 0,
+      "status": "ok",
+      "stores": 520,
       "brand_values": [
         "SPAR",
         "Spar",
         "INTERSPAR",
         "Interspar"
       ],
-      "error": "504 Server Error: Gateway Timeout for url: https://overpass-api.de/api/interpreter"
+      "notes": [
+        "exact_brand=520 via https://overpass-api.de/api/interpreter",
+        "regex_brand=520 via https://overpass-api.de/api/interpreter"
+      ]
     },
     {
       "company": "Tesco",
@@ -56,6 +53,10 @@
       "brand_values": [
         "Tesco",
         "TESCO"
+      ],
+      "notes": [
+        "exact_brand=182 via https://overpass.kumi.systems/api/interpreter",
+        "regex_brand=182 via https://overpass-api.de/api/interpreter"
       ]
     },
     {
@@ -66,6 +67,10 @@
       "brand_values": [
         "Auchan",
         "AUCHAN"
+      ],
+      "notes": [
+        "exact_brand=24 via https://overpass-api.de/api/interpreter",
+        "regex_brand_error=HTTPSConnectionPool(host='overpass.kumi.systems', port=443): Read timed out. (read timeout=150)"
       ]
     },
     {
@@ -78,6 +83,10 @@
         "PENNY",
         "Penny Market",
         "PENNY Market"
+      ],
+      "notes": [
+        "exact_brand=242 via https://overpass-api.de/api/interpreter",
+        "regex_brand=242 via https://overpass.kumi.systems/api/interpreter"
       ]
     }
   ],
@@ -87,37 +96,18 @@
       "supermarket",
       "convenience"
     ],
-    "searched_tag": "brand",
-    "brands": {
-      "Lidl": [
-        "Lidl",
-        "LIDL"
-      ],
-      "ALDI": [
-        "ALDI",
-        "Aldi"
-      ],
-      "SPAR": [
-        "SPAR",
-        "Spar",
-        "INTERSPAR",
-        "Interspar"
-      ],
-      "Tesco": [
-        "Tesco",
-        "TESCO"
-      ],
-      "Auchan": [
-        "Auchan",
-        "AUCHAN"
-      ],
-      "Penny": [
-        "Penny",
-        "PENNY",
-        "Penny Market",
-        "PENNY Market"
-      ]
-    },
-    "override_file": "/home/runner/work/fmcg-intelligence-hu/fmcg-intelligence-hu/docs/data/store-network-overrides.json"
+    "searched_tags": [
+      "brand"
+    ],
+    "companies_from_osm": [
+      "ALDI",
+      "SPAR",
+      "Tesco",
+      "Auchan",
+      "Penny"
+    ],
+    "lidl_strategy": "separate_static_list_later",
+    "override_file": "/home/runner/work/fmcg-intelligence-hu/fmcg-intelligence-hu/docs/data/store-network-overrides.json",
+    "fallback_previous_store_network": true
   }
 }
