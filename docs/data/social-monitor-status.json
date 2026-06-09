@@ -1,63 +1,73 @@
 {
-  "updated_at": "2026-06-09T07:20:39.947097+00:00",
+  "updated_at": "2026-06-09T07:32:23.853725+00:00",
   "status": "ok",
-  "version": "social-signal-layer-v1.2",
+  "version": "social-signal-layer-v1.3-profile-based",
   "companies": [
     {
       "company": "Lidl",
-      "mentions": 29,
-      "index": 65,
+      "mentions": 19,
+      "weighted_mentions": 13.75,
+      "hu_relevant_mentions": 12,
+      "index": 52,
       "sources": {
-        "reddit": 7,
-        "youtube": 4,
-        "mastodon": 18
-      },
-      "sentiment": "negative",
-      "topic": "árak és akciók",
-      "errors": []
-    },
-    {
-      "company": "SPAR",
-      "mentions": 28,
-      "index": 58,
-      "sources": {
-        "reddit": 0,
-        "youtube": 8,
-        "mastodon": 20
-      },
-      "sentiment": "mixed",
-      "topic": "bolti élmény",
-      "errors": []
-    },
-    {
-      "company": "Tesco",
-      "mentions": 11,
-      "index": 40,
-      "sources": {
-        "reddit": 0,
-        "youtube": 0,
-        "mastodon": 11
-      },
-      "sentiment": "negative",
-      "topic": "bolti élmény",
-      "errors": []
-    },
-    {
-      "company": "ALDI",
-      "mentions": 23,
-      "index": 55,
-      "sources": {
-        "reddit": 6,
-        "youtube": 0,
-        "mastodon": 17
+        "reddit": 16,
+        "youtube": 2,
+        "mastodon": 1
       },
       "sentiment": "positive",
       "topic": "árak és akciók",
       "errors": []
     },
     {
+      "company": "SPAR",
+      "mentions": 2,
+      "weighted_mentions": 1.25,
+      "hu_relevant_mentions": 1,
+      "index": 16,
+      "sources": {
+        "reddit": 0,
+        "youtube": 2,
+        "mastodon": 0
+      },
+      "sentiment": "neutral",
+      "topic": "árak és akciók",
+      "errors": []
+    },
+    {
+      "company": "Tesco",
+      "mentions": 19,
+      "weighted_mentions": 8.5,
+      "hu_relevant_mentions": 5,
+      "index": 44,
+      "sources": {
+        "reddit": 19,
+        "youtube": 0,
+        "mastodon": 0
+      },
+      "sentiment": "positive",
+      "topic": "bolti élmény",
+      "errors": []
+    },
+    {
+      "company": "ALDI",
+      "mentions": 6,
+      "weighted_mentions": 6.0,
+      "hu_relevant_mentions": 6,
+      "index": 29,
+      "sources": {
+        "reddit": 6,
+        "youtube": 0,
+        "mastodon": 0
+      },
+      "sentiment": "neutral",
+      "topic": "árak és akciók",
+      "errors": []
+    },
+    {
       "company": "Penny",
       "mentions": 0,
+      "weighted_mentions": 0,
+      "hu_relevant_mentions": 0,
       "index": 0,
       "sources": {
         "reddit": 0,
@@ -70,21 +80,25 @@
     },
     {
       "company": "Auchan",
-      "mentions": 18,
-      "index": 50,
+      "mentions": 0,
+      "weighted_mentions": 0,
+      "hu_relevant_mentions": 0,
+      "index": 0,
       "sources": {
         "reddit": 0,
         "youtube": 0,
-        "mastodon": 18
+        "mastodon": 0
       },
       "sentiment": "neutral",
-      "topic": "digitalizáció és önkiszolgálás",
+      "topic": "általános vállalati említés",
       "errors": []
     },
     {
       "company": "CBA",
       "mentions": 2,
-      "index": 20,
+      "weighted_mentions": 2.0,
+      "hu_relevant_mentions": 2,
+      "index": 16,
       "sources": {
         "reddit": 0,
         "youtube": 2,
@@ -103,7 +117,9 @@
   "filters": {
     "max_item_age_days": 180,
     "max_items_per_source_per_company": 40,
-    "company_context_filter": true
+    "company_context_filter": true,
+    "hungarian_relevance_weighting": true,
+    "company_profiles": "/home/runner/work/fmcg-intelligence-hu/fmcg-intelligence-hu/docs/data/company-profiles.json"
   },
-  "method_note": "Social Signal Layer V1.2. Óvatos, nyílt forrású jelzőrendszer frissességi és relevanciaszűréssel."
+  "method_note": "Social Signal Layer V1.3 profile-based. Óvatos, nyílt forrású jelzőrendszer frissességi, relevancia- és magyar piaci súlyozással."
 }

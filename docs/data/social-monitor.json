@@ -1,94 +1,58 @@
 {
-  "updated_at": "2026-06-09T07:20:39.947097+00:00",
-  "version": "social-signal-layer-v1.2",
+  "updated_at": "2026-06-09T07:32:23.853725+00:00",
+  "version": "social-signal-layer-v1.3-profile-based",
   "scope": "Hungarian FMCG retail chains",
-  "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül.",
+  "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia súlyozással.",
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 29,
-      "social_index": 65,
+      "social_mentions": 19,
+      "weighted_social_mentions": 13.75,
+      "hu_relevant_mentions": 12,
+      "social_index": 52,
       "social_sources": {
-        "reddit": 7,
-        "youtube": 4,
-        "mastodon": 18
+        "reddit": 16,
+        "youtube": 2,
+        "mastodon": 1
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 11
+          "score": 9.5
         },
         {
           "topic": "digitalizáció és önkiszolgálás",
-          "score": 7
+          "score": 7.5
         },
         {
           "topic": "bolti élmény",
-          "score": 5
+          "score": 4.75
         }
       ],
-      "social_sentiment": "negative",
+      "social_sentiment": "positive",
       "latest_items": [
         {
-          "id": "74fb2cf4590ab5a3",
-          "source": "mastodon",
+          "id": "f0d6acbdaaf79ee4",
+          "source": "reddit",
           "company": "Lidl",
-          "title": "",
-          "summary": "Assistent supermarktmanager Maastricht Herculeshof – Lidl Nederland – Maastricht Bekijk hier de vacature: https:// vacatures-maastricht.nl/vacatu re/assistent-supermarktmanager-maastricht-herculeshof-lidl-nederland-maastricht/ # vacature # lidl # maastricht",
-          "url": "https://vacatureforum.nl/@maastricht/116718402610427793",
-          "published": "Tue, 09 Jun 2026 05:04:45 +0000",
-          "query": "#lidl"
+          "title": "Hvilke indkøbs- og madapps bruger I egentlig i Danmark?",
+          "summary": "Hej r/DenmarkDK Jeg arbejder på et studie-/startup-projekt om danskernes brug af indkøbs- og madapps, og jeg prøver at forstå, hvilke apps folk faktisk bruger i hverdagen — fx eTilbudsavis, Netto+, Lidl Plus, TooGoodToGo, Mambeno, REMA 1000, minetilbud osv. Jeg har lavet en kort anonym undersøgelse, hvor man kan vælge én eller flere apps, man har brugt, og vurdere dem ud fra helt simple spørgsmål som: hvor nem appen er at bruge om den hjælper med at spare penge om den sparer tid hvad der fungere",
+          "url": "https://www.reddit.com/r/DanmarkDK/comments/1u0b4vb/hvilke_indkøbs_og_madapps_bruger_i_egentlig_i/",
+          "published": "2026-06-08T15:26:01+00:00",
+          "query": "Lidl Plus",
+          "hu_relevance": 1.0
         },
         {
-          "id": "2a2a20012520d952",
-          "source": "mastodon",
+          "id": "f06cce67517b88e4",
+          "source": "reddit",
           "company": "Lidl",
-          "title": "",
-          "summary": "Es gibt in Spanien bei # Lidl eine super leckere Tofu-Rolle mit Algen. Wieso gibt es sowas in Deutschland nicht? Wieder irgendein Benennungsproblem? Kollidiert es mit den Rouladen? Oder kaufen Germans nur Tofu pur? # makeFleischfreemaleasyfüralle",
-          "url": "https://mastodon.social/@josefina/116716459965290191",
-          "published": "Mon, 08 Jun 2026 20:50:42 +0000",
-          "query": "#lidl"
-        },
-        {
-          "id": "737fdf113a3a2e52",
-          "source": "mastodon",
-          "company": "Lidl",
-          "title": "",
-          "summary": "Supermarktmanager Maastricht kardinaal van Rossumplein – Lidl Nederland – Maastricht Bekijk hier de vacature: https:// vacatures-maastricht.nl/vacatu re/supermarktmanager-maastricht-kardinaal-van-rossumplein-lidl-nederland-maastricht/ # vacature # lidl # maastricht",
-          "url": "https://vacatureforum.nl/@maastricht/116716124015452429",
-          "published": "Mon, 08 Jun 2026 19:25:16 +0000",
-          "query": "#lidl"
-        },
-        {
-          "id": "8442f12a515b5459",
-          "source": "mastodon",
-          "company": "Lidl",
-          "title": "",
-          "summary": "Ainakin lähi-Lidlissäni oli tänään kaikenlaista muutakin kuin tuossa ilmoituksessa mainitut: kylmähyllyssä perunasalaattia ja tsatsikia, pakastealtaassa pitsaa, ”kala”puikkoja, pasteijoita sekä jäätelötuutteja! # vegaaniruoka # vegaani # Lidl",
-          "url": "https://piipitin.fi/@hpiirai/116714935802677116",
-          "published": "Mon, 08 Jun 2026 14:23:05 +0000",
-          "query": "#lidl"
-        },
-        {
-          "id": "528e0509af1b66d5",
-          "source": "mastodon",
-          "company": "Lidl",
-          "title": "",
-          "summary": "Seefahrt: Reederei von Lidl fährt nun unter deutscher Flagge Erstmals hat ein Seeschiff Heilbronn als Heimathafen. Und für die Container-Reederei Tailwind von Lidl ist das nur der Anfang. Vom Flaggenwechsel verspricht sie sich auch Vorteile. https://www. handelsblatt.com/unternehmen/h andel-konsumgueter/seefahrt-reederei-von-lidl-faehrt-nun-unter-deutscher-flagge/100230610.html # TopNews # News # Lidl # deutscher # TailwindShippingLines",
-          "url": "https://mastodon.social/@top_news_de/116714433315726424",
-          "published": "Mon, 08 Jun 2026 12:15:18 +0000",
-          "query": "#lidl"
-        },
-        {
-          "id": "64ac96c90fab10f5",
-          "source": "mastodon",
-          "company": "Lidl",
-          "title": "",
-          "summary": "Een goed voorbeeld &quot;Lidl bevoorraadt haar winkels al volgend jaar 100% elektrisch&quot; https://www. wattisduurzaam.nl/50850/energi e-beleid/duurzaam-ondernemen/lidl-bevoorraadt-haar-winkels-al-volgend-jaar-100-elektrisch/ # lidl # ev",
-          "url": "https://mastodon.social/@ErikJonker/116714150694593989",
-          "published": "Mon, 08 Jun 2026 11:03:26 +0000",
-          "query": "#lidl"
+          "title": "Hvilke indkøbs- og madapps bruger I egentlig i Danmark?",
+          "summary": "Hej r/dkkarriere Jeg arbejder på et studie-/startup-projekt om danskernes brug af indkøbs- og madapps, og jeg prøver at forstå, hvilke apps folk faktisk bruger i hverdagen , fx eTilbudsavis, Netto+, Lidl Plus, TooGoodToGo, Mambeno, REMA 1000, minetilbud osv. Jeg har lavet en kort anonym undersøgelse, hvor man kan vælge én eller flere apps, man har brugt, og vurdere dem ud fra helt simple spørgsmål som: hvor nem appen er at bruge om den hjælper med at spare penge om den sparer tid hvad der funger",
+          "url": "https://www.reddit.com/r/dkkarriere/comments/1u03j4t/hvilke_indkøbs_og_madapps_bruger_i_egentlig_i/",
+          "published": "2026-06-08T10:02:46+00:00",
+          "query": "Lidl Plus",
+          "hu_relevance": 1.0
         },
         {
           "id": "9a1a05a2743ae3c0",
@@ -98,7 +62,8 @@
           "summary": "A Lidl Magyarország június 4-től három üzletében kísérleti jelleggel bevezette a Scan & Go funkciót, amely a Lidl Plus alkalmazáson keresztül lehetővé teszi a vásárlóknak, hogy okostelefonjukkal maguk olvassák be a termékek vonalkódját, majd az önkiszolgáló pénztárnál QR-kóddal fizessenek. A szolgáltatást a budapesti Huszti úti, a budaörsi Károly király úti és a monori Gém utcai üzletekben tesztelik, ahol munkatársak segítik a vásárlókat a rendszer megismerésében. Az első Scan & Go vásárlás után",
           "url": "https://www.reddit.com/r/hungary/comments/1u00ny1/lidl_scango_saját_mobiltelefonnal_biztonsági/",
           "published": "2026-06-08T07:14:22+00:00",
-          "query": "Lidl Magyarország"
+          "query": "Lidl Magyarország",
+          "hu_relevance": 1.0
         },
         {
           "id": "ea2eb6a1f6852fa5",
@@ -108,77 +73,120 @@
           "summary": "A hollandok jövőre átlépik azt a határt, amit a világon még senki — 440 bolt, nulla dízel https:// fed.brid.gy/r/https://e-cars.h u/2026/06/08/lidl-elektromos-teherauto-2027-hollandia/",
           "url": "https://fed.brid.gy/r/https://e-cars.hu/2026/06/08/lidl-elektromos-teherauto-2027-hollandia/",
           "published": "Mon, 08 Jun 2026 05:28:00 +0000",
-          "query": "#lidl"
-        },
-        {
-          "id": "b6d60d3811237908",
-          "source": "mastodon",
-          "company": "Lidl",
-          "title": "",
-          "summary": "Lidl setzt künftig auf Containerschiffe unter deutscher Flagge. Der Discounter Lidl geht bei der Absicherung seiner internationalen Lieferketten einen neuen Weg. Erstmals fährt ein Schiff der konzerneigenen Reederei unter deutscher Flagge. Damit möchte das Unternehmen die Kontrolle über den Transport wichtiger Waren stärken und sich besser auf mögliche Krisen im internationalen Handel vorbereiten. Die Entscheidung gilt als bedeutender Schritt für.... https:// t1p.de/yy54w # Lidl # Lieferkette",
-          "url": "https://mastodon.social/@wirinformieren/116709106213822204",
-          "published": "Sun, 07 Jun 2026 13:40:33 +0000",
-          "query": "#lidl"
+          "query": "#lidl",
+          "hu_relevance": 1.0
         },
         {
           "id": "8a19756d6a424170",
           "source": "reddit",
           "company": "Lidl",
           "title": "Lidl akciós újság (06.11.)",
-          "summary": "&#32; submitted by &#32; /u/E_ri_ka &#32; to &#32; r/lidlaldihun [link] &#32; [comments]",
+          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
           "url": "https://www.reddit.com/r/lidlaldihun/comments/1tylop5/lidl_akciós_újság_0611/",
           "published": "2026-06-06T16:24:17+00:00",
-          "query": "Lidl akció"
+          "query": "Lidl akció",
+          "hu_relevance": 1.0
         },
         {
-          "id": "7219cdd43977cb73",
-          "source": "mastodon",
+          "id": "15a9a5e2597d9840",
+          "source": "reddit",
           "company": "Lidl",
-          "title": "",
-          "summary": "Jongens, bij de # Lidl hebben ze heel erg lekkere biologische aardbeien 🍓 🍓🍓",
-          "url": "https://mastodon.nl/@heleenkuiper/116703435378138851",
-          "published": "Sat, 06 Jun 2026 13:38:23 +0000",
-          "query": "#lidl"
+          "title": "Aldi Outlet in Lanaken",
+          "summary": "Not sure many people know about it, but there's Aldi (Nord) Outlet in nearby Belgian town of Lanaken, 15-20 minutes by bike from Centrum via Boschpoort. Basically typical Aldi middle aisle non-food assortment but instead of 2 rows with random stuff there's 12, with a very good discounts, sometimes up to 50-75%. The address is Maaseikersteenweg 197, 3620 Lanaken, Belgium and it's not a permanent store, but some popup outlet and this summer it'll be open until 20th of June, hours are 8.30 to 7 eve",
+          "url": "https://www.reddit.com/r/maastricht/comments/1tyj5f6/aldi_outlet_in_lanaken/",
+          "published": "2026-06-06T14:44:56+00:00",
+          "query": "Lidl Plus",
+          "hu_relevance": 0.25
         },
         {
-          "id": "11dfe86ed29fdebd",
-          "source": "mastodon",
+          "id": "0609ae7c67d5d813",
+          "source": "reddit",
           "company": "Lidl",
-          "title": "",
-          "summary": "Suhl (ots) - Am Mittwoch, den 03.06.2026 wurde gegen 19:00 Uhr auf dem Lidl-Parkplatz in der Mauerstrasse in Suhl ein schwarzer VW Golf beschädigt. Zeugen werden gebeten, sich beim Inspektionsdienst in Suhl unter der Angabe des Aktenzeichens ... https://www. presseportal.de/blaulicht/pm/1 26725/6289151 # Lidl # Parkplatz # VWGolf # Verkehrsunfallflucht # Zeugen",
-          "url": "https://freie-re.de/@blaulicht/116702988567492583",
-          "published": "Sat, 06 Jun 2026 11:44:45 +0000",
-          "query": "#lidl"
+          "title": "Picked up the flux core welder for 53 euros",
+          "summary": "Saw the welder was in store and with lidl plus it was only 53 euros submitted by /u/Reasonable-Ladder300 to r/Parkside [link] [comments]",
+          "url": "https://www.reddit.com/r/Parkside/comments/1tyhih6/picked_up_the_flux_core_welder_for_53_euros/",
+          "published": "2026-06-06T13:37:38+00:00",
+          "query": "Lidl Plus",
+          "hu_relevance": 0.25
+        },
+        {
+          "id": "a794e319f06fbf31",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "Sammelpunkte - nein danke?",
+          "summary": "Wer hat soviel Zeit? https://www.golem.de/news/neues-rabattsystem-gestartet-lidl-plus-wird-fuer-sparfuechse-zur-zeitvernichtungsmaschine-2606-209433.html submitted by /u/AlzHeimer1963 to r/LIDL_de [link] [comments]",
+          "url": "https://www.reddit.com/r/LIDL_de/comments/1ty8wi3/sammelpunkte_nein_danke/",
+          "published": "2026-06-06T05:52:16+00:00",
+          "query": "Lidl Plus",
+          "hu_relevance": 0.25
+        },
+        {
+          "id": "e0edb3d2135e4a61",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "€23.63 at Lidl for 1 person, 1 week (France)",
+          "summary": "I already have coconut cream in my pantry and will use it for the zucchini tart. Context: I’m a petite woman with a fairly sedentary lifestyle, so I need to consume around 1,600 kcal a day, this meal plan is actually closer to 1,700 kcal a day peach passionfruit greek yogurt (€2.63 ) protein wraps (€1.99) chicken rillette (€2.79) avocado (€1.97) carrot (€1.79) pesto (free with Lidl Plus points) red lentils (€1.55) endive (€1.49) lemon (€0.99) melon (€1.64) strawberry (€1.31) shortcrust pastry (€",
+          "url": "https://www.reddit.com/r/whatsinyourcart/comments/1txln2e/2363_at_lidl_for_1_person_1_week_france/",
+          "published": "2026-06-05T13:54:07+00:00",
+          "query": "Lidl Plus",
+          "hu_relevance": 0.25
+        },
+        {
+          "id": "6edd884211532e4b",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "Juni-tip voor Nederlanders: goedkoop boodschappen doen én je EV opladen in Duitsland",
+          "summary": "Net een interessante actie van Lidl Duitsland gezien voor iedereen die regelmatig de grens over gaat. De hele maand juni kun je bij Lidl Duitsland je elektrische auto laden voor €0,27 per kWh (DC-snelladen) via Lidl Plus en Lidl Pay. Volgens de advertentie is dat een flinke korting ten opzichte van het normale tarief van €0,44 per kWh. Combineer dat met je boodschappen en je kunt op twee manieren besparen: Goedkopere boodschappen dan vaak in Nederland Voordelig laden tijdens het winkelen Vooral ",
+          "url": "https://www.reddit.com/r/EVMobiliteit/comments/1twst6j/junitip_voor_nederlanders_goedkoop_boodschappen/",
+          "published": "2026-06-04T16:31:19+00:00",
+          "query": "Lidl Plus",
+          "hu_relevance": 0.25
+        },
+        {
+          "id": "0fa538d1bf377bec",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "\"Túlterheltek vagyunk\" hibaüzenet a Lidl Plus applikációba való belépéskor",
+          "summary": "Új telefonom lett és amikor próbáltam múltkor belépni a Lidl Plusba, nem engedte ezzel a hibaüzenettel. Ma megint megpróbáltam, rengetegszer, és mindig ugyanazt írta ki. Letöröltem, próbáltam más hálózattal, de semmi. Ahogy láttam az app véleményei között mások is tapasztalták ezt. Van rá valami megoldás, vagy csak várni lehet míg megoldják a problémát? submitted by /u/3IR3N3 to r/lidlaldihun [link] [comments]",
+          "url": "https://www.reddit.com/r/lidlaldihun/comments/1tw2oz6/túlterheltek_vagyunk_hibaüzenet_a_lidl_plus/",
+          "published": "2026-06-03T21:05:48+00:00",
+          "query": "Lidl Plus",
+          "hu_relevance": 0.25
+        },
+        {
+          "id": "17637c9982395103",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "Lidl akciós újság (06.04)",
+          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
+          "url": "https://www.reddit.com/r/lidlaldihun/comments/1ts4dt0/lidl_akciós_újság_0604/",
+          "published": "2026-05-30T16:25:08+00:00",
+          "query": "Lidl akció",
+          "hu_relevance": 1.0
         }
       ],
-      "method_note": "Nyílt RSS és keresési alapú social signal. Nem teljes social listening, nem reprezentatív közvélemény-kutatás. A V1.2 verzió 180 napos frissességi szűrést és cégnév-kontekstus szűrést használ.",
+      "method_note": "Nyílt RSS és keresési alapú social signal. Nem teljes social listening, nem reprezentatív közvélemény-kutatás. A V1.3 verzió company-profiles.json alapú céges master data réteget, magyar relevancia súlyozást és történeti mentést használ.",
       "errors": []
     },
     {
       "company": "SPAR",
-      "social_mentions": 28,
-      "social_index": 58,
+      "social_mentions": 2,
+      "weighted_social_mentions": 1.25,
+      "hu_relevant_mentions": 1,
+      "social_index": 16,
       "social_sources": {
         "reddit": 0,
-        "youtube": 8,
-        "mastodon": 20
+        "youtube": 2,
+        "mastodon": 0
       },
-      "dominant_social_topic": "bolti élmény",
+      "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
         {
-          "topic": "bolti élmény",
-          "score": 6
-        },
-        {
           "topic": "árak és akciók",
-          "score": 4
-        },
-        {
-          "topic": "munkaerő és foglalkoztatás",
-          "score": 3
+          "score": 1.25
         }
       ],
-      "social_sentiment": "mixed",
+      "social_sentiment": "neutral",
       "latest_items": [
         {
           "id": "754e9e6e164b4c5e",
@@ -188,67 +196,8 @@
           "summary": "SPAR American Tourister hűségakció (2026.06.04. - 2026.06.10.) YouTube",
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5UeE5zclZvQjVpaWdlWHhRb1o1Z1kxRmVGcmJ4aHEyaG9TMXhvTUtuVTJfcVlnalY5LUZCMk92MG9yRUhJZi1MTFZaaEpZV1pENDZVWEdn?oc=5",
           "published": "Thu, 04 Jun 2026 07:37:32 GMT",
-          "query": "site:youtube.com \"SPAR Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)"
-        },
-        {
-          "id": "50d1de351f5d7707",
-          "source": "youtube",
-          "company": "SPAR",
-          "title": "SPAR - Jó döntés már 35 éve (2026.06.04. - 2026.06.10.) - YouTube",
-          "summary": "SPAR - Jó döntés már 35 éve (2026.06.04. - 2026.06.10.) YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE05VHc1dFVjdUpZR2tSdW5yR1VxSVZ1ZloyYTV1SDhUNGlWdF9DX2QteFRCMnU2aHpwcTU4WUVDLTRseng5dlluU21OY1lNNUFiUS0yY2dn?oc=5",
-          "published": "Thu, 04 Jun 2026 07:37:22 GMT",
-          "query": "site:youtube.com \"SPAR Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)"
-        },
-        {
-          "id": "09aa8af323afda65",
-          "source": "mastodon",
-          "company": "SPAR",
-          "title": "",
-          "summary": "TOWNHILL: Family-run convenience store reopens as a SPAR after major revamp A family-run convenience store in Townhill has been given a new lease of life, reopening its doors as a SPAR after a major revamp. Local retailer Mandeep Sohal has transformed the shop in partnership with A F Blakemore, the UK’s largest independent SPAR wholesaler — and he was joined by family and staff to mark the occasion outside the newly branded store. Gone is the old fit-out, replaced by a brighter layout reworked a",
-          "url": "https://swanseabaynews.com/townhill-family-run-convenience-store-reopens-as-a-spar-after-major-revamp/",
-          "published": "Wed, 03 Jun 2026 14:44:46 +0000",
-          "query": "#spar"
-        },
-        {
-          "id": "bb42a3632a349fbc",
-          "source": "mastodon",
-          "company": "SPAR",
-          "title": "",
-          "summary": "Dad raised a fuss but Mom changed his tune. \"Anthony, he can nurse her back to health then he has to let her free.\" She shook her head at Joey, \"She's a wild animal. It's not fair to keep her.\" \"But John.\" She knelt, \"But John nothing. He's trash and you know he's already killed two dinosaurs.\" Joey's jaw dropped. Mom nodded, \"Didn't feed them right and played too rough. Sammi says he uses them to # spar like Pokémon.\" 5/x # wss366",
-          "url": "https://bonequest.net/@tobadzistsini/116677438929822074",
-          "published": "Mon, 01 Jun 2026 23:27:08 +0000",
-          "query": "#spar"
-        },
-        {
-          "id": "5a1c324cfffd4ef4",
-          "source": "mastodon",
-          "company": "SPAR",
-          "title": "",
-          "summary": "The Wandering Shop Stories # prompt for today, Mon-1-Jun, is # spar . Feel like writing something short and sweet that has the word \"spar\" in it? Check out the definitions of the word at: https://www. merriam-webster.com/dictionary /spar Join in and tag it with # wss366 ! # writing # WritingLife # microfiction h/t @ tobadzistsini",
-          "url": "https://wandering.shop/@wss366/116674029295780524",
-          "published": "Mon, 01 Jun 2026 09:00:02 +0000",
-          "query": "#spar"
-        },
-        {
-          "id": "9a32fa52c42f4335",
-          "source": "youtube",
-          "company": "SPAR",
-          "title": "SPAR - Bemutató film 2026. - YouTube",
-          "summary": "SPAR - Bemutató film 2026. YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBHN0NVclZ4bk8wMC14VGhTcWtqNG00WXBQaDl5TFJfY3QzVFRMWmxYUlF3T21mZVFLRFRpc3ZaQ2hmNl9tYUhsM1JtNzc2VzVFZmRBVTVR?oc=5",
-          "published": "Mon, 01 Jun 2026 08:15:06 GMT",
-          "query": "site:youtube.com \"SPAR Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)"
-        },
-        {
-          "id": "d25bb7ce16967676",
-          "source": "mastodon",
-          "company": "SPAR",
-          "title": "",
-          "summary": "Bei uns um die Ecke hat kürzlich ein neuer # spar aufgemacht. Alles schön neu und geräumig. Was mir aber auffiel ist die Menge an Eigenmarken. Von manchen Produkten gibt es nur mehr Eigenmarken. Abgesehen davon, dass ich mich als Konsument nach Angebot und Vielfalt sehne... Was machen denn die Produzenten? Wenn marktbeherrschende Ketten (ist bei # billa ja nicht anders) die Eigenmarken pushen, wie sollen die Konsumenten an meine Oliven und Weintrauben kommen? Das entwickelt sich in keine gute Ri",
-          "url": "https://wien.rocks/@nieral/116590908911915224",
-          "published": "Sun, 17 May 2026 16:41:25 +0000",
-          "query": "#spar"
+          "query": "site:youtube.com \"SPAR Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0
         },
         {
           "id": "3466403195371279",
@@ -258,345 +207,276 @@
           "summary": "VÁGATLAN -VIDEÓ# #dm #étkészlet #beszélgetés #fyp #spar #akció YouTube",
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE94SV9EWXVHbVhSbG9lQTh2TUtDSG5RNmZIZmNWQUVfWU8wSmJUbjBwSmZkOWd6VmJzdkgzUW1KcFFvMHAwWHNadkRWQlNONUg1MGVzVnN3?oc=5",
           "published": "Sun, 17 May 2026 05:54:07 GMT",
-          "query": "site:youtube.com \"SPAR akció\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)"
-        },
-        {
-          "id": "4f5d2590deece76e",
-          "source": "mastodon",
-          "company": "SPAR",
-          "title": "",
-          "summary": "Supermarkt doelwit van explosie # OmroepWest # DenHaag # Spar # Supermarkt # Explosie # ElsBorst -eilersplein https:// owst.nl/5098052/M",
-          "url": "https://mastodon.social/@OmroepWest/116537583603844384",
-          "published": "Fri, 08 May 2026 06:40:06 +0000",
-          "query": "#spar"
-        },
-        {
-          "id": "3e435e8e35adb808",
-          "source": "youtube",
-          "company": "SPAR",
-          "title": "SPAR - American Tourister hűségpromóció 2026.05.07. - 07.29. - YouTube",
-          "summary": "SPAR - American Tourister hűségpromóció 2026.05.07. - 07.29. YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBfM3Awd2tQcFpNbHVXQnBPTUFHT2VLbHFxNlVYNkRENnFrZFA0bEcxMVpMa3NldUNvTkJYSkh6U25UNTd1RGU1czd5OC1BeWZBWmh4Ykh3?oc=5",
-          "published": "Thu, 07 May 2026 06:00:06 GMT",
-          "query": "site:youtube.com \"SPAR Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)"
-        },
-        {
-          "id": "3206480546e2d3b5",
-          "source": "mastodon",
-          "company": "SPAR",
-          "title": "",
-          "summary": "Rattengift in Hipp-Gläschen gefunden Im Zusammenhang mit dem Rückruf aller Babykostgläschen von # Hipp bei # Spar # Österreich ist ein mit # Rattengift verseuchtes Gläschen gefunden worden. Ein Kunde habe das gemeldet, „ein Verzehr hat nicht stattgefunden“, teilte die Polizei im Burgenland am späten Samstagabend mit. Sie veröffentlichte eine „dringende Warnung an die Bevölkerung“. https:// orf.at/stories/3427286/",
-          "url": "https://climatejustice.social/@tuxom/116427820303251532",
-          "published": "Sat, 18 Apr 2026 21:25:51 +0000",
-          "query": "#spar"
-        },
-        {
-          "id": "04220dcc7e96d94f",
-          "source": "mastodon",
-          "company": "SPAR",
-          "title": "",
-          "summary": "⚠️ LEBENSGEFAHR! Österreich: DRINGENDE WARNUNG vor HiPP Babykost im Glas! Der Babynahrungshersteller HiPP ruft vorsorglich sein gesamtes Babykostgläschen-Sortiment zurück, das bei # SPAR # Österreich verkauft wurde. Offensichtlich wurden die Produkte vorsätzlich kontaminiert, da die Landespolizeidirektion Burgenland Ermittlungen aufgenommen hat und um Mithilfe bittet: +43 5913310-3333 Bitte teilen! https://www. produktwarnung.eu/2026/04/18/l ebensgefahr-dringende-warnung-vor-babyglaeschen-in-oes",
-          "url": "https://mastodon.social/@redsteve/116425852663270160",
-          "published": "Sat, 18 Apr 2026 13:05:27 +0000",
-          "query": "#spar"
+          "query": "site:youtube.com \"SPAR akció\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 0.25
         }
       ],
-      "method_note": "Nyílt RSS és keresési alapú social signal. Nem teljes social listening, nem reprezentatív közvélemény-kutatás. A V1.2 verzió 180 napos frissességi szűrést és cégnév-kontekstus szűrést használ.",
+      "method_note": "Nyílt RSS és keresési alapú social signal. Nem teljes social listening, nem reprezentatív közvélemény-kutatás. A V1.3 verzió company-profiles.json alapú céges master data réteget, magyar relevancia súlyozást és történeti mentést használ.",
       "errors": []
     },
     {
       "company": "Tesco",
-      "social_mentions": 11,
-      "social_index": 40,
+      "social_mentions": 19,
+      "weighted_social_mentions": 8.5,
+      "hu_relevant_mentions": 5,
+      "social_index": 44,
       "social_sources": {
-        "reddit": 0,
+        "reddit": 19,
         "youtube": 0,
-        "mastodon": 11
+        "mastodon": 0
       },
       "dominant_social_topic": "bolti élmény",
       "top_social_topics": [
         {
           "topic": "bolti élmény",
-          "score": 6
+          "score": 5.5
         },
-        {
-          "topic": "vásárlói panaszok",
-          "score": 3
-        },
-        {
-          "topic": "termék és minőség",
-          "score": 3
-        }
-      ],
-      "social_sentiment": "negative",
-      "latest_items": [
-        {
-          "id": "bdf374a65d2eb110",
-          "source": "mastodon",
-          "company": "Tesco",
-          "title": "",
-          "summary": "# Tesco forced to close after Wi-Fi and power outage # TechFails # Shoppers were greeted with sign on a door at around 3.30pm this afternoon saying that Tesco had been closed “due to no # Wi -Fi”. - It said the store was unable to operate as a result. Wot? If there is no # Internet (or power) we are unable to obtain # food ? Easy way to cause upheaval. https://www. shetnews.co.uk/2026/06/07/tesc o-forced-to-close-after-wi-fi-and-power-outage/?utm_source=mastodon_fediverse # Scotland # dystopian ",
-          "url": "https://mastodon.scot/@paka/116714621981720064",
-          "published": "Mon, 08 Jun 2026 13:03:17 +0000",
-          "query": "#tesco"
-        },
-        {
-          "id": "4d96d7317578b3fd",
-          "source": "mastodon",
-          "company": "Tesco",
-          "title": "",
-          "summary": "11 Tesco secrets 'only shop workers know' – one could save customers 30% https:// fed.brid.gy/r/https://www.dail yrecord.co.uk/lifestyle/money/11-tesco-secrets-only-shop-37260215",
-          "url": "https://fed.brid.gy/r/https://www.dailyrecord.co.uk/lifestyle/money/11-tesco-secrets-only-shop-37260215",
-          "published": "Sun, 07 Jun 2026 11:09:54 +0000",
-          "query": "#tesco"
-        },
-        {
-          "id": "3c3a91fa5b2e7f14",
-          "source": "mastodon",
-          "company": "Tesco",
-          "title": "",
-          "summary": "Urgent food recall warning for products sold at Tesco, Waitrose and Morrisons https:// fed.brid.gy/r/https://www.mirr or.co.uk/news/uk-news/food-warning-tesco-waitrose-morrisons-37229771",
-          "url": "https://fed.brid.gy/r/https://www.mirror.co.uk/news/uk-news/food-warning-tesco-waitrose-morrisons-37229771",
-          "published": "Mon, 01 Jun 2026 00:56:25 +0000",
-          "query": "#tesco"
-        },
-        {
-          "id": "c954ab659443c215",
-          "source": "mastodon",
-          "company": "Tesco",
-          "title": "",
-          "summary": "our timeline has become so ridiculous that they are legitimately *censoring national flags* so they don't look too similar to those of &quot;bad&quot; countries # palestine # jordan # syria # tesco # islamophobia # antiarabism # uk",
-          "url": "https://mastodon.social/@ssfckdt/116671266170688137",
-          "published": "Sun, 31 May 2026 21:17:20 +0000",
-          "query": "#tesco"
-        },
-        {
-          "id": "a5bb5351a49a061b",
-          "source": "mastodon",
-          "company": "Tesco",
-          "title": "",
-          "summary": "I don't think anyone in Mansfield likes Marmite Peanut butter. (I bought a jar yesterday, the use before date is in just over a week). # Marmite # tesco # mansfield",
-          "url": "https://fosstodon.org/@TheGingerDog/116668394959221394",
-          "published": "Sun, 31 May 2026 09:07:08 +0000",
-          "query": "#tesco"
-        },
-        {
-          "id": "0c35b1e43354ee1c",
-          "source": "mastodon",
-          "company": "Tesco",
-          "title": "",
-          "summary": "I've been seeing a space of bad experience with Tesco delivery in my timeline lately. Are they trying to emulate Walmart? (If you recall, I had a decent experience with Walmart delivery only at *one* location.) # Tesco # Walmart # deliveries",
-          "url": "https://mast.yourautisticlife.com/@yourautisticlife/116665373585814868",
-          "published": "Sat, 30 May 2026 20:18:46 +0000",
-          "query": "#tesco"
-        },
-        {
-          "id": "41775ac5099e98ff",
-          "source": "mastodon",
-          "company": "Tesco",
-          "title": "",
-          "summary": "# Tesco packaging rules tighten as # Recycling push enters final phase https://www. packaging-gateway.com/news/tes co-packaging-rules-tighten-as-recycling-push-enters-final-phase/",
-          "url": "https://mastodon.social/@WasteBadger/116657202053571053",
-          "published": "Fri, 29 May 2026 09:40:38 +0000",
-          "query": "#tesco"
-        },
-        {
-          "id": "f36723341ae65a36",
-          "source": "mastodon",
-          "company": "Tesco",
-          "title": "",
-          "summary": "Tesco security guard's 'heart stopped for 23 minutes' after choking on doughnut https:// fed.brid.gy/r/https://www.dail yrecord.co.uk/news/uk-world-news/tesco-security-guards-heart-stopped-37214196",
-          "url": "https://fed.brid.gy/r/https://www.dailyrecord.co.uk/news/uk-world-news/tesco-security-guards-heart-stopped-37214196",
-          "published": "Wed, 27 May 2026 20:52:17 +0000",
-          "query": "#tesco"
-        },
-        {
-          "id": "721f9dc9430c68fa",
-          "source": "mastodon",
-          "company": "Tesco",
-          "title": "",
-          "summary": "Tesco security guard 'brain damaged' after horror choking incident inside Salford store https:// fed.brid.gy/r/https://www.mirr or.co.uk/news/uk-news/tesco-security-guard-brain-damaged-37213963",
-          "url": "https://fed.brid.gy/r/https://www.mirror.co.uk/news/uk-news/tesco-security-guard-brain-damaged-37213963",
-          "published": "Wed, 27 May 2026 19:11:51 +0000",
-          "query": "#tesco"
-        },
-        {
-          "id": "f87146162564c61f",
-          "source": "mastodon",
-          "company": "Tesco",
-          "title": "",
-          "summary": "Devastation as Tesco security guard chokes on doughnut and collapses at work https:// fed.brid.gy/r/https://www.manc hestereveningnews.co.uk/news/greater-manchester-news/devastation-tesco-security-guard-chokes-34021784",
-          "url": "https://fed.brid.gy/r/https://www.manchestereveningnews.co.uk/news/greater-manchester-news/devastation-tesco-security-guard-chokes-34021784",
-          "published": "Wed, 27 May 2026 18:12:09 +0000",
-          "query": "#tesco"
-        },
-        {
-          "id": "ea309cd9dacbab16",
-          "source": "mastodon",
-          "company": "Tesco",
-          "title": "",
-          "summary": "Martin Lewis’ MSE issues Tesco Clubcard warning as £17,000,000 in vouchers expires this week https:// fed.brid.gy/r/https://metro.co .uk/2026/05/27/martin-lewis-mse-issues-tesco-clubcard-warning-17-000-000-vouchers-expires-this-week-28536393/",
-          "url": "https://fed.brid.gy/r/https://metro.co.uk/2026/05/27/martin-lewis-mse-issues-tesco-clubcard-warning-17-000-000-vouchers-expires-this-week-28536393/",
-          "published": "Wed, 27 May 2026 09:23:03 +0000",
-          "query": "#tesco"
-        }
-      ],
-      "method_note": "Nyílt RSS és keresési alapú social signal. Nem teljes social listening, nem reprezentatív közvélemény-kutatás. A V1.2 verzió 180 napos frissességi szűrést és cégnév-kontekstus szűrést használ.",
-      "errors": []
-    },
-    {
-      "company": "ALDI",
-      "social_mentions": 23,
-      "social_index": 55,
-      "social_sources": {
-        "reddit": 6,
-        "youtube": 0,
-        "mastodon": 17
-      },
-      "dominant_social_topic": "árak és akciók",
-      "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 7
+          "score": 3.0
         },
         {
-          "topic": "bolti élmény",
-          "score": 3
-        },
-        {
-          "topic": "termék és minőség",
-          "score": 3
+          "topic": "munkaerő és foglalkoztatás",
+          "score": 2.0
         }
       ],
       "social_sentiment": "positive",
       "latest_items": [
         {
-          "id": "8f864623891f72ab",
-          "source": "mastodon",
-          "company": "ALDI",
-          "title": "",
-          "summary": "Discover Aldi’s $15 Collapsible Picnic Table for Effortless Outdoor Dining Ah. It is finally, at long last, summertime. The sun is shining, the temperatures are finally getting warmer, and the great outdoors is just begging to be enjoyed. Outdoor dining is one of the great pleasures of the summer, and you can m… # dining # cooking # diet # food # Dining # aldi # OutdoorDining # picnictable https://www. diningandcooking.com/2676725/d iscover-aldis-15-collapsible-picnic-table-for-effortless-outdoo",
-          "url": "https://vive.im/@dc/116717952875780448",
-          "published": "Tue, 09 Jun 2026 03:10:22 +0000",
-          "query": "#aldi"
+          "id": "657f7414e5b5bd40",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "Tesco Clubcard Jumper (thrifted at Fara Charity Shop)",
+          "summary": "submitted by /u/AntRnd to r/Thrift [link] [comments]",
+          "url": "https://www.reddit.com/r/Thrift/comments/1tzbiff/tesco_clubcard_jumper_thrifted_at_fara_charity/",
+          "published": "2026-06-07T13:00:06+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 1.0
         },
         {
-          "id": "f7f283c29f52990d",
-          "source": "mastodon",
-          "company": "ALDI",
-          "title": "",
-          "summary": "\"Actievoerders delen bio-aardappelen uit voor de deur van Aldi Nederland: ‘De bio-boer staat bij Aldi voor een dichte deur’ Voor het hek van Aldi Nederland staat een kiepauto. De bak is tot de rand toe gevuld met aardappels. Gratis af te halen voor medewerkers van het supermarktconcern en andere belangstellenden. Voor de Aldi-directie staan cadeautassen met piepers klaar. De actie is ludiek, deze vrijdagmiddag in Culemborg, maar de boodschap van de organisatoren is dringend. Het gebruik van pest",
-          "url": "https://todon.eu/@regendans/116714041545455501",
-          "published": "Mon, 08 Jun 2026 10:35:40 +0000",
-          "query": "#aldi"
+          "id": "5811e91faa424105",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "Tesco Clubcard Jumper (thrifted at Fara Charity Shop)",
+          "summary": "submitted by /u/AntRnd to r/CharityShopHauls [link] [comments]",
+          "url": "https://www.reddit.com/r/CharityShopHauls/comments/1tzbif2/tesco_clubcard_jumper_thrifted_at_fara_charity/",
+          "published": "2026-06-07T13:00:05+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 1.0
         },
+        {
+          "id": "0b59be6f486529b6",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "Tesco Clubcard Jumper (thrifted at Fara Charity Shop)",
+          "summary": "submitted by /u/AntRnd to r/ganddee [link] [comments]",
+          "url": "https://www.reddit.com/r/ganddee/comments/1tzbidf/tesco_clubcard_jumper_thrifted_at_fara_charity/",
+          "published": "2026-06-07T13:00:03+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 1.0
+        },
+        {
+          "id": "229d849bfc635abe",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "Lost my keys between Ringsend and Pearse Station",
+          "summary": "It’s a small set of keys with a yellow keychain and a small Tesco clubcard. I checked at the Garda stations in the area and I asked around in local businesses, but no luck. I would be super grateful for any info! submitted by /u/myszojelen23 to r/Dublin [link] [comments]",
+          "url": "https://www.reddit.com/r/Dublin/comments/1tqbyga/lost_my_keys_between_ringsend_and_pearse_station/",
+          "published": "2026-05-28T18:26:07+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 0.25
+        },
+        {
+          "id": "f18c92a6b9ee3384",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "Tesco clubcard prices are insane",
+          "summary": "submitted by /u/Glittering_Land_3466 to r/BourbonUK [link] [comments]",
+          "url": "https://www.reddit.com/r/BourbonUK/comments/1tng0t1/tesco_clubcard_prices_are_insane/",
+          "published": "2026-05-25T17:32:30+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 0.25
+        },
+        {
+          "id": "e4becdb985f3d9a8",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "Tesco Clubcard £5 Tickets",
+          "summary": "I’m having Trouble trying to book the £5 clubcard tickets for The mandalorian tomorrow. Anyone else having issues finding the option? Or does anyone have a tutorial on how to do it? Cheers submitted by /u/BillyCharm to r/CineworldUnlimited [link] [comments]",
+          "url": "https://www.reddit.com/r/CineworldUnlimited/comments/1tkly0h/tesco_clubcard_5_tickets/",
+          "published": "2026-05-22T15:14:47+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 0.25
+        },
+        {
+          "id": "09b1f4128ffd0cf0",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "£17m in Tesco Clubcard vouchers expire this month — how much is sitting unused in your account?",
+          "summary": "MoneySavingExpert says £17m worth of Tesco Clubcard vouchers are due to expire at 11.59pm on Sunday 31 May. With weekly shops still painful, it feels mad that so much “earned” money could quietly vanish. Worth checking the app now — are loyalty schemes genuinely saving people money, or making rewards too easy to forget? submitted by /u/ToughRomanticMiss to r/BuyersUK [link] [comments]",
+          "url": "https://www.reddit.com/r/BuyersUK/comments/1tg9uab/17m_in_tesco_clubcard_vouchers_expire_this_month/",
+          "published": "2026-05-18T02:51:59+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 0.25
+        },
+        {
+          "id": "9abeb13259408778",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "Virgin Red boosted sign-up bonus to 2,000 points",
+          "summary": "Just spotted that Virgin Red has increased their new member sign-up bonus to 2,000 Virgin Points for a limited time. If you’re already collecting points through flights, credit cards, Tesco Clubcard, etc., it’s a pretty easy extra boost for opening an account and completing the qualifying steps. I recently signed up myself and thought it was worth sharing since the normal bonus is usually lower. You can use the points for: Flights with Virgin Atlantic Seat upgrades Hotel stays Experiences and re",
+          "url": "https://www.reddit.com/r/u_ButterscotchNew498/comments/1tfxls6/virgin_red_boosted_signup_bonus_to_2000_points/",
+          "published": "2026-05-17T18:29:37+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 0.25
+        },
+        {
+          "id": "bbb38677d5f222f0",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "Tried the new This vegan steak picked up on Tesco clubcard offer. 🥲",
+          "summary": "Really enjoyed it personally, the texture inside was still a little soft, but the flavour was there if cooked longer than it suggested. My partner agreed. Wish they were a bit bigger also. Served with wedges and salady bits for helf. 😅✌️ submitted by /u/Jessica-Beth to r/ShittyVeganFoodPorn [link] [comments]",
+          "url": "https://www.reddit.com/r/ShittyVeganFoodPorn/comments/1te2ij6/tried_the_new_this_vegan_steak_picked_up_on_tesco/",
+          "published": "2026-05-15T17:07:44+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 1.0
+        },
+        {
+          "id": "7f02b209dd6a059d",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "Clubcard Tesco UK- pentru mancare",
+          "summary": "Urmeaza sa plec pentru o saptamana in UK si m-ar ajuta tare mult un tesco clubcard pentru a achizitiona meal deals. Ma poate ajuta cineva? submitted by /u/Exotic_Till8289 to r/roFrugal [link] [comments]",
+          "url": "https://www.reddit.com/r/roFrugal/comments/1tcyg38/clubcard_tesco_uk_pentru_mancare/",
+          "published": "2026-05-14T13:36:52+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 0.25
+        },
+        {
+          "id": "0b6c43a161c30ce1",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "the new Cadbury promo gives 50% off site prices, BTW (£16pp on off-peak days)",
+          "summary": "you're able to see the adjusted prices here: https://www.altontowers.com/?promocode=CADMULTIPACK26 - off-peak days are 50% off, so £16pp. however, peak days only give a 10% discount. Peak days can only have a certain number of vouchers used on them, so be sure to use them quickly before spaces run out. Currently, you can book up to Nov 8 (though the promo runs til 30 Jun 2027). one code allows you to book for up to 4 individuals (any children under 90cm go free - I assume you'd book this separat",
+          "url": "https://www.reddit.com/r/altontowers/comments/1tch7g9/the_new_cadbury_promo_gives_50_off_site_prices/",
+          "published": "2026-05-13T23:52:35+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 0.25
+        },
+        {
+          "id": "4e134c0bb02e7cdb",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "Tesco Clubcard",
+          "summary": "Great news for Tesco Clubcard members, they can now buy their tickets for more than the normal price 😂 submitted by /u/MW962 to r/CineworldUnlimited [link] [comments]",
+          "url": "https://www.reddit.com/r/CineworldUnlimited/comments/1tb6b9t/tesco_clubcard/",
+          "published": "2026-05-12T16:13:31+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 0.25
+        }
+      ],
+      "method_note": "Nyílt RSS és keresési alapú social signal. Nem teljes social listening, nem reprezentatív közvélemény-kutatás. A V1.3 verzió company-profiles.json alapú céges master data réteget, magyar relevancia súlyozást és történeti mentést használ.",
+      "errors": []
+    },
+    {
+      "company": "ALDI",
+      "social_mentions": 6,
+      "weighted_social_mentions": 6.0,
+      "hu_relevant_mentions": 6,
+      "social_index": 29,
+      "social_sources": {
+        "reddit": 6,
+        "youtube": 0,
+        "mastodon": 0
+      },
+      "dominant_social_topic": "árak és akciók",
+      "top_social_topics": [
+        {
+          "topic": "árak és akciók",
+          "score": 6.0
+        },
+        {
+          "topic": "termék és minőség",
+          "score": 1.0
+        }
+      ],
+      "social_sentiment": "neutral",
+      "latest_items": [
         {
           "id": "47a90d92d52b0817",
           "source": "reddit",
           "company": "ALDI",
           "title": "Aldi akciós újság (06.11.)",
-          "summary": "&#32; submitted by &#32; /u/E_ri_ka &#32; to &#32; r/lidlaldihun [link] &#32; [comments]",
+          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
           "url": "https://www.reddit.com/r/lidlaldihun/comments/1tylo3o/aldi_akciós_újság_0611/",
           "published": "2026-06-06T16:23:36+00:00",
-          "query": "Aldi akció"
+          "query": "ALDI akció",
+          "hu_relevance": 1.0
         },
         {
-          "id": "bb57d67541bd44ee",
-          "source": "mastodon",
+          "id": "92a12dd18cd363a5",
+          "source": "reddit",
           "company": "ALDI",
-          "title": "",
-          "summary": "Koblenz (ots) - Am 06.06.2026, zwischen 09:50 und 10:05 Uhr kam es auf dem Parkplatz des Aldi in der Schlachthofstraße (Koblenz) zu einer Verkehrsunfallflucht. Der unbekannte Verursacher streifte den geparkten grünen Audi A3 und beschädigte dabei ... https://www. presseportal.de/blaulicht/pm/1 17712/6289155 # Aldi # Audi # Parkplatz # Verkehrsunfallflucht",
-          "url": "https://freie-re.de/@blaulicht/116703096046921887",
-          "published": "Sat, 06 Jun 2026 12:12:05 +0000",
-          "query": "#aldi"
+          "title": "Aldi akciós újság (06.04.)",
+          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
+          "url": "https://www.reddit.com/r/lidlaldihun/comments/1ts4ejr/aldi_akciós_újság_0604/",
+          "published": "2026-05-30T16:26:01+00:00",
+          "query": "ALDI akció",
+          "hu_relevance": 1.0
         },
         {
-          "id": "bdf82ede6f933f0f",
-          "source": "mastodon",
+          "id": "599894496965ef7f",
+          "source": "reddit",
           "company": "ALDI",
-          "title": "",
-          "summary": "New supermarket named most expensive for key shopping essentials after rival's Aldi price match https:// fed.brid.gy/r/https://www.manc hestereveningnews.co.uk/whats-on/shopping/new-supermarket-named-most-expensive-34064363",
-          "url": "https://fed.brid.gy/r/https://www.manchestereveningnews.co.uk/whats-on/shopping/new-supermarket-named-most-expensive-34064363",
-          "published": "Sat, 06 Jun 2026 06:50:08 +0000",
-          "query": "#aldi"
+          "title": "Aldi akciós újság (05.28.)",
+          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
+          "url": "https://www.reddit.com/r/lidlaldihun/comments/1tm1uei/aldi_akciós_újság_0528/",
+          "published": "2026-05-24T04:24:45+00:00",
+          "query": "ALDI akció",
+          "hu_relevance": 1.0
         },
         {
-          "id": "c07e21db64ec5c30",
-          "source": "mastodon",
+          "id": "f34ad4746b31aeb0",
+          "source": "reddit",
           "company": "ALDI",
-          "title": "",
-          "summary": "LLMs scheinen auch bei den Handbuch-Author:innen von den Bauhn Webcam AIBSDB-0426 von # Aldi angekommen zu sein. 😅 Quelle: https:// s7g10.scene7.com/is/content/al di/202604280023 Und ja, das Kapitel ist für mich ziemlich unverständlich. Klingel und Gong scheint wild gemischt verwendet zu werden. Wobei, für 15.99 CHF ist das Teil schon ziemlich gut. Mal sehen ob man da # ZephyrRTOS drauf kriegt. # Schweiz # Tuya # InternetOfThings",
-          "url": "https://swiss.social/@rettichschnidi/116699339396857025",
-          "published": "Fri, 05 Jun 2026 20:16:43 +0000",
-          "query": "#aldi"
+          "title": "2026 május 20. - Nyolc évre szóló szívecskés kitűző",
+          "summary": "Frissítve: 2026. május 20. 21:00 CEST 1. Varsói tárgyalás: Tusk magyar szív-kitűzőt adott Magyarnak, V4-újraindítás Budapesten júniusban Telex | 444 | HVG | Magyar Hang · külpolitikai irányváltás Magyar Péter miniszterelnök szerdán Varsóba érkezett, ahol Donald Tusk lengyel kormányfővel tárgyalt. A 444 beszámolt arról, hogy a négyszemközti tárgyalás után közös sajtótájékoztatón Tusk kijelentette: kevesen hittek Magyar Péter &quot;fantasztikus győzelmében&quot; , de ő igen, és Lengyelország a 202",
+          "url": "https://www.reddit.com/r/hungary/comments/1tivywt/2026_május_20_nyolc_évre_szóló_szívecskés_kitűző/",
+          "published": "2026-05-20T19:20:52+00:00",
+          "query": "ALDI Magyarország",
+          "hu_relevance": 1.0
         },
         {
-          "id": "d4edbcaaf27f65f8",
-          "source": "mastodon",
+          "id": "94ed5545c5a64b92",
+          "source": "reddit",
           "company": "ALDI",
-          "title": "",
-          "summary": "Aldi is giving away £100 vouchers — but only to certain shoppers https:// fed.brid.gy/r/https://metro.co .uk/2026/06/05/aldi-giving-away-100-vouchers-certain-shoppers-28647683/",
-          "url": "https://fed.brid.gy/r/https://metro.co.uk/2026/06/05/aldi-giving-away-100-vouchers-certain-shoppers-28647683/",
-          "published": "Fri, 05 Jun 2026 11:06:33 +0000",
-          "query": "#aldi"
+          "title": "Aldi akciós újság (05.21.)",
+          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
+          "url": "https://www.reddit.com/r/lidlaldihun/comments/1tepr7v/aldi_akciós_újság_0521/",
+          "published": "2026-05-16T10:21:35+00:00",
+          "query": "ALDI akció",
+          "hu_relevance": 1.0
         },
         {
-          "id": "523d791fed25c860",
-          "source": "mastodon",
+          "id": "95ad4845c6cffcb8",
+          "source": "reddit",
           "company": "ALDI",
-          "title": "",
-          "summary": "These are Aldi cheese curls, btw. Free your mind, and your ass will follow. # Aldi",
-          "url": "https://beige.party/@dariusw/116694721303529016",
-          "published": "Fri, 05 Jun 2026 00:42:17 +0000",
-          "query": "#aldi"
-        },
-        {
-          "id": "a540eb43f122c50d",
-          "source": "mastodon",
-          "company": "ALDI",
-          "title": "",
-          "summary": "Salmonellen wurden in Basilikum von Aldi Nord nachgewiesen. Betroffene Gläser bitte im Markt umtauschen, auch ohne Kassenbon. Mehr: https://www. lebensmittelwarnung.de/___lebe nsmittelwarnung.de/Meldungen/2026/06_Juni/260603_03_NI_Basilikum/260603_03_NI_Basilikum_Meldung.html # Rückruf # Lebensmittel # Warnung # Aldi # Basilikum",
-          "url": "https://verbraucherzentrale.social/@verbraucherzentrale_nrw/116686251286145911",
-          "published": "Wed, 03 Jun 2026 12:48:14 +0000",
-          "query": "#aldi"
-        },
-        {
-          "id": "bcd4bebfe4c47fe4",
-          "source": "mastodon",
-          "company": "ALDI",
-          "title": "",
-          "summary": "Winsen (ots) - Taschendiebe waren unterwegs Am Montag, 1.6.2026, griffen Taschendiebe in Winsen in zwei Aldi-Filialen nahezu zeitgleich zu. In der Zeit zwischen 12 Uhr und 13 Uhr traf es einen 69-jährigen Mann, der in der Filiale an der Straße Zum ... https://www. presseportal.de/blaulicht/pm/5 9458/6287534 # Aldi # Feuerwehr # Taschendiebe # Taschendiebstahl",
-          "url": "https://freie-re.de/@blaulicht/116685751047743571",
-          "published": "Wed, 03 Jun 2026 10:41:01 +0000",
-          "query": "#aldi"
-        },
-        {
-          "id": "24a873efe4776c3b",
-          "source": "mastodon",
-          "company": "ALDI",
-          "title": "",
-          "summary": "The Italian Sauce Both Aldi And Trader Joe’s Customers Are Not Going Back For You know the old saying, “too much of a good thing is not a good thing?” Well, one could argue it also applies to food. When several delicious ingredients are co… # dining # cooking # diet # food # Italiancheese # aldi # Cheese # Italia # Italian # italiano # italy # Lemon # PastaSauce # pestosauce # TraderJoe &#39;s https://www. diningandcooking.com/2667988/t he-italian-sauce-both-aldi-and-trader-joes-customers-are-no",
-          "url": "https://vive.im/@dc/116682779255454721",
-          "published": "Tue, 02 Jun 2026 22:05:15 +0000",
-          "query": "#aldi"
-        },
-        {
-          "id": "898c0c175a09fd44",
-          "source": "mastodon",
-          "company": "ALDI",
-          "title": "",
-          "summary": "# Hitze im Mai, Wasser in Gefahr Während die Temperaturen steigen, pumpen # redbull # Aldi & Co. unser Grundwasser in Rekordgeschwindigkeit leer. Wenn ein fremder Staat unser Trinkwasser nehmen würde, wären wir im # Krieg Doch die Industrie darf es einfach weiter machen? # Wasser gehört uns allen, nicht den Profiteuren. Wir überschreiten die planetaren Grenzen und befinden uns im # Wasserbankrott Vortrag & Protest-Planung in # koln 7. Juni 17:00 in der # Stelze https:// guter-grund.info/9gt2 @ k",
-          "url": "https://social.cologne/@Demos_und_Termine/116681971543845761",
-          "published": "Tue, 02 Jun 2026 18:39:51 +0000",
-          "query": "#aldi"
+          "title": "Aldi akciós újság (05.14.)",
+          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
+          "url": "https://www.reddit.com/r/lidlaldihun/comments/1t814zr/aldi_akciós_újság_0514/",
+          "published": "2026-05-09T10:20:33+00:00",
+          "query": "ALDI akció",
+          "hu_relevance": 1.0
         }
       ],
-      "method_note": "Nyílt RSS és keresési alapú social signal. Nem teljes social listening, nem reprezentatív közvélemény-kutatás. A V1.2 verzió 180 napos frissességi szűrést és cégnév-kontekstus szűrést használ.",
+      "method_note": "Nyílt RSS és keresési alapú social signal. Nem teljes social listening, nem reprezentatív közvélemény-kutatás. A V1.3 verzió company-profiles.json alapú céges master data réteget, magyar relevancia súlyozást és történeti mentést használ.",
       "errors": []
     },
     {
       "company": "Penny",
       "social_mentions": 0,
+      "weighted_social_mentions": 0,
+      "hu_relevant_mentions": 0,
       "social_index": 0,
       "social_sources": {
         "reddit": 0,
@@ -607,155 +487,33 @@
       "top_social_topics": [],
       "social_sentiment": "neutral",
       "latest_items": [],
-      "method_note": "Nyílt RSS és keresési alapú social signal. Nem teljes social listening, nem reprezentatív közvélemény-kutatás. A V1.2 verzió 180 napos frissességi szűrést és cégnév-kontekstus szűrést használ.",
+      "method_note": "Nyílt RSS és keresési alapú social signal. Nem teljes social listening, nem reprezentatív közvélemény-kutatás. A V1.3 verzió company-profiles.json alapú céges master data réteget, magyar relevancia súlyozást és történeti mentést használ.",
       "errors": []
     },
     {
       "company": "Auchan",
-      "social_mentions": 18,
-      "social_index": 50,
+      "social_mentions": 0,
+      "weighted_social_mentions": 0,
+      "hu_relevant_mentions": 0,
+      "social_index": 0,
       "social_sources": {
         "reddit": 0,
         "youtube": 0,
-        "mastodon": 18
+        "mastodon": 0
       },
-      "dominant_social_topic": "digitalizáció és önkiszolgálás",
-      "top_social_topics": [
-        {
-          "topic": "digitalizáció és önkiszolgálás",
-          "score": 2
-        }
-      ],
+      "dominant_social_topic": "általános vállalati említés",
+      "top_social_topics": [],
       "social_sentiment": "neutral",
-      "latest_items": [
-        {
-          "id": "234e73010841c081",
-          "source": "mastodon",
-          "company": "Auchan",
-          "title": "",
-          "summary": "Le monde change… pour ceux qui avaient raté l'info : Après 64 ans, les supermarchés # Auchan vont fermer : voici ce qu’ils deviendront https://www. presse-citron.net/apres-64-ans -les-supermarches-auchan-vont-fermer-voici-ce-quils-deviendront/ Le distributeur a annoncé ce tournant historique le mardi 25 novembre 2025. Les grandes enseignes possédées par la famille # Mulliez : # Cultura , # Kiabi , # Decathlon … ont contribué a vider les rayons non-alimentaires de ces trop grandes surfaces frança",
-          "url": "https://piaille.fr/@siltaer/116454117364838085",
-          "published": "Thu, 23 Apr 2026 12:53:32 +0000",
-          "query": "#auchan"
-        },
-        {
-          "id": "dbd5af942913f853",
-          "source": "mastodon",
-          "company": "Auchan",
-          "title": "",
-          "summary": "Très sympa les libres services de viennoiseries en hypermarchés. Pratique pour limiter les boites en plastique pré-remplies. Seul bémol les gosses qui se servent à la main, tâtent la marchandise et choisissent de préférence ceux du fond en laissant trainer leurs main non lavées, pulls ou blousons partout. En terme d'hygiène c'est quand même pas la meilleure idée du siècle... mais bon, ça évite du personnel, alors laissons les gens bénéficier des germes, microbes et autres saloperies d'inconnus s",
-          "url": "https://tech.lgbt/@pprem/116329417380876415",
-          "published": "Wed, 01 Apr 2026 12:20:41 +0000",
-          "query": "#auchan"
-        },
-        {
-          "id": "89bf8461e67a24d9",
-          "source": "mastodon",
-          "company": "Auchan",
-          "title": "",
-          "summary": "J'ai la rage intersidérale putain ! On vient de me # voler mon # vélo # Luxembourg # Auchanclochedor # clochedor # auchan 21/03/26 entre 11h50 et 13h30 # velovole",
-          "url": "https://masto.bike/@bisounours/116267430477535768",
-          "published": "Sat, 21 Mar 2026 13:36:36 +0000",
-          "query": "#auchan"
-        },
-        {
-          "id": "6e77440bdc6c6f11",
-          "source": "mastodon",
-          "company": "Auchan",
-          "title": "",
-          "summary": "Cette semaine sur Oxytude, retour sur les lunettes # MetaRayBan et l'actu nouvelles techno et Accessibilité. # Includdy # Gemini # AccessibleGram # Captcha # Chromium # BeMyEyes # AppSuite # LiveLoop # aCapture # Youtube # Audible # Afflelou # MagicConnect # Auchan https://www. oxytude.org",
-          "url": "https://mastodon.social/@oxytude/116194980128969599",
-          "published": "Sun, 08 Mar 2026 18:31:31 +0000",
-          "query": "#auchan"
-        },
-        {
-          "id": "e396eea1924a014e",
-          "source": "mastodon",
-          "company": "Auchan",
-          "title": "",
-          "summary": "Ah, j'avais oublié cette photo prise chez Auchan, à Luxembourg ville, le week-end dernier ! C'est un bout de l'écran d'une caisse enregistreuse. Coucou Suse ! C'est rare de croiser cette distribution ! # suse # auchan # caisse",
-          "url": "https://diaspodon.fr/@dada/116131570975313288",
-          "published": "Wed, 25 Feb 2026 13:45:45 +0000",
-          "query": "#auchan"
-        },
-        {
-          "id": "63767771d15285e3",
-          "source": "mastodon",
-          "company": "Auchan",
-          "title": "",
-          "summary": "Signé ! ✍️ https://www. l214.com/enquetes/2026/cailles -carrefour/ # L214 @ l214.com # cruauteenverslesanimaux # auchan # supermarches # france # animaux # ElevageIndustriel # elevageintensif # QualiteAuchan # FilièreQualitéAuchan",
-          "url": "https://mastodon.social/@SamLeLuxo/116098295193515872",
-          "published": "Thu, 19 Feb 2026 16:43:16 +0000",
-          "query": "#auchan"
-        },
-        {
-          "id": "f2ac553571d35aec",
-          "source": "mastodon",
-          "company": "Auchan",
-          "title": "",
-          "summary": "7 supermarchés sur 10 (70%) vendent toujours des # oeufs catégorie n°3 = élevage enfermées h24 dans des cages sans lumières du jour ni accès à l'extérieur. Ils l'avaient promis pour # year2026 # auchan # intermarche # carrefour # u # leadle # leclerc # commerce # economie # consommation",
-          "url": "https://mastodon.social/@cobrate/116091479319281626",
-          "published": "Wed, 18 Feb 2026 11:49:54 +0000",
-          "query": "#auchan"
-        },
-        {
-          "id": "6dd808ef19d8b88e",
-          "source": "mastodon",
-          "company": "Auchan",
-          "title": "",
-          "summary": "# Auchan Complice du # Genocide https://www. youtube.com/shorts/bynLPOxGWk0",
-          "url": "https://mastodon.social/@InternetDev/116087526825183276",
-          "published": "Tue, 17 Feb 2026 19:04:44 +0000",
-          "query": "#auchan"
-        },
-        {
-          "id": "c1054a0931a93770",
-          "source": "mastodon",
-          "company": "Auchan",
-          "title": "",
-          "summary": "# politique # auchan # cnews # islamophobie # racisme post de @ slpng_giants_fr",
-          "url": "https://mastodon.social/@les_croquettes_du_chat/116086714843985440",
-          "published": "Tue, 17 Feb 2026 15:38:14 +0000",
-          "query": "#auchan"
-        },
-        {
-          "id": "09e8c830d91d7c06",
-          "source": "mastodon",
-          "company": "Auchan",
-          "title": "",
-          "summary": "encomenda #auchan , chega metade, mas fazem pagar-se de tudo, confirmam que se esqueceram, voltam à hora errada, queixam-se que não está ninguém, ficam de voltar mais tarde, não o fazem. ligamos para apoio ao cliente e ninguém atende.",
-          "url": "https://fed.brid.gy/r/https://bsky.app/profile/did:plc:65neilruzq2tnxdqcupghsov/post/3mem7osxfw22m",
-          "published": "Wed, 11 Feb 2026 19:31:01 +0000",
-          "query": "#auchan"
-        },
-        {
-          "id": "7407f36332931e93",
-          "source": "mastodon",
-          "company": "Auchan",
-          "title": "",
-          "summary": "RT: @VilledieuFabien 📍Les joies des Partenariats Publics Privés...274 millions en pure perte pour le service public, mais en vrai bénéfices pour la société privée # Auchan",
-          "url": "https://mastox.eu/@Portes_Thomas/116045517577415344",
-          "published": "Tue, 10 Feb 2026 09:01:14 +0000",
-          "query": "#auchan"
-        },
-        {
-          "id": "d60c9c111d36afae",
-          "source": "mastodon",
-          "company": "Auchan",
-          "title": "",
-          "summary": "La «saga» # Mulliez et le journalisme béat Le patriarche de la famille Mulliez – Gérard https:// fr.wikipedia.org/wiki/G%C3%A9r ard_Mulliez 94 ans, héritier d’une famille d’industriels roubaisiens du textile, fondateur du groupe # Auchan –, n’a pas besoin de posséder un groupe de # presse pour que la parution de sa biographie soit un «événement» médiatique. Complaisance partout, journalisme (presque) nulle part : la peopolisation des grands industriels bat son plein. https://www. acrimed.org/La-",
-          "url": "https://mastodon.social/@la_voix/116042708987401021",
-          "published": "Mon, 09 Feb 2026 21:06:58 +0000",
-          "query": "#auchan"
-        }
-      ],
-      "method_note": "Nyílt RSS és keresési alapú social signal. Nem teljes social listening, nem reprezentatív közvélemény-kutatás. A V1.2 verzió 180 napos frissességi szűrést és cégnév-kontekstus szűrést használ.",
+      "latest_items": [],
+      "method_note": "Nyílt RSS és keresési alapú social signal. Nem teljes social listening, nem reprezentatív közvélemény-kutatás. A V1.3 verzió company-profiles.json alapú céges master data réteget, magyar relevancia súlyozást és történeti mentést használ.",
       "errors": []
     },
     {
       "company": "CBA",
       "social_mentions": 2,
-      "social_index": 20,
+      "weighted_social_mentions": 2.0,
+      "hu_relevant_mentions": 2,
+      "social_index": 16,
       "social_sources": {
         "reddit": 0,
         "youtube": 2,
@@ -765,7 +523,7 @@
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 2
+          "score": 2.0
         }
       ],
       "social_sentiment": "neutral",
@@ -778,7 +536,8 @@
           "summary": "CBA Príma akciós újság 03.26. - 04.04. YouTube",
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9mdzc2X1BrQmU1N3dDRHIxLVJjZ3BqampfemF1SlVvRkpzNjNwZ3N6Qm5iVVlfbERtaWhlSnllRHlBVnNpeW96cUVwQ09yQ2Exbk94dExB?oc=5",
           "published": "Thu, 26 Mar 2026 13:22:56 GMT",
-          "query": "site:youtube.com \"CBA Príma\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)"
+          "query": "site:youtube.com \"CBA Príma\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0
         },
         {
           "id": "c9d79b1cdf7f0181",
@@ -788,10 +547,11 @@
           "summary": "CBA Príma akciós újság 03.19. - 03.25. YouTube",
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5pMmtUU1V3MVFQMElKQ0ltVWxVLTRKTFBuMk1zd3RrZkc1emZxY2pORF9GSm51dGtYM1hlWC1scDM3UGJIaGI5SXpRS2g5cG03ZVJ6WXVB?oc=5",
           "published": "Mon, 16 Mar 2026 12:43:34 GMT",
-          "query": "site:youtube.com \"CBA Príma\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)"
+          "query": "site:youtube.com \"CBA Príma\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0
         }
       ],
-      "method_note": "Nyílt RSS és keresési alapú social signal. Nem teljes social listening, nem reprezentatív közvélemény-kutatás. A V1.2 verzió 180 napos frissességi szűrést és cégnév-kontekstus szűrést használ.",
+      "method_note": "Nyílt RSS és keresési alapú social signal. Nem teljes social listening, nem reprezentatív közvélemény-kutatás. A V1.3 verzió company-profiles.json alapú céges master data réteget, magyar relevancia súlyozást és történeti mentést használ.",
       "errors": []
     }
   ]
