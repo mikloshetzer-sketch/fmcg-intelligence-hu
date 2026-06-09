@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-06-09T11:30:39.303863+00:00",
+  "updated_at": "2026-06-09T11:36:55.202078+00:00",
   "status": "ok",
-  "version": "store-network-hu-v1-openstreetmap-overpass",
+  "version": "store-network-hu-v1.1-openstreetmap-overpass",
   "source": "openstreetmap_overpass",
-  "store_count": 0,
+  "store_count": 890,
   "companies": [
     {
       "company": "Lidl",
@@ -12,39 +12,36 @@
       "brand_values": [
         "Lidl"
       ],
-      "error": "406 Client Error: Not Acceptable for url: https://overpass-api.de/api/interpreter"
+      "error": "504 Server Error: Gateway Timeout for url: https://overpass-api.de/api/interpreter"
     },
     {
       "company": "ALDI",
-      "status": "error",
-      "stores": 0,
+      "status": "ok",
+      "stores": 188,
       "brand_values": [
         "ALDI",
         "Aldi"
-      ],
-      "error": "406 Client Error: Not Acceptable for url: https://overpass-api.de/api/interpreter"
+      ]
     },
     {
       "company": "SPAR",
-      "status": "error",
-      "stores": 0,
+      "status": "ok",
+      "stores": 520,
       "brand_values": [
         "SPAR",
         "INTERSPAR",
         "Interspar",
         "Spar"
-      ],
-      "error": "406 Client Error: Not Acceptable for url: https://overpass-api.de/api/interpreter"
+      ]
     },
     {
       "company": "Tesco",
-      "status": "error",
-      "stores": 0,
+      "status": "ok",
+      "stores": 182,
       "brand_values": [
         "Tesco",
         "TESCO"
-      ],
-      "error": "406 Client Error: Not Acceptable for url: https://overpass-api.de/api/interpreter"
+      ]
     },
     {
       "company": "Auchan",
@@ -53,7 +50,7 @@
       "brand_values": [
         "Auchan"
       ],
-      "error": "406 Client Error: Not Acceptable for url: https://overpass-api.de/api/interpreter"
+      "error": "429 Client Error: Too Many Requests for url: https://overpass-api.de/api/interpreter"
     },
     {
       "company": "Penny",
@@ -65,12 +62,15 @@
         "Penny Market",
         "PENNY Market"
       ],
-      "error": "406 Client Error: Not Acceptable for url: https://overpass-api.de/api/interpreter"
+      "error": "429 Client Error: Too Many Requests for url: https://overpass-api.de/api/interpreter"
     }
   ],
   "filters": {
     "country": "Hungary",
-    "shop": "supermarket|convenience",
+    "shop": [
+      "supermarket",
+      "convenience"
+    ],
     "brands": {
       "Lidl": [
         "Lidl"
