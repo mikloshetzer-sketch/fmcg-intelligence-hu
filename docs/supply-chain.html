@@ -3,10 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FMCG Intelligence Hungary – Supply Chain & Store Intelligence</title>
+  <title>FMCG Intelligence Hungary – Supply Chain & Store Network</title>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
   <link rel="stylesheet" href="./css/style.css" />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIINfQncROlJr6t/mFH8xng52+3ohehB84="
+    crossorigin=""
+  />
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin="">
+  </script>
 
   <style>
     :root{
@@ -50,7 +62,9 @@
 
     .span12{grid-column:span 12}
     .span8{grid-column:span 8}
+    .span7{grid-column:span 7}
     .span6{grid-column:span 6}
+    .span5{grid-column:span 5}
     .span4{grid-column:span 4}
     .span3{grid-column:span 3}
 
@@ -63,7 +77,7 @@
     }
 
     .kpi-card{
-      min-height:132px;
+      min-height:124px;
       position:relative;
       overflow:hidden;
       background:linear-gradient(145deg,#fff,#f7fbff);
@@ -89,8 +103,8 @@
     }
 
     .kpi{
-      font-size:27px;
-      line-height:1.05;
+      font-size:26px;
+      line-height:1.08;
       color:var(--navy);
       font-weight:950;
       margin-top:7px;
@@ -121,43 +135,47 @@
     }
 
     .chartbox{height:315px;}
-    .chartbox.tall{height:370px;}
+    .chartbox.small{height:250px;}
 
-    .rank-row{
-      display:grid;
-      grid-template-columns:44px 1fr 125px;
-      gap:12px;
-      padding:12px 0;
-      border-bottom:1px solid #e5edf5;
-      align-items:center;
-    }
-
-    .rank{
-      width:36px;
-      height:36px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      border-radius:12px;
-      font-weight:900;
-      background:#eef3f8;
-      color:var(--navy);
-    }
-
-    .rank.one{background:#dcfce7;color:#166534}
-    .rank.two{background:#e0f2fe;color:#0369a1}
-    .rank.three{background:#ffedd5;color:#9a3412}
-
-    .bar{
-      height:8px;
-      background:#e5edf5;
-      border-radius:99px;
+    #storeMap{
+      height:520px;
+      border-radius:18px;
+      border:1px solid #dbe7f2;
       overflow:hidden;
-      margin-top:5px;
+      box-shadow:0 10px 28px rgba(15,42,75,.08);
     }
 
-    .fill-green{height:100%;background:linear-gradient(90deg,var(--green),var(--blue));}
-    .fill-orange{height:100%;background:linear-gradient(90deg,var(--orange),var(--red));}
+    .network-card-grid{
+      display:grid;
+      grid-template-columns:repeat(5,minmax(0,1fr));
+      gap:12px;
+    }
+
+    .network-card{
+      border:1px solid #dbe7f2;
+      border-radius:18px;
+      padding:14px;
+      background:#fbfdff;
+      min-height:130px;
+    }
+
+    .network-card h3{
+      margin:0;
+      color:var(--navy);
+      font-size:17px;
+      font-weight:950;
+    }
+
+    .network-card .value{
+      margin-top:9px;
+      color:var(--navy);
+      font-size:28px;
+      font-weight:950;
+    }
+
+    .network-card .small{
+      margin-top:7px;
+    }
 
     .pill{
       display:inline-flex;
@@ -176,61 +194,7 @@
     .pill.red{background:#fee2e2;color:#991b1b}
     .pill.gray{background:#eef2f7;color:#475569}
     .pill.purple{background:#ede9fe;color:#5b21b6}
-
-    .timeline{
-      position:relative;
-      display:grid;
-      gap:14px;
-    }
-
-    .timeline:before{
-      content:"";
-      position:absolute;
-      left:17px;
-      top:6px;
-      bottom:6px;
-      width:2px;
-      background:#dbeafe;
-    }
-
-    .event-card{
-      position:relative;
-      margin-left:46px;
-      border:1px solid #dbe7f2;
-      border-radius:16px;
-      background:#fbfdff;
-      padding:14px;
-    }
-
-    .event-card:before{
-      content:"";
-      position:absolute;
-      left:-39px;
-      top:17px;
-      width:14px;
-      height:14px;
-      border-radius:50%;
-      background:#0ea5e9;
-      border:3px solid #e0f2fe;
-    }
-
-    .event-card.warning:before{background:#f97316;border-color:#ffedd5}
-    .event-card.alert:before{background:#ef4444;border-color:#fee2e2}
-
-    .event-title{
-      font-weight:900;
-      color:var(--navy);
-      line-height:1.35;
-    }
-
-    .event-meta{
-      margin-top:8px;
-      color:var(--muted);
-      font-size:12px;
-      display:flex;
-      gap:8px;
-      flex-wrap:wrap;
-    }
+    .pill.blue{background:#dbeafe;color:#1d4ed8}
 
     .chart-insight{
       margin-top:12px;
@@ -243,7 +207,7 @@
       line-height:1.6;
     }
 
-    .formula-box{
+    .explain-box{
       margin-top:12px;
       padding:13px 15px;
       border-radius:16px;
@@ -251,7 +215,11 @@
       border:1px solid #dbe7f2;
       color:#334155;
       font-size:13px;
-      line-height:1.55;
+      line-height:1.6;
+    }
+
+    .explain-box b{
+      color:var(--navy);
     }
 
     .notice{
@@ -269,7 +237,9 @@
       line-height:1.45;
     }
 
-    .matrix-wrap{overflow:auto;}
+    .matrix-wrap{
+      overflow:auto;
+    }
 
     .matrix-table{
       width:100%;
@@ -280,17 +250,116 @@
     .matrix-table th,.matrix-table td{
       padding:10px;
       border-bottom:1px solid #e2edf6;
-      text-align:center;
+      text-align:left;
       white-space:nowrap;
     }
 
+    .matrix-table th{
+      letter-spacing:.04em;
+      color:#334155;
+      background:#f8fafc;
+    }
+
     .matrix-table th:first-child,.matrix-table td:first-child{
-      text-align:left;
       font-weight:900;
       color:var(--navy);
       position:sticky;
       left:0;
       background:#fff;
+    }
+
+    .search-row{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-bottom:14px;
+    }
+
+    .search-row input,
+    .search-row select{
+      border:1px solid #cbd5e1;
+      border-radius:12px;
+      padding:10px 12px;
+      font-size:14px;
+      background:white;
+      color:#0f172a;
+      min-width:220px;
+    }
+
+    .store-list{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:12px;
+      max-height:520px;
+      overflow:auto;
+      padding-right:4px;
+    }
+
+    .store-card{
+      border:1px solid #dbe7f2;
+      border-radius:16px;
+      background:#fbfdff;
+      padding:13px;
+      cursor:pointer;
+      transition:.15s ease;
+    }
+
+    .store-card:hover{
+      border-color:#93c5fd;
+      box-shadow:0 10px 24px rgba(14,165,233,.12);
+      transform:translateY(-1px);
+    }
+
+    .store-title{
+      font-weight:950;
+      color:var(--navy);
+      margin-bottom:8px;
+    }
+
+    .store-meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:6px;
+    }
+
+    .legend{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:10px;
+    }
+
+    .legend-item{
+      display:flex;
+      align-items:center;
+      gap:6px;
+      font-size:12px;
+      color:#475569;
+      font-weight:800;
+    }
+
+    .dot{
+      width:12px;
+      height:12px;
+      border-radius:999px;
+      display:inline-block;
+    }
+
+    .dot.auchan{background:#ef4444}
+    .dot.tesco{background:#2563eb}
+    .dot.lidl{background:#facc15}
+    .dot.spar{background:#16a34a}
+    .dot.aldi{background:#7c3aed}
+    .dot.other{background:#64748b}
+
+    .error{
+      margin-bottom:18px;
+      border:1px solid #fecaca;
+      background:#fef2f2;
+      color:#991b1b;
+      border-radius:16px;
+      padding:16px;
+      line-height:1.6;
     }
 
     details{
@@ -321,23 +390,16 @@
       overflow:auto;
     }
 
-    table{font-size:13px;width:100%;border-collapse:collapse}
-    th{letter-spacing:.04em;color:#334155;background:#f8fafc}
-    td,th{padding:10px;border-bottom:1px solid #e2edf6;text-align:left;vertical-align:top}
-
-    .error{
-      margin-bottom:18px;
-      border:1px solid #fecaca;
-      background:#fef2f2;
-      color:#991b1b;
-      border-radius:16px;
-      padding:16px;
-      line-height:1.6;
+    @media(max-width:1200px){
+      .network-card-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
+      .store-list{grid-template-columns:1fr;}
     }
 
     @media(max-width:1000px){
-      .span8,.span6,.span4,.span3{grid-column:span 12}
+      .span8,.span7,.span6,.span5,.span4,.span3{grid-column:span 12}
       .chartbox{height:280px}
+      #storeMap{height:430px}
+      .network-card-grid{grid-template-columns:1fr;}
     }
   </style>
 </head>
@@ -347,7 +409,7 @@
   <div class="header-inner">
     <div class="brand">
       <div class="brand-title">FMCG Intelligence Hungary</div>
-      <div class="brand-subtitle">Supply Chain & Store Intelligence</div>
+      <div class="brand-subtitle">Supply Chain & Store Network</div>
     </div>
     <nav class="nav">
       <a href="./index.html">Dashboard</a>
@@ -361,16 +423,16 @@
 
 <section class="hero">
   <div class="hero-box">
-    <div class="hero-kicker">Supply Chain & Store Intelligence V1</div>
-    <h1>Magyar FMCG áruházak reputációs és hálózati figyelése</h1>
+    <div class="hero-kicker">Supply Chain & Store Network V1</div>
+    <h1>Fizikai áruházhálózat és területi lefedettség</h1>
     <p>
-      Az oldal a <b>store-reputation.json</b> és <b>store-reputation-history-2026.json</b>
-      fájlokra épül. Első verzióban áruházi reputációs jelzéseket, láncszintű összesítést,
-      store watchlistet és problématémákat mutat. A térképes réteg későbbi fejlesztési körben kerül ide.
+      Ez az oldal nem reputációs vagy vásárlói panaszfigyelő. A cél a magyar FMCG szereplők
+      fizikai hálózatának, áruházi jelenlétének, földrajzi eloszlásának és hálózati mintázatainak
+      bemutatása. Az oldal első verzióban a <b>store-profiles.json</b> fájlból dolgozik.
     </p>
     <div class="btn-row">
       <a class="btn btn-primary" href="./index.html">Vissza a fő dashboardra</a>
-      <a class="btn" href="./news-social.html">Hírek és social monitor</a>
+      <a class="btn" href="./news-social.html">News & Social</a>
       <a class="btn" href="./human-capital.html">Human Capital</a>
     </div>
   </div>
@@ -382,112 +444,138 @@
   <div class="dashboard-grid">
 
     <div class="card span3 kpi-card">
-      <div class="kpi-label">Legaktívabb áruház</div>
-      <div class="kpi" id="kpiMostDiscussedStore">–</div>
-      <div class="kpi-sub" id="kpiMostDiscussedSub">áruházi említések alapján</div>
+      <div class="kpi-label">Figyelt áruházak</div>
+      <div class="kpi" id="kpiStores">–</div>
+      <div class="kpi-sub">store-profiles.json alapján</div>
     </div>
 
     <div class="card span3 kpi-card">
-      <div class="kpi-label">Legmagasabb Store Index</div>
-      <div class="kpi" id="kpiBestStore">–</div>
-      <div class="kpi-sub" id="kpiBestStoreSub">review signal index</div>
+      <div class="kpi-label">Figyelt láncok</div>
+      <div class="kpi" id="kpiCompanies">–</div>
+      <div class="kpi-sub">aktív hálózati szereplők</div>
     </div>
 
     <div class="card span3 kpi-card">
-      <div class="kpi-label">Figyelendő üzletek</div>
-      <div class="kpi" id="kpiWatchStores">–</div>
-      <div class="kpi-sub">40 feletti review signal index</div>
+      <div class="kpi-label">Legnagyobb lefedettség</div>
+      <div class="kpi" id="kpiTopCompany">–</div>
+      <div class="kpi-sub" id="kpiTopCompanySub">figyelt áruházszám</div>
     </div>
 
     <div class="card span3 kpi-card">
-      <div class="kpi-label">Domináns store téma</div>
-      <div class="kpi" id="kpiDominantTopic">–</div>
-      <div class="kpi-sub">áruházi reputációs jelzések alapján</div>
-    </div>
-
-    <div class="card span6">
-      <div class="section-title">
-        <h2>Store Reputation Ranking</h2>
-        <span>áruházi review signal index alapján</span>
-      </div>
-      <div id="storeRanking">Adatok betöltése...</div>
-      <div class="formula-box">
-        <b>Értelmezés:</b> ez nem Google Reviews érték. Nyílt forrású, keresési/RSS alapú áruházi reputációs jel.
-      </div>
-    </div>
-
-    <div class="card span6">
-      <div class="section-title">
-        <h2>Company Store Comparison</h2>
-        <span>láncszintű összesítés az áruházi rétegből</span>
-      </div>
-      <div class="chartbox"><canvas id="companyStoreChart"></canvas></div>
-      <div class="chart-insight" id="companyStoreInsight">Adatok betöltése...</div>
+      <div class="kpi-label">Domináns térség</div>
+      <div class="kpi" id="kpiTopArea">–</div>
+      <div class="kpi-sub">áruházi előfordulások alapján</div>
     </div>
 
     <div class="card span12">
       <div class="section-title">
-        <h2>Store Watchlist</h2>
-        <span>figyelendő áruházak: magasabb index, negatív vagy vegyes hangulat, azonosított problématéma</span>
+        <h2>Store Network Overview</h2>
+        <span>lánconkénti fizikai jelenlét a figyelt mintában</span>
       </div>
-      <div id="storeWatchlist" class="timeline">Adatok betöltése...</div>
+      <div id="companyNetworkCards" class="network-card-grid">Adatok betöltése...</div>
+      <div class="explain-box">
+        <b>Mit látunk?</b><br>
+        Ez a blokk azt mutatja, hogy az adatbázisban szereplő áruházak hogyan oszlanak meg lánconként.
+        Nem országos teljes üzletszámot mutat, hanem a repóban jelenleg figyelt üzletek hálózati mintáját.
+        Ez a réteg később bővíthető országos boltlistával, régiós bontással és logisztikai attribútumokkal.
+      </div>
+    </div>
+
+    <div class="card span7">
+      <div class="section-title">
+        <h2>Store Network Map</h2>
+        <span>fizikai áruházi pontok térképes nézete</span>
+      </div>
+      <div id="storeMap"></div>
+      <div class="legend">
+        <div class="legend-item"><span class="dot auchan"></span>Auchan</div>
+        <div class="legend-item"><span class="dot tesco"></span>Tesco</div>
+        <div class="legend-item"><span class="dot lidl"></span>Lidl</div>
+        <div class="legend-item"><span class="dot spar"></span>SPAR</div>
+        <div class="legend-item"><span class="dot aldi"></span>ALDI</div>
+        <div class="legend-item"><span class="dot other"></span>egyéb</div>
+      </div>
+      <div class="explain-box">
+        <b>Mit látunk?</b><br>
+        A térkép a figyelt áruházak földrajzi elhelyezkedését mutatja. A színek láncokat jelölnek,
+        nem teljesítményt vagy kockázatot. Ez a Supply Chain oldal fizikai hálózati alaprétege.
+        Később erre lehet ráépíteni logisztikai eseményeket, régiós kitettséget és ellátási lánc kockázatokat.
+      </div>
+    </div>
+
+    <div class="card span5">
+      <div class="section-title">
+        <h2>Store Directory</h2>
+        <span>kereshető boltlista és térképes fókusz</span>
+      </div>
+
+      <div class="search-row">
+        <input id="storeSearchInput" type="text" placeholder="Keresés: Auchan, Budaörs, Szigetszentmiklós..." />
+        <select id="companyFilter">
+          <option value="all">Minden lánc</option>
+        </select>
+      </div>
+
+      <div id="storeList" class="store-list">Adatok betöltése...</div>
+
+      <div class="explain-box">
+        <b>Mit látunk?</b><br>
+        Ez a lista a térkép mögötti áruházi adatbázis olvasható nézete. A keresővel láncra,
+        városra vagy térségre lehet szűrni. A kártyákra kattintva a térkép az adott áruházra fókuszál.
+        A lista később bővíthető logisztikai szereppel, régióval, áruháztípussal és ellátási funkcióval.
+      </div>
     </div>
 
     <div class="card span6">
       <div class="section-title">
-        <h2>Domináns Store Témák</h2>
-        <span>kassza, árak, parkoló, készlet, kiszolgálás, tisztaság</span>
+        <h2>Company Network Distribution</h2>
+        <span>figyelt áruházszám lánconként</span>
       </div>
-      <div class="chartbox"><canvas id="storeTopicChart"></canvas></div>
-      <div class="chart-insight" id="storeTopicInsight">Adatok betöltése...</div>
+      <div class="chartbox"><canvas id="companyDistributionChart"></canvas></div>
+      <div class="chart-insight" id="companyDistributionInsight">Adatok betöltése...</div>
+      <div class="explain-box">
+        <b>Mit látunk?</b><br>
+        A diagram a figyelt üzletek lánconkénti megoszlását mutatja. Ez nem hivatalos piaci részesedés,
+        hanem a dashboard jelenlegi hálózati mintája. Akkor lesz igazán erős, ha a store-profiles.json
+        fokozatosan országos áruházi adatbázissá bővül.
+      </div>
     </div>
 
     <div class="card span6">
       <div class="section-title">
-        <h2>Store Sentiment Overview</h2>
-        <span>pozitív, vegyes, negatív és semleges áruházi jelzések</span>
+        <h2>Regional / Area Distribution</h2>
+        <span>városok és térségek szerinti koncentráció</span>
       </div>
-      <div class="chartbox"><canvas id="storeSentimentChart"></canvas></div>
-      <div class="chart-insight" id="storeSentimentInsight">Adatok betöltése...</div>
-    </div>
-
-    <div class="card span12">
-      <div class="section-title">
-        <h2>Store Reputation History</h2>
-        <span>történeti mentés alapján, napi bontásban</span>
-      </div>
-      <div class="dashboard-grid">
-        <div class="span6">
-          <div class="chartbox"><canvas id="storeHistoryIndexChart"></canvas></div>
-          <div class="chart-insight" id="storeHistoryIndexInsight">Adatok betöltése...</div>
-        </div>
-        <div class="span6">
-          <div class="chartbox"><canvas id="storeHistoryMentionChart"></canvas></div>
-          <div class="chart-insight" id="storeHistoryMentionInsight">Adatok betöltése...</div>
-        </div>
+      <div class="chartbox"><canvas id="areaDistributionChart"></canvas></div>
+      <div class="chart-insight" id="areaDistributionInsight">Adatok betöltése...</div>
+      <div class="explain-box">
+        <b>Mit látunk?</b><br>
+        A blokk azt mutatja, mely városokban vagy térségekben van nagyobb figyelt áruházi sűrűség.
+        Ez hasznos lehet regionális összevetésekhez, helyi ellátási kitettséghez és későbbi logisztikai
+        elemzésekhez. Jelenleg a mintát mutatja, nem teljes országos lefedettséget.
       </div>
     </div>
 
     <div class="card span12">
       <div class="section-title">
-        <h2>Store Intelligence Matrix</h2>
-        <span>lánc, áruház, említés, index, hangulat és domináns téma</span>
+        <h2>Network Matrix</h2>
+        <span>lánc × térség mátrix</span>
       </div>
-      <div id="storeMatrix" class="matrix-wrap">Adatok betöltése...</div>
-    </div>
-
-    <div class="card span12">
-      <div class="section-title">
-        <h2>Kiemelt áruházi találatok</h2>
-        <span>legfrissebb store reputation jelzések</span>
+      <div id="networkMatrix" class="matrix-wrap">Adatok betöltése...</div>
+      <div class="explain-box">
+        <b>Mit látunk?</b><br>
+        A mátrix azt mutatja, hogy az egyes láncok mely térségekben vannak jelen a figyelt mintában.
+        Ez a hálózati gondolkodás első lépése: nem eseményeket, hanem fizikai jelenlétet mutat.
+        Később ebből építhető régiós kockázati térkép és ellátási lánc érzékenységi nézet.
       </div>
-      <div id="storeLatestItems" class="timeline">Adatok betöltése...</div>
     </div>
 
     <div class="span12">
       <details>
-        <summary>Store reputation adattábla <span class="small">store-reputation.json / stores</span></summary>
-        <div class="details-body"><table id="storeTable"></table></div>
+        <summary>Store profile adattábla <span class="small">store-profiles.json / stores</span></summary>
+        <div class="details-body">
+          <table id="storeProfileTable"></table>
+        </div>
       </details>
     </div>
 
@@ -497,23 +585,25 @@
         <span>fontos értelmezési keret</span>
       </div>
       <div class="notice">
-        Az áruházi reputációs réteg jelenleg nyílt Google News RSS keresések alapján működik.
-        Nem Google Reviews scraping, nem teljes vásárlói review-adatbázis, hanem store-level OSINT signal.
-        A térképes megjelenítés későbbi fejlesztési körben kerül erre az oldalra.
+        Ez az oldal jelenleg a <b>store-profiles.json</b> fájlban szereplő, kézzel definiált áruházi mintát jeleníti meg.
+        Nem országos teljes bolthálózati adatbázis, nem forgalmi rangsor és nem reputációs értékelés.
+        A cél a fizikai hálózati alapréteg felépítése, amelyre később logisztikai, ellátási lánc és régiós kockázati adatok kapcsolhatók.
       </div>
     </div>
 
   </div>
 </main>
 
-<footer class="footer">FMCG Intelligence Hungary – Supply Chain & Store Intelligence.</footer>
+<footer class="footer">FMCG Intelligence Hungary – Supply Chain & Store Network.</footer>
 
 <script>
-const storeUrl = './data/store-reputation.json';
-const storeStatusUrl = './data/store-reputation-status.json';
-const storeHistoryUrl = './data/store-reputation-history-2026.json';
+const storeProfilesUrl = './data/store-profiles.json';
 
 let charts = {};
+let map = null;
+let markerLayer = null;
+let storeMarkers = {};
+let allStores = [];
 
 function num(v,f=0){
   const x = Number(v);
@@ -569,410 +659,329 @@ function makeChart(id,type,labels,datasets,opts={}){
   });
 }
 
-async function fetchJson(url,optional=false){
-  try{
-    const r = await fetch(cacheBust(url),{ cache:'no-store' });
-    if(!r.ok){
-      if(optional) return null;
-      throw new Error(url + ' HTTP ' + r.status);
-    }
-    return await r.json();
-  }catch(e){
-    if(optional) return null;
-    throw e;
-  }
+async function fetchJson(url){
+  const r = await fetch(cacheBust(url),{ cache:'no-store' });
+  if(!r.ok) throw new Error(url + ' HTTP ' + r.status);
+  return await r.json();
 }
 
-function sentimentPill(v){
-  if(v === 'negative') return `<span class="pill red">negative</span>`;
-  if(v === 'positive') return `<span class="pill green">positive</span>`;
-  if(v === 'mixed') return `<span class="pill orange">mixed</span>`;
-  return `<span class="pill gray">${v || 'neutral'}</span>`;
+function normalize(value){
+  return String(value || '').toLowerCase().trim();
 }
 
-function watchLevel(store){
-  const index = num(store.review_signal_index);
-  const sentiment = store.review_sentiment;
+function companyColor(company){
+  const c = normalize(company);
 
-  if(index >= 60 && sentiment === 'negative') return 'ALERT';
-  if(index >= 45 || sentiment === 'negative') return 'WARNING';
-  if(index >= 30 || sentiment === 'mixed') return 'WATCH';
-  return 'NORMAL';
+  if(c.includes('auchan')) return '#ef4444';
+  if(c.includes('tesco')) return '#2563eb';
+  if(c.includes('lidl')) return '#facc15';
+  if(c.includes('spar')) return '#16a34a';
+  if(c.includes('aldi')) return '#7c3aed';
+
+  return '#64748b';
 }
 
-function watchPill(level){
-  if(level === 'ALERT') return `<span class="pill red">ALERT</span>`;
-  if(level === 'WARNING') return `<span class="pill orange">WARNING</span>`;
-  if(level === 'WATCH') return `<span class="pill purple">WATCH</span>`;
-  return `<span class="pill green">NORMAL</span>`;
+function countBy(items, field){
+  const out = {};
+  items.forEach(item => {
+    const key = item[field] || 'n.a.';
+    out[key] = (out[key] || 0) + 1;
+  });
+  return out;
 }
 
-function getStores(data){
-  return data?.stores || [];
+function sortEntries(obj){
+  return Object.entries(obj).sort((a,b)=>b[1]-a[1] || a[0].localeCompare(b[0]));
 }
 
-function getCompanySummary(data){
-  return data?.company_summary || [];
+function getCompanies(stores){
+  return [...new Set(stores.map(s=>s.company))].sort();
 }
 
-async function loadData(){
-  try{
-    const [storeData,storeStatus,storeHistory] = await Promise.all([
-      fetchJson(storeUrl),
-      fetchJson(storeStatusUrl,true),
-      fetchJson(storeHistoryUrl,true)
-    ]);
-
-    renderPage(storeData,storeStatus,storeHistory);
-  }catch(e){
-    showError('<b>Adatbetöltési hiba.</b><br>' + e.message + '<br><br>Ellenőrizd, hogy a docs/data/store-reputation.json elérhető-e.');
-    console.error(e);
-  }
+function getAreas(stores){
+  return [...new Set(stores.map(s=>s.area || s.city || 'n.a.'))].sort();
 }
 
-function renderPage(storeData,storeStatus,storeHistory){
-  const stores = getStores(storeData);
-  const companySummary = getCompanySummary(storeData);
+function loadData(){
+  fetchJson(storeProfilesUrl)
+    .then(data => {
+      allStores = data.stores || [];
+      renderPage(allStores);
+    })
+    .catch(e => {
+      showError('<b>Adatbetöltési hiba.</b><br>' + e.message + '<br><br>Ellenőrizd, hogy a docs/data/store-profiles.json elérhető-e.');
+      console.error(e);
+    });
+}
 
+function renderPage(stores){
   renderKpis(stores);
-  renderStoreRanking(stores);
-  renderCompanyStoreChart(companySummary);
-  renderStoreWatchlist(stores);
-  renderStoreTopics(stores);
-  renderStoreSentiment(stores);
-  renderStoreHistory(storeHistory);
-  renderStoreMatrix(stores);
-  renderLatestItems(stores);
-  renderStoreTable(stores);
+  renderCompanyCards(stores);
+  renderMap(stores);
+  renderStoreList(stores);
+  renderFilters(stores);
+  renderCompanyDistribution(stores);
+  renderAreaDistribution(stores);
+  renderNetworkMatrix(stores);
+  renderStoreProfileTable(stores);
 }
 
 function renderKpis(stores){
-  const byMentions = [...stores].sort((a,b)=>num(b.store_mentions)-num(a.store_mentions))[0];
-  const byIndex = [...stores].sort((a,b)=>num(b.review_signal_index)-num(a.review_signal_index))[0];
+  const companies = getCompanies(stores);
+  const companyCounts = sortEntries(countBy(stores,'company'));
+  const areaCounts = sortEntries(countBy(stores,'area'));
 
-  const watchStores = stores.filter(s => watchLevel(s) !== 'NORMAL');
+  setText('kpiStores', fmtNum(stores.length));
+  setText('kpiCompanies', fmtNum(companies.length));
+  setText('kpiTopCompany', companyCounts[0]?.[0] || 'n.a.');
+  setText('kpiTopCompanySub', `${fmtNum(companyCounts[0]?.[1] || 0)} figyelt áruház`);
+  setText('kpiTopArea', areaCounts[0]?.[0] || 'n.a.');
+}
 
-  const topicCounts = {};
-  stores.forEach(s => {
-    const t = s.dominant_store_topic || 'nincs elég adat';
-    if(t !== 'nincs elég adat'){
-      topicCounts[t] = (topicCounts[t] || 0) + 1;
-    }
+function renderCompanyCards(stores){
+  const companyCounts = sortEntries(countBy(stores,'company'));
+  const cityByCompany = {};
+
+  stores.forEach(store => {
+    if(!cityByCompany[store.company]) cityByCompany[store.company] = new Set();
+    cityByCompany[store.company].add(store.city || 'n.a.');
   });
 
-  const dominantTopic = Object.entries(topicCounts).sort((a,b)=>b[1]-a[1])[0]?.[0] || 'nincs elég adat';
-
-  setText('kpiMostDiscussedStore', byMentions?.store_name || 'n.a.');
-  setText('kpiMostDiscussedSub', `${fmtNum(byMentions?.store_mentions || 0)} említés`);
-
-  setText('kpiBestStore', byIndex?.store_name || 'n.a.');
-  setText('kpiBestStoreSub', `index: ${fmtNum(byIndex?.review_signal_index || 0)}`);
-
-  setText('kpiWatchStores', fmtNum(watchStores.length));
-  setText('kpiDominantTopic', dominantTopic);
-}
-
-function renderStoreRanking(stores){
-  const items = [...stores]
-    .sort((a,b)=>num(b.review_signal_index)-num(a.review_signal_index) || num(b.store_mentions)-num(a.store_mentions))
-    .slice(0,15);
-
-  document.getElementById('storeRanking').innerHTML = items.map((s,i)=>{
-    const value = num(s.review_signal_index);
-    const cls = i===0 ? 'one' : i===1 ? 'two' : i===2 ? 'three' : '';
-    const level = watchLevel(s);
-
-    return `
-      <div class="rank-row">
-        <div class="rank ${cls}">${i+1}</div>
-        <div>
-          <div style="font-weight:900;color:var(--navy)">${s.store_name}</div>
-          <div class="small">${s.company} • ${s.city} • ${s.area}</div>
-          <div class="small">Téma: ${s.dominant_store_topic || 'n.a.'} • ${s.review_sentiment}</div>
-        </div>
-        <div>
-          <div style="font-weight:950;color:var(--navy)">${fmtNum(value)}/100</div>
-          <div class="bar"><div class="fill-green" style="width:${Math.min(100,value)}%"></div></div>
-          <div style="margin-top:6px">${watchPill(level)}</div>
-        </div>
+  document.getElementById('companyNetworkCards').innerHTML = companyCounts.map(([company,count]) => `
+    <div class="network-card">
+      <h3>${company}</h3>
+      <div class="value">${fmtNum(count)}</div>
+      <div class="small">figyelt áruház</div>
+      <div style="margin-top:10px;">
+        <span class="pill blue">${fmtNum(cityByCompany[company]?.size || 0)} város/térség</span>
       </div>
-    `;
-  }).join('');
+    </div>
+  `).join('');
 }
 
-function renderCompanyStoreChart(companySummary){
-  const labels = companySummary.map(c=>c.company);
-  const index = companySummary.map(c=>num(c.review_signal_index));
-  const mentions = companySummary.map(c=>num(c.store_mentions));
-  const negative = companySummary.map(c=>num(c.negative_stores));
+function renderMap(stores){
+  if(!map){
+    map = L.map('storeMap', {
+      scrollWheelZoom: true
+    }).setView([47.4979, 19.0402], 9);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; OpenStreetMap'
+    }).addTo(map);
+
+    markerLayer = L.layerGroup().addTo(map);
+  }
+
+  markerLayer.clearLayers();
+  storeMarkers = {};
+
+  const bounds = [];
+
+  stores.forEach(store => {
+    const lat = num(store.lat, null);
+    const lon = num(store.lon, null);
+
+    if(lat === null || lon === null) return;
+
+    const color = companyColor(store.company);
+
+    const marker = L.circleMarker([lat, lon], {
+      radius: 9,
+      color,
+      weight: 2,
+      fillColor: color,
+      fillOpacity: 0.75
+    }).addTo(markerLayer);
+
+    marker.bindPopup(`
+      <b>${store.name}</b><br>
+      ${store.company}<br>
+      ${store.city} – ${store.area}<br>
+      <span style="font-size:12px;color:#64748b;">${store.store_id}</span>
+    `);
+
+    storeMarkers[store.store_id] = marker;
+    bounds.push([lat,lon]);
+  });
+
+  if(bounds.length > 0){
+    map.fitBounds(bounds, { padding:[30,30] });
+  }
+
+  setTimeout(() => {
+    if(map) map.invalidateSize();
+  }, 300);
+}
+
+function renderFilters(stores){
+  const companyFilter = document.getElementById('companyFilter');
+  const companies = getCompanies(stores);
+
+  companyFilter.innerHTML = '<option value="all">Minden lánc</option>' + companies.map(company => `
+    <option value="${company}">${company}</option>
+  `).join('');
+
+  document.getElementById('storeSearchInput').addEventListener('input', applyStoreFilters);
+  companyFilter.addEventListener('change', applyStoreFilters);
+}
+
+function applyStoreFilters(){
+  const q = normalize(document.getElementById('storeSearchInput').value);
+  const company = document.getElementById('companyFilter').value;
+
+  const filtered = allStores.filter(store => {
+    const text = normalize([
+      store.company,
+      store.name,
+      store.city,
+      store.area,
+      store.store_id,
+      (store.keywords || []).join(' ')
+    ].join(' '));
+
+    const matchQuery = !q || text.includes(q);
+    const matchCompany = company === 'all' || store.company === company;
+
+    return matchQuery && matchCompany;
+  });
+
+  renderStoreList(filtered);
+  renderMap(filtered);
+}
+
+function renderStoreList(stores){
+  if(!stores.length){
+    document.getElementById('storeList').innerHTML = '<div class="notice">Nincs találat a megadott szűrésre.</div>';
+    return;
+  }
+
+  document.getElementById('storeList').innerHTML = stores.map(store => `
+    <div class="store-card" onclick="focusStore('${store.store_id}')">
+      <div class="store-title">${store.name}</div>
+      <div class="store-meta">
+        <span class="pill gray">${store.company}</span>
+        <span class="pill blue">${store.city}</span>
+        <span class="pill green">${store.area}</span>
+      </div>
+      <div class="small" style="margin-top:8px;">
+        Koordináta: ${store.lat}, ${store.lon}
+      </div>
+    </div>
+  `).join('');
+}
+
+function focusStore(storeId){
+  const store = allStores.find(s => s.store_id === storeId);
+  const marker = storeMarkers[storeId];
+
+  if(!store || !marker || !map) return;
+
+  map.setView([num(store.lat), num(store.lon)], 14);
+  marker.openPopup();
+}
+
+function renderCompanyDistribution(stores){
+  const rows = sortEntries(countBy(stores,'company'));
+  const labels = rows.map(r=>r[0]);
+  const values = rows.map(r=>r[1]);
 
   makeChart(
-    'companyStoreChart',
+    'companyDistributionChart',
     'bar',
     labels,
-    [
-      {label:'Review Signal Index',data:index},
-      {label:'Store mentions',data:mentions},
-      {label:'Negative stores',data:negative}
-    ],
+    [{ label:'Figyelt áruházak', data:values }],
     {}
   );
 
-  const leader = [...companySummary].sort((a,b)=>num(b.review_signal_index)-num(a.review_signal_index))[0];
+  const leader = rows[0];
 
-  document.getElementById('companyStoreInsight').innerHTML =
-    `Láncszinten a legerősebb store reputation index jelenleg: <b>${leader?.company || 'n.a.'}</b>. 
-    Ez áruházi OSINT jel, nem hivatalos vásárlói elégedettségi mutató.`;
+  document.getElementById('companyDistributionInsight').innerHTML =
+    `A figyelt mintában a legnagyobb darabszámú lánc: <b>${leader?.[0] || 'n.a.'}</b>, 
+    <b>${fmtNum(leader?.[1] || 0)}</b> áruházzal.`;
 }
 
-function renderStoreWatchlist(stores){
-  const items = [...stores]
-    .filter(s => watchLevel(s) !== 'NORMAL' || num(s.store_mentions) > 0)
-    .sort((a,b)=>{
-      const order = {ALERT:4, WARNING:3, WATCH:2, NORMAL:1};
-      return order[watchLevel(b)] - order[watchLevel(a)] || num(b.review_signal_index)-num(a.review_signal_index);
-    })
-    .slice(0,12);
-
-  if(!items.length){
-    document.getElementById('storeWatchlist').innerHTML = '<div class="notice">Jelenleg nincs figyelendő áruház a store reputation rétegben.</div>';
-    return;
-  }
-
-  document.getElementById('storeWatchlist').innerHTML = items.map(s=>{
-    const level = watchLevel(s);
-    const cls = level === 'ALERT' ? 'alert' : level === 'WARNING' ? 'warning' : '';
-
-    return `
-      <div class="event-card ${cls}">
-        <div class="event-title">${s.store_name}</div>
-        <div class="event-meta">
-          ${watchPill(level)}
-          <span class="pill gray">${s.company}</span>
-          <span class="pill gray">${s.city}</span>
-          <span class="pill purple">index ${fmtNum(s.review_signal_index)}</span>
-          <span class="pill gray">${fmtNum(s.store_mentions)} említés</span>
-          ${sentimentPill(s.review_sentiment)}
-        </div>
-        <div class="small" style="margin-top:8px;">
-          Domináns téma: <b>${s.dominant_store_topic || 'n.a.'}</b>.
-        </div>
-      </div>
-    `;
-  }).join('');
-}
-
-function renderStoreTopics(stores){
-  const topicCounts = {};
-
-  stores.forEach(s => {
-    (s.top_store_topics || []).forEach(t => {
-      topicCounts[t.topic] = (topicCounts[t.topic] || 0) + num(t.score);
-    });
-  });
-
-  const rows = Object.entries(topicCounts)
-    .sort((a,b)=>b[1]-a[1])
-    .slice(0,8);
+function renderAreaDistribution(stores){
+  const rows = sortEntries(countBy(stores,'area')).slice(0,10);
+  const labels = rows.map(r=>r[0]);
+  const values = rows.map(r=>r[1]);
 
   makeChart(
-    'storeTopicChart',
+    'areaDistributionChart',
     'bar',
-    rows.map(r=>r[0]),
-    [{label:'Store topic score',data:rows.map(r=>r[1])}],
-    {indexAxis:'y'}
+    labels,
+    [{ label:'Áruházak száma', data:values }],
+    { indexAxis:'y' }
   );
 
-  document.getElementById('storeTopicInsight').innerHTML =
-    `A legerősebb áruházi reputációs téma: <b>${rows[0]?.[0] || 'nincs elég adat'}</b>.`;
+  const leader = rows[0];
+
+  document.getElementById('areaDistributionInsight').innerHTML =
+    `A figyelt mintában a legerősebb térségi koncentráció: <b>${leader?.[0] || 'n.a.'}</b>, 
+    <b>${fmtNum(leader?.[1] || 0)}</b> áruházzal.`;
 }
 
-function renderStoreSentiment(stores){
-  const counts = {
-    positive:0,
-    mixed:0,
-    negative:0,
-    neutral:0
-  };
+function renderNetworkMatrix(stores){
+  const companies = getCompanies(stores);
+  const areas = getAreas(stores);
 
-  stores.forEach(s => {
-    const key = s.review_sentiment || 'neutral';
-    counts[key] = (counts[key] || 0) + 1;
+  const matrix = {};
+
+  stores.forEach(store => {
+    const key = store.company + '|' + (store.area || store.city || 'n.a.');
+    matrix[key] = (matrix[key] || 0) + 1;
   });
 
-  makeChart(
-    'storeSentimentChart',
-    'doughnut',
-    Object.keys(counts),
-    [{label:'Store sentiment',data:Object.values(counts)}],
-    {
-      scales:{}
-    }
-  );
-
-  document.getElementById('storeSentimentInsight').innerHTML =
-    `Az áruházi hangulati jelzés a keresési találatok szöveges kulcsszavai alapján készül. A semleges érték gyakran adat-hiányt is jelenthet.`;
-}
-
-function renderStoreHistory(history){
-  const items = history?.items || [];
-
-  if(!items.length){
-    document.getElementById('storeHistoryIndexInsight').innerHTML = 'A store-reputation-history-2026.json még nem tartalmaz elég adatot.';
-    document.getElementById('storeHistoryMentionInsight').innerHTML = 'Több napi futás után itt már trend látszik majd.';
-    return;
-  }
-
-  const dates = [...new Set(items.map(x=>x.date))].sort();
-  const companies = [...new Set(items.map(x=>x.company))].sort();
-
-  const companyDateAgg = {};
-
-  companies.forEach(company => {
-    dates.forEach(date => {
-      const rows = items.filter(x => x.company === company && x.date === date);
-      const avgIndex = rows.reduce((s,x)=>s+num(x.review_signal_index),0) / Math.max(1,rows.length);
-      const mentions = rows.reduce((s,x)=>s+num(x.store_mentions),0);
-
-      companyDateAgg[company + '|' + date] = {
-        avgIndex: Math.round(avgIndex),
-        mentions
-      };
-    });
-  });
-
-  makeChart(
-    'storeHistoryIndexChart',
-    'line',
-    dates,
-    companies.map(company => ({
-      label: company,
-      data: dates.map(date => num(companyDateAgg[company + '|' + date]?.avgIndex)),
-      tension:.3
-    })),
-    {}
-  );
-
-  makeChart(
-    'storeHistoryMentionChart',
-    'line',
-    dates,
-    companies.map(company => ({
-      label: company,
-      data: dates.map(date => num(companyDateAgg[company + '|' + date]?.mentions)),
-      tension:.3
-    })),
-    {}
-  );
-
-  document.getElementById('storeHistoryIndexInsight').innerHTML =
-    `A történeti store index láncszinten átlagolja az egyes áruházak napi jelzéseit.`;
-
-  document.getElementById('storeHistoryMentionInsight').innerHTML =
-    `Az említésszám trend azt mutatja, melyik lánc áruházai körül nő a nyílt forrású aktivitás.`;
-}
-
-function renderStoreMatrix(stores){
-  const rows = [...stores].sort((a,b)=>a.company.localeCompare(b.company) || a.store_name.localeCompare(b.store_name));
-
-  document.getElementById('storeMatrix').innerHTML = `
+  document.getElementById('networkMatrix').innerHTML = `
     <table class="matrix-table">
       <thead>
         <tr>
-          <th>Áruház</th>
           <th>Lánc</th>
-          <th>Város</th>
-          <th>Említés</th>
-          <th>Index</th>
-          <th>Hangulat</th>
-          <th>Domináns téma</th>
-          <th>Státusz</th>
+          ${areas.map(area => `<th>${area}</th>`).join('')}
+          <th>Összesen</th>
         </tr>
       </thead>
       <tbody>
-        ${rows.map(s=>`
-          <tr>
-            <td>${s.store_name}</td>
-            <td>${s.company}</td>
-            <td>${s.city}</td>
-            <td><b>${fmtNum(s.store_mentions)}</b></td>
-            <td><b>${fmtNum(s.review_signal_index)}</b></td>
-            <td>${s.review_sentiment}</td>
-            <td>${s.dominant_store_topic || 'n.a.'}</td>
-            <td>${watchLevel(s)}</td>
-          </tr>
-        `).join('')}
+        ${companies.map(company => {
+          const total = stores.filter(s => s.company === company).length;
+          return `
+            <tr>
+              <td>${company}</td>
+              ${areas.map(area => `<td>${fmtNum(matrix[company + '|' + area] || 0)}</td>`).join('')}
+              <td><b>${fmtNum(total)}</b></td>
+            </tr>
+          `;
+        }).join('')}
       </tbody>
     </table>
   `;
 }
 
-function renderLatestItems(stores){
-  let items = [];
-
-  stores.forEach(store => {
-    (store.latest_items || []).forEach(item => {
-      items.push({
-        ...item,
-        company: store.company,
-        store_name: store.store_name,
-        review_signal_index: store.review_signal_index,
-        sentiment: store.review_sentiment
-      });
-    });
-  });
-
-  items = items
-    .sort((a,b)=>String(b.published).localeCompare(String(a.published)))
-    .slice(0,12);
-
-  if(!items.length){
-    document.getElementById('storeLatestItems').innerHTML = '<div class="notice">Jelenleg nincs friss áruházi találat.</div>';
-    return;
-  }
-
-  document.getElementById('storeLatestItems').innerHTML = items.map(item=>`
-    <div class="event-card">
-      <div class="event-title">${item.title || 'n.a.'}</div>
-      <div class="event-meta">
-        <span class="pill gray">${item.published || 'n.a.'}</span>
-        <span class="pill gray">${item.company}</span>
-        <span class="pill purple">${item.store_name}</span>
-        <span class="pill gray">${item.source}</span>
-        ${sentimentPill(item.sentiment)}
-      </div>
-      <div class="small" style="margin-top:8px;">${item.summary || ''}</div>
-    </div>
-  `).join('');
-}
-
-function renderStoreTable(stores){
-  document.getElementById('storeTable').innerHTML = `
+function renderStoreProfileTable(stores){
+  document.getElementById('storeProfileTable').innerHTML = `
     <thead>
       <tr>
         <th>Store ID</th>
         <th>Áruház</th>
         <th>Lánc</th>
         <th>Város</th>
-        <th>Area</th>
-        <th>Említés</th>
-        <th>Index</th>
-        <th>Hangulat</th>
-        <th>Domináns téma</th>
+        <th>Térség</th>
+        <th>Lat</th>
+        <th>Lon</th>
+        <th>Kulcsszavak</th>
       </tr>
     </thead>
     <tbody>
-      ${stores.map(s=>`
+      ${stores.map(store => `
         <tr>
-          <td>${s.store_id}</td>
-          <td><b>${s.store_name}</b></td>
-          <td>${s.company}</td>
-          <td>${s.city}</td>
-          <td>${s.area}</td>
-          <td>${fmtNum(s.store_mentions)}</td>
-          <td>${fmtNum(s.review_signal_index)}</td>
-          <td>${s.review_sentiment}</td>
-          <td>${s.dominant_store_topic}</td>
+          <td>${store.store_id}</td>
+          <td><b>${store.name}</b></td>
+          <td>${store.company}</td>
+          <td>${store.city}</td>
+          <td>${store.area}</td>
+          <td>${store.lat}</td>
+          <td>${store.lon}</td>
+          <td>${(store.keywords || []).join(', ')}</td>
         </tr>
       `).join('')}
     </tbody>
@@ -983,3 +992,4 @@ loadData();
 </script>
 </body>
 </html>
+
