@@ -18,15 +18,14 @@ OVERRIDE_FILE = DATA_DIR / "store-network-overrides.json"
 OVERPASS_URL = "https://overpass-api.de/api/interpreter"
 FETCH_SLEEP = 2
 
-# Ezeknél az OSM/Overpass lekérdezés eddig stabilan működött.
-OSM_BRANDS = {
+BRANDS = {
+    "Lidl": ["Lidl", "LIDL"],
     "ALDI": ["ALDI", "Aldi"],
     "SPAR": ["SPAR", "Spar", "INTERSPAR", "Interspar"],
-    "Tesco": ["Tesco", "TESCO"]
+    "Tesco": ["Tesco", "TESCO"],
+    "Auchan": ["Auchan", "AUCHAN"],
+    "Penny": ["Penny", "PENNY", "Penny Market", "PENNY Market"]
 }
-
-# Ezeknél az OSM címkézés hiányos vagy zajos volt, ezért override fájlból jönnek.
-OVERRIDE_COMPANIES = ["Lidl", "Auchan", "Penny"]
 
 
 REGION_CITY_MAP = {
@@ -155,7 +154,7 @@ out center tags;
 
 def fetch_overpass(query):
     headers = {
-        "User-Agent": "fmcg-intelligence-hu-store-network-builder/1.3"
+        "User-Agent": "fmcg-intelligence-hu-store-network-builder/1.4"
     }
 
     response = requests.post(
@@ -214,12 +213,18 @@ def extract_address(tags):
 def normalize_company_from_brand(raw_brand, expected_company):
     raw = (raw_brand or "").lower()
 
+    if "lidl" in raw:
+        return "Lidl"
     if "aldi" in raw:
         return "ALDI"
     if "spar" in raw:
         return "SPAR"
     if "tesco" in raw:
         return "Tesco"
+    if "auchan" in raw:
+        return "Auchan"
+    if "penny" in raw:
+        return "Penny"
 
     return expected_company
 
@@ -272,6 +277,7 @@ def load_overrides():
         stores = payload.get("stores", [])
 
         normalized = []
+
         for idx, store in enumerate(stores):
             company = store.get("company", "n.a.")
             name = store.get("name", f"{company} üzlet")
@@ -326,7 +332,7 @@ def collect_osm_stores():
     stores = []
     status_companies = []
 
-    for company, brand_values in OSM_BRANDS.items():
+    for company, brand_values in BRANDS.items():
         print(f"Fetching {company} from OSM...")
 
         try:
@@ -381,32 +387,24 @@ def main():
     all_stores = deduplicate(osm_stores + override_stores)
     all_stores.sort(key=lambda x: (x.get("company", ""), x.get("city", ""), x.get("name", "")))
 
-    override_counts = {}
-    for store in override_stores:
-        company = store.get("company", "n.a.")
-        override_counts[company] = override_counts.get(company, 0) + 1
-
-    for company in OVERRIDE_COMPANIES:
-        status_companies.append({
-            "company": company,
-            "source": "store-network-overrides.json",
-            "status": "ok" if override_counts.get(company, 0) > 0 else "missing_or_empty",
-            "stores": override_counts.get(company, 0)
-        })
-
     company_totals = {}
+    source_totals = {}
+
     for store in all_stores:
         company = store.get("company", "n.a.")
+        source = store.get("source", "n.a.")
+
         company_totals[company] = company_totals.get(company, 0) + 1
+        source_totals[source] = source_totals.get(source, 0) + 1
 
     payload = {
         "updated_at": updated_at,
-        "version": "store-network-hu-v1.3-osm-plus-overrides",
-        "scope": "Hungarian FMCG store network from OSM + overrides",
+        "version": "store-network-hu-v1.4-osm-safe-plus-overrides",
+        "scope": "Hungarian FMCG store network from OSM + optional overrides",
         "method_note": (
-            "Az országos bolthálózati adatbázis OSM/Overpass lekérdezésekből és manuális override fájlból épül. "
-            "ALDI, SPAR és Tesco OSM-ből érkezik. Lidl, Auchan és Penny override rétegből kezelhető, "
-            "mert az OSM címkézés ezeknél hiányos vagy zajos volt. Az adatok nem hivatalos teljes üzletlisták."
+            "Az országos bolthálózati adatbázis biztonságos OSM/Overpass brand alapú lekérdezésekből "
+            "és opcionális manuális override fájlból épül. Ez a verzió nem használ tág name/operator regexet, "
+            "ezért nem akasztja meg az Overpass szervert. Az adatok nem hivatalos teljes üzletlisták."
         ),
         "stores": all_stores
     }
@@ -414,16 +412,17 @@ def main():
     status = {
         "updated_at": updated_at,
         "status": "ok",
-        "version": "store-network-hu-v1.3-osm-plus-overrides",
-        "source": "openstreetmap_overpass_plus_overrides",
+        "version": "store-network-hu-v1.4-osm-safe-plus-overrides",
+        "source": "openstreetmap_overpass_plus_optional_overrides",
         "store_count": len(all_stores),
         "company_totals": company_totals,
+        "source_totals": source_totals,
         "companies": status_companies,
         "filters": {
             "country": "Hungary",
             "osm_shop": ["supermarket", "convenience"],
-            "osm_companies": list(OSM_BRANDS.keys()),
-            "override_companies": OVERRIDE_COMPANIES,
+            "searched_tag": "brand",
+            "brands": BRANDS,
             "override_file": str(OVERRIDE_FILE)
         }
     }
