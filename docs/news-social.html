@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FMCG Intelligence Hungary – News, Reputation & Social Monitor V6.6.6.5</title>
+  <title>FMCG Intelligence Hungary – News, Reputation & Social Monitor V6.7.7.6.6.5</title>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="./css/style.css" />
@@ -102,6 +102,15 @@
     .ownership-value{font-weight:950;color:var(--navy);font-size:12px;}
     .ownership-bar{height:6px;background:#e5edf5;border-radius:99px;overflow:hidden;margin-top:5px;}
     .ownership-fill{height:100%;background:linear-gradient(90deg,var(--blue),var(--green));}
+    .sentiment-cell{min-width:86px;text-align:center;}
+    .sentiment-badge{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:4px 8px;font-size:12px;font-weight:900;}
+    .sentiment-positive{background:#dcfce7;color:#166534;}
+    .sentiment-neutral{background:#eef2f7;color:#475569;}
+    .sentiment-negative{background:#fee2e2;color:#991b1b;}
+    .sentiment-mixed{background:#ffedd5;color:#9a3412;}
+    .quality-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;}
+    .quality-tile{border:1px solid #e2edf6;border-radius:16px;background:#fbfdff;padding:13px;}
+    .quality-tile b{display:block;font-size:24px;color:var(--navy);margin-top:5px;}
     .ownership-topic{max-width:210px;white-space:normal!important;line-height:1.25;}
 
     details{border:1px solid #dbe7f2;border-radius:18px;background:white;box-shadow:var(--shadow);overflow:hidden;}
@@ -173,7 +182,7 @@
   <div class="header-inner">
     <div class="brand">
       <div class="brand-title">FMCG Intelligence Hungary</div>
-      <div class="brand-subtitle">News, Reputation & Social Monitor V6.6.5</div>
+      <div class="brand-subtitle">News, Reputation & Social Monitor V6.7.6.5</div>
     </div>
     <nav class="nav">
       <a href="./index.html">Dashboard</a>
@@ -187,7 +196,7 @@
 
 <section class="hero">
   <div class="hero-box">
-    <div class="hero-kicker">News, Reputation & Social Intelligence V6.6.5</div>
+    <div class="hero-kicker">News, Reputation & Social Intelligence V6.7.6.5</div>
     <h1>FMCG média-, kockázati-, social- és reputációs intelligence központ</h1>
     <p>
       A friss hírmonitor a <b>news-social.json</b> fájlból dolgozik. A történeti háttér a
@@ -310,6 +319,20 @@
       </div>
     </div>
 
+    <div class="card span12">
+      <div class="section-title">
+        <h2>Social Quality Summary</h2>
+        <span>HU relevancia-szűrés, dashboard/background/discarded bontás</span>
+      </div>
+      <div id="socialQualitySummary" class="quality-grid">Social quality adatok betöltése...</div>
+      <div class="block-explain">
+        <b>Mit látunk?</b> Ez a blokk megmutatja, hogy a social monitor mennyi találatot tart használhatónak a dashboard számára.
+        A dashboard elemek erős magyar relevanciájú találatok, a background elemek gyengébb, de még hasznos háttérjelek.
+        A discarded elemeket a rendszer már nem számolja bele az indexbe, mert túl zajosak vagy nem magyar piaci kötődésűek.
+        Ez az adatminőségi réteg védi a dashboardot a hamis social következtetésektől.
+      </div>
+    </div>
+
     <div class="card span6">
       <div class="section-title">
         <h2>Reputációs Risk Ranking</h2>
@@ -344,7 +367,7 @@
       </div>
     </div>
 
-    <div class="card span6">
+    <div class="card span4">
       <div class="section-title">
         <h2>Domináns Piaci Narratívák</h2>
         <span>friss hírek alapján</span>
@@ -359,7 +382,7 @@
       </div>
     </div>
 
-    <div class="card span6">
+    <div class="card span4">
       <div class="section-title">
         <h2>Narrative Ownership Matrix</h2>
         <span>melyik lánc milyen arányban jelenik meg az egyes médiatémákban</span>
@@ -374,7 +397,22 @@
       </div>
     </div>
 
-    <div class="card span6">
+    <div class="card span4">
+      <div class="section-title">
+        <h2>Narrative Sentiment Matrix</h2>
+        <span>az egyes médiatémák hangulata cégenként</span>
+      </div>
+      <div id="narrativeSentimentMatrix" class="matrix-wrap compact-table">Adatok betöltése...</div>
+      <div class="chart-insight" id="narrativeSentimentInsight">Adatok betöltése...</div>
+      <div class="block-explain">
+        <b>Mit látunk?</b> Ez a mátrix azt mutatja, hogy az adott médiatéma pozitív, semleges, vegyes vagy negatív hangulatban jelenik meg az egyes láncoknál.
+        Nem a téma mennyiségét, hanem annak hangnemét mutatja.
+        Így látható, hogy például a növekedés jó hírként, a szabályozás pedig kockázatként jelenik-e meg.
+        Ez a reputációs értelmezés egyik legfontosabb rétege.
+      </div>
+    </div>
+
+    <div class="card span4">
       <div class="section-title">
         <h2>Top Social Topics</h2>
         <span>social monitor alapján</span>
@@ -389,7 +427,7 @@
       </div>
     </div>
 
-    <div class="card span6">
+    <div class="card span4">
       <div class="section-title">
         <h2>Social Topic Ownership Matrix</h2>
         <span>melyik lánc körül jelennek meg az egyes social témák</span>
@@ -401,6 +439,21 @@
         A social térben az árak, bolti élmények, digitalizáció vagy munkaerő más arányban jelenhet meg, mint a hírekben.
         Az arányok a social-monitor.json top témáiból készülnek.
         A blokk célja, hogy látszódjon, kiről beszélnek az emberek az adott témában.
+      </div>
+    </div>
+
+    <div class="card span4">
+      <div class="section-title">
+        <h2>Social Topic Sentiment Matrix</h2>
+        <span>social témák hangulata cégenként</span>
+      </div>
+      <div id="socialTopicSentimentMatrix" class="matrix-wrap compact-table">Adatok betöltése...</div>
+      <div class="chart-insight" id="socialTopicSentimentInsight">Adatok betöltése...</div>
+      <div class="block-explain">
+        <b>Mit látunk?</b> Ez a blokk azt mutatja, hogy az egyes social témák milyen hangulatot hordoznak az adott lánc körül.
+        A V1.4 social quality réteg csak a dashboard és background relevanciájú elemeket számolja az indexbe.
+        Ez csökkenti a külföldi zajt, és jobban mutatja a magyar piaci visszhangot.
+        A jelzés továbbra is kulcsszavas OSINT-indikátor, nem teljes social listening.
       </div>
     </div>
 
@@ -608,7 +661,7 @@
   </div>
 </main>
 
-<footer class="footer">FMCG Intelligence Hungary – News, Reputation & Social Monitor V6.6.6.5.</footer>
+<footer class="footer">FMCG Intelligence Hungary – News, Reputation & Social Monitor V6.7.7.6.6.5.</footer>
 
 <script>
 const currentUrl = './data/news-social.json';
@@ -744,12 +797,15 @@ function renderPage(current,currentStatus,history,historyStatus,social,socialSta
   renderStoreReputationSummary(storeData);
   renderCompanyCards(companies,current,socialMap);
   renderSocialSignalCards(social);
+  renderSocialQualitySummary(social);
   renderRiskRanking(companies);
   renderSocialRanking(social);
   renderCurrentNarratives(companies,current);
   renderNarrativeOwnershipMatrix(companies,current);
+  renderNarrativeSentimentMatrix(companies,current);
   renderSocialTopics(social);
   renderSocialTopicOwnershipMatrix(social);
+  renderSocialTopicSentimentMatrix(social);
   renderMediaSocial(companies,current,socialMap);
   renderSocialHistory(socialHistory);
   renderHuSocialItems(social);
@@ -978,9 +1034,9 @@ function renderSocialSignalCards(social){
       </div>
       <div class="mini-kpis">
         <div class="mini-kpi"><span>Index</span><b>${fmtNum(s.social_index)}</b></div>
-        <div class="mini-kpi"><span>Említés</span><b>${fmtNum(s.social_mentions)}</b></div>
-        <div class="mini-kpi"><span>Súlyozott</span><b>${fmtNum(s.weighted_social_mentions)}</b></div>
-        <div class="mini-kpi"><span>HU releváns</span><b>${fmtNum(s.hu_relevant_mentions)}</b></div>
+        <div class="mini-kpi"><span>Indexelt</span><b>${fmtNum(s.social_mentions)}</b></div>
+        <div class="mini-kpi"><span>Dashboard</span><b>${fmtNum(s.dashboard_mentions ?? s.hu_relevant_mentions)}</b></div>
+        <div class="mini-kpi"><span>Kiszűrt</span><b>${fmtNum(s.discarded_mentions || 0)}</b></div>
         <div class="mini-kpi"><span>Reddit</span><b>${fmtNum(s.social_sources?.reddit||0)}</b></div>
         <div class="mini-kpi"><span>YouTube</span><b>${fmtNum(s.social_sources?.youtube||0)}</b></div>
       </div>
@@ -994,6 +1050,30 @@ function renderSocialSignalCards(social){
       </div>
     </div>
   `).join('');
+}
+
+function renderSocialQualitySummary(social){
+  const items=socialItems(social);
+  const totals={raw:0,dashboard:0,background:0,discarded:0,weighted:0};
+
+  items.forEach(s=>{
+    totals.raw += num(s.raw_social_mentions ?? s.social_mentions);
+    totals.dashboard += num(s.dashboard_mentions ?? s.hu_relevant_mentions);
+    totals.background += num(s.background_mentions);
+    totals.discarded += num(s.discarded_mentions);
+    totals.weighted += num(s.weighted_social_mentions);
+  });
+
+  const qualityRate = totals.raw ? Math.round((totals.dashboard / totals.raw) * 100) : 0;
+
+  const leader=[...items].sort((a,b)=>num(b.dashboard_mentions ?? b.hu_relevant_mentions)-num(a.dashboard_mentions ?? a.hu_relevant_mentions))[0];
+
+  document.getElementById('socialQualitySummary').innerHTML=`
+    <div class="quality-tile"><div class="kpi-label">Dashboard találatok</div><b>${fmtNum(totals.dashboard)}</b><div class="small">erős magyar relevancia</div></div>
+    <div class="quality-tile"><div class="kpi-label">Background találatok</div><b>${fmtNum(totals.background)}</b><div class="small">gyengébb, de hasznos jel</div></div>
+    <div class="quality-tile"><div class="kpi-label">Kiszűrt zaj</div><b>${fmtNum(totals.discarded)}</b><div class="small">nem számolódik az indexbe</div></div>
+    <div class="quality-tile"><div class="kpi-label">Quality leader</div><b>${leader?.company||'n.a.'}</b><div class="small">dashboard arány: ${fmtNum(qualityRate)}%</div></div>
+  `;
 }
 
 function renderRiskRanking(companies){
@@ -1047,6 +1127,63 @@ function renderCurrentNarratives(companies,data){
 }
 
 
+
+function sentimentLabel(value){
+  if(value==='positive') return 'pozitív';
+  if(value==='negative') return 'negatív';
+  if(value==='mixed') return 'vegyes';
+  if(value==='neutral') return 'semleges';
+  return '–';
+}
+
+function sentimentIcon(value){
+  if(value==='positive') return '🟢';
+  if(value==='negative') return '🔴';
+  if(value==='mixed') return '🟡';
+  if(value==='neutral') return '⚪';
+  return '–';
+}
+
+function dominantSentiment(counts){
+  const keys=['positive','negative','mixed','neutral'];
+  const best=keys.map(k=>({k,v:num(counts?.[k])})).sort((a,b)=>b.v-a.v)[0];
+  return best && best.v>0 ? best.k : 'neutral';
+}
+
+function buildSentimentMatrixTable(rows, labels, titleLabel){
+  if(!rows.length || !labels.length){
+    return '<div class="notice">Nincs elég adat a sentiment mátrixhoz.</div>';
+  }
+
+  return `
+    <table class="matrix-table ownership-table">
+      <thead>
+        <tr>
+          <th>${titleLabel}</th>
+          ${labels.map(label=>`<th>${label}</th>`).join('')}
+        </tr>
+      </thead>
+      <tbody>
+        ${rows.map(row=>`
+          <tr>
+            <td class="ownership-topic"><b>${row.topic}</b><div class="small">összes súly: ${fmtNum(row.total)}</div></td>
+            ${labels.map(label=>{
+              const s=row.sentiments[label] || 'none';
+              const c=row.counts[label] || {};
+              const total=num(c.positive)+num(c.neutral)+num(c.negative)+num(c.mixed);
+              return `
+                <td class="sentiment-cell">
+                  <span class="sentiment-badge sentiment-${s}">${sentimentIcon(s)} ${sentimentLabel(s)}</span>
+                  <div class="small">${total ? fmtNum(total) : ''}</div>
+                </td>
+              `;
+            }).join('')}
+          </tr>
+        `).join('')}
+      </tbody>
+    </table>
+  `;
+}
 
 function buildOwnershipTable(rows, labels, titleLabel){
   if(!rows.length || !labels.length){
@@ -1126,6 +1263,57 @@ function renderNarrativeOwnershipMatrix(companies,data){
     'Nincs elég adat a narratíva-tulajdonosi arányokhoz.';
 }
 
+function renderNarrativeSentimentMatrix(companies,data){
+  const companyLabels=companies.map(c=>c.company);
+  const topicTotals={};
+
+  companies.forEach(c=>{
+    (c.articles || []).forEach(article=>{
+      const topic=article.strategic_narrative || 'general';
+      if(topic==='general' || topic==='n.a.') return;
+      topicTotals[topic]=(topicTotals[topic]||0)+num(article.source_weight || 1);
+    });
+  });
+
+  const topTopics=Object.entries(topicTotals)
+    .sort((a,b)=>b[1]-a[1])
+    .slice(0,7)
+    .map(([topic])=>topic);
+
+  const rows=topTopics.map(topic=>{
+    const counts={};
+    const sentiments={};
+    let total=0;
+
+    companies.forEach(c=>{
+      counts[c.company]={positive:0,neutral:0,negative:0,mixed:0};
+      (c.articles || []).forEach(article=>{
+        if((article.strategic_narrative || 'general') !== topic) return;
+        const sentiment=article.sentiment || 'neutral';
+        const weight=num(article.source_weight || 1);
+        counts[c.company][sentiment]=(counts[c.company][sentiment]||0)+weight;
+        total+=weight;
+      });
+      sentiments[c.company]=dominantSentiment(counts[c.company]);
+    });
+
+    return {topic:narrativeLabel(topic,data), rawTopic:topic, total, counts, sentiments};
+  });
+
+  document.getElementById('narrativeSentimentMatrix').innerHTML=buildSentimentMatrixTable(rows,companyLabels,'Narratíva');
+
+  let negativeSignals=[];
+  rows.forEach(row=>{
+    companyLabels.forEach(company=>{
+      if(row.sentiments[company]==='negative') negativeSignals.push(`${company} / ${row.topic}`);
+    });
+  });
+
+  document.getElementById('narrativeSentimentInsight').innerHTML=
+    negativeSignals.length ? `Negatív narratívajel látszik itt: <b>${negativeSignals.slice(0,3).join(', ')}</b>.` :
+    'A domináns médiatémákban jelenleg nincs erős negatív sentiment jel a mátrix alapján.';
+}
+
 function renderSocialTopics(social){
   const totals={};
   socialItems(social).forEach(s=>{
@@ -1183,6 +1371,64 @@ function renderSocialTopicOwnershipMatrix(social){
   document.getElementById('socialOwnershipInsight').innerHTML=
     strongest ? `A legerősebb social téma-tulajdonosi jel: <b>${strongest.topic}</b> témában <b>${strongest.leader}</b> kapcsolódik a legnagyobb arányban (${Math.round(strongest.pct)}%).` :
     'Nincs elég adat a social téma-tulajdonosi arányokhoz.';
+}
+
+function renderSocialTopicSentimentMatrix(social){
+  const items=socialItems(social);
+  const companyLabels=items.map(s=>s.company);
+  const topicTotals={};
+
+  items.forEach(s=>{
+    const ts=s.topic_sentiment || {};
+    Object.entries(ts).forEach(([topic,counts])=>{
+      const total=num(counts.positive)+num(counts.neutral)+num(counts.negative)+num(counts.mixed);
+      topicTotals[topic]=(topicTotals[topic]||0)+total;
+    });
+  });
+
+  if(!Object.keys(topicTotals).length){
+    document.getElementById('socialTopicSentimentMatrix').innerHTML='<div class="notice">A social-monitor.json még nem tartalmaz topic_sentiment mezőt. Futtasd a V1.4 social scriptet.</div>';
+    document.getElementById('socialTopicSentimentInsight').innerHTML='Nincs elég adat a social topic sentiment értelmezéshez.';
+    return;
+  }
+
+  const topTopics=Object.entries(topicTotals)
+    .sort((a,b)=>b[1]-a[1])
+    .slice(0,7)
+    .map(([topic])=>topic);
+
+  const rows=topTopics.map(topic=>{
+    const counts={};
+    const sentiments={};
+    let total=0;
+
+    items.forEach(s=>{
+      const sourceCounts=s.topic_sentiment?.[topic] || {positive:0,neutral:0,negative:0,mixed:0};
+      counts[s.company]={
+        positive:num(sourceCounts.positive),
+        neutral:num(sourceCounts.neutral),
+        negative:num(sourceCounts.negative),
+        mixed:num(sourceCounts.mixed)
+      };
+      sentiments[s.company]=sourceCounts.dominant || dominantSentiment(counts[s.company]);
+      total+=num(counts[s.company].positive)+num(counts[s.company].neutral)+num(counts[s.company].negative)+num(counts[s.company].mixed);
+    });
+
+    return {topic, total, counts, sentiments};
+  });
+
+  document.getElementById('socialTopicSentimentMatrix').innerHTML=buildSentimentMatrixTable(rows,companyLabels,'Social téma');
+
+  let negativeSignals=[];
+  rows.forEach(row=>{
+    companyLabels.forEach(company=>{
+      if(row.sentiments[company]==='negative') negativeSignals.push(`${company} / ${row.topic}`);
+    });
+  });
+
+  document.getElementById('socialTopicSentimentInsight').innerHTML=
+    negativeSignals.length ? `Negatív social témák azonosíthatók: <b>${negativeSignals.slice(0,3).join(', ')}</b>.` :
+    'A social témákban jelenleg nincs erős negatív domináns jel; a többség pozitív, vegyes vagy semleges.';
 }
 
 function renderMediaSocial(companies,data,socialMap){
