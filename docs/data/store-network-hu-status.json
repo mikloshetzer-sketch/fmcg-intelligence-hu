@@ -1,21 +1,16 @@
 {
-  "updated_at": "2026-06-09T11:36:55.202078+00:00",
+  "updated_at": "2026-06-09T12:43:29.786202+00:00",
   "status": "ok",
-  "version": "store-network-hu-v1.1-openstreetmap-overpass",
-  "source": "openstreetmap_overpass",
-  "store_count": 890,
+  "version": "store-network-hu-v1.3-osm-plus-overrides",
+  "source": "openstreetmap_overpass_plus_overrides",
+  "store_count": 188,
+  "company_totals": {
+    "ALDI": 188
+  },
   "companies": [
     {
-      "company": "Lidl",
-      "status": "error",
-      "stores": 0,
-      "brand_values": [
-        "Lidl"
-      ],
-      "error": "504 Server Error: Gateway Timeout for url: https://overpass-api.de/api/interpreter"
-    },
-    {
       "company": "ALDI",
+      "source": "openstreetmap_overpass",
       "status": "ok",
       "stores": 188,
       "brand_values": [
@@ -25,79 +20,63 @@
     },
     {
       "company": "SPAR",
-      "status": "ok",
-      "stores": 520,
+      "source": "openstreetmap_overpass",
+      "status": "error",
+      "stores": 0,
       "brand_values": [
         "SPAR",
+        "Spar",
         "INTERSPAR",
-        "Interspar",
-        "Spar"
-      ]
+        "Interspar"
+      ],
+      "error": "504 Server Error: Gateway Timeout for url: https://overpass-api.de/api/interpreter"
     },
     {
       "company": "Tesco",
-      "status": "ok",
-      "stores": 182,
+      "source": "openstreetmap_overpass",
+      "status": "error",
+      "stores": 0,
       "brand_values": [
         "Tesco",
         "TESCO"
-      ]
+      ],
+      "error": "504 Server Error: Gateway Timeout for url: https://overpass-api.de/api/interpreter"
+    },
+    {
+      "company": "Lidl",
+      "source": "store-network-overrides.json",
+      "status": "missing_or_empty",
+      "stores": 0
     },
     {
       "company": "Auchan",
-      "status": "error",
-      "stores": 0,
-      "brand_values": [
-        "Auchan"
-      ],
-      "error": "429 Client Error: Too Many Requests for url: https://overpass-api.de/api/interpreter"
+      "source": "store-network-overrides.json",
+      "status": "missing_or_empty",
+      "stores": 0
     },
     {
       "company": "Penny",
-      "status": "error",
-      "stores": 0,
-      "brand_values": [
-        "Penny",
-        "PENNY",
-        "Penny Market",
-        "PENNY Market"
-      ],
-      "error": "429 Client Error: Too Many Requests for url: https://overpass-api.de/api/interpreter"
+      "source": "store-network-overrides.json",
+      "status": "missing_or_empty",
+      "stores": 0
     }
   ],
   "filters": {
     "country": "Hungary",
-    "shop": [
+    "osm_shop": [
       "supermarket",
       "convenience"
     ],
-    "brands": {
-      "Lidl": [
-        "Lidl"
-      ],
-      "ALDI": [
-        "ALDI",
-        "Aldi"
-      ],
-      "SPAR": [
-        "SPAR",
-        "INTERSPAR",
-        "Interspar",
-        "Spar"
-      ],
-      "Tesco": [
-        "Tesco",
-        "TESCO"
-      ],
-      "Auchan": [
-        "Auchan"
-      ],
-      "Penny": [
-        "Penny",
-        "PENNY",
-        "Penny Market",
-        "PENNY Market"
-      ]
-    }
+    "osm_companies": [
+      "ALDI",
+      "SPAR",
+      "Tesco"
+    ],
+    "override_companies": [
+      "Lidl",
+      "Auchan",
+      "Penny"
+    ],
+    "override_file": "/home/runner/work/fmcg-intelligence-hu/fmcg-intelligence-hu/docs/data/store-network-overrides.json"
   }
 }
