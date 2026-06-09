@@ -2,8 +2,10 @@
 # -*- coding: utf-8 -*-
 
 import json
-import :contentReference[oaicite:0]{index=0}hashlib
+import hashlib
 import urllib.parse
+import re
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -95,6 +97,7 @@ def now_iso():
 def clean_text(value):
     if not value:
         return ""
+    value = str(value)
     value = re.sub(r"<[^>]+>", " ", value)
     value = re.sub(r"\s+", " ", value)
     return value.strip()
@@ -137,8 +140,10 @@ def collect_reddit(company):
             title = clean_text(getattr(entry, "title", ""))
             summary = clean_text(getattr(entry, "summary", ""))
             link = getattr(entry, "link", "")
+
             if not title and not summary:
                 continue
+
             items.append({
                 "id": item_id("reddit", title, link),
                 "source": "reddit",
@@ -149,6 +154,7 @@ def collect_reddit(company):
                 "published": getattr(entry, "published", ""),
                 "query": query
             })
+
     return items
 
 
@@ -157,13 +163,16 @@ def collect_youtube_discovery(company):
     for query in company["queries"]:
         yt_query = f'site:youtube.com {query} review OR panasz OR akció OR vásárlás'
         url = google_news_rss(yt_query)
+
         for entry in fetch_feed(url):
             title = clean_text(getattr(entry, "title", ""))
             summary = clean_text(getattr(entry, "summary", ""))
             link = getattr(entry, "link", "")
-            text = f"{title} {summary}".lower()
-            if "youtube" not in text and "youtube" not in link.lower():
+            text = f"{title} {summary} {link}".lower()
+
+            if "youtube" not in text:
                 continue
+
             items.append({
                 "id": item_id("youtube", title, link),
                 "source": "youtube",
@@ -174,6 +183,7 @@ def collect_youtube_discovery(company):
                 "published": getattr(entry, "published", ""),
                 "query": yt_query
             })
+
     return items
 
 
@@ -181,10 +191,15 @@ def collect_mastodon(company):
     items = []
     for tag in company["mastodon_tags"]:
         url = mastodon_tag_rss(tag)
+
         for entry in fetch_feed(url):
             title = clean_text(getattr(entry, "title", ""))
             summary = clean_text(getattr(entry, "summary", ""))
             link = getattr(entry, "link", "")
+
+            if not title and not summary:
+                continue
+
             items.append({
                 "id": item_id("mastodon", title, link),
                 "source": "mastodon",
@@ -195,32 +210,40 @@ def collect_mastodon(company):
                 "published": getattr(entry, "published", ""),
                 "query": f"#{tag}"
             })
+
     return items
 
 
 def deduplicate(items):
     seen = set()
     result = []
+
     for item in items:
-        if item["id"] in seen:
+        key = item.get("id")
+        if key in seen:
             continue
-        seen.add(item["id"])
+        seen.add(key)
         result.append(item)
+
     return result
 
 
 def detect_topic(items):
     scores = {topic: 0 for topic in TOPIC_KEYWORDS}
+
     for item in items:
         text = f'{item.get("title", "")} {item.get("summary", "")}'.lower()
+
         for topic, words in TOPIC_KEYWORDS.items():
             for word in words:
                 if word.lower() in text:
                     scores[topic] += 1
 
     best_topic = max(scores, key=scores.get)
+
     if scores[best_topic] == 0:
         return "általános vállalati említés"
+
     return best_topic
 
 
@@ -230,28 +253,33 @@ def detect_sentiment(items):
 
     for item in items:
         text = f'{item.get("title", "")} {item.get("summary", "")}'.lower()
+
         for word in POSITIVE_WORDS:
             if word in text:
                 pos += 1
+
         for word in NEGATIVE_WORDS:
             if word in text:
                 neg += 1
 
     if pos == 0 and neg == 0:
         return "neutral"
+
     if neg > pos * 1.4:
         return "negative"
+
     if pos > neg * 1.4:
         return "positive"
+
     return "mixed"
 
 
 def calculate_social_index(total_mentions, sources_count):
     """
     Ez nem reputációs pontszám.
-    Ez csak social signal intenzitás:
-    - hány említés van
-    - hány forrásból jön
+    Ez social signal intenzitás:
+    - említésszám
+    - forrásdiverzitás
     """
     base = min(total_mentions * 6, 80)
     diversity_bonus = min(sources_count * 7, 20)
@@ -280,9 +308,9 @@ def build_company_result(company):
     all_items = deduplicate(all_items)
 
     source_counts = {
-        "reddit": sum(1 for x in all_items if x["source"] == "reddit"),
-        "youtube": sum(1 for x in all_items if x["source"] == "youtube"),
-        "mastodon": sum(1 for x in all_items if x["source"] == "mastodon")
+        "reddit": sum(1 for x in all_items if x.get("source") == "reddit"),
+        "youtube": sum(1 for x in all_items if x.get("source") == "youtube"),
+        "mastodon": sum(1 for x in all_items if x.get("source") == "mastodon")
     }
 
     active_sources = sum(1 for value in source_counts.values() if value > 0)
@@ -305,21 +333,30 @@ def main():
     DATA_DIR.mkdir(parents=True, exist_ok=True)
 
     results = []
+
     status = {
         "updated_at": now_iso(),
         "status": "ok",
         "companies": [],
-        "sources": ["reddit_rss", "youtube_discovery_google_news_rss", "mastodon_tag_rss"],
+        "sources": [
+            "reddit_rss",
+            "youtube_discovery_google_news_rss",
+            "mastodon_tag_rss"
+        ],
         "method_note": "Első verziós Social Signal Layer. Óvatos, nyílt forrású jelzőrendszer."
     }
 
     for company in COMPANIES:
         result = build_company_result(company)
         results.append(result)
+
         status["companies"].append({
             "company": company["company"],
             "mentions": result["social_mentions"],
             "index": result["social_index"],
+            "sources": result["social_sources"],
+            "sentiment": result["social_sentiment"],
+            "topic": result["dominant_social_topic"],
             "errors": result["errors"]
         })
 
@@ -327,6 +364,7 @@ def main():
         "updated_at": status["updated_at"],
         "version": "social-signal-layer-v1",
         "scope": "Hungarian FMCG retail chains",
+        "method_note": "Ez social signal réteg, nem teljes social analytics.",
         "items": results
     }
 
