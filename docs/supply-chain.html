@@ -1,0 +1,985 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FMCG Intelligence Hungary – Supply Chain & Store Intelligence</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <style>
+    :root{
+      --navy:#05284f;
+      --blue:#0ea5e9;
+      --green:#22c55e;
+      --orange:#f97316;
+      --red:#ef4444;
+      --purple:#7c3aed;
+      --border:#d7e4ef;
+      --muted:#5b708f;
+      --shadow:0 18px 45px rgba(15,42,75,.10);
+      --warn:#fff7ed;
+      --warn-border:#fed7aa;
+    }
+
+    body{
+      background:linear-gradient(110deg,#e5f6ff 0%,#eefdf4 100%);
+    }
+
+    .main{
+      max-width:1440px;
+      margin:0 auto;
+      padding:26px 18px 60px;
+    }
+
+    .hero-box{
+      max-width:1440px;
+      margin:0 auto;
+      border-radius:28px;
+      background:rgba(255,255,255,.72);
+      box-shadow:var(--shadow);
+    }
+
+    .dashboard-grid{
+      display:grid;
+      grid-template-columns:repeat(12,minmax(0,1fr));
+      gap:18px;
+      align-items:stretch;
+    }
+
+    .span12{grid-column:span 12}
+    .span8{grid-column:span 8}
+    .span6{grid-column:span 6}
+    .span4{grid-column:span 4}
+    .span3{grid-column:span 3}
+
+    .card{
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
+      background:rgba(255,255,255,.95);
+      border-radius:22px;
+      padding:18px;
+    }
+
+    .kpi-card{
+      min-height:132px;
+      position:relative;
+      overflow:hidden;
+      background:linear-gradient(145deg,#fff,#f7fbff);
+    }
+
+    .kpi-card:after{
+      content:"";
+      position:absolute;
+      right:-26px;
+      top:-35px;
+      width:95px;
+      height:95px;
+      border-radius:50%;
+      background:rgba(14,165,233,.12);
+    }
+
+    .kpi-label{
+      color:#64748b;
+      font-weight:800;
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.04em;
+    }
+
+    .kpi{
+      font-size:27px;
+      line-height:1.05;
+      color:var(--navy);
+      font-weight:950;
+      margin-top:7px;
+    }
+
+    .kpi-sub{
+      margin-top:8px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.45;
+    }
+
+    .section-title{
+      border-bottom:1px solid #e6eef6;
+      padding-bottom:10px;
+      margin-bottom:12px;
+    }
+
+    .section-title h2{
+      font-size:20px;
+      margin:0 0 2px 0;
+      color:var(--navy);
+    }
+
+    .section-title span{
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .chartbox{height:315px;}
+    .chartbox.tall{height:370px;}
+
+    .rank-row{
+      display:grid;
+      grid-template-columns:44px 1fr 125px;
+      gap:12px;
+      padding:12px 0;
+      border-bottom:1px solid #e5edf5;
+      align-items:center;
+    }
+
+    .rank{
+      width:36px;
+      height:36px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:12px;
+      font-weight:900;
+      background:#eef3f8;
+      color:var(--navy);
+    }
+
+    .rank.one{background:#dcfce7;color:#166534}
+    .rank.two{background:#e0f2fe;color:#0369a1}
+    .rank.three{background:#ffedd5;color:#9a3412}
+
+    .bar{
+      height:8px;
+      background:#e5edf5;
+      border-radius:99px;
+      overflow:hidden;
+      margin-top:5px;
+    }
+
+    .fill-green{height:100%;background:linear-gradient(90deg,var(--green),var(--blue));}
+    .fill-orange{height:100%;background:linear-gradient(90deg,var(--orange),var(--red));}
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      border-radius:999px;
+      padding:4px 9px;
+      font-size:12px;
+      font-weight:800;
+      background:#e0f2fe;
+      color:#075985;
+      white-space:nowrap;
+    }
+
+    .pill.green{background:#dcfce7;color:#166534}
+    .pill.orange{background:#ffedd5;color:#9a3412}
+    .pill.red{background:#fee2e2;color:#991b1b}
+    .pill.gray{background:#eef2f7;color:#475569}
+    .pill.purple{background:#ede9fe;color:#5b21b6}
+
+    .timeline{
+      position:relative;
+      display:grid;
+      gap:14px;
+    }
+
+    .timeline:before{
+      content:"";
+      position:absolute;
+      left:17px;
+      top:6px;
+      bottom:6px;
+      width:2px;
+      background:#dbeafe;
+    }
+
+    .event-card{
+      position:relative;
+      margin-left:46px;
+      border:1px solid #dbe7f2;
+      border-radius:16px;
+      background:#fbfdff;
+      padding:14px;
+    }
+
+    .event-card:before{
+      content:"";
+      position:absolute;
+      left:-39px;
+      top:17px;
+      width:14px;
+      height:14px;
+      border-radius:50%;
+      background:#0ea5e9;
+      border:3px solid #e0f2fe;
+    }
+
+    .event-card.warning:before{background:#f97316;border-color:#ffedd5}
+    .event-card.alert:before{background:#ef4444;border-color:#fee2e2}
+
+    .event-title{
+      font-weight:900;
+      color:var(--navy);
+      line-height:1.35;
+    }
+
+    .event-meta{
+      margin-top:8px;
+      color:var(--muted);
+      font-size:12px;
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+
+    .chart-insight{
+      margin-top:12px;
+      padding:13px 15px;
+      border-radius:16px;
+      background:#f0fdfa;
+      border:1px solid #c7f1e8;
+      color:#0b315d;
+      font-size:13px;
+      line-height:1.6;
+    }
+
+    .formula-box{
+      margin-top:12px;
+      padding:13px 15px;
+      border-radius:16px;
+      background:#f8fafc;
+      border:1px solid #dbe7f2;
+      color:#334155;
+      font-size:13px;
+      line-height:1.55;
+    }
+
+    .notice{
+      background:var(--warn);
+      border:1px solid var(--warn-border);
+      border-radius:18px;
+      padding:16px;
+      line-height:1.7;
+      color:#7c2d12;
+    }
+
+    .small{
+      font-size:12px;
+      color:var(--muted);
+      line-height:1.45;
+    }
+
+    .matrix-wrap{overflow:auto;}
+
+    .matrix-table{
+      width:100%;
+      border-collapse:collapse;
+      font-size:13px;
+    }
+
+    .matrix-table th,.matrix-table td{
+      padding:10px;
+      border-bottom:1px solid #e2edf6;
+      text-align:center;
+      white-space:nowrap;
+    }
+
+    .matrix-table th:first-child,.matrix-table td:first-child{
+      text-align:left;
+      font-weight:900;
+      color:var(--navy);
+      position:sticky;
+      left:0;
+      background:#fff;
+    }
+
+    details{
+      border:1px solid #dbe7f2;
+      border-radius:18px;
+      background:white;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    summary{
+      cursor:pointer;
+      padding:18px 20px;
+      font-weight:950;
+      color:var(--navy);
+      list-style:none;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    summary::-webkit-details-marker{display:none}
+    summary:after{content:"+";font-size:22px;color:var(--blue)}
+    details[open] summary:after{content:"−";}
+
+    .details-body{
+      padding:0 18px 18px;
+      overflow:auto;
+    }
+
+    table{font-size:13px;width:100%;border-collapse:collapse}
+    th{letter-spacing:.04em;color:#334155;background:#f8fafc}
+    td,th{padding:10px;border-bottom:1px solid #e2edf6;text-align:left;vertical-align:top}
+
+    .error{
+      margin-bottom:18px;
+      border:1px solid #fecaca;
+      background:#fef2f2;
+      color:#991b1b;
+      border-radius:16px;
+      padding:16px;
+      line-height:1.6;
+    }
+
+    @media(max-width:1000px){
+      .span8,.span6,.span4,.span3{grid-column:span 12}
+      .chartbox{height:280px}
+    }
+  </style>
+</head>
+
+<body>
+<header class="header">
+  <div class="header-inner">
+    <div class="brand">
+      <div class="brand-title">FMCG Intelligence Hungary</div>
+      <div class="brand-subtitle">Supply Chain & Store Intelligence</div>
+    </div>
+    <nav class="nav">
+      <a href="./index.html">Dashboard</a>
+      <a href="./human-capital.html">Human Capital</a>
+      <a class="active" href="./supply-chain.html">Supply Chain</a>
+      <a href="./news-social.html">News & Social</a>
+      <a href="./methodology.html">Methodology</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-box">
+    <div class="hero-kicker">Supply Chain & Store Intelligence V1</div>
+    <h1>Magyar FMCG áruházak reputációs és hálózati figyelése</h1>
+    <p>
+      Az oldal a <b>store-reputation.json</b> és <b>store-reputation-history-2026.json</b>
+      fájlokra épül. Első verzióban áruházi reputációs jelzéseket, láncszintű összesítést,
+      store watchlistet és problématémákat mutat. A térképes réteg későbbi fejlesztési körben kerül ide.
+    </p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="./index.html">Vissza a fő dashboardra</a>
+      <a class="btn" href="./news-social.html">Hírek és social monitor</a>
+      <a class="btn" href="./human-capital.html">Human Capital</a>
+    </div>
+  </div>
+</section>
+
+<main class="main">
+  <div id="errorBox" style="display:none" class="error"></div>
+
+  <div class="dashboard-grid">
+
+    <div class="card span3 kpi-card">
+      <div class="kpi-label">Legaktívabb áruház</div>
+      <div class="kpi" id="kpiMostDiscussedStore">–</div>
+      <div class="kpi-sub" id="kpiMostDiscussedSub">áruházi említések alapján</div>
+    </div>
+
+    <div class="card span3 kpi-card">
+      <div class="kpi-label">Legmagasabb Store Index</div>
+      <div class="kpi" id="kpiBestStore">–</div>
+      <div class="kpi-sub" id="kpiBestStoreSub">review signal index</div>
+    </div>
+
+    <div class="card span3 kpi-card">
+      <div class="kpi-label">Figyelendő üzletek</div>
+      <div class="kpi" id="kpiWatchStores">–</div>
+      <div class="kpi-sub">40 feletti review signal index</div>
+    </div>
+
+    <div class="card span3 kpi-card">
+      <div class="kpi-label">Domináns store téma</div>
+      <div class="kpi" id="kpiDominantTopic">–</div>
+      <div class="kpi-sub">áruházi reputációs jelzések alapján</div>
+    </div>
+
+    <div class="card span6">
+      <div class="section-title">
+        <h2>Store Reputation Ranking</h2>
+        <span>áruházi review signal index alapján</span>
+      </div>
+      <div id="storeRanking">Adatok betöltése...</div>
+      <div class="formula-box">
+        <b>Értelmezés:</b> ez nem Google Reviews érték. Nyílt forrású, keresési/RSS alapú áruházi reputációs jel.
+      </div>
+    </div>
+
+    <div class="card span6">
+      <div class="section-title">
+        <h2>Company Store Comparison</h2>
+        <span>láncszintű összesítés az áruházi rétegből</span>
+      </div>
+      <div class="chartbox"><canvas id="companyStoreChart"></canvas></div>
+      <div class="chart-insight" id="companyStoreInsight">Adatok betöltése...</div>
+    </div>
+
+    <div class="card span12">
+      <div class="section-title">
+        <h2>Store Watchlist</h2>
+        <span>figyelendő áruházak: magasabb index, negatív vagy vegyes hangulat, azonosított problématéma</span>
+      </div>
+      <div id="storeWatchlist" class="timeline">Adatok betöltése...</div>
+    </div>
+
+    <div class="card span6">
+      <div class="section-title">
+        <h2>Domináns Store Témák</h2>
+        <span>kassza, árak, parkoló, készlet, kiszolgálás, tisztaság</span>
+      </div>
+      <div class="chartbox"><canvas id="storeTopicChart"></canvas></div>
+      <div class="chart-insight" id="storeTopicInsight">Adatok betöltése...</div>
+    </div>
+
+    <div class="card span6">
+      <div class="section-title">
+        <h2>Store Sentiment Overview</h2>
+        <span>pozitív, vegyes, negatív és semleges áruházi jelzések</span>
+      </div>
+      <div class="chartbox"><canvas id="storeSentimentChart"></canvas></div>
+      <div class="chart-insight" id="storeSentimentInsight">Adatok betöltése...</div>
+    </div>
+
+    <div class="card span12">
+      <div class="section-title">
+        <h2>Store Reputation History</h2>
+        <span>történeti mentés alapján, napi bontásban</span>
+      </div>
+      <div class="dashboard-grid">
+        <div class="span6">
+          <div class="chartbox"><canvas id="storeHistoryIndexChart"></canvas></div>
+          <div class="chart-insight" id="storeHistoryIndexInsight">Adatok betöltése...</div>
+        </div>
+        <div class="span6">
+          <div class="chartbox"><canvas id="storeHistoryMentionChart"></canvas></div>
+          <div class="chart-insight" id="storeHistoryMentionInsight">Adatok betöltése...</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card span12">
+      <div class="section-title">
+        <h2>Store Intelligence Matrix</h2>
+        <span>lánc, áruház, említés, index, hangulat és domináns téma</span>
+      </div>
+      <div id="storeMatrix" class="matrix-wrap">Adatok betöltése...</div>
+    </div>
+
+    <div class="card span12">
+      <div class="section-title">
+        <h2>Kiemelt áruházi találatok</h2>
+        <span>legfrissebb store reputation jelzések</span>
+      </div>
+      <div id="storeLatestItems" class="timeline">Adatok betöltése...</div>
+    </div>
+
+    <div class="span12">
+      <details>
+        <summary>Store reputation adattábla <span class="small">store-reputation.json / stores</span></summary>
+        <div class="details-body"><table id="storeTable"></table></div>
+      </details>
+    </div>
+
+    <div class="card span12">
+      <div class="section-title">
+        <h2>Adatmegbízhatósági megjegyzés</h2>
+        <span>fontos értelmezési keret</span>
+      </div>
+      <div class="notice">
+        Az áruházi reputációs réteg jelenleg nyílt Google News RSS keresések alapján működik.
+        Nem Google Reviews scraping, nem teljes vásárlói review-adatbázis, hanem store-level OSINT signal.
+        A térképes megjelenítés későbbi fejlesztési körben kerül erre az oldalra.
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer">FMCG Intelligence Hungary – Supply Chain & Store Intelligence.</footer>
+
+<script>
+const storeUrl = './data/store-reputation.json';
+const storeStatusUrl = './data/store-reputation-status.json';
+const storeHistoryUrl = './data/store-reputation-history-2026.json';
+
+let charts = {};
+
+function num(v,f=0){
+  const x = Number(v);
+  return Number.isFinite(x) ? x : f;
+}
+
+function fmtNum(v){
+  return v===null || v===undefined || v==='' ? 'n.a.' : Number(v).toLocaleString('hu-HU');
+}
+
+function cacheBust(url){
+  return url + '?v=' + Date.now();
+}
+
+function setText(id,val){
+  const el = document.getElementById(id);
+  if(el) el.textContent = val;
+}
+
+function showError(msg){
+  const box = document.getElementById('errorBox');
+  box.style.display = 'block';
+  box.innerHTML = msg;
+}
+
+function destroyChart(id){
+  if(charts[id]){
+    charts[id].destroy();
+    delete charts[id];
+  }
+}
+
+function makeChart(id,type,labels,datasets,opts={}){
+  destroyChart(id);
+  const el = document.getElementById(id);
+  if(!el) return;
+
+  charts[id] = new Chart(el,{
+    type,
+    data:{ labels, datasets },
+    options:{
+      responsive:true,
+      maintainAspectRatio:false,
+      plugins:{
+        legend:{ labels:{ color:'#16324f' } }
+      },
+      scales:{
+        x:{ ticks:{ color:'#64748b' }, grid:{ color:'#eef3f7' } },
+        y:{ ticks:{ color:'#64748b' }, grid:{ color:'#eef3f7' } }
+      },
+      ...opts
+    }
+  });
+}
+
+async function fetchJson(url,optional=false){
+  try{
+    const r = await fetch(cacheBust(url),{ cache:'no-store' });
+    if(!r.ok){
+      if(optional) return null;
+      throw new Error(url + ' HTTP ' + r.status);
+    }
+    return await r.json();
+  }catch(e){
+    if(optional) return null;
+    throw e;
+  }
+}
+
+function sentimentPill(v){
+  if(v === 'negative') return `<span class="pill red">negative</span>`;
+  if(v === 'positive') return `<span class="pill green">positive</span>`;
+  if(v === 'mixed') return `<span class="pill orange">mixed</span>`;
+  return `<span class="pill gray">${v || 'neutral'}</span>`;
+}
+
+function watchLevel(store){
+  const index = num(store.review_signal_index);
+  const sentiment = store.review_sentiment;
+
+  if(index >= 60 && sentiment === 'negative') return 'ALERT';
+  if(index >= 45 || sentiment === 'negative') return 'WARNING';
+  if(index >= 30 || sentiment === 'mixed') return 'WATCH';
+  return 'NORMAL';
+}
+
+function watchPill(level){
+  if(level === 'ALERT') return `<span class="pill red">ALERT</span>`;
+  if(level === 'WARNING') return `<span class="pill orange">WARNING</span>`;
+  if(level === 'WATCH') return `<span class="pill purple">WATCH</span>`;
+  return `<span class="pill green">NORMAL</span>`;
+}
+
+function getStores(data){
+  return data?.stores || [];
+}
+
+function getCompanySummary(data){
+  return data?.company_summary || [];
+}
+
+async function loadData(){
+  try{
+    const [storeData,storeStatus,storeHistory] = await Promise.all([
+      fetchJson(storeUrl),
+      fetchJson(storeStatusUrl,true),
+      fetchJson(storeHistoryUrl,true)
+    ]);
+
+    renderPage(storeData,storeStatus,storeHistory);
+  }catch(e){
+    showError('<b>Adatbetöltési hiba.</b><br>' + e.message + '<br><br>Ellenőrizd, hogy a docs/data/store-reputation.json elérhető-e.');
+    console.error(e);
+  }
+}
+
+function renderPage(storeData,storeStatus,storeHistory){
+  const stores = getStores(storeData);
+  const companySummary = getCompanySummary(storeData);
+
+  renderKpis(stores);
+  renderStoreRanking(stores);
+  renderCompanyStoreChart(companySummary);
+  renderStoreWatchlist(stores);
+  renderStoreTopics(stores);
+  renderStoreSentiment(stores);
+  renderStoreHistory(storeHistory);
+  renderStoreMatrix(stores);
+  renderLatestItems(stores);
+  renderStoreTable(stores);
+}
+
+function renderKpis(stores){
+  const byMentions = [...stores].sort((a,b)=>num(b.store_mentions)-num(a.store_mentions))[0];
+  const byIndex = [...stores].sort((a,b)=>num(b.review_signal_index)-num(a.review_signal_index))[0];
+
+  const watchStores = stores.filter(s => watchLevel(s) !== 'NORMAL');
+
+  const topicCounts = {};
+  stores.forEach(s => {
+    const t = s.dominant_store_topic || 'nincs elég adat';
+    if(t !== 'nincs elég adat'){
+      topicCounts[t] = (topicCounts[t] || 0) + 1;
+    }
+  });
+
+  const dominantTopic = Object.entries(topicCounts).sort((a,b)=>b[1]-a[1])[0]?.[0] || 'nincs elég adat';
+
+  setText('kpiMostDiscussedStore', byMentions?.store_name || 'n.a.');
+  setText('kpiMostDiscussedSub', `${fmtNum(byMentions?.store_mentions || 0)} említés`);
+
+  setText('kpiBestStore', byIndex?.store_name || 'n.a.');
+  setText('kpiBestStoreSub', `index: ${fmtNum(byIndex?.review_signal_index || 0)}`);
+
+  setText('kpiWatchStores', fmtNum(watchStores.length));
+  setText('kpiDominantTopic', dominantTopic);
+}
+
+function renderStoreRanking(stores){
+  const items = [...stores]
+    .sort((a,b)=>num(b.review_signal_index)-num(a.review_signal_index) || num(b.store_mentions)-num(a.store_mentions))
+    .slice(0,15);
+
+  document.getElementById('storeRanking').innerHTML = items.map((s,i)=>{
+    const value = num(s.review_signal_index);
+    const cls = i===0 ? 'one' : i===1 ? 'two' : i===2 ? 'three' : '';
+    const level = watchLevel(s);
+
+    return `
+      <div class="rank-row">
+        <div class="rank ${cls}">${i+1}</div>
+        <div>
+          <div style="font-weight:900;color:var(--navy)">${s.store_name}</div>
+          <div class="small">${s.company} • ${s.city} • ${s.area}</div>
+          <div class="small">Téma: ${s.dominant_store_topic || 'n.a.'} • ${s.review_sentiment}</div>
+        </div>
+        <div>
+          <div style="font-weight:950;color:var(--navy)">${fmtNum(value)}/100</div>
+          <div class="bar"><div class="fill-green" style="width:${Math.min(100,value)}%"></div></div>
+          <div style="margin-top:6px">${watchPill(level)}</div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function renderCompanyStoreChart(companySummary){
+  const labels = companySummary.map(c=>c.company);
+  const index = companySummary.map(c=>num(c.review_signal_index));
+  const mentions = companySummary.map(c=>num(c.store_mentions));
+  const negative = companySummary.map(c=>num(c.negative_stores));
+
+  makeChart(
+    'companyStoreChart',
+    'bar',
+    labels,
+    [
+      {label:'Review Signal Index',data:index},
+      {label:'Store mentions',data:mentions},
+      {label:'Negative stores',data:negative}
+    ],
+    {}
+  );
+
+  const leader = [...companySummary].sort((a,b)=>num(b.review_signal_index)-num(a.review_signal_index))[0];
+
+  document.getElementById('companyStoreInsight').innerHTML =
+    `Láncszinten a legerősebb store reputation index jelenleg: <b>${leader?.company || 'n.a.'}</b>. 
+    Ez áruházi OSINT jel, nem hivatalos vásárlói elégedettségi mutató.`;
+}
+
+function renderStoreWatchlist(stores){
+  const items = [...stores]
+    .filter(s => watchLevel(s) !== 'NORMAL' || num(s.store_mentions) > 0)
+    .sort((a,b)=>{
+      const order = {ALERT:4, WARNING:3, WATCH:2, NORMAL:1};
+      return order[watchLevel(b)] - order[watchLevel(a)] || num(b.review_signal_index)-num(a.review_signal_index);
+    })
+    .slice(0,12);
+
+  if(!items.length){
+    document.getElementById('storeWatchlist').innerHTML = '<div class="notice">Jelenleg nincs figyelendő áruház a store reputation rétegben.</div>';
+    return;
+  }
+
+  document.getElementById('storeWatchlist').innerHTML = items.map(s=>{
+    const level = watchLevel(s);
+    const cls = level === 'ALERT' ? 'alert' : level === 'WARNING' ? 'warning' : '';
+
+    return `
+      <div class="event-card ${cls}">
+        <div class="event-title">${s.store_name}</div>
+        <div class="event-meta">
+          ${watchPill(level)}
+          <span class="pill gray">${s.company}</span>
+          <span class="pill gray">${s.city}</span>
+          <span class="pill purple">index ${fmtNum(s.review_signal_index)}</span>
+          <span class="pill gray">${fmtNum(s.store_mentions)} említés</span>
+          ${sentimentPill(s.review_sentiment)}
+        </div>
+        <div class="small" style="margin-top:8px;">
+          Domináns téma: <b>${s.dominant_store_topic || 'n.a.'}</b>.
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function renderStoreTopics(stores){
+  const topicCounts = {};
+
+  stores.forEach(s => {
+    (s.top_store_topics || []).forEach(t => {
+      topicCounts[t.topic] = (topicCounts[t.topic] || 0) + num(t.score);
+    });
+  });
+
+  const rows = Object.entries(topicCounts)
+    .sort((a,b)=>b[1]-a[1])
+    .slice(0,8);
+
+  makeChart(
+    'storeTopicChart',
+    'bar',
+    rows.map(r=>r[0]),
+    [{label:'Store topic score',data:rows.map(r=>r[1])}],
+    {indexAxis:'y'}
+  );
+
+  document.getElementById('storeTopicInsight').innerHTML =
+    `A legerősebb áruházi reputációs téma: <b>${rows[0]?.[0] || 'nincs elég adat'}</b>.`;
+}
+
+function renderStoreSentiment(stores){
+  const counts = {
+    positive:0,
+    mixed:0,
+    negative:0,
+    neutral:0
+  };
+
+  stores.forEach(s => {
+    const key = s.review_sentiment || 'neutral';
+    counts[key] = (counts[key] || 0) + 1;
+  });
+
+  makeChart(
+    'storeSentimentChart',
+    'doughnut',
+    Object.keys(counts),
+    [{label:'Store sentiment',data:Object.values(counts)}],
+    {
+      scales:{}
+    }
+  );
+
+  document.getElementById('storeSentimentInsight').innerHTML =
+    `Az áruházi hangulati jelzés a keresési találatok szöveges kulcsszavai alapján készül. A semleges érték gyakran adat-hiányt is jelenthet.`;
+}
+
+function renderStoreHistory(history){
+  const items = history?.items || [];
+
+  if(!items.length){
+    document.getElementById('storeHistoryIndexInsight').innerHTML = 'A store-reputation-history-2026.json még nem tartalmaz elég adatot.';
+    document.getElementById('storeHistoryMentionInsight').innerHTML = 'Több napi futás után itt már trend látszik majd.';
+    return;
+  }
+
+  const dates = [...new Set(items.map(x=>x.date))].sort();
+  const companies = [...new Set(items.map(x=>x.company))].sort();
+
+  const companyDateAgg = {};
+
+  companies.forEach(company => {
+    dates.forEach(date => {
+      const rows = items.filter(x => x.company === company && x.date === date);
+      const avgIndex = rows.reduce((s,x)=>s+num(x.review_signal_index),0) / Math.max(1,rows.length);
+      const mentions = rows.reduce((s,x)=>s+num(x.store_mentions),0);
+
+      companyDateAgg[company + '|' + date] = {
+        avgIndex: Math.round(avgIndex),
+        mentions
+      };
+    });
+  });
+
+  makeChart(
+    'storeHistoryIndexChart',
+    'line',
+    dates,
+    companies.map(company => ({
+      label: company,
+      data: dates.map(date => num(companyDateAgg[company + '|' + date]?.avgIndex)),
+      tension:.3
+    })),
+    {}
+  );
+
+  makeChart(
+    'storeHistoryMentionChart',
+    'line',
+    dates,
+    companies.map(company => ({
+      label: company,
+      data: dates.map(date => num(companyDateAgg[company + '|' + date]?.mentions)),
+      tension:.3
+    })),
+    {}
+  );
+
+  document.getElementById('storeHistoryIndexInsight').innerHTML =
+    `A történeti store index láncszinten átlagolja az egyes áruházak napi jelzéseit.`;
+
+  document.getElementById('storeHistoryMentionInsight').innerHTML =
+    `Az említésszám trend azt mutatja, melyik lánc áruházai körül nő a nyílt forrású aktivitás.`;
+}
+
+function renderStoreMatrix(stores){
+  const rows = [...stores].sort((a,b)=>a.company.localeCompare(b.company) || a.store_name.localeCompare(b.store_name));
+
+  document.getElementById('storeMatrix').innerHTML = `
+    <table class="matrix-table">
+      <thead>
+        <tr>
+          <th>Áruház</th>
+          <th>Lánc</th>
+          <th>Város</th>
+          <th>Említés</th>
+          <th>Index</th>
+          <th>Hangulat</th>
+          <th>Domináns téma</th>
+          <th>Státusz</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${rows.map(s=>`
+          <tr>
+            <td>${s.store_name}</td>
+            <td>${s.company}</td>
+            <td>${s.city}</td>
+            <td><b>${fmtNum(s.store_mentions)}</b></td>
+            <td><b>${fmtNum(s.review_signal_index)}</b></td>
+            <td>${s.review_sentiment}</td>
+            <td>${s.dominant_store_topic || 'n.a.'}</td>
+            <td>${watchLevel(s)}</td>
+          </tr>
+        `).join('')}
+      </tbody>
+    </table>
+  `;
+}
+
+function renderLatestItems(stores){
+  let items = [];
+
+  stores.forEach(store => {
+    (store.latest_items || []).forEach(item => {
+      items.push({
+        ...item,
+        company: store.company,
+        store_name: store.store_name,
+        review_signal_index: store.review_signal_index,
+        sentiment: store.review_sentiment
+      });
+    });
+  });
+
+  items = items
+    .sort((a,b)=>String(b.published).localeCompare(String(a.published)))
+    .slice(0,12);
+
+  if(!items.length){
+    document.getElementById('storeLatestItems').innerHTML = '<div class="notice">Jelenleg nincs friss áruházi találat.</div>';
+    return;
+  }
+
+  document.getElementById('storeLatestItems').innerHTML = items.map(item=>`
+    <div class="event-card">
+      <div class="event-title">${item.title || 'n.a.'}</div>
+      <div class="event-meta">
+        <span class="pill gray">${item.published || 'n.a.'}</span>
+        <span class="pill gray">${item.company}</span>
+        <span class="pill purple">${item.store_name}</span>
+        <span class="pill gray">${item.source}</span>
+        ${sentimentPill(item.sentiment)}
+      </div>
+      <div class="small" style="margin-top:8px;">${item.summary || ''}</div>
+    </div>
+  `).join('');
+}
+
+function renderStoreTable(stores){
+  document.getElementById('storeTable').innerHTML = `
+    <thead>
+      <tr>
+        <th>Store ID</th>
+        <th>Áruház</th>
+        <th>Lánc</th>
+        <th>Város</th>
+        <th>Area</th>
+        <th>Említés</th>
+        <th>Index</th>
+        <th>Hangulat</th>
+        <th>Domináns téma</th>
+      </tr>
+    </thead>
+    <tbody>
+      ${stores.map(s=>`
+        <tr>
+          <td>${s.store_id}</td>
+          <td><b>${s.store_name}</b></td>
+          <td>${s.company}</td>
+          <td>${s.city}</td>
+          <td>${s.area}</td>
+          <td>${fmtNum(s.store_mentions)}</td>
+          <td>${fmtNum(s.review_signal_index)}</td>
+          <td>${s.review_sentiment}</td>
+          <td>${s.dominant_store_topic}</td>
+        </tr>
+      `).join('')}
+    </tbody>
+  `;
+}
+
+loadData();
+</script>
+</body>
+</html>
