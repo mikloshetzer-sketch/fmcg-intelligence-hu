@@ -22,8 +22,9 @@ STATUS_FILE = DATA_DIR / "store-reputation-status.json"
 HISTORY_FILE = DATA_DIR / "store-reputation-history-2026.json"
 
 MAX_ITEM_AGE_DAYS = 180
-FETCH_SLEEP = 0.5
-MAX_ITEMS_PER_STORE = 25
+FETCH_SLEEP = 0.15
+MAX_ITEMS_PER_STORE = 8
+MAX_QUERIES_PER_STORE = 4
 
 
 TOPIC_KEYWORDS = {
@@ -149,18 +150,15 @@ def load_store_profiles():
 
 def build_queries(store):
     queries = []
+    main_keywords = store.get("keywords", [])[:2]
 
-    for keyword in store.get("keywords", []):
+    for keyword in main_keywords:
         queries.extend([
             f'"{keyword}" panasz',
-            f'"{keyword}" vélemény',
-            f'"{keyword}" értékelés',
-            f'"{keyword}" vásárlás',
-            f'"{keyword}" kassza',
-            f'"{keyword}" parkoló'
+            f'"{keyword}" vélemény'
         ])
 
-    return queries
+    return queries[:MAX_QUERIES_PER_STORE]
 
 
 def passes_store_filter(store, title, summary, link):
@@ -173,20 +171,17 @@ def passes_store_filter(store, title, summary, link):
     if company and company not in text:
         return False
 
-    location_hit = False
-
     for keyword in store.get("keywords", []):
         if normalize(keyword) in text:
-            location_hit = True
-            break
+            return True
 
     if city and city in text:
-        location_hit = True
+        return True
 
     if area and area in text:
-        location_hit = True
+        return True
 
-    return location_hit
+    return False
 
 
 def detect_topics(items):
@@ -243,12 +238,10 @@ def calculate_review_signal_index(mention_count, sentiment):
         base = 15
     elif mention_count <= 5:
         base = 30
-    elif mention_count <= 10:
+    elif mention_count <= 8:
         base = 45
-    elif mention_count <= 20:
-        base = 60
     else:
-        base = 75
+        base = 60
 
     if sentiment == "negative":
         base += 10
@@ -258,6 +251,20 @@ def calculate_review_signal_index(mention_count, sentiment):
         base += 3
 
     return min(base, 100)
+
+
+def deduplicate(items):
+    seen = set()
+    result = []
+
+    for item in items:
+        key = item.get("id")
+        if key in seen:
+            continue
+        seen.add(key)
+        result.append(item)
+
+    return result
 
 
 def collect_store_items(store):
@@ -301,20 +308,6 @@ def collect_store_items(store):
                 return deduplicate(items)
 
     return deduplicate(items)
-
-
-def deduplicate(items):
-    seen = set()
-    result = []
-
-    for item in items:
-        key = item.get("id")
-        if key in seen:
-            continue
-        seen.add(key)
-        result.append(item)
-
-    return result
 
 
 def build_store_result(store):
@@ -382,7 +375,7 @@ def aggregate_company_results(store_results):
 
         for topic in item.get("top_store_topics", []):
             key = topic["topic"]
-            c["topics"][key] = c["topics"].get(key, 0) + topic["score"]
+            c["topics"][key] = c["topics.get"](key, 0) + topic["score"] if False else c["topics"].get(key, 0) + topic["score"]
 
     output = []
 
@@ -483,7 +476,7 @@ def main():
 
     payload = {
         "updated_at": updated_at,
-        "version": "store-reputation-layer-v1",
+        "version": "store-reputation-layer-v1.1-fast",
         "scope": "Hungarian FMCG store-level reputation signal",
         "method_note": (
             "Áruházi reputációs jelzőréteg. "
@@ -497,9 +490,15 @@ def main():
     status = {
         "updated_at": updated_at,
         "status": "ok",
-        "version": "store-reputation-layer-v1",
+        "version": "store-reputation-layer-v1.1-fast",
         "source": "google_news_rss",
         "store_count": len(store_results),
+        "settings": {
+            "max_item_age_days": MAX_ITEM_AGE_DAYS,
+            "fetch_sleep": FETCH_SLEEP,
+            "max_items_per_store": MAX_ITEMS_PER_STORE,
+            "max_queries_per_store": MAX_QUERIES_PER_STORE
+        },
         "items": status_items
     }
 
