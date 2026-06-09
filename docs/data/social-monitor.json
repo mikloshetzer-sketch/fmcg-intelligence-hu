@@ -1,49 +1,49 @@
 {
-  "updated_at": "2026-06-09T09:45:43.704673+00:00",
+  "updated_at": "2026-06-09T15:38:37.775702+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-06-09T09:45:43.704673+00:00",
+    "updated_at": "2026-06-09T15:38:37.775702+00:00",
     "leader_social": "Lidl",
-    "leader_social_index": 48,
+    "leader_social_index": 52,
     "dominant_social_topic": "árak és akciók",
     "overall_social_sentiment": "neutral"
   },
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 9,
-      "raw_social_mentions": 9,
-      "dashboard_mentions": 8,
-      "background_mentions": 1,
-      "discarded_mentions": 0,
-      "weighted_social_mentions": 8.5,
-      "hu_relevant_mentions": 8,
-      "social_index": 48,
+      "social_mentions": 17,
+      "raw_social_mentions": 20,
+      "dashboard_mentions": 12,
+      "background_mentions": 5,
+      "discarded_mentions": 3,
+      "weighted_social_mentions": 14.5,
+      "hu_relevant_mentions": 12,
+      "social_index": 52,
       "social_sources": {
-        "reddit": 8,
-        "youtube": 0,
+        "reddit": 14,
+        "youtube": 2,
         "mastodon": 1
       },
       "raw_social_sources": {
-        "reddit": 8,
-        "youtube": 0,
+        "reddit": 17,
+        "youtube": 2,
         "mastodon": 1
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 8.5
+          "score": 14.0
         },
         {
           "topic": "digitalizáció és önkiszolgálás",
-          "score": 6.0
+          "score": 9.0
         },
         {
           "topic": "bolti élmény",
-          "score": 3.0
+          "score": 7.5
         },
         {
           "topic": "ellátási lánc és logisztika",
@@ -56,15 +56,22 @@
       ],
       "topic_sentiment": {
         "árak és akciók": {
-          "positive": 0.0,
-          "neutral": 7.5,
+          "positive": 2.0,
+          "neutral": 11.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
         },
+        "digitalizáció és önkiszolgálás": {
+          "positive": 2.0,
+          "neutral": 2.0,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "positive"
+        },
         "bolti élmény": {
           "positive": 0.0,
-          "neutral": 2.0,
+          "neutral": 4.5,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -83,13 +90,6 @@
           "mixed": 0.0,
           "dominant": "neutral"
         },
-        "digitalizáció és önkiszolgálás": {
-          "positive": 0.0,
-          "neutral": 1.0,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
-        },
         "ellátási lánc és logisztika": {
           "positive": 0.0,
           "neutral": 1.0,
@@ -98,8 +98,34 @@
           "dominant": "neutral"
         }
       },
-      "social_sentiment": "neutral",
+      "social_sentiment": "positive",
       "latest_items": [
+        {
+          "id": "f0d6acbdaaf79ee4",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "Hvilke indkøbs- og madapps bruger I egentlig i Danmark?",
+          "summary": "Hej r/DenmarkDK Jeg arbejder på et studie-/startup-projekt om danskernes brug af indkøbs- og madapps, og jeg prøver at forstå, hvilke apps folk faktisk bruger i hverdagen — fx eTilbudsavis, Netto+, Lidl Plus, TooGoodToGo, Mambeno, REMA 1000, minetilbud osv. Jeg har lavet en kort anonym undersøgelse, hvor man kan vælge én eller flere apps, man har brugt, og vurdere dem ud fra helt simple spørgsmål som: hvor nem appen er at bruge om den hjælper med at spare penge om den sparer tid hvad der fungere",
+          "url": "https://www.reddit.com/r/DanmarkDK/comments/1u0b4vb/hvilke_indkøbs_og_madapps_bruger_i_egentlig_i/",
+          "published": "2026-06-08T15:26:01+00:00",
+          "query": "Lidl Plus",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "positive"
+        },
+        {
+          "id": "f06cce67517b88e4",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "Hvilke indkøbs- og madapps bruger I egentlig i Danmark?",
+          "summary": "Hej r/dkkarriere Jeg arbejder på et studie-/startup-projekt om danskernes brug af indkøbs- og madapps, og jeg prøver at forstå, hvilke apps folk faktisk bruger i hverdagen , fx eTilbudsavis, Netto+, Lidl Plus, TooGoodToGo, Mambeno, REMA 1000, minetilbud osv. Jeg har lavet en kort anonym undersøgelse, hvor man kan vælge én eller flere apps, man har brugt, og vurdere dem ud fra helt simple spørgsmål som: hvor nem appen er at bruge om den hjælper med at spare penge om den sparer tid hvad der funger",
+          "url": "https://www.reddit.com/r/dkkarriere/comments/1u03j4t/hvilke_indkøbs_og_madapps_bruger_i_egentlig_i/",
+          "published": "2026-06-08T10:02:46+00:00",
+          "query": "Lidl Plus",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "positive"
+        },
         {
           "id": "9a1a05a2743ae3c0",
           "source": "reddit",
@@ -153,6 +179,19 @@
           "item_sentiment": "neutral"
         },
         {
+          "id": "0dd8bedbcff5dfc6",
+          "source": "youtube",
+          "company": "Lidl",
+          "title": "Lidl shoppingolás #vásárlás #lidl #hungary #fyp - YouTube",
+          "summary": "Lidl shoppingolás #vásárlás #lidl #hungary #fyp YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE44TUNxYWcwVTFoVDdjaXgwYXFOZDZrSEYwRkZ5cVNnUjRjUDNXUHFjdHFYWi1hdGt1Vi1LQ0VVdmtZQ0pRWE5NRGZ3T2NQeFI5ZWVXSDh3?oc=5",
+          "published": "Fri, 29 May 2026 16:40:42 GMT",
+          "query": "site:youtube.com \"Lidl Hungary\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
           "id": "87f5729132f7fbb2",
           "source": "reddit",
           "company": "Lidl",
@@ -161,6 +200,19 @@
           "url": "https://www.reddit.com/r/lidlaldihun/comments/1tm1twi/lidl_akciós_újság_0528/",
           "published": "2026-05-24T04:24:03+00:00",
           "query": "Lidl akció",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "b66eb9263d3a4213",
+          "source": "youtube",
+          "company": "Lidl",
+          "title": "Miket vettem a lidben, aldiban #vásárlás #shopping #debrecencity #aldi #lidl #hungary #fyp - YouTube",
+          "summary": "Miket vettem a lidben, aldiban #vásárlás #shopping #debrecencity #aldi #lidl #hungary #fyp YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1leG9mTkQ1NFltMHBoMzZ3MXNFNTZxWldJV1E5dm1kV0EzTzYtMGk1ZmZNWFNGLVV0Xy13bzRraV9KbXJ5el90T21RRXlsSklqVmhvV2R3?oc=5",
+          "published": "Thu, 21 May 2026 15:12:20 GMT",
+          "query": "site:youtube.com \"Lidl Hungary\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
           "item_sentiment": "neutral"
@@ -207,6 +259,58 @@
       ],
       "background_items": [
         {
+          "id": "e815c8b6028e6449",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "Hvor meget går I op i at optimere jeres dagligvare forbrug?",
+          "summary": "Hej r/dkfinance Jeg er nysgerrig hvor meget folk herinde egentlig forsøger at optimere deres dagligvareindkøb🤔 Bruger I fx eTilbudsavis, minetilbud, Netto+, Lidl Plus, REMA 1000-appen osv. aktivt for at spare penge, eller handler I mest i den samme butik af convenience? Jeg er interesseret i at høre jer: - om I planlægger indkøb ud fra tilbud - om I tager flere butikker med for at spare penge - hvor stor besparelsen skal være, før det er besværet værd (ved godt det er et svært spørgsmål) - om ti",
+          "url": "https://www.reddit.com/r/dkfinance/comments/1u1221e/hvor_meget_går_i_op_i_at_optimere_jeres/",
+          "published": "2026-06-09T11:17:02+00:00",
+          "query": "Lidl Plus",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "0609ae7c67d5d813",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "Picked up the flux core welder for 53 euros",
+          "summary": "Saw the welder was in store and with lidl plus it was only 53 euros submitted by /u/Reasonable-Ladder300 to r/Parkside [link] [comments]",
+          "url": "https://www.reddit.com/r/Parkside/comments/1tyhih6/picked_up_the_flux_core_welder_for_53_euros/",
+          "published": "2026-06-06T13:37:38+00:00",
+          "query": "Lidl Plus",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "a794e319f06fbf31",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "Sammelpunkte - nein danke?",
+          "summary": "Wer hat soviel Zeit? https://www.golem.de/news/neues-rabattsystem-gestartet-lidl-plus-wird-fuer-sparfuechse-zur-zeitvernichtungsmaschine-2606-209433.html submitted by /u/AlzHeimer1963 to r/LIDL_de [link] [comments]",
+          "url": "https://www.reddit.com/r/LIDL_de/comments/1ty8wi3/sammelpunkte_nein_danke/",
+          "published": "2026-06-06T05:52:16+00:00",
+          "query": "Lidl Plus",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "6edd884211532e4b",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "Juni-tip voor Nederlanders: goedkoop boodschappen doen én je EV opladen in Duitsland",
+          "summary": "Net een interessante actie van Lidl Duitsland gezien voor iedereen die regelmatig de grens over gaat. De hele maand juni kun je bij Lidl Duitsland je elektrische auto laden voor €0,27 per kWh (DC-snelladen) via Lidl Plus en Lidl Pay. Volgens de advertentie is dat een flinke korting ten opzichte van het normale tarief van €0,44 per kWh. Combineer dat met je boodschappen en je kunt op twee manieren besparen: Goedkopere boodschappen dan vaak in Nederland Voordelig laden tijdens het winkelen Vooral ",
+          "url": "https://www.reddit.com/r/EVMobiliteit/comments/1twst6j/junitip_voor_nederlanders_goedkoop_boodschappen/",
+          "published": "2026-06-04T16:31:19+00:00",
+          "query": "Lidl Plus",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        },
+        {
           "id": "b84ac3489023b1f5",
           "source": "reddit",
           "company": "Lidl",
@@ -221,9 +325,9 @@
         }
       ],
       "quality_summary": {
-        "dashboard_items": 8,
-        "background_items": 1,
-        "discarded_items": 0,
+        "dashboard_items": 12,
+        "background_items": 5,
+        "discarded_items": 3,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
       },
@@ -233,10 +337,10 @@
     {
       "company": "SPAR",
       "social_mentions": 2,
-      "raw_social_mentions": 2,
+      "raw_social_mentions": 3,
       "dashboard_mentions": 1,
       "background_mentions": 1,
-      "discarded_mentions": 0,
+      "discarded_mentions": 1,
       "weighted_social_mentions": 1.5,
       "hu_relevant_mentions": 1,
       "social_index": 16,
@@ -247,7 +351,7 @@
       },
       "raw_social_sources": {
         "reddit": 0,
-        "youtube": 2,
+        "youtube": 3,
         "mastodon": 0
       },
       "dominant_social_topic": "árak és akciók",
@@ -300,7 +404,7 @@
       "quality_summary": {
         "dashboard_items": 1,
         "background_items": 1,
-        "discarded_items": 0,
+        "discarded_items": 1,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
       },
