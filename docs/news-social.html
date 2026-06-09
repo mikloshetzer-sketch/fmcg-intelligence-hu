@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FMCG Intelligence Hungary – News, Reputation & Social Monitor V6.4</title>
+  <title>FMCG Intelligence Hungary – News, Reputation & Social Monitor V6.5</title>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="./css/style.css" />
@@ -118,6 +118,32 @@
     .metric-chip b{display:block;margin-top:3px;color:var(--navy);font-size:16px;}
     .competitor-note{font-size:12px;color:#64748b;line-height:1.45;margin-top:8px;}
 
+
+
+    .block-explain{
+      margin-top:12px;
+      padding:12px 14px;
+      border-radius:15px;
+      background:#f8fafc;
+      border:1px solid #dbe7f2;
+      color:#334155;
+      font-size:12.5px;
+      line-height:1.55;
+    }
+    .block-explain b{color:var(--navy)}
+    .compact-table .matrix-table{font-size:12px;}
+    .compact-table .matrix-table th,.compact-table .matrix-table td{padding:8px 7px;}
+    .warning-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;}
+    .warning-card{padding:13px;min-height:130px;}
+    .warning-title{font-size:16px;margin-bottom:6px;}
+    .metric-strip{gap:6px;margin-top:8px;}
+    .metric-chip{padding:7px 5px;}
+    .metric-chip span{font-size:9px;}
+    .metric-chip b{font-size:15px;}
+    .competitor-note{font-size:11.5px;line-height:1.4;}
+    .reputation-tile{min-height:100px;}
+    .reputation-value{font-size:22px;line-height:1.1;}
+
     @media(max-width:1200px){
       .index-card-grid{grid-template-columns:repeat(2,1fr)}
       .warning-grid{grid-template-columns:repeat(2,1fr)}
@@ -139,7 +165,7 @@
   <div class="header-inner">
     <div class="brand">
       <div class="brand-title">FMCG Intelligence Hungary</div>
-      <div class="brand-subtitle">News, Reputation & Social Monitor V6.4</div>
+      <div class="brand-subtitle">News, Reputation & Social Monitor V6.5</div>
     </div>
     <nav class="nav">
       <a href="./index.html">Dashboard</a>
@@ -153,7 +179,7 @@
 
 <section class="hero">
   <div class="hero-box">
-    <div class="hero-kicker">News, Reputation & Social Intelligence V6.4</div>
+    <div class="hero-kicker">News, Reputation & Social Intelligence V6.5</div>
     <h1>FMCG média-, kockázati-, social- és reputációs intelligence központ</h1>
     <p>
       A friss hírmonitor a <b>news-social.json</b> fájlból dolgozik. A történeti háttér a
@@ -203,11 +229,17 @@
         <h2>Competitor Intelligence</h2>
         <span>Media, Risk, Social és Store Reputation egy vezetői összehasonlító nézetben</span>
       </div>
-      <div id="competitorIntelligence" class="matrix-wrap">Adatok betöltése...</div>
+      <div id="competitorIntelligence" class="matrix-wrap compact-table">Adatok betöltése...</div>
       <div class="chart-insight" id="competitorInsight">Adatok betöltése...</div>
+      <div class="block-explain">
+        <b>Mit látunk?</b> Ez a blokk egy helyre rendezi a médiahatást, a reputációs kockázatot, a social jelet és az áruházi reputációs jelet.
+        A cél nem az, hogy egyetlen „győztest” hirdessen, hanem hogy látszódjon, melyik lánc milyen típusú nyomás alatt áll.
+        A magas media érték figyelmet, a magas risk érték kockázatot, a magas social érték közösségi visszhangot jelez.
+        Az adatminőség mező segít eldönteni, mennyire erős az adott szereplőre vonatkozó jelzés.
+      </div>
     </div>
 
-    <div class="card span6">
+    <div class="card span12">
       <div class="section-title">
         <h2>Early Warning Engine</h2>
         <span>automatikus NORMAL / WATCH / WARNING / ALERT besorolás</span>
@@ -216,15 +248,27 @@
       <div class="formula-box">
         <b>Logika:</b> a jelzés a media index, risk index, social index, store reputation és trendirány együtteséből készül. Nem végső ítélet, hanem vezetői figyelmeztető réteg.
       </div>
+      <div class="block-explain">
+        <b>Mit látunk?</b> Az Early Warning Engine azt jelzi, hol érdemes vezetői figyelmet fordítani a következő napokban.
+        A WARNING vagy ALERT nem azt jelenti, hogy biztos probléma van, hanem azt, hogy több jel egyszerre erősödik.
+        A rendszer a média-, risk-, social- és store reputation mutatókat együtt értékeli.
+        Így gyorsan kiszűrhető, melyik láncnál nő a reputációs vagy kommunikációs kitettség.
+      </div>
     </div>
 
-    <div class="card span6">
+    <div class="card span12">
       <div class="section-title">
         <h2>Store Reputation Summary</h2>
         <span>áruházi reputációs jel vezetői összefoglalója</span>
       </div>
       <div id="storeReputationSummary">Store adatok betöltése...</div>
       <div class="chart-insight" id="storeSummaryInsight">Adatok betöltése...</div>
+      <div class="block-explain">
+        <b>Mit látunk?</b> Ez csak vezetői szintű áruházi reputációs összefoglaló, nem részletes boltlista.
+        A blokk megmutatja, melyik láncnál legerősebb az áruházi jel, melyik bolt körül van a legtöbb említés, és mi a domináns bolti téma.
+        A részletes hálózati, boltlistás és térképes elemzés később a Supply Chain oldalra kerül.
+        Itt az a cél, hogy a média- és social képet össze lehessen vetni a bolti reputációs jelzéssel.
+      </div>
     </div>
 
     <div class="card span12">
@@ -233,6 +277,12 @@
         <span>hírindex, risk score, social signal, domináns narratíva és kiemelt esemény</span>
       </div>
       <div id="companyCards" class="index-card-grid">Adatok betöltése...</div>
+      <div class="block-explain">
+        <b>Mit látunk?</b> A cégkártyák gyors, olvasmányos áttekintést adnak minden vizsgált láncról.
+        Egy helyen látszik a híraktivitás, a médiahatás, a reputációs risk, a social jel és a domináns narratíva.
+        Ez a blokk jó első szűrő: megmutatja, melyik szereplőnél érdemes mélyebbre menni.
+        A kiemelt események segítenek megérteni, mi mozdította az adott mutatókat.
+      </div>
     </div>
 
     <div class="card span12">
@@ -243,6 +293,12 @@
       <div id="socialSignalCards" class="index-card-grid">Social adatok betöltése...</div>
       <div class="formula-box">
         <b>Fontos:</b> ez nem teljes social listening és nem közvélemény-kutatás. A mutató nyílt forrású, keresési/RSS alapú jelzőrendszer.
+      </div>
+      <div class="block-explain">
+        <b>Mit látunk?</b> A Social Signal Layer azt mutatja, hogy a nyílt közösségi és videós térben hol jelenik meg aktivitás.
+        A rendszer Reddit, YouTube discovery és Mastodon jellegű forrásokat figyel, ezért nem azonos a teljes social media piaccal.
+        A magyar relevancia súlyozás csökkenti a nemzetközi zajt.
+        A blokk célja a korai jelzés, nem a végleges reputációs ítélet.
       </div>
     </div>
 
@@ -255,6 +311,12 @@
       <div class="formula-box">
         <b>Értelmezés:</b> 0–15 alacsony, 16–30 mérsékelt, 31–50 figyelmet igénylő, 50+ magas kockázati jel.
       </div>
+      <div class="block-explain">
+        <b>Mit látunk?</b> A risk ranking a reputációs és üzleti kockázati nyomást rendezi sorrendbe.
+        Magasabb érték akkor alakul ki, ha több negatív, kritikus vagy nagy hatású hír kapcsolódik egy lánchoz.
+        Ez nem pénzügyi kockázati modell, hanem kommunikációs és reputációs riasztási mutató.
+        A rangsor segít gyorsan felismerni, melyik szereplőnél nőhet a külső figyelem.
+      </div>
     </div>
 
     <div class="card span6">
@@ -266,6 +328,12 @@
       <div class="formula-box">
         <b>Értelmezés:</b> a social index a friss, súlyozott említésekből, forrásdiverzitásból és hangulati jelből készül.
       </div>
+      <div class="block-explain">
+        <b>Mit látunk?</b> A social ranking azt mutatja, mely láncok körül erősebb a nyílt social visszhang.
+        A HU releváns találatok külön értéket kapnak, mert ezek fontosabbak a magyar FMCG-piac szempontjából.
+        A hangulat csak kulcsszavas jelzés, ezért óvatosan kell értelmezni.
+        A blokk akkor hasznos, ha a médiában csendes, de social térben aktív szereplőt keresünk.
+      </div>
     </div>
 
     <div class="card span6">
@@ -275,6 +343,12 @@
       </div>
       <div class="chartbox"><canvas id="currentNarrativeChart"></canvas></div>
       <div class="chart-insight" id="currentNarrativeInsight">Adatok betöltése...</div>
+      <div class="block-explain">
+        <b>Mit látunk?</b> A narratíva blokk nem darabszámot, hanem témasúlyt mutat.
+        Itt látszik, hogy a piacról szóló hírek inkább növekedésről, versenyről, szabályozásról, munkaerőről vagy védekezésről beszélnek.
+        Ez segít megérteni, milyen keretben jelennek meg az FMCG szereplők.
+        A domináns narratíva sokszor fontosabb, mint a puszta hírvolumen.
+      </div>
     </div>
 
     <div class="card span6">
@@ -284,6 +358,12 @@
       </div>
       <div class="chartbox"><canvas id="socialTopicChart"></canvas></div>
       <div class="chart-insight" id="socialTopicInsight">Social témák betöltése...</div>
+      <div class="block-explain">
+        <b>Mit látunk?</b> Ez a diagram a közösségi jellegű forrásokban megjelenő fő témákat rangsorolja.
+        Más képet adhat, mint a médiatér: a vásárlói panaszok, akciók vagy bolti élmények itt erősebben megjelenhetnek.
+        A témapontszám kulcsszavas súlyozásból készül.
+        A blokk célja annak megértése, hogy miről beszélnek az emberek, nem csak miről ír a sajtó.
+      </div>
     </div>
 
     <div class="card span12">
@@ -293,6 +373,12 @@
       </div>
       <div class="chartbox"><canvas id="mediaSocialChart"></canvas></div>
       <div class="chart-insight" id="mediaSocialInsight">Adatok betöltése...</div>
+      <div class="block-explain">
+        <b>Mit látunk?</b> Ez az összevetés megmutatja, hogy a médiahatás és a social visszhang együtt vagy külön mozog-e.
+        Egy lánc lehet erős a hírekben, de gyenge a social térben, és fordítva.
+        A HU social oszlop segít kiszűrni, hogy a közösségi jelzés mennyire magyar piaci relevanciájú.
+        Ez a blokk jó alap a kommunikációs és reputációs prioritások kijelöléséhez.
+      </div>
     </div>
 
     <div class="card span12">
@@ -310,6 +396,12 @@
           <div class="chart-insight" id="socialHistoryMentionsInsight">Social history betöltése...</div>
         </div>
       </div>
+      <div class="block-explain">
+        <b>Mit látunk?</b> A social history a social index és a súlyozott említésszám időbeli változását mutatja.
+        Több napi futás után látszik majd, hogy egy jel egyszeri kiugrás vagy tartósabb folyamat.
+        A súlyozott említésszám a magyar relevanciát előnyben részesíti.
+        Ez lesz később az Early Warning egyik fontos történeti alapja.
+      </div>
     </div>
 
     <div class="card span12">
@@ -318,6 +410,12 @@
         <span>a social monitor magyar szempontból legfontosabb elemei</span>
       </div>
       <div id="huSocialItems" class="timeline">Social találatok betöltése...</div>
+      <div class="block-explain">
+        <b>Mit látunk?</b> Itt csak azok a social találatok jelennek meg, amelyek magyar szempontból erősebb relevanciát kaptak.
+        Ez segít elválasztani a magyar piaci jeleket a nemzetközi zajtól.
+        A blokk konkrét posztokat, videós találatokat vagy RSS-elemeket mutat, nem aggregált indexet.
+        Elemzéskor ezekből lehet megérteni, mi áll a social mutató mögött.
+      </div>
     </div>
 
     <div class="card span12">
@@ -326,6 +424,12 @@
         <span>történeti háttér 2026.01.01-től</span>
       </div>
       <div id="historicalContextBox">Történeti adatok betöltése...</div>
+      <div class="block-explain">
+        <b>Mit látunk?</b> A történeti kontextus a friss napi képet helyezi 2026-os háttérbe.
+        Megmutatja, hogy a mostani média- vagy risk vezető csak aktuális kiugrás, vagy korábban is meghatározó szereplő volt.
+        Ez megakadályozza, hogy egyetlen nap hírei túl nagy súlyt kapjanak.
+        A blokk a hosszabb reputációs folyamatok felismerését támogatja.
+      </div>
     </div>
 
     <div class="card span12">
@@ -349,6 +453,12 @@
           <div class="chartbox tall"><canvas id="historicalNarrativeTrendChart"></canvas></div>
           <div class="chart-insight" id="historicalNarrativeTrendInsight">Adatok betöltése...</div>
         </div>
+      </div>
+      <div class="block-explain">
+        <b>Mit látunk?</b> A Historical Intelligence Center havi bontásban mutatja a médiaaktivitást, a risket és a narratívákat.
+        Itt látszik, hogy mely hónapokban erősödött fel a piaci figyelem vagy a reputációs kockázat.
+        A narratíva trend segít megérteni, hogyan változott a piacról szóló történet az év során.
+        Ez a blokk a stratégiai elemzés, nem a napi riasztás szintje.
       </div>
     </div>
 
@@ -387,6 +497,12 @@
             <span>az adott szereplő legfontosabb történeti eseményei</span>
           </div>
           <div id="companyHistoricalEvents" class="timeline">Adatok betöltése...</div>
+          <div class="block-explain">
+            <b>Mit látunk?</b> A cégenkénti történeti modul egy kiválasztott lánc pályáját mutatja meg részletesen.
+            Látható, mely hónapban volt erős médiahatás, mikor nőtt a risk, és milyen narratívák domináltak.
+            A timeline a legfontosabb történeti eseményeket emeli ki.
+            Ez segít különválasztani az egyszeri híreket a tartós piaci mintáktól.
+          </div>
         </div>
       </div>
     </div>
@@ -397,9 +513,21 @@
         <span>friss monitor alapján, hatás és kockázat szerint rendezve</span>
       </div>
       <div id="topEvents" class="timeline">Adatok betöltése...</div>
+      <div class="block-explain">
+        <b>Mit látunk?</b> Ez a lista a friss monitor legfontosabb cikk- és eseményjelzéseit gyűjti össze.
+        A rendezés a kockázati pontszám és a forrássúly alapján történik.
+        Itt lehet gyorsan ellenőrizni, milyen konkrét hír áll egy indexváltozás mögött.
+        A blokk az elemzői magyarázat és a vezetői döntés közötti kapcsolatot teremti meg.
+      </div>
     </div>
 
     <div class="span12">
+      <div class="block-explain" style="margin-bottom:14px;">
+        <b>Mit látunk?</b> Az alábbi mátrixok és adattáblák részletes ellenőrző rétegként szolgálnak.
+        Napi vezetői nézetben nem kell mindig ezeket olvasni, de segítenek visszakeresni a számítások mögötti adatokat.
+        A Business Impact és Strategic Narrative mátrix azt mutatja, mely láncnál milyen üzleti hatás és stratégiai téma jelenik meg.
+        Az adattáblák a nyers monitoreredmények gyors ellenőrzésére használhatók.
+      </div>
       <details>
         <summary>Business Impact Matrix <span class="small">cég–üzleti hatás metszet</span></summary>
         <div class="details-body"><div id="businessMatrix" class="matrix-wrap">Adatok betöltése...</div></div>
@@ -442,7 +570,7 @@
   </div>
 </main>
 
-<footer class="footer">FMCG Intelligence Hungary – News, Reputation & Social Monitor V6.4.</footer>
+<footer class="footer">FMCG Intelligence Hungary – News, Reputation & Social Monitor V6.5.</footer>
 
 <script>
 const currentUrl = './data/news-social.json';
