@@ -1,90 +1,124 @@
 {
-  "updated_at": "2026-06-09T07:15:27.164598+00:00",
-  "version": "social-signal-layer-v1",
+  "updated_at": "2026-06-09T07:20:39.947097+00:00",
+  "version": "social-signal-layer-v1.2",
   "scope": "Hungarian FMCG retail chains",
-  "method_note": "Ez social signal réteg, nem teljes social analytics.",
+  "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül.",
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 245,
-      "social_index": 100,
+      "social_mentions": 29,
+      "social_index": 65,
       "social_sources": {
-        "reddit": 12,
-        "youtube": 213,
-        "mastodon": 20
+        "reddit": 7,
+        "youtube": 4,
+        "mastodon": 18
       },
       "dominant_social_topic": "árak és akciók",
-      "social_sentiment": "positive",
+      "top_social_topics": [
+        {
+          "topic": "árak és akciók",
+          "score": 11
+        },
+        {
+          "topic": "digitalizáció és önkiszolgálás",
+          "score": 7
+        },
+        {
+          "topic": "bolti élmény",
+          "score": 5
+        }
+      ],
+      "social_sentiment": "negative",
       "latest_items": [
         {
-          "id": "423ce719288093da",
-          "source": "reddit",
+          "id": "74fb2cf4590ab5a3",
+          "source": "mastodon",
           "company": "Lidl",
-          "title": "Grocerycost",
-          "summary": "This is a place to compare the cost of groceries around the world! Post pictures of your haul with the receipt. [link]",
-          "url": "https://www.reddit.com/r/Grocerycost/",
-          "published": "",
-          "query": "Lidl Hungary"
+          "title": "",
+          "summary": "Assistent supermarktmanager Maastricht Herculeshof – Lidl Nederland – Maastricht Bekijk hier de vacature: https:// vacatures-maastricht.nl/vacatu re/assistent-supermarktmanager-maastricht-herculeshof-lidl-nederland-maastricht/ # vacature # lidl # maastricht",
+          "url": "https://vacatureforum.nl/@maastricht/116718402610427793",
+          "published": "Tue, 09 Jun 2026 05:04:45 +0000",
+          "query": "#lidl"
         },
         {
-          "id": "834f39d1b2a660c8",
-          "source": "reddit",
+          "id": "2a2a20012520d952",
+          "source": "mastodon",
           "company": "Lidl",
-          "title": "Energy drinks market in Europe 2025-2026: $25B, who owns it, bans spreading, and war zones",
-          "summary": "1. Market Size — Europe 2025 vs 2026 Europe is the second-largest energy drink market in the world after North America. Growing steadily — roughly $1.5-2B added per year. Metric 2024 2025 2026 (est.) Market size ~$22B ~$24-25B ~$26B Global share ~28% ~28% ~28% CAGR forecast to 2031 — — +7% Market by 2034 — — $46B 2. Who Dominates Europe Red Bull is Austrian. Monster is American but distributed via Coca-Cola's European network. The only real European challenger is Hell Energy from Hungary — quiet",
-          "url": "https://www.reddit.com/r/RealBusinessEurope/comments/1txln3s/energy_drinks_market_in_europe_20252026_25b_who/",
-          "published": "2026-06-05T13:54:10+00:00",
-          "query": "Lidl Hungary"
+          "title": "",
+          "summary": "Es gibt in Spanien bei # Lidl eine super leckere Tofu-Rolle mit Algen. Wieso gibt es sowas in Deutschland nicht? Wieder irgendein Benennungsproblem? Kollidiert es mit den Rouladen? Oder kaufen Germans nur Tofu pur? # makeFleischfreemaleasyfüralle",
+          "url": "https://mastodon.social/@josefina/116716459965290191",
+          "published": "Mon, 08 Jun 2026 20:50:42 +0000",
+          "query": "#lidl"
         },
         {
-          "id": "612a9391b5e18ea4",
-          "source": "reddit",
+          "id": "737fdf113a3a2e52",
+          "source": "mastodon",
           "company": "Lidl",
-          "title": "My first solo trip to Europe. I covered Switzerland, Liechtenstein, Austria, Slovakia, Hungary and Czech Republic.",
-          "summary": "My first solo trip to Europe. I travelled around Europe for 21 days. Listing down my itinerary below. Switzerland May 2nd to May 11th May 2nd-May 4th Geneva May 4th to May 8th Interlaken ost May 8th to May 9th Zermatt May 9th May 10th St.Moritz May 10th to May 11th Zurich Most of dates are overlapping because I took the earliest trains to the locations mentioned which were pretty close apart from a few. May 11th Zurich to Lichtenstein, A very small country, explored it in about 6 hours including",
-          "url": "https://www.reddit.com/r/travel/comments/1tqs54f/my_first_solo_trip_to_europe_i_covered/",
-          "published": "2026-05-29T05:31:38+00:00",
-          "query": "Lidl Hungary"
+          "title": "",
+          "summary": "Supermarktmanager Maastricht kardinaal van Rossumplein – Lidl Nederland – Maastricht Bekijk hier de vacature: https:// vacatures-maastricht.nl/vacatu re/supermarktmanager-maastricht-kardinaal-van-rossumplein-lidl-nederland-maastricht/ # vacature # lidl # maastricht",
+          "url": "https://vacatureforum.nl/@maastricht/116716124015452429",
+          "published": "Mon, 08 Jun 2026 19:25:16 +0000",
+          "query": "#lidl"
         },
         {
-          "id": "179156c267cde2c1",
-          "source": "reddit",
+          "id": "8442f12a515b5459",
+          "source": "mastodon",
           "company": "Lidl",
-          "title": "Lidl, Hungary. 11452 HUF, 31.78 EUR, 36.94 USD.",
-          "summary": "&#32; submitted by &#32; /u/Odd_Falcon_5665 &#32; to &#32; r/Grocerycost [link] &#32; [comments]",
-          "url": "https://www.reddit.com/r/Grocerycost/comments/1tfz796/lidl_hungary_11452_huf_3178_eur_3694_usd/",
-          "published": "2026-05-17T19:27:28+00:00",
-          "query": "Lidl Hungary"
+          "title": "",
+          "summary": "Ainakin lähi-Lidlissäni oli tänään kaikenlaista muutakin kuin tuossa ilmoituksessa mainitut: kylmähyllyssä perunasalaattia ja tsatsikia, pakastealtaassa pitsaa, ”kala”puikkoja, pasteijoita sekä jäätelötuutteja! # vegaaniruoka # vegaani # Lidl",
+          "url": "https://piipitin.fi/@hpiirai/116714935802677116",
+          "published": "Mon, 08 Jun 2026 14:23:05 +0000",
+          "query": "#lidl"
+        },
+        {
+          "id": "528e0509af1b66d5",
+          "source": "mastodon",
+          "company": "Lidl",
+          "title": "",
+          "summary": "Seefahrt: Reederei von Lidl fährt nun unter deutscher Flagge Erstmals hat ein Seeschiff Heilbronn als Heimathafen. Und für die Container-Reederei Tailwind von Lidl ist das nur der Anfang. Vom Flaggenwechsel verspricht sie sich auch Vorteile. https://www. handelsblatt.com/unternehmen/h andel-konsumgueter/seefahrt-reederei-von-lidl-faehrt-nun-unter-deutscher-flagge/100230610.html # TopNews # News # Lidl # deutscher # TailwindShippingLines",
+          "url": "https://mastodon.social/@top_news_de/116714433315726424",
+          "published": "Mon, 08 Jun 2026 12:15:18 +0000",
+          "query": "#lidl"
+        },
+        {
+          "id": "64ac96c90fab10f5",
+          "source": "mastodon",
+          "company": "Lidl",
+          "title": "",
+          "summary": "Een goed voorbeeld &quot;Lidl bevoorraadt haar winkels al volgend jaar 100% elektrisch&quot; https://www. wattisduurzaam.nl/50850/energi e-beleid/duurzaam-ondernemen/lidl-bevoorraadt-haar-winkels-al-volgend-jaar-100-elektrisch/ # lidl # ev",
+          "url": "https://mastodon.social/@ErikJonker/116714150694593989",
+          "published": "Mon, 08 Jun 2026 11:03:26 +0000",
+          "query": "#lidl"
         },
         {
           "id": "9a1a05a2743ae3c0",
           "source": "reddit",
           "company": "Lidl",
           "title": "Lidl Scan&Go saját mobiltelefonnal? - biztonsági kockázat",
-          "summary": "A Lidl Magyarország június 4-től három üzletében kísérleti jelleggel bevezette a Scan &amp; Go funkciót, amely a Lidl Plus alkalmazáson keresztül lehetővé teszi a vásárlóknak, hogy okostelefonjukkal maguk olvassák be a termékek vonalkódját, majd az önkiszolgáló pénztárnál QR-kóddal fizessenek. A szolgáltatást a budapesti Huszti úti, a budaörsi Károly király úti és a monori Gém utcai üzletekben tesztelik, ahol munkatársak segítik a vásárlókat a rendszer megismerésében. Az első Scan &amp; Go vásár",
+          "summary": "A Lidl Magyarország június 4-től három üzletében kísérleti jelleggel bevezette a Scan & Go funkciót, amely a Lidl Plus alkalmazáson keresztül lehetővé teszi a vásárlóknak, hogy okostelefonjukkal maguk olvassák be a termékek vonalkódját, majd az önkiszolgáló pénztárnál QR-kóddal fizessenek. A szolgáltatást a budapesti Huszti úti, a budaörsi Károly király úti és a monori Gém utcai üzletekben tesztelik, ahol munkatársak segítik a vásárlókat a rendszer megismerésében. Az első Scan & Go vásárlás után",
           "url": "https://www.reddit.com/r/hungary/comments/1u00ny1/lidl_scango_saját_mobiltelefonnal_biztonsági/",
           "published": "2026-06-08T07:14:22+00:00",
           "query": "Lidl Magyarország"
         },
         {
-          "id": "ffa50ac063e7bf52",
-          "source": "reddit",
+          "id": "ea2eb6a1f6852fa5",
+          "source": "mastodon",
           "company": "Lidl",
-          "title": "Üdvözlünk az /r/hungary-n!",
-          "summary": "Tartalom, ami Magyarországgal, a magyar kultúrával kapcsolatos, illetve témák amik érdekesek lehetnek a tagok számára. [link]",
-          "url": "https://www.reddit.com/r/hungary/",
-          "published": "",
-          "query": "Lidl akció"
+          "title": "",
+          "summary": "A hollandok jövőre átlépik azt a határt, amit a világon még senki — 440 bolt, nulla dízel https:// fed.brid.gy/r/https://e-cars.h u/2026/06/08/lidl-elektromos-teherauto-2027-hollandia/",
+          "url": "https://fed.brid.gy/r/https://e-cars.hu/2026/06/08/lidl-elektromos-teherauto-2027-hollandia/",
+          "published": "Mon, 08 Jun 2026 05:28:00 +0000",
+          "query": "#lidl"
         },
         {
-          "id": "ad5e8904e7bd3ebb",
-          "source": "reddit",
+          "id": "b6d60d3811237908",
+          "source": "mastodon",
           "company": "Lidl",
-          "title": "Jobban élünk mint az osztrákok?",
-          "summary": "https://preview.redd.it/7wvpama1pt5h1.png?width=2261&amp;format=png&amp;auto=webp&amp;s=ddfb5f92280be5a742b2efbc3f34944635e6d781 A kép csak egy példa, határ mellett lakom, húsokon kívül lassan már mindent ott veszek, importterméket szinte sohasem itthon, osztrák vs magyar akció között simán van 20-30% ugyanazon terméken ugyanazon gyártótól, de ebből azért látni, hogy a multik itthon minket csak rabszolgának néznek, nincs más magyarázat (egy 10%-os különbségre lenne magyarázat a forint 5-7%-os er",
-          "url": "https://www.reddit.com/r/magyar/comments/1tz7kcf/jobban_élünk_mint_az_osztrákok/",
-          "published": "2026-06-07T09:33:01+00:00",
-          "query": "Lidl akció"
+          "title": "",
+          "summary": "Lidl setzt künftig auf Containerschiffe unter deutscher Flagge. Der Discounter Lidl geht bei der Absicherung seiner internationalen Lieferketten einen neuen Weg. Erstmals fährt ein Schiff der konzerneigenen Reederei unter deutscher Flagge. Damit möchte das Unternehmen die Kontrolle über den Transport wichtiger Waren stärken und sich besser auf mögliche Krisen im internationalen Handel vorbereiten. Die Entscheidung gilt als bedeutender Schritt für.... https:// t1p.de/yy54w # Lidl # Lieferkette",
+          "url": "https://mastodon.social/@wirinformieren/116709106213822204",
+          "published": "Sun, 07 Jun 2026 13:40:33 +0000",
+          "query": "#lidl"
         },
         {
           "id": "8a19756d6a424170",
@@ -97,352 +131,364 @@
           "query": "Lidl akció"
         },
         {
-          "id": "17637c9982395103",
-          "source": "reddit",
+          "id": "7219cdd43977cb73",
+          "source": "mastodon",
           "company": "Lidl",
-          "title": "Lidl akciós újság (06.04)",
-          "summary": "&#32; submitted by &#32; /u/E_ri_ka &#32; to &#32; r/lidlaldihun [link] &#32; [comments]",
-          "url": "https://www.reddit.com/r/lidlaldihun/comments/1ts4dt0/lidl_akciós_újság_0604/",
-          "published": "2026-05-30T16:25:08+00:00",
-          "query": "Lidl akció"
+          "title": "",
+          "summary": "Jongens, bij de # Lidl hebben ze heel erg lekkere biologische aardbeien 🍓 🍓🍓",
+          "url": "https://mastodon.nl/@heleenkuiper/116703435378138851",
+          "published": "Sat, 06 Jun 2026 13:38:23 +0000",
+          "query": "#lidl"
         },
         {
-          "id": "87f5729132f7fbb2",
-          "source": "reddit",
+          "id": "11dfe86ed29fdebd",
+          "source": "mastodon",
           "company": "Lidl",
-          "title": "Lidl akciós újság (05.28.)",
-          "summary": "&#32; submitted by &#32; /u/E_ri_ka &#32; to &#32; r/lidlaldihun [link] &#32; [comments]",
-          "url": "https://www.reddit.com/r/lidlaldihun/comments/1tm1twi/lidl_akciós_újság_0528/",
-          "published": "2026-05-24T04:24:03+00:00",
-          "query": "Lidl akció"
-        },
-        {
-          "id": "89360baa0d3fb2db",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Lidl akciós újság (05.21.)",
-          "summary": "&#32; submitted by &#32; /u/E_ri_ka &#32; to &#32; r/lidlaldihun [link] &#32; [comments]",
-          "url": "https://www.reddit.com/r/lidlaldihun/comments/1teprr8/lidl_akciós_újság_0521/",
-          "published": "2026-05-16T10:22:25+00:00",
-          "query": "Lidl akció"
-        },
-        {
-          "id": "303a5348687fa044",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Lidl akciós újság (05.14.)",
-          "summary": "&#32; submitted by &#32; /u/E_ri_ka &#32; to &#32; r/lidlaldihun [link] &#32; [comments]",
-          "url": "https://www.reddit.com/r/lidlaldihun/comments/1t817vr/lidl_akciós_újság_0514/",
-          "published": "2026-05-09T10:25:07+00:00",
-          "query": "Lidl akció"
+          "title": "",
+          "summary": "Suhl (ots) - Am Mittwoch, den 03.06.2026 wurde gegen 19:00 Uhr auf dem Lidl-Parkplatz in der Mauerstrasse in Suhl ein schwarzer VW Golf beschädigt. Zeugen werden gebeten, sich beim Inspektionsdienst in Suhl unter der Angabe des Aktenzeichens ... https://www. presseportal.de/blaulicht/pm/1 26725/6289151 # Lidl # Parkplatz # VWGolf # Verkehrsunfallflucht # Zeugen",
+          "url": "https://freie-re.de/@blaulicht/116702988567492583",
+          "published": "Sat, 06 Jun 2026 11:44:45 +0000",
+          "query": "#lidl"
         }
       ],
-      "method_note": "Nyílt RSS és keresési alapú social signal. Nem teljes social listening, nem reprezentatív közvélemény-kutatás.",
+      "method_note": "Nyílt RSS és keresési alapú social signal. Nem teljes social listening, nem reprezentatív közvélemény-kutatás. A V1.2 verzió 180 napos frissességi szűrést és cégnév-kontekstus szűrést használ.",
       "errors": []
     },
     {
       "company": "SPAR",
-      "social_mentions": 197,
-      "social_index": 100,
+      "social_mentions": 28,
+      "social_index": 58,
       "social_sources": {
-        "reddit": 1,
-        "youtube": 175,
-        "mastodon": 21
+        "reddit": 0,
+        "youtube": 8,
+        "mastodon": 20
       },
-      "dominant_social_topic": "árak és akciók",
-      "social_sentiment": "positive",
-      "latest_items": [
+      "dominant_social_topic": "bolti élmény",
+      "top_social_topics": [
         {
-          "id": "6c2d48cf051f050a",
-          "source": "reddit",
-          "company": "SPAR",
-          "title": "Madaras Teszkó",
-          "summary": "Nálunk az árak a legkisebb is számít! Üdv az /r/madarasteszko közösségben! Itt posztolhatod a magyar nyelvvel/Magyarországgal kapcsolatos sbubby-szerű meme/énén kreálmányaidat! [link]",
-          "url": "https://www.reddit.com/r/madarasteszko/",
-          "published": "",
-          "query": "SPAR Hungary"
+          "topic": "bolti élmény",
+          "score": 6
         },
         {
-          "id": "e5d75e1503271101",
-          "source": "youtube",
-          "company": "SPAR",
-          "title": "SPAR hűségpromóció: Zwilling - YouTube",
-          "summary": "SPAR hűségpromóció: Zwilling &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFB2aGh5N1F4Mk1aRnV0dHd0OFRwX1VBeXdGTnV3ZFBZVmNuZU04dnJFYTVfWTBZUDBOUDc5MWRQZnFMazY3ZXg1OU1ad0F0MHdpank2NkFR?oc=5",
-          "published": "Thu, 02 Oct 2025 05:28:07 GMT",
-          "query": "site:youtube.com SPAR Hungary review OR panasz OR akció OR vásárlás"
+          "topic": "árak és akciók",
+          "score": 4
         },
         {
-          "id": "eb1d55dfa1c3fa1a",
-          "source": "youtube",
-          "company": "SPAR",
-          "title": "SPAR - MySPAR bevásárlás - YouTube",
-          "summary": "SPAR - MySPAR bevásárlás &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFAtbWQ0dTY5aXlpcW1RVFBfa0pVanBrR1FxUkZSTTdTYjM3bzJ3TTBMU1dPOHFiWFpIcUlZZmg1QXdHMUw2Sy12alJIbnhmR3dEV2RPM3Fn?oc=5",
-          "published": "Mon, 13 Jan 2025 17:02:40 GMT",
-          "query": "site:youtube.com SPAR Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "8e2bd6f4d0cbdb8a",
-          "source": "youtube",
-          "company": "SPAR",
-          "title": "Adni Öröm! karácsonyi adománygyűjtő akció 2019 - YouTube",
-          "summary": "Adni Öröm! karácsonyi adománygyűjtő akció 2019 &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1jUTdVLXRpS0cxdnFZVjNVSVEyYXotaXdNa2NJeEVNUDRHV3FXMDJsN2VBNkQ2SXgxLUNQVmRhS1V4NjlrblhPZkt2a250VExFTzhJZXZn?oc=5",
-          "published": "Mon, 09 Dec 2019 14:38:51 GMT",
-          "query": "site:youtube.com SPAR Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "a458ba627c1572c0",
-          "source": "youtube",
-          "company": "SPAR",
-          "title": "25 éves az INTERSPAR (2020.11.12.-2020.11.18.) - YouTube",
-          "summary": "25 éves az INTERSPAR (2020.11.12.-2020.11.18.) &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE01MlRaTC1RWnFZSmZlNTRQNEROYTVWQVNtLXI5N3hxbzBsd0JJLTBJMHdKYkZzc0pnU1BGbVRGMTJVeEk5Y3JqMHVwalpGX25hLWc2Rnpn?oc=5",
-          "published": "Thu, 12 Nov 2020 07:00:04 GMT",
-          "query": "site:youtube.com SPAR Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "0f08a932c14c46a0",
-          "source": "youtube",
-          "company": "SPAR",
-          "title": "SPAR 🎉 Születésnapi nyereményjáték! 🎂 - YouTube",
-          "summary": "SPAR 🎉 Születésnapi nyereményjáték! 🎂 &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9nOHZiWVo5ek90MGJpbkp3Wm5TOHgzTWhaS2otRjdWMTYxRkpCSnRXNkExNFBnTVVPOUtIcjN6Zy1MNHZJZzFkRGV2cWh0czRyMGgwQU5B?oc=5",
-          "published": "Thu, 16 Apr 2026 05:00:46 GMT",
-          "query": "site:youtube.com SPAR Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "d56863be680c2587",
-          "source": "youtube",
-          "company": "SPAR",
-          "title": "Adni Öröm! adománygyűjtő akció - YouTube",
-          "summary": "Adni Öröm! adománygyűjtő akció &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBRd3ZRRFZnX0l5bk94OE5XbEgwa21hUFp6eVBESEFKeEE0ZFAtWVNfVGhyMUFVMGNLd2wyUFItSDNhMmNLdTI0eE9VZkRXU2JKa3NqMWlVS2lMekcyREZvNWQwelJObUlsV2FXZGJaNE5FOEJ4UkZPRllVQWQ?oc=5",
-          "published": "Sun, 23 Aug 2020 00:13:04 GMT",
-          "query": "site:youtube.com SPAR Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "4e6d1973a619fc47",
-          "source": "youtube",
-          "company": "SPAR",
-          "title": "BILLA, SPAR vásárlás Ausztria - YouTube",
-          "summary": "BILLA, SPAR vásárlás Ausztria &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE94Zl9rcTR1UzVlN2oyMkhac3VaTTlvRlNqazNLbWZ4bzV2REdCOGFFSkhxRXo3THF2RmV3VmVuNGRqbFlrM2RFbC1aWjM2NUU1ZEFrajd3?oc=5",
-          "published": "Fri, 19 Dec 2025 10:53:22 GMT",
-          "query": "site:youtube.com SPAR Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "3010be06889ff3e5",
-          "source": "youtube",
-          "company": "SPAR",
-          "title": "SPAR Black Weekend (2020.11.26.-2020.11.29.) - YouTube",
-          "summary": "SPAR Black Weekend (2020.11.26.-2020.11.29.) &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5fYUlQTmJnS3NwU3U2blI3OEctTm5uQTVKMTU2OXJtdGxhUDIzanpkYUVfMjY5OFF1UkZTd1ZtV1ZObmljUGExYzJ2c0pON1R4ajNqQTNR?oc=5",
-          "published": "Thu, 26 Nov 2020 07:00:14 GMT",
-          "query": "site:youtube.com SPAR Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "2192ae01027a0b2d",
-          "source": "youtube",
-          "company": "SPAR",
-          "title": "SPAR - Nestlé: Környezettudatos vásárló 2020 - YouTube",
-          "summary": "SPAR - Nestlé: Környezettudatos vásárló 2020 &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE0yMXV6NENoYmNZVHlpNWxlY3ZJM3ZXbjM1bGtyek5reXNueDJWTkFxVC1YSW1fRzZsY2JXOXNPbHFXZmVMQm54ZDltODYyb2l5SFA5SFRR?oc=5",
-          "published": "Tue, 29 Sep 2020 10:00:11 GMT",
-          "query": "site:youtube.com SPAR Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "af106f534a7918ce",
-          "source": "youtube",
-          "company": "SPAR",
-          "title": "Indul a SPAR Zwilling Fresh & Save Hűségakció! - YouTube",
-          "summary": "Indul a SPAR Zwilling Fresh & Save Hűségakció! &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9lNGw3QnJwd0VTby05bHZyOV8tRTJGanlqaVByUndjNHJmWXpRTE5Tck9wODV5QkZ5VlhHWkRxcEpnY3JGOW9MeWQyLTFzRjA3elpDNHBR?oc=5",
-          "published": "Thu, 06 Oct 2022 06:00:05 GMT",
-          "query": "site:youtube.com SPAR Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "dd71a2e9ec3a47ed",
-          "source": "youtube",
-          "company": "SPAR",
-          "title": "LIDL, SPAR, ALDI, DM Vásárlás 2025.05.05 - BF - YouTube",
-          "summary": "LIDL, SPAR, ALDI, DM Vásárlás 2025.05.05 - BF &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9IaE5jVzB2OHFlcEFVS2UyWkFBYTNobnIzQkVRSXJTTGhUZ2xJbGQ3UmxGeXRwaXZWMTBmNEV1amt0TUh2OGpnclNJZk00MnpqZFFaMnhn?oc=5",
-          "published": "Tue, 06 May 2025 08:55:42 GMT",
-          "query": "site:youtube.com SPAR Hungary review OR panasz OR akció OR vásárlás"
+          "topic": "munkaerő és foglalkoztatás",
+          "score": 3
         }
       ],
-      "method_note": "Nyílt RSS és keresési alapú social signal. Nem teljes social listening, nem reprezentatív közvélemény-kutatás.",
+      "social_sentiment": "mixed",
+      "latest_items": [
+        {
+          "id": "754e9e6e164b4c5e",
+          "source": "youtube",
+          "company": "SPAR",
+          "title": "SPAR American Tourister hűségakció (2026.06.04. - 2026.06.10.) - YouTube",
+          "summary": "SPAR American Tourister hűségakció (2026.06.04. - 2026.06.10.) YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5UeE5zclZvQjVpaWdlWHhRb1o1Z1kxRmVGcmJ4aHEyaG9TMXhvTUtuVTJfcVlnalY5LUZCMk92MG9yRUhJZi1MTFZaaEpZV1pENDZVWEdn?oc=5",
+          "published": "Thu, 04 Jun 2026 07:37:32 GMT",
+          "query": "site:youtube.com \"SPAR Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)"
+        },
+        {
+          "id": "50d1de351f5d7707",
+          "source": "youtube",
+          "company": "SPAR",
+          "title": "SPAR - Jó döntés már 35 éve (2026.06.04. - 2026.06.10.) - YouTube",
+          "summary": "SPAR - Jó döntés már 35 éve (2026.06.04. - 2026.06.10.) YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE05VHc1dFVjdUpZR2tSdW5yR1VxSVZ1ZloyYTV1SDhUNGlWdF9DX2QteFRCMnU2aHpwcTU4WUVDLTRseng5dlluU21OY1lNNUFiUS0yY2dn?oc=5",
+          "published": "Thu, 04 Jun 2026 07:37:22 GMT",
+          "query": "site:youtube.com \"SPAR Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)"
+        },
+        {
+          "id": "09aa8af323afda65",
+          "source": "mastodon",
+          "company": "SPAR",
+          "title": "",
+          "summary": "TOWNHILL: Family-run convenience store reopens as a SPAR after major revamp A family-run convenience store in Townhill has been given a new lease of life, reopening its doors as a SPAR after a major revamp. Local retailer Mandeep Sohal has transformed the shop in partnership with A F Blakemore, the UK’s largest independent SPAR wholesaler — and he was joined by family and staff to mark the occasion outside the newly branded store. Gone is the old fit-out, replaced by a brighter layout reworked a",
+          "url": "https://swanseabaynews.com/townhill-family-run-convenience-store-reopens-as-a-spar-after-major-revamp/",
+          "published": "Wed, 03 Jun 2026 14:44:46 +0000",
+          "query": "#spar"
+        },
+        {
+          "id": "bb42a3632a349fbc",
+          "source": "mastodon",
+          "company": "SPAR",
+          "title": "",
+          "summary": "Dad raised a fuss but Mom changed his tune. \"Anthony, he can nurse her back to health then he has to let her free.\" She shook her head at Joey, \"She's a wild animal. It's not fair to keep her.\" \"But John.\" She knelt, \"But John nothing. He's trash and you know he's already killed two dinosaurs.\" Joey's jaw dropped. Mom nodded, \"Didn't feed them right and played too rough. Sammi says he uses them to # spar like Pokémon.\" 5/x # wss366",
+          "url": "https://bonequest.net/@tobadzistsini/116677438929822074",
+          "published": "Mon, 01 Jun 2026 23:27:08 +0000",
+          "query": "#spar"
+        },
+        {
+          "id": "5a1c324cfffd4ef4",
+          "source": "mastodon",
+          "company": "SPAR",
+          "title": "",
+          "summary": "The Wandering Shop Stories # prompt for today, Mon-1-Jun, is # spar . Feel like writing something short and sweet that has the word \"spar\" in it? Check out the definitions of the word at: https://www. merriam-webster.com/dictionary /spar Join in and tag it with # wss366 ! # writing # WritingLife # microfiction h/t @ tobadzistsini",
+          "url": "https://wandering.shop/@wss366/116674029295780524",
+          "published": "Mon, 01 Jun 2026 09:00:02 +0000",
+          "query": "#spar"
+        },
+        {
+          "id": "9a32fa52c42f4335",
+          "source": "youtube",
+          "company": "SPAR",
+          "title": "SPAR - Bemutató film 2026. - YouTube",
+          "summary": "SPAR - Bemutató film 2026. YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBHN0NVclZ4bk8wMC14VGhTcWtqNG00WXBQaDl5TFJfY3QzVFRMWmxYUlF3T21mZVFLRFRpc3ZaQ2hmNl9tYUhsM1JtNzc2VzVFZmRBVTVR?oc=5",
+          "published": "Mon, 01 Jun 2026 08:15:06 GMT",
+          "query": "site:youtube.com \"SPAR Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)"
+        },
+        {
+          "id": "d25bb7ce16967676",
+          "source": "mastodon",
+          "company": "SPAR",
+          "title": "",
+          "summary": "Bei uns um die Ecke hat kürzlich ein neuer # spar aufgemacht. Alles schön neu und geräumig. Was mir aber auffiel ist die Menge an Eigenmarken. Von manchen Produkten gibt es nur mehr Eigenmarken. Abgesehen davon, dass ich mich als Konsument nach Angebot und Vielfalt sehne... Was machen denn die Produzenten? Wenn marktbeherrschende Ketten (ist bei # billa ja nicht anders) die Eigenmarken pushen, wie sollen die Konsumenten an meine Oliven und Weintrauben kommen? Das entwickelt sich in keine gute Ri",
+          "url": "https://wien.rocks/@nieral/116590908911915224",
+          "published": "Sun, 17 May 2026 16:41:25 +0000",
+          "query": "#spar"
+        },
+        {
+          "id": "3466403195371279",
+          "source": "youtube",
+          "company": "SPAR",
+          "title": "VÁGATLAN -VIDEÓ# #dm #étkészlet #beszélgetés #fyp #spar #akció - YouTube",
+          "summary": "VÁGATLAN -VIDEÓ# #dm #étkészlet #beszélgetés #fyp #spar #akció YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE94SV9EWXVHbVhSbG9lQTh2TUtDSG5RNmZIZmNWQUVfWU8wSmJUbjBwSmZkOWd6VmJzdkgzUW1KcFFvMHAwWHNadkRWQlNONUg1MGVzVnN3?oc=5",
+          "published": "Sun, 17 May 2026 05:54:07 GMT",
+          "query": "site:youtube.com \"SPAR akció\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)"
+        },
+        {
+          "id": "4f5d2590deece76e",
+          "source": "mastodon",
+          "company": "SPAR",
+          "title": "",
+          "summary": "Supermarkt doelwit van explosie # OmroepWest # DenHaag # Spar # Supermarkt # Explosie # ElsBorst -eilersplein https:// owst.nl/5098052/M",
+          "url": "https://mastodon.social/@OmroepWest/116537583603844384",
+          "published": "Fri, 08 May 2026 06:40:06 +0000",
+          "query": "#spar"
+        },
+        {
+          "id": "3e435e8e35adb808",
+          "source": "youtube",
+          "company": "SPAR",
+          "title": "SPAR - American Tourister hűségpromóció 2026.05.07. - 07.29. - YouTube",
+          "summary": "SPAR - American Tourister hűségpromóció 2026.05.07. - 07.29. YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBfM3Awd2tQcFpNbHVXQnBPTUFHT2VLbHFxNlVYNkRENnFrZFA0bEcxMVpMa3NldUNvTkJYSkh6U25UNTd1RGU1czd5OC1BeWZBWmh4Ykh3?oc=5",
+          "published": "Thu, 07 May 2026 06:00:06 GMT",
+          "query": "site:youtube.com \"SPAR Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)"
+        },
+        {
+          "id": "3206480546e2d3b5",
+          "source": "mastodon",
+          "company": "SPAR",
+          "title": "",
+          "summary": "Rattengift in Hipp-Gläschen gefunden Im Zusammenhang mit dem Rückruf aller Babykostgläschen von # Hipp bei # Spar # Österreich ist ein mit # Rattengift verseuchtes Gläschen gefunden worden. Ein Kunde habe das gemeldet, „ein Verzehr hat nicht stattgefunden“, teilte die Polizei im Burgenland am späten Samstagabend mit. Sie veröffentlichte eine „dringende Warnung an die Bevölkerung“. https:// orf.at/stories/3427286/",
+          "url": "https://climatejustice.social/@tuxom/116427820303251532",
+          "published": "Sat, 18 Apr 2026 21:25:51 +0000",
+          "query": "#spar"
+        },
+        {
+          "id": "04220dcc7e96d94f",
+          "source": "mastodon",
+          "company": "SPAR",
+          "title": "",
+          "summary": "⚠️ LEBENSGEFAHR! Österreich: DRINGENDE WARNUNG vor HiPP Babykost im Glas! Der Babynahrungshersteller HiPP ruft vorsorglich sein gesamtes Babykostgläschen-Sortiment zurück, das bei # SPAR # Österreich verkauft wurde. Offensichtlich wurden die Produkte vorsätzlich kontaminiert, da die Landespolizeidirektion Burgenland Ermittlungen aufgenommen hat und um Mithilfe bittet: +43 5913310-3333 Bitte teilen! https://www. produktwarnung.eu/2026/04/18/l ebensgefahr-dringende-warnung-vor-babyglaeschen-in-oes",
+          "url": "https://mastodon.social/@redsteve/116425852663270160",
+          "published": "Sat, 18 Apr 2026 13:05:27 +0000",
+          "query": "#spar"
+        }
+      ],
+      "method_note": "Nyílt RSS és keresési alapú social signal. Nem teljes social listening, nem reprezentatív közvélemény-kutatás. A V1.2 verzió 180 napos frissességi szűrést és cégnév-kontekstus szűrést használ.",
       "errors": []
     },
     {
       "company": "Tesco",
-      "social_mentions": 221,
-      "social_index": 100,
+      "social_mentions": 11,
+      "social_index": 40,
       "social_sources": {
-        "reddit": 1,
-        "youtube": 200,
-        "mastodon": 20
+        "reddit": 0,
+        "youtube": 0,
+        "mastodon": 11
       },
-      "dominant_social_topic": "árak és akciók",
-      "social_sentiment": "mixed",
-      "latest_items": [
+      "dominant_social_topic": "bolti élmény",
+      "top_social_topics": [
         {
-          "id": "0d4e7c43326fb2d3",
-          "source": "reddit",
-          "company": "Tesco",
-          "title": "When will TESCO have the new CMF series?",
-          "summary": "I live in a small a town in Hungary, way far from any lego stores, so my only option to find it is supermarkets. TESCO is the nearest for me and all other stores have been looted by scalpers. Because TESCO doesn't have it yet, it's my only chance to buy from before the scalpers arrive. Any online shop is selling them for 2-3 times the prize with shipping. Usually how much time it takes for TESCO to acquire new CMFs? &#32; submitted by &#32; /u/Technical_Set_8366 &#32; to &#32; r/lego [link] &#32",
-          "url": "https://www.reddit.com/r/lego/comments/1ta9xe4/when_will_tesco_have_the_new_cmf_series/",
-          "published": "2026-05-11T17:20:14+00:00",
-          "query": "Tesco Hungary"
+          "topic": "bolti élmény",
+          "score": 6
         },
         {
-          "id": "a93d128f4d338c8d",
-          "source": "youtube",
-          "company": "Tesco",
-          "title": "Szilu - YouTube",
-          "summary": "Szilu &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFB1dGhIazNjLU1lN05ZQVU5b0hCTzJBbVBnRzJVajdrSU1yVjdja3NrQjBMZ3lZUy13WjFFTU9Icm83VmFtTW9NTW1hZUpLZw?oc=5",
-          "published": "Sun, 20 Nov 2022 07:47:36 GMT",
-          "query": "site:youtube.com Tesco Hungary review OR panasz OR akció OR vásárlás"
+          "topic": "vásárlói panaszok",
+          "score": 3
         },
         {
-          "id": "d710b46f50d16b1e",
-          "source": "youtube",
-          "company": "Tesco",
-          "title": "Tesco online bevásárlás - YouTube",
-          "summary": "Tesco online bevásárlás &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFB5d09wNDBXcDB6d1JHMnZLUklEbzlQdjFld2NFdXg0MlhyWGtNNFF0SENhdVhzZ2xIZm9UM2Q2TlpBaVZsNk51al8yb2xxWWZhUTNQV3pn?oc=5",
-          "published": "Tue, 06 Feb 2024 13:21:13 GMT",
-          "query": "site:youtube.com Tesco Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "fbf9d58b3891bfa1",
-          "source": "youtube",
-          "company": "Tesco",
-          "title": "Tesco, Lidl, DM vásárlás 2025.09.03. - BF - YouTube",
-          "summary": "Tesco, Lidl, DM vásárlás 2025.09.03. - BF &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1mdWdRWWhZN0pnZVd1a2tQRlRqLXFHejc1VWw3RmRHajdkWDZHUU1pRmVsWXFmX25zMFA4bTY4NUFZQmJxUDEwY1I2MEVOOW5HdTNjWWpB?oc=5",
-          "published": "Thu, 04 Sep 2025 11:45:25 GMT",
-          "query": "site:youtube.com Tesco Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "0c6d5659535e69bc",
-          "source": "youtube",
-          "company": "Tesco",
-          "title": "Scan & Shop | Tesco Magyarország - YouTube",
-          "summary": "Scan & Shop | Tesco Magyarország &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBEY25Jc2JYbF9YYUVoMk9RNmFBbk5PWWw0ZmVGMU9iSzV3a09NUGVvMlE3a2dFbTJvdUhRS00zbjVlMnljZlhyMWZFUlZia0R3enBILVln?oc=5",
-          "published": "Mon, 02 Oct 2023 09:05:48 GMT",
-          "query": "site:youtube.com Tesco Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "ae1e5c8136bb0f3b",
-          "source": "youtube",
-          "company": "Tesco",
-          "title": "\"Extra friss\"mai boltozás!!4 boltban jártam /2025.12.17./+Karácsonyi menü?!🎄🥣 - YouTube",
-          "summary": "\"Extra friss\"mai boltozás!!4 boltban jártam /2025.12.17./+Karácsonyi menü?!🎄🥣 &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBkeDNSSmdhNVNDenRQV2NCTUJNa2xQZHp2dDJIcXlHWXZVcWxZR2Q2OGd4ZmRDbjBXQndmSEY1NEJ4RXRCcFBLdzlBNVlaSU1YbTdBbl9B?oc=5",
-          "published": "Wed, 17 Dec 2025 14:32:57 GMT",
-          "query": "site:youtube.com Tesco Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "8a5e54d523efe3f3",
-          "source": "youtube",
-          "company": "Tesco",
-          "title": "Tesco vásárlás Mit vettem ma? - YouTube",
-          "summary": "Tesco vásárlás Mit vettem ma? &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9JczJCY3lRTmF6a29jRE5BMzI3MjlQQWVWdkVRSW51SWVaa2loTGIxWmZ3Zmg1cG1XSHRaUTVnZS1ERmNQSWk2VW1wajVOQWMyWkhINWtB?oc=5",
-          "published": "Tue, 02 Jun 2026 13:00:21 GMT",
-          "query": "site:youtube.com Tesco Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "7b396fec6ef1168c",
-          "source": "youtube",
-          "company": "Tesco",
-          "title": "Scan&Shop mobil alkalmazás | Tesco Magyarország - YouTube",
-          "summary": "Scan&amp;Shop mobil alkalmazás | Tesco Magyarország &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE12Mm5TNnZBNW1yREFBd0YxUjJ1UElPN2E1LUdIVElpemdwamFvbk5Jb3BtcnlZb0xjY0JmaklOdHpYVEZTanVwVmJVYks1XzhOaTQzWk9R?oc=5",
-          "published": "Mon, 02 Oct 2023 09:03:49 GMT",
-          "query": "site:youtube.com Tesco Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "2f571af5c91c201c",
-          "source": "youtube",
-          "company": "Tesco",
-          "title": "Tesco Magyarország - YouTube",
-          "summary": "Tesco Magyarország &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9nMlpxVkQtSW00b2diRjJ5NG5lS1hDcF9xZ09jbURfdDNrTkkzMzhTbl94Mmxrd0Yxd202ZmJRNl9wSHBfb1hpNFk3Q1FfazNYRlRpUmdNZGQtUQ?oc=5",
-          "published": "Wed, 16 May 2012 21:29:05 GMT",
-          "query": "site:youtube.com Tesco Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "afe7d9e272ff5975",
-          "source": "youtube",
-          "company": "Tesco",
-          "title": "Önkiszolgáló pénztárak a Tesco-ban - YouTube",
-          "summary": "Önkiszolgáló pénztárak a Tesco-ban &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9IRHZEclp1MkRLSGhIazBEdXR0VS16blVfM080MGRTWHRQTWhkXzM4VUtVc0tTWmNrendpZHhCcTl6VmhiQ19kMWFpQW5LUTZSdnQ1QThB?oc=5",
-          "published": "Wed, 01 Jun 2011 04:59:16 GMT",
-          "query": "site:youtube.com Tesco Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "1ef82d5d5242cd2d",
-          "source": "youtube",
-          "company": "Tesco",
-          "title": "Zökkenőmentes bevásárlás a Tesco Online szolgáltatásaival | Tesco Online - YouTube",
-          "summary": "Zökkenőmentes bevásárlás a Tesco Online szolgáltatásaival | Tesco Online &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1taWhmLThCWVNPZ2tIaW1CU0tNd1FCZnFzRGh0MlBCQUMzY09NZmVhRzJmQ2dvaWlEWkZrNzQ3Uzc2bHZNbi1GME9pVUZOQ0h5cHFpS0F3?oc=5",
-          "published": "Fri, 10 Jun 2022 11:34:37 GMT",
-          "query": "site:youtube.com Tesco Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "11c71ec0e0dcbbf7",
-          "source": "youtube",
-          "company": "Tesco",
-          "title": "E-Matrica | Tesco Magyarország - YouTube",
-          "summary": "E-Matrica | Tesco Magyarország &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5PYmtqV0UxemRyQW5HZjVpd1VsX1NIZkVXZVMwUWRCX2t4OFM4S2pyTTduWUU0bnlsYjBlblc2UWRkTGIxWkJGX01xRDhiTzFUNS1EdWhB?oc=5",
-          "published": "Mon, 27 Jan 2020 13:07:12 GMT",
-          "query": "site:youtube.com Tesco Hungary review OR panasz OR akció OR vásárlás"
+          "topic": "termék és minőség",
+          "score": 3
         }
       ],
-      "method_note": "Nyílt RSS és keresési alapú social signal. Nem teljes social listening, nem reprezentatív közvélemény-kutatás.",
+      "social_sentiment": "negative",
+      "latest_items": [
+        {
+          "id": "bdf374a65d2eb110",
+          "source": "mastodon",
+          "company": "Tesco",
+          "title": "",
+          "summary": "# Tesco forced to close after Wi-Fi and power outage # TechFails # Shoppers were greeted with sign on a door at around 3.30pm this afternoon saying that Tesco had been closed “due to no # Wi -Fi”. - It said the store was unable to operate as a result. Wot? If there is no # Internet (or power) we are unable to obtain # food ? Easy way to cause upheaval. https://www. shetnews.co.uk/2026/06/07/tesc o-forced-to-close-after-wi-fi-and-power-outage/?utm_source=mastodon_fediverse # Scotland # dystopian ",
+          "url": "https://mastodon.scot/@paka/116714621981720064",
+          "published": "Mon, 08 Jun 2026 13:03:17 +0000",
+          "query": "#tesco"
+        },
+        {
+          "id": "4d96d7317578b3fd",
+          "source": "mastodon",
+          "company": "Tesco",
+          "title": "",
+          "summary": "11 Tesco secrets 'only shop workers know' – one could save customers 30% https:// fed.brid.gy/r/https://www.dail yrecord.co.uk/lifestyle/money/11-tesco-secrets-only-shop-37260215",
+          "url": "https://fed.brid.gy/r/https://www.dailyrecord.co.uk/lifestyle/money/11-tesco-secrets-only-shop-37260215",
+          "published": "Sun, 07 Jun 2026 11:09:54 +0000",
+          "query": "#tesco"
+        },
+        {
+          "id": "3c3a91fa5b2e7f14",
+          "source": "mastodon",
+          "company": "Tesco",
+          "title": "",
+          "summary": "Urgent food recall warning for products sold at Tesco, Waitrose and Morrisons https:// fed.brid.gy/r/https://www.mirr or.co.uk/news/uk-news/food-warning-tesco-waitrose-morrisons-37229771",
+          "url": "https://fed.brid.gy/r/https://www.mirror.co.uk/news/uk-news/food-warning-tesco-waitrose-morrisons-37229771",
+          "published": "Mon, 01 Jun 2026 00:56:25 +0000",
+          "query": "#tesco"
+        },
+        {
+          "id": "c954ab659443c215",
+          "source": "mastodon",
+          "company": "Tesco",
+          "title": "",
+          "summary": "our timeline has become so ridiculous that they are legitimately *censoring national flags* so they don't look too similar to those of &quot;bad&quot; countries # palestine # jordan # syria # tesco # islamophobia # antiarabism # uk",
+          "url": "https://mastodon.social/@ssfckdt/116671266170688137",
+          "published": "Sun, 31 May 2026 21:17:20 +0000",
+          "query": "#tesco"
+        },
+        {
+          "id": "a5bb5351a49a061b",
+          "source": "mastodon",
+          "company": "Tesco",
+          "title": "",
+          "summary": "I don't think anyone in Mansfield likes Marmite Peanut butter. (I bought a jar yesterday, the use before date is in just over a week). # Marmite # tesco # mansfield",
+          "url": "https://fosstodon.org/@TheGingerDog/116668394959221394",
+          "published": "Sun, 31 May 2026 09:07:08 +0000",
+          "query": "#tesco"
+        },
+        {
+          "id": "0c35b1e43354ee1c",
+          "source": "mastodon",
+          "company": "Tesco",
+          "title": "",
+          "summary": "I've been seeing a space of bad experience with Tesco delivery in my timeline lately. Are they trying to emulate Walmart? (If you recall, I had a decent experience with Walmart delivery only at *one* location.) # Tesco # Walmart # deliveries",
+          "url": "https://mast.yourautisticlife.com/@yourautisticlife/116665373585814868",
+          "published": "Sat, 30 May 2026 20:18:46 +0000",
+          "query": "#tesco"
+        },
+        {
+          "id": "41775ac5099e98ff",
+          "source": "mastodon",
+          "company": "Tesco",
+          "title": "",
+          "summary": "# Tesco packaging rules tighten as # Recycling push enters final phase https://www. packaging-gateway.com/news/tes co-packaging-rules-tighten-as-recycling-push-enters-final-phase/",
+          "url": "https://mastodon.social/@WasteBadger/116657202053571053",
+          "published": "Fri, 29 May 2026 09:40:38 +0000",
+          "query": "#tesco"
+        },
+        {
+          "id": "f36723341ae65a36",
+          "source": "mastodon",
+          "company": "Tesco",
+          "title": "",
+          "summary": "Tesco security guard's 'heart stopped for 23 minutes' after choking on doughnut https:// fed.brid.gy/r/https://www.dail yrecord.co.uk/news/uk-world-news/tesco-security-guards-heart-stopped-37214196",
+          "url": "https://fed.brid.gy/r/https://www.dailyrecord.co.uk/news/uk-world-news/tesco-security-guards-heart-stopped-37214196",
+          "published": "Wed, 27 May 2026 20:52:17 +0000",
+          "query": "#tesco"
+        },
+        {
+          "id": "721f9dc9430c68fa",
+          "source": "mastodon",
+          "company": "Tesco",
+          "title": "",
+          "summary": "Tesco security guard 'brain damaged' after horror choking incident inside Salford store https:// fed.brid.gy/r/https://www.mirr or.co.uk/news/uk-news/tesco-security-guard-brain-damaged-37213963",
+          "url": "https://fed.brid.gy/r/https://www.mirror.co.uk/news/uk-news/tesco-security-guard-brain-damaged-37213963",
+          "published": "Wed, 27 May 2026 19:11:51 +0000",
+          "query": "#tesco"
+        },
+        {
+          "id": "f87146162564c61f",
+          "source": "mastodon",
+          "company": "Tesco",
+          "title": "",
+          "summary": "Devastation as Tesco security guard chokes on doughnut and collapses at work https:// fed.brid.gy/r/https://www.manc hestereveningnews.co.uk/news/greater-manchester-news/devastation-tesco-security-guard-chokes-34021784",
+          "url": "https://fed.brid.gy/r/https://www.manchestereveningnews.co.uk/news/greater-manchester-news/devastation-tesco-security-guard-chokes-34021784",
+          "published": "Wed, 27 May 2026 18:12:09 +0000",
+          "query": "#tesco"
+        },
+        {
+          "id": "ea309cd9dacbab16",
+          "source": "mastodon",
+          "company": "Tesco",
+          "title": "",
+          "summary": "Martin Lewis’ MSE issues Tesco Clubcard warning as £17,000,000 in vouchers expires this week https:// fed.brid.gy/r/https://metro.co .uk/2026/05/27/martin-lewis-mse-issues-tesco-clubcard-warning-17-000-000-vouchers-expires-this-week-28536393/",
+          "url": "https://fed.brid.gy/r/https://metro.co.uk/2026/05/27/martin-lewis-mse-issues-tesco-clubcard-warning-17-000-000-vouchers-expires-this-week-28536393/",
+          "published": "Wed, 27 May 2026 09:23:03 +0000",
+          "query": "#tesco"
+        }
+      ],
+      "method_note": "Nyílt RSS és keresési alapú social signal. Nem teljes social listening, nem reprezentatív közvélemény-kutatás. A V1.2 verzió 180 napos frissességi szűrést és cégnév-kontekstus szűrést használ.",
       "errors": []
     },
     {
       "company": "ALDI",
-      "social_mentions": 235,
-      "social_index": 100,
+      "social_mentions": 23,
+      "social_index": 55,
       "social_sources": {
-        "reddit": 7,
-        "youtube": 208,
-        "mastodon": 20
+        "reddit": 6,
+        "youtube": 0,
+        "mastodon": 17
       },
       "dominant_social_topic": "árak és akciók",
+      "top_social_topics": [
+        {
+          "topic": "árak és akciók",
+          "score": 7
+        },
+        {
+          "topic": "bolti élmény",
+          "score": 3
+        },
+        {
+          "topic": "termék és minőség",
+          "score": 3
+        }
+      ],
       "social_sentiment": "positive",
       "latest_items": [
         {
-          "id": "612a9391b5e18ea4",
-          "source": "reddit",
+          "id": "8f864623891f72ab",
+          "source": "mastodon",
           "company": "ALDI",
-          "title": "My first solo trip to Europe. I covered Switzerland, Liechtenstein, Austria, Slovakia, Hungary and Czech Republic.",
-          "summary": "My first solo trip to Europe. I travelled around Europe for 21 days. Listing down my itinerary below. Switzerland May 2nd to May 11th May 2nd-May 4th Geneva May 4th to May 8th Interlaken ost May 8th to May 9th Zermatt May 9th May 10th St.Moritz May 10th to May 11th Zurich Most of dates are overlapping because I took the earliest trains to the locations mentioned which were pretty close apart from a few. May 11th Zurich to Lichtenstein, A very small country, explored it in about 6 hours including",
-          "url": "https://www.reddit.com/r/travel/comments/1tqs54f/my_first_solo_trip_to_europe_i_covered/",
-          "published": "2026-05-29T05:31:38+00:00",
-          "query": "ALDI Hungary"
+          "title": "",
+          "summary": "Discover Aldi’s $15 Collapsible Picnic Table for Effortless Outdoor Dining Ah. It is finally, at long last, summertime. The sun is shining, the temperatures are finally getting warmer, and the great outdoors is just begging to be enjoyed. Outdoor dining is one of the great pleasures of the summer, and you can m… # dining # cooking # diet # food # Dining # aldi # OutdoorDining # picnictable https://www. diningandcooking.com/2676725/d iscover-aldis-15-collapsible-picnic-table-for-effortless-outdoo",
+          "url": "https://vive.im/@dc/116717952875780448",
+          "published": "Tue, 09 Jun 2026 03:10:22 +0000",
+          "query": "#aldi"
         },
         {
-          "id": "f34ad4746b31aeb0",
-          "source": "reddit",
+          "id": "f7f283c29f52990d",
+          "source": "mastodon",
           "company": "ALDI",
-          "title": "2026 május 20. - Nyolc évre szóló szívecskés kitűző",
-          "summary": "Frissítve: 2026. május 20. 21:00 CEST 1. Varsói tárgyalás: Tusk magyar szív-kitűzőt adott Magyarnak, V4-újraindítás Budapesten júniusban Telex | 444 | HVG | Magyar Hang · külpolitikai irányváltás Magyar Péter miniszterelnök szerdán Varsóba érkezett, ahol Donald Tusk lengyel kormányfővel tárgyalt. A 444 beszámolt arról, hogy a négyszemközti tárgyalás után közös sajtótájékoztatón Tusk kijelentette: kevesen hittek Magyar Péter &quot;fantasztikus győzelmében&quot; , de ő igen, és Lengyelország a 202",
-          "url": "https://www.reddit.com/r/hungary/comments/1tivywt/2026_május_20_nyolc_évre_szóló_szívecskés_kitűző/",
-          "published": "2026-05-20T19:20:52+00:00",
-          "query": "ALDI Hungary"
+          "title": "",
+          "summary": "\"Actievoerders delen bio-aardappelen uit voor de deur van Aldi Nederland: ‘De bio-boer staat bij Aldi voor een dichte deur’ Voor het hek van Aldi Nederland staat een kiepauto. De bak is tot de rand toe gevuld met aardappels. Gratis af te halen voor medewerkers van het supermarktconcern en andere belangstellenden. Voor de Aldi-directie staan cadeautassen met piepers klaar. De actie is ludiek, deze vrijdagmiddag in Culemborg, maar de boodschap van de organisatoren is dringend. Het gebruik van pest",
+          "url": "https://todon.eu/@regendans/116714041545455501",
+          "published": "Mon, 08 Jun 2026 10:35:40 +0000",
+          "query": "#aldi"
         },
         {
           "id": "47a90d92d52b0817",
@@ -452,508 +498,300 @@
           "summary": "&#32; submitted by &#32; /u/E_ri_ka &#32; to &#32; r/lidlaldihun [link] &#32; [comments]",
           "url": "https://www.reddit.com/r/lidlaldihun/comments/1tylo3o/aldi_akciós_újság_0611/",
           "published": "2026-06-06T16:23:36+00:00",
-          "query": "ALDI akció"
+          "query": "Aldi akció"
         },
         {
-          "id": "92a12dd18cd363a5",
-          "source": "reddit",
+          "id": "bb57d67541bd44ee",
+          "source": "mastodon",
           "company": "ALDI",
-          "title": "Aldi akciós újság (06.04.)",
-          "summary": "&#32; submitted by &#32; /u/E_ri_ka &#32; to &#32; r/lidlaldihun [link] &#32; [comments]",
-          "url": "https://www.reddit.com/r/lidlaldihun/comments/1ts4ejr/aldi_akciós_újság_0604/",
-          "published": "2026-05-30T16:26:01+00:00",
-          "query": "ALDI akció"
+          "title": "",
+          "summary": "Koblenz (ots) - Am 06.06.2026, zwischen 09:50 und 10:05 Uhr kam es auf dem Parkplatz des Aldi in der Schlachthofstraße (Koblenz) zu einer Verkehrsunfallflucht. Der unbekannte Verursacher streifte den geparkten grünen Audi A3 und beschädigte dabei ... https://www. presseportal.de/blaulicht/pm/1 17712/6289155 # Aldi # Audi # Parkplatz # Verkehrsunfallflucht",
+          "url": "https://freie-re.de/@blaulicht/116703096046921887",
+          "published": "Sat, 06 Jun 2026 12:12:05 +0000",
+          "query": "#aldi"
         },
         {
-          "id": "599894496965ef7f",
-          "source": "reddit",
+          "id": "bdf82ede6f933f0f",
+          "source": "mastodon",
           "company": "ALDI",
-          "title": "Aldi akciós újság (05.28.)",
-          "summary": "&#32; submitted by &#32; /u/E_ri_ka &#32; to &#32; r/lidlaldihun [link] &#32; [comments]",
-          "url": "https://www.reddit.com/r/lidlaldihun/comments/1tm1uei/aldi_akciós_újság_0528/",
-          "published": "2026-05-24T04:24:45+00:00",
-          "query": "ALDI akció"
+          "title": "",
+          "summary": "New supermarket named most expensive for key shopping essentials after rival's Aldi price match https:// fed.brid.gy/r/https://www.manc hestereveningnews.co.uk/whats-on/shopping/new-supermarket-named-most-expensive-34064363",
+          "url": "https://fed.brid.gy/r/https://www.manchestereveningnews.co.uk/whats-on/shopping/new-supermarket-named-most-expensive-34064363",
+          "published": "Sat, 06 Jun 2026 06:50:08 +0000",
+          "query": "#aldi"
         },
         {
-          "id": "94ed5545c5a64b92",
-          "source": "reddit",
+          "id": "c07e21db64ec5c30",
+          "source": "mastodon",
           "company": "ALDI",
-          "title": "Aldi akciós újság (05.21.)",
-          "summary": "&#32; submitted by &#32; /u/E_ri_ka &#32; to &#32; r/lidlaldihun [link] &#32; [comments]",
-          "url": "https://www.reddit.com/r/lidlaldihun/comments/1tepr7v/aldi_akciós_újság_0521/",
-          "published": "2026-05-16T10:21:35+00:00",
-          "query": "ALDI akció"
+          "title": "",
+          "summary": "LLMs scheinen auch bei den Handbuch-Author:innen von den Bauhn Webcam AIBSDB-0426 von # Aldi angekommen zu sein. 😅 Quelle: https:// s7g10.scene7.com/is/content/al di/202604280023 Und ja, das Kapitel ist für mich ziemlich unverständlich. Klingel und Gong scheint wild gemischt verwendet zu werden. Wobei, für 15.99 CHF ist das Teil schon ziemlich gut. Mal sehen ob man da # ZephyrRTOS drauf kriegt. # Schweiz # Tuya # InternetOfThings",
+          "url": "https://swiss.social/@rettichschnidi/116699339396857025",
+          "published": "Fri, 05 Jun 2026 20:16:43 +0000",
+          "query": "#aldi"
         },
         {
-          "id": "95ad4845c6cffcb8",
-          "source": "reddit",
+          "id": "d4edbcaaf27f65f8",
+          "source": "mastodon",
           "company": "ALDI",
-          "title": "Aldi akciós újság (05.14.)",
-          "summary": "&#32; submitted by &#32; /u/E_ri_ka &#32; to &#32; r/lidlaldihun [link] &#32; [comments]",
-          "url": "https://www.reddit.com/r/lidlaldihun/comments/1t814zr/aldi_akciós_újság_0514/",
-          "published": "2026-05-09T10:20:33+00:00",
-          "query": "ALDI akció"
+          "title": "",
+          "summary": "Aldi is giving away £100 vouchers — but only to certain shoppers https:// fed.brid.gy/r/https://metro.co .uk/2026/06/05/aldi-giving-away-100-vouchers-certain-shoppers-28647683/",
+          "url": "https://fed.brid.gy/r/https://metro.co.uk/2026/06/05/aldi-giving-away-100-vouchers-certain-shoppers-28647683/",
+          "published": "Fri, 05 Jun 2026 11:06:33 +0000",
+          "query": "#aldi"
         },
         {
-          "id": "d793fbc9f2004fb5",
-          "source": "youtube",
+          "id": "523d791fed25c860",
+          "source": "mastodon",
           "company": "ALDI",
-          "title": "Betiltják az air fryert? A forrólevegős sütő korának vége? Tényfeltárás + Puffogás! - YouTube",
-          "summary": "Betiltják az air fryert? A forrólevegős sütő korának vége? Tényfeltárás + Puffogás! &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5ER19seENpYUx6VHJCYnhNSThROHpNVWVCcUVfUDRjZi1fMjFXQXJKUjVzanQtOW9ZRzgxNmJsdGhuODNsdWUtNnI5ZC1IaV9FNldiZWl3?oc=5",
-          "published": "Tue, 05 May 2026 15:59:24 GMT",
-          "query": "site:youtube.com ALDI Hungary review OR panasz OR akció OR vásárlás"
+          "title": "",
+          "summary": "These are Aldi cheese curls, btw. Free your mind, and your ass will follow. # Aldi",
+          "url": "https://beige.party/@dariusw/116694721303529016",
+          "published": "Fri, 05 Jun 2026 00:42:17 +0000",
+          "query": "#aldi"
         },
         {
-          "id": "a93d128f4d338c8d",
-          "source": "youtube",
+          "id": "a540eb43f122c50d",
+          "source": "mastodon",
           "company": "ALDI",
-          "title": "Szilu - YouTube",
-          "summary": "Szilu &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFB1dGhIazNjLU1lN05ZQVU5b0hCTzJBbVBnRzJVajdrSU1yVjdja3NrQjBMZ3lZUy13WjFFTU9Icm83VmFtTW9NTW1hZUpLZw?oc=5",
-          "published": "Sun, 20 Nov 2022 07:47:36 GMT",
-          "query": "site:youtube.com ALDI Hungary review OR panasz OR akció OR vásárlás"
+          "title": "",
+          "summary": "Salmonellen wurden in Basilikum von Aldi Nord nachgewiesen. Betroffene Gläser bitte im Markt umtauschen, auch ohne Kassenbon. Mehr: https://www. lebensmittelwarnung.de/___lebe nsmittelwarnung.de/Meldungen/2026/06_Juni/260603_03_NI_Basilikum/260603_03_NI_Basilikum_Meldung.html # Rückruf # Lebensmittel # Warnung # Aldi # Basilikum",
+          "url": "https://verbraucherzentrale.social/@verbraucherzentrale_nrw/116686251286145911",
+          "published": "Wed, 03 Jun 2026 12:48:14 +0000",
+          "query": "#aldi"
         },
         {
-          "id": "01c1bd061f67f7cd",
-          "source": "youtube",
+          "id": "bcd4bebfe4c47fe4",
+          "source": "mastodon",
           "company": "ALDI",
-          "title": "LIDL, ALDI Vásárlás 2025.04.07. - BF - YouTube",
-          "summary": "LIDL, ALDI Vásárlás 2025.04.07. - BF &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBLdDd2VE9yNlJlRjNLaTI4NUR0UHlCcmY1Tk5SemlmRW9sazgxLVY1UDJLRUd4V1NkWk5iQzV5OUNTQlNnNjFJUWxPa0Y3UXRKNHNHSDZ3?oc=5",
-          "published": "Tue, 08 Apr 2025 12:00:50 GMT",
-          "query": "site:youtube.com ALDI Hungary review OR panasz OR akció OR vásárlás"
+          "title": "",
+          "summary": "Winsen (ots) - Taschendiebe waren unterwegs Am Montag, 1.6.2026, griffen Taschendiebe in Winsen in zwei Aldi-Filialen nahezu zeitgleich zu. In der Zeit zwischen 12 Uhr und 13 Uhr traf es einen 69-jährigen Mann, der in der Filiale an der Straße Zum ... https://www. presseportal.de/blaulicht/pm/5 9458/6287534 # Aldi # Feuerwehr # Taschendiebe # Taschendiebstahl",
+          "url": "https://freie-re.de/@blaulicht/116685751047743571",
+          "published": "Wed, 03 Jun 2026 10:41:01 +0000",
+          "query": "#aldi"
         },
         {
-          "id": "ebd0ae246efe2493",
-          "source": "youtube",
+          "id": "24a873efe4776c3b",
+          "source": "mastodon",
           "company": "ALDI",
-          "title": "VÁSÁRLÁS-ALDI&ZÖLDSÉGES+AZ ELSŐ MUNCHOM A SPARBÓL - YouTube",
-          "summary": "VÁSÁRLÁS-ALDI&amp;ZÖLDSÉGES+AZ ELSŐ MUNCHOM A SPARBÓL &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1RdXNWTVpUSkJ6WkZKNVpkWFIyUldQQS01cHFpNUVMT25rTlctTElzSVNKV09mWjVzSF9aODdfY2R4eDVoLWl6YzB4OWlreXAzcW04cVhn?oc=5",
-          "published": "Sun, 02 Jul 2023 05:18:13 GMT",
-          "query": "site:youtube.com ALDI Hungary review OR panasz OR akció OR vásárlás"
+          "title": "",
+          "summary": "The Italian Sauce Both Aldi And Trader Joe’s Customers Are Not Going Back For You know the old saying, “too much of a good thing is not a good thing?” Well, one could argue it also applies to food. When several delicious ingredients are co… # dining # cooking # diet # food # Italiancheese # aldi # Cheese # Italia # Italian # italiano # italy # Lemon # PastaSauce # pestosauce # TraderJoe &#39;s https://www. diningandcooking.com/2667988/t he-italian-sauce-both-aldi-and-trader-joes-customers-are-no",
+          "url": "https://vive.im/@dc/116682779255454721",
+          "published": "Tue, 02 Jun 2026 22:05:15 +0000",
+          "query": "#aldi"
         },
         {
-          "id": "030460c3a16b2766",
-          "source": "youtube",
+          "id": "898c0c175a09fd44",
+          "source": "mastodon",
           "company": "ALDI",
-          "title": "Vásárlások/ALDI, ROSSMANN, LIDL, SINSAY/ - YouTube",
-          "summary": "Vásárlások/ALDI, ROSSMANN, LIDL, SINSAY/ &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1OdDRzNG0tLXVYNUNpR0FtdEZjLW53ektjWkZaVFpjc20wTW5QaU8zR1FkZUVKbXBQcDRfbjJpMWxuVHpoVXBLZFNQc3pRZFc4cXg4bWtR?oc=5",
-          "published": "Mon, 13 May 2024 07:00:09 GMT",
-          "query": "site:youtube.com ALDI Hungary review OR panasz OR akció OR vásárlás"
+          "title": "",
+          "summary": "# Hitze im Mai, Wasser in Gefahr Während die Temperaturen steigen, pumpen # redbull # Aldi & Co. unser Grundwasser in Rekordgeschwindigkeit leer. Wenn ein fremder Staat unser Trinkwasser nehmen würde, wären wir im # Krieg Doch die Industrie darf es einfach weiter machen? # Wasser gehört uns allen, nicht den Profiteuren. Wir überschreiten die planetaren Grenzen und befinden uns im # Wasserbankrott Vortrag & Protest-Planung in # koln 7. Juni 17:00 in der # Stelze https:// guter-grund.info/9gt2 @ k",
+          "url": "https://social.cologne/@Demos_und_Termine/116681971543845761",
+          "published": "Tue, 02 Jun 2026 18:39:51 +0000",
+          "query": "#aldi"
         }
       ],
-      "method_note": "Nyílt RSS és keresési alapú social signal. Nem teljes social listening, nem reprezentatív közvélemény-kutatás.",
+      "method_note": "Nyílt RSS és keresési alapú social signal. Nem teljes social listening, nem reprezentatív közvélemény-kutatás. A V1.2 verzió 180 napos frissességi szűrést és cégnév-kontekstus szűrést használ.",
       "errors": []
     },
     {
       "company": "Penny",
-      "social_mentions": 246,
-      "social_index": 100,
+      "social_mentions": 0,
+      "social_index": 0,
       "social_sources": {
-        "reddit": 10,
-        "youtube": 216,
-        "mastodon": 20
+        "reddit": 0,
+        "youtube": 0,
+        "mastodon": 0
       },
-      "dominant_social_topic": "árak és akciók",
-      "social_sentiment": "positive",
-      "latest_items": [
-        {
-          "id": "b92be3042fd5399b",
-          "source": "reddit",
-          "company": "Penny",
-          "title": "My Ottoman Playthrough (1337-1836): The game is fun and needs a bit more patience",
-          "summary": "Hi dear fellow map-starers and spreadsheet lovers. I wanted to share my recent Ottomans playthrough and some detailed information about how I played and what I did during this campaign. I added pictures from the last day of the game, namely December 1836, where the Ottomans were the most dominant superpower and captured Rome at the very end of 1834. I started this campaign when 1.2.5 was released and played on speed 7, with pausing the game whenever it was needed. I did not micromanage too much ",
-          "url": "https://www.reddit.com/r/EU5/comments/1u0qcv2/my_ottoman_playthrough_13371836_the_game_is_fun/",
-          "published": "2026-06-09T00:55:12+00:00",
-          "query": "Penny Hungary"
-        },
-        {
-          "id": "c813642ac003f66d",
-          "source": "reddit",
-          "company": "Penny",
-          "title": "[WTS] Graded world coins pulled straight from my personal collection! Toned European silver, chunky Ottoman and Italian crowns, counterstamped Latin America, Top Pop Notgeld and more!",
-          "summary": "Proof : https://imgur.com/a/reddit-6-7-fRoiUKm Terms : Shipping is a flat $7 per order. I accept Venmo, PPFF, and Cashapp. Chat and PM are both fine. Reasonable offers are welcome, particularly if interested in multiple items. 1618 Austria: Trautson 3 kreuzer (Colorful toning!) - NGC AU50 - $200 1902-03 Ethiopia gersh - PCGS MS64 - $150 1549 France: Besançon 1/2 carolus - PCGS AU58 - $225 1742 France &quot;wildman&quot; jeton - PCGS AU55 - $225 ex Robert C. Knepper &quot;wildman&quot; collection",
-          "url": "https://www.reddit.com/r/CoinSales/comments/1tzlvw7/wts_graded_world_coins_pulled_straight_from_my/",
-          "published": "2026-06-07T19:41:23+00:00",
-          "query": "Penny Hungary"
-        },
-        {
-          "id": "e214b4f696dd302f",
-          "source": "reddit",
-          "company": "Penny",
-          "title": "Top Row Daily Doubles: An Analysis",
-          "summary": "One of the rarest oddities in all of Jeopardy! is the top row Daily Double. In over 40 years, the Daily Double has appeared in the top row in only 40 games (that we know of). I had some time to kill the other day, so I decided to go and track them all down. (Credit to the J! Archive, of course.) I’ll post the full list at the end, but wanted to point out some interesting observations. Of the 40 top row Daily Doubles, 14 occurred within the first 1,000 shows. Further, 21 occurred within the first",
-          "url": "https://www.reddit.com/r/Jeopardy/comments/1txdxju/top_row_daily_doubles_an_analysis/",
-          "published": "2026-06-05T07:30:32+00:00",
-          "query": "Penny Hungary"
-        },
-        {
-          "id": "ba4c84b43c118e8d",
-          "source": "reddit",
-          "company": "Penny",
-          "title": "Study abroad",
-          "summary": "Hey everyone, ​I'm at a very important stage of my life where I have to make a really big decision that will shape my future. As I am the oldest sibling in my family, I don't really have anyone to ask for guidance. So, here I am on Reddit after weeks of sleepless nights pondering through the infinite probabilities. ​I am an HSC graduate from the HSC 2025 batch. I somehow managed to get a GPA of 5.00, even though my exams went to shit. A lot of shit happened to me, though. Anyways, I also have a ",
-          "url": "https://www.reddit.com/r/bangladesh/comments/1tvd63a/study_abroad/",
-          "published": "2026-06-03T03:17:32+00:00",
-          "query": "Penny Hungary"
-        },
-        {
-          "id": "98ab9314ae328f17",
-          "source": "reddit",
-          "company": "Penny",
-          "title": "[WTS] 30 graded world coins pulled straight from my personal collection! Toned European silver, chunky Ottoman and Italian crowns, counterstamped Latin America, Top Pop Notgeld and more!",
-          "summary": "Proof : https://imgur.com/a/reddit-6-1-P3nxryF Terms : Shipping is a flat $7 per order. I accept Venmo, PPFF, and Cashapp. Chat and PM are both fine. Reasonable offers are welcome, particularly if interested in multiple items. 1618 Austria: Trautson 3 kreuzer (Colorful toning!) - NGC AU50 - $200 1888/7 Congo Free State 5 céntimes - PCGS MS63 RB - $90 1902-03 Ethiopia gersh - PCGS MS64 - $150 1549 France: Besançon 1/2 carolus - PCGS AU58 - $225 1742 France &quot;wildman&quot; jeton - PCGS AU55 - ",
-          "url": "https://www.reddit.com/r/CoinSales/comments/1tuahas/wts_30_graded_world_coins_pulled_straight_from_my/",
-          "published": "2026-06-02T00:06:20+00:00",
-          "query": "Penny Hungary"
-        },
-        {
-          "id": "c46100f13a013e20",
-          "source": "reddit",
-          "company": "Penny",
-          "title": "[WTS] US/WORLD NUMISMATIC MEGA-SALE!! Largest Sale Yet, 200 Items! TONS of NEW US/World Slabs and Raw. Massive Inventory, Many Items Reduced! Lots of Brit. and German!! Something for Everyone!",
-          "summary": "Welcome back! Tons of new stuff in todays inventory, make sure you have some time before diving in!! Proof: https://imgur.com/a/oMVdNTt Payments via ZELLE, VENMO, or PPFF Shipping will be 5 extra on orders under 200. BINs will take priority, I will try my absolute best to update the post as items sell. Discounts discouraged on single item purchases, but will be guaranteed on multi-item purchases, the more you buy the more discount you get!! I can provide more pics if you're serious about an item",
-          "url": "https://www.reddit.com/r/CoinSales/comments/1tojiae/wts_usworld_numismatic_megasale_largest_sale_yet/",
-          "published": "2026-05-26T20:39:11+00:00",
-          "query": "Penny Hungary"
-        },
-        {
-          "id": "99302d2725dbaca4",
-          "source": "reddit",
-          "company": "Penny",
-          "title": "MP AAR Part 2: Dogeiana Jones and the Last Crusade! (Sessions 4&5)",
-          "summary": "Hi everyone, welcome back to my mp aar series, in which we follow 5 players and decisions they make. I am still experimenting with the aar style, so please forgive me and feel free to leave suggestions. Only 2 sessions were held this weekend instead of the usual 3. Session 4 was mostly chill, while session 5 was where things got heated. I'll summarize session 4 briefly and then get to the good stuff. While I do try to tell the story of all players, this is mostly from a venetian perspective and ",
-          "url": "https://www.reddit.com/r/EU5/comments/1th22qb/mp_aar_part_2_dogeiana_jones_and_the_last_crusade/",
-          "published": "2026-05-18T21:34:37+00:00",
-          "query": "Penny Hungary"
-        },
-        {
-          "id": "f667be37ca4abea6",
-          "source": "reddit",
-          "company": "Penny",
-          "title": "[WTS] Pre-1800 graded world coins: Toned French silver jetons, Birth of Charles II medal, Ragusa tallero, Gordian III double denarius, and more!",
-          "summary": "Proof &amp; Gallery : https://imgur.com/a/reddit-5-13-fFj7UH4 Terms : Tracked USPS shipping is a flat $7. I accept Venmo, PPFF, and Cashapp. Chat and PM are both fine. Reasonable offers are welcome, particularly if interested in multiple items! 1168-1200 Austria: Salzburg pfennig - PCGS AU53 - SOLD 1743 Austria Maria Theresa satirical coronation medal - PCGS VF Details - $90 95 1630 England Medal (Birth of Prince Charles) - NGC XF Details - $190 200 1721 France jeton (Ville de Paris, AMAZING TON",
-          "url": "https://www.reddit.com/r/CoinSales/comments/1tca94e/wts_pre1800_graded_world_coins_toned_french/",
-          "published": "2026-05-13T19:32:56+00:00",
-          "query": "Penny Hungary"
-        },
-        {
-          "id": "fc8f2ad40625ff12",
-          "source": "reddit",
-          "company": "Penny",
-          "title": "DualSense UI Missing on GeForce Now – Request for In-Game Layout Switch",
-          "summary": "Dear Pearl Abyss, First of all, I would like to thank you for creating a game that is not only enjoyable, but also pushes the experience to a level that, as a video game enthusiast, I barely even dared to dream of in today’s era. I haven’t felt anything like this since The Witcher 3, and after 11 years—now approaching my 40s—I didn’t even think it was possible anymore. THANK YOU! The success surrounding the game is absolutely deserved—not only because you’ve delivered something that evokes these",
-          "url": "https://www.reddit.com/r/CrimsonDesert/comments/1t99lv8/dualsense_ui_missing_on_geforce_now_request_for/",
-          "published": "2026-05-10T15:13:51+00:00",
-          "query": "Penny Hungary"
-        },
-        {
-          "id": "6a01ed00db2f7f0a",
-          "source": "reddit",
-          "company": "Penny",
-          "title": "Magyar irodák: KARTAGO TOURS - Fakultatív Program utazási magazin",
-          "summary": "Alapadatok Tulajdonson Érték Teljes név KARTAGO TOURS Utazásszervező és Szolgáltató Zártkörűen Működő Részvénytársaság Rövidített név KARTAGO TOURS Zrt. Alapítás 1996. december Cégjegyzékszám 01 10 045550 Székhely 1076 Budapest, Thököly út 21. Főtevékenység 7912 Utazásszervezés Weboldal www.kartagotours.hu Munkatársak 45 fő (2025) Cégcsoport és tulajdonosi háttér A Kartago Tours a 61 milliárd EUR forgalmú német REWE konszern tagja, amely elsősorban a kereskedelem területén tevékenykedik (REWE, B",
-          "url": "https://www.reddit.com/r/FakultativProgram/comments/1tt7cc5/magyar_irodák_kartago_tours_fakultatív_program/",
-          "published": "2026-05-31T21:01:09+00:00",
-          "query": "Penny akció"
-        },
-        {
-          "id": "431d81b434ae9b95",
-          "source": "youtube",
-          "company": "Penny",
-          "title": "Döbbenet és tanácstalanság a Fidesz eredményváróján - YouTube",
-          "summary": "Döbbenet és tanácstalanság a Fidesz eredményváróján &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1MRnJyV0V6N3ZFa2Nsb29FOE5uaTZTelVLZEJJbVNXRC10S0hMdDRzSFQzSUhqclBXQV9VM2RXUmxYS3VnaDA3ckxoTzhVbXFXYjNDZlRB?oc=5",
-          "published": "Mon, 13 Apr 2026 04:00:02 GMT",
-          "query": "site:youtube.com Penny Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "8a3acf2186e7fd62",
-          "source": "youtube",
-          "company": "Penny",
-          "title": "Vivess pontgyűjtő akció - Penny Market - YouTube",
-          "summary": "Vivess pontgyűjtő akció - Penny Market &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE4xZlRSWkdVTGtwVDBtaGpxcHl0RTZiMWhia1lmVjN6dFZfRV9POXlnNy1JcDQ3R1ktYnBzeUhWVDFkalZuWXVfOWQ2Rmx4NGx4NDVfTzF3?oc=5",
-          "published": "Tue, 11 Sep 2018 07:39:23 GMT",
-          "query": "site:youtube.com Penny Hungary review OR panasz OR akció OR vásárlás"
-        }
-      ],
-      "method_note": "Nyílt RSS és keresési alapú social signal. Nem teljes social listening, nem reprezentatív közvélemény-kutatás.",
+      "dominant_social_topic": "általános vállalati említés",
+      "top_social_topics": [],
+      "social_sentiment": "neutral",
+      "latest_items": [],
+      "method_note": "Nyílt RSS és keresési alapú social signal. Nem teljes social listening, nem reprezentatív közvélemény-kutatás. A V1.2 verzió 180 napos frissességi szűrést és cégnév-kontekstus szűrést használ.",
       "errors": []
     },
     {
       "company": "Auchan",
-      "social_mentions": 198,
-      "social_index": 94,
+      "social_mentions": 18,
+      "social_index": 50,
       "social_sources": {
         "reddit": 0,
-        "youtube": 178,
-        "mastodon": 20
+        "youtube": 0,
+        "mastodon": 18
       },
-      "dominant_social_topic": "árak és akciók",
-      "social_sentiment": "positive",
-      "latest_items": [
+      "dominant_social_topic": "digitalizáció és önkiszolgálás",
+      "top_social_topics": [
         {
-          "id": "bf1297f362a2aa71",
-          "source": "youtube",
-          "company": "Auchan",
-          "title": "Auchan Magyarország - YouTube",
-          "summary": "Auchan Magyarország &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9PYWFTRm5KMmRFdUE3T0wxTHBLR2Fhb3doQkpkSWhERW5oZzlEV1I5d2tXLWtPemFCcGdpTUlkdHJNZE1hWEF6Rm96TmpUcjBnTERTbVJIRXlqSFE?oc=5",
-          "published": "Thu, 11 Dec 2014 10:37:32 GMT",
-          "query": "site:youtube.com Auchan Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "a82cf0148ce63bbd",
-          "source": "youtube",
-          "company": "Auchan",
-          "title": "Auchan nyári gumiabroncs vásár! 20% kedvezmény minden nyári gumira! - YouTube",
-          "summary": "Auchan nyári gumiabroncs vásár! 20% kedvezmény minden nyári gumira! &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9iVnNiT1phV045SW1oTFRYTjQ1NERoTU9UNUVpZmZTZVNkVlFFT1lNSm56OVhlYUFSdGxJMXFNQnRCck9zLWg3cGRCWnFBXzYyTUpteFRR?oc=5",
-          "published": "Tue, 03 Mar 2020 08:45:01 GMT",
-          "query": "site:youtube.com Auchan Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "cf452b1d4c388346",
-          "source": "youtube",
-          "company": "Auchan",
-          "title": "Auchan Magyarország, Pápai füstölt kötözött lapocka - YouTube",
-          "summary": "Auchan Magyarország, Pápai füstölt kötözött lapocka &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5acWhZeTh0aGE4eWpnc1RsSmFtc2RsMjVNREtORG9hbnFFYW5qY1N3LVJrMjJIVzNGQ1pNdHpBYUY5cGRleTNpZVRDRU90VFNhR1dlOEt3?oc=5",
-          "published": "Fri, 23 Mar 2018 20:41:56 GMT",
-          "query": "site:youtube.com Auchan Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "b4d0fcf5d7590819",
-          "source": "youtube",
-          "company": "Auchan",
-          "title": "Auchan kártya előnyök: Bizalompontok beváltása - Oney Magyarország - YouTube",
-          "summary": "Auchan kártya előnyök: Bizalompontok beváltása - Oney Magyarország &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5xcHlwek8xendYT24yVHhhT3ZuUEdLcDRkRWN0VWwwd2k1bWV1RjV6WlEzR2lhX0psVl93V0R6RUNhbTlFNUJDNHMtZm1ERlpkUEVnZUZn?oc=5",
-          "published": "Thu, 10 Jan 2019 13:07:28 GMT",
-          "query": "site:youtube.com Auchan Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "417f381dc8de1497",
-          "source": "youtube",
-          "company": "Auchan",
-          "title": "LIDL, SPAR, AUCHAN, ALDI - Vásárlás 2026.01.11. BF - YouTube",
-          "summary": "LIDL, SPAR, AUCHAN, ALDI - Vásárlás 2026.01.11. BF &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBvaHBjaTJ2ai10YUdGYkpsMFZnalAxMnhmYzJiNEJXczRwRUo5aDVwelJfeTh6TDUxTGdISDJvY29KYlVZVzRvOW51Ylc5V2F2TFlqRGV3?oc=5",
-          "published": "Tue, 20 Jan 2026 09:00:08 GMT",
-          "query": "site:youtube.com Auchan Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "92a08f443ff8866c",
-          "source": "youtube",
-          "company": "Auchan",
-          "title": "Hogyan rendelj az Auchan Online Áruházból? - YouTube",
-          "summary": "Hogyan rendelj az Auchan Online Áruházból? &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1Zc3A0UTRNVVpTaGNaMWhDZUdldW9ENDh1Tl9sb2R1dGRlUkZIRS05T1hxakwwSWVVNHd6bnpSaFoteExGeFZjdWpTaWFIOTdjRW1ic2R3?oc=5",
-          "published": "Wed, 03 Nov 2021 15:26:52 GMT",
-          "query": "site:youtube.com Auchan Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "15b950f4640679ed",
-          "source": "youtube",
-          "company": "Auchan",
-          "title": "A LEGO világa mindenkié! - Auchan Magyarország - YouTube",
-          "summary": "A LEGO világa mindenkié! - Auchan Magyarország &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE04SHJ5N0JQdGVCWGF3RjItbTl6R2ZDalE2eEdFbkU0R3AyMHFlbDBwTUV2U2xiNnFGS3U5X1pHbXlwdWxEOVNXNTJUSlhPbTF2akdnVi1n?oc=5",
-          "published": "Thu, 04 Feb 2021 12:31:38 GMT",
-          "query": "site:youtube.com Auchan Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "522503daea4ad0dc",
-          "source": "youtube",
-          "company": "Auchan",
-          "title": "Interjú Dr. Kovács Gáborral, a Semmelweis Egyetem II. számú Gyermekklinikájának igazgatójával - YouTube",
-          "summary": "Interjú Dr. Kovács Gáborral, a Semmelweis Egyetem II. számú Gyermekklinikájának igazgatójával &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5pN1k2bDNlbVpsTnJSbnpxcTBLNFFIeWtEbEROdlhDU1lRQkV6LXBXLURuS3R4cXBPVWoyaFlPUDMyNW1FZXQxZXFUNldDcWp4VHh4RmxR?oc=5",
-          "published": "Sat, 11 Dec 2021 09:00:22 GMT",
-          "query": "site:youtube.com Auchan Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "db14715d2a78e34d",
-          "source": "youtube",
-          "company": "Auchan",
-          "title": "Auchan - Akciós újság Szupermarket 12.04. - 12.10. - YouTube",
-          "summary": "Auchan - Akciós újság Szupermarket 12.04. - 12.10. &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9XYlM2UGUyeXdSaXdlaFJLb1l3WDh1MUpMZ2FpU2JWaUhmRWNMZUUyR05BZW9oX18tendNT2FmY1RFVXZQOEZCdkplRlZPaVpfMF9HbS1B?oc=5",
-          "published": "Mon, 01 Dec 2025 21:48:02 GMT",
-          "query": "site:youtube.com Auchan Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "207e1fc2325010df",
-          "source": "youtube",
-          "company": "Auchan",
-          "title": "Megnyílt az első okosbolt Magyarországon! VG Exkluzív - YouTube",
-          "summary": "Megnyílt az első okosbolt Magyarországon! VG Exkluzív &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE4wRWV2RzZId1FlWFJ3ZU5oY3JDWHNCd1E2UmFrX25FWWhXS1p3bWVYbGZaSkQ3ZnBNQ1BhU3FUM1FfQzJwQm93RVJXVmFabkNSWWlwWXV3?oc=5",
-          "published": "Sat, 12 Apr 2025 14:01:13 GMT",
-          "query": "site:youtube.com Auchan Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "d52901547b30b879",
-          "source": "youtube",
-          "company": "Auchan",
-          "title": "EXTRA Hosszú rész-SOK VÁSÁRLÁS/Lidl,Auchan,Rossmann,Aldi,Vinted,Cosibella Unboxing+NyJ Lezárva - YouTube",
-          "summary": "EXTRA Hosszú rész-SOK VÁSÁRLÁS/Lidl,Auchan,Rossmann,Aldi,Vinted,Cosibella Unboxing+NyJ Lezárva &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE4yZFRNY1E0NGpjUlZWWWtxNENkS09HUDlaM2xVSy1ubVhQTXA1cllqY1dhLUZ1WEYzT3RxQ1VxOTNmYWlrZEh1Y3JQOWI3enFoWl9fM3VB?oc=5",
-          "published": "Wed, 29 May 2024 07:00:05 GMT",
-          "query": "site:youtube.com Auchan Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "aeb8a2bbaf90d978",
-          "source": "youtube",
-          "company": "Auchan",
-          "title": "Dreher 4.0 - YouTube",
-          "summary": "Dreher 4.0 &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1yTGtTT2ZvQXprc1FGVVRQanlTNk1sY28yY3ZfMlNScDc1UGRTWk54WThPX2pnaC1wVU5TdEcwdnBYbEJrdUtKWUtHR2F4b0xJZ2h3TFhB?oc=5",
-          "published": "Thu, 04 Apr 2024 09:54:22 GMT",
-          "query": "site:youtube.com Auchan Hungary review OR panasz OR akció OR vásárlás"
+          "topic": "digitalizáció és önkiszolgálás",
+          "score": 2
         }
       ],
-      "method_note": "Nyílt RSS és keresési alapú social signal. Nem teljes social listening, nem reprezentatív közvélemény-kutatás.",
+      "social_sentiment": "neutral",
+      "latest_items": [
+        {
+          "id": "234e73010841c081",
+          "source": "mastodon",
+          "company": "Auchan",
+          "title": "",
+          "summary": "Le monde change… pour ceux qui avaient raté l'info : Après 64 ans, les supermarchés # Auchan vont fermer : voici ce qu’ils deviendront https://www. presse-citron.net/apres-64-ans -les-supermarches-auchan-vont-fermer-voici-ce-quils-deviendront/ Le distributeur a annoncé ce tournant historique le mardi 25 novembre 2025. Les grandes enseignes possédées par la famille # Mulliez : # Cultura , # Kiabi , # Decathlon … ont contribué a vider les rayons non-alimentaires de ces trop grandes surfaces frança",
+          "url": "https://piaille.fr/@siltaer/116454117364838085",
+          "published": "Thu, 23 Apr 2026 12:53:32 +0000",
+          "query": "#auchan"
+        },
+        {
+          "id": "dbd5af942913f853",
+          "source": "mastodon",
+          "company": "Auchan",
+          "title": "",
+          "summary": "Très sympa les libres services de viennoiseries en hypermarchés. Pratique pour limiter les boites en plastique pré-remplies. Seul bémol les gosses qui se servent à la main, tâtent la marchandise et choisissent de préférence ceux du fond en laissant trainer leurs main non lavées, pulls ou blousons partout. En terme d'hygiène c'est quand même pas la meilleure idée du siècle... mais bon, ça évite du personnel, alors laissons les gens bénéficier des germes, microbes et autres saloperies d'inconnus s",
+          "url": "https://tech.lgbt/@pprem/116329417380876415",
+          "published": "Wed, 01 Apr 2026 12:20:41 +0000",
+          "query": "#auchan"
+        },
+        {
+          "id": "89bf8461e67a24d9",
+          "source": "mastodon",
+          "company": "Auchan",
+          "title": "",
+          "summary": "J'ai la rage intersidérale putain ! On vient de me # voler mon # vélo # Luxembourg # Auchanclochedor # clochedor # auchan 21/03/26 entre 11h50 et 13h30 # velovole",
+          "url": "https://masto.bike/@bisounours/116267430477535768",
+          "published": "Sat, 21 Mar 2026 13:36:36 +0000",
+          "query": "#auchan"
+        },
+        {
+          "id": "6e77440bdc6c6f11",
+          "source": "mastodon",
+          "company": "Auchan",
+          "title": "",
+          "summary": "Cette semaine sur Oxytude, retour sur les lunettes # MetaRayBan et l'actu nouvelles techno et Accessibilité. # Includdy # Gemini # AccessibleGram # Captcha # Chromium # BeMyEyes # AppSuite # LiveLoop # aCapture # Youtube # Audible # Afflelou # MagicConnect # Auchan https://www. oxytude.org",
+          "url": "https://mastodon.social/@oxytude/116194980128969599",
+          "published": "Sun, 08 Mar 2026 18:31:31 +0000",
+          "query": "#auchan"
+        },
+        {
+          "id": "e396eea1924a014e",
+          "source": "mastodon",
+          "company": "Auchan",
+          "title": "",
+          "summary": "Ah, j'avais oublié cette photo prise chez Auchan, à Luxembourg ville, le week-end dernier ! C'est un bout de l'écran d'une caisse enregistreuse. Coucou Suse ! C'est rare de croiser cette distribution ! # suse # auchan # caisse",
+          "url": "https://diaspodon.fr/@dada/116131570975313288",
+          "published": "Wed, 25 Feb 2026 13:45:45 +0000",
+          "query": "#auchan"
+        },
+        {
+          "id": "63767771d15285e3",
+          "source": "mastodon",
+          "company": "Auchan",
+          "title": "",
+          "summary": "Signé ! ✍️ https://www. l214.com/enquetes/2026/cailles -carrefour/ # L214 @ l214.com # cruauteenverslesanimaux # auchan # supermarches # france # animaux # ElevageIndustriel # elevageintensif # QualiteAuchan # FilièreQualitéAuchan",
+          "url": "https://mastodon.social/@SamLeLuxo/116098295193515872",
+          "published": "Thu, 19 Feb 2026 16:43:16 +0000",
+          "query": "#auchan"
+        },
+        {
+          "id": "f2ac553571d35aec",
+          "source": "mastodon",
+          "company": "Auchan",
+          "title": "",
+          "summary": "7 supermarchés sur 10 (70%) vendent toujours des # oeufs catégorie n°3 = élevage enfermées h24 dans des cages sans lumières du jour ni accès à l'extérieur. Ils l'avaient promis pour # year2026 # auchan # intermarche # carrefour # u # leadle # leclerc # commerce # economie # consommation",
+          "url": "https://mastodon.social/@cobrate/116091479319281626",
+          "published": "Wed, 18 Feb 2026 11:49:54 +0000",
+          "query": "#auchan"
+        },
+        {
+          "id": "6dd808ef19d8b88e",
+          "source": "mastodon",
+          "company": "Auchan",
+          "title": "",
+          "summary": "# Auchan Complice du # Genocide https://www. youtube.com/shorts/bynLPOxGWk0",
+          "url": "https://mastodon.social/@InternetDev/116087526825183276",
+          "published": "Tue, 17 Feb 2026 19:04:44 +0000",
+          "query": "#auchan"
+        },
+        {
+          "id": "c1054a0931a93770",
+          "source": "mastodon",
+          "company": "Auchan",
+          "title": "",
+          "summary": "# politique # auchan # cnews # islamophobie # racisme post de @ slpng_giants_fr",
+          "url": "https://mastodon.social/@les_croquettes_du_chat/116086714843985440",
+          "published": "Tue, 17 Feb 2026 15:38:14 +0000",
+          "query": "#auchan"
+        },
+        {
+          "id": "09e8c830d91d7c06",
+          "source": "mastodon",
+          "company": "Auchan",
+          "title": "",
+          "summary": "encomenda #auchan , chega metade, mas fazem pagar-se de tudo, confirmam que se esqueceram, voltam à hora errada, queixam-se que não está ninguém, ficam de voltar mais tarde, não o fazem. ligamos para apoio ao cliente e ninguém atende.",
+          "url": "https://fed.brid.gy/r/https://bsky.app/profile/did:plc:65neilruzq2tnxdqcupghsov/post/3mem7osxfw22m",
+          "published": "Wed, 11 Feb 2026 19:31:01 +0000",
+          "query": "#auchan"
+        },
+        {
+          "id": "7407f36332931e93",
+          "source": "mastodon",
+          "company": "Auchan",
+          "title": "",
+          "summary": "RT: @VilledieuFabien 📍Les joies des Partenariats Publics Privés...274 millions en pure perte pour le service public, mais en vrai bénéfices pour la société privée # Auchan",
+          "url": "https://mastox.eu/@Portes_Thomas/116045517577415344",
+          "published": "Tue, 10 Feb 2026 09:01:14 +0000",
+          "query": "#auchan"
+        },
+        {
+          "id": "d60c9c111d36afae",
+          "source": "mastodon",
+          "company": "Auchan",
+          "title": "",
+          "summary": "La «saga» # Mulliez et le journalisme béat Le patriarche de la famille Mulliez – Gérard https:// fr.wikipedia.org/wiki/G%C3%A9r ard_Mulliez 94 ans, héritier d’une famille d’industriels roubaisiens du textile, fondateur du groupe # Auchan –, n’a pas besoin de posséder un groupe de # presse pour que la parution de sa biographie soit un «événement» médiatique. Complaisance partout, journalisme (presque) nulle part : la peopolisation des grands industriels bat son plein. https://www. acrimed.org/La-",
+          "url": "https://mastodon.social/@la_voix/116042708987401021",
+          "published": "Mon, 09 Feb 2026 21:06:58 +0000",
+          "query": "#auchan"
+        }
+      ],
+      "method_note": "Nyílt RSS és keresési alapú social signal. Nem teljes social listening, nem reprezentatív közvélemény-kutatás. A V1.2 verzió 180 napos frissességi szűrést és cégnév-kontekstus szűrést használ.",
       "errors": []
     },
     {
       "company": "CBA",
-      "social_mentions": 67,
-      "social_index": 100,
+      "social_mentions": 2,
+      "social_index": 20,
       "social_sources": {
-        "reddit": 1,
-        "youtube": 46,
-        "mastodon": 20
+        "reddit": 0,
+        "youtube": 2,
+        "mastodon": 0
       },
       "dominant_social_topic": "árak és akciók",
-      "social_sentiment": "mixed",
-      "latest_items": [
+      "top_social_topics": [
         {
-          "id": "5c3de68a9d8a2605",
-          "source": "reddit",
-          "company": "CBA",
-          "title": "[CK2] Helping allies",
-          "summary": "I'm allied with Italy and Hungary and it feels like every 5 mins they're in a war or have a revolt and I cba to help every single time so is there any specific gain I get from helping? as I've started just accepting the call to arms then sending nobody instead of rejecting and losing prestige &#32; submitted by &#32; /u/Jolixus &#32; to &#32; r/CrusaderKings [link] &#32; [comments]",
-          "url": "https://www.reddit.com/r/CrusaderKings/comments/1twuthk/ck2_helping_allies/",
-          "published": "2026-06-04T17:41:12+00:00",
-          "query": "CBA Hungary"
-        },
-        {
-          "id": "3d78c25459ed47c0",
-          "source": "youtube",
-          "company": "CBA",
-          "title": "CBA Tag Dormi - YouTube",
-          "summary": "CBA Tag Dormi &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9Zd1I1YV9zcmlXRTBpbmVobXZTa0hjUjczRUxibEFOSFJOeVpLYjRDendhZjI4WTBVczN5TFlNX2JmQlBUNE81TTBPQ3pDN2gyblRvOFd3?oc=5",
-          "published": "Mon, 04 May 2015 06:29:35 GMT",
-          "query": "site:youtube.com CBA Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "0e7a865833834fd3",
-          "source": "youtube",
-          "company": "CBA",
-          "title": "Kasszás Erzsi - Karácsonyi tippek - YouTube",
-          "summary": "Kasszás Erzsi - Karácsonyi tippek &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5acjd1SndhTTJDMFZubmlBRzFLT2l3WF9tVUM3MkdLYU1ZU25xU0xscnpRWXc4amN1dkVwRjJ0ZVU5Q0ZpZHZmN2xJWW9ESnNqWERTWGdn?oc=5",
-          "published": "Tue, 19 Dec 2017 10:00:01 GMT",
-          "query": "site:youtube.com CBA Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "b53e147aa897894b",
-          "source": "youtube",
-          "company": "CBA",
-          "title": "Martini, Irix, Nivea, Somersyby, TicTac, Persil, CBA reklám (2025.06.05) | Reklámgyűjtő - YouTube",
-          "summary": "Martini, Irix, Nivea, Somersyby, TicTac, Persil, CBA reklám (2025.06.05) | Reklámgyűjtő &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1TYl93YUxETzVVTDhUTkZPNEJVcUo3OXEya0oyWDhjazJEeHhUVnhjSnN6eUFLdTlNVFFVOHZGcjF4aVNiRTNKdDZMODZiTEg5V2hLcmpB?oc=5",
-          "published": "Sat, 05 Jul 2025 03:00:48 GMT",
-          "query": "site:youtube.com CBA Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "b870add2f4c00a71",
-          "source": "youtube",
-          "company": "CBA",
-          "title": "Delimano Stone Legend Pro konyhai edények - YouTube",
-          "summary": "Delimano Stone Legend Pro konyhai edények &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBJVjZGWDBzLWo3RTFoVVVVaU93bnZubDY1UTlhcjlOTWdJbi1jVWp5X0hKR0hEMnNlTFFGSlNrT1BFQ0RSbGZ4TXZtQXQzY2ZwWC1reGRB?oc=5",
-          "published": "Wed, 15 Apr 2020 06:46:30 GMT",
-          "query": "site:youtube.com CBA Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "1bb31046c6148a84",
-          "source": "youtube",
-          "company": "CBA",
-          "title": "KIKOZA termékek akár 66%* kedvezménnyel - YouTube",
-          "summary": "KIKOZA termékek akár 66%* kedvezménnyel &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9xd0hsLVg0dk45b3h5Sm1iZEV3b2lrNHR3MU0xRE9ZTVpheDZLZkl5cDV6c3dpRlhvT2xVcEI1Ykl2SU42NGltZDZNb3c1enpkU0gtZGpn?oc=5",
-          "published": "Mon, 08 Sep 2025 09:35:13 GMT",
-          "query": "site:youtube.com CBA Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "c707b18963439159",
-          "source": "youtube",
-          "company": "CBA",
-          "title": "ANALOG BALATON — A közös nappali eufóriája | MalterNatív × Budaörs Fesztivál - YouTube",
-          "summary": "ANALOG BALATON — A közös nappali eufóriája | MalterNatív × Budaörs Fesztivál &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1UTXdKbThpYnM0Rng4S1RMM2VUMDhvV2FBT1RtUFhPS3JwV24wSXBUTHQ2WmlBM3gzUUVHUXBtcHRWMWlXcXNtTzBfT1JTNkxyelg4OXpn?oc=5",
-          "published": "Fri, 29 May 2026 16:00:06 GMT",
-          "query": "site:youtube.com CBA Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "28a382f763116e19",
-          "source": "youtube",
-          "company": "CBA",
-          "title": "Egy heti vásárlás/Élelmiszer-Non-food és Vegyiáru/Online rendelések/ - YouTube",
-          "summary": "Egy heti vásárlás/Élelmiszer-Non-food és Vegyiáru/Online rendelések/ &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE92clpoNGE4WWtBRF9PSGFod09oZlMyZHBrbmZDSVc5M3QxaWN1T3NuSDRKTVpUNlUtMk9mLUJkZEczTWxHbTUwZlJZUUMyTWxBV2ExYThR?oc=5",
-          "published": "Wed, 22 Feb 2023 11:00:23 GMT",
-          "query": "site:youtube.com CBA Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "b7d04f7ec20c93bb",
-          "source": "youtube",
-          "company": "CBA",
-          "title": "LIDL Nagy Bevásárlás /2022 november/ - YouTube",
-          "summary": "LIDL Nagy Bevásárlás /2022 november/ &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9tM2VUUXlCMmhvTFR2YzFBRklabWtqeERHWXIxR0JjbkdWMnJ2R2xKdVdySktMSGJ4bEJlS1ZyVHpzaTRham5zZG5CRmdNUVZ5YnNwTDlR?oc=5",
-          "published": "Fri, 25 Nov 2022 12:15:07 GMT",
-          "query": "site:youtube.com CBA Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "336030ebe41e2051",
-          "source": "youtube",
-          "company": "CBA",
-          "title": "Szorgos plüsspajtik - PENNY - YouTube",
-          "summary": "Szorgos plüsspajtik - PENNY &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9NWkdxemFGdDkzR1Ryb05NcVRienRxSzJ6d19HV29GdnpnZ2dqbG1nVWZIUFVTX0ZpdERqWnF1Vm5XSDcta3V0ZDR2eklLMjhvRUYybVZR?oc=5",
-          "published": "Tue, 23 Feb 2021 06:42:37 GMT",
-          "query": "site:youtube.com CBA Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "fd1d120d2598af42",
-          "source": "youtube",
-          "company": "CBA",
-          "title": "Magyarország legrosszabb sörei - YouTube",
-          "summary": "Magyarország legrosszabb sörei &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9icjNnNnlWSFpPbjFBSXY1NW91djlrQXJDOXlGZXd0YzltRHhBZlk3TXhFR0FnUG0xeXlZZjh4eHpJZzY3dVpONWNIM3VfeGF2MHNNZ0dn?oc=5",
-          "published": "Mon, 23 Oct 2017 14:37:12 GMT",
-          "query": "site:youtube.com CBA Hungary review OR panasz OR akció OR vásárlás"
-        },
-        {
-          "id": "7b8e1f82db37d525",
-          "source": "youtube",
-          "company": "CBA",
-          "title": "Lopakodók 2. - YouTube",
-          "summary": "Lopakodók 2. &nbsp;&nbsp; YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE14VFFqRU9uWFF5NG94OWZMTDM0MnY4bkR3c2o1SFdjTXcxZXdlcTZ3RzRMNEpZTWJlWDI5R2psLVZiSEJXYUtFT2kwRFM2dVp1ZWxWV2RR?oc=5",
-          "published": "Mon, 28 Sep 2015 08:55:28 GMT",
-          "query": "site:youtube.com CBA Hungary review OR panasz OR akció OR vásárlás"
+          "topic": "árak és akciók",
+          "score": 2
         }
       ],
-      "method_note": "Nyílt RSS és keresési alapú social signal. Nem teljes social listening, nem reprezentatív közvélemény-kutatás.",
+      "social_sentiment": "neutral",
+      "latest_items": [
+        {
+          "id": "fbd381886ee81a57",
+          "source": "youtube",
+          "company": "CBA",
+          "title": "CBA Príma akciós újság 03.26. - 04.04. - YouTube",
+          "summary": "CBA Príma akciós újság 03.26. - 04.04. YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9mdzc2X1BrQmU1N3dDRHIxLVJjZ3BqampfemF1SlVvRkpzNjNwZ3N6Qm5iVVlfbERtaWhlSnllRHlBVnNpeW96cUVwQ09yQ2Exbk94dExB?oc=5",
+          "published": "Thu, 26 Mar 2026 13:22:56 GMT",
+          "query": "site:youtube.com \"CBA Príma\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)"
+        },
+        {
+          "id": "c9d79b1cdf7f0181",
+          "source": "youtube",
+          "company": "CBA",
+          "title": "CBA Príma akciós újság 03.19. - 03.25. - YouTube",
+          "summary": "CBA Príma akciós újság 03.19. - 03.25. YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5pMmtUU1V3MVFQMElKQ0ltVWxVLTRKTFBuMk1zd3RrZkc1emZxY2pORF9GSm51dGtYM1hlWC1scDM3UGJIaGI5SXpRS2g5cG03ZVJ6WXVB?oc=5",
+          "published": "Mon, 16 Mar 2026 12:43:34 GMT",
+          "query": "site:youtube.com \"CBA Príma\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)"
+        }
+      ],
+      "method_note": "Nyílt RSS és keresési alapú social signal. Nem teljes social listening, nem reprezentatív közvélemény-kutatás. A V1.2 verzió 180 napos frissességi szűrést és cégnév-kontekstus szűrést használ.",
       "errors": []
     }
   ]

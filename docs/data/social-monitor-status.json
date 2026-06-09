@@ -1,54 +1,55 @@
 {
-  "updated_at": "2026-06-09T07:15:27.164598+00:00",
+  "updated_at": "2026-06-09T07:20:39.947097+00:00",
   "status": "ok",
+  "version": "social-signal-layer-v1.2",
   "companies": [
     {
       "company": "Lidl",
-      "mentions": 245,
-      "index": 100,
+      "mentions": 29,
+      "index": 65,
       "sources": {
-        "reddit": 12,
-        "youtube": 213,
-        "mastodon": 20
+        "reddit": 7,
+        "youtube": 4,
+        "mastodon": 18
       },
-      "sentiment": "positive",
+      "sentiment": "negative",
       "topic": "árak és akciók",
       "errors": []
     },
     {
       "company": "SPAR",
-      "mentions": 197,
-      "index": 100,
+      "mentions": 28,
+      "index": 58,
       "sources": {
-        "reddit": 1,
-        "youtube": 175,
-        "mastodon": 21
+        "reddit": 0,
+        "youtube": 8,
+        "mastodon": 20
       },
-      "sentiment": "positive",
-      "topic": "árak és akciók",
+      "sentiment": "mixed",
+      "topic": "bolti élmény",
       "errors": []
     },
     {
       "company": "Tesco",
-      "mentions": 221,
-      "index": 100,
+      "mentions": 11,
+      "index": 40,
       "sources": {
-        "reddit": 1,
-        "youtube": 200,
-        "mastodon": 20
+        "reddit": 0,
+        "youtube": 0,
+        "mastodon": 11
       },
-      "sentiment": "mixed",
-      "topic": "árak és akciók",
+      "sentiment": "negative",
+      "topic": "bolti élmény",
       "errors": []
     },
     {
       "company": "ALDI",
-      "mentions": 235,
-      "index": 100,
+      "mentions": 23,
+      "index": 55,
       "sources": {
-        "reddit": 7,
-        "youtube": 208,
-        "mastodon": 20
+        "reddit": 6,
+        "youtube": 0,
+        "mastodon": 17
       },
       "sentiment": "positive",
       "topic": "árak és akciók",
@@ -56,40 +57,40 @@
     },
     {
       "company": "Penny",
-      "mentions": 246,
-      "index": 100,
+      "mentions": 0,
+      "index": 0,
       "sources": {
-        "reddit": 10,
-        "youtube": 216,
-        "mastodon": 20
+        "reddit": 0,
+        "youtube": 0,
+        "mastodon": 0
       },
-      "sentiment": "positive",
-      "topic": "árak és akciók",
+      "sentiment": "neutral",
+      "topic": "általános vállalati említés",
       "errors": []
     },
     {
       "company": "Auchan",
-      "mentions": 198,
-      "index": 94,
+      "mentions": 18,
+      "index": 50,
       "sources": {
         "reddit": 0,
-        "youtube": 178,
-        "mastodon": 20
+        "youtube": 0,
+        "mastodon": 18
       },
-      "sentiment": "positive",
-      "topic": "árak és akciók",
+      "sentiment": "neutral",
+      "topic": "digitalizáció és önkiszolgálás",
       "errors": []
     },
     {
       "company": "CBA",
-      "mentions": 67,
-      "index": 100,
+      "mentions": 2,
+      "index": 20,
       "sources": {
-        "reddit": 1,
-        "youtube": 46,
-        "mastodon": 20
+        "reddit": 0,
+        "youtube": 2,
+        "mastodon": 0
       },
-      "sentiment": "mixed",
+      "sentiment": "neutral",
       "topic": "árak és akciók",
       "errors": []
     }
@@ -99,5 +100,10 @@
     "youtube_discovery_google_news_rss",
     "mastodon_tag_rss"
   ],
-  "method_note": "Első verziós Social Signal Layer. Óvatos, nyílt forrású jelzőrendszer."
+  "filters": {
+    "max_item_age_days": 180,
+    "max_items_per_source_per_company": 40,
+    "company_context_filter": true
+  },
+  "method_note": "Social Signal Layer V1.2. Óvatos, nyílt forrású jelzőrendszer frissességi és relevanciaszűréssel."
 }
