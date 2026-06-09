@@ -18,11 +18,37 @@ DATA_DIR = ROOT / "docs" / "data"
 
 OUT_FILE = DATA_DIR / "social-monitor.json"
 STATUS_FILE = DATA_DIR / "social-monitor-status.json"
-
+HISTORY_FILE = DATA_DIR / "social-history-2026.json"
 
 MAX_ITEM_AGE_DAYS = 180
 MAX_ITEMS_PER_SOURCE_PER_COMPANY = 40
 FETCH_SLEEP = 0.6
+
+
+HU_RELEVANCE_TERMS = [
+    "magyarország",
+    "magyarorszag",
+    "hungary",
+    "hungarian",
+    "budapest",
+    "budaörs",
+    "budaors",
+    "monor",
+    "forint",
+    "huf",
+    "ft",
+    "akciós újság",
+    "akcios ujsag",
+    "lidl magyarország",
+    "spar magyarország",
+    "tesco magyarország",
+    "aldi magyarország",
+    "auchan magyarország",
+    "penny magyarország",
+    "penny market magyarország",
+    "cba príma",
+    "cba prima"
+]
 
 
 COMPANIES = [
@@ -83,9 +109,10 @@ COMPANIES = [
         ],
         "required_terms": ["penny market", "penny"],
         "context_terms": [
-            "market", "magyarország", "hungary", "áruház", "bolt",
-            "üzlet", "akció", "panasz", "bevásárlás", "supermarket",
-            "retail", "élelmiszer"
+            "market", "magyarország", "magyarorszag", "hungary", "áruház",
+            "aruhaz", "bolt", "üzlet", "uzlet", "akció", "akcio",
+            "panasz", "bevásárlás", "bevasarlas", "supermarket",
+            "retail", "élelmiszer", "elelmiszer"
         ],
         "mastodon_tags": ["pennymarket", "pennymagyarorszag"]
     },
@@ -112,8 +139,9 @@ COMPANIES = [
         ],
         "required_terms": ["cba", "príma", "prima"],
         "context_terms": [
-            "élelmiszer", "bolt", "üzlet", "áruház", "akció",
-            "panasz", "bevásárlás", "retail", "supermarket"
+            "élelmiszer", "elelmiszer", "bolt", "üzlet", "uzlet",
+            "áruház", "aruhaz", "akció", "akcio", "panasz",
+            "bevásárlás", "bevasarlas", "retail", "supermarket"
         ],
         "mastodon_tags": ["cba", "cbaprima"]
     }
@@ -122,7 +150,7 @@ COMPANIES = [
 
 TOPIC_KEYWORDS = {
     "árak és akciók": [
-        "ár", "árak", "drága", "olcsó", "akció", "kedvezmény",
+        "ár", "árak", "drága", "olcsó", "akció", "akcio", "kedvezmény",
         "kupon", "infláció", "price", "discount", "sale", "offer"
     ],
     "vásárlói panaszok": [
@@ -130,34 +158,44 @@ TOPIC_KEYWORDS = {
         "complaint", "problem", "issue", "bad", "scam", "kritika"
     ],
     "bolti élmény": [
-        "bolt", "üzlet", "sor", "kassza", "parkoló", "eladó",
-        "store", "shop", "queue", "cashier", "experience"
+        "bolt", "üzlet", "uzlet", "sor", "kassza", "parkoló", "parkolo",
+        "eladó", "elado", "store", "shop", "queue", "cashier", "experience"
     ],
     "munkaerő és foglalkoztatás": [
-        "munka", "állás", "dolgozó", "fizetés", "bér", "munkavállaló",
-        "job", "salary", "employee", "worker", "staff"
+        "munka", "állás", "allas", "dolgozó", "dolgozo", "fizetés",
+        "ber", "bér", "munkavállaló", "job", "salary", "employee",
+        "worker", "staff", "vacature"
     ],
     "termék és minőség": [
-        "termék", "minőség", "friss", "lejárt", "romlott", "élelmiszer",
-        "product", "quality", "fresh", "expired", "food"
+        "termék", "termek", "minőség", "minoseg", "friss", "lejárt",
+        "lejart", "romlott", "élelmiszer", "product", "quality",
+        "fresh", "expired", "food", "recall", "visszahívás"
     ],
     "digitalizáció és önkiszolgálás": [
-        "scan", "scan&go", "scan go", "önkiszolgáló", "app", "alkalmazás",
-        "online", "mobil", "self-checkout", "self checkout"
+        "scan", "scan&go", "scan go", "önkiszolgáló", "onkiszolgalo",
+        "app", "alkalmazás", "online", "mobil", "self-checkout",
+        "self checkout", "wifi", "wi-fi"
+    ],
+    "ellátási lánc és logisztika": [
+        "logisztika", "szállítás", "szallitas", "ellátási lánc",
+        "supply chain", "shipping", "container", "reederei",
+        "teherautó", "truck", "diesel", "elektromos"
     ]
 }
 
 
 POSITIVE_WORDS = [
-    "jó", "kiváló", "szeretem", "kedvező", "olcsó", "gyors",
-    "hasznos", "elégedett", "good", "great", "excellent",
-    "love", "cheap", "nice", "useful"
+    "jó", "jo", "kiváló", "kivalo", "szeretem", "kedvező", "kedvezo",
+    "olcsó", "olcso", "gyors", "hasznos", "elégedett",
+    "good", "great", "excellent", "love", "cheap", "nice", "useful"
 ]
 
 NEGATIVE_WORDS = [
-    "rossz", "drága", "panasz", "hiba", "botrány", "lejárt", "romlott",
-    "lassú", "probléma", "bad", "expensive", "complaint", "problem",
-    "issue", "scam", "poor", "slow"
+    "rossz", "drága", "draga", "panasz", "hiba", "botrány",
+    "botrany", "lejárt", "lejart", "romlott", "lassú", "lassu",
+    "probléma", "problema", "bad", "expensive", "complaint",
+    "problem", "issue", "scam", "poor", "slow", "warning",
+    "recall", "outage", "closed"
 ]
 
 
@@ -176,6 +214,7 @@ def clean_text(value):
     value = re.sub(r"<[^>]+>", " ", value)
     value = value.replace("&nbsp;", " ")
     value = value.replace("&amp;", "&")
+    value = value.replace("&#32;", " ")
     value = re.sub(r"\s+", " ", value)
     return value.strip()
 
@@ -243,6 +282,18 @@ def mastodon_tag_rss(tag):
     return f"https://mastodon.social/tags/{urllib.parse.quote(tag)}.rss"
 
 
+def detect_hu_relevance(title, summary, link, query):
+    text = normalize(f"{title} {summary} {link} {query}")
+
+    if any(term.lower() in text for term in HU_RELEVANCE_TERMS):
+        return 1.0
+
+    if ".hu" in text or "/hu/" in text:
+        return 0.8
+
+    return 0.25
+
+
 def passes_company_filter(company, title, summary, link):
     text = normalize(f"{title} {summary} {link}")
 
@@ -260,6 +311,8 @@ def passes_company_filter(company, title, summary, link):
 
 
 def make_item(source, company, title, summary, link, published, query):
+    relevance = detect_hu_relevance(title, summary, link, query)
+
     return {
         "id": item_id(source, title, link),
         "source": source,
@@ -268,7 +321,8 @@ def make_item(source, company, title, summary, link, published, query):
         "summary": clean_text(summary)[:500],
         "url": link,
         "published": published or "",
-        "query": query
+        "query": query,
+        "hu_relevance": relevance
     }
 
 
@@ -293,9 +347,7 @@ def collect_reddit(company):
             if not passes_company_filter(company, title, summary, link):
                 continue
 
-            items.append(
-                make_item("reddit", company, title, summary, link, published, query)
-            )
+            items.append(make_item("reddit", company, title, summary, link, published, query))
 
             if len(items) >= MAX_ITEMS_PER_SOURCE_PER_COMPANY:
                 return items
@@ -331,9 +383,7 @@ def collect_youtube_discovery(company):
             if not passes_company_filter(company, title, summary, link):
                 continue
 
-            items.append(
-                make_item("youtube", company, title, summary, link, published, yt_query)
-            )
+            items.append(make_item("youtube", company, title, summary, link, published, yt_query))
 
             if len(items) >= MAX_ITEMS_PER_SOURCE_PER_COMPANY:
                 return items
@@ -362,9 +412,7 @@ def collect_mastodon(company):
             if not passes_company_filter(company, title, summary, link):
                 continue
 
-            items.append(
-                make_item("mastodon", company, title, summary, link, published, f"#{tag}")
-            )
+            items.append(make_item("mastodon", company, title, summary, link, published, f"#{tag}"))
 
             if len(items) >= MAX_ITEMS_PER_SOURCE_PER_COMPANY:
                 return items
@@ -380,7 +428,6 @@ def deduplicate(items):
         key = item.get("id")
         if key in seen:
             continue
-
         seen.add(key)
         result.append(item)
 
@@ -388,20 +435,24 @@ def deduplicate(items):
 
 
 def score_topics(items):
-    scores = {topic: 0 for topic in TOPIC_KEYWORDS}
+    scores = {topic: 0.0 for topic in TOPIC_KEYWORDS}
 
     for item in items:
         text = normalize(f'{item.get("title", "")} {item.get("summary", "")}')
+        relevance = float(item.get("hu_relevance", 0.25))
 
         for topic, words in TOPIC_KEYWORDS.items():
             for word in words:
                 if word.lower() in text:
-                    scores[topic] += 1
+                    scores[topic] += relevance
 
     ranked = sorted(scores.items(), key=lambda x: x[1], reverse=True)
 
     top_topics = [
-        {"topic": topic, "score": score}
+        {
+            "topic": topic,
+            "score": round(score, 2)
+        }
         for topic, score in ranked
         if score > 0
     ]
@@ -419,19 +470,20 @@ def detect_topic(items):
 
 
 def detect_sentiment(items):
-    pos = 0
-    neg = 0
+    pos = 0.0
+    neg = 0.0
 
     for item in items:
         text = normalize(f'{item.get("title", "")} {item.get("summary", "")}')
+        relevance = float(item.get("hu_relevance", 0.25))
 
         for word in POSITIVE_WORDS:
             if word in text:
-                pos += 1
+                pos += relevance
 
         for word in NEGATIVE_WORDS:
             if word in text:
-                neg += 1
+                neg += relevance
 
     if pos == 0 and neg == 0:
         return "neutral"
@@ -445,33 +497,29 @@ def detect_sentiment(items):
     return "mixed"
 
 
-def calculate_social_index(total_mentions, sources_count, sentiment):
-    """
-    Social Signal Index V1.2
+def calculate_weighted_mentions(items):
+    return round(sum(float(item.get("hu_relevance", 0.25)) for item in items), 2)
 
-    Ez nem reputációs pontszám.
-    Ez óvatos intenzitási jelző:
-    - friss említések száma
-    - aktív források száma
-    - negatív aktivitás enyhe kockázati felára
-    """
 
-    if total_mentions <= 0:
+def calculate_social_index(weighted_mentions, sources_count, sentiment):
+    if weighted_mentions <= 0:
         base = 0
-    elif total_mentions <= 5:
-        base = 15
-    elif total_mentions <= 15:
-        base = 30
-    elif total_mentions <= 30:
-        base = 45
-    elif total_mentions <= 60:
-        base = 60
-    elif total_mentions <= 100:
-        base = 75
+    elif weighted_mentions <= 3:
+        base = 12
+    elif weighted_mentions <= 8:
+        base = 25
+    elif weighted_mentions <= 15:
+        base = 40
+    elif weighted_mentions <= 30:
+        base = 55
+    elif weighted_mentions <= 50:
+        base = 70
+    elif weighted_mentions <= 80:
+        base = 82
     else:
-        base = 85
+        base = 90
 
-    diversity_bonus = min(sources_count * 5, 15)
+    diversity_bonus = min(sources_count * 4, 12)
 
     sentiment_bonus = 0
     if sentiment == "negative":
@@ -516,13 +564,18 @@ def build_company_result(company):
 
     active_sources = sum(1 for value in source_counts.values() if value > 0)
     mentions = len(all_items)
+    weighted_mentions = calculate_weighted_mentions(all_items)
+    hu_mentions = sum(1 for item in all_items if float(item.get("hu_relevance", 0.25)) >= 0.8)
+
     sentiment = detect_sentiment(all_items)
     top_topics = score_topics(all_items)
 
     return {
         "company": company["company"],
         "social_mentions": mentions,
-        "social_index": calculate_social_index(mentions, active_sources, sentiment),
+        "weighted_social_mentions": weighted_mentions,
+        "hu_relevant_mentions": hu_mentions,
+        "social_index": calculate_social_index(weighted_mentions, active_sources, sentiment),
         "social_sources": source_counts,
         "dominant_social_topic": detect_topic(all_items),
         "top_social_topics": top_topics,
@@ -531,10 +584,61 @@ def build_company_result(company):
         "method_note": (
             "Nyílt RSS és keresési alapú social signal. "
             "Nem teljes social listening, nem reprezentatív közvélemény-kutatás. "
-            "A V1.2 verzió 180 napos frissességi szűrést és cégnév-kontekstus szűrést használ."
+            "A V1.3 verzió magyar relevancia súlyozást és történeti mentést használ."
         ),
         "errors": errors
     }
+
+
+def load_history():
+    if not HISTORY_FILE.exists():
+        return {
+            "version": "social-history-v1",
+            "scope": "Hungarian FMCG retail chains",
+            "items": []
+        }
+
+    try:
+        return json.loads(HISTORY_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        return {
+            "version": "social-history-v1",
+            "scope": "Hungarian FMCG retail chains",
+            "items": []
+        }
+
+
+def save_history(results, updated_at):
+    history = load_history()
+    date_key = updated_at[:10]
+
+    history["items"] = [
+        item for item in history.get("items", [])
+        if item.get("date") != date_key
+    ]
+
+    for result in results:
+        history["items"].append({
+            "date": date_key,
+            "updated_at": updated_at,
+            "company": result["company"],
+            "social_mentions": result["social_mentions"],
+            "weighted_social_mentions": result["weighted_social_mentions"],
+            "hu_relevant_mentions": result["hu_relevant_mentions"],
+            "social_index": result["social_index"],
+            "social_sentiment": result["social_sentiment"],
+            "dominant_social_topic": result["dominant_social_topic"],
+            "social_sources": result["social_sources"]
+        })
+
+    history["items"].sort(
+        key=lambda x: (x.get("date", ""), x.get("company", ""))
+    )
+
+    HISTORY_FILE.write_text(
+        json.dumps(history, ensure_ascii=False, indent=2),
+        encoding="utf-8"
+    )
 
 
 def main():
@@ -542,10 +646,12 @@ def main():
 
     results = []
 
+    updated_at = now_iso()
+
     status = {
-        "updated_at": now_iso(),
+        "updated_at": updated_at,
         "status": "ok",
-        "version": "social-signal-layer-v1.2",
+        "version": "social-signal-layer-v1.3",
         "companies": [],
         "sources": [
             "reddit_rss",
@@ -555,11 +661,12 @@ def main():
         "filters": {
             "max_item_age_days": MAX_ITEM_AGE_DAYS,
             "max_items_per_source_per_company": MAX_ITEMS_PER_SOURCE_PER_COMPANY,
-            "company_context_filter": True
+            "company_context_filter": True,
+            "hungarian_relevance_weighting": True
         },
         "method_note": (
-            "Social Signal Layer V1.2. "
-            "Óvatos, nyílt forrású jelzőrendszer frissességi és relevanciaszűréssel."
+            "Social Signal Layer V1.3. "
+            "Óvatos, nyílt forrású jelzőrendszer frissességi, relevancia- és magyar piaci súlyozással."
         )
     }
 
@@ -570,6 +677,8 @@ def main():
         status["companies"].append({
             "company": company["company"],
             "mentions": result["social_mentions"],
+            "weighted_mentions": result["weighted_social_mentions"],
+            "hu_relevant_mentions": result["hu_relevant_mentions"],
             "index": result["social_index"],
             "sources": result["social_sources"],
             "sentiment": result["social_sentiment"],
@@ -578,12 +687,12 @@ def main():
         })
 
     payload = {
-        "updated_at": status["updated_at"],
-        "version": "social-signal-layer-v1.2",
+        "updated_at": updated_at,
+        "version": "social-signal-layer-v1.3",
         "scope": "Hungarian FMCG retail chains",
         "method_note": (
             "Ez social signal réteg, nem teljes social analytics. "
-            "A mutató friss, nyílt forrású említésekből készül."
+            "A mutató friss, nyílt forrású említésekből készül, magyar piaci relevancia súlyozással."
         ),
         "items": results
     }
@@ -598,8 +707,11 @@ def main():
         encoding="utf-8"
     )
 
+    save_history(results, updated_at)
+
     print(f"Social monitor updated: {OUT_FILE}")
     print(f"Status written: {STATUS_FILE}")
+    print(f"History updated: {HISTORY_FILE}")
 
 
 if __name__ == "__main__":
