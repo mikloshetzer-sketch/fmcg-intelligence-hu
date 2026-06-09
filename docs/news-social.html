@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FMCG Intelligence Hungary – News, Reputation & Social Monitor V6</title>
+  <title>FMCG Intelligence Hungary – News, Reputation & Social Monitor V6.4</title>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="./css/style.css" />
@@ -107,8 +107,20 @@
     th{letter-spacing:.04em;color:#334155;background:#f8fafc}
     td,th{padding:10px;border-bottom:1px solid #e2edf6;text-align:left;vertical-align:top}
 
+
+
+    .warning-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;}
+    .warning-card{border:1px solid #dbe7f2;border-radius:18px;background:#fbfdff;padding:15px;min-height:155px;}
+    .warning-title{font-weight:950;color:var(--navy);font-size:17px;margin-bottom:8px;}
+    .metric-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px;}
+    .metric-chip{border-radius:12px;background:#eef6ff;padding:8px;text-align:center;}
+    .metric-chip span{display:block;font-size:10px;text-transform:uppercase;font-weight:800;color:#64748b;}
+    .metric-chip b{display:block;margin-top:3px;color:var(--navy);font-size:16px;}
+    .competitor-note{font-size:12px;color:#64748b;line-height:1.45;margin-top:8px;}
+
     @media(max-width:1200px){
       .index-card-grid{grid-template-columns:repeat(2,1fr)}
+      .warning-grid{grid-template-columns:repeat(2,1fr)}
       .reputation-grid{grid-template-columns:repeat(2,1fr)}
     }
     @media(max-width:1000px){
@@ -116,6 +128,8 @@
       .chartbox{height:280px}
       .index-card-grid{grid-template-columns:1fr}
       .reputation-grid{grid-template-columns:1fr}
+      .warning-grid{grid-template-columns:1fr}
+      .metric-strip{grid-template-columns:repeat(2,1fr)}
     }
   </style>
 </head>
@@ -125,7 +139,7 @@
   <div class="header-inner">
     <div class="brand">
       <div class="brand-title">FMCG Intelligence Hungary</div>
-      <div class="brand-subtitle">News, Reputation & Social Monitor V6</div>
+      <div class="brand-subtitle">News, Reputation & Social Monitor V6.4</div>
     </div>
     <nav class="nav">
       <a href="./index.html">Dashboard</a>
@@ -139,13 +153,13 @@
 
 <section class="hero">
   <div class="hero-box">
-    <div class="hero-kicker">News, Reputation & Social Intelligence V6</div>
-    <h1>FMCG hírindex, reputációs kockázat és social signal monitor</h1>
+    <div class="hero-kicker">News, Reputation & Social Intelligence V6.4</div>
+    <h1>FMCG média-, kockázati-, social- és reputációs intelligence központ</h1>
     <p>
       A friss hírmonitor a <b>news-social.json</b> fájlból dolgozik. A történeti háttér a
       <b>news-social-history-2026.json</b> fájlból töltődik be. A social réteg a
       <b>social-monitor.json</b> és <b>social-history-2026.json</b> fájlokat használja.
-      A social index nem teljes közösségimédia-elemzés, hanem nyílt forrású social signal.
+      A social index nem teljes közösségimédia-elemzés, hanem nyílt forrású social signal. A store reputation summary a <b>store-reputation.json</b> fájlból érkező áruházi reputációs jelzést emeli be vezetői szinten.
     </p>
     <div class="btn-row">
       <a class="btn btn-primary" href="./index.html">Vissza a fő dashboardra</a>
@@ -182,6 +196,35 @@
       <div class="kpi-label">Domináns narratíva</div>
       <div class="kpi" id="kpiNarrative">–</div>
       <div class="kpi-sub">friss + történeti értelmezés</div>
+    </div>
+
+    <div class="card span12">
+      <div class="section-title">
+        <h2>Competitor Intelligence</h2>
+        <span>Media, Risk, Social és Store Reputation egy vezetői összehasonlító nézetben</span>
+      </div>
+      <div id="competitorIntelligence" class="matrix-wrap">Adatok betöltése...</div>
+      <div class="chart-insight" id="competitorInsight">Adatok betöltése...</div>
+    </div>
+
+    <div class="card span6">
+      <div class="section-title">
+        <h2>Early Warning Engine</h2>
+        <span>automatikus NORMAL / WATCH / WARNING / ALERT besorolás</span>
+      </div>
+      <div id="earlyWarningBox" class="warning-grid">Adatok betöltése...</div>
+      <div class="formula-box">
+        <b>Logika:</b> a jelzés a media index, risk index, social index, store reputation és trendirány együtteséből készül. Nem végső ítélet, hanem vezetői figyelmeztető réteg.
+      </div>
+    </div>
+
+    <div class="card span6">
+      <div class="section-title">
+        <h2>Store Reputation Summary</h2>
+        <span>áruházi reputációs jel vezetői összefoglalója</span>
+      </div>
+      <div id="storeReputationSummary">Store adatok betöltése...</div>
+      <div class="chart-insight" id="storeSummaryInsight">Adatok betöltése...</div>
     </div>
 
     <div class="card span12">
@@ -356,20 +399,16 @@
       <div id="topEvents" class="timeline">Adatok betöltése...</div>
     </div>
 
-    <div class="card span12">
-      <div class="section-title">
-        <h2>Business Impact Matrix</h2>
-        <span>cég–üzleti hatás metszet</span>
-      </div>
-      <div id="businessMatrix" class="matrix-wrap">Adatok betöltése...</div>
-    </div>
+    <div class="span12">
+      <details>
+        <summary>Business Impact Matrix <span class="small">cég–üzleti hatás metszet</span></summary>
+        <div class="details-body"><div id="businessMatrix" class="matrix-wrap">Adatok betöltése...</div></div>
+      </details>
 
-    <div class="card span12">
-      <div class="section-title">
-        <h2>Strategic Narrative Matrix</h2>
-        <span>cég–stratégiai narratíva metszet</span>
-      </div>
-      <div id="narrativeMatrix" class="matrix-wrap">Adatok betöltése...</div>
+      <details>
+        <summary>Strategic Narrative Matrix <span class="small">cég–stratégiai narratíva metszet</span></summary>
+        <div class="details-body"><div id="narrativeMatrix" class="matrix-wrap">Adatok betöltése...</div></div>
+      </details>
     </div>
 
     <div class="span12">
@@ -396,14 +435,14 @@
       </div>
       <div class="notice">
         Az adatok nyilvános RSS és keresési forrásokból származnak. A kategorizálás kulcsszavas, előzetes gépi osztályozáson alapul.
-        A social réteg nem teljes social analytics, hanem óvatos social signal. A magyar relevancia súlyozott, ezért a nemzetközi zaj kisebb hatással jelenik meg.
+        A social réteg nem teljes social analytics, hanem óvatos social signal. A magyar relevancia súlyozott, ezért a nemzetközi zaj kisebb hatással jelenik meg. A store reputation summary szintén jelzőréteg, nem teljes Google Reviews vagy vásárlói értékelési adatbázis.
       </div>
     </div>
 
   </div>
 </main>
 
-<footer class="footer">FMCG Intelligence Hungary – News, Reputation & Social Monitor V6.</footer>
+<footer class="footer">FMCG Intelligence Hungary – News, Reputation & Social Monitor V6.4.</footer>
 
 <script>
 const currentUrl = './data/news-social.json';
@@ -413,6 +452,8 @@ const historyStatusUrl = './data/news-social-history-2026-status.json';
 const socialUrl = './data/social-monitor.json';
 const socialStatusUrl = './data/social-monitor-status.json';
 const socialHistoryUrl = './data/social-history-2026.json';
+const storeUrl = './data/store-reputation.json';
+const storeStatusUrl = './data/store-reputation-status.json';
 
 let charts = {};
 
@@ -457,25 +498,63 @@ function socialItems(social){return social?.items || [];}
 function socialByCompany(social){const map={};socialItems(social).forEach(x=>map[x.company]=x);return map;}
 function socialLeader(social){return [...socialItems(social)].sort((a,b)=>num(b.social_index)-num(a.social_index))[0]||null;}
 
+function storeCompanyItems(storeData){return storeData?.company_summary || [];}
+function storeRows(storeData){return storeData?.stores || [];}
+function storeByCompany(storeData){const map={};storeCompanyItems(storeData).forEach(x=>map[x.company]=x);return map;}
+function warningLevelByMetrics(m){
+  let score=0;
+  const reasons=[];
+  if(m.risk>=50){score+=3;reasons.push('magas reputációs risk');}
+  else if(m.risk>=31){score+=2;reasons.push('figyelmet igénylő risk');}
+  else if(m.risk>=16){score+=1;reasons.push('mérsékelt risk');}
+  if(m.social>=70){score+=2;reasons.push('erős social jel');}
+  else if(m.social>=50){score+=1;reasons.push('emelkedett social jel');}
+  if(m.media>=70){score+=1;reasons.push('magas médiahatás');}
+  if(m.store>=60){score+=2;reasons.push('erős store reputációs jel');}
+  else if(m.store>=40){score+=1;reasons.push('figyelendő store jel');}
+  if(m.trend==='up'){score+=1;reasons.push('emelkedő trend');}
+  if(m.negativeStores>0){score+=1;reasons.push('negatív áruházi jelzés');}
+  let level='NORMAL';
+  if(score>=6) level='ALERT';
+  else if(score>=4) level='WARNING';
+  else if(score>=2) level='WATCH';
+  return {level,score,reasons};
+}
+function warningPill(level){
+  if(level==='ALERT') return `<span class="pill red">ALERT</span>`;
+  if(level==='WARNING') return `<span class="pill orange">WARNING</span>`;
+  if(level==='WATCH') return `<span class="pill purple">WATCH</span>`;
+  return `<span class="pill green">NORMAL</span>`;
+}
+function confidenceLabel(row){
+  const filled=[row.media,row.risk,row.social,row.store].filter(v=>num(v)>0).length;
+  if(filled>=3) return 'high confidence';
+  if(filled>=2) return 'medium confidence';
+  return 'low confidence';
+}
+
+
 async function loadData(){
   try{
-    const [current,currentStatus,history,historyStatus,social,socialStatus,socialHistory]=await Promise.all([
+    const [current,currentStatus,history,historyStatus,social,socialStatus,socialHistory,storeData,storeStatus]=await Promise.all([
       fetchJson(currentUrl),
       fetchJson(currentStatusUrl,true),
       fetchJson(historyUrl,true),
       fetchJson(historyStatusUrl,true),
       fetchJson(socialUrl,true),
       fetchJson(socialStatusUrl,true),
-      fetchJson(socialHistoryUrl,true)
+      fetchJson(socialHistoryUrl,true),
+      fetchJson(storeUrl,true),
+      fetchJson(storeStatusUrl,true)
     ]);
-    renderPage(current,currentStatus,history,historyStatus,social,socialStatus,socialHistory);
+    renderPage(current,currentStatus,history,historyStatus,social,socialStatus,socialHistory,storeData,storeStatus);
   }catch(e){
     showError('<b>Adatbetöltési hiba.</b><br>'+e.message+'<br><br>Ellenőrizd a data JSON fájlokat.');
     console.error(e);
   }
 }
 
-function renderPage(current,currentStatus,history,historyStatus,social,socialStatus,socialHistory){
+function renderPage(current,currentStatus,history,historyStatus,social,socialStatus,socialHistory,storeData,storeStatus){
   const companies=current.companies||[];
   const historyCompanies=history?.companies||[];
   const events=current.events||current.top_events||[];
@@ -494,6 +573,9 @@ function renderPage(current,currentStatus,history,historyStatus,social,socialSta
   setText('kpiSocialSub',socialTop?`social index: ${fmtNum(socialTop.social_index)} • HU találat: ${fmtNum(socialTop.hu_relevant_mentions)}`:'social adat nem érhető el');
   setText('kpiNarrative',narrative);
 
+  renderCompetitorIntelligence(companies,current,social,storeData);
+  renderEarlyWarnings(companies,current,social,storeData);
+  renderStoreReputationSummary(storeData);
   renderCompanyCards(companies,current,socialMap);
   renderSocialSignalCards(social);
   renderRiskRanking(companies);
@@ -511,6 +593,159 @@ function renderPage(current,currentStatus,history,historyStatus,social,socialSta
   renderNarrativeMatrix(companies,current);
   renderTables(companies,historyCompanies,current,history,social);
 }
+
+
+function buildCompetitorRows(companies,current,social,storeData){
+  const socialMap=socialByCompany(social);
+  const storeMap=storeByCompany(storeData);
+  return companies.map(c=>{
+    const s=socialMap[c.company] || {};
+    const st=storeMap[c.company] || {};
+    const row={
+      company:c.company,
+      media:num(c.media_index),
+      risk:num(c.risk_index ?? c.risk_score),
+      social:num(s.social_index),
+      huSocial:num(s.hu_relevant_mentions),
+      store:num(st.review_signal_index),
+      storeMentions:num(st.store_mentions),
+      negativeStores:num(st.negative_stores),
+      trend:c.trend_direction || 'stable',
+      narrative:c.dominant_market_narrative || c.dominant_strategic_narrative_label || narrativeLabel(c.dominant_strategic_narrative,current),
+      socialTopic:s.dominant_social_topic || 'n.a.',
+      storeTopic:st.dominant_store_topic || 'n.a.'
+    };
+    const w=warningLevelByMetrics(row);
+    row.warning=w.level;
+    row.warningScore=w.score;
+    row.warningReasons=w.reasons;
+    return row;
+  });
+}
+
+function renderCompetitorIntelligence(companies,current,social,storeData){
+  const rows=buildCompetitorRows(companies,current,social,storeData)
+    .sort((a,b)=>(b.media+b.social+b.store+b.risk)-(a.media+a.social+a.store+a.risk));
+
+  document.getElementById('competitorIntelligence').innerHTML=`
+    <table class="matrix-table">
+      <thead>
+        <tr>
+          <th>Lánc</th>
+          <th>Media</th>
+          <th>Risk</th>
+          <th>Social</th>
+          <th>HU social</th>
+          <th>Store reputation</th>
+          <th>Early warning</th>
+          <th>Domináns téma</th>
+          <th>Adatminőség</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${rows.map(r=>`
+          <tr>
+            <td><b>${r.company}</b></td>
+            <td>${fmtNum(r.media)}</td>
+            <td>${fmtNum(r.risk)}</td>
+            <td>${fmtNum(r.social)}</td>
+            <td>${fmtNum(r.huSocial)}</td>
+            <td>${fmtNum(r.store)}</td>
+            <td>${warningPill(r.warning)}</td>
+            <td>${r.narrative}</td>
+            <td>${confidenceLabel(r)}</td>
+          </tr>
+        `).join('')}
+      </tbody>
+    </table>
+  `;
+
+  const topMedia=[...rows].sort((a,b)=>b.media-a.media)[0];
+  const topRisk=[...rows].sort((a,b)=>b.risk-a.risk)[0];
+  const topSocial=[...rows].sort((a,b)=>b.social-a.social)[0];
+  const topStore=[...rows].sort((a,b)=>b.store-a.store)[0];
+
+  document.getElementById('competitorInsight').innerHTML=
+    `A vezetői összevetés alapján a legerősebb médiahatás: <b>${topMedia?.company||'n.a.'}</b>, `+
+    `a legmagasabb reputációs risk: <b>${topRisk?.company||'n.a.'}</b>, `+
+    `a legerősebb social signal: <b>${topSocial?.company||'n.a.'}</b>, `+
+    `a legerősebb store reputation jel: <b>${topStore?.company||'n.a.'}</b>.`;
+}
+
+function renderEarlyWarnings(companies,current,social,storeData){
+  const rows=buildCompetitorRows(companies,current,social,storeData)
+    .sort((a,b)=>b.warningScore-a.warningScore || b.risk-a.risk || b.social-a.social)
+    .slice(0,8);
+
+  document.getElementById('earlyWarningBox').innerHTML=rows.map(r=>`
+    <div class="warning-card">
+      <div class="company-head">
+        <div class="warning-title">${r.company}</div>
+        ${warningPill(r.warning)}
+      </div>
+      <div class="metric-strip">
+        <div class="metric-chip"><span>Media</span><b>${fmtNum(r.media)}</b></div>
+        <div class="metric-chip"><span>Risk</span><b>${fmtNum(r.risk)}</b></div>
+        <div class="metric-chip"><span>Social</span><b>${fmtNum(r.social)}</b></div>
+        <div class="metric-chip"><span>Store</span><b>${fmtNum(r.store)}</b></div>
+      </div>
+      <div class="competitor-note">
+        <b>Ok:</b> ${r.warningReasons.length ? r.warningReasons.join(' • ') : 'nincs erős figyelmeztető jel'}.
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderStoreReputationSummary(storeData){
+  const companies=storeCompanyItems(storeData);
+  const stores=storeRows(storeData);
+
+  if(!companies.length && !stores.length){
+    document.getElementById('storeReputationSummary').innerHTML='<div class="notice">A store-reputation.json még nem érhető el.</div>';
+    document.getElementById('storeSummaryInsight').innerHTML='A store summary a store-reputation.json bekötése után jelenik meg.';
+    return;
+  }
+
+  const leader=[...companies].sort((a,b)=>num(b.review_signal_index)-num(a.review_signal_index))[0];
+  const mostDiscussed=[...stores].sort((a,b)=>num(b.store_mentions)-num(a.store_mentions))[0];
+  const warningStores=stores.filter(s=>num(s.review_signal_index)>=40 || s.review_sentiment==='negative' || s.review_sentiment==='mixed');
+
+  const topicCounts={};
+  stores.forEach(s=>{
+    const t=s.dominant_store_topic || 'nincs elég adat';
+    if(t && t!=='nincs elég adat') topicCounts[t]=(topicCounts[t]||0)+1;
+  });
+  const dominantTopic=Object.entries(topicCounts).sort((a,b)=>b[1]-a[1])[0]?.[0] || 'nincs elég adat';
+
+  document.getElementById('storeReputationSummary').innerHTML=`
+    <div class="reputation-grid">
+      <div class="reputation-tile">
+        <div class="kpi-label">Store Reputation Leader</div>
+        <div class="reputation-value">${leader?.company || 'n.a.'}</div>
+        <div class="small">index: ${fmtNum(leader?.review_signal_index || 0)}</div>
+      </div>
+      <div class="reputation-tile">
+        <div class="kpi-label">Most Discussed Store</div>
+        <div class="reputation-value">${mostDiscussed?.store_name || 'n.a.'}</div>
+        <div class="small">említés: ${fmtNum(mostDiscussed?.store_mentions || 0)}</div>
+      </div>
+      <div class="reputation-tile">
+        <div class="kpi-label">Store Warning Count</div>
+        <div class="reputation-value">${fmtNum(warningStores.length)}</div>
+        <div class="small">figyelendő áruház</div>
+      </div>
+      <div class="reputation-tile">
+        <div class="kpi-label">Dominant Store Topic</div>
+        <div class="reputation-value">${dominantTopic}</div>
+        <div class="small">áruházi reputációs téma</div>
+      </div>
+    </div>
+  `;
+
+  document.getElementById('storeSummaryInsight').innerHTML=
+    `A store reputation summary csak vezetői szintű áruházi jelzést mutat. A részletes boltlista, hálózati térkép és régiós lefedettség a Supply Chain oldalra tartozik.`;
+}
+
 
 function renderCompanyCards(companies,data,socialMap){
   document.getElementById('companyCards').innerHTML=companies.map(c=>{
