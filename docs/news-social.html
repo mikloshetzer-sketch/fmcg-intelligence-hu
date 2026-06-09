@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FMCG Intelligence Hungary – News & Reputation Monitor V4</title>
+  <title>FMCG Intelligence Hungary – News, Reputation & Social Monitor V6</title>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="./css/style.css" />
@@ -23,437 +23,86 @@
       --warn-border:#fed7aa;
     }
 
-    body{
-      background:linear-gradient(110deg,#e5f6ff 0%,#eefdf4 100%);
-    }
+    body{background:linear-gradient(110deg,#e5f6ff 0%,#eefdf4 100%);}
+    .main{max-width:1440px;margin:0 auto;padding:26px 18px 60px;}
+    .hero-box{max-width:1440px;margin:0 auto;border-radius:28px;background:rgba(255,255,255,.72);box-shadow:var(--shadow);}
+    .dashboard-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:18px;align-items:stretch;}
+    .span12{grid-column:span 12}.span8{grid-column:span 8}.span7{grid-column:span 7}.span6{grid-column:span 6}.span5{grid-column:span 5}.span4{grid-column:span 4}.span3{grid-column:span 3}
 
-    .main{
-      max-width:1440px;
-      margin:0 auto;
-      padding:26px 18px 60px;
-    }
+    .card{border:1px solid var(--border);box-shadow:var(--shadow);background:rgba(255,255,255,.95);border-radius:22px;padding:18px;}
+    .kpi-card{min-height:132px;position:relative;overflow:hidden;background:linear-gradient(145deg,#fff,#f7fbff);}
+    .kpi-card:after{content:"";position:absolute;right:-26px;top:-35px;width:95px;height:95px;border-radius:50%;background:rgba(14,165,233,.12);}
+    .kpi-label{color:#64748b;font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.04em;}
+    .kpi{font-size:27px;line-height:1.05;color:var(--navy);font-weight:950;margin-top:7px;}
+    .kpi-sub{margin-top:8px;color:var(--muted);font-size:13px;line-height:1.45;}
 
-    .hero-box{
-      max-width:1440px;
-      margin:0 auto;
-      border-radius:28px;
-      background:rgba(255,255,255,.72);
-      box-shadow:var(--shadow);
-    }
-
-    .dashboard-grid{
-      display:grid;
-      grid-template-columns:repeat(12,minmax(0,1fr));
-      gap:18px;
-      align-items:stretch;
-    }
-
-    .span12{grid-column:span 12}
-    .span8{grid-column:span 8}
-    .span7{grid-column:span 7}
-    .span6{grid-column:span 6}
-    .span5{grid-column:span 5}
-    .span4{grid-column:span 4}
-    .span3{grid-column:span 3}
-
-    .card{
-      border:1px solid var(--border);
-      box-shadow:var(--shadow);
-      background:rgba(255,255,255,.95);
-      border-radius:22px;
-      padding:18px;
-    }
-
-    .kpi-card{
-      min-height:132px;
-      position:relative;
-      overflow:hidden;
-      background:linear-gradient(145deg,#fff,#f7fbff);
-    }
-
-    .kpi-card:after{
-      content:"";
-      position:absolute;
-      right:-26px;
-      top:-35px;
-      width:95px;
-      height:95px;
-      border-radius:50%;
-      background:rgba(14,165,233,.12);
-    }
-
-    .kpi-label{
-      color:#64748b;
-      font-weight:800;
-      font-size:12px;
-      text-transform:uppercase;
-      letter-spacing:.04em;
-    }
-
-    .kpi{
-      font-size:27px;
-      line-height:1.05;
-      color:var(--navy);
-      font-weight:950;
-      margin-top:7px;
-    }
-
-    .kpi-sub{
-      margin-top:8px;
-      color:var(--muted);
-      font-size:13px;
-      line-height:1.45;
-    }
-
-    .section-title{
-      border-bottom:1px solid #e6eef6;
-      padding-bottom:10px;
-      margin-bottom:12px;
-    }
-
-    .section-title h2{
-      font-size:20px;
-      margin:0 0 2px 0;
-      color:var(--navy);
-    }
-
-    .section-title span{
-      color:var(--muted);
-      font-size:13px;
-    }
+    .section-title{border-bottom:1px solid #e6eef6;padding-bottom:10px;margin-bottom:12px;}
+    .section-title h2{font-size:20px;margin:0 0 2px 0;color:var(--navy);}
+    .section-title span{color:var(--muted);font-size:13px;}
 
     .chartbox{height:315px;}
     .chartbox.tall{height:370px;}
     .chartbox.small{height:255px;}
 
-    .index-card-grid{
-      display:grid;
-      grid-template-columns:repeat(4,minmax(0,1fr));
-      gap:14px;
-    }
+    .index-card-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;}
+    .company-card{border:1px solid #dbe7f2;border-radius:18px;padding:15px;background:#fbfdff;min-height:235px;}
+    .company-card.empty{opacity:.68;background:#f8fafc;}
+    .company-head{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;margin-bottom:10px;}
+    .company-name{color:var(--navy);font-weight:950;font-size:18px;}
 
-    .company-card{
-      border:1px solid #dbe7f2;
-      border-radius:18px;
-      padding:15px;
-      background:#fbfdff;
-      min-height:235px;
-    }
+    .trend-badge{font-weight:950;border-radius:999px;padding:5px 9px;font-size:12px;background:#eef2f7;color:#475569;}
+    .trend-up{background:#dcfce7;color:#166534}.trend-down{background:#fee2e2;color:#991b1b}.trend-stable{background:#eef2f7;color:#475569}
 
-    .company-card.empty{
-      opacity:.68;
-      background:#f8fafc;
-    }
+    .mini-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:11px 0;}
+    .mini-kpi{border-radius:12px;background:#eef6ff;padding:9px;}
+    .mini-kpi span{display:block;color:#64748b;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.03em;}
+    .mini-kpi b{display:block;color:var(--navy);font-size:17px;margin-top:3px;}
 
-    .company-head{
-      display:flex;
-      justify-content:space-between;
-      gap:10px;
-      align-items:flex-start;
-      margin-bottom:10px;
-    }
+    .company-summary{font-size:13px;line-height:1.55;color:#334155;margin-top:8px;}
+    .highlight{margin-top:10px;border-left:4px solid var(--blue);padding:8px 10px;background:#f0f9ff;border-radius:12px;font-size:12px;line-height:1.45;color:#0f3154;}
 
-    .company-name{
-      color:var(--navy);
-      font-weight:950;
-      font-size:18px;
-    }
+    .reputation-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:8px;}
+    .reputation-tile{border:1px solid #e2edf6;border-radius:16px;background:#fbfdff;padding:14px;}
+    .reputation-value{font-size:24px;font-weight:950;color:var(--navy);margin-top:5px;}
 
-    .trend-badge{
-      font-weight:950;
-      border-radius:999px;
-      padding:5px 9px;
-      font-size:12px;
-      background:#eef2f7;
-      color:#475569;
-    }
-
-    .trend-up{background:#dcfce7;color:#166534}
-    .trend-down{background:#fee2e2;color:#991b1b}
-    .trend-stable{background:#eef2f7;color:#475569}
-
-    .mini-kpis{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:8px;
-      margin:11px 0;
-    }
-
-    .mini-kpi{
-      border-radius:12px;
-      background:#eef6ff;
-      padding:9px;
-    }
-
-    .mini-kpi span{
-      display:block;
-      color:#64748b;
-      font-size:10px;
-      font-weight:800;
-      text-transform:uppercase;
-      letter-spacing:.03em;
-    }
-
-    .mini-kpi b{
-      display:block;
-      color:var(--navy);
-      font-size:17px;
-      margin-top:3px;
-    }
-
-    .company-summary{
-      font-size:13px;
-      line-height:1.55;
-      color:#334155;
-      margin-top:8px;
-    }
-
-    .highlight{
-      margin-top:10px;
-      border-left:4px solid var(--blue);
-      padding:8px 10px;
-      background:#f0f9ff;
-      border-radius:12px;
-      font-size:12px;
-      line-height:1.45;
-      color:#0f3154;
-    }
-
-    .reputation-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:12px;
-      margin-top:8px;
-    }
-
-    .reputation-tile{
-      border:1px solid #e2edf6;
-      border-radius:16px;
-      background:#fbfdff;
-      padding:14px;
-    }
-
-    .reputation-value{
-      font-size:24px;
-      font-weight:950;
-      color:var(--navy);
-      margin-top:5px;
-    }
-
-    .risk-row{
-      display:grid;
-      grid-template-columns:44px 1fr 125px;
-      gap:12px;
-      padding:12px 0;
-      border-bottom:1px solid #e5edf5;
-      align-items:center;
-    }
-
-    .rank{
-      width:36px;
-      height:36px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      border-radius:12px;
-      font-weight:900;
-      background:#eef3f8;
-      color:var(--navy);
-    }
-
-    .rank.one{background:#fee2e2;color:#991b1b}
-    .rank.two{background:#ffedd5;color:#9a3412}
-    .rank.three{background:#e0f2fe;color:#0369a1}
-
-    .bar{
-      height:8px;
-      background:#e5edf5;
-      border-radius:99px;
-      overflow:hidden;
-      margin-top:5px;
-    }
-
+    .risk-row{display:grid;grid-template-columns:44px 1fr 125px;gap:12px;padding:12px 0;border-bottom:1px solid #e5edf5;align-items:center;}
+    .rank{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:12px;font-weight:900;background:#eef3f8;color:var(--navy);}
+    .rank.one{background:#fee2e2;color:#991b1b}.rank.two{background:#ffedd5;color:#9a3412}.rank.three{background:#e0f2fe;color:#0369a1}
+    .bar{height:8px;background:#e5edf5;border-radius:99px;overflow:hidden;margin-top:5px;}
     .fill-orange{height:100%;background:linear-gradient(90deg,var(--orange),var(--red));}
     .fill-blue{height:100%;background:linear-gradient(90deg,var(--blue),var(--green));}
+    .fill-purple{height:100%;background:linear-gradient(90deg,var(--purple),var(--blue));}
 
-    .chart-insight{
-      margin-top:12px;
-      padding:13px 15px;
-      border-radius:16px;
-      background:#f0fdfa;
-      border:1px solid #c7f1e8;
-      color:#0b315d;
-      font-size:13px;
-      line-height:1.6;
-    }
-
-    .formula-box{
-      margin-top:12px;
-      padding:13px 15px;
-      border-radius:16px;
-      background:#f8fafc;
-      border:1px solid #dbe7f2;
-      color:#334155;
-      font-size:13px;
-      line-height:1.55;
-    }
-
+    .chart-insight{margin-top:12px;padding:13px 15px;border-radius:16px;background:#f0fdfa;border:1px solid #c7f1e8;color:#0b315d;font-size:13px;line-height:1.6;}
+    .formula-box{margin-top:12px;padding:13px 15px;border-radius:16px;background:#f8fafc;border:1px solid #dbe7f2;color:#334155;font-size:13px;line-height:1.55;}
     .matrix-wrap{overflow:auto;}
+    .matrix-table{width:100%;border-collapse:collapse;font-size:13px;}
+    .matrix-table th,.matrix-table td{padding:10px;border-bottom:1px solid #e2edf6;text-align:center;white-space:nowrap;}
+    .matrix-table th:first-child,.matrix-table td:first-child{text-align:left;font-weight:900;color:var(--navy);position:sticky;left:0;background:#fff;}
 
-    .matrix-table{
-      width:100%;
-      border-collapse:collapse;
-      font-size:13px;
-    }
+    .timeline{position:relative;display:grid;gap:14px;}
+    .timeline:before{content:"";position:absolute;left:17px;top:6px;bottom:6px;width:2px;background:#dbeafe;}
+    .event-card{position:relative;margin-left:46px;border:1px solid #dbe7f2;border-radius:16px;background:#fbfdff;padding:14px;}
+    .event-card:before{content:"";position:absolute;left:-39px;top:17px;width:14px;height:14px;border-radius:50%;background:#0ea5e9;border:3px solid #e0f2fe;}
+    .event-card.critical:before{background:#ef4444;border-color:#fee2e2}.event-card.high:before{background:#f97316;border-color:#ffedd5}
+    .event-title{font-weight:900;color:var(--navy);line-height:1.35;}
+    .event-meta{margin-top:8px;color:var(--muted);font-size:12px;display:flex;gap:8px;flex-wrap:wrap;}
 
-    .matrix-table th,.matrix-table td{
-      padding:10px;
-      border-bottom:1px solid #e2edf6;
-      text-align:center;
-      white-space:nowrap;
-    }
+    .pill{display:inline-flex;align-items:center;border-radius:999px;padding:4px 9px;font-size:12px;font-weight:800;background:#e0f2fe;color:#075985;white-space:nowrap;}
+    .pill.green{background:#dcfce7;color:#166534}.pill.orange{background:#ffedd5;color:#9a3412}.pill.red{background:#fee2e2;color:#991b1b}.pill.gray{background:#eef2f7;color:#475569}.pill.purple{background:#ede9fe;color:#5b21b6}
 
-    .matrix-table th:first-child,.matrix-table td:first-child{
-      text-align:left;
-      font-weight:900;
-      color:var(--navy);
-      position:sticky;
-      left:0;
-      background:#fff;
-    }
+    .notice{background:var(--warn);border:1px solid var(--warn-border);border-radius:18px;padding:16px;line-height:1.7;color:#7c2d12;}
+    .small,.source-note{font-size:12px;color:var(--muted);line-height:1.45;}
+    .risk-high{color:#b91c1c;font-weight:900}.risk-medium{color:#c2410c;font-weight:900}.risk-low{color:#166534;font-weight:900}
+    .error{margin-bottom:18px;border:1px solid #fecaca;background:#fef2f2;color:#991b1b;border-radius:16px;padding:16px;line-height:1.6;}
 
-    .timeline{
-      position:relative;
-      display:grid;
-      gap:14px;
-    }
-
-    .timeline:before{
-      content:"";
-      position:absolute;
-      left:17px;
-      top:6px;
-      bottom:6px;
-      width:2px;
-      background:#dbeafe;
-    }
-
-    .event-card{
-      position:relative;
-      margin-left:46px;
-      border:1px solid #dbe7f2;
-      border-radius:16px;
-      background:#fbfdff;
-      padding:14px;
-    }
-
-    .event-card:before{
-      content:"";
-      position:absolute;
-      left:-39px;
-      top:17px;
-      width:14px;
-      height:14px;
-      border-radius:50%;
-      background:#0ea5e9;
-      border:3px solid #e0f2fe;
-    }
-
-    .event-card.critical:before{background:#ef4444;border-color:#fee2e2}
-    .event-card.high:before{background:#f97316;border-color:#ffedd5}
-
-    .event-title{
-      font-weight:900;
-      color:var(--navy);
-      line-height:1.35;
-    }
-
-    .event-meta{
-      margin-top:8px;
-      color:var(--muted);
-      font-size:12px;
-      display:flex;
-      gap:8px;
-      flex-wrap:wrap;
-    }
-
-    .pill{
-      display:inline-flex;
-      align-items:center;
-      border-radius:999px;
-      padding:4px 9px;
-      font-size:12px;
-      font-weight:800;
-      background:#e0f2fe;
-      color:#075985;
-      white-space:nowrap;
-    }
-
-    .pill.green{background:#dcfce7;color:#166534}
-    .pill.orange{background:#ffedd5;color:#9a3412}
-    .pill.red{background:#fee2e2;color:#991b1b}
-    .pill.gray{background:#eef2f7;color:#475569}
-    .pill.purple{background:#ede9fe;color:#5b21b6}
-
-    .notice{
-      background:var(--warn);
-      border:1px solid var(--warn-border);
-      border-radius:18px;
-      padding:16px;
-      line-height:1.7;
-      color:#7c2d12;
-    }
-
-    .small,.source-note{
-      font-size:12px;
-      color:var(--muted);
-      line-height:1.45;
-    }
-
-    .risk-high{color:#b91c1c;font-weight:900}
-    .risk-medium{color:#c2410c;font-weight:900}
-    .risk-low{color:#166534;font-weight:900}
-
-    .error{
-      margin-bottom:18px;
-      border:1px solid #fecaca;
-      background:#fef2f2;
-      color:#991b1b;
-      border-radius:16px;
-      padding:16px;
-      line-height:1.6;
-    }
-
-    details{
-      border:1px solid #dbe7f2;
-      border-radius:18px;
-      background:white;
-      box-shadow:var(--shadow);
-      overflow:hidden;
-    }
-
+    details{border:1px solid #dbe7f2;border-radius:18px;background:white;box-shadow:var(--shadow);overflow:hidden;}
     details+details{margin-top:14px;}
-
-    summary{
-      cursor:pointer;
-      padding:18px 20px;
-      font-weight:950;
-      color:var(--navy);
-      list-style:none;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-    }
-
+    summary{cursor:pointer;padding:18px 20px;font-weight:950;color:var(--navy);list-style:none;display:flex;justify-content:space-between;align-items:center;}
     summary::-webkit-details-marker{display:none}
     summary:after{content:"+";font-size:22px;color:var(--blue)}
     details[open] summary:after{content:"−";}
-
-    .details-body{
-      padding:0 18px 18px;
-      overflow:auto;
-    }
-
+    .details-body{padding:0 18px 18px;overflow:auto;}
     table{font-size:13px;width:100%;border-collapse:collapse}
     th{letter-spacing:.04em;color:#334155;background:#f8fafc}
     td,th{padding:10px;border-bottom:1px solid #e2edf6;text-align:left;vertical-align:top}
@@ -462,7 +111,6 @@
       .index-card-grid{grid-template-columns:repeat(2,1fr)}
       .reputation-grid{grid-template-columns:repeat(2,1fr)}
     }
-
     @media(max-width:1000px){
       .span8,.span7,.span6,.span5,.span4,.span3{grid-column:span 12}
       .chartbox{height:280px}
@@ -477,13 +125,13 @@
   <div class="header-inner">
     <div class="brand">
       <div class="brand-title">FMCG Intelligence Hungary</div>
-      <div class="brand-subtitle">News & Reputation Monitor V4 – friss monitor és történeti trend</div>
+      <div class="brand-subtitle">News, Reputation & Social Monitor V6</div>
     </div>
     <nav class="nav">
       <a href="./index.html">Dashboard</a>
       <a href="./human-capital.html">Human Capital</a>
       <a href="./supply-chain.html">Supply Chain</a>
-      <a class="active" href="./news-social.html">News & Reputation</a>
+      <a class="active" href="./news-social.html">News & Social</a>
       <a href="./methodology.html">Methodology</a>
     </nav>
   </div>
@@ -491,12 +139,13 @@
 
 <section class="hero">
   <div class="hero-box">
-    <div class="hero-kicker">News & Reputation Intelligence V4</div>
-    <h1>FMCG hírindex, reputációs kockázat és 2026-os történeti folyamat</h1>
+    <div class="hero-kicker">News, Reputation & Social Intelligence V6</div>
+    <h1>FMCG hírindex, reputációs kockázat és social signal monitor</h1>
     <p>
-      A friss monitor a <b>news-social.json</b> fájlból dolgozik. A történeti háttér a
-      <b>news-social-history-2026.json</b> fájlból töltődik be, és megmutatja a 2026-os havi folyamatot.
-      A social modul előkészített, de jelenleg nem gyűjtött adat.
+      A friss hírmonitor a <b>news-social.json</b> fájlból dolgozik. A történeti háttér a
+      <b>news-social-history-2026.json</b> fájlból töltődik be. A social réteg a
+      <b>social-monitor.json</b> és <b>social-history-2026.json</b> fájlokat használja.
+      A social index nem teljes közösségimédia-elemzés, hanem nyílt forrású social signal.
     </p>
     <div class="btn-row">
       <a class="btn btn-primary" href="./index.html">Vissza a fő dashboardra</a>
@@ -524,9 +173,9 @@
     </div>
 
     <div class="card span3 kpi-card">
-      <div class="kpi-label">Historical Leader</div>
-      <div class="kpi" id="kpiHistLeader">–</div>
-      <div class="kpi-sub" id="kpiHistSub">2026 történeti háttér</div>
+      <div class="kpi-label">Social Signal Leader</div>
+      <div class="kpi" id="kpiSocialLeader">–</div>
+      <div class="kpi-sub" id="kpiSocialSub">nyílt social signal</div>
     </div>
 
     <div class="card span3 kpi-card">
@@ -538,9 +187,20 @@
     <div class="card span12">
       <div class="section-title">
         <h2>FMCG Intelligence Cards</h2>
-        <span>hírindex, risk score, social status, domináns narratíva és kiemelt esemény</span>
+        <span>hírindex, risk score, social signal, domináns narratíva és kiemelt esemény</span>
       </div>
       <div id="companyCards" class="index-card-grid">Adatok betöltése...</div>
+    </div>
+
+    <div class="card span12">
+      <div class="section-title">
+        <h2>Social Signal Layer</h2>
+        <span>Reddit, YouTube discovery és Mastodon alapú nyílt social jelzőréteg</span>
+      </div>
+      <div id="socialSignalCards" class="index-card-grid">Social adatok betöltése...</div>
+      <div class="formula-box">
+        <b>Fontos:</b> ez nem teljes social listening és nem közvélemény-kutatás. A mutató nyílt forrású, keresési/RSS alapú jelzőrendszer.
+      </div>
     </div>
 
     <div class="card span6">
@@ -556,6 +216,17 @@
 
     <div class="card span6">
       <div class="section-title">
+        <h2>Social Signal Ranking</h2>
+        <span>social index, magyar releváns találatok és hangulat</span>
+      </div>
+      <div id="socialRanking">Social rangsor betöltése...</div>
+      <div class="formula-box">
+        <b>Értelmezés:</b> a social index a friss, súlyozott említésekből, forrásdiverzitásból és hangulati jelből készül.
+      </div>
+    </div>
+
+    <div class="card span6">
+      <div class="section-title">
         <h2>Domináns Piaci Narratívák</h2>
         <span>friss hírek alapján</span>
       </div>
@@ -563,15 +234,47 @@
       <div class="chart-insight" id="currentNarrativeInsight">Adatok betöltése...</div>
     </div>
 
+    <div class="card span6">
+      <div class="section-title">
+        <h2>Top Social Topics</h2>
+        <span>social monitor alapján</span>
+      </div>
+      <div class="chartbox"><canvas id="socialTopicChart"></canvas></div>
+      <div class="chart-insight" id="socialTopicInsight">Social témák betöltése...</div>
+    </div>
+
     <div class="card span12">
       <div class="section-title">
-        <h2>Media + Social Index</h2>
-        <span>friss media index és előkészített social index</span>
+        <h2>Media vs Social Index</h2>
+        <span>friss media index és social signal index összevetése</span>
       </div>
       <div class="chartbox"><canvas id="mediaSocialChart"></canvas></div>
-      <div class="chart-insight" id="mediaSocialInsight">
-        A social index jelenleg nem gyűjtött adat. A diagram ezt külön jelzi, nem helyettesíti kitalált értékkel.
+      <div class="chart-insight" id="mediaSocialInsight">Adatok betöltése...</div>
+    </div>
+
+    <div class="card span12">
+      <div class="section-title">
+        <h2>Social Historical Trend</h2>
+        <span>social-history-2026.json alapján</span>
       </div>
+      <div class="dashboard-grid">
+        <div class="span6">
+          <div class="chartbox"><canvas id="socialHistoryIndexChart"></canvas></div>
+          <div class="chart-insight" id="socialHistoryIndexInsight">Social history betöltése...</div>
+        </div>
+        <div class="span6">
+          <div class="chartbox"><canvas id="socialHistoryMentionsChart"></canvas></div>
+          <div class="chart-insight" id="socialHistoryMentionsInsight">Social history betöltése...</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card span12">
+      <div class="section-title">
+        <h2>Magyar releváns social találatok</h2>
+        <span>a social monitor magyar szempontból legfontosabb elemei</span>
+      </div>
+      <div id="huSocialItems" class="timeline">Social találatok betöltése...</div>
     </div>
 
     <div class="card span12">
@@ -605,7 +308,6 @@
         </div>
       </div>
     </div>
-
 
     <div class="card span12">
       <div class="section-title">
@@ -677,6 +379,11 @@
       </details>
 
       <details>
+        <summary>Social monitor adattábla <span class="small">social-monitor.json / items</span></summary>
+        <div class="details-body"><table id="socialTable"></table></div>
+      </details>
+
+      <details>
         <summary>Történeti összesítő adattábla <span class="small">news-social-history-2026.json / companies</span></summary>
         <div class="details-body"><table id="historyTable"></table></div>
       </details>
@@ -688,301 +395,204 @@
         <span>fontos értelmezési keret</span>
       </div>
       <div class="notice">
-        Az adatok Google News RSS keresésekből származó nyilvános hírmegjelenések.
-        A kategorizálás kulcsszavas, előzetes gépi osztályozáson alapul.
-        A történeti modul benchmark, nem napi frissítés. Social media scraping ebben a verzióban nincs.
+        Az adatok nyilvános RSS és keresési forrásokból származnak. A kategorizálás kulcsszavas, előzetes gépi osztályozáson alapul.
+        A social réteg nem teljes social analytics, hanem óvatos social signal. A magyar relevancia súlyozott, ezért a nemzetközi zaj kisebb hatással jelenik meg.
       </div>
     </div>
 
   </div>
 </main>
 
-<footer class="footer">FMCG Intelligence Hungary – News & Reputation Monitor V4.</footer>
+<footer class="footer">FMCG Intelligence Hungary – News, Reputation & Social Monitor V6.</footer>
 
 <script>
 const currentUrl = './data/news-social.json';
 const currentStatusUrl = './data/news-social-status.json';
 const historyUrl = './data/news-social-history-2026.json';
 const historyStatusUrl = './data/news-social-history-2026-status.json';
+const socialUrl = './data/social-monitor.json';
+const socialStatusUrl = './data/social-monitor-status.json';
+const socialHistoryUrl = './data/social-history-2026.json';
 
 let charts = {};
 
-function num(v,f=0){
-  const x = Number(v);
-  return Number.isFinite(x) ? x : f;
-}
-
-function fmtNum(v){
-  return v===null || v===undefined || v==='' ? 'n.a.' : Number(v).toLocaleString('hu-HU');
-}
-
-function cacheBust(url){
-  return url + '?v=' + Date.now();
-}
-
-function setText(id,val){
-  const el = document.getElementById(id);
-  if(el) el.textContent = val;
-}
-
-function showError(msg){
-  const box = document.getElementById('errorBox');
-  box.style.display = 'block';
-  box.innerHTML = msg;
-}
-
-function destroyChart(id){
-  if(charts[id]){
-    charts[id].destroy();
-    delete charts[id];
-  }
-}
-
+function num(v,f=0){const x=Number(v);return Number.isFinite(x)?x:f;}
+function fmtNum(v){return v===null||v===undefined||v===''?'n.a.':Number(v).toLocaleString('hu-HU');}
+function cacheBust(url){return url+'?v='+Date.now();}
+function setText(id,val){const el=document.getElementById(id);if(el)el.textContent=val;}
+function showError(msg){const box=document.getElementById('errorBox');box.style.display='block';box.innerHTML=msg;}
+function destroyChart(id){if(charts[id]){charts[id].destroy();delete charts[id];}}
 function makeChart(id,type,labels,datasets,opts={}){
   destroyChart(id);
-  const el = document.getElementById(id);
-  if(!el) return;
-
-  charts[id] = new Chart(el,{
-    type,
-    data:{ labels, datasets },
-    options:{
-      responsive:true,
-      maintainAspectRatio:false,
-      plugins:{
-        legend:{ labels:{ color:'#16324f' } }
-      },
-      scales:{
-        x:{ ticks:{ color:'#64748b' }, grid:{ color:'#eef3f7' } },
-        y:{ ticks:{ color:'#64748b' }, grid:{ color:'#eef3f7' } }
-      },
-      ...opts
-    }
-  });
+  const el=document.getElementById(id);
+  if(!el)return;
+  charts[id]=new Chart(el,{type,data:{labels,datasets},options:{
+    responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{labels:{color:'#16324f'}}},
+    scales:{x:{ticks:{color:'#64748b'},grid:{color:'#eef3f7'}},y:{ticks:{color:'#64748b'},grid:{color:'#eef3f7'}}},
+    ...opts
+  }});
 }
-
 async function fetchJson(url,optional=false){
   try{
-    const r = await fetch(cacheBust(url),{ cache:'no-store' });
-    if(!r.ok){
-      if(optional) return null;
-      throw new Error(url + ' HTTP ' + r.status);
-    }
+    const r=await fetch(cacheBust(url),{cache:'no-store'});
+    if(!r.ok){if(optional)return null;throw new Error(url+' HTTP '+r.status);}
     return await r.json();
-  }catch(e){
-    if(optional) return null;
-    throw e;
-  }
+  }catch(e){if(optional)return null;throw e;}
 }
 
-function riskClass(v){
-  v = num(v);
-  if(v >= 50) return 'risk-high';
-  if(v >= 31) return 'risk-medium';
-  return 'risk-low';
-}
+function riskClass(v){v=num(v);if(v>=50)return'risk-high';if(v>=31)return'risk-medium';return'risk-low';}
+function trendBadge(v){const value=v||'stable';if(value==='up')return`<span class="trend-badge trend-up">↑ emelkedő</span>`;if(value==='down')return`<span class="trend-badge trend-down">↓ csökkenő</span>`;return`<span class="trend-badge trend-stable">→ stabil</span>`;}
+function impactPill(v){if(v==='critical')return`<span class="pill red">critical</span>`;if(v==='high')return`<span class="pill orange">high</span>`;if(v==='medium')return`<span class="pill purple">medium</span>`;return`<span class="pill green">${v||'low'}</span>`;}
+function sentimentPill(v){if(v==='negative')return`<span class="pill red">negative</span>`;if(v==='positive')return`<span class="pill green">positive</span>`;if(v==='mixed')return`<span class="pill orange">mixed</span>`;return`<span class="pill gray">${v||'neutral'}</span>`;}
+function relevancePill(v){v=num(v);if(v>=0.8)return`<span class="pill green">HU releváns</span>`;if(v>=0.5)return`<span class="pill orange">részben HU</span>`;return`<span class="pill gray">globális jel</span>`;}
 
-function riskPill(v){
-  v = num(v);
-  if(v >= 50) return `<span class="pill red">${fmtNum(v)}</span>`;
-  if(v >= 31) return `<span class="pill orange">${fmtNum(v)}</span>`;
-  if(v >= 16) return `<span class="pill purple">${fmtNum(v)}</span>`;
-  return `<span class="pill green">${fmtNum(v)}</span>`;
-}
-
-function trendBadge(v){
-  const value = v || 'stable';
-  if(value === 'up') return `<span class="trend-badge trend-up">↑ emelkedő</span>`;
-  if(value === 'down') return `<span class="trend-badge trend-down">↓ csökkenő</span>`;
-  return `<span class="trend-badge trend-stable">→ stabil</span>`;
-}
-
-function impactPill(v){
-  if(v === 'critical') return `<span class="pill red">critical</span>`;
-  if(v === 'high') return `<span class="pill orange">high</span>`;
-  if(v === 'medium') return `<span class="pill purple">medium</span>`;
-  return `<span class="pill green">${v || 'low'}</span>`;
-}
-
-function sentimentPill(v){
-  if(v === 'negative') return `<span class="pill red">negative</span>`;
-  if(v === 'positive') return `<span class="pill green">positive</span>`;
-  return `<span class="pill gray">${v || 'neutral'}</span>`;
-}
-
-function businessImpactLabel(k,data){
-  return data?.labels?.business_impact?.[k] || {
-    revenue:'Bevételi hatás',
-    cost:'Költséghatás',
-    reputation:'Reputációs hatás',
-    expansion:'Terjeszkedési hatás',
-    regulation:'Szabályozási hatás',
-    supply_chain:'Ellátási lánc hatás',
-    workforce:'Munkaerő hatás',
-    general:'Általános hatás',
-    'n.a.':'n.a.'
-  }[k] || k;
-}
-
-function narrativeLabel(k,data){
-  return data?.labels?.strategic_narrative?.[k] || {
-    growth:'Növekedés',
-    competition:'Piaci verseny',
-    reputation:'Reputáció',
-    workforce:'Munkaerő',
-    supply_chain:'Ellátási lánc',
-    regulation:'Szabályozás',
-    defensive:'Védekezés',
-    general:'Általános',
-    'n.a.':'n.a.'
-  }[k] || k;
-}
-
-function allKeys(companies, field){
-  const s = new Set();
-  companies.forEach(c => Object.keys(c[field] || {}).forEach(k => s.add(k)));
-  return [...s].sort();
-}
-
-function aggregateCounts(companies, field){
-  const result = {};
-  companies.forEach(c => {
-    const obj = c[field] || {};
-    Object.keys(obj).forEach(k => {
-      result[k] = (result[k] || 0) + num(obj[k]);
-    });
-  });
-  return result;
-}
-
-function topKey(counts){
-  const copy = {...counts};
-  delete copy.general;
-  delete copy['n.a.'];
-  const keys = Object.keys(copy);
-  if(!keys.length) return Object.keys(counts)[0] || 'n.a.';
-  return keys.sort((a,b)=>num(copy[b])-num(copy[a]))[0];
-}
-
-function topCompanyBy(companies, field){
-  if(!companies || !companies.length) return null;
-  return [...companies].sort((a,b)=>num(b[field])-num(a[field]))[0];
-}
+function businessImpactLabel(k,data){return data?.labels?.business_impact?.[k]||{revenue:'Bevételi hatás',cost:'Költséghatás',reputation:'Reputációs hatás',expansion:'Terjeszkedési hatás',regulation:'Szabályozási hatás',supply_chain:'Ellátási lánc hatás',workforce:'Munkaerő hatás',general:'Általános hatás','n.a.':'n.a.'}[k]||k;}
+function narrativeLabel(k,data){return data?.labels?.strategic_narrative?.[k]||{growth:'Növekedés',competition:'Piaci verseny',reputation:'Reputáció',workforce:'Munkaerő',supply_chain:'Ellátási lánc',regulation:'Szabályozás',defensive:'Védekezés',general:'Általános','n.a.':'n.a.'}[k]||k;}
+function allKeys(companies,field){const s=new Set();companies.forEach(c=>Object.keys(c[field]||{}).forEach(k=>s.add(k)));return[...s].sort();}
+function aggregateCounts(companies,field){const result={};companies.forEach(c=>{const obj=c[field]||{};Object.keys(obj).forEach(k=>{result[k]=(result[k]||0)+num(obj[k]);});});return result;}
+function topKey(counts){const copy={...counts};delete copy.general;delete copy['n.a.'];const keys=Object.keys(copy);if(!keys.length)return Object.keys(counts)[0]||'n.a.';return keys.sort((a,b)=>num(copy[b])-num(copy[a]))[0];}
+function topCompanyBy(companies,field){if(!companies||!companies.length)return null;return[...companies].sort((a,b)=>num(b[field])-num(a[field]))[0];}
+function socialItems(social){return social?.items || [];}
+function socialByCompany(social){const map={};socialItems(social).forEach(x=>map[x.company]=x);return map;}
+function socialLeader(social){return [...socialItems(social)].sort((a,b)=>num(b.social_index)-num(a.social_index))[0]||null;}
 
 async function loadData(){
   try{
-    const [current,currentStatus,history,historyStatus] = await Promise.all([
+    const [current,currentStatus,history,historyStatus,social,socialStatus,socialHistory]=await Promise.all([
       fetchJson(currentUrl),
       fetchJson(currentStatusUrl,true),
       fetchJson(historyUrl,true),
-      fetchJson(historyStatusUrl,true)
+      fetchJson(historyStatusUrl,true),
+      fetchJson(socialUrl,true),
+      fetchJson(socialStatusUrl,true),
+      fetchJson(socialHistoryUrl,true)
     ]);
-
-    renderPage(current,currentStatus,history,historyStatus);
+    renderPage(current,currentStatus,history,historyStatus,social,socialStatus,socialHistory);
   }catch(e){
-    showError('<b>Adatbetöltési hiba.</b><br>' + e.message + '<br><br>Ellenőrizd, hogy a docs/data/news-social.json és a docs/data/news-social-history-2026.json elérhető-e.');
+    showError('<b>Adatbetöltési hiba.</b><br>'+e.message+'<br><br>Ellenőrizd a data JSON fájlokat.');
     console.error(e);
   }
 }
 
-function renderPage(current,currentStatus,history,historyStatus){
-  const companies = current.companies || [];
-  const historyCompanies = history?.companies || [];
-  const events = current.events || current.top_events || [];
+function renderPage(current,currentStatus,history,historyStatus,social,socialStatus,socialHistory){
+  const companies=current.companies||[];
+  const historyCompanies=history?.companies||[];
+  const events=current.events||current.top_events||[];
+  const socialMap=socialByCompany(social);
 
-  const mediaLeader = current.summary?.media_impact_leader || topCompanyBy(companies,'media_index')?.company || 'n.a.';
-  const riskLeader = current.summary?.risk_leader || topCompanyBy(companies,'risk_index')?.company || 'n.a.';
-  const histLeader = history?.summary?.media_impact_leader || topCompanyBy(historyCompanies,'media_index')?.company || 'n.a.';
-  const narrative = current.summary?.dominant_market_narrative || narrativeLabel(topKey(aggregateCounts(companies,'strategic_narratives')), current);
+  const mediaLeader=current.summary?.media_impact_leader||topCompanyBy(companies,'media_index')?.company||'n.a.';
+  const riskLeader=current.summary?.risk_leader||topCompanyBy(companies,'risk_index')?.company||'n.a.';
+  const socialTop=socialLeader(social);
+  const narrative=current.summary?.dominant_market_narrative||narrativeLabel(topKey(aggregateCounts(companies,'strategic_narratives')),current);
 
   setText('kpiMediaLeader',mediaLeader);
   setText('kpiMediaSub',`friss media index: ${fmtNum(current.summary?.media_impact_leader_index)}`);
-
   setText('kpiRiskLeader',riskLeader);
   setText('kpiRiskSub',`friss risk index: ${fmtNum(current.summary?.risk_leader_index)}`);
-
-  setText('kpiHistLeader',histLeader);
-  setText('kpiHistSub',`2026-os hírvezető`);
-
+  setText('kpiSocialLeader',socialTop?.company||'n.a.');
+  setText('kpiSocialSub',socialTop?`social index: ${fmtNum(socialTop.social_index)} • HU találat: ${fmtNum(socialTop.hu_relevant_mentions)}`:'social adat nem érhető el');
   setText('kpiNarrative',narrative);
 
-  renderCompanyCards(companies,current);
+  renderCompanyCards(companies,current,socialMap);
+  renderSocialSignalCards(social);
   renderRiskRanking(companies);
+  renderSocialRanking(social);
   renderCurrentNarratives(companies,current);
-  renderMediaSocial(companies,current);
+  renderSocialTopics(social);
+  renderMediaSocial(companies,current,socialMap);
+  renderSocialHistory(socialHistory);
+  renderHuSocialItems(social);
   renderHistoricalContext(history,current);
   renderHistoricalTrends(history);
   renderCompanyHistoricalModule(history,current);
   renderTopEvents(events,current);
   renderBusinessMatrix(companies,current);
   renderNarrativeMatrix(companies,current);
-  renderTables(companies,historyCompanies,current,history);
+  renderTables(companies,historyCompanies,current,history,social);
 }
 
-function renderCompanyCards(companies,data){
-  document.getElementById('companyCards').innerHTML = companies.map(c => {
-    const hasData = num(c.news_count_30d ?? c.news_count) > 0;
-    const newsIndex = num(c.news_index);
-    const mediaIndex = num(c.media_index);
-    const riskIndex = num(c.risk_index ?? c.risk_score);
-    const social = c.social_signal_status === 'not_collected' ? 'N/A' : fmtNum(c.social_index);
-    const narrative = c.dominant_market_narrative || c.dominant_strategic_narrative_label || narrativeLabel(c.dominant_strategic_narrative,data);
-    const impact = c.dominant_business_impact_label || businessImpactLabel(c.dominant_business_impact,data);
+function renderCompanyCards(companies,data,socialMap){
+  document.getElementById('companyCards').innerHTML=companies.map(c=>{
+    const hasData=num(c.news_count_30d??c.news_count)>0;
+    const newsIndex=num(c.news_index);
+    const mediaIndex=num(c.media_index);
+    const riskIndex=num(c.risk_index??c.risk_score);
+    const s=socialMap[c.company];
+    const social=s?fmtNum(s.social_index):'n.a.';
+    const narrative=c.dominant_market_narrative||c.dominant_strategic_narrative_label||narrativeLabel(c.dominant_strategic_narrative,data);
+    const impact=c.dominant_business_impact_label||businessImpactLabel(c.dominant_business_impact,data);
 
-    if(!hasData){
-      return `
+    if(!hasData&&!s){
+      return`
         <div class="company-card empty">
-          <div class="company-head">
-            <div class="company-name">${c.company}</div>
-            <span class="pill gray">low confidence</span>
-          </div>
-          <div class="company-summary">
-            Ehhez a szereplőhöz jelenleg nincs elegendő friss hír a monitorban. Nem mutatunk hamis risk vagy social értéket.
-          </div>
-        </div>
-      `;
+          <div class="company-head"><div class="company-name">${c.company}</div><span class="pill gray">low confidence</span></div>
+          <div class="company-summary">Ehhez a szereplőhöz jelenleg nincs elegendő friss hír vagy social jel.</div>
+        </div>`;
     }
 
-    return `
+    return`
       <div class="company-card">
-        <div class="company-head">
-          <div class="company-name">${c.company}</div>
-          ${trendBadge(c.trend_direction)}
-        </div>
-
+        <div class="company-head"><div class="company-name">${c.company}</div>${trendBadge(c.trend_direction)}</div>
         <div class="mini-kpis">
           <div class="mini-kpi"><span>News</span><b>${fmtNum(newsIndex)}</b></div>
           <div class="mini-kpi"><span>Media</span><b>${fmtNum(mediaIndex)}</b></div>
           <div class="mini-kpi"><span>Risk</span><b>${fmtNum(riskIndex)}</b></div>
           <div class="mini-kpi"><span>Social</span><b>${social}</b></div>
-          <div class="mini-kpi"><span>Narratíva</span><b>${narrative}</b></div>
-          <div class="mini-kpi"><span>Hatás</span><b>${impact}</b></div>
+          <div class="mini-kpi"><span>HU social</span><b>${fmtNum(s?.hu_relevant_mentions||0)}</b></div>
+          <div class="mini-kpi"><span>Hangulat</span><b>${s?.social_sentiment||'n.a.'}</b></div>
         </div>
-
         <div class="company-summary">
           <b>${c.company}</b> friss médiaképe főként <b>${narrative}</b> irányba mutat.
-          A domináns üzleti hatás: <b>${impact}</b>. A risk index: <b>${fmtNum(riskIndex)}</b>.
+          A domináns üzleti hatás: <b>${impact}</b>. Social téma: <b>${s?.dominant_social_topic||'n.a.'}</b>.
         </div>
-
         <div class="highlight">
-          <b>Kiemelt esemény:</b><br>
-          ${c.highlight_event || 'n.a.'}
-          <div class="small">${c.highlight_event_date || 'n.a.'} • ${c.highlight_event_source || 'n.a.'}</div>
+          <b>Kiemelt esemény:</b><br>${c.highlight_event||'n.a.'}
+          <div class="small">${c.highlight_event_date||'n.a.'} • ${c.highlight_event_source||'n.a.'}</div>
         </div>
-      </div>
-    `;
+      </div>`;
   }).join('');
 }
 
-function renderRiskRanking(companies){
-  const items = [...companies]
-    .filter(c => num(c.news_count_30d ?? c.news_count) > 0)
-    .sort((a,b)=>num(b.risk_index ?? b.risk_score)-num(a.risk_index ?? a.risk_score));
+function renderSocialSignalCards(social){
+  const items=socialItems(social);
+  if(!items.length){
+    document.getElementById('socialSignalCards').innerHTML='<div class="notice">A social-monitor.json még nem érhető el.</div>';
+    return;
+  }
 
-  document.getElementById('riskRanking').innerHTML = items.map((c,i)=>{
-    const value = num(c.risk_index ?? c.risk_score);
-    const cls = i===0 ? 'one' : i===1 ? 'two' : i===2 ? 'three' : '';
-    return `
+  document.getElementById('socialSignalCards').innerHTML=items.map(s=>`
+    <div class="company-card">
+      <div class="company-head">
+        <div class="company-name">${s.company}</div>
+        ${sentimentPill(s.social_sentiment)}
+      </div>
+      <div class="mini-kpis">
+        <div class="mini-kpi"><span>Index</span><b>${fmtNum(s.social_index)}</b></div>
+        <div class="mini-kpi"><span>Említés</span><b>${fmtNum(s.social_mentions)}</b></div>
+        <div class="mini-kpi"><span>Súlyozott</span><b>${fmtNum(s.weighted_social_mentions)}</b></div>
+        <div class="mini-kpi"><span>HU releváns</span><b>${fmtNum(s.hu_relevant_mentions)}</b></div>
+        <div class="mini-kpi"><span>Reddit</span><b>${fmtNum(s.social_sources?.reddit||0)}</b></div>
+        <div class="mini-kpi"><span>YouTube</span><b>${fmtNum(s.social_sources?.youtube||0)}</b></div>
+      </div>
+      <div class="company-summary">
+        Domináns social téma: <b>${s.dominant_social_topic||'n.a.'}</b>.
+        Mastodon: <b>${fmtNum(s.social_sources?.mastodon||0)}</b>.
+      </div>
+      <div class="highlight">
+        <b>Top témák:</b><br>
+        ${(s.top_social_topics||[]).map(t=>`${t.topic} (${fmtNum(t.score)})`).join(' • ')||'n.a.'}
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderRiskRanking(companies){
+  const items=[...companies].filter(c=>num(c.news_count_30d??c.news_count)>0).sort((a,b)=>num(b.risk_index??b.risk_score)-num(a.risk_index??a.risk_score));
+  document.getElementById('riskRanking').innerHTML=items.map((c,i)=>{
+    const value=num(c.risk_index??c.risk_score);
+    const cls=i===0?'one':i===1?'two':i===2?'three':'';
+    return`
       <div class="risk-row">
         <div class="rank ${cls}">${i+1}</div>
         <div>
@@ -993,544 +603,336 @@ function renderRiskRanking(companies){
           <div class="${riskClass(value)}">${fmtNum(value)}/100</div>
           <div class="bar"><div class="fill-orange" style="width:${Math.min(100,value)}%"></div></div>
         </div>
-      </div>
-    `;
+      </div>`;
+  }).join('');
+}
+
+function renderSocialRanking(social){
+  const items=[...socialItems(social)].sort((a,b)=>num(b.social_index)-num(a.social_index));
+  if(!items.length){document.getElementById('socialRanking').innerHTML='Nincs social adat.';return;}
+  document.getElementById('socialRanking').innerHTML=items.map((s,i)=>{
+    const cls=i===0?'one':i===1?'two':i===2?'three':'';
+    return`
+      <div class="risk-row">
+        <div class="rank ${cls}">${i+1}</div>
+        <div>
+          <div style="font-weight:900;color:var(--navy)">${s.company}</div>
+          <div class="small">HU releváns: ${fmtNum(s.hu_relevant_mentions)} • Súlyozott említés: ${fmtNum(s.weighted_social_mentions)} • ${s.social_sentiment}</div>
+        </div>
+        <div>
+          <div class="${num(s.social_index)>=50?'risk-medium':'risk-low'}">${fmtNum(s.social_index)}/100</div>
+          <div class="bar"><div class="fill-purple" style="width:${Math.min(100,num(s.social_index))}%"></div></div>
+        </div>
+      </div>`;
   }).join('');
 }
 
 function renderCurrentNarratives(companies,data){
-  const totals = aggregateCounts(companies,'strategic_narratives');
-  delete totals.general;
-  delete totals['n.a.'];
-
-  const rows = Object.entries(totals).sort((a,b)=>b[1]-a[1]).slice(0,8);
-  const labels = rows.map(r=>narrativeLabel(r[0],data));
-  const values = rows.map(r=>r[1]);
-
-  makeChart(
-    'currentNarrativeChart',
-    'bar',
-    labels,
-    [{label:'Narratíva súly',data:values}],
-    {indexAxis:'y'}
-  );
-
-  const top = labels[0] || 'n.a.';
-  document.getElementById('currentNarrativeInsight').innerHTML =
-    `A friss hírekben a legerősebb piaci narratíva: <b>${top}</b>. Ez a blokk azt mutatja, miről szól most a piac, nem csak azt, hogy mennyi cikk jelent meg.`;
+  const totals=aggregateCounts(companies,'strategic_narratives');
+  delete totals.general;delete totals['n.a.'];
+  const rows=Object.entries(totals).sort((a,b)=>b[1]-a[1]).slice(0,8);
+  const labels=rows.map(r=>narrativeLabel(r[0],data));
+  const values=rows.map(r=>r[1]);
+  makeChart('currentNarrativeChart','bar',labels,[{label:'Narratíva súly',data:values}],{indexAxis:'y'});
+  document.getElementById('currentNarrativeInsight').innerHTML=`A friss hírekben a legerősebb piaci narratíva: <b>${labels[0]||'n.a.'}</b>.`;
 }
 
-function renderMediaSocial(companies,data){
-  const labels = companies.map(c=>c.company);
-  const media = companies.map(c=>num(c.media_index));
-  const social = companies.map(c=>c.social_signal_status === 'not_collected' ? null : num(c.social_index));
-
-  makeChart(
-    'mediaSocialChart',
-    'bar',
-    labels,
-    [
-      {label:'Media Index',data:media},
-      {label:'Social Index – coming soon',data:social}
-    ],
-    {}
-  );
-
-  document.getElementById('mediaSocialInsight').innerHTML =
-    `A Media Index a friss hírek forrássúlyozott mutatója. A Social Index jelenleg nem gyűjtött adat, ezért a diagram nem hamis 0 értéket, hanem hiányzó adatot kezel.`;
+function renderSocialTopics(social){
+  const totals={};
+  socialItems(social).forEach(s=>{
+    (s.top_social_topics||[]).forEach(t=>{
+      totals[t.topic]=(totals[t.topic]||0)+num(t.score);
+    });
+  });
+  const rows=Object.entries(totals).sort((a,b)=>b[1]-a[1]).slice(0,8);
+  makeChart('socialTopicChart','bar',rows.map(r=>r[0]),[{label:'Social topic score',data:rows.map(r=>r[1])}],{indexAxis:'y'});
+  document.getElementById('socialTopicInsight').innerHTML=`A legerősebb social téma: <b>${rows[0]?.[0]||'n.a.'}</b>. Ez nem médiatéma, hanem nyílt social visszhang.`;
 }
 
-function renderHistoricalContext(history,current){
-  const box = document.getElementById('historicalContextBox');
+function renderMediaSocial(companies,data,socialMap){
+  const labels=companies.map(c=>c.company);
+  const media=companies.map(c=>num(c.media_index));
+  const social=companies.map(c=>num(socialMap[c.company]?.social_index));
+  const hu=companies.map(c=>num(socialMap[c.company]?.hu_relevant_mentions));
+  makeChart('mediaSocialChart','bar',labels,[{label:'Media Index',data:media},{label:'Social Signal Index',data:social},{label:'HU relevant social mentions',data:hu}],{});
+  document.getElementById('mediaSocialInsight').innerHTML=`A Media Index és a Social Signal nem ugyanazt méri. Egy cég lehet médiában erős, miközben social térben gyenge, vagy fordítva.`;
+}
 
-  if(!history || !history.summary){
-    box.innerHTML = `
-      <div class="notice">
-        A történeti háttérfájl még nem érhető el. Ellenőrizd, hogy létezik-e:
-        <b>docs/data/news-social-history-2026.json</b>.
-      </div>
-    `;
+function renderSocialHistory(socialHistory){
+  const items=socialHistory?.items||[];
+  if(!items.length){
+    document.getElementById('socialHistoryIndexInsight').innerHTML='A social-history-2026.json még nem tartalmaz adatot.';
+    document.getElementById('socialHistoryMentionsInsight').innerHTML='A trendhez legalább több napi mentés kell.';
     return;
   }
 
-  const s = history.summary;
-  const currentLeader = current.summary?.media_impact_leader || 'n.a.';
-  const currentRisk = current.summary?.risk_leader || 'n.a.';
+  const companies=[...new Set(items.map(x=>x.company))].sort();
+  const dates=[...new Set(items.map(x=>x.date))].sort();
 
-  box.innerHTML = `
-    <div class="reputation-grid">
-      <div class="reputation-tile">
-        <div class="kpi-label">Historical News Leader</div>
-        <div class="reputation-value">${s.media_impact_leader || 'n.a.'}</div>
-        <div class="small">${fmtNum(s.total_news)} hír 2026.01.01 óta</div>
-      </div>
-      <div class="reputation-tile">
-        <div class="kpi-label">Historical Risk Leader</div>
-        <div class="reputation-value">${s.risk_leader || 'n.a.'}</div>
-        <div class="small">Risk index: ${fmtNum(s.risk_leader_index)}</div>
-      </div>
-      <div class="reputation-tile">
-        <div class="kpi-label">Historical Narrative</div>
-        <div class="reputation-value">${s.dominant_market_narrative || 'n.a.'}</div>
-        <div class="small">domináns 2026-os háttér</div>
-      </div>
-      <div class="reputation-tile">
-        <div class="kpi-label">Historical Business Impact</div>
-        <div class="reputation-value">${s.dominant_business_impact || 'n.a.'}</div>
-        <div class="small">domináns üzleti háttér</div>
-      </div>
-    </div>
+  makeChart('socialHistoryIndexChart','line',dates,companies.map(c=>({
+    label:c,
+    data:dates.map(d=>num(items.find(x=>x.date===d&&x.company===c)?.social_index)),
+    tension:.3
+  })),{});
 
-    <div class="formula-box">
-      <b>Friss monitor vs. történeti háttér:</b>
-      a friss médiahatás vezetője <b>${currentLeader}</b>, a 2026-os történeti hírvezető <b>${s.media_impact_leader || 'n.a.'}</b>.
-      A friss risk leader <b>${currentRisk}</b>, a történeti risk leader <b>${s.risk_leader || 'n.a.'}</b>.
-    </div>
-  `;
+  makeChart('socialHistoryMentionsChart','line',dates,companies.map(c=>({
+    label:c,
+    data:dates.map(d=>num(items.find(x=>x.date===d&&x.company===c)?.weighted_social_mentions)),
+    tension:.3
+  })),{});
+
+  const latestDate=dates[dates.length-1];
+  const latest=items.filter(x=>x.date===latestDate).sort((a,b)=>num(b.social_index)-num(a.social_index))[0];
+
+  document.getElementById('socialHistoryIndexInsight').innerHTML=`A legfrissebb social history nap: <b>${latestDate}</b>. A legerősebb social index: <b>${latest?.company||'n.a.'}</b>.`;
+  document.getElementById('socialHistoryMentionsInsight').innerHTML=`A súlyozott említésszám a magyar relevancia alapján csökkenti a nemzetközi zajt.`;
 }
 
-function monthKey(dateStr){
-  if(!dateStr || dateStr === 'n.a.') return 'n.a.';
-  return String(dateStr).slice(0,7);
-}
-
-function buildMonthlyHistory(history){
-  const months = {};
-  const companies = history?.companies || [];
-
-  companies.forEach(company => {
-    (company.articles || []).forEach(article => {
-      const m = monthKey(article.published_at);
-      if(m === 'n.a.') return;
-
-      if(!months[m]){
-        months[m] = {
-          month:m,
-          media_score:0,
-          news_count:0,
-          risk_sum:0,
-          critical_count:0,
-          high_count:0,
-          narratives:{}
-        };
-      }
-
-      months[m].news_count += 1;
-      months[m].media_score += num(article.source_weight);
-      months[m].risk_sum += num(article.article_risk_score);
-      if(article.impact === 'critical') months[m].critical_count += 1;
-      if(article.impact === 'high' || article.impact === 'critical') months[m].high_count += 1;
-
-      const n = article.strategic_narrative || 'general';
-      months[m].narratives[n] = (months[m].narratives[n] || 0) + 1;
+function renderHuSocialItems(social){
+  let items=[];
+  socialItems(social).forEach(s=>{
+    (s.latest_items||[]).forEach(item=>{
+      if(num(item.hu_relevance)>=0.8) items.push({...item,company:s.company});
     });
   });
 
+  items=items.sort((a,b)=>String(b.published).localeCompare(String(a.published))).slice(0,12);
+
+  if(!items.length){
+    document.getElementById('huSocialItems').innerHTML='<div class="notice">Jelenleg nincs külön magyar releváns social találat.</div>';
+    return;
+  }
+
+  document.getElementById('huSocialItems').innerHTML=items.map(item=>`
+    <div class="event-card">
+      <div class="event-title">${item.title||item.summary||'n.a.'}</div>
+      <div class="event-meta">
+        <span class="pill gray">${item.published||'n.a.'}</span>
+        <span class="pill gray">${item.company}</span>
+        <span class="pill purple">${item.source}</span>
+        ${relevancePill(item.hu_relevance)}
+      </div>
+      <div class="small" style="margin-top:8px;">${item.summary||''}</div>
+    </div>
+  `).join('');
+}
+
+function renderHistoricalContext(history,current){
+  const box=document.getElementById('historicalContextBox');
+  if(!history||!history.summary){
+    box.innerHTML=`<div class="notice">A történeti háttérfájl még nem érhető el.</div>`;
+    return;
+  }
+  const s=history.summary;
+  const currentLeader=current.summary?.media_impact_leader||'n.a.';
+  const currentRisk=current.summary?.risk_leader||'n.a.';
+  box.innerHTML=`
+    <div class="reputation-grid">
+      <div class="reputation-tile"><div class="kpi-label">Historical News Leader</div><div class="reputation-value">${s.media_impact_leader||'n.a.'}</div><div class="small">${fmtNum(s.total_news)} hír 2026.01.01 óta</div></div>
+      <div class="reputation-tile"><div class="kpi-label">Historical Risk Leader</div><div class="reputation-value">${s.risk_leader||'n.a.'}</div><div class="small">Risk index: ${fmtNum(s.risk_leader_index)}</div></div>
+      <div class="reputation-tile"><div class="kpi-label">Historical Narrative</div><div class="reputation-value">${s.dominant_market_narrative||'n.a.'}</div><div class="small">domináns 2026-os háttér</div></div>
+      <div class="reputation-tile"><div class="kpi-label">Historical Business Impact</div><div class="reputation-value">${s.dominant_business_impact||'n.a.'}</div><div class="small">domináns üzleti háttér</div></div>
+    </div>
+    <div class="formula-box"><b>Friss monitor vs. történeti háttér:</b> a friss médiahatás vezetője <b>${currentLeader}</b>, a friss risk leader <b>${currentRisk}</b>.</div>`;
+}
+
+function monthKey(dateStr){if(!dateStr||dateStr==='n.a.')return'n.a.';return String(dateStr).slice(0,7);}
+function buildMonthlyHistory(history){
+  const months={};
+  const companies=history?.companies||[];
+  companies.forEach(company=>{
+    (company.articles||[]).forEach(article=>{
+      const m=monthKey(article.published_at);if(m==='n.a.')return;
+      if(!months[m])months[m]={month:m,media_score:0,news_count:0,risk_sum:0,critical_count:0,high_count:0,narratives:{}};
+      months[m].news_count+=1;months[m].media_score+=num(article.source_weight);months[m].risk_sum+=num(article.article_risk_score);
+      if(article.impact==='critical')months[m].critical_count+=1;
+      if(article.impact==='high'||article.impact==='critical')months[m].high_count+=1;
+      const n=article.strategic_narrative||'general';months[m].narratives[n]=(months[m].narratives[n]||0)+1;
+    });
+  });
   return Object.values(months).sort((a,b)=>a.month.localeCompare(b.month));
 }
 
 function renderHistoricalTrends(history){
-  if(!history || !history.companies){
-    document.getElementById('historicalMediaTrendInsight').innerHTML = 'A történeti fájl még nem érhető el.';
-    document.getElementById('historicalRiskTrendInsight').innerHTML = 'A történeti fájl még nem érhető el.';
-    document.getElementById('historicalNarrativeTrendInsight').innerHTML = 'A történeti fájl még nem érhető el.';
+  if(!history||!history.companies){
+    document.getElementById('historicalMediaTrendInsight').innerHTML='A történeti fájl még nem érhető el.';
+    document.getElementById('historicalRiskTrendInsight').innerHTML='A történeti fájl még nem érhető el.';
+    document.getElementById('historicalNarrativeTrendInsight').innerHTML='A történeti fájl még nem érhető el.';
     return;
   }
-
-  const monthly = buildMonthlyHistory(history);
-  const labels = monthly.map(m=>m.month);
-
-  makeChart(
-    'historicalMediaTrendChart',
-    'line',
-    labels,
-    [
-      {label:'Media Score',data:monthly.map(m=>m.media_score),tension:.3},
-      {label:'News Count',data:monthly.map(m=>m.news_count),tension:.3}
-    ],
-    {}
-  );
-
-  makeChart(
-    'historicalRiskTrendChart',
-    'line',
-    labels,
-    [
-      {label:'Átlagos Risk / cikk',data:monthly.map(m=>Math.round(m.risk_sum / Math.max(1,m.news_count))),tension:.3},
-      {label:'Critical események',data:monthly.map(m=>m.critical_count),tension:.3}
-    ],
-    {}
-  );
-
-  const narrativeTotals = {};
-  monthly.forEach(m=>{
-    Object.entries(m.narratives || {}).forEach(([k,v])=>{
-      if(k === 'general' || k === 'n.a.') return;
-      narrativeTotals[k] = (narrativeTotals[k] || 0) + num(v);
-    });
-  });
-
-  const topNarratives = Object.entries(narrativeTotals)
-    .sort((a,b)=>b[1]-a[1])
-    .slice(0,5)
-    .map(x=>x[0]);
-
-  makeChart(
-    'historicalNarrativeTrendChart',
-    'bar',
-    labels,
-    topNarratives.map(k=>({
-      label:narrativeLabel(k,history),
-      data:monthly.map(m=>num(m.narratives?.[k]))
-    })),
-    {scales:{x:{stacked:true,ticks:{color:'#64748b'},grid:{color:'#eef3f7'}},y:{stacked:true,ticks:{color:'#64748b'},grid:{color:'#eef3f7'}}}}
-  );
-
-  const strongest = [...monthly].sort((a,b)=>b.media_score-a.media_score)[0];
-  const riskiest = [...monthly].sort((a,b)=>(b.risk_sum/Math.max(1,b.news_count))-(a.risk_sum/Math.max(1,a.news_count)))[0];
-
-  document.getElementById('historicalMediaTrendInsight').innerHTML =
-    `A történeti médiafolyamat havi bontásban mutatja, mikor volt erősebb sajtóaktivitás. A legerősebb hónap: <b>${strongest?.month || 'n.a.'}</b>.`;
-
-  document.getElementById('historicalRiskTrendInsight').innerHTML =
-    `A risk trend az egy cikkre jutó átlagos kockázati pontot is mutatja. A legerősebb kockázati hónap: <b>${riskiest?.month || 'n.a.'}</b>.`;
-
-  document.getElementById('historicalNarrativeTrendInsight').innerHTML =
-    `A narratíva trend havi bontásban mutatja a top 5 stratégiai témát. Így látható, hogy a piaci verseny, növekedés, munkaerő vagy védekezés mikor erősödött fel.`;
+  const monthly=buildMonthlyHistory(history);
+  const labels=monthly.map(m=>m.month);
+  makeChart('historicalMediaTrendChart','line',labels,[{label:'Media Score',data:monthly.map(m=>m.media_score),tension:.3},{label:'News Count',data:monthly.map(m=>m.news_count),tension:.3}],{});
+  makeChart('historicalRiskTrendChart','line',labels,[{label:'Átlagos Risk / cikk',data:monthly.map(m=>Math.round(m.risk_sum/Math.max(1,m.news_count))),tension:.3},{label:'Critical események',data:monthly.map(m=>m.critical_count),tension:.3}],{});
+  const narrativeTotals={};monthly.forEach(m=>{Object.entries(m.narratives||{}).forEach(([k,v])=>{if(k==='general'||k==='n.a.')return;narrativeTotals[k]=(narrativeTotals[k]||0)+num(v);});});
+  const topNarratives=Object.entries(narrativeTotals).sort((a,b)=>b[1]-a[1]).slice(0,5).map(x=>x[0]);
+  makeChart('historicalNarrativeTrendChart','bar',labels,topNarratives.map(k=>({label:narrativeLabel(k,history),data:monthly.map(m=>num(m.narratives?.[k]))})),{scales:{x:{stacked:true,ticks:{color:'#64748b'},grid:{color:'#eef3f7'}},y:{stacked:true,ticks:{color:'#64748b'},grid:{color:'#eef3f7'}}}});
+  const strongest=[...monthly].sort((a,b)=>b.media_score-a.media_score)[0];
+  const riskiest=[...monthly].sort((a,b)=>(b.risk_sum/Math.max(1,b.news_count))-(a.risk_sum/Math.max(1,a.news_count)))[0];
+  document.getElementById('historicalMediaTrendInsight').innerHTML=`A legerősebb hónap: <b>${strongest?.month||'n.a.'}</b>.`;
+  document.getElementById('historicalRiskTrendInsight').innerHTML=`A legerősebb kockázati hónap: <b>${riskiest?.month||'n.a.'}</b>.`;
+  document.getElementById('historicalNarrativeTrendInsight').innerHTML=`A narratíva trend havi bontásban mutatja a top stratégiai témákat.`;
 }
 
-
 function buildCompanyMonthlyHistory(company){
-  const months = {};
-
-  (company?.articles || []).forEach(article => {
-    const m = monthKey(article.published_at);
-    if(m === 'n.a.') return;
-
-    if(!months[m]){
-      months[m] = {
-        month:m,
-        media_score:0,
-        news_count:0,
-        risk_sum:0,
-        critical_count:0,
-        high_count:0,
-        narratives:{},
-        business_impacts:{},
-        events:[]
-      };
-    }
-
-    months[m].news_count += 1;
-    months[m].media_score += num(article.source_weight);
-    months[m].risk_sum += num(article.article_risk_score);
-
-    if(article.impact === 'critical') months[m].critical_count += 1;
-    if(article.impact === 'high' || article.impact === 'critical') months[m].high_count += 1;
-
-    const n = article.strategic_narrative || 'general';
-    const b = article.business_impact || 'general';
-
-    months[m].narratives[n] = (months[m].narratives[n] || 0) + 1;
-    months[m].business_impacts[b] = (months[m].business_impacts[b] || 0) + 1;
-    months[m].events.push(article);
+  const months={};
+  (company?.articles||[]).forEach(article=>{
+    const m=monthKey(article.published_at);if(m==='n.a.')return;
+    if(!months[m])months[m]={month:m,media_score:0,news_count:0,risk_sum:0,critical_count:0,high_count:0,narratives:{},business_impacts:{},events:[]};
+    months[m].news_count+=1;months[m].media_score+=num(article.source_weight);months[m].risk_sum+=num(article.article_risk_score);
+    if(article.impact==='critical')months[m].critical_count+=1;
+    if(article.impact==='high'||article.impact==='critical')months[m].high_count+=1;
+    const n=article.strategic_narrative||'general';const b=article.business_impact||'general';
+    months[m].narratives[n]=(months[m].narratives[n]||0)+1;months[m].business_impacts[b]=(months[m].business_impacts[b]||0)+1;months[m].events.push(article);
   });
-
   return Object.values(months).sort((a,b)=>a.month.localeCompare(b.month));
 }
 
 function renderCompanyHistoricalModule(history,current){
-  const select = document.getElementById('companyHistorySelect');
-  if(!select) return;
-
-  if(!history || !history.companies || !history.companies.length){
-    document.getElementById('companyHistoryProfile').innerHTML =
-      'A cégenkénti történeti modulhoz szükséges a <b>news-social-history-2026.json</b> fájl.';
+  const select=document.getElementById('companyHistorySelect');if(!select)return;
+  if(!history||!history.companies||!history.companies.length){
+    document.getElementById('companyHistoryProfile').innerHTML='A cégenkénti történeti modulhoz szükséges a <b>news-social-history-2026.json</b> fájl.';
     return;
   }
-
-  const companies = history.companies || [];
-  select.innerHTML = companies
-    .map(c => `<option value="${c.id}">${c.company}</option>`)
-    .join('');
-
-  const currentCompanies = current.companies || [];
-  const preferred = current.summary?.media_impact_leader || companies[0]?.company;
-  const preferredCompany = companies.find(c => c.company === preferred) || companies[0];
-
-  if(preferredCompany){
-    select.value = preferredCompany.id;
-    renderSelectedCompanyHistory(preferredCompany.id, history, current);
-  }
-
-  select.onchange = () => renderSelectedCompanyHistory(select.value, history, current);
+  const companies=history.companies||[];
+  select.innerHTML=companies.map(c=>`<option value="${c.id}">${c.company}</option>`).join('');
+  const preferred=current.summary?.media_impact_leader||companies[0]?.company;
+  const preferredCompany=companies.find(c=>c.company===preferred)||companies[0];
+  if(preferredCompany){select.value=preferredCompany.id;renderSelectedCompanyHistory(preferredCompany.id,history,current);}
+  select.onchange=()=>renderSelectedCompanyHistory(select.value,history,current);
 }
 
-function renderSelectedCompanyHistory(companyId, history, current){
-  const company = (history.companies || []).find(c => c.id === companyId);
-  const currentCompany = (current.companies || []).find(c => c.id === companyId);
+function renderSelectedCompanyHistory(companyId,history,current){
+  const company=(history.companies||[]).find(c=>c.id===companyId);
+  const currentCompany=(current.companies||[]).find(c=>c.id===companyId);
+  if(!company){document.getElementById('companyHistoryProfile').innerHTML='Nincs adat ehhez a szereplőhöz.';return;}
+  const monthly=buildCompanyMonthlyHistory(company);
+  const labels=monthly.map(m=>m.month);
+  const mediaData=monthly.map(m=>m.media_score);
+  const newsData=monthly.map(m=>m.news_count);
+  const riskAvgData=monthly.map(m=>Math.round(m.risk_sum/Math.max(1,m.news_count)));
+  const criticalData=monthly.map(m=>m.critical_count);
+  const historicalNarrative=company.dominant_market_narrative||company.dominant_strategic_narrative_label||'n.a.';
+  const currentNarrative=currentCompany?.dominant_market_narrative||currentCompany?.dominant_strategic_narrative_label||'n.a.';
 
-  if(!company){
-    document.getElementById('companyHistoryProfile').innerHTML = 'Nincs adat ehhez a szereplőhöz.';
-    return;
-  }
-
-  const monthly = buildCompanyMonthlyHistory(company);
-  const labels = monthly.map(m => m.month);
-
-  const mediaData = monthly.map(m => m.media_score);
-  const newsData = monthly.map(m => m.news_count);
-  const riskAvgData = monthly.map(m => Math.round(m.risk_sum / Math.max(1,m.news_count)));
-  const criticalData = monthly.map(m => m.critical_count);
-
-  const firstMonth = monthly[0];
-  const lastMonth = monthly[monthly.length - 1];
-
-  const firstMedia = num(firstMonth?.media_score);
-  const lastMedia = num(lastMonth?.media_score);
-  const firstRisk = firstMonth ? Math.round(firstMonth.risk_sum / Math.max(1,firstMonth.news_count)) : 0;
-  const lastRisk = lastMonth ? Math.round(lastMonth.risk_sum / Math.max(1,lastMonth.news_count)) : 0;
-
-  const mediaDirection = lastMedia > firstMedia ? 'emelkedő' : lastMedia < firstMedia ? 'csökkenő' : 'stabil';
-  const riskDirection = lastRisk > firstRisk ? 'emelkedő' : lastRisk < firstRisk ? 'csökkenő' : 'stabil';
-
-  const historicalNarrative = company.dominant_market_narrative || company.dominant_strategic_narrative_label || 'n.a.';
-  const currentNarrative = currentCompany?.dominant_market_narrative || currentCompany?.dominant_strategic_narrative_label || 'n.a.';
-
-  document.getElementById('companyHistoryProfile').innerHTML = `
+  document.getElementById('companyHistoryProfile').innerHTML=`
     <b>${company.company} történeti profil:</b>
     2026.01.01 óta <b>${fmtNum(company.news_count)}</b> hír,
     <b>${fmtNum(company.media_impact_score)}</b> történeti médiahatás-pont,
-    történeti risk: <b>${fmtNum(company.risk_index ?? company.risk_score)}</b>.
-    A történeti domináns narratíva: <b>${historicalNarrative}</b>.
-    A friss domináns narratíva: <b>${currentNarrative}</b>.
-    A médiaaktivitás iránya: <b>${mediaDirection}</b>, a kockázati pálya: <b>${riskDirection}</b>.
-  `;
+    történeti risk: <b>${fmtNum(company.risk_index??company.risk_score)}</b>.
+    Történeti narratíva: <b>${historicalNarrative}</b>. Friss narratíva: <b>${currentNarrative}</b>.`;
 
-  makeChart(
-    'companyHistoricalMediaChart',
-    'line',
-    labels,
-    [
-      {label:`${company.company} Media Score`,data:mediaData,tension:.3},
-      {label:`${company.company} News Count`,data:newsData,tension:.3}
-    ],
-    {}
-  );
+  makeChart('companyHistoricalMediaChart','line',labels,[{label:`${company.company} Media Score`,data:mediaData,tension:.3},{label:`${company.company} News Count`,data:newsData,tension:.3}],{});
+  makeChart('companyHistoricalRiskChart','line',labels,[{label:'Átlagos Risk / cikk',data:riskAvgData,tension:.3},{label:'Critical események',data:criticalData,tension:.3}],{});
 
-  makeChart(
-    'companyHistoricalRiskChart',
-    'line',
-    labels,
-    [
-      {label:'Átlagos Risk / cikk',data:riskAvgData,tension:.3},
-      {label:'Critical események',data:criticalData,tension:.3}
-    ],
-    {}
-  );
+  const narrativeTotals={};
+  monthly.forEach(m=>{Object.entries(m.narratives||{}).forEach(([k,v])=>{if(k==='general'||k==='n.a.')return;narrativeTotals[k]=(narrativeTotals[k]||0)+num(v);});});
+  const topNarratives=Object.entries(narrativeTotals).sort((a,b)=>b[1]-a[1]).slice(0,5).map(x=>x[0]);
+  makeChart('companyHistoricalNarrativeChart','bar',labels,topNarratives.map(k=>({label:narrativeLabel(k,history),data:monthly.map(m=>num(m.narratives?.[k]))})),{scales:{x:{stacked:true,ticks:{color:'#64748b'},grid:{color:'#eef3f7'}},y:{stacked:true,ticks:{color:'#64748b'},grid:{color:'#eef3f7'}}}});
 
-  const narrativeTotals = {};
-  monthly.forEach(m => {
-    Object.entries(m.narratives || {}).forEach(([k,v]) => {
-      if(k === 'general' || k === 'n.a.') return;
-      narrativeTotals[k] = (narrativeTotals[k] || 0) + num(v);
-    });
-  });
-
-  const topNarratives = Object.entries(narrativeTotals)
-    .sort((a,b)=>b[1]-a[1])
-    .slice(0,5)
-    .map(x=>x[0]);
-
-  makeChart(
-    'companyHistoricalNarrativeChart',
-    'bar',
-    labels,
-    topNarratives.map(k => ({
-      label:narrativeLabel(k,history),
-      data:monthly.map(m => num(m.narratives?.[k]))
-    })),
-    {scales:{x:{stacked:true,ticks:{color:'#64748b'},grid:{color:'#eef3f7'}},y:{stacked:true,ticks:{color:'#64748b'},grid:{color:'#eef3f7'}}}}
-  );
-
-  const strongestMonth = [...monthly].sort((a,b)=>b.media_score-a.media_score)[0];
-  const riskiestMonth = [...monthly].sort((a,b)=>(b.risk_sum/Math.max(1,b.news_count))-(a.risk_sum/Math.max(1,a.news_count)))[0];
-  const dominantNarrative = topNarratives[0] || 'n.a.';
-
-  document.getElementById('companyHistoricalMediaInsight').innerHTML = `
-    <b>${company.company}</b> esetében a legerősebb média hónap: <b>${strongestMonth?.month || 'n.a.'}</b>.
-    Ez mutatja, mikor került a szereplő erősebben a hírtérbe.
-  `;
-
-  document.getElementById('companyHistoricalRiskInsight').innerHTML = `
-    A legmagasabb átlagos kockázati hónap: <b>${riskiestMonth?.month || 'n.a.'}</b>.
-    Ha ez közel van a friss időszakhoz, akkor a reputációs kockázat nem csak egyszeri, hanem erősödő jel lehet.
-  `;
-
-  document.getElementById('companyHistoricalNarrativeInsight').innerHTML = `
-    A történeti narratívák alapján <b>${company.company}</b> legerősebb témája:
-    <b>${narrativeLabel(dominantNarrative,history)}</b>.
-    Ezt érdemes összevetni a friss domináns narratívával.
-  `;
-
-  renderCompanyHistoricalEvents(company, history);
+  document.getElementById('companyHistoricalMediaInsight').innerHTML=`A legerősebb média hónap: <b>${[...monthly].sort((a,b)=>b.media_score-a.media_score)[0]?.month||'n.a.'}</b>.`;
+  document.getElementById('companyHistoricalRiskInsight').innerHTML=`A legmagasabb átlagos kockázati hónap: <b>${[...monthly].sort((a,b)=>(b.risk_sum/Math.max(1,b.news_count))-(a.risk_sum/Math.max(1,a.news_count)))[0]?.month||'n.a.'}</b>.`;
+  document.getElementById('companyHistoricalNarrativeInsight').innerHTML=`A legerősebb történeti narratíva: <b>${narrativeLabel(topNarratives[0]||'n.a.',history)}</b>.`;
+  renderCompanyHistoricalEvents(company,history);
 }
 
-function renderCompanyHistoricalEvents(company, history){
-  const events = [...(company.articles || [])]
-    .sort((a,b)=>
-      num(b.article_risk_score)-num(a.article_risk_score) ||
-      num(b.source_weight)-num(a.source_weight) ||
-      String(b.published_at).localeCompare(String(a.published_at))
-    )
-    .slice(0,10);
-
-  document.getElementById('companyHistoricalEvents').innerHTML = events.map(e => {
-    const cls = e.impact === 'critical' ? 'critical' : e.impact === 'high' ? 'high' : '';
-    return `
+function renderCompanyHistoricalEvents(company,history){
+  const events=[...(company.articles||[])].sort((a,b)=>num(b.article_risk_score)-num(a.article_risk_score)||num(b.source_weight)-num(a.source_weight)||String(b.published_at).localeCompare(String(a.published_at))).slice(0,10);
+  document.getElementById('companyHistoricalEvents').innerHTML=events.map(e=>{
+    const cls=e.impact==='critical'?'critical':e.impact==='high'?'high':'';
+    return`
       <div class="event-card ${cls}">
-        <div class="event-title">${e.title || 'n.a.'}</div>
+        <div class="event-title">${e.title||'n.a.'}</div>
         <div class="event-meta">
-          <span class="pill gray">${e.published_at || 'n.a.'}</span>
-          <span class="pill gray">${e.source || 'n.a.'}</span>
+          <span class="pill gray">${e.published_at||'n.a.'}</span>
+          <span class="pill gray">${e.source||'n.a.'}</span>
           ${sentimentPill(e.sentiment)}
           ${impactPill(e.impact)}
           <span class="pill purple">${businessImpactLabel(e.business_impact,history)}</span>
           <span class="pill green">${narrativeLabel(e.strategic_narrative,history)}</span>
           <span class="pill red">risk ${fmtNum(e.article_risk_score)}</span>
         </div>
-      </div>
-    `;
-  }).join('') || 'Nincs történeti esemény ehhez a szereplőhöz.';
+      </div>`;
+  }).join('')||'Nincs történeti esemény ehhez a szereplőhöz.';
 }
 
-
 function renderTopEvents(events,data){
-  const sorted = [...(events || [])]
-    .sort((a,b)=>
-      num(b.article_risk_score)-num(a.article_risk_score) ||
-      num(b.source_weight)-num(a.source_weight)
-    )
-    .slice(0,12);
-
-  document.getElementById('topEvents').innerHTML = sorted.map(e=>{
-    const cls = e.impact === 'critical' ? 'critical' : e.impact === 'high' ? 'high' : '';
-    return `
+  const sorted=[...(events||[])].sort((a,b)=>num(b.article_risk_score)-num(a.article_risk_score)||num(b.source_weight)-num(a.source_weight)).slice(0,12);
+  document.getElementById('topEvents').innerHTML=sorted.map(e=>{
+    const cls=e.impact==='critical'?'critical':e.impact==='high'?'high':'';
+    return`
       <div class="event-card ${cls}">
-        <div class="event-title">${e.title || 'n.a.'}</div>
+        <div class="event-title">${e.title||'n.a.'}</div>
         <div class="event-meta">
-          <span class="pill gray">${e.published_at || 'n.a.'}</span>
-          <span class="pill gray">${e.company || 'n.a.'}</span>
-          <span class="pill gray">${e.source || 'n.a.'}</span>
+          <span class="pill gray">${e.published_at||'n.a.'}</span>
+          <span class="pill gray">${e.company||'n.a.'}</span>
+          <span class="pill gray">${e.source||'n.a.'}</span>
           ${sentimentPill(e.sentiment)}
           ${impactPill(e.impact)}
           <span class="pill purple">${businessImpactLabel(e.business_impact,data)}</span>
           <span class="pill green">${narrativeLabel(e.strategic_narrative,data)}</span>
           <span class="pill red">risk ${fmtNum(e.article_risk_score)}</span>
         </div>
-      </div>
-    `;
-  }).join('') || 'Nincs kiemelt esemény.';
+      </div>`;
+  }).join('')||'Nincs kiemelt esemény.';
 }
 
 function renderBusinessMatrix(companies,data){
-  const keys = allKeys(companies,'business_impacts');
-
-  document.getElementById('businessMatrix').innerHTML = `
+  const keys=allKeys(companies,'business_impacts');
+  document.getElementById('businessMatrix').innerHTML=`
     <table class="matrix-table">
-      <thead>
-        <tr>
-          <th>Üzleti hatás</th>
-          ${companies.map(c=>`<th>${c.company}</th>`).join('')}
-        </tr>
-      </thead>
-      <tbody>
-        ${keys.map(k=>`
-          <tr>
-            <td>${businessImpactLabel(k,data)}</td>
-            ${companies.map(c=>`<td><b>${fmtNum(c.business_impacts?.[k]||0)}</b></td>`).join('')}
-          </tr>
-        `).join('')}
-      </tbody>
-    </table>
-  `;
+      <thead><tr><th>Üzleti hatás</th>${companies.map(c=>`<th>${c.company}</th>`).join('')}</tr></thead>
+      <tbody>${keys.map(k=>`<tr><td>${businessImpactLabel(k,data)}</td>${companies.map(c=>`<td><b>${fmtNum(c.business_impacts?.[k]||0)}</b></td>`).join('')}</tr>`).join('')}</tbody>
+    </table>`;
 }
 
 function renderNarrativeMatrix(companies,data){
-  const keys = allKeys(companies,'strategic_narratives');
-
-  document.getElementById('narrativeMatrix').innerHTML = `
+  const keys=allKeys(companies,'strategic_narratives');
+  document.getElementById('narrativeMatrix').innerHTML=`
     <table class="matrix-table">
-      <thead>
-        <tr>
-          <th>Stratégiai narratíva</th>
-          ${companies.map(c=>`<th>${c.company}</th>`).join('')}
-        </tr>
-      </thead>
-      <tbody>
-        ${keys.map(k=>`
-          <tr>
-            <td>${narrativeLabel(k,data)}</td>
-            ${companies.map(c=>`<td><b>${fmtNum(c.strategic_narratives?.[k]||0)}</b></td>`).join('')}
-          </tr>
-        `).join('')}
-      </tbody>
-    </table>
-  `;
+      <thead><tr><th>Stratégiai narratíva</th>${companies.map(c=>`<th>${c.company}</th>`).join('')}</tr></thead>
+      <tbody>${keys.map(k=>`<tr><td>${narrativeLabel(k,data)}</td>${companies.map(c=>`<td><b>${fmtNum(c.strategic_narratives?.[k]||0)}</b></td>`).join('')}</tr>`).join('')}</tbody>
+    </table>`;
 }
 
-function renderTables(companies,historyCompanies,current,history){
-  document.getElementById('currentTable').innerHTML = `
-    <thead>
+function renderTables(companies,historyCompanies,current,history,social){
+  document.getElementById('currentTable').innerHTML=`
+    <thead><tr><th>Cég</th><th>News Index</th><th>Media Index</th><th>Risk</th><th>Domináns narratíva</th><th>Üzleti hatás</th><th>Kiemelt esemény</th></tr></thead>
+    <tbody>${companies.map(c=>`
       <tr>
-        <th>Cég</th>
-        <th>News Index</th>
-        <th>Media Index</th>
-        <th>Risk</th>
-        <th>Domináns narratíva</th>
-        <th>Üzleti hatás</th>
-        <th>Kiemelt esemény</th>
-      </tr>
-    </thead>
-    <tbody>
-      ${companies.map(c=>`
-        <tr>
-          <td><b>${c.company}</b></td>
-          <td>${fmtNum(c.news_index)}</td>
-          <td>${fmtNum(c.media_index)}</td>
-          <td>${fmtNum(c.risk_index ?? c.risk_score)}</td>
-          <td>${c.dominant_market_narrative || c.dominant_strategic_narrative_label}</td>
-          <td>${c.dominant_business_impact_label}</td>
-          <td>${c.highlight_event || 'n.a.'}</td>
-        </tr>
-      `).join('')}
-    </tbody>
-  `;
+        <td><b>${c.company}</b></td>
+        <td>${fmtNum(c.news_index)}</td>
+        <td>${fmtNum(c.media_index)}</td>
+        <td>${fmtNum(c.risk_index??c.risk_score)}</td>
+        <td>${c.dominant_market_narrative||c.dominant_strategic_narrative_label}</td>
+        <td>${c.dominant_business_impact_label}</td>
+        <td>${c.highlight_event||'n.a.'}</td>
+      </tr>`).join('')}</tbody>`;
 
-  document.getElementById('historyTable').innerHTML = `
-    <thead>
+  document.getElementById('socialTable').innerHTML=`
+    <thead><tr><th>Cég</th><th>Social Index</th><th>Említés</th><th>Súlyozott</th><th>HU releváns</th><th>Hangulat</th><th>Domináns social téma</th></tr></thead>
+    <tbody>${socialItems(social).map(s=>`
       <tr>
-        <th>Cég</th>
-        <th>Hírek</th>
-        <th>Media Index</th>
-        <th>Risk</th>
-        <th>Domináns narratíva</th>
-        <th>Üzleti hatás</th>
-      </tr>
-    </thead>
-    <tbody>
-      ${(historyCompanies || []).map(c=>`
-        <tr>
-          <td><b>${c.company}</b></td>
-          <td>${fmtNum(c.news_count)}</td>
-          <td>${fmtNum(c.media_index)}</td>
-          <td>${fmtNum(c.risk_index ?? c.risk_score)}</td>
-          <td>${c.dominant_market_narrative || c.dominant_strategic_narrative_label}</td>
-          <td>${c.dominant_business_impact_label}</td>
-        </tr>
-      `).join('')}
-    </tbody>
-  `;
+        <td><b>${s.company}</b></td>
+        <td>${fmtNum(s.social_index)}</td>
+        <td>${fmtNum(s.social_mentions)}</td>
+        <td>${fmtNum(s.weighted_social_mentions)}</td>
+        <td>${fmtNum(s.hu_relevant_mentions)}</td>
+        <td>${s.social_sentiment}</td>
+        <td>${s.dominant_social_topic}</td>
+      </tr>`).join('')}</tbody>`;
+
+  document.getElementById('historyTable').innerHTML=`
+    <thead><tr><th>Cég</th><th>Hírek</th><th>Media Index</th><th>Risk</th><th>Domináns narratíva</th><th>Üzleti hatás</th></tr></thead>
+    <tbody>${(historyCompanies||[]).map(c=>`
+      <tr>
+        <td><b>${c.company}</b></td>
+        <td>${fmtNum(c.news_count)}</td>
+        <td>${fmtNum(c.media_index)}</td>
+        <td>${fmtNum(c.risk_index??c.risk_score)}</td>
+        <td>${c.dominant_market_narrative||c.dominant_strategic_narrative_label}</td>
+        <td>${c.dominant_business_impact_label}</td>
+      </tr>`).join('')}</tbody>`;
 }
 
 loadData();
