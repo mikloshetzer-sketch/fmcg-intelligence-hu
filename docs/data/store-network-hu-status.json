@@ -1,0 +1,103 @@
+{
+  "updated_at": "2026-06-09T11:30:39.303863+00:00",
+  "status": "ok",
+  "version": "store-network-hu-v1-openstreetmap-overpass",
+  "source": "openstreetmap_overpass",
+  "store_count": 0,
+  "companies": [
+    {
+      "company": "Lidl",
+      "status": "error",
+      "stores": 0,
+      "brand_values": [
+        "Lidl"
+      ],
+      "error": "406 Client Error: Not Acceptable for url: https://overpass-api.de/api/interpreter"
+    },
+    {
+      "company": "ALDI",
+      "status": "error",
+      "stores": 0,
+      "brand_values": [
+        "ALDI",
+        "Aldi"
+      ],
+      "error": "406 Client Error: Not Acceptable for url: https://overpass-api.de/api/interpreter"
+    },
+    {
+      "company": "SPAR",
+      "status": "error",
+      "stores": 0,
+      "brand_values": [
+        "SPAR",
+        "INTERSPAR",
+        "Interspar",
+        "Spar"
+      ],
+      "error": "406 Client Error: Not Acceptable for url: https://overpass-api.de/api/interpreter"
+    },
+    {
+      "company": "Tesco",
+      "status": "error",
+      "stores": 0,
+      "brand_values": [
+        "Tesco",
+        "TESCO"
+      ],
+      "error": "406 Client Error: Not Acceptable for url: https://overpass-api.de/api/interpreter"
+    },
+    {
+      "company": "Auchan",
+      "status": "error",
+      "stores": 0,
+      "brand_values": [
+        "Auchan"
+      ],
+      "error": "406 Client Error: Not Acceptable for url: https://overpass-api.de/api/interpreter"
+    },
+    {
+      "company": "Penny",
+      "status": "error",
+      "stores": 0,
+      "brand_values": [
+        "Penny",
+        "PENNY",
+        "Penny Market",
+        "PENNY Market"
+      ],
+      "error": "406 Client Error: Not Acceptable for url: https://overpass-api.de/api/interpreter"
+    }
+  ],
+  "filters": {
+    "country": "Hungary",
+    "shop": "supermarket|convenience",
+    "brands": {
+      "Lidl": [
+        "Lidl"
+      ],
+      "ALDI": [
+        "ALDI",
+        "Aldi"
+      ],
+      "SPAR": [
+        "SPAR",
+        "INTERSPAR",
+        "Interspar",
+        "Spar"
+      ],
+      "Tesco": [
+        "Tesco",
+        "TESCO"
+      ],
+      "Auchan": [
+        "Auchan"
+      ],
+      "Penny": [
+        "Penny",
+        "PENNY",
+        "Penny Market",
+        "PENNY Market"
+      ]
+    }
+  }
+}
