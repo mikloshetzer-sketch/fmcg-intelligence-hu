@@ -3,7 +3,6 @@
 
 import json
 import time
-import hashlib
 import requests
 from datetime import datetime, timezone
 from pathlib import Path
@@ -33,17 +32,18 @@ def now_iso():
 
 
 def slugify(value):
-    value = value.lower()
+    value = str(value).lower()
     replacements = {
         "á": "a", "é": "e", "í": "i", "ó": "o", "ö": "o", "ő": "o",
         "ú": "u", "ü": "u", "ű": "u",
-        " ": "_", "-": "_", ".": "", ",": "", "/": "_"
+        " ": "_", "-": "_", ".": "", ",": "", "/": "_", "\\": "_"
     }
 
     for old, new in replacements.items():
         value = value.replace(old, new)
 
     value = "".join(ch for ch in value if ch.isalnum() or ch == "_")
+
     while "__" in value:
         value = value.replace("__", "_")
 
@@ -52,7 +52,7 @@ def slugify(value):
 
 def make_store_id(company, name, city, osm_id):
     base = f"{company}_{city}_{name}_{osm_id}"
-    return slugify(base)[:80]
+    return slugify(base)[:90]
 
 
 def region_from_city(city):
@@ -61,7 +61,7 @@ def region_from_city(city):
     if city_l == "budapest":
         return "Közép-Magyarország"
 
-    county_regions = {
+    region_map = {
         "budaörs": "Közép-Magyarország",
         "szigetszentmiklós": "Közép-Magyarország",
         "dunakeszi": "Közép-Magyarország",
@@ -69,47 +69,68 @@ def region_from_city(city):
         "vecsés": "Közép-Magyarország",
         "gyál": "Közép-Magyarország",
         "monor": "Közép-Magyarország",
+        "maglód": "Közép-Magyarország",
+        "gödöllő": "Közép-Magyarország",
+        "vác": "Közép-Magyarország",
+        "cegléd": "Közép-Magyarország",
 
         "győr": "Nyugat-Dunántúl",
         "sopron": "Nyugat-Dunántúl",
         "szombathely": "Nyugat-Dunántúl",
         "zalaegerszeg": "Nyugat-Dunántúl",
         "nagykanizsa": "Nyugat-Dunántúl",
+        "mosonmagyaróvár": "Nyugat-Dunántúl",
 
         "veszprém": "Közép-Dunántúl",
         "székesfehérvár": "Közép-Dunántúl",
         "tatabánya": "Közép-Dunántúl",
         "dunaújváros": "Közép-Dunántúl",
+        "esztergom": "Közép-Dunántúl",
 
         "pécs": "Dél-Dunántúl",
         "kaposvár": "Dél-Dunántúl",
         "szekszárd": "Dél-Dunántúl",
+        "siófok": "Dél-Dunántúl",
 
         "miskolc": "Észak-Magyarország",
         "eger": "Észak-Magyarország",
         "salgótarján": "Észak-Magyarország",
+        "kazincbarcika": "Észak-Magyarország",
 
         "debrecen": "Észak-Alföld",
         "nyíregyháza": "Észak-Alföld",
         "szolnok": "Észak-Alföld",
+        "karcag": "Észak-Alföld",
+        "hajdúböszörmény": "Észak-Alföld",
 
         "szeged": "Dél-Alföld",
         "kecskemét": "Dél-Alföld",
         "békéscsaba": "Dél-Alföld",
-        "hódmezővásárhely": "Dél-Alföld"
+        "hódmezővásárhely": "Dél-Alföld",
+        "baja": "Dél-Alföld"
     }
 
-    return county_regions.get(city_l, "n.a.")
+    return region_map.get(city_l, "n.a.")
 
 
 def build_overpass_query(brand_values):
+    """
+    Stabilabb Overpass query.
+    A korábbi regexes shop-filter több esetben 406 Not Acceptable hibát adott.
+    Ezért külön node/way/relation + supermarket/convenience lekérdezéseket használunk.
+    """
     brand_filters = []
 
     for brand in brand_values:
         escaped = brand.replace('"', '\\"')
-        brand_filters.append(f'node["shop"~"supermarket|convenience"]["brand"="{escaped}"](area.searchArea);')
-        brand_filters.append(f'way["shop"~"supermarket|convenience"]["brand"="{escaped}"](area.searchArea);')
-        brand_filters.append(f'relation["shop"~"supermarket|convenience"]["brand"="{escaped}"](area.searchArea);')
+
+        brand_filters.append(f'node["shop"="supermarket"]["brand"="{escaped}"](area.searchArea);')
+        brand_filters.append(f'way["shop"="supermarket"]["brand"="{escaped}"](area.searchArea);')
+        brand_filters.append(f'relation["shop"="supermarket"]["brand"="{escaped}"](area.searchArea);')
+
+        brand_filters.append(f'node["shop"="convenience"]["brand"="{escaped}"](area.searchArea);')
+        brand_filters.append(f'way["shop"="convenience"]["brand"="{escaped}"](area.searchArea);')
+        brand_filters.append(f'relation["shop"="convenience"]["brand"="{escaped}"](area.searchArea);')
 
     brand_block = "\n".join(brand_filters)
 
@@ -124,11 +145,17 @@ out center tags;
 
 
 def fetch_overpass(query):
+    headers = {
+        "User-Agent": "fmcg-intelligence-hu-store-network-builder/1.1"
+    }
+
     response = requests.post(
         OVERPASS_URL,
         data={"data": query},
+        headers=headers,
         timeout=240
     )
+
     response.raise_for_status()
     return response.json()
 
@@ -150,6 +177,7 @@ def extract_city(tags):
         or tags.get("is_in:city")
         or tags.get("addr:town")
         or tags.get("addr:village")
+        or tags.get("addr:suburb")
         or "n.a."
     )
 
@@ -161,6 +189,7 @@ def extract_address(tags):
     city = extract_city(tags)
 
     parts = []
+
     if postcode and city != "n.a.":
         parts.append(f"{postcode} {city}")
     elif city != "n.a.":
@@ -173,14 +202,14 @@ def extract_address(tags):
     return ", ".join(parts) if parts else "n.a."
 
 
-def normalize_company_from_brand(raw_brand):
+def normalize_company_from_brand(raw_brand, expected_company):
     raw = (raw_brand or "").lower()
 
     if "lidl" in raw:
         return "Lidl"
     if "aldi" in raw:
         return "ALDI"
-    if "spar" in raw:
+    if "interspar" in raw or "spar" in raw:
         return "SPAR"
     if "tesco" in raw:
         return "Tesco"
@@ -189,7 +218,7 @@ def normalize_company_from_brand(raw_brand):
     if "penny" in raw:
         return "Penny"
 
-    return raw_brand or "n.a."
+    return expected_company
 
 
 def parse_element(element, expected_company):
@@ -200,7 +229,7 @@ def parse_element(element, expected_company):
         return None
 
     raw_brand = tags.get("brand") or expected_company
-    company = normalize_company_from_brand(raw_brand)
+    company = normalize_company_from_brand(raw_brand, expected_company)
 
     name = tags.get("name") or f"{company} üzlet"
     city = extract_city(tags)
@@ -292,6 +321,7 @@ def main():
                 "brand_values": brand_values,
                 "error": str(exc)
             })
+
             print(f"{company}: ERROR {exc}")
 
         time.sleep(FETCH_SLEEP)
@@ -301,7 +331,7 @@ def main():
 
     payload = {
         "updated_at": updated_at,
-        "version": "store-network-hu-v1-openstreetmap-overpass",
+        "version": "store-network-hu-v1.1-openstreetmap-overpass",
         "scope": "Hungarian FMCG store network from OpenStreetMap",
         "method_note": (
             "OpenStreetMap / Overpass alapú országos bolthálózati adatbázis. "
@@ -314,13 +344,16 @@ def main():
     status = {
         "updated_at": updated_at,
         "status": "ok",
-        "version": "store-network-hu-v1-openstreetmap-overpass",
+        "version": "store-network-hu-v1.1-openstreetmap-overpass",
         "source": "openstreetmap_overpass",
         "store_count": len(stores),
         "companies": status_companies,
         "filters": {
             "country": "Hungary",
-            "shop": "supermarket|convenience",
+            "shop": [
+                "supermarket",
+                "convenience"
+            ],
             "brands": BRANDS
         }
     }
