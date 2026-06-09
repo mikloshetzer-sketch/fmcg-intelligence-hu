@@ -1,0 +1,103 @@
+{
+  "updated_at": "2026-06-09T07:15:27.164598+00:00",
+  "status": "ok",
+  "companies": [
+    {
+      "company": "Lidl",
+      "mentions": 245,
+      "index": 100,
+      "sources": {
+        "reddit": 12,
+        "youtube": 213,
+        "mastodon": 20
+      },
+      "sentiment": "positive",
+      "topic": "árak és akciók",
+      "errors": []
+    },
+    {
+      "company": "SPAR",
+      "mentions": 197,
+      "index": 100,
+      "sources": {
+        "reddit": 1,
+        "youtube": 175,
+        "mastodon": 21
+      },
+      "sentiment": "positive",
+      "topic": "árak és akciók",
+      "errors": []
+    },
+    {
+      "company": "Tesco",
+      "mentions": 221,
+      "index": 100,
+      "sources": {
+        "reddit": 1,
+        "youtube": 200,
+        "mastodon": 20
+      },
+      "sentiment": "mixed",
+      "topic": "árak és akciók",
+      "errors": []
+    },
+    {
+      "company": "ALDI",
+      "mentions": 235,
+      "index": 100,
+      "sources": {
+        "reddit": 7,
+        "youtube": 208,
+        "mastodon": 20
+      },
+      "sentiment": "positive",
+      "topic": "árak és akciók",
+      "errors": []
+    },
+    {
+      "company": "Penny",
+      "mentions": 246,
+      "index": 100,
+      "sources": {
+        "reddit": 10,
+        "youtube": 216,
+        "mastodon": 20
+      },
+      "sentiment": "positive",
+      "topic": "árak és akciók",
+      "errors": []
+    },
+    {
+      "company": "Auchan",
+      "mentions": 198,
+      "index": 94,
+      "sources": {
+        "reddit": 0,
+        "youtube": 178,
+        "mastodon": 20
+      },
+      "sentiment": "positive",
+      "topic": "árak és akciók",
+      "errors": []
+    },
+    {
+      "company": "CBA",
+      "mentions": 67,
+      "index": 100,
+      "sources": {
+        "reddit": 1,
+        "youtube": 46,
+        "mastodon": 20
+      },
+      "sentiment": "mixed",
+      "topic": "árak és akciók",
+      "errors": []
+    }
+  ],
+  "sources": [
+    "reddit_rss",
+    "youtube_discovery_google_news_rss",
+    "mastodon_tag_rss"
+  ],
+  "method_note": "Első verziós Social Signal Layer. Óvatos, nyílt forrású jelzőrendszer."
+}
