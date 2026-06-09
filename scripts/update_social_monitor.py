@@ -16,6 +16,7 @@ import feedparser
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "docs" / "data"
 
+PROFILE_FILE = DATA_DIR / "company-profiles.json"
 OUT_FILE = DATA_DIR / "social-monitor.json"
 STATUS_FILE = DATA_DIR / "social-monitor-status.json"
 HISTORY_FILE = DATA_DIR / "social-history-2026.json"
@@ -37,6 +38,7 @@ HU_RELEVANCE_TERMS = [
     "forint",
     "huf",
     "ft",
+    ".hu",
     "akciós újság",
     "akcios ujsag",
     "lidl magyarország",
@@ -48,103 +50,6 @@ HU_RELEVANCE_TERMS = [
     "penny market magyarország",
     "cba príma",
     "cba prima"
-]
-
-
-COMPANIES = [
-    {
-        "company": "Lidl",
-        "queries": [
-            "Lidl Magyarország",
-            "Lidl Hungary",
-            "Lidl akció",
-            "Lidl panasz",
-            "Lidl Scan Go"
-        ],
-        "required_terms": ["lidl"],
-        "mastodon_tags": ["lidl", "lidlmagyarorszag"]
-    },
-    {
-        "company": "SPAR",
-        "queries": [
-            "SPAR Magyarország",
-            "SPAR Hungary",
-            "Interspar Magyarország",
-            "SPAR akció",
-            "SPAR panasz"
-        ],
-        "required_terms": ["spar", "interspar"],
-        "mastodon_tags": ["spar", "sparmagyarorszag", "interspar"]
-    },
-    {
-        "company": "Tesco",
-        "queries": [
-            "Tesco Magyarország",
-            "Tesco Hungary",
-            "Tesco akció",
-            "Tesco panasz",
-            "Tesco online bevásárlás"
-        ],
-        "required_terms": ["tesco"],
-        "mastodon_tags": ["tesco", "tescomagyarorszag"]
-    },
-    {
-        "company": "ALDI",
-        "queries": [
-            "ALDI Magyarország",
-            "ALDI Hungary",
-            "Aldi akció",
-            "Aldi panasz"
-        ],
-        "required_terms": ["aldi"],
-        "mastodon_tags": ["aldi", "aldimagyarorszag"]
-    },
-    {
-        "company": "Penny",
-        "queries": [
-            "Penny Market Magyarország",
-            "Penny Market Hungary",
-            "Penny Market akció",
-            "Penny Market panasz"
-        ],
-        "required_terms": ["penny market", "penny"],
-        "context_terms": [
-            "market", "magyarország", "magyarorszag", "hungary", "áruház",
-            "aruhaz", "bolt", "üzlet", "uzlet", "akció", "akcio",
-            "panasz", "bevásárlás", "bevasarlas", "supermarket",
-            "retail", "élelmiszer", "elelmiszer"
-        ],
-        "mastodon_tags": ["pennymarket", "pennymagyarorszag"]
-    },
-    {
-        "company": "Auchan",
-        "queries": [
-            "Auchan Magyarország",
-            "Auchan Hungary",
-            "Auchan akció",
-            "Auchan panasz",
-            "Auchan online"
-        ],
-        "required_terms": ["auchan"],
-        "mastodon_tags": ["auchan", "auchanmagyarorszag"]
-    },
-    {
-        "company": "CBA",
-        "queries": [
-            "CBA Magyarország",
-            "CBA üzlet",
-            "CBA akció",
-            "CBA panasz",
-            "CBA Príma"
-        ],
-        "required_terms": ["cba", "príma", "prima"],
-        "context_terms": [
-            "élelmiszer", "elelmiszer", "bolt", "üzlet", "uzlet",
-            "áruház", "aruhaz", "akció", "akcio", "panasz",
-            "bevásárlás", "bevasarlas", "retail", "supermarket"
-        ],
-        "mastodon_tags": ["cba", "cbaprima"]
-    }
 ]
 
 
@@ -163,7 +68,7 @@ TOPIC_KEYWORDS = {
     ],
     "munkaerő és foglalkoztatás": [
         "munka", "állás", "allas", "dolgozó", "dolgozo", "fizetés",
-        "ber", "bér", "munkavállaló", "job", "salary", "employee",
+        "bér", "ber", "munkavállaló", "job", "salary", "employee",
         "worker", "staff", "vacature"
     ],
     "termék és minőség": [
@@ -251,10 +156,8 @@ def parse_date(value):
 
 def is_recent(published_value, max_age_days=MAX_ITEM_AGE_DAYS):
     dt = parse_date(published_value)
-
     if dt is None:
         return True
-
     return dt >= now_utc() - timedelta(days=max_age_days)
 
 
@@ -280,6 +183,27 @@ def reddit_rss(query):
 def mastodon_tag_rss(tag):
     tag = tag.replace("#", "").strip()
     return f"https://mastodon.social/tags/{urllib.parse.quote(tag)}.rss"
+
+
+def load_company_profiles():
+    if not PROFILE_FILE.exists():
+        raise FileNotFoundError(f"Missing company profile file: {PROFILE_FILE}")
+
+    profiles = json.loads(PROFILE_FILE.read_text(encoding="utf-8"))
+
+    companies = []
+    for name, profile in profiles.items():
+        companies.append({
+            "company": name,
+            "queries": profile.get("keywords", []),
+            "required_terms": profile.get("required_terms", []),
+            "context_terms": profile.get("context_terms", []),
+            "mastodon_tags": profile.get("social_tags", []),
+            "website": profile.get("website", ""),
+            "country": profile.get("country", "Hungary")
+        })
+
+    return companies
 
 
 def detect_hu_relevance(title, summary, link, query):
@@ -448,24 +372,20 @@ def score_topics(items):
 
     ranked = sorted(scores.items(), key=lambda x: x[1], reverse=True)
 
-    top_topics = [
+    return [
         {
             "topic": topic,
             "score": round(score, 2)
         }
         for topic, score in ranked
         if score > 0
-    ]
-
-    return top_topics[:3]
+    ][:3]
 
 
 def detect_topic(items):
     top_topics = score_topics(items)
-
     if not top_topics:
         return "általános vállalati említés"
-
     return top_topics[0]["topic"]
 
 
@@ -584,7 +504,8 @@ def build_company_result(company):
         "method_note": (
             "Nyílt RSS és keresési alapú social signal. "
             "Nem teljes social listening, nem reprezentatív közvélemény-kutatás. "
-            "A V1.3 verzió magyar relevancia súlyozást és történeti mentést használ."
+            "A V1.3 verzió company-profiles.json alapú céges master data réteget, "
+            "magyar relevancia súlyozást és történeti mentést használ."
         ),
         "errors": errors
     }
@@ -644,14 +565,14 @@ def save_history(results, updated_at):
 def main():
     DATA_DIR.mkdir(parents=True, exist_ok=True)
 
-    results = []
-
     updated_at = now_iso()
+    companies = load_company_profiles()
+    results = []
 
     status = {
         "updated_at": updated_at,
         "status": "ok",
-        "version": "social-signal-layer-v1.3",
+        "version": "social-signal-layer-v1.3-profile-based",
         "companies": [],
         "sources": [
             "reddit_rss",
@@ -662,15 +583,16 @@ def main():
             "max_item_age_days": MAX_ITEM_AGE_DAYS,
             "max_items_per_source_per_company": MAX_ITEMS_PER_SOURCE_PER_COMPANY,
             "company_context_filter": True,
-            "hungarian_relevance_weighting": True
+            "hungarian_relevance_weighting": True,
+            "company_profiles": str(PROFILE_FILE)
         },
         "method_note": (
-            "Social Signal Layer V1.3. "
+            "Social Signal Layer V1.3 profile-based. "
             "Óvatos, nyílt forrású jelzőrendszer frissességi, relevancia- és magyar piaci súlyozással."
         )
     }
 
-    for company in COMPANIES:
+    for company in companies:
         result = build_company_result(company)
         results.append(result)
 
@@ -688,11 +610,12 @@ def main():
 
     payload = {
         "updated_at": updated_at,
-        "version": "social-signal-layer-v1.3",
+        "version": "social-signal-layer-v1.3-profile-based",
         "scope": "Hungarian FMCG retail chains",
         "method_note": (
             "Ez social signal réteg, nem teljes social analytics. "
-            "A mutató friss, nyílt forrású említésekből készül, magyar piaci relevancia súlyozással."
+            "A mutató friss, nyílt forrású említésekből készül, "
+            "company-profiles.json alapú magyar piaci relevancia súlyozással."
         ),
         "items": results
     }
