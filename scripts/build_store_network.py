@@ -15,11 +15,16 @@ OUT_FILE = DATA_DIR / "store-network-hu.json"
 STATUS_FILE = DATA_DIR / "store-network-hu-status.json"
 OVERRIDE_FILE = DATA_DIR / "store-network-overrides.json"
 
-OVERPASS_URL = "https://overpass-api.de/api/interpreter"
+OVERPASS_URLS = [
+    "https://overpass-api.de/api/interpreter",
+    "https://overpass.kumi.systems/api/interpreter"
+]
+
 FETCH_SLEEP = 2
 
+# Lidl szándékosan nincs itt.
+# Lidl külön, saját lista alapján fog bekerülni.
 BRANDS = {
-    "Lidl": ["Lidl", "LIDL"],
     "ALDI": ["ALDI", "Aldi"],
     "SPAR": ["SPAR", "Spar", "INTERSPAR", "Interspar"],
     "Tesco": ["Tesco", "TESCO"],
@@ -144,7 +149,7 @@ def stores_by_company(stores, company):
     return [store for store in stores if store.get("company") == company]
 
 
-def build_brand_query(brand_values):
+def build_exact_brand_query(brand_values):
     filters = []
 
     for value in brand_values:
@@ -158,7 +163,7 @@ def build_brand_query(brand_values):
     block = "\n".join(filters)
 
     return f"""
-[out:json][timeout:180];
+[out:json][timeout:120];
 area["ISO3166-1"="HU"][admin_level=2]->.searchArea;
 (
 {block}
@@ -167,43 +172,49 @@ out center tags;
 """
 
 
-def build_safe_name_operator_query(company):
-    escaped = company.replace('"', '\\"')
+def build_regex_brand_query(brand_values):
+    pattern = "|".join([value.replace('"', '\\"') for value in brand_values])
 
     return f"""
 [out:json][timeout:120];
 area["ISO3166-1"="HU"][admin_level=2]->.searchArea;
 (
-  node["shop"="supermarket"]["name"~"^{escaped}$",i](area.searchArea);
-  way["shop"="supermarket"]["name"~"^{escaped}$",i](area.searchArea);
-  relation["shop"="supermarket"]["name"~"^{escaped}$",i](area.searchArea);
+  node["shop"="supermarket"]["brand"~"^({pattern})$",i](area.searchArea);
+  way["shop"="supermarket"]["brand"~"^({pattern})$",i](area.searchArea);
+  relation["shop"="supermarket"]["brand"~"^({pattern})$",i](area.searchArea);
 
-  node["shop"="convenience"]["name"~"^{escaped}$",i](area.searchArea);
-  way["shop"="convenience"]["name"~"^{escaped}$",i](area.searchArea);
-  relation["shop"="convenience"]["name"~"^{escaped}$",i](area.searchArea);
-
-  node["shop"="supermarket"]["operator"~"^{escaped}$",i](area.searchArea);
-  way["shop"="supermarket"]["operator"~"^{escaped}$",i](area.searchArea);
-  relation["shop"="supermarket"]["operator"~"^{escaped}$",i](area.searchArea);
+  node["shop"="convenience"]["brand"~"^({pattern})$",i](area.searchArea);
+  way["shop"="convenience"]["brand"~"^({pattern})$",i](area.searchArea);
+  relation["shop"="convenience"]["brand"~"^({pattern})$",i](area.searchArea);
 );
 out center tags;
 """
 
 
-def fetch_overpass(query, timeout=220):
+def fetch_overpass(query):
     headers = {
-        "User-Agent": "fmcg-intelligence-hu-store-network-builder/1.5"
+        "User-Agent": "fmcg-intelligence-hu-store-network-builder/2.0"
     }
 
-    response = requests.post(
-        OVERPASS_URL,
-        data={"data": query},
-        headers=headers,
-        timeout=timeout
-    )
+    last_error = None
 
-    response.raise_for_status()
-    return response.json()
+    for url in OVERPASS_URLS:
+        try:
+            response = requests.post(
+                url,
+                data={"data": query},
+                headers=headers,
+                timeout=150
+            )
+
+            response.raise_for_status()
+            return response.json(), url
+
+        except Exception as exc:
+            last_error = exc
+            time.sleep(1)
+
+    raise RuntimeError(str(last_error))
 
 
 def element_coordinates(element):
@@ -255,8 +266,6 @@ def normalize_company_from_tags(tags, expected_company):
         tags.get("operator", "")
     ]).lower()
 
-    if "lidl" in text:
-        return "Lidl"
     if "aldi" in text:
         return "ALDI"
     if "spar" in text:
@@ -370,41 +379,37 @@ def deduplicate(stores):
 
 
 def fetch_company_stores(company, brand_values):
-    stores = []
     notes = []
+    stores = []
 
-    try:
-        data = fetch_overpass(build_brand_query(brand_values), timeout=220)
+    queries = [
+        ("exact_brand", build_exact_brand_query(brand_values)),
+        ("regex_brand", build_regex_brand_query(brand_values))
+    ]
 
-        for element in data.get("elements", []):
-            store = parse_osm_element(element, company)
-            if store:
-                stores.append(store)
-
-        stores = deduplicate(stores)
-        notes.append(f"brand_query={len(stores)}")
-
-    except Exception as exc:
-        notes.append(f"brand_query_error={exc}")
-
-    # Lidl esetében óvatos extra próbálkozás.
-    # Nem használunk tág contains keresést, mert az akasztotta meg korábban a workflow-t.
-    if company == "Lidl" and len(stores) == 0:
+    for query_name, query in queries:
         try:
-            data = fetch_overpass(build_safe_name_operator_query("Lidl"), timeout=150)
+            data, used_endpoint = fetch_overpass(query)
+
+            query_stores = []
 
             for element in data.get("elements", []):
                 store = parse_osm_element(element, company)
                 if store:
-                    stores.append(store)
+                    query_stores.append(store)
 
-            stores = deduplicate(stores)
-            notes.append(f"safe_name_operator_query={len(stores)}")
+            query_stores = deduplicate(query_stores)
+            notes.append(f"{query_name}={len(query_stores)} via {used_endpoint}")
+
+            if len(query_stores) > len(stores):
+                stores = query_stores
 
         except Exception as exc:
-            notes.append(f"safe_name_operator_error={exc}")
+            notes.append(f"{query_name}_error={exc}")
 
-    return stores, notes
+        time.sleep(1)
+
+    return deduplicate(stores), notes
 
 
 def collect_osm_stores(existing_stores):
@@ -412,7 +417,7 @@ def collect_osm_stores(existing_stores):
     status_companies = []
 
     for company, brand_values in BRANDS.items():
-        print(f"Fetching {company} from OSM...")
+        print(f"Fetching {company} from OSM...", flush=True)
 
         company_stores, notes = fetch_company_stores(company, brand_values)
 
@@ -441,7 +446,7 @@ def collect_osm_stores(existing_stores):
             "notes": notes
         })
 
-        print(f"{company}: {len(company_stores)} stores ({status})")
+        print(f"{company}: {len(company_stores)} stores ({status})", flush=True)
 
         time.sleep(FETCH_SLEEP)
 
@@ -472,13 +477,13 @@ def main():
 
     payload = {
         "updated_at": updated_at,
-        "version": "store-network-hu-v1.5-safe-osm-with-fallback",
-        "scope": "Hungarian FMCG store network from OSM + fallback + optional overrides",
+        "version": "store-network-hu-v2.0-non-lidl-osm",
+        "scope": "Hungarian FMCG store network from OSM + optional overrides",
         "method_note": (
-            "Az országos bolthálózati adatbázis biztonságos OSM/Overpass lekérdezésekből, "
-            "korábbi sikeres lekérdezések visszatartásából és opcionális override fájlból épül. "
-            "Ha egy új OSM futás egy láncra 0 találatot ad, a script megtartja a korábbi store-network-hu.json "
-            "adott láncra vonatkozó adatait. Ez stabilabb, mint a túl tág name/operator keresés."
+            "Ez a verzió Lidl nélkül építi a bolthálózatot. "
+            "ALDI, SPAR, Tesco, Auchan és Penny OSM/Overpass alapján frissül. "
+            "Ha egy láncra 0 találat jön, a script megtartja a korábbi store-network-hu.json adott láncra vonatkozó adatait. "
+            "Lidl külön, saját üzletlista alapján kerül majd be."
         ),
         "stores": all_stores
     }
@@ -486,8 +491,8 @@ def main():
     status = {
         "updated_at": updated_at,
         "status": "ok",
-        "version": "store-network-hu-v1.5-safe-osm-with-fallback",
-        "source": "openstreetmap_overpass_plus_fallback_plus_optional_overrides",
+        "version": "store-network-hu-v2.0-non-lidl-osm",
+        "source": "openstreetmap_overpass_non_lidl_plus_fallback_plus_optional_overrides",
         "store_count": len(all_stores),
         "company_totals": company_totals,
         "source_totals": source_totals,
@@ -495,8 +500,9 @@ def main():
         "filters": {
             "country": "Hungary",
             "osm_shop": ["supermarket", "convenience"],
-            "searched_tag": "brand",
-            "brands": BRANDS,
+            "searched_tags": ["brand"],
+            "companies_from_osm": list(BRANDS.keys()),
+            "lidl_strategy": "separate_static_list_later",
             "override_file": str(OVERRIDE_FILE),
             "fallback_previous_store_network": True
         }
@@ -512,10 +518,10 @@ def main():
         encoding="utf-8"
     )
 
-    print(f"Store network written: {OUT_FILE}")
-    print(f"Status written: {STATUS_FILE}")
-    print(f"Total stores: {len(all_stores)}")
-    print(f"Company totals: {company_totals}")
+    print(f"Store network written: {OUT_FILE}", flush=True)
+    print(f"Status written: {STATUS_FILE}", flush=True)
+    print(f"Total stores: {len(all_stores)}", flush=True)
+    print(f"Company totals: {company_totals}", flush=True)
 
 
 if __name__ == "__main__":
