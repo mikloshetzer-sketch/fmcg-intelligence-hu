@@ -25,6 +25,9 @@ MAX_ITEM_AGE_DAYS = 180
 MAX_ITEMS_PER_SOURCE_PER_COMPANY = 40
 FETCH_SLEEP = 0.6
 
+DASHBOARD_RELEVANCE_THRESHOLD = 0.8
+BACKGROUND_RELEVANCE_THRESHOLD = 0.5
+
 
 HU_RELEVANCE_TERMS = [
     "magyarország",
@@ -39,6 +42,7 @@ HU_RELEVANCE_TERMS = [
     "huf",
     "ft",
     ".hu",
+    "/hu/",
     "akciós újság",
     "akcios ujsag",
     "lidl magyarország",
@@ -49,58 +53,107 @@ HU_RELEVANCE_TERMS = [
     "penny magyarország",
     "penny market magyarország",
     "cba príma",
-    "cba prima"
+    "cba prima",
+    "magyar boltok",
+    "magyarországi"
+]
+
+
+FOREIGN_NOISE_TERMS = [
+    "denmark",
+    "danmark",
+    "france",
+    "germany",
+    "deutschland",
+    "netherlands",
+    "holland",
+    "belgium",
+    "ireland",
+    "dublin",
+    "uk",
+    "united kingdom",
+    "london",
+    "scotland",
+    "wales",
+    "austria",
+    "österreich",
+    "italy",
+    "spain",
+    "portugal",
+    "sweden",
+    "finland",
+    "norway",
+    "lanaken",
+    "maastricht",
+    "clubcard jumper",
+    "charity shop",
+    "cineworld",
+    "virgin red",
+    "mandalorian"
 ]
 
 
 TOPIC_KEYWORDS = {
     "árak és akciók": [
-        "ár", "árak", "drága", "olcsó", "akció", "akcio", "kedvezmény",
-        "kupon", "infláció", "price", "discount", "sale", "offer"
+        "ár", "árak", "arak", "drága", "draga", "olcsó", "olcso",
+        "akció", "akcio", "kedvezmény", "kedvezmeny", "kupon",
+        "infláció", "inflacio", "price", "discount", "sale", "offer",
+        "clubcard", "lidl plus", "hűségakció", "husegakcio"
     ],
     "vásárlói panaszok": [
-        "panasz", "rossz", "hiba", "botrány", "nem működik",
-        "complaint", "problem", "issue", "bad", "scam", "kritika"
+        "panasz", "rossz", "hiba", "botrány", "botrany",
+        "nem működik", "nem mukodik", "complaint", "problem",
+        "issue", "bad", "scam", "kritika", "túlterheltek",
+        "tulterheltek", "nem enged", "leállás", "leallas"
     ],
     "bolti élmény": [
-        "bolt", "üzlet", "uzlet", "sor", "kassza", "parkoló", "parkolo",
-        "eladó", "elado", "store", "shop", "queue", "cashier", "experience"
+        "bolt", "üzlet", "uzlet", "sor", "kassza", "parkoló",
+        "parkolo", "eladó", "elado", "store", "shop", "queue",
+        "cashier", "experience", "vásárlás", "bevasarlas"
     ],
     "munkaerő és foglalkoztatás": [
-        "munka", "állás", "allas", "dolgozó", "dolgozo", "fizetés",
-        "bér", "ber", "munkavállaló", "job", "salary", "employee",
-        "worker", "staff", "vacature"
+        "munka", "állás", "allas", "dolgozó", "dolgozo",
+        "fizetés", "fizetes", "bér", "ber", "munkavállaló",
+        "munkavallalo", "job", "salary", "employee", "worker",
+        "staff", "vacature"
     ],
     "termék és minőség": [
-        "termék", "termek", "minőség", "minoseg", "friss", "lejárt",
-        "lejart", "romlott", "élelmiszer", "product", "quality",
-        "fresh", "expired", "food", "recall", "visszahívás"
+        "termék", "termek", "minőség", "minoseg", "friss",
+        "lejárt", "lejart", "romlott", "élelmiszer", "elelmiszer",
+        "product", "quality", "fresh", "expired", "food", "recall",
+        "visszahívás", "visszahivas"
     ],
     "digitalizáció és önkiszolgálás": [
         "scan", "scan&go", "scan go", "önkiszolgáló", "onkiszolgalo",
-        "app", "alkalmazás", "online", "mobil", "self-checkout",
-        "self checkout", "wifi", "wi-fi"
+        "app", "alkalmazás", "alkalmazas", "online", "mobil",
+        "self-checkout", "self checkout", "wifi", "wi-fi", "qr"
     ],
     "ellátási lánc és logisztika": [
         "logisztika", "szállítás", "szallitas", "ellátási lánc",
-        "supply chain", "shipping", "container", "reederei",
-        "teherautó", "truck", "diesel", "elektromos"
+        "ellatasi lanc", "supply chain", "shipping", "container",
+        "reederei", "teherautó", "teherauto", "truck", "diesel",
+        "elektromos"
     ]
 }
 
 
 POSITIVE_WORDS = [
-    "jó", "jo", "kiváló", "kivalo", "szeretem", "kedvező", "kedvezo",
-    "olcsó", "olcso", "gyors", "hasznos", "elégedett",
-    "good", "great", "excellent", "love", "cheap", "nice", "useful"
+    "jó", "jo", "kiváló", "kivalo", "szeretem", "kedvező",
+    "kedvezo", "olcsó", "olcso", "gyors", "hasznos",
+    "elégedett", "elegedett", "megéri", "megeri", "spórol",
+    "sporol", "good", "great", "excellent", "love", "cheap",
+    "nice", "useful", "helpful", "fast", "saving", "saves"
 ]
+
 
 NEGATIVE_WORDS = [
     "rossz", "drága", "draga", "panasz", "hiba", "botrány",
     "botrany", "lejárt", "lejart", "romlott", "lassú", "lassu",
-    "probléma", "problema", "bad", "expensive", "complaint",
+    "probléma", "problema", "túlterhelt", "tulterhelt",
+    "nem működik", "nem mukodik", "nem enged", "eltűnik",
+    "eltunik", "hiány", "hiany", "bad", "expensive", "complaint",
     "problem", "issue", "scam", "poor", "slow", "warning",
-    "recall", "outage", "closed"
+    "recall", "outage", "closed", "insane", "trouble"
 ]
 
 
@@ -215,7 +268,22 @@ def detect_hu_relevance(title, summary, link, query):
     if ".hu" in text or "/hu/" in text:
         return 0.8
 
-    return 0.25
+    if any(term.lower() in text for term in FOREIGN_NOISE_TERMS):
+        return 0.25
+
+    return 0.5
+
+
+def relevance_bucket(value):
+    value = float(value)
+
+    if value >= DASHBOARD_RELEVANCE_THRESHOLD:
+        return "dashboard"
+
+    if value >= BACKGROUND_RELEVANCE_THRESHOLD:
+        return "background"
+
+    return "discarded"
 
 
 def passes_company_filter(company, title, summary, link):
@@ -246,7 +314,8 @@ def make_item(source, company, title, summary, link, published, query):
         "url": link,
         "published": published or "",
         "query": query,
-        "hu_relevance": relevance
+        "hu_relevance": relevance,
+        "relevance_bucket": relevance_bucket(relevance)
     }
 
 
@@ -358,6 +427,32 @@ def deduplicate(items):
     return result
 
 
+def classify_item_sentiment(item):
+    text = normalize(f'{item.get("title", "")} {item.get("summary", "")}')
+
+    pos = 0
+    neg = 0
+
+    for word in POSITIVE_WORDS:
+        if word in text:
+            pos += 1
+
+    for word in NEGATIVE_WORDS:
+        if word in text:
+            neg += 1
+
+    if pos == 0 and neg == 0:
+        return "neutral"
+
+    if neg > pos * 1.4:
+        return "negative"
+
+    if pos > neg * 1.4:
+        return "positive"
+
+    return "mixed"
+
+
 def score_topics(items):
     scores = {topic: 0.0 for topic in TOPIC_KEYWORDS}
 
@@ -379,7 +474,7 @@ def score_topics(items):
         }
         for topic, score in ranked
         if score > 0
-    ][:3]
+    ][:5]
 
 
 def detect_topic(items):
@@ -394,16 +489,16 @@ def detect_sentiment(items):
     neg = 0.0
 
     for item in items:
-        text = normalize(f'{item.get("title", "")} {item.get("summary", "")}')
+        sentiment = item.get("item_sentiment") or classify_item_sentiment(item)
         relevance = float(item.get("hu_relevance", 0.25))
 
-        for word in POSITIVE_WORDS:
-            if word in text:
-                pos += relevance
-
-        for word in NEGATIVE_WORDS:
-            if word in text:
-                neg += relevance
+        if sentiment == "positive":
+            pos += relevance
+        elif sentiment == "negative":
+            neg += relevance
+        elif sentiment == "mixed":
+            pos += relevance * 0.5
+            neg += relevance * 0.5
 
     if pos == 0 and neg == 0:
         return "neutral"
@@ -450,6 +545,69 @@ def calculate_social_index(weighted_mentions, sources_count, sentiment):
     return min(base + diversity_bonus + sentiment_bonus, 100)
 
 
+def build_topic_sentiment(items):
+    topic_sentiment = {}
+
+    for item in items:
+        text = normalize(f'{item.get("title", "")} {item.get("summary", "")}')
+        relevance = float(item.get("hu_relevance", 0.25))
+        sentiment = item.get("item_sentiment") or classify_item_sentiment(item)
+
+        for topic, words in TOPIC_KEYWORDS.items():
+            if any(word.lower() in text for word in words):
+                if topic not in topic_sentiment:
+                    topic_sentiment[topic] = {
+                        "positive": 0.0,
+                        "neutral": 0.0,
+                        "negative": 0.0,
+                        "mixed": 0.0,
+                        "dominant": "neutral"
+                    }
+
+                topic_sentiment[topic][sentiment] += relevance
+
+    for topic, values in topic_sentiment.items():
+        dominant = max(
+            ["positive", "neutral", "negative", "mixed"],
+            key=lambda key: values.get(key, 0)
+        )
+        values["dominant"] = dominant
+
+        for key in ["positive", "neutral", "negative", "mixed"]:
+            values[key] = round(values[key], 2)
+
+    return topic_sentiment
+
+
+def enrich_item_sentiment(items):
+    enriched = []
+
+    for item in items:
+        item_copy = dict(item)
+        item_copy["item_sentiment"] = classify_item_sentiment(item_copy)
+        enriched.append(item_copy)
+
+    return enriched
+
+
+def split_items_by_relevance(items):
+    dashboard_items = []
+    background_items = []
+    discarded_items = []
+
+    for item in items:
+        bucket = item.get("relevance_bucket") or relevance_bucket(item.get("hu_relevance", 0.25))
+
+        if bucket == "dashboard":
+            dashboard_items.append(item)
+        elif bucket == "background":
+            background_items.append(item)
+        else:
+            discarded_items.append(item)
+
+    return dashboard_items, background_items, discarded_items
+
+
 def build_company_result(company):
     all_items = []
     errors = []
@@ -470,42 +628,66 @@ def build_company_result(company):
         errors.append(f"mastodon: {exc}")
 
     all_items = deduplicate(all_items)
+    all_items = enrich_item_sentiment(all_items)
 
     all_items.sort(
         key=lambda x: parse_date(x.get("published", "")) or datetime(1970, 1, 1, tzinfo=timezone.utc),
         reverse=True
     )
 
+    dashboard_items, background_items, discarded_items = split_items_by_relevance(all_items)
+
+    index_items = dashboard_items + background_items
+
     source_counts = {
+        "reddit": sum(1 for x in index_items if x.get("source") == "reddit"),
+        "youtube": sum(1 for x in index_items if x.get("source") == "youtube"),
+        "mastodon": sum(1 for x in index_items if x.get("source") == "mastodon")
+    }
+
+    raw_source_counts = {
         "reddit": sum(1 for x in all_items if x.get("source") == "reddit"),
         "youtube": sum(1 for x in all_items if x.get("source") == "youtube"),
         "mastodon": sum(1 for x in all_items if x.get("source") == "mastodon")
     }
 
     active_sources = sum(1 for value in source_counts.values() if value > 0)
-    mentions = len(all_items)
-    weighted_mentions = calculate_weighted_mentions(all_items)
-    hu_mentions = sum(1 for item in all_items if float(item.get("hu_relevance", 0.25)) >= 0.8)
 
-    sentiment = detect_sentiment(all_items)
-    top_topics = score_topics(all_items)
+    weighted_mentions = calculate_weighted_mentions(index_items)
+    sentiment = detect_sentiment(index_items)
+    top_topics = score_topics(index_items)
+    topic_sentiment = build_topic_sentiment(index_items)
 
     return {
         "company": company["company"],
-        "social_mentions": mentions,
+        "social_mentions": len(index_items),
+        "raw_social_mentions": len(all_items),
+        "dashboard_mentions": len(dashboard_items),
+        "background_mentions": len(background_items),
+        "discarded_mentions": len(discarded_items),
         "weighted_social_mentions": weighted_mentions,
-        "hu_relevant_mentions": hu_mentions,
+        "hu_relevant_mentions": len(dashboard_items),
         "social_index": calculate_social_index(weighted_mentions, active_sources, sentiment),
         "social_sources": source_counts,
-        "dominant_social_topic": detect_topic(all_items),
+        "raw_social_sources": raw_source_counts,
+        "dominant_social_topic": detect_topic(index_items),
         "top_social_topics": top_topics,
+        "topic_sentiment": topic_sentiment,
         "social_sentiment": sentiment,
-        "latest_items": all_items[:12],
+        "latest_items": dashboard_items[:12],
+        "background_items": background_items[:8],
+        "quality_summary": {
+            "dashboard_items": len(dashboard_items),
+            "background_items": len(background_items),
+            "discarded_items": len(discarded_items),
+            "dashboard_relevance_threshold": DASHBOARD_RELEVANCE_THRESHOLD,
+            "background_relevance_threshold": BACKGROUND_RELEVANCE_THRESHOLD
+        },
         "method_note": (
             "Nyílt RSS és keresési alapú social signal. "
             "Nem teljes social listening, nem reprezentatív közvélemény-kutatás. "
-            "A V1.3 verzió company-profiles.json alapú céges master data réteget, "
-            "magyar relevancia súlyozást és történeti mentést használ."
+            "A V1.4 verzió szigorúbb HU relevance szűrést, dashboard/background/discarded bontást "
+            "és topic-szintű sentiment mezőt használ."
         ),
         "errors": errors
     }
@@ -544,6 +726,10 @@ def save_history(results, updated_at):
             "updated_at": updated_at,
             "company": result["company"],
             "social_mentions": result["social_mentions"],
+            "raw_social_mentions": result["raw_social_mentions"],
+            "dashboard_mentions": result["dashboard_mentions"],
+            "background_mentions": result["background_mentions"],
+            "discarded_mentions": result["discarded_mentions"],
             "weighted_social_mentions": result["weighted_social_mentions"],
             "hu_relevant_mentions": result["hu_relevant_mentions"],
             "social_index": result["social_index"],
@@ -562,6 +748,48 @@ def save_history(results, updated_at):
     )
 
 
+def build_intelligence_summary(results, updated_at):
+    if not results:
+        return {
+            "updated_at": updated_at,
+            "leader_social": "n.a.",
+            "leader_social_index": 0,
+            "dominant_social_topic": "n.a.",
+            "overall_social_sentiment": "neutral"
+        }
+
+    social_leader = max(results, key=lambda x: x.get("social_index", 0))
+
+    topic_scores = {}
+    sentiment_scores = {
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "mixed": 0
+    }
+
+    for result in results:
+        for topic in result.get("top_social_topics", []):
+            topic_scores[topic["topic"]] = topic_scores.get(topic["topic"], 0) + topic["score"]
+
+        sentiment = result.get("social_sentiment", "neutral")
+        sentiment_scores[sentiment] = sentiment_scores.get(sentiment, 0) + 1
+
+    dominant_topic = "n.a."
+    if topic_scores:
+        dominant_topic = max(topic_scores, key=topic_scores.get)
+
+    overall_sentiment = max(sentiment_scores, key=sentiment_scores.get)
+
+    return {
+        "updated_at": updated_at,
+        "leader_social": social_leader.get("company", "n.a."),
+        "leader_social_index": social_leader.get("social_index", 0),
+        "dominant_social_topic": dominant_topic,
+        "overall_social_sentiment": overall_sentiment
+    }
+
+
 def main():
     DATA_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -572,7 +800,7 @@ def main():
     status = {
         "updated_at": updated_at,
         "status": "ok",
-        "version": "social-signal-layer-v1.3-profile-based",
+        "version": "social-signal-layer-v1.4-quality-topic-sentiment",
         "companies": [],
         "sources": [
             "reddit_rss",
@@ -584,11 +812,15 @@ def main():
             "max_items_per_source_per_company": MAX_ITEMS_PER_SOURCE_PER_COMPANY,
             "company_context_filter": True,
             "hungarian_relevance_weighting": True,
+            "dashboard_relevance_threshold": DASHBOARD_RELEVANCE_THRESHOLD,
+            "background_relevance_threshold": BACKGROUND_RELEVANCE_THRESHOLD,
+            "discard_below": BACKGROUND_RELEVANCE_THRESHOLD,
             "company_profiles": str(PROFILE_FILE)
         },
         "method_note": (
-            "Social Signal Layer V1.3 profile-based. "
-            "Óvatos, nyílt forrású jelzőrendszer frissességi, relevancia- és magyar piaci súlyozással."
+            "Social Signal Layer V1.4. "
+            "Óvatos, nyílt forrású jelzőrendszer szigorúbb HU relevancia-szűréssel, "
+            "dashboard/background/discarded bontással és topic-szintű sentiment réteggel."
         )
     }
 
@@ -599,10 +831,15 @@ def main():
         status["companies"].append({
             "company": company["company"],
             "mentions": result["social_mentions"],
+            "raw_mentions": result["raw_social_mentions"],
+            "dashboard_mentions": result["dashboard_mentions"],
+            "background_mentions": result["background_mentions"],
+            "discarded_mentions": result["discarded_mentions"],
             "weighted_mentions": result["weighted_social_mentions"],
             "hu_relevant_mentions": result["hu_relevant_mentions"],
             "index": result["social_index"],
             "sources": result["social_sources"],
+            "raw_sources": result["raw_social_sources"],
             "sentiment": result["social_sentiment"],
             "topic": result["dominant_social_topic"],
             "errors": result["errors"]
@@ -610,13 +847,15 @@ def main():
 
     payload = {
         "updated_at": updated_at,
-        "version": "social-signal-layer-v1.3-profile-based",
+        "version": "social-signal-layer-v1.4-quality-topic-sentiment",
         "scope": "Hungarian FMCG retail chains",
         "method_note": (
             "Ez social signal réteg, nem teljes social analytics. "
             "A mutató friss, nyílt forrású említésekből készül, "
-            "company-profiles.json alapú magyar piaci relevancia súlyozással."
+            "company-profiles.json alapú magyar piaci relevancia-szűréssel. "
+            "A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe."
         ),
+        "intelligence_summary": build_intelligence_summary(results, updated_at),
         "items": results
     }
 
