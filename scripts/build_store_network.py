@@ -13,18 +13,20 @@ DATA_DIR = ROOT / "docs" / "data"
 
 OUT_FILE = DATA_DIR / "store-network-hu.json"
 STATUS_FILE = DATA_DIR / "store-network-hu-status.json"
+OVERRIDE_FILE = DATA_DIR / "store-network-overrides.json"
 
 OVERPASS_URL = "https://overpass-api.de/api/interpreter"
 FETCH_SLEEP = 2
 
-BRANDS = {
-    "Lidl": ["Lidl", "LIDL"],
-    "ALDI": ["ALDI", "Aldi", "aldi"],
-    "SPAR": ["SPAR", "Spar", "INTERSPAR", "Interspar", "INTER Spar"],
-    "Tesco": ["Tesco", "TESCO"],
-    "Auchan": ["Auchan", "AUCHAN"],
-    "Penny": ["Penny", "PENNY", "Penny Market", "PENNY Market"]
+# Ezeknél az OSM/Overpass lekérdezés eddig stabilan működött.
+OSM_BRANDS = {
+    "ALDI": ["ALDI", "Aldi"],
+    "SPAR": ["SPAR", "Spar", "INTERSPAR", "Interspar"],
+    "Tesco": ["Tesco", "TESCO"]
 }
+
+# Ezeknél az OSM címkézés hiányos vagy zajos volt, ezért override fájlból jönnek.
+OVERRIDE_COMPANIES = ["Lidl", "Auchan", "Penny"]
 
 
 REGION_CITY_MAP = {
@@ -120,8 +122,8 @@ def slugify(value):
     return value.strip("_")
 
 
-def make_store_id(company, name, city, osm_id):
-    return slugify(f"{company}_{city}_{name}_{osm_id}")[:90]
+def make_store_id(company, name, city, source_id):
+    return slugify(f"{company}_{city}_{name}_{source_id}")[:90]
 
 
 def region_from_city(city):
@@ -134,22 +136,15 @@ def build_overpass_query(brand_values):
     for value in brand_values:
         escaped = value.replace('"', '\\"')
 
-        for tag in ["brand", "name", "operator"]:
-            for shop_type in ["supermarket", "convenience"]:
-                filters.append(f'node["shop"="{shop_type}"]["{tag}"~"^{escaped}$",i](area.searchArea);')
-                filters.append(f'way["shop"="{shop_type}"]["{tag}"~"^{escaped}$",i](area.searchArea);')
-                filters.append(f'relation["shop"="{shop_type}"]["{tag}"~"^{escaped}$",i](area.searchArea);')
-
-        # Biztonsági tágítás: olyan objektumok, ahol a név tartalmazza a lánc nevét.
         for shop_type in ["supermarket", "convenience"]:
-            filters.append(f'node["shop"="{shop_type}"]["name"~"{escaped}",i](area.searchArea);')
-            filters.append(f'way["shop"="{shop_type}"]["name"~"{escaped}",i](area.searchArea);')
-            filters.append(f'relation["shop"="{shop_type}"]["name"~"{escaped}",i](area.searchArea);')
+            filters.append(f'node["shop"="{shop_type}"]["brand"="{escaped}"](area.searchArea);')
+            filters.append(f'way["shop"="{shop_type}"]["brand"="{escaped}"](area.searchArea);')
+            filters.append(f'relation["shop"="{shop_type}"]["brand"="{escaped}"](area.searchArea);')
 
     block = "\n".join(filters)
 
     return f"""
-[out:json][timeout:240];
+[out:json][timeout:180];
 area["ISO3166-1"="HU"][admin_level=2]->.searchArea;
 (
 {block}
@@ -160,14 +155,14 @@ out center tags;
 
 def fetch_overpass(query):
     headers = {
-        "User-Agent": "fmcg-intelligence-hu-store-network-builder/1.2"
+        "User-Agent": "fmcg-intelligence-hu-store-network-builder/1.3"
     }
 
     response = requests.post(
         OVERPASS_URL,
         data={"data": query},
         headers=headers,
-        timeout=300
+        timeout=240
     )
 
     response.raise_for_status()
@@ -216,66 +211,30 @@ def extract_address(tags):
     return ", ".join(parts) if parts else "n.a."
 
 
-def normalize_company_from_tags(tags, expected_company):
-    values = " ".join([
-        tags.get("brand", ""),
-        tags.get("name", ""),
-        tags.get("operator", "")
-    ]).lower()
+def normalize_company_from_brand(raw_brand, expected_company):
+    raw = (raw_brand or "").lower()
 
-    if "lidl" in values:
-        return "Lidl"
-    if "aldi" in values:
+    if "aldi" in raw:
         return "ALDI"
-    if "interspar" in values or "spar" in values:
+    if "spar" in raw:
         return "SPAR"
-    if "tesco" in values:
+    if "tesco" in raw:
         return "Tesco"
-    if "auchan" in values:
-        return "Auchan"
-    if "penny" in values:
-        return "Penny"
 
     return expected_company
 
 
-def is_expected_company(tags, expected_company):
-    values = " ".join([
-        tags.get("brand", ""),
-        tags.get("name", ""),
-        tags.get("operator", "")
-    ]).lower()
-
-    expected = expected_company.lower()
-
-    if expected == "aldi":
-        return "aldi" in values
-    if expected == "lidl":
-        return "lidl" in values
-    if expected == "spar":
-        return "spar" in values
-    if expected == "tesco":
-        return "tesco" in values
-    if expected == "auchan":
-        return "auchan" in values
-    if expected == "penny":
-        return "penny" in values
-
-    return expected in values
-
-
-def parse_element(element, expected_company):
+def parse_osm_element(element, expected_company):
     tags = element.get("tags", {})
-
-    if not is_expected_company(tags, expected_company):
-        return None
-
     lat, lon = element_coordinates(element)
+
     if lat is None or lon is None:
         return None
 
-    company = normalize_company_from_tags(tags, expected_company)
-    name = tags.get("name") or tags.get("brand") or f"{company} üzlet"
+    raw_brand = tags.get("brand") or expected_company
+    company = normalize_company_from_brand(raw_brand, expected_company)
+
+    name = tags.get("name") or f"{company} üzlet"
     city = extract_city(tags)
     address = extract_address(tags)
 
@@ -295,14 +254,52 @@ def parse_element(element, expected_company):
         "source": "openstreetmap_overpass",
         "osm_type": osm_type,
         "osm_id": osm_id,
-        "brand": tags.get("brand", ""),
-        "operator": tags.get("operator", ""),
+        "brand": raw_brand,
         "keywords": [
             name,
             f"{company} {city}",
             address
         ]
     }
+
+
+def load_overrides():
+    if not OVERRIDE_FILE.exists():
+        return []
+
+    try:
+        payload = json.loads(OVERRIDE_FILE.read_text(encoding="utf-8"))
+        stores = payload.get("stores", [])
+
+        normalized = []
+        for idx, store in enumerate(stores):
+            company = store.get("company", "n.a.")
+            name = store.get("name", f"{company} üzlet")
+            city = store.get("city", "n.a.")
+            address = store.get("address", "n.a.")
+
+            if "lat" not in store or "lon" not in store:
+                continue
+
+            normalized.append({
+                "store_id": store.get("store_id") or make_store_id(company, name, city, f"override_{idx}"),
+                "company": company,
+                "name": name,
+                "city": city,
+                "area": store.get("area", city),
+                "region": store.get("region") or region_from_city(city),
+                "address": address,
+                "lat": round(float(store.get("lat")), 6),
+                "lon": round(float(store.get("lon")), 6),
+                "source": store.get("source", "manual_override"),
+                "confidence": store.get("confidence", "medium"),
+                "keywords": store.get("keywords", [name, f"{company} {city}", address])
+            })
+
+        return normalized
+
+    except Exception:
+        return []
 
 
 def deduplicate(stores):
@@ -325,15 +322,12 @@ def deduplicate(stores):
     return result
 
 
-def main():
-    DATA_DIR.mkdir(parents=True, exist_ok=True)
-
-    updated_at = now_iso()
+def collect_osm_stores():
     stores = []
     status_companies = []
 
-    for company, brand_values in BRANDS.items():
-        print(f"Fetching {company}...")
+    for company, brand_values in OSM_BRANDS.items():
+        print(f"Fetching {company} from OSM...")
 
         try:
             query = build_overpass_query(brand_values)
@@ -342,7 +336,7 @@ def main():
             company_stores = []
 
             for element in data.get("elements", []):
-                store = parse_element(element, company)
+                store = parse_osm_element(element, company)
                 if store:
                     company_stores.append(store)
 
@@ -351,6 +345,7 @@ def main():
 
             status_companies.append({
                 "company": company,
+                "source": "openstreetmap_overpass",
                 "status": "ok",
                 "stores": len(company_stores),
                 "brand_values": brand_values
@@ -361,6 +356,7 @@ def main():
         except Exception as exc:
             status_companies.append({
                 "company": company,
+                "source": "openstreetmap_overpass",
                 "status": "error",
                 "stores": 0,
                 "brand_values": brand_values,
@@ -371,34 +367,64 @@ def main():
 
         time.sleep(FETCH_SLEEP)
 
-    stores = deduplicate(stores)
-    stores.sort(key=lambda x: (x.get("company", ""), x.get("city", ""), x.get("name", "")))
+    return stores, status_companies
+
+
+def main():
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+
+    updated_at = now_iso()
+
+    osm_stores, status_companies = collect_osm_stores()
+    override_stores = load_overrides()
+
+    all_stores = deduplicate(osm_stores + override_stores)
+    all_stores.sort(key=lambda x: (x.get("company", ""), x.get("city", ""), x.get("name", "")))
+
+    override_counts = {}
+    for store in override_stores:
+        company = store.get("company", "n.a.")
+        override_counts[company] = override_counts.get(company, 0) + 1
+
+    for company in OVERRIDE_COMPANIES:
+        status_companies.append({
+            "company": company,
+            "source": "store-network-overrides.json",
+            "status": "ok" if override_counts.get(company, 0) > 0 else "missing_or_empty",
+            "stores": override_counts.get(company, 0)
+        })
+
+    company_totals = {}
+    for store in all_stores:
+        company = store.get("company", "n.a.")
+        company_totals[company] = company_totals.get(company, 0) + 1
 
     payload = {
         "updated_at": updated_at,
-        "version": "store-network-hu-v1.2-openstreetmap-overpass-expanded-query",
-        "scope": "Hungarian FMCG store network from OpenStreetMap",
+        "version": "store-network-hu-v1.3-osm-plus-overrides",
+        "scope": "Hungarian FMCG store network from OSM + overrides",
         "method_note": (
-            "OpenStreetMap / Overpass alapú országos bolthálózati adatbázis. "
-            "A V1.2 verzió brand, name és operator mezőkben is keres, ezért jobban kezeli "
-            "a Lidl és Auchan eltérő OSM címkézéseit. Az adatok közösségi térképi forrásból "
-            "származnak, ezért nem hivatalos teljes üzletlista."
+            "Az országos bolthálózati adatbázis OSM/Overpass lekérdezésekből és manuális override fájlból épül. "
+            "ALDI, SPAR és Tesco OSM-ből érkezik. Lidl, Auchan és Penny override rétegből kezelhető, "
+            "mert az OSM címkézés ezeknél hiányos vagy zajos volt. Az adatok nem hivatalos teljes üzletlisták."
         ),
-        "stores": stores
+        "stores": all_stores
     }
 
     status = {
         "updated_at": updated_at,
         "status": "ok",
-        "version": "store-network-hu-v1.2-openstreetmap-overpass-expanded-query",
-        "source": "openstreetmap_overpass",
-        "store_count": len(stores),
+        "version": "store-network-hu-v1.3-osm-plus-overrides",
+        "source": "openstreetmap_overpass_plus_overrides",
+        "store_count": len(all_stores),
+        "company_totals": company_totals,
         "companies": status_companies,
         "filters": {
             "country": "Hungary",
-            "shop": ["supermarket", "convenience"],
-            "searched_tags": ["brand", "name", "operator"],
-            "brands": BRANDS
+            "osm_shop": ["supermarket", "convenience"],
+            "osm_companies": list(OSM_BRANDS.keys()),
+            "override_companies": OVERRIDE_COMPANIES,
+            "override_file": str(OVERRIDE_FILE)
         }
     }
 
@@ -414,7 +440,8 @@ def main():
 
     print(f"Store network written: {OUT_FILE}")
     print(f"Status written: {STATUS_FILE}")
-    print(f"Total stores: {len(stores)}")
+    print(f"Total stores: {len(all_stores)}")
+    print(f"Company totals: {company_totals}")
 
 
 if __name__ == "__main__":
