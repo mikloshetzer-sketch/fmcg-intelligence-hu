@@ -1,0 +1,36 @@
+name: Build Lidl Store Network
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-lidl-stores:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository letöltése
+        uses: actions/checkout@v4
+
+      - name: Python telepítése
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Python csomagok telepítése
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests pandas openpyxl
+
+      - name: Lidl boltok geokódolása Excelből
+        run: python scripts/build_lidl_stores.py
+
+      - name: Változások mentése
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add docs/data/lidl-stores.json docs/data/lidl-stores-status.json
+          git commit -m "Build Lidl store network from Excel" || echo "Nincs változás"
+          git push
