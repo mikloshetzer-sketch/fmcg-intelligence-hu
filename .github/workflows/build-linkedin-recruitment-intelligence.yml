@@ -1,0 +1,34 @@
+name: Build LinkedIn Recruitment Intelligence
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: "45 5 * * 1"
+
+permissions:
+  contents: write
+
+jobs:
+  build-linkedin-recruitment-intelligence:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository letöltése
+        uses: actions/checkout@v4
+
+      - name: Python telepítése
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: LinkedIn Recruitment Intelligence építése
+        run: python scripts/build_linkedin_recruitment_intelligence.py
+
+      - name: Változások mentése
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add docs/data/linkedin-recruitment-intelligence.json
+          git commit -m "Build LinkedIn recruitment intelligence" || echo "No changes"
+          git push
