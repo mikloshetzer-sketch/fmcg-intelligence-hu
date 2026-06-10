@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-10",
-  "version": "lidl-stores-v1",
-  "method_note": "Statikus Lidl bolthálózati adatbázis. A címeket és koordinátákat külön feltöltés vagy geokódolás alapján kell bővíteni.",
+  "updated_at": "2026-06-10T08:10:41.715875+00:00",
+  "version": "lidl-stores-v1.1-excel-geocoded",
+  "method_note": "Statikus Lidl bolthálózati adatbázis Excelből. A bemeneti Excel első oszlopa tartalmazza a teljes címet. A koordináták Nominatim geokódolással készülnek, ezért ellenőrzést igényelhetnek.",
   "stores": []
 }
