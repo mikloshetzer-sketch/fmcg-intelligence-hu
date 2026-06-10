@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FMCG Intelligence Hungary – News, Reputation & Social Monitor V6.7.7.6.6.5</title>
+  <title>FMCG Intelligence Hungary – News, Reputation & Social Monitor V6.8 LinkedIn</title>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="./css/style.css" />
@@ -161,10 +161,109 @@
     .reputation-tile{min-height:100px;}
     .reputation-value{font-size:22px;line-height:1.1;}
 
+
+
+    .linkedin-recruitment-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:14px;
+      margin-top:12px;
+    }
+    .linkedin-card{
+      border:1px solid #dbe7f2;
+      border-radius:18px;
+      background:linear-gradient(145deg,#ffffff,#f8fbff);
+      padding:15px;
+      min-height:205px;
+      position:relative;
+      overflow:hidden;
+    }
+    .linkedin-card:after{
+      content:"";
+      position:absolute;
+      right:-30px;
+      top:-35px;
+      width:95px;
+      height:95px;
+      border-radius:999px;
+      background:rgba(124,58,237,.10);
+    }
+    .linkedin-head{
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      align-items:flex-start;
+      margin-bottom:10px;
+      position:relative;
+      z-index:1;
+    }
+    .linkedin-company{
+      font-size:18px;
+      font-weight:950;
+      color:var(--navy);
+    }
+    .score-line{
+      margin:8px 0 4px;
+      height:8px;
+      border-radius:999px;
+      background:#e5edf5;
+      overflow:hidden;
+    }
+    .score-fill{
+      height:100%;
+      border-radius:999px;
+      background:linear-gradient(90deg,var(--purple),var(--blue));
+    }
+    .linkedin-metrics{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:8px;
+      margin-top:10px;
+      position:relative;
+      z-index:1;
+    }
+    .linkedin-metric{
+      border-radius:12px;
+      background:#f1f5f9;
+      padding:8px;
+    }
+    .linkedin-metric span{
+      display:block;
+      color:#64748b;
+      font-size:10px;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.03em;
+    }
+    .linkedin-metric b{
+      display:block;
+      color:var(--navy);
+      font-size:16px;
+      margin-top:3px;
+    }
+    .linkedin-interpretation{
+      margin-top:10px;
+      font-size:12.5px;
+      line-height:1.45;
+      color:#334155;
+      position:relative;
+      z-index:1;
+    }
+    .linkedin-note{
+      margin-top:12px;
+      padding:13px 15px;
+      border-radius:16px;
+      background:#f5f3ff;
+      border:1px solid #ddd6fe;
+      color:#3b2768;
+      font-size:13px;
+      line-height:1.55;
+    }
     @media(max-width:1200px){
       .index-card-grid{grid-template-columns:repeat(2,1fr)}
       .warning-grid{grid-template-columns:repeat(2,1fr)}
       .reputation-grid{grid-template-columns:repeat(2,1fr)}
+      .linkedin-recruitment-grid{grid-template-columns:repeat(2,1fr)}
     }
     @media(max-width:1000px){
       .span8,.span7,.span6,.span5,.span4,.span3{grid-column:span 12}
@@ -173,6 +272,7 @@
       .reputation-grid{grid-template-columns:1fr}
       .warning-grid{grid-template-columns:1fr}
       .metric-strip{grid-template-columns:repeat(2,1fr)}
+      .linkedin-recruitment-grid{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -182,7 +282,7 @@
   <div class="header-inner">
     <div class="brand">
       <div class="brand-title">FMCG Intelligence Hungary</div>
-      <div class="brand-subtitle">News, Reputation & Social Monitor V6.7.6.5</div>
+      <div class="brand-subtitle">News, Reputation & Social Monitor V6.8</div>
     </div>
     <nav class="nav">
       <a href="./index.html">Dashboard</a>
@@ -196,13 +296,13 @@
 
 <section class="hero">
   <div class="hero-box">
-    <div class="hero-kicker">News, Reputation & Social Intelligence V6.7.6.5</div>
+    <div class="hero-kicker">News, Reputation & Social Intelligence V6.8</div>
     <h1>FMCG média-, kockázati-, social- és reputációs intelligence központ</h1>
     <p>
       A friss hírmonitor a <b>news-social.json</b> fájlból dolgozik. A történeti háttér a
       <b>news-social-history-2026.json</b> fájlból töltődik be. A social réteg a
       <b>social-monitor.json</b> és <b>social-history-2026.json</b> fájlokat használja.
-      A social index nem teljes közösségimédia-elemzés, hanem nyílt forrású social signal. A store reputation summary a <b>store-reputation.json</b> fájlból érkező áruházi reputációs jelzést emeli be vezetői szinten.
+      A social index nem teljes közösségimédia-elemzés, hanem nyílt forrású social signal. A store reputation summary a <b>store-reputation.json</b> fájlból érkező áruházi reputációs jelzést emeli be vezetői szinten. A LinkedIn Recruitment Intelligence a <b>linkedin-recruitment-intelligence.json</b> fájl alapján óvatos munkaerőpiaci jelzést ad.
     </p>
     <div class="btn-row">
       <a class="btn btn-primary" href="./index.html">Vissza a fő dashboardra</a>
@@ -285,6 +385,28 @@
         A blokk megmutatja, melyik láncnál legerősebb az áruházi jel, melyik bolt körül van a legtöbb említés, és mi a domináns bolti téma.
         A részletes hálózati, boltlistás és térképes elemzés később a Supply Chain oldalra kerül.
         Itt az a cél, hogy a média- és social képet össze lehessen vetni a bolti reputációs jelzéssel.
+      </div>
+    </div>
+
+    <div class="card span12">
+      <div class="section-title">
+        <h2>LinkedIn Recruitment Intelligence</h2>
+        <span>publikus LinkedIn Jobs jelzésekből képzett óvatos munkaerőpiaci indikátor</span>
+      </div>
+
+      <div id="linkedinRecruitmentSummary">LinkedIn recruitment adatok betöltése...</div>
+      <div id="linkedinRecruitmentCards" class="linkedin-recruitment-grid"></div>
+
+      <div class="linkedin-note">
+        <b>Fontos értelmezési keret:</b> ez nem hivatalos LinkedIn API adat és nem pontos állásszám.
+        A blokk a publikus keresési jelekből, kategória-pontszámokból és a bolthálózati kontextusból képez
+        óvatos recruitment pressure, recruitment focus és expansion signal mutatókat.
+      </div>
+
+      <div class="block-explain">
+        <b>Mit látunk?</b> A LinkedIn Recruitment Intelligence azt mutatja, hogy az egyes FMCG láncoknál milyen irányú munkaerőpiaci jelzés látszik.
+        A recruitment pressure az általános toborzási nyomást, a recruitment focus a domináns toborzási irányt, az expansion signal pedig a lehetséges bővülési vagy kapacitásépítési jelet mutatja.
+        A mutató önmagában nem bizonyít új boltnyitást vagy szervezeti átalakítást, de hasznos korai jelzés lehet a Competitor Intelligence és az Early Warning Engine mellett.
       </div>
     </div>
 
@@ -661,7 +783,7 @@
   </div>
 </main>
 
-<footer class="footer">FMCG Intelligence Hungary – News, Reputation & Social Monitor V6.7.7.6.6.5.</footer>
+<footer class="footer">FMCG Intelligence Hungary – News, Reputation & Social Monitor V6.8 LinkedIn.</footer>
 
 <script>
 const currentUrl = './data/news-social.json';
@@ -673,6 +795,7 @@ const socialStatusUrl = './data/social-monitor-status.json';
 const socialHistoryUrl = './data/social-history-2026.json';
 const storeUrl = './data/store-reputation.json';
 const storeStatusUrl = './data/store-reputation-status.json';
+const linkedinRecruitmentUrl = './data/linkedin-recruitment-intelligence.json';
 
 let charts = {};
 
@@ -1717,7 +1840,105 @@ function renderTables(companies,historyCompanies,current,history,social){
       </tr>`).join('')}</tbody>`;
 }
 
+
+async function loadLinkedInRecruitmentIntelligence(){
+  const summaryBox=document.getElementById('linkedinRecruitmentSummary');
+  const cardsBox=document.getElementById('linkedinRecruitmentCards');
+
+  if(!summaryBox || !cardsBox) return;
+
+  try{
+    const data=await fetchJson(linkedinRecruitmentUrl,true);
+
+    if(!data || data.status!=='ok' || !Array.isArray(data.companies)){
+      summaryBox.innerHTML='<div class="notice">A linkedin-recruitment-intelligence.json még nem érhető el. Futtasd a Build LinkedIn Recruitment Intelligence workflow-t.</div>';
+      cardsBox.innerHTML='';
+      return;
+    }
+
+    const companies=[...data.companies].sort((a,b)=>num(b.recruitment_pressure)-num(a.recruitment_pressure));
+    const leader=data.leader || companies[0];
+
+    const avgPressure=companies.length
+      ? Math.round(companies.reduce((sum,c)=>sum+num(c.recruitment_pressure),0)/companies.length)
+      : 0;
+
+    const strongestExpansion=[...companies].sort((a,b)=>num(b.expansion_signal)-num(a.expansion_signal))[0];
+    const strongestLogistics=[...companies].sort((a,b)=>num(b.logistics_pressure)-num(a.logistics_pressure))[0];
+
+    summaryBox.innerHTML=`
+      <div class="reputation-grid">
+        <div class="reputation-tile">
+          <div class="kpi-label">Recruitment Leader</div>
+          <div class="reputation-value">${leader?.company || 'n.a.'}</div>
+          <div class="small">pressure: ${fmtNum(leader?.recruitment_pressure)}/100 • ${leader?.recruitment_level || 'n.a.'}</div>
+        </div>
+        <div class="reputation-tile">
+          <div class="kpi-label">Átlagos nyomás</div>
+          <div class="reputation-value">${fmtNum(avgPressure)}</div>
+          <div class="small">cégek átlagos recruitment pressure értéke</div>
+        </div>
+        <div class="reputation-tile">
+          <div class="kpi-label">Expansion Signal</div>
+          <div class="reputation-value">${strongestExpansion?.company || 'n.a.'}</div>
+          <div class="small">signal: ${fmtNum(strongestExpansion?.expansion_signal)}/100</div>
+        </div>
+        <div class="reputation-tile">
+          <div class="kpi-label">Logisztikai jel</div>
+          <div class="reputation-value">${strongestLogistics?.company || 'n.a.'}</div>
+          <div class="small">logistics pressure: ${fmtNum(strongestLogistics?.logistics_pressure)}/100</div>
+        </div>
+      </div>
+    `;
+
+    cardsBox.innerHTML=companies.map(c=>{
+      const pressure=num(c.recruitment_pressure);
+      const expansion=num(c.expansion_signal);
+      const logistics=num(c.logistics_pressure);
+      const ads=c.linkedin_active_ads_hint===null || c.linkedin_active_ads_hint===undefined ? 'jelzés' : fmtNum(c.linkedin_active_ads_hint);
+
+      return `
+        <div class="linkedin-card">
+          <div class="linkedin-head">
+            <div>
+              <div class="linkedin-company">${c.company}</div>
+              <div class="small">${c.recruitment_focus || 'n.a.'}</div>
+            </div>
+            ${recruitmentLevelPill(c.recruitment_level)}
+          </div>
+
+          <div class="small"><b>Recruitment Pressure:</b> ${fmtNum(pressure)}/100</div>
+          <div class="score-line"><div class="score-fill" style="width:${Math.max(0,Math.min(100,pressure))}%"></div></div>
+
+          <div class="linkedin-metrics">
+            <div class="linkedin-metric"><span>Expansion</span><b>${fmtNum(expansion)}</b></div>
+            <div class="linkedin-metric"><span>Logisztika</span><b>${fmtNum(logistics)}</b></div>
+            <div class="linkedin-metric"><span>Állás jel</span><b>${ads}</b></div>
+          </div>
+
+          <div class="linkedin-interpretation">${c.interpretation || 'Nincs részletes értelmezés.'}</div>
+          <div class="small" style="margin-top:8px;">Adatbiztonság: <b>${c.source_confidence || 'low'}</b> • modell: ${data.method || 'n.a.'}</div>
+        </div>
+      `;
+    }).join('');
+
+  }catch(error){
+    summaryBox.innerHTML='<div class="notice">LinkedIn recruitment adatok nem érhetők el, de a többi dashboard-modul tovább működik.</div>';
+    cardsBox.innerHTML='';
+    console.error(error);
+  }
+}
+
+function recruitmentLevelPill(level){
+  const value=(level || '').toUpperCase();
+  if(value.includes('ERŐS')) return '<span class="pill red">ERŐS</span>';
+  if(value.includes('KÖZEPES')) return '<span class="pill orange">KÖZEPES</span>';
+  if(value.includes('GYENGE-KÖZEPES')) return '<span class="pill purple">GYENGE-KÖZEPES</span>';
+  return '<span class="pill gray">GYENGE</span>';
+}
+
 loadData();
+loadLinkedInRecruitmentIntelligence();
 </script>
 </body>
 </html>
