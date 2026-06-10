@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-06-10T16:14:00.769482+00:00",
+  "updated_at": "2026-06-10T21:06:46.765339+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-06-10T16:14:00.769482+00:00",
+    "updated_at": "2026-06-10T21:06:46.765339+00:00",
     "leader_social": "Lidl",
     "leader_social_index": 52,
     "dominant_social_topic": "árak és akciók",
@@ -14,10 +14,10 @@
     {
       "company": "Lidl",
       "social_mentions": 16,
-      "raw_social_mentions": 19,
+      "raw_social_mentions": 20,
       "dashboard_mentions": 11,
       "background_mentions": 5,
-      "discarded_mentions": 3,
+      "discarded_mentions": 4,
       "weighted_social_mentions": 13.5,
       "hu_relevant_mentions": 11,
       "social_index": 52,
@@ -29,7 +29,7 @@
       "raw_social_sources": {
         "reddit": 16,
         "youtube": 2,
-        "mastodon": 1
+        "mastodon": 2
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
@@ -314,7 +314,7 @@
       "quality_summary": {
         "dashboard_items": 11,
         "background_items": 5,
-        "discarded_items": 3,
+        "discarded_items": 4,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
       },
@@ -401,10 +401,10 @@
     {
       "company": "Tesco",
       "social_mentions": 7,
-      "raw_social_mentions": 18,
+      "raw_social_mentions": 19,
       "dashboard_mentions": 4,
       "background_mentions": 3,
-      "discarded_mentions": 11,
+      "discarded_mentions": 12,
       "weighted_social_mentions": 5.5,
       "hu_relevant_mentions": 4,
       "social_index": 29,
@@ -414,7 +414,7 @@
         "mastodon": 0
       },
       "raw_social_sources": {
-        "reddit": 18,
+        "reddit": 19,
         "youtube": 0,
         "mastodon": 0
       },
@@ -566,7 +566,7 @@
       "quality_summary": {
         "dashboard_items": 4,
         "background_items": 3,
-        "discarded_items": 11,
+        "discarded_items": 12,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
       },
