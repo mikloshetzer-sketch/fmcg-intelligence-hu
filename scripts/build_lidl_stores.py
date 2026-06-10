@@ -218,7 +218,7 @@ def read_raw_rows():
     rows = []
 
     for _, row in df.iterrows():
-        full_address = clean_text(row.iloc[0])
+        full_address = clean_text(row.iloc[1])
 
         if not full_address:
             continue
