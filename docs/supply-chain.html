@@ -109,6 +109,16 @@
     .risk-high{color:#991b1b;font-weight:950}.risk-medium{color:#9a3412;font-weight:950}.risk-low{color:#166534;font-weight:950}
 
 
+
+    .risk-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;}
+    .risk-card{border:1px solid #dbe7f2;border-radius:18px;padding:14px;background:#fbfdff;min-height:140px;}
+    .risk-card h3{margin:0;color:var(--navy);font-size:16px;font-weight:950;}
+    .risk-card .big{margin-top:8px;font-size:26px;font-weight:950;color:var(--navy);}
+    .risk-card .meta{margin-top:8px;display:flex;flex-wrap:wrap;gap:6px;}
+    .riskbar{height:10px;border-radius:999px;background:#e2e8f0;overflow:hidden;margin-top:10px;}
+    .riskbar span{display:block;height:100%;background:linear-gradient(90deg,#22c55e,#f97316,#ef4444);border-radius:999px;}
+    .risk-note{font-size:12px;color:#64748b;line-height:1.45;margin-top:8px;}
+
     @media(max-width:1250px){
       .network-card-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
     }
@@ -117,6 +127,7 @@
       .chartbox{height:280px}
       #networkMap{height:440px}
       .network-card-grid{grid-template-columns:1fr;}
+      .simulation-grid,.risk-grid{grid-template-columns:1fr;}
     }
   </style>
 </head>
@@ -338,6 +349,93 @@
       </div>
     </div>
 
+
+
+    <div class="card span12">
+      <div class="section-title">
+        <h2>Supply Risk Intelligence</h2>
+        <span>lakossági lefedettség, DC-kitettség és ellátási sérülékenység becslése</span>
+      </div>
+      <div id="riskCards" class="risk-grid">Supply risk adatok betöltése...</div>
+      <div class="explain-box">
+        <b>Mit látunk?</b><br>
+        Ez a szekció a bolthálózat, a DC-hálózat és a Route & Cluster Simulation eredményei alapján becsül ellátási kockázatot.
+        A Supply Risk Score nem belső vállalati adat, hanem összehasonlító OSINT-alapú modell. Figyelembe veszi a hálózati komplexitást,
+        a legnagyobb DC-kitettséget, a hosszú ellátási távolságokat, a Store/DC arányt és a klaszternyomást.
+      </div>
+    </div>
+
+    <div class="card span6">
+      <div class="section-title">
+        <h2>Supply Risk Ranking</h2>
+        <span>becsült ellátási kockázati pontszám lánconként</span>
+      </div>
+      <div class="chartbox"><canvas id="supplyRiskChart"></canvas></div>
+      <div class="chart-insight" id="supplyRiskInsight">Supply risk adatok betöltése...</div>
+      <div class="explain-box">
+        <b>Mit jelent?</b><br>
+        A magasabb érték nagyobb becsült sérülékenységet jelez. A pontszám nő, ha kevés DC lát el sok üzletet,
+        magas a hálózati komplexitás, nagy a maximális ellátási távolság, vagy egyetlen DC kiesése sok üzletet érintene.
+      </div>
+    </div>
+
+    <div class="card span6">
+      <div class="section-title">
+        <h2>Population Coverage Proxy</h2>
+        <span>becsült elért lakosság települési proxy alapján</span>
+      </div>
+      <div class="chartbox"><canvas id="populationCoverageChart"></canvas></div>
+      <div class="chart-insight" id="populationCoverageInsight">Supply risk adatok betöltése...</div>
+      <div class="explain-box">
+        <b>Mit jelent?</b><br>
+        A modell települési népességi proxyval becsüli, hogy az adott lánc bolthálózata mekkora lakossági bázist érhet el.
+        Ez nem hivatalos piaci részesedés, hanem lefedettségi közelítés.
+      </div>
+    </div>
+
+    <div class="card span6">
+      <div class="section-title">
+        <h2>DC Exposure Ranking</h2>
+        <span>legnagyobb becsült DC-kitettség lánconként</span>
+      </div>
+      <div id="dcExposureTable" class="matrix-wrap">Supply risk adatok betöltése...</div>
+      <div class="explain-box">
+        <b>Mit jelent?</b><br>
+        A DC exposure azt mutatja, hogy a legnagyobb terhelésű logisztikai központ kiesése esetén az adott lánc üzleteinek mekkora része válhatna érintetté.
+        A 100% egyetlen aktív DC-re épülő, erősen koncentrált modellt jelez.
+      </div>
+    </div>
+
+    <div class="card span6">
+      <div class="section-title">
+        <h2>Risk Driver Breakdown</h2>
+        <span>mi mozgatja a kockázati pontszámot?</span>
+      </div>
+      <div class="sim-select-row">
+        <select id="riskCompanyFilter"><option value="all">Válassz láncot</option></select>
+      </div>
+      <div class="chartbox"><canvas id="riskDriversChart"></canvas></div>
+      <div class="chart-insight" id="riskDriversInsight">Supply risk adatok betöltése...</div>
+      <div class="explain-box">
+        <b>Mit jelent?</b><br>
+        A bontás megmutatja, hogy a kockázatot inkább a komplexitás, a DC-koncentráció, a hosszú távolság, a Store/DC arány vagy a klaszterek száma növeli.
+        Ez segít eldönteni, hogy hálózatbővítés, új DC, regionális áttervezés vagy útvonal-optimalizálás lehet a jobb válasz.
+      </div>
+    </div>
+
+    <div class="card span12">
+      <div class="section-title">
+        <h2>Failure Impact by Population Proxy</h2>
+        <span>DC kiesési hatás üzlet- és lakossági proxy alapján</span>
+      </div>
+      <div id="riskFailureImpactTable" class="matrix-wrap">Supply risk adatok betöltése...</div>
+      <div class="explain-box">
+        <b>Mit látunk?</b><br>
+        Ez a tábla azt mutatja, hogy a nearest-DC modell alapján egy-egy logisztikai központ kiesése hány üzletet és mekkora becsült lakossági lefedettséget érinthet.
+        Nem számol alternatív átterheléssel, ezért sérülékenységi indikátorként érdemes értelmezni.
+      </div>
+    </div>
+
     <div class="card span6">
       <div class="section-title">
         <h2>Average Store → DC Distance</h2>
@@ -456,6 +554,7 @@ const storeNetworkUrl = './data/store-network-hu-final.json';
 const pilotStoreProfilesUrl = './data/store-profiles.json';
 const distributionCentersUrl = './data/distribution-centers.json';
 const supplySimulationUrl = './data/supply-simulation.json';
+const supplyRiskUrl = './data/supply-risk-intelligence.json';
 
 let charts = {};
 let map = null;
@@ -468,6 +567,7 @@ let allDcs = [];
 let allLinks = [];
 let storeSourceMode = 'national';
 let supplySimulation = null;
+let supplyRisk = null;
 
 function num(v,f=0){const x=Number(v);return Number.isFinite(x)?x:f;}
 function fmtNum(v){return v===null||v===undefined||v===''?'n.a.':Number(v).toLocaleString('hu-HU');}
@@ -580,6 +680,13 @@ async function loadData(){
       console.warn('Supply simulation not available', e);
     }
 
+    try{
+      supplyRisk = await fetchJson(supplyRiskUrl);
+    }catch(e){
+      supplyRisk = null;
+      console.warn('Supply risk intelligence not available', e);
+    }
+
     allStores = storeData.stores || [];
     allDcs = dcData.items || [];
     allLinks = buildLinks(allStores);
@@ -595,6 +702,7 @@ function renderPage(){
   renderKpis();
   renderCompanyCards();
   renderSimulationSection();
+  renderRiskSection();
   renderMap(allStores, allDcs, allLinks);
   renderFilters();
   renderStoreList(allStores);
@@ -1104,8 +1212,169 @@ function renderDistanceBucketChart(){
     `${selected==='all'?'Az összes láncban':selected+' esetében'} a modell szerint <b>${pct}%</b> esik 50 km-en belüli becsült ellátási távolságba.`;
 }
 
+
+function getRiskCompanies(){
+  return supplyRisk?.companies || [];
+}
+
+function getRiskRanking(){
+  return supplyRisk?.risk_ranking || [];
+}
+
+function riskPillClass(level){
+  if(level==='high')return 'red';
+  if(level==='medium')return 'orange';
+  return 'green';
+}
+
+function renderRiskSection(){
+  if(!supplyRisk){
+    ['riskCards','dcExposureTable','riskFailureImpactTable'].forEach(id=>{
+      const el=document.getElementById(id); if(el) el.innerHTML='<div class="notice">Nincs supply-risk-intelligence.json adat. Futtasd a Compute Supply Risk Intelligence workflow-t.</div>';
+    });
+    ['supplyRiskInsight','populationCoverageInsight','riskDriversInsight'].forEach(id=>setText(id,'Nincs supply risk adat.'));
+    return;
+  }
+
+  renderRiskCards();
+  renderSupplyRiskChart();
+  renderPopulationCoverageChart();
+  renderDcExposureTable();
+  renderRiskCompanyFilter();
+  renderRiskDriversChart();
+  renderRiskFailureImpactTable();
+}
+
+function renderRiskCards(){
+  const rows=[...getRiskRanking()].sort((a,b)=>b.supply_risk_score-a.supply_risk_score);
+  const el=document.getElementById('riskCards');
+  if(!el)return;
+
+  el.innerHTML=rows.map(row=>{
+    const risk=Number(row.supply_risk_score||0);
+    const level=row.supply_risk_level || 'low';
+    return `
+      <div class="risk-card">
+        <h3>${row.company}</h3>
+        <div class="big">${risk}</div>
+        <div class="small">Supply Risk Score</div>
+        <div class="riskbar"><span style="width:${Math.max(0,Math.min(100,risk))}%"></span></div>
+        <div class="meta">
+          <span class="pill ${riskPillClass(level)}">${String(level).toUpperCase()}</span>
+          <span class="pill blue">Coverage ${row.coverage_score}%</span>
+          <span class="pill gray">DC exposure ${row.largest_dc_exposure_pct}%</span>
+        </div>
+        <div class="risk-note">Elért lakossági proxy: ${fmtNum(row.reached_population_proxy)} fő</div>
+      </div>`;
+  }).join('');
+}
+
+function renderSupplyRiskChart(){
+  const rows=[...getRiskRanking()].sort((a,b)=>b.supply_risk_score-a.supply_risk_score);
+  makeChart('supplyRiskChart','bar',rows.map(r=>r.company),[{label:'Supply Risk Score',data:rows.map(r=>r.supply_risk_score)}],{});
+  const top=rows[0];
+  const bottom=rows[rows.length-1];
+  document.getElementById('supplyRiskInsight').innerHTML =
+    `A legmagasabb becsült ellátási kockázat: <b>${top?.company||'n.a.'}</b> (${top?.supply_risk_score||'n.a.'}, ${String(top?.supply_risk_level||'n.a.').toUpperCase()}). A legalacsonyabb: <b>${bottom?.company||'n.a.'}</b> (${bottom?.supply_risk_score||'n.a.'}).`;
+}
+
+function renderPopulationCoverageChart(){
+  const rows=[...getRiskRanking()].sort((a,b)=>b.reached_population_proxy-a.reached_population_proxy);
+  makeChart('populationCoverageChart','bar',rows.map(r=>r.company),[{label:'Elért lakossági proxy',data:rows.map(r=>r.reached_population_proxy)}],{});
+  const top=rows[0];
+  document.getElementById('populationCoverageInsight').innerHTML =
+    `A legnagyobb becsült lakossági lefedettség: <b>${top?.company||'n.a.'}</b>, kb. <b>${fmtNum(top?.reached_population_proxy||0)}</b> fő proxyértékkel.`;
+}
+
+function renderDcExposureTable(){
+  const rows=getRiskCompanies().map(company=>{
+    const impacts=company.dc_impact || [];
+    const top=impacts.length ? impacts[0] : {};
+    return {
+      company: company.company,
+      risk: company.supply_risk_score,
+      level: company.supply_risk_level,
+      dc_name: top.dc_name || 'n.a.',
+      dc_city: top.dc_city || 'n.a.',
+      affected_stores: top.affected_stores || 0,
+      affected_share: top.affected_store_share_pct || 0,
+      population: top.affected_population_proxy || 0
+    };
+  }).sort((a,b)=>b.affected_share-a.affected_share);
+
+  document.getElementById('dcExposureTable').innerHTML=`
+    <table class="matrix-table">
+      <thead><tr><th>Lánc</th><th>Legnagyobb DC-kitettség</th><th>DC város</th><th>Érintett üzlet</th><th>Arány</th><th>Lakossági proxy</th><th>Risk</th></tr></thead>
+      <tbody>
+        ${rows.map(r=>`<tr>
+          <td>${r.company}</td><td>${r.dc_name}</td><td>${r.dc_city}</td><td><b>${fmtNum(r.affected_stores)}</b></td>
+          <td><b>${r.affected_share}%</b></td><td>${fmtNum(r.population)}</td><td class="risk-${r.level}">${r.risk}</td>
+        </tr>`).join('')}
+      </tbody>
+    </table>`;
+}
+
+function renderRiskCompanyFilter(){
+  const select=document.getElementById('riskCompanyFilter');
+  if(!select)return;
+  const companies=getRiskCompanies().map(c=>c.company).sort();
+  const current=select.value || companies[0] || 'all';
+  select.innerHTML=companies.map(c=>`<option value="${c}">${c}</option>`).join('');
+  select.value=companies.includes(current) ? current : (companies[0] || '');
+  select.onchange=renderRiskDriversChart;
+}
+
+function renderRiskDriversChart(){
+  const selected=document.getElementById('riskCompanyFilter')?.value;
+  const company=getRiskCompanies().find(c=>c.company===selected) || getRiskCompanies()[0];
+  if(!company){
+    setText('riskDriversInsight','Nincs kockázati bontás.');
+    return;
+  }
+
+  const drivers=company.risk_drivers || {};
+  const labels=['Complexity','DC exposure','Long distance','Store/DC','Cluster'];
+  const data=[
+    drivers.complexity || 0,
+    drivers.largest_dc_exposure_pct || 0,
+    drivers.long_distance_pressure || 0,
+    drivers.store_dc_pressure || 0,
+    drivers.cluster_pressure || 0
+  ];
+
+  makeChart('riskDriversChart','bar',labels,[{label:company.company+' risk drivers',data}],{indexAxis:'y'});
+  document.getElementById('riskDriversInsight').innerHTML =
+    `<b>${company.company}</b> supply risk score: <b>${company.supply_risk_score}</b>. A legnagyobb DC-kitettség: <b>${drivers.largest_dc_exposure_pct || 0}%</b>, a komplexitás: <b>${drivers.complexity || 0}</b>.`;
+}
+
+function renderRiskFailureImpactTable(){
+  const rows=[];
+  getRiskCompanies().forEach(company=>{
+    (company.dc_impact || []).forEach(dc=>{
+      rows.push({
+        company: company.company,
+        level: company.supply_risk_level,
+        risk: company.supply_risk_score,
+        ...dc
+      });
+    });
+  });
+  rows.sort((a,b)=>(b.affected_population_proxy||0)-(a.affected_population_proxy||0));
+  const top=rows.slice(0,24);
+
+  document.getElementById('riskFailureImpactTable').innerHTML=`
+    <table class="matrix-table">
+      <thead><tr><th>DC</th><th>Lánc</th><th>Város</th><th>Érintett üzlet</th><th>Üzletarány</th><th>Lakossági proxy</th><th>Átlag km</th><th>Max km</th><th>Risk</th></tr></thead>
+      <tbody>
+        ${top.map(r=>`<tr>
+          <td>${r.dc_name||r.dc_id}</td><td>${r.company}</td><td>${r.dc_city||'n.a.'}</td><td><b>${fmtNum(r.affected_stores||0)}</b></td>
+          <td>${r.affected_store_share_pct||0}%</td><td><b>${fmtNum(r.affected_population_proxy||0)}</b></td><td>${r.avg_distance_km||0}</td><td>${r.max_distance_km||0}</td><td class="risk-${r.level}">${r.risk}</td>
+        </tr>`).join('')}
+      </tbody>
+    </table>`;
+}
+
 loadData();
 </script>
 </body>
 </html>
-
