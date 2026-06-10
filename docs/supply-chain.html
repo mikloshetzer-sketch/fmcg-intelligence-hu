@@ -96,6 +96,19 @@
     .confidence-medium{color:#9a3412;font-weight:900}
     .confidence-high{color:#166534;font-weight:900}
 
+
+    .simulation-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;}
+    .simulation-card{border:1px solid #dbe7f2;border-radius:18px;padding:14px;background:#fbfdff;min-height:138px;}
+    .simulation-card h3{margin:0;color:var(--navy);font-size:16px;font-weight:950;}
+    .simulation-card .big{margin-top:8px;font-size:26px;font-weight:950;color:var(--navy);}
+    .simulation-card .meta{margin-top:8px;display:flex;flex-wrap:wrap;gap:6px;}
+    .scorebar{height:10px;border-radius:999px;background:#e2e8f0;overflow:hidden;margin-top:10px;}
+    .scorebar span{display:block;height:100%;background:linear-gradient(90deg,#ef4444,#f97316,#22c55e);border-radius:999px;}
+    .sim-select-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;align-items:center;}
+    .sim-select-row select{border:1px solid #cbd5e1;border-radius:12px;padding:10px 12px;font-size:14px;background:white;color:#0f172a;min-width:220px;}
+    .risk-high{color:#991b1b;font-weight:950}.risk-medium{color:#9a3412;font-weight:950}.risk-low{color:#166534;font-weight:950}
+
+
     @media(max-width:1250px){
       .network-card-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
     }
@@ -225,6 +238,106 @@
       </div>
     </div>
 
+
+
+    <div class="card span12">
+      <div class="section-title">
+        <h2>Route & Cluster Simulation</h2>
+        <span>fuvarszervezői szemléletű becsült hálózati modell lánconként</span>
+      </div>
+      <div id="simulationCards" class="simulation-grid">Szimulációs adatok betöltése...</div>
+      <div class="explain-box">
+        <b>Mit látunk?</b><br>
+        Ez a szekció azt becsüli, hogyan gondolkodna egy fuvarszervező rendszer a bolthálózat és a DC-hálózat alapján.
+        A modell az üzleteket a legközelebbi aktív logisztikai központhoz rendeli, majd ebből becsül klasztereket,
+        túraszámot, hálózati komplexitást és hatékonysági pontszámot. Ez nem valós vállalati TMS-adat, hanem összehasonlító szimuláció.
+      </div>
+    </div>
+
+    <div class="card span6">
+      <div class="section-title">
+        <h2>Network Efficiency Benchmark</h2>
+        <span>becsült logisztikai hatékonysági pontszám</span>
+      </div>
+      <div class="chartbox"><canvas id="efficiencyChart"></canvas></div>
+      <div class="chart-insight" id="efficiencyInsight">Szimulációs adatok betöltése...</div>
+      <div class="explain-box">
+        <b>Mit látunk?</b><br>
+        A pontszám az átlagos távolságot, a maximális távolságot, a Store/DC arányt és a klaszterek számát veszi figyelembe.
+        Magasabb érték kedvezőbb becsült hálózati szerkezetet jelez, de nem helyettesíti a valós költség- és kapacitásadatokat.
+      </div>
+    </div>
+
+    <div class="card span6">
+      <div class="section-title">
+        <h2>Route Complexity Benchmark</h2>
+        <span>becsült útvonal- és hálózati komplexitás</span>
+      </div>
+      <div class="chartbox"><canvas id="complexityChart"></canvas></div>
+      <div class="chart-insight" id="complexityInsight">Szimulációs adatok betöltése...</div>
+      <div class="explain-box">
+        <b>Mit látunk?</b><br>
+        A komplexitási pontszám azt mutatja, hogy a hálózat mennyire lehet nehezen szervezhető a modell szerint.
+        A magasabb érték nagyobb távolságot, kevesebb DC-re jutó több üzletet vagy erősebb klaszterezési igényt jelezhet.
+      </div>
+    </div>
+
+    <div class="card span6">
+      <div class="section-title">
+        <h2>Estimated Routes & Clusters</h2>
+        <span>becsült túraszám és klaszterszám lánconként</span>
+      </div>
+      <div id="routeClusterTable" class="matrix-wrap">Szimulációs adatok betöltése...</div>
+      <div class="explain-box">
+        <b>Mit látunk?</b><br>
+        A klaszter a modellben DC × régió páros. A becsült túraszám azt jelzi, hány körjárat jellegű egységre lehetne bontani a hálózatot,
+        ha egy járat átlagosan néhány üzletet szolgálna ki. Ez egyszerűsített logika, de jól összehasonlíthatóvá teszi a láncokat.
+      </div>
+    </div>
+
+    <div class="card span6">
+      <div class="section-title">
+        <h2>DC Load Ranking</h2>
+        <span>legnagyobb becsült raktárterhelések</span>
+      </div>
+      <div id="dcLoadTable" class="matrix-wrap">Szimulációs adatok betöltése...</div>
+      <div class="explain-box">
+        <b>Mit látunk?</b><br>
+        A tábla azt mutatja, hogy a nearest-DC modell szerint egy-egy logisztikai központ hány üzletet szolgálna ki.
+        Ez terheltségi becslés, nem valós raktári kapacitásadat. A magas érték koncentráltabb ellátási modellt jelezhet.
+      </div>
+    </div>
+
+    <div class="card span6">
+      <div class="section-title">
+        <h2>Network Vulnerability Simulation</h2>
+        <span>becsült DC-kiesési hatás</span>
+      </div>
+      <div id="failureTable" class="matrix-wrap">Szimulációs adatok betöltése...</div>
+      <div class="explain-box">
+        <b>Mit látunk?</b><br>
+        A blokk azt becsüli, hogy egy adott DC kiesése esetén hány üzlet lenne érintett a jelenlegi hozzárendelési modell alapján.
+        Nem számol átterhelési kapacitással, ezért inkább sérülékenységi jelzőként érdemes használni.
+      </div>
+    </div>
+
+    <div class="card span6">
+      <div class="section-title">
+        <h2>Distance Bucket Simulation</h2>
+        <span>ellátási távolságok sávos bontása</span>
+      </div>
+      <div class="sim-select-row">
+        <select id="simulationCompanyFilter"><option value="all">Összes lánc</option></select>
+      </div>
+      <div class="chartbox"><canvas id="distanceBucketChart"></canvas></div>
+      <div class="chart-insight" id="distanceBucketInsight">Szimulációs adatok betöltése...</div>
+      <div class="explain-box">
+        <b>Mit látunk?</b><br>
+        Ez a diagram nem csak az átlagot mutatja, hanem azt is, hogy az üzletek mekkora része esik 0–50, 50–100, 100–150,
+        150–200 vagy 200 km feletti becsült ellátási távolságba. Ez jobban mutatja a hálózat belső szórását.
+      </div>
+    </div>
+
     <div class="card span6">
       <div class="section-title">
         <h2>Average Store → DC Distance</h2>
@@ -342,6 +455,7 @@
 const storeNetworkUrl = './data/store-network-hu-final.json';
 const pilotStoreProfilesUrl = './data/store-profiles.json';
 const distributionCentersUrl = './data/distribution-centers.json';
+const supplySimulationUrl = './data/supply-simulation.json';
 
 let charts = {};
 let map = null;
@@ -353,6 +467,7 @@ let allStores = [];
 let allDcs = [];
 let allLinks = [];
 let storeSourceMode = 'national';
+let supplySimulation = null;
 
 function num(v,f=0){const x=Number(v);return Number.isFinite(x)?x:f;}
 function fmtNum(v){return v===null||v===undefined||v===''?'n.a.':Number(v).toLocaleString('hu-HU');}
@@ -458,6 +573,13 @@ async function loadData(){
 
     const dcData = await fetchJson(distributionCentersUrl);
 
+    try{
+      supplySimulation = await fetchJson(supplySimulationUrl);
+    }catch(e){
+      supplySimulation = null;
+      console.warn('Supply simulation not available', e);
+    }
+
     allStores = storeData.stores || [];
     allDcs = dcData.items || [];
     allLinks = buildLinks(allStores);
@@ -472,6 +594,7 @@ async function loadData(){
 function renderPage(){
   renderKpis();
   renderCompanyCards();
+  renderSimulationSection();
   renderMap(allStores, allDcs, allLinks);
   renderFilters();
   renderStoreList(allStores);
@@ -490,7 +613,7 @@ function renderKpis(){
   const farthest=[...allLinks].sort((a,b)=>b.distance_km-a.distance_km)[0];
 
   setText('kpiStores',fmtNum(allStores.length));
-  setText('kpiStoreSource', storeSourceMode === 'national' ? 'store-network-hu.json' : 'fallback: store-profiles.json');
+  setText('kpiStoreSource', storeSourceMode === 'national' ? 'store-network-hu-final.json' : 'fallback: store-profiles.json');
   setText('kpiActiveDcs',fmtNum(activeDcs.length));
   setText('kpiAvgDistance',distances.length ? `${fmtNum(Math.round(avg(distances)))} km` : 'n.a.');
   setText('kpiFarthestStore',farthest?.store?.name || 'n.a.');
@@ -830,9 +953,159 @@ function renderTables(){
     </tbody>`;
 }
 
+
+function getSimulationBenchmark(){
+  return supplySimulation?.benchmark || [];
+}
+
+function getSimulationCompanies(){
+  return supplySimulation?.companies || [];
+}
+
+function scoreClass(value){
+  const v=Number(value)||0;
+  if(v>=75)return 'green';
+  if(v>=55)return 'orange';
+  return 'red';
+}
+
+function renderSimulationSection(){
+  if(!supplySimulation){
+    ['simulationCards','routeClusterTable','dcLoadTable','failureTable'].forEach(id=>{
+      const el=document.getElementById(id); if(el) el.innerHTML='<div class="notice">Nincs supply-simulation.json adat. Futtasd a Simulate Supply Network workflow-t.</div>';
+    });
+    ['efficiencyInsight','complexityInsight','distanceBucketInsight'].forEach(id=>setText(id,'Nincs szimulációs adat.'));
+    return;
+  }
+
+  renderSimulationCards();
+  renderEfficiencyChart();
+  renderComplexityChart();
+  renderRouteClusterTable();
+  renderDcLoadTable();
+  renderFailureTable();
+  renderSimulationCompanyFilter();
+  renderDistanceBucketChart();
+}
+
+function renderSimulationCards(){
+  const rows=getSimulationBenchmark();
+  const el=document.getElementById('simulationCards');
+  if(!el)return;
+
+  el.innerHTML=rows.map(row=>{
+    const eff=Number(row.efficiency_score||0);
+    const comp=Number(row.complexity_score||0);
+    return `
+      <div class="simulation-card">
+        <h3>${row.company}</h3>
+        <div class="big">${fmtNum(row.store_count)}</div>
+        <div class="small">üzlet • ${fmtNum(row.active_dc_count)} aktív DC</div>
+        <div class="scorebar"><span style="width:${Math.max(0,Math.min(100,eff))}%"></span></div>
+        <div class="meta">
+          <span class="pill ${scoreClass(eff)}">Efficiency ${eff}</span>
+          <span class="pill gray">${fmtNum(row.cluster_count)} klaszter</span>
+          <span class="pill blue">${fmtNum(row.estimated_routes)} túra</span>
+          <span class="pill ${row.complexity_level==='high'?'red':row.complexity_level==='medium'?'orange':'green'}">Complexity ${comp}</span>
+        </div>
+      </div>`;
+  }).join('');
+}
+
+function renderEfficiencyChart(){
+  const rows=[...getSimulationBenchmark()].sort((a,b)=>b.efficiency_score-a.efficiency_score);
+  makeChart('efficiencyChart','bar',rows.map(r=>r.company),[{label:'Efficiency score',data:rows.map(r=>r.efficiency_score)}],{});
+  const top=rows[0];
+  const bottom=rows[rows.length-1];
+  document.getElementById('efficiencyInsight').innerHTML =
+    `A legkedvezőbb becsült hálózati szerkezet: <b>${top?.company||'n.a.'}</b> (${top?.efficiency_score||'n.a.'}). A legalacsonyabb pontszám: <b>${bottom?.company||'n.a.'}</b> (${bottom?.efficiency_score||'n.a.'}).`;
+}
+
+function renderComplexityChart(){
+  const rows=[...getSimulationBenchmark()].sort((a,b)=>b.complexity_score-a.complexity_score);
+  makeChart('complexityChart','bar',rows.map(r=>r.company),[{label:'Complexity score',data:rows.map(r=>r.complexity_score)}],{});
+  const top=rows[0];
+  document.getElementById('complexityInsight').innerHTML =
+    `A legmagasabb becsült útvonal-komplexitás: <b>${top?.company||'n.a.'}</b> (${top?.complexity_score||'n.a.'}, ${top?.complexity_level||'n.a.'}).`;
+}
+
+function renderRouteClusterTable(){
+  const rows=[...getSimulationBenchmark()].sort((a,b)=>b.estimated_routes-a.estimated_routes);
+  document.getElementById('routeClusterTable').innerHTML=`
+    <table class="matrix-table">
+      <thead><tr><th>Lánc</th><th>Üzlet</th><th>DC</th><th>Klaszter</th><th>Becsült túra</th><th>Átlag km</th><th>Max km</th></tr></thead>
+      <tbody>
+        ${rows.map(r=>`<tr>
+          <td>${r.company}</td><td>${fmtNum(r.store_count)}</td><td>${fmtNum(r.active_dc_count)}</td><td>${fmtNum(r.cluster_count)}</td>
+          <td><b>${fmtNum(r.estimated_routes)}</b></td><td>${r.avg_distance_km}</td><td>${r.max_distance_km}</td>
+        </tr>`).join('')}
+      </tbody>
+    </table>`;
+}
+
+function renderDcLoadTable(){
+  const rows=[];
+  getSimulationCompanies().forEach(company=>{
+    (company.dc_loads||[]).forEach(dc=>{
+      rows.push({company:company.company,...dc});
+    });
+  });
+  rows.sort((a,b)=>b.stores-a.stores);
+  const top=rows.slice(0,18);
+  document.getElementById('dcLoadTable').innerHTML=`
+    <table class="matrix-table">
+      <thead><tr><th>DC</th><th>Lánc</th><th>Város</th><th>Üzlet</th><th>Átlag km</th><th>Max km</th></tr></thead>
+      <tbody>
+        ${top.map(r=>`<tr>
+          <td>${r.dc_name||r.dc_id}</td><td>${r.company}</td><td>${r.dc_city||'n.a.'}</td><td><b>${fmtNum(r.stores)}</b></td><td>${r.avg_distance_km}</td><td>${r.max_distance_km}</td>
+        </tr>`).join('')}
+      </tbody>
+    </table>`;
+}
+
+function renderFailureTable(){
+  const rows=[...(supplySimulation?.failure_simulation||[])].sort((a,b)=>b.affected_stores-a.affected_stores).slice(0,18);
+  document.getElementById('failureTable').innerHTML=`
+    <table class="matrix-table">
+      <thead><tr><th>DC</th><th>Lánc</th><th>Város</th><th>Érintett üzlet</th><th>Arány</th><th>Kockázat</th></tr></thead>
+      <tbody>
+        ${rows.map(r=>`<tr>
+          <td>${r.dc_name||r.dc_id}</td><td>${r.company}</td><td>${r.dc_city||'n.a.'}</td><td><b>${fmtNum(r.affected_stores)}</b></td>
+          <td>${r.affected_share_pct}%</td><td class="risk-${r.risk_level}">${String(r.risk_level||'n.a.').toUpperCase()}</td>
+        </tr>`).join('')}
+      </tbody>
+    </table>`;
+}
+
+function renderSimulationCompanyFilter(){
+  const select=document.getElementById('simulationCompanyFilter');
+  if(!select)return;
+  const companies=getSimulationCompanies().map(c=>c.company).sort();
+  select.innerHTML='<option value="all">Összes lánc</option>'+companies.map(c=>`<option value="${c}">${c}</option>`).join('');
+  select.addEventListener('change',renderDistanceBucketChart);
+}
+
+function renderDistanceBucketChart(){
+  const selected=document.getElementById('simulationCompanyFilter')?.value || 'all';
+  const bucketOrder=['0-50 km','50-100 km','100-150 km','150-200 km','200+ km'];
+  const totals={}; bucketOrder.forEach(b=>totals[b]=0);
+
+  getSimulationCompanies().forEach(company=>{
+    if(selected!=='all' && company.company!==selected)return;
+    const buckets=company.distance_buckets || {};
+    bucketOrder.forEach(b=>{totals[b]+=Number(buckets[b]||0);});
+  });
+
+  makeChart('distanceBucketChart','bar',bucketOrder,[{label:'Üzletek száma',data:bucketOrder.map(b=>totals[b])}],{});
+  const sum=Object.values(totals).reduce((a,b)=>a+b,0);
+  const near=totals['0-50 km'] || 0;
+  const pct=sum ? Math.round((near/sum)*1000)/10 : 0;
+  document.getElementById('distanceBucketInsight').innerHTML =
+    `${selected==='all'?'Az összes láncban':selected+' esetében'} a modell szerint <b>${pct}%</b> esik 50 km-en belüli becsült ellátási távolságba.`;
+}
+
 loadData();
 </script>
 </body>
 </html>
-
 
