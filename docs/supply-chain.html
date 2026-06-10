@@ -1183,7 +1183,12 @@ async function loadData(){
       supplyRisk = null;
       console.warn('Supply risk intelligence not available', e);
     }
-
+    try{
+      expansionSimulation = await fetchJson(expansionSimulationUrl);
+    }catch(e){
+      expansionSimulation = null;
+      console.warn('Expansion simulation not available', e);
+    }
     allStores = storeData.stores || [];
     allDcs = dcData.items || [];
     allLinks = buildLinks(allStores);
