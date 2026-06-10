@@ -1,0 +1,173 @@
+{
+  "updated_at": "2026-06-10T14:27:38.325355+00:00",
+  "status": "ok",
+  "version": "expansion-simulation-v1",
+  "company_count": 6,
+  "growth_scenarios_pct": [
+    10,
+    20,
+    50,
+    100
+  ],
+  "capacity_ranking": [
+    {
+      "company": "Auchan",
+      "growth_capacity_without_new_dc_pct": 150.0,
+      "first_growth_level_requiring_new_dc": null,
+      "current_store_count": 24,
+      "active_dc_count": 1,
+      "target_store_dc_ratio": 60
+    },
+    {
+      "company": "Lidl",
+      "growth_capacity_without_new_dc_pct": 27.3,
+      "first_growth_level_requiring_new_dc": 50,
+      "current_store_count": 220,
+      "active_dc_count": 4,
+      "target_store_dc_ratio": 70
+    },
+    {
+      "company": "Penny",
+      "growth_capacity_without_new_dc_pct": 0,
+      "first_growth_level_requiring_new_dc": 10,
+      "current_store_count": 242,
+      "active_dc_count": 3,
+      "target_store_dc_ratio": 75
+    },
+    {
+      "company": "SPAR",
+      "growth_capacity_without_new_dc_pct": 0,
+      "first_growth_level_requiring_new_dc": 10,
+      "current_store_count": 520,
+      "active_dc_count": 2,
+      "target_store_dc_ratio": 120
+    },
+    {
+      "company": "ALDI",
+      "growth_capacity_without_new_dc_pct": 0,
+      "first_growth_level_requiring_new_dc": 10,
+      "current_store_count": 188,
+      "active_dc_count": 1,
+      "target_store_dc_ratio": 90
+    },
+    {
+      "company": "Tesco",
+      "growth_capacity_without_new_dc_pct": 0,
+      "first_growth_level_requiring_new_dc": 10,
+      "current_store_count": 182,
+      "active_dc_count": 1,
+      "target_store_dc_ratio": 90
+    }
+  ],
+  "stress_test_50_pct": [
+    {
+      "company": "ALDI",
+      "growth_pct": 50,
+      "new_store_count": 282,
+      "required_dc_count": 4,
+      "additional_dc_needed": 3,
+      "new_store_dc_ratio": 70.5,
+      "estimated_routes": 71,
+      "estimated_clusters": 10,
+      "new_avg_distance_km": 84.3,
+      "new_complexity_score": 85.5,
+      "new_supply_risk_score": 83.2,
+      "new_supply_risk_level": "high",
+      "suggested_new_dc_regions": [
+        "Debrecen",
+        "Szeged",
+        "Miskolc"
+      ]
+    },
+    {
+      "company": "Tesco",
+      "growth_pct": 50,
+      "new_store_count": 273,
+      "required_dc_count": 4,
+      "additional_dc_needed": 3,
+      "new_store_dc_ratio": 68.2,
+      "estimated_routes": 69,
+      "estimated_clusters": 10,
+      "new_avg_distance_km": 88.2,
+      "new_complexity_score": 85.5,
+      "new_supply_risk_score": 83.2,
+      "new_supply_risk_level": "high",
+      "suggested_new_dc_regions": [
+        "Debrecen",
+        "Szeged",
+        "Miskolc"
+      ]
+    },
+    {
+      "company": "Auchan",
+      "growth_pct": 50,
+      "new_store_count": 36,
+      "required_dc_count": 1,
+      "additional_dc_needed": 0,
+      "new_store_dc_ratio": 36.0,
+      "estimated_routes": 12,
+      "estimated_clusters": 10,
+      "new_avg_distance_km": 73.6,
+      "new_complexity_score": 75.9,
+      "new_supply_risk_score": 82.9,
+      "new_supply_risk_level": "high",
+      "suggested_new_dc_regions": []
+    },
+    {
+      "company": "SPAR",
+      "growth_pct": 50,
+      "new_store_count": 780,
+      "required_dc_count": 7,
+      "additional_dc_needed": 5,
+      "new_store_dc_ratio": 111.4,
+      "estimated_routes": 156,
+      "estimated_clusters": 14,
+      "new_avg_distance_km": 66.5,
+      "new_complexity_score": 86.1,
+      "new_supply_risk_score": 77.2,
+      "new_supply_risk_level": "high",
+      "suggested_new_dc_regions": [
+        "Szeged",
+        "Debrecen",
+        "Győr"
+      ]
+    },
+    {
+      "company": "Lidl",
+      "growth_pct": 50,
+      "new_store_count": 330,
+      "required_dc_count": 5,
+      "additional_dc_needed": 1,
+      "new_store_dc_ratio": 66.0,
+      "estimated_routes": 83,
+      "estimated_clusters": 19,
+      "new_avg_distance_km": 62.0,
+      "new_complexity_score": 72.0,
+      "new_supply_risk_score": 63.4,
+      "new_supply_risk_level": "medium",
+      "suggested_new_dc_regions": [
+        "Pécs",
+        "Nyíregyháza"
+      ]
+    },
+    {
+      "company": "Penny",
+      "growth_pct": 50,
+      "new_store_count": 363,
+      "required_dc_count": 5,
+      "additional_dc_needed": 2,
+      "new_store_dc_ratio": 72.6,
+      "estimated_routes": 92,
+      "estimated_clusters": 15,
+      "new_avg_distance_km": 62.2,
+      "new_complexity_score": 70.2,
+      "new_supply_risk_score": 55.4,
+      "new_supply_risk_level": "medium",
+      "suggested_new_dc_regions": [
+        "Győr",
+        "Pécs",
+        "Miskolc"
+      ]
+    }
+  ]
+}
