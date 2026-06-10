@@ -1,6 +1,4187 @@
 {
-  "updated_at": "2026-06-10T08:10:41.715875+00:00",
-  "version": "lidl-stores-v1.1-excel-geocoded",
-  "method_note": "Statikus Lidl bolthálózati adatbázis Excelből. A bemeneti Excel első oszlopa tartalmazza a teljes címet. A koordináták Nominatim geokódolással készülnek, ezért ellenőrzést igényelhetnek.",
-  "stores": []
+  "updated_at": "2026-06-10T08:34:57.795398+00:00",
+  "version": "lidl-stores-v2-city-geocoded",
+  "method_note": "Statikus Lidl bolthálózati adatbázis Excelből. A koordináták városszintű Nominatim geokódolással készülnek. Ha egy városban több Lidl üzlet van, a pontok kis térképi eltolást kapnak. A darabszám pontos az Excel alapján, a koordináta városszintű becslés.",
+  "stores": [
+    {
+      "store_id": "lidl_aszod_pesti_ut_14_16_0",
+      "company": "Lidl",
+      "name": "Lidl Aszód",
+      "postcode": "2170",
+      "city": "Aszód",
+      "area": "Aszód",
+      "region": "n.a.",
+      "address": "2170 Aszód, Pesti út 14-16.",
+      "lat": 47.653273,
+      "lon": 19.474743,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Aszód, Aszódi járás, Pest vármegye, Közép-Magyarország, 2170, Magyarország",
+      "keywords": [
+        "Lidl Aszód",
+        "2170 Aszód, Pesti út 14-16."
+      ]
+    },
+    {
+      "store_id": "lidl_balassagyarmat_kovari_ut_8_1",
+      "company": "Lidl",
+      "name": "Lidl Balassagyarmat",
+      "postcode": "2660",
+      "city": "Balassagyarmat",
+      "area": "Balassagyarmat",
+      "region": "Észak-Magyarország",
+      "address": "2660 Balassagyarmat, Kóvári út 8",
+      "lat": 48.076883,
+      "lon": 19.292604,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Balassagyarmat, Balassagyarmati járás, Nógrád vármegye, Észak-Magyarország, Alföld és Észak, 2660, Magyarország",
+      "keywords": [
+        "Lidl Balassagyarmat",
+        "2660 Balassagyarmat, Kóvári út 8"
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_ady_endre_ut_54_60_2",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1215",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1215 Budapest, Ady Endre út 54-60.",
+      "lat": 47.48139,
+      "lon": 19.151772,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1215 Budapest, Ady Endre út 54-60."
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_alsomalom_u_8_10_3",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1164",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1164 Budapest, Alsómalom u. 8-10.",
+      "lat": 47.482411,
+      "lon": 19.153202,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1164 Budapest, Alsómalom u. 8-10."
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_arany_janos_utca_27_29_4",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1051",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1051 Budapest, Arany János utca 27-29.",
+      "lat": 47.483818,
+      "lon": 19.154438,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1051 Budapest, Arany János utca 27-29."
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_bajcsy_zsilinszky_ut_61_5",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1065",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1065 Budapest, Bajcsy-Zsilinszky út 61.",
+      "lat": 47.485573,
+      "lon": 19.155403,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1065 Budapest, Bajcsy-Zsilinszky út 61."
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_bartok_bela_ut_47_6",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1114",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1114 Budapest, Bartók Béla út 47.",
+      "lat": 47.484508,
+      "lon": 19.150899,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1114 Budapest, Bartók Béla út 47."
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_bathory_u_6_7",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1191",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1191 Budapest, Báthory u. 6.",
+      "lat": 47.486123,
+      "lon": 19.15159,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1191 Budapest, Báthory u. 6."
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_becsi_ut_325_337_8",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1037",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1037 Budapest, Bécsi út 325-337.",
+      "lat": 47.487968,
+      "lon": 19.151915,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1037 Budapest, Bécsi út 325-337."
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_beke_utca_2_4_9",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1135",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1135 Budapest, Béke utca 2-4.",
+      "lat": 47.489968,
+      "lon": 19.151827,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1135 Budapest, Béke utca 2-4."
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_ciklamen_u_3_10",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1237",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1237 Budapest, Ciklámen u. 3.",
+      "lat": 47.486717,
+      "lon": 19.148532,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1237 Budapest, Ciklámen u. 3."
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_csalogany_u_43_11",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1027",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1027 Budapest, Csalogány u. 43",
+      "lat": 47.488457,
+      "lon": 19.148284,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1027 Budapest, Csalogány u. 43"
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_cziffra_gyu115_12",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1182",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1182 Budapest, Cziffra Gy.u.115.",
+      "lat": 47.490202,
+      "lon": 19.147603,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1182 Budapest, Cziffra Gy.u.115."
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_erdokerulo_utca_36_13",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1156",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1156 Budapest, Erdőkerülő utca 36.",
+      "lat": 47.491866,
+      "lon": 19.146489,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1156 Budapest, Erdőkerülő utca 36."
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_fehervari_ut_211_14",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1116",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1116 Budapest, Fehérvári út 211.",
+      "lat": 47.487376,
+      "lon": 19.145363,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1116 Budapest, Fehérvári út 211."
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_ferenciek_tere_2_15",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1053",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1053 Budapest, Ferenciek tere 2.",
+      "lat": 47.488733,
+      "lon": 19.144246,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1053 Budapest, Ferenciek tere 2."
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_gorgey_artur_u_14_20_16",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1041",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1041 Budapest, Görgey Artúr u. 14-20",
+      "lat": 47.48987,
+      "lon": 19.142758,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1041 Budapest, Görgey Artúr u. 14-20"
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_gubacsi_ut_34_17",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1097",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1097 Budapest, Gubacsi út 34.",
+      "lat": 47.490713,
+      "lon": 19.140941,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1097 Budapest, Gubacsi út 34."
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_huszti_ut_20_18",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1033",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1033 Budapest, Huszti út 20",
+      "lat": 47.486292,
+      "lon": 19.142312,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1033 Budapest, Huszti út 20"
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_janos_u_196_19",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1161",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1161 Budapest, János u. 196",
+      "lat": 47.486871,
+      "lon": 19.140653,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1161 Budapest, János u. 196"
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_leonardo_da_vinci_u_23_20",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1082",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1082 Budapest, Leonardo da Vinci u. 23.",
+      "lat": 47.48707,
+      "lon": 19.138791,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1082 Budapest, Leonardo da Vinci u. 23."
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_lobogo_u_12_21",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1098",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1098 Budapest, Lobogó u. 12",
+      "lat": 47.486846,
+      "lon": 19.136801,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1098 Budapest, Lobogó u. 12"
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_madach_utca_72_22",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1158",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1158 Budapest, Madách utca 72.",
+      "lat": 47.48378,
+      "lon": 19.140269,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1158 Budapest, Madách utca 72."
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_maglodi_ut_17_23",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1106",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1106 Budapest, Maglódi út 17",
+      "lat": 47.483413,
+      "lon": 19.13855,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1106 Budapest, Maglódi út 17"
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_margo_tivadar_u_83_24",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1186",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1186 Budapest, Margó Tivadar u. 83.",
+      "lat": 47.482615,
+      "lon": 19.136856,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1186 Budapest, Margó Tivadar u. 83."
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_mariaremetei_ut_1_25",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1028",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1028 Budapest, Máriaremetei út 1.",
+      "lat": 47.48139,
+      "lon": 19.135272,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1028 Budapest, Máriaremetei út 1."
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_megyeri_ut_53_26",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1044",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1044 Budapest, Megyeri út 53",
+      "lat": 47.480573,
+      "lon": 19.139828,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1044 Budapest, Megyeri út 53"
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_mogyorodi_ut_23_29_27",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1149",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1149 Budapest, Mogyoródi út 23-29",
+      "lat": 47.479367,
+      "lon": 19.13855,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1149 Budapest, Mogyoródi út 23-29"
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_nagy_lajos_kiraly_utja_121_123_28",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1141",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1141 Budapest, Nagy Lajos Király útja 121-123",
+      "lat": 47.477804,
+      "lon": 19.137517,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1141 Budapest, Nagy Lajos Király útja 121-123"
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_nagykorosi_ut_35_38_29",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1188",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1188 Budapest, Nagykőrösi út 35-38.",
+      "lat": 47.475934,
+      "lon": 19.136801,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1188 Budapest, Nagykőrösi út 35-38."
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_pesti_ut_237_h_30",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1173",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1173 Budapest, Pesti út 237/H",
+      "lat": 47.477603,
+      "lon": 19.141118,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1173 Budapest, Pesti út 237/H"
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_rakoczi_ut_48_50_31",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1074",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1074 Budapest, Rákóczi út 48-50.",
+      "lat": 47.475909,
+      "lon": 19.140653,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1074 Budapest, Rákóczi út 48-50."
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_regi_foti_u_1_32",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1152",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1152 Budapest, Régi Fóti u. 1",
+      "lat": 47.474037,
+      "lon": 19.140582,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1152 Budapest, Régi Fóti u. 1"
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_sibrik_miklos_ut_30_b_33",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1103",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1103 Budapest, Sibrik Miklós út 30/b.",
+      "lat": 47.472067,
+      "lon": 19.140941,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1103 Budapest, Sibrik Miklós út 30/b."
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_szalay_utca_14_34",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1191",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1191 Budapest, Szalay utca 14.",
+      "lat": 47.475736,
+      "lon": 19.143763,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1191 Budapest, Szalay utca 14."
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_szentendrei_ut_251_253_35",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1039",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1039 Budapest, Szentendrei út 251-253",
+      "lat": 47.474047,
+      "lon": 19.144246,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1039 Budapest, Szentendrei út 251-253"
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_teleki_ter_1_36",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1086",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1086 Budapest, Teleki tér 1.",
+      "lat": 47.472411,
+      "lon": 19.145158,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1086 Budapest, Teleki tér 1."
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_ujszasz_u_47_b_37",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1165",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1165 Budapest, Újszász u. 47/B",
+      "lat": 47.470914,
+      "lon": 19.146489,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1165 Budapest, Újszász u. 47/B"
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_ulloi_ut_112_38",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1101",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1101 Budapest, Üllői út 112.",
+      "lat": 47.475515,
+      "lon": 19.146993,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1101 Budapest, Üllői út 112."
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_ulloi_ut_379_381_39",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1181",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1181 Budapest, Üllői út 379-381.",
+      "lat": 47.474323,
+      "lon": 19.148284,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1181 Budapest, Üllői út 379-381."
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_vi_kiraly_u_112_40",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1061",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1061 Budapest, VI. Király u. 112.",
+      "lat": 47.473399,
+      "lon": 19.149913,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1061 Budapest, VI. Király u. 112."
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_victor_hugo_u11_15_41",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1132",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1132 Budapest, Victor Hugo u.11-15.",
+      "lat": 47.472812,
+      "lon": 19.151827,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1132 Budapest, Victor Hugo u.11-15."
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_viii_hungaria_korut_26_42",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1087",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1087 Budapest, VIII. Hungária körút 26.",
+      "lat": 47.477005,
+      "lon": 19.149867,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1087 Budapest, VIII. Hungária körút 26."
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_xiii_vaci_ut_201_43",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1138",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1138 Budapest, XIII. Váci út 201",
+      "lat": 47.476657,
+      "lon": 19.15159,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1138 Budapest, XIII. Váci út 201"
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_xvii_pesti_ut_2_44",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1173",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1173 Budapest, XVII. Pesti út 2.",
+      "lat": 47.476714,
+      "lon": 19.153462,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1173 Budapest, XVII. Pesti út 2."
+      ]
+    },
+    {
+      "store_id": "lidl_cegled_torteli_ut_2_45",
+      "company": "Lidl",
+      "name": "Lidl Cegléd",
+      "postcode": "2700",
+      "city": "Cegléd",
+      "area": "Cegléd",
+      "region": "Közép-Magyarország",
+      "address": "2700 Cegléd, Törteli út 2.",
+      "lat": 47.171645,
+      "lon": 19.797752,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Cegléd, Ceglédi járás, Pest vármegye, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Cegléd",
+        "2700 Cegléd, Törteli út 2."
+      ]
+    },
+    {
+      "store_id": "lidl_dorog_banyasz_korond_hrsz1732_98_46",
+      "company": "Lidl",
+      "name": "Lidl Dorog",
+      "postcode": "2510",
+      "city": "Dorog",
+      "area": "Dorog",
+      "region": "n.a.",
+      "address": "2510 Dorog, Bányász körönd Hrsz.1732/98",
+      "lat": 47.722378,
+      "lon": 18.731435,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Dorog, Esztergomi járás, Komárom-Esztergom vármegye, Közép-Dunántúl, Dunántúl, 2510, Magyarország",
+      "keywords": [
+        "Lidl Dorog",
+        "2510 Dorog, Bányász körönd Hrsz.1732/98"
+      ]
+    },
+    {
+      "store_id": "lidl_dunakeszi_berek_u_2_47",
+      "company": "Lidl",
+      "name": "Lidl Dunakeszi",
+      "postcode": "2120",
+      "city": "Dunakeszi",
+      "area": "Dunakeszi",
+      "region": "Közép-Magyarország",
+      "address": "2120 Dunakeszi, Berek u. 2.",
+      "lat": 47.63167,
+      "lon": 19.129406,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Dunakeszi, Dunakeszi járás, Pest vármegye, Közép-Magyarország, 2120, Magyarország",
+      "keywords": [
+        "Lidl Dunakeszi",
+        "2120 Dunakeszi, Berek u. 2."
+      ]
+    },
+    {
+      "store_id": "lidl_esztergom_banomi_ut_10_48",
+      "company": "Lidl",
+      "name": "Lidl Esztergom",
+      "postcode": "2500",
+      "city": "Esztergom",
+      "area": "Esztergom",
+      "region": "Közép-Dunántúl",
+      "address": "2500 Esztergom, Bánomi út 10.",
+      "lat": 47.785694,
+      "lon": 18.746338,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Esztergom, Esztergomi járás, Komárom-Esztergom vármegye, Közép-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Esztergom",
+        "2500 Esztergom, Bánomi út 10."
+      ]
+    },
+    {
+      "store_id": "lidl_esztergom_dobogokoi_ut_39_49",
+      "company": "Lidl",
+      "name": "Lidl Esztergom",
+      "postcode": "2500",
+      "city": "Esztergom",
+      "area": "Esztergom",
+      "region": "Közép-Dunántúl",
+      "address": "2500 Esztergom, Dobogókői út 39.",
+      "lat": 47.785694,
+      "lon": 18.732838,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Esztergom, Esztergomi járás, Komárom-Esztergom vármegye, Közép-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Esztergom",
+        "2500 Esztergom, Dobogókői út 39."
+      ]
+    },
+    {
+      "store_id": "lidl_fot_keleti_marton_u_7_50",
+      "company": "Lidl",
+      "name": "Lidl Fót",
+      "postcode": "2151",
+      "city": "Fót",
+      "area": "Fót",
+      "region": "n.a.",
+      "address": "2151 Fót, Keleti Márton u. 7.",
+      "lat": 47.612587,
+      "lon": 19.19801,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Fót, Dunakeszi járás, Pest vármegye, Közép-Magyarország, 2151, Magyarország",
+      "keywords": [
+        "Lidl Fót",
+        "2151 Fót, Keleti Márton u. 7."
+      ]
+    },
+    {
+      "store_id": "lidl_godollo_otto_ferenc_utca_2_4_51",
+      "company": "Lidl",
+      "name": "Lidl Gödöllő",
+      "postcode": "2100",
+      "city": "Gödöllő",
+      "area": "Gödöllő",
+      "region": "Közép-Magyarország",
+      "address": "2100 Gödöllő, Ottó Ferenc utca 2-4.",
+      "lat": 47.601529,
+      "lon": 19.347698,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Gödöllő, Gödöllői járás, Pest vármegye, Közép-Magyarország, 2100, Magyarország",
+      "keywords": [
+        "Lidl Gödöllő",
+        "2100 Gödöllő, Ottó Ferenc utca 2-4."
+      ]
+    },
+    {
+      "store_id": "lidl_jaszbereny_nagykatai_ut_7_a_52",
+      "company": "Lidl",
+      "name": "Lidl Jászberény",
+      "postcode": "5100",
+      "city": "Jászberény",
+      "area": "Jászberény",
+      "region": "Észak-Alföld",
+      "address": "5100 Jászberény, Nagykátai út 7/a.",
+      "lat": 47.503051,
+      "lon": 19.911789,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Jászberény, Jászberényi járás, Jász-Nagykun-Szolnok vármegye, Észak-Alföld, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Jászberény",
+        "5100 Jászberény, Nagykátai út 7/a."
+      ]
+    },
+    {
+      "store_id": "lidl_kistarcsa_szabadsag_utja_60_53",
+      "company": "Lidl",
+      "name": "Lidl Kistarcsa",
+      "postcode": "2143",
+      "city": "Kistarcsa",
+      "area": "Kistarcsa",
+      "region": "n.a.",
+      "address": "2143 Kistarcsa, Szabadság útja 60",
+      "lat": 47.544732,
+      "lon": 19.263638,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Kistarcsa, Gödöllői járás, Pest vármegye, Közép-Magyarország, 2143, Magyarország",
+      "keywords": [
+        "Lidl Kistarcsa",
+        "2143 Kistarcsa, Szabadság útja 60"
+      ]
+    },
+    {
+      "store_id": "lidl_monor_gem_utca_1_54",
+      "company": "Lidl",
+      "name": "Lidl Monor",
+      "postcode": "2200",
+      "city": "Monor",
+      "area": "Monor",
+      "region": "Közép-Magyarország",
+      "address": "2200 Monor, Gém utca 1.",
+      "lat": 47.352743,
+      "lon": 19.44684,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Monor, Monori járás, Pest vármegye, Közép-Magyarország, 2200, Magyarország",
+      "keywords": [
+        "Lidl Monor",
+        "2200 Monor, Gém utca 1."
+      ]
+    },
+    {
+      "store_id": "lidl_nagykata_dozsa_gyorgy_ut_16_55",
+      "company": "Lidl",
+      "name": "Lidl Nagykáta",
+      "postcode": "2760",
+      "city": "Nagykáta",
+      "area": "Nagykáta",
+      "region": "n.a.",
+      "address": "2760 Nagykáta, Dózsa György út. 16.",
+      "lat": 47.413819,
+      "lon": 19.750374,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Nagykáta, Nagykátai járás, Pest vármegye, Közép-Magyarország, 2760, Magyarország",
+      "keywords": [
+        "Lidl Nagykáta",
+        "2760 Nagykáta, Dózsa György út. 16."
+      ]
+    },
+    {
+      "store_id": "lidl_pilisvorosvar_budai_ut_18_56",
+      "company": "Lidl",
+      "name": "Lidl Pilisvörösvár",
+      "postcode": "2085",
+      "city": "Pilisvörösvár",
+      "area": "Pilisvörösvár",
+      "region": "n.a.",
+      "address": "2085 Pilisvörösvár, Budai út 18.",
+      "lat": 47.621082,
+      "lon": 18.911575,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Pilisvörösvár, Pilisvörösvári járás, Pest vármegye, Közép-Magyarország, 2085, Magyarország",
+      "keywords": [
+        "Lidl Pilisvörösvár",
+        "2085 Pilisvörösvár, Budai út 18."
+      ]
+    },
+    {
+      "store_id": "lidl_pomaz_jozsef_attila_u_32_57",
+      "company": "Lidl",
+      "name": "Lidl Pomáz",
+      "postcode": "2013",
+      "city": "Pomáz",
+      "area": "Pomáz",
+      "region": "n.a.",
+      "address": "2013 Pomáz , József Attila u. 32.",
+      "lat": 47.646821,
+      "lon": 19.02363,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Pomáz, Szentendrei járás, Pest vármegye, Közép-Magyarország, 2013, Magyarország",
+      "keywords": [
+        "Lidl Pomáz",
+        "2013 Pomáz , József Attila u. 32."
+      ]
+    },
+    {
+      "store_id": "lidl_solymar_terstyanszky_odon_utca_89_58",
+      "company": "Lidl",
+      "name": "Lidl Solymár",
+      "postcode": "2083",
+      "city": "Solymár",
+      "area": "Solymár",
+      "region": "n.a.",
+      "address": "2083 Solymár, Terstyánszky Ödön utca 89.",
+      "lat": 47.591333,
+      "lon": 18.928494,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Solymár, Pilisvörösvári járás, Pest vármegye, Közép-Magyarország, 2083, Magyarország",
+      "keywords": [
+        "Lidl Solymár",
+        "2083 Solymár, Terstyánszky Ödön utca 89."
+      ]
+    },
+    {
+      "store_id": "lidl_szada_dozsa_gyorgy_ut_1_b_59",
+      "company": "Lidl",
+      "name": "Lidl Szada",
+      "postcode": "2111",
+      "city": "Szada",
+      "area": "Szada",
+      "region": "n.a.",
+      "address": "2111 Szada, Dózsa György út 1/B",
+      "lat": 47.636333,
+      "lon": 19.311698,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Szada, Gödöllői járás, Pest vármegye, Közép-Magyarország, 2111, Magyarország",
+      "keywords": [
+        "Lidl Szada",
+        "2111 Szada, Dózsa György út 1/B"
+      ]
+    },
+    {
+      "store_id": "lidl_szentendre_dozsa_gy_ut_20_60",
+      "company": "Lidl",
+      "name": "Lidl Szentendre",
+      "postcode": "2000",
+      "city": "Szentendre",
+      "area": "Szentendre",
+      "region": "n.a.",
+      "address": "2000 Szentendre, Dózsa Gy. út 20",
+      "lat": 47.667761,
+      "lon": 19.076047,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Szentendre, Szentendrei járás, Pest vármegye, Közép-Magyarország, 2000, Magyarország",
+      "keywords": [
+        "Lidl Szentendre",
+        "2000 Szentendre, Dózsa Gy. út 20"
+      ]
+    },
+    {
+      "store_id": "lidl_urom_dozsa_gyorgy_ut_63_61",
+      "company": "Lidl",
+      "name": "Lidl Üröm",
+      "postcode": "2096",
+      "city": "Üröm",
+      "area": "Üröm",
+      "region": "n.a.",
+      "address": "2096 Üröm, Dózsa György út 63.",
+      "lat": 47.5987,
+      "lon": 19.013426,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Üröm, Pilisvörösvári járás, Pest vármegye, Közép-Magyarország, 2096, Magyarország",
+      "keywords": [
+        "Lidl Üröm",
+        "2096 Üröm, Dózsa György út 63."
+      ]
+    },
+    {
+      "store_id": "lidl_vac_balassagyarmati_ut_9_15_62",
+      "company": "Lidl",
+      "name": "Lidl Vác",
+      "postcode": "2600",
+      "city": "Vác",
+      "area": "Vác",
+      "region": "Közép-Magyarország",
+      "address": "2600 Vác, Balassagyarmati út 9-15.",
+      "lat": 47.778287,
+      "lon": 19.133829,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Vác, Váci járás, Pest vármegye, Közép-Magyarország, 2600, Magyarország",
+      "keywords": [
+        "Lidl Vác",
+        "2600 Vác, Balassagyarmati út 9-15."
+      ]
+    },
+    {
+      "store_id": "lidl_vac_bolgar_u_1_63",
+      "company": "Lidl",
+      "name": "Lidl Vác",
+      "postcode": "2600",
+      "city": "Vác",
+      "area": "Vác",
+      "region": "Közép-Magyarország",
+      "address": "2600 Vác, Bolgár u. 1.",
+      "lat": 47.784782,
+      "lon": 19.124079,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Vác, Váci járás, Pest vármegye, Közép-Magyarország, 2600, Magyarország",
+      "keywords": [
+        "Lidl Vác",
+        "2600 Vác, Bolgár u. 1."
+      ]
+    },
+    {
+      "store_id": "lidl_vac_naszaly_utca_20_64",
+      "company": "Lidl",
+      "name": "Lidl Vác",
+      "postcode": "2600",
+      "city": "Vác",
+      "area": "Vác",
+      "region": "Közép-Magyarország",
+      "address": "2600 Vác, Naszály utca 20.",
+      "lat": 47.770493,
+      "lon": 19.123329,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Vác, Váci járás, Pest vármegye, Közép-Magyarország, 2600, Magyarország",
+      "keywords": [
+        "Lidl Vác",
+        "2600 Vác, Naszály utca 20."
+      ]
+    },
+    {
+      "store_id": "lidl_vecses_fo_u_244_65",
+      "company": "Lidl",
+      "name": "Lidl Vecsés",
+      "postcode": "2220",
+      "city": "Vecsés",
+      "area": "Vecsés",
+      "region": "Közép-Magyarország",
+      "address": "2220 Vecsés, Fő u. 244",
+      "lat": 47.406897,
+      "lon": 19.264307,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Vecsés, Vecsési járás, Pest vármegye, Közép-Magyarország, 2220, Magyarország",
+      "keywords": [
+        "Lidl Vecsés",
+        "2220 Vecsés, Fő u. 244"
+      ]
+    },
+    {
+      "store_id": "lidl_veresegyhaz_budapesti_ut_1_66",
+      "company": "Lidl",
+      "name": "Lidl Veresegyház",
+      "postcode": "2112",
+      "city": "Veresegyház",
+      "area": "Veresegyház",
+      "region": "n.a.",
+      "address": "2112 Veresegyház, Budapesti út 1.",
+      "lat": 47.655235,
+      "lon": 19.292881,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Veresegyház, Gödöllői járás, Pest vármegye, Közép-Magyarország, 2112, Magyarország",
+      "keywords": [
+        "Lidl Veresegyház",
+        "2112 Veresegyház, Budapesti út 1."
+      ]
+    },
+    {
+      "store_id": "lidl_veresegyhaz_szadai_ut_7_67",
+      "company": "Lidl",
+      "name": "Lidl Veresegyház",
+      "postcode": "2112",
+      "city": "Veresegyház",
+      "area": "Veresegyház",
+      "region": "n.a.",
+      "address": "2112 Veresegyház, Szadai út 7.",
+      "lat": 47.655235,
+      "lon": 19.279381,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Veresegyház, Gödöllői járás, Pest vármegye, Közép-Magyarország, 2112, Magyarország",
+      "keywords": [
+        "Lidl Veresegyház",
+        "2112 Veresegyház, Szadai út 7."
+      ]
+    },
+    {
+      "store_id": "lidl_agard_akacfa_utca_2_68",
+      "company": "Lidl",
+      "name": "Lidl Agárd",
+      "postcode": "2484",
+      "city": "Agárd",
+      "area": "Agárd",
+      "region": "n.a.",
+      "address": "2484 Agárd, Akácfa utca 2.",
+      "lat": 47.857872,
+      "lon": 19.195361,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Ősagárd, Rétsági járás, Nógrád vármegye, Észak-Magyarország, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Agárd",
+        "2484 Agárd, Akácfa utca 2."
+      ]
+    },
+    {
+      "store_id": "lidl_ajka_harsfa_utca_1_a_69",
+      "company": "Lidl",
+      "name": "Lidl Ajka",
+      "postcode": "8400",
+      "city": "Ajka",
+      "area": "Ajka",
+      "region": "Közép-Dunántúl",
+      "address": "8400 Ajka, Hársfa utca 1/A",
+      "lat": 47.105658,
+      "lon": 17.558728,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Ajka, Ajkai járás, Veszprém vármegye, Közép-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Ajka",
+        "8400 Ajka, Hársfa utca 1/A"
+      ]
+    },
+    {
+      "store_id": "lidl_balatonfuzfo_vizmu_utca_1_70",
+      "company": "Lidl",
+      "name": "Lidl Balatonfűzfő",
+      "postcode": "8175",
+      "city": "Balatonfűzfő",
+      "area": "Balatonfűzfő",
+      "region": "Közép-Dunántúl",
+      "address": "8175 Balatonfűzfő, Vízmű utca 1.",
+      "lat": 47.062004,
+      "lon": 18.040968,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Balatonfűzfő, Balatonalmádi járás, Veszprém vármegye, Közép-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Balatonfűzfő",
+        "8175 Balatonfűzfő, Vízmű utca 1."
+      ]
+    },
+    {
+      "store_id": "lidl_balatonlelle_rakoczi_f_ut_307_71",
+      "company": "Lidl",
+      "name": "Lidl Balatonlelle",
+      "postcode": "8638",
+      "city": "Balatonlelle",
+      "area": "Balatonlelle",
+      "region": "n.a.",
+      "address": "8638 Balatonlelle, Rákóczi F. út 307.",
+      "lat": 46.786762,
+      "lon": 17.696521,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Balatonlelle, Fonyódi járás, Somogy vármegye, Dél-Dunántúl, Dunántúl, 8638, Magyarország",
+      "keywords": [
+        "Lidl Balatonlelle",
+        "8638 Balatonlelle, Rákóczi F. út 307."
+      ]
+    },
+    {
+      "store_id": "lidl_barcs_erkel_f_utca_2_72",
+      "company": "Lidl",
+      "name": "Lidl Barcs",
+      "postcode": "7570",
+      "city": "Barcs",
+      "area": "Barcs",
+      "region": "Dél-Dunántúl",
+      "address": "7570 Barcs, Erkel F. utca 2.",
+      "lat": 45.960513,
+      "lon": 17.463412,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Barcs, Barcsi járás, Somogy vármegye, Dél-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Barcs",
+        "7570 Barcs, Erkel F. utca 2."
+      ]
+    },
+    {
+      "store_id": "lidl_csorna_soproni_ut_66_c_73",
+      "company": "Lidl",
+      "name": "Lidl Csorna",
+      "postcode": "9300",
+      "city": "Csorna",
+      "area": "Csorna",
+      "region": "n.a.",
+      "address": "9300 Csorna, Soproni út 66/C.",
+      "lat": 47.613415,
+      "lon": 17.249796,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Csorna, Csornai járás, Győr-Moson-Sopron vármegye, Nyugat-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Csorna",
+        "9300 Csorna, Soproni út 66/C."
+      ]
+    },
+    {
+      "store_id": "lidl_csurgo_szechenyi_ter_12_14_74",
+      "company": "Lidl",
+      "name": "Lidl Csurgó",
+      "postcode": "8840",
+      "city": "Csurgó",
+      "area": "Csurgó",
+      "region": "n.a.",
+      "address": "8840 Csurgó, Széchenyi tér 12-14.",
+      "lat": 46.264251,
+      "lon": 17.095087,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Csurgó, Csurgói járás, Somogy vármegye, Dél-Dunántúl, Dunántúl, 8840, Magyarország",
+      "keywords": [
+        "Lidl Csurgó",
+        "8840 Csurgó, Széchenyi tér 12-14."
+      ]
+    },
+    {
+      "store_id": "lidl_dombovar_korhaz_utca_55_75",
+      "company": "Lidl",
+      "name": "Lidl Dombóvár",
+      "postcode": "7200",
+      "city": "Dombóvár",
+      "area": "Dombóvár",
+      "region": "Dél-Dunántúl",
+      "address": "7200 Dombóvár, Kórház utca 55.",
+      "lat": 46.377899,
+      "lon": 18.133287,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Dombóvár, Dombóvári járás, Tolna vármegye, Dél-Dunántúl, Dunántúl, 7200, Magyarország",
+      "keywords": [
+        "Lidl Dombóvár",
+        "7200 Dombóvár, Kórház utca 55."
+      ]
+    },
+    {
+      "store_id": "lidl_enying_rakoczi_ferenc_utca_5_76",
+      "company": "Lidl",
+      "name": "Lidl Enying",
+      "postcode": "8130",
+      "city": "Enying",
+      "area": "Enying",
+      "region": "n.a.",
+      "address": "8130 Enying, Rákóczi Ferenc utca 5.",
+      "lat": 46.926934,
+      "lon": 18.244973,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Enying, Enyingi járás, Fejér vármegye, Közép-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Enying",
+        "8130 Enying, Rákóczi Ferenc utca 5."
+      ]
+    },
+    {
+      "store_id": "lidl_fonyod_ady_endre_utca_57_59_77",
+      "company": "Lidl",
+      "name": "Lidl Fonyód",
+      "postcode": "8640",
+      "city": "Fonyód",
+      "area": "Fonyód",
+      "region": "Dél-Dunántúl",
+      "address": "8640 Fonyód, Ady Endre utca 57-59.",
+      "lat": 46.746752,
+      "lon": 17.54946,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Fonyód, Fonyódi járás, Somogy vármegye, Dél-Dunántúl, Dunántúl, 8640, Magyarország",
+      "keywords": [
+        "Lidl Fonyód",
+        "8640 Fonyód, Ady Endre utca 57-59."
+      ]
+    },
+    {
+      "store_id": "lidl_gyor_jerevani_utca_42_78",
+      "company": "Lidl",
+      "name": "Lidl Győr",
+      "postcode": "9028",
+      "city": "Győr",
+      "area": "Győr",
+      "region": "Nyugat-Dunántúl",
+      "address": "9028 Győr, Jereváni utca 42.",
+      "lat": 47.683503,
+      "lon": 17.640283,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Győr, Győri járás, Győr-Moson-Sopron vármegye, Nyugat-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Győr",
+        "9028 Győr, Jereváni utca 42."
+      ]
+    },
+    {
+      "store_id": "lidl_gyor_szeszgyar_utca_6_79",
+      "company": "Lidl",
+      "name": "Lidl Győr",
+      "postcode": "9027",
+      "city": "Győr",
+      "area": "Győr",
+      "region": "Nyugat-Dunántúl",
+      "address": "9027 Győr, Szeszgyár utca 6.",
+      "lat": 47.690636,
+      "lon": 17.636601,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Győr, Győri járás, Győr-Moson-Sopron vármegye, Nyugat-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Győr",
+        "9027 Győr, Szeszgyár utca 6."
+      ]
+    },
+    {
+      "store_id": "lidl_gyor_tihanyi_arpad_ut_9_80",
+      "company": "Lidl",
+      "name": "Lidl Győr",
+      "postcode": "9023",
+      "city": "Győr",
+      "area": "Győr",
+      "region": "Nyugat-Dunántúl",
+      "address": "9023 Győr, Tihanyi Árpád út 9.",
+      "lat": 47.688793,
+      "lon": 17.627002,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Győr, Győri járás, Győr-Moson-Sopron vármegye, Nyugat-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Győr",
+        "9023 Győr, Tihanyi Árpád út 9."
+      ]
+    },
+    {
+      "store_id": "lidl_gyor_kossuth_lajos_utca_123_81",
+      "company": "Lidl",
+      "name": "Lidl Győr",
+      "postcode": "9025",
+      "city": "Győr",
+      "area": "Győr",
+      "region": "Nyugat-Dunántúl",
+      "address": "9025 Győr, Kossuth Lajos utca 123.",
+      "lat": 47.677331,
+      "lon": 17.625788,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Győr, Győri járás, Győr-Moson-Sopron vármegye, Nyugat-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Győr",
+        "9025 Győr, Kossuth Lajos utca 123."
+      ]
+    },
+    {
+      "store_id": "lidl_gyor_mecs_laszlo_utca_1_a_82",
+      "company": "Lidl",
+      "name": "Lidl Győr",
+      "postcode": "9021",
+      "city": "Győr",
+      "area": "Győr",
+      "region": "Nyugat-Dunántúl",
+      "address": "9021 Győr, Mécs László utca 1/A",
+      "lat": 47.677797,
+      "lon": 17.636137,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Győr, Győri járás, Győr-Moson-Sopron vármegye, Nyugat-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Győr",
+        "9021 Győr, Mécs László utca 1/A"
+      ]
+    },
+    {
+      "store_id": "lidl_kaposvar_bereczk_s_utca_2_83",
+      "company": "Lidl",
+      "name": "Lidl Kaposvár",
+      "postcode": "7400",
+      "city": "Kaposvár",
+      "area": "Kaposvár",
+      "region": "Dél-Dunántúl",
+      "address": "7400 Kaposvár, Bereczk S. utca 2.",
+      "lat": 46.356469,
+      "lon": 17.794689,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Kaposvár, Kaposvári járás, Somogy vármegye, Dél-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Kaposvár",
+        "7400 Kaposvár, Bereczk S. utca 2."
+      ]
+    },
+    {
+      "store_id": "lidl_kaposvar_elod_vezer_utca_3_84",
+      "company": "Lidl",
+      "name": "Lidl Kaposvár",
+      "postcode": "7400",
+      "city": "Kaposvár",
+      "area": "Kaposvár",
+      "region": "Dél-Dunántúl",
+      "address": "7400 Kaposvár, Előd Vezér utca 3.",
+      "lat": 46.362964,
+      "lon": 17.784939,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Kaposvár, Kaposvári járás, Somogy vármegye, Dél-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Kaposvár",
+        "7400 Kaposvár, Előd Vezér utca 3."
+      ]
+    },
+    {
+      "store_id": "lidl_kaposvar_furedi_ut_97_85",
+      "company": "Lidl",
+      "name": "Lidl Kaposvár",
+      "postcode": "7400",
+      "city": "Kaposvár",
+      "area": "Kaposvár",
+      "region": "Dél-Dunántúl",
+      "address": "7400 Kaposvár, Füredi út 97.",
+      "lat": 46.348675,
+      "lon": 17.784189,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Kaposvár, Kaposvári járás, Somogy vármegye, Dél-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Kaposvár",
+        "7400 Kaposvár, Füredi út 97."
+      ]
+    },
+    {
+      "store_id": "lidl_kapuvar_gyori_u_60_86",
+      "company": "Lidl",
+      "name": "Lidl Kapuvár",
+      "postcode": "9330",
+      "city": "Kapuvár",
+      "area": "Kapuvár",
+      "region": "n.a.",
+      "address": "9330 Kapuvár, Győri u. 60.",
+      "lat": 47.593687,
+      "lon": 17.027474,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Kapuvár, Kapuvári járás, Győr-Moson-Sopron vármegye, Nyugat-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Kapuvár",
+        "9330 Kapuvár, Győri u. 60."
+      ]
+    },
+    {
+      "store_id": "lidl_keszthely_tapolcai_ut_45_a_87",
+      "company": "Lidl",
+      "name": "Lidl Keszthely",
+      "postcode": "8360",
+      "city": "Keszthely",
+      "area": "Keszthely",
+      "region": "n.a.",
+      "address": "8360 Keszthely, Tapolcai út 45/a",
+      "lat": 46.767508,
+      "lon": 17.25228,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Keszthely, Keszthelyi járás, Zala vármegye, Nyugat-Dunántúl, Dunántúl, 8360, Magyarország",
+      "keywords": [
+        "Lidl Keszthely",
+        "8360 Keszthely, Tapolcai út 45/a"
+      ]
+    },
+    {
+      "store_id": "lidl_keszthely_sopron_utca_43_88",
+      "company": "Lidl",
+      "name": "Lidl Keszthely",
+      "postcode": "8360",
+      "city": "Keszthely",
+      "area": "Keszthely",
+      "region": "n.a.",
+      "address": "8360 Keszthely, Sopron utca 43.",
+      "lat": 46.767508,
+      "lon": 17.23878,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Keszthely, Keszthelyi járás, Zala vármegye, Nyugat-Dunántúl, Dunántúl, 8360, Magyarország",
+      "keywords": [
+        "Lidl Keszthely",
+        "8360 Keszthely, Sopron utca 43."
+      ]
+    },
+    {
+      "store_id": "lidl_kormend_dr_remetei_filep_utca_2_89",
+      "company": "Lidl",
+      "name": "Lidl Körmend",
+      "postcode": "9900",
+      "city": "Körmend",
+      "area": "Körmend",
+      "region": "n.a.",
+      "address": "9900 Körmend, Dr. Remetei Filep utca 2.",
+      "lat": 47.016102,
+      "lon": 16.59809,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Körmend, Vasútmellék utca, Kis Amerika, Körmend, Körmendi járás, Vas vármegye, Nyugat-Dunántúl, Dunántúl, 9900, Magyarország",
+      "keywords": [
+        "Lidl Körmend",
+        "9900 Körmend, Dr. Remetei Filep utca 2."
+      ]
+    },
+    {
+      "store_id": "lidl_koszeg_caki_ut_2_90",
+      "company": "Lidl",
+      "name": "Lidl Kőszeg",
+      "postcode": "9730",
+      "city": "Kőszeg",
+      "area": "Kőszeg",
+      "region": "Nyugat-Dunántúl",
+      "address": "9730 Kőszeg, Cáki út 2.",
+      "lat": 47.389495,
+      "lon": 16.540684,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Kőszeg, Kőszegi járás, Vas vármegye, Nyugat-Dunántúl, Dunántúl, 9730, Magyarország",
+      "keywords": [
+        "Lidl Kőszeg",
+        "9730 Kőszeg, Cáki út 2."
+      ]
+    },
+    {
+      "store_id": "lidl_marcali_rakoczi_ferenc_utca_50_91",
+      "company": "Lidl",
+      "name": "Lidl Marcali",
+      "postcode": "8700",
+      "city": "Marcali",
+      "area": "Marcali",
+      "region": "Dél-Dunántúl",
+      "address": "8700 Marcali, Rákóczi Ferenc utca 50.",
+      "lat": 46.583348,
+      "lon": 17.4123,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Marcali, Marcali járás, Somogy vármegye, Dél-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Marcali",
+        "8700 Marcali, Rákóczi Ferenc utca 50."
+      ]
+    },
+    {
+      "store_id": "lidl_mor_akai_utca_8_92",
+      "company": "Lidl",
+      "name": "Lidl Mór",
+      "postcode": "8060",
+      "city": "Mór",
+      "area": "Mór",
+      "region": "n.a.",
+      "address": "8060 Mór, Akai utca 8.",
+      "lat": 47.372027,
+      "lon": 18.209039,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Mór, Móri járás, Fejér vármegye, Közép-Dunántúl, Dunántúl, 8060, Magyarország",
+      "keywords": [
+        "Lidl Mór",
+        "8060 Mór, Akai utca 8."
+      ]
+    },
+    {
+      "store_id": "lidl_mosonmagyarovar_kiralyhidai_utca_49_93",
+      "company": "Lidl",
+      "name": "Lidl Mosonmagyaróvár",
+      "postcode": "9200",
+      "city": "Mosonmagyaróvár",
+      "area": "Mosonmagyaróvár",
+      "region": "Nyugat-Dunántúl",
+      "address": "9200 Mosonmagyaróvár, Királyhidai utca 49.",
+      "lat": 47.873179,
+      "lon": 17.272234,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Mosonmagyaróvár, Mosonmagyaróvári járás, Győr-Moson-Sopron vármegye, Nyugat-Dunántúl, Dunántúl, 9200, Magyarország",
+      "keywords": [
+        "Lidl Mosonmagyaróvár",
+        "9200 Mosonmagyaróvár, Királyhidai utca 49."
+      ]
+    },
+    {
+      "store_id": "lidl_nagyatad_arpad_utca_49_94",
+      "company": "Lidl",
+      "name": "Lidl Nagyatád",
+      "postcode": "7500",
+      "city": "Nagyatád",
+      "area": "Nagyatád",
+      "region": "Dél-Dunántúl",
+      "address": "7500 Nagyatád, Árpád utca 49.",
+      "lat": 46.229143,
+      "lon": 17.357096,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Nagyatád, Nagyatádi járás, Somogy vármegye, Dél-Dunántúl, Dunántúl, 7500, Magyarország",
+      "keywords": [
+        "Lidl Nagyatád",
+        "7500 Nagyatád, Árpád utca 49."
+      ]
+    },
+    {
+      "store_id": "lidl_nagykanizsa_balatoni_utca_41_95",
+      "company": "Lidl",
+      "name": "Lidl Nagykanizsa",
+      "postcode": "8800",
+      "city": "Nagykanizsa",
+      "area": "Nagykanizsa",
+      "region": "Nyugat-Dunántúl",
+      "address": "8800 Nagykanizsa, Balatoni utca 41.",
+      "lat": 46.454826,
+      "lon": 16.992392,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Nagykanizsa, Nagykanizsai járás, Zala vármegye, Nyugat-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Nagykanizsa",
+        "8800 Nagykanizsa, Balatoni utca 41."
+      ]
+    },
+    {
+      "store_id": "lidl_papa_jokai_mor_utca_57_96",
+      "company": "Lidl",
+      "name": "Lidl Pápa",
+      "postcode": "8500",
+      "city": "Pápa",
+      "area": "Pápa",
+      "region": "n.a.",
+      "address": "8500 Pápa, Jókai Mór utca 57.",
+      "lat": 47.326109,
+      "lon": 17.470529,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Pápa, Pápai járás, Veszprém vármegye, Közép-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Pápa",
+        "8500 Pápa, Jókai Mór utca 57."
+      ]
+    },
+    {
+      "store_id": "lidl_sarbogard_ady_e_utca_232_236_97",
+      "company": "Lidl",
+      "name": "Lidl Sárbogárd",
+      "postcode": "7000",
+      "city": "Sárbogárd",
+      "area": "Sárbogárd",
+      "region": "n.a.",
+      "address": "7000 Sárbogárd, Ady E. utca 232-236.",
+      "lat": 46.887437,
+      "lon": 18.619625,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Sárbogárd, Sárbogárdi járás, Fejér vármegye, Közép-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Sárbogárd",
+        "7000 Sárbogárd, Ady E. utca 232-236."
+      ]
+    },
+    {
+      "store_id": "lidl_sarvar_rakoczi_utca_12_98",
+      "company": "Lidl",
+      "name": "Lidl Sárvár",
+      "postcode": "9600",
+      "city": "Sárvár",
+      "area": "Sárvár",
+      "region": "n.a.",
+      "address": "9600 Sárvár, Rákóczi utca 12.",
+      "lat": 47.251743,
+      "lon": 16.934217,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Sárvár, Sárvári járás, Vas vármegye, Nyugat-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Sárvár",
+        "9600 Sárvár, Rákóczi utca 12."
+      ]
+    },
+    {
+      "store_id": "lidl_siofok_zamardi_utca_1_2_99",
+      "company": "Lidl",
+      "name": "Lidl Siófok",
+      "postcode": "8600",
+      "city": "Siófok",
+      "area": "Siófok",
+      "region": "Dél-Dunántúl",
+      "address": "8600 Siófok, Zamárdi utca 1-2.",
+      "lat": 46.907169,
+      "lon": 18.05416,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Siófok, Siófoki járás, Somogy vármegye, Dél-Dunántúl, Dunántúl, 8600, Magyarország",
+      "keywords": [
+        "Lidl Siófok",
+        "8600 Siófok, Zamárdi utca 1-2."
+      ]
+    },
+    {
+      "store_id": "lidl_sopron_lofuttato_utca_4_100",
+      "company": "Lidl",
+      "name": "Lidl Sopron",
+      "postcode": "9400",
+      "city": "Sopron",
+      "area": "Sopron",
+      "region": "Nyugat-Dunántúl",
+      "address": "9400 Sopron, Lófuttató utca 4.",
+      "lat": 47.680306,
+      "lon": 16.604346,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Sopron, Soproni járás, Győr-Moson-Sopron vármegye, Nyugat-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Sopron",
+        "9400 Sopron, Lófuttató utca 4."
+      ]
+    },
+    {
+      "store_id": "lidl_sopron_banfalvi_ut_12_101",
+      "company": "Lidl",
+      "name": "Lidl Sopron",
+      "postcode": "9400",
+      "city": "Sopron",
+      "area": "Sopron",
+      "region": "Nyugat-Dunántúl",
+      "address": "9400 Sopron, Bánfalvi út 12.",
+      "lat": 47.680306,
+      "lon": 16.590846,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Sopron, Soproni járás, Győr-Moson-Sopron vármegye, Nyugat-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Sopron",
+        "9400 Sopron, Bánfalvi út 12."
+      ]
+    },
+    {
+      "store_id": "lidl_sumeg_feherko_utca_1_1_102",
+      "company": "Lidl",
+      "name": "Lidl Sümeg",
+      "postcode": "8330",
+      "city": "Sümeg",
+      "area": "Sümeg",
+      "region": "n.a.",
+      "address": "8330 Sümeg, Fehérkő utca 1/1.",
+      "lat": 46.978433,
+      "lon": 17.281166,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Sümeg, Sümegi járás, Veszprém vármegye, Közép-Dunántúl, Dunántúl, 8330, Magyarország",
+      "keywords": [
+        "Lidl Sümeg",
+        "8330 Sümeg, Fehérkő utca 1/1."
+      ]
+    },
+    {
+      "store_id": "lidl_szekesfehervar_martirok_utja_11_103",
+      "company": "Lidl",
+      "name": "Lidl Székesfehérvár",
+      "postcode": "8000",
+      "city": "Székesfehérvár",
+      "area": "Székesfehérvár",
+      "region": "Közép-Dunántúl",
+      "address": "8000 Székesfehérvár, Mártírok útja 11.",
+      "lat": 47.191017,
+      "lon": 18.416811,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Székesfehérvár, Székesfehérvári járás, Fejér vármegye, Közép-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Székesfehérvár",
+        "8000 Székesfehérvár, Mártírok útja 11."
+      ]
+    },
+    {
+      "store_id": "lidl_szekesfehervar_balatoni_ut_21_104",
+      "company": "Lidl",
+      "name": "Lidl Székesfehérvár",
+      "postcode": "8000",
+      "city": "Székesfehérvár",
+      "area": "Székesfehérvár",
+      "region": "Közép-Dunántúl",
+      "address": "8000 Székesfehérvár, Balatoni út 21.",
+      "lat": 47.198517,
+      "lon": 18.410811,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Székesfehérvár, Székesfehérvári járás, Fejér vármegye, Közép-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Székesfehérvár",
+        "8000 Székesfehérvár, Balatoni út 21."
+      ]
+    },
+    {
+      "store_id": "lidl_szekesfehervar_farkasvermi_koz_1_105",
+      "company": "Lidl",
+      "name": "Lidl Székesfehérvár",
+      "postcode": "8000",
+      "city": "Székesfehérvár",
+      "area": "Székesfehérvár",
+      "region": "Közép-Dunántúl",
+      "address": "8000 Székesfehérvár, Farkasvermi köz 1.",
+      "lat": 47.191017,
+      "lon": 18.401811,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Székesfehérvár, Székesfehérvári járás, Fejér vármegye, Közép-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Székesfehérvár",
+        "8000 Székesfehérvár, Farkasvermi köz 1."
+      ]
+    },
+    {
+      "store_id": "lidl_szekesfehervar_pozsonyi_ut_4_106",
+      "company": "Lidl",
+      "name": "Lidl Székesfehérvár",
+      "postcode": "8000",
+      "city": "Székesfehérvár",
+      "area": "Székesfehérvár",
+      "region": "Közép-Dunántúl",
+      "address": "8000 Székesfehérvár, Pozsonyi út 4.",
+      "lat": 47.180517,
+      "lon": 18.410811,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Székesfehérvár, Székesfehérvári járás, Fejér vármegye, Közép-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Székesfehérvár",
+        "8000 Székesfehérvár, Pozsonyi út 4."
+      ]
+    },
+    {
+      "store_id": "lidl_szigetvar_almas_patak_utca_5_107",
+      "company": "Lidl",
+      "name": "Lidl Szigetvár",
+      "postcode": "7900",
+      "city": "Szigetvár",
+      "area": "Szigetvár",
+      "region": "n.a.",
+      "address": "7900 Szigetvár, Almás patak utca 5.",
+      "lat": 46.04744,
+      "lon": 17.799351,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Szigetvár, Szigetvári járás, Baranya vármegye, Dél-Dunántúl, Dunántúl, 7900, Magyarország",
+      "keywords": [
+        "Lidl Szigetvár",
+        "7900 Szigetvár, Almás patak utca 5."
+      ]
+    },
+    {
+      "store_id": "lidl_szombathely_verseny_utca_30_108",
+      "company": "Lidl",
+      "name": "Lidl Szombathely",
+      "postcode": "9700",
+      "city": "Szombathely",
+      "area": "Szombathely",
+      "region": "Nyugat-Dunántúl",
+      "address": "9700 Szombathely, Verseny utca 30.",
+      "lat": 47.229118,
+      "lon": 16.624762,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Szombathely, Szombathelyi járás, Vas vármegye, Nyugat-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Szombathely",
+        "9700 Szombathely, Verseny utca 30."
+      ]
+    },
+    {
+      "store_id": "lidl_szombathely_kenyerviz_utca_2_109",
+      "company": "Lidl",
+      "name": "Lidl Szombathely",
+      "postcode": "9700",
+      "city": "Szombathely",
+      "area": "Szombathely",
+      "region": "Nyugat-Dunántúl",
+      "address": "9700 Szombathely, Kenyérvíz utca 2.",
+      "lat": 47.235613,
+      "lon": 16.615012,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Szombathely, Szombathelyi járás, Vas vármegye, Nyugat-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Szombathely",
+        "9700 Szombathely, Kenyérvíz utca 2."
+      ]
+    },
+    {
+      "store_id": "lidl_szombathely_zanati_ut_42_110",
+      "company": "Lidl",
+      "name": "Lidl Szombathely",
+      "postcode": "9700",
+      "city": "Szombathely",
+      "area": "Szombathely",
+      "region": "Nyugat-Dunántúl",
+      "address": "9700 Szombathely, Zanati út 42",
+      "lat": 47.221324,
+      "lon": 16.614262,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Szombathely, Szombathelyi járás, Vas vármegye, Nyugat-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Szombathely",
+        "9700 Szombathely, Zanati út 42"
+      ]
+    },
+    {
+      "store_id": "lidl_tamasi_deak_ferenc_utca_10_a_111",
+      "company": "Lidl",
+      "name": "Lidl Tamási",
+      "postcode": "7090",
+      "city": "Tamási",
+      "area": "Tamási",
+      "region": "n.a.",
+      "address": "7090 Tamási, Deák Ferenc utca 10/A",
+      "lat": 46.629398,
+      "lon": 18.285033,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Tamási, Tamási járás, Tolna vármegye, Dél-Dunántúl, Dunántúl, 7090, Magyarország",
+      "keywords": [
+        "Lidl Tamási",
+        "7090 Tamási, Deák Ferenc utca 10/A"
+      ]
+    },
+    {
+      "store_id": "lidl_tapolca_veszpremi_ut_1_112",
+      "company": "Lidl",
+      "name": "Lidl Tapolca",
+      "postcode": "8300",
+      "city": "Tapolca",
+      "area": "Tapolca",
+      "region": "n.a.",
+      "address": "8300 Tapolca, Veszprémi út 1.",
+      "lat": 46.882097,
+      "lon": 17.438962,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Tapolca, Tapolcai járás, Veszprém vármegye, Közép-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Tapolca",
+        "8300 Tapolca, Veszprémi út 1."
+      ]
+    },
+    {
+      "store_id": "lidl_varpalota_het_vezer_utca_3_113",
+      "company": "Lidl",
+      "name": "Lidl Várpalota",
+      "postcode": "8100",
+      "city": "Várpalota",
+      "area": "Várpalota",
+      "region": "n.a.",
+      "address": "8100 Várpalota, Hét vezér utca 3.",
+      "lat": 47.200618,
+      "lon": 18.139978,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Várpalota, Várpalotai járás, Veszprém vármegye, Közép-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Várpalota",
+        "8100 Várpalota, Hét vezér utca 3."
+      ]
+    },
+    {
+      "store_id": "lidl_veszprem_eszak_keleti_utgyuru_2_114",
+      "company": "Lidl",
+      "name": "Lidl Veszprém",
+      "postcode": "8200",
+      "city": "Veszprém",
+      "area": "Veszprém",
+      "region": "Közép-Dunántúl",
+      "address": "8200 Veszprém, Észak-keleti útgyűrű 2.",
+      "lat": 47.093382,
+      "lon": 17.914041,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Veszprém, Veszprémi járás, Veszprém vármegye, Közép-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Veszprém",
+        "8200 Veszprém, Észak-keleti útgyűrű 2."
+      ]
+    },
+    {
+      "store_id": "lidl_veszprem_cholnoky_utca_29_1_115",
+      "company": "Lidl",
+      "name": "Lidl Veszprém",
+      "postcode": "8200",
+      "city": "Veszprém",
+      "area": "Veszprém",
+      "region": "Közép-Dunántúl",
+      "address": "8200 Veszprém, Cholnoky utca 29/1.",
+      "lat": 47.093382,
+      "lon": 17.900541,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Veszprém, Veszprémi járás, Veszprém vármegye, Közép-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Veszprém",
+        "8200 Veszprém, Cholnoky utca 29/1."
+      ]
+    },
+    {
+      "store_id": "lidl_zalaegerszeg_platan_sor_6_a_116",
+      "company": "Lidl",
+      "name": "Lidl Zalaegerszeg",
+      "postcode": "8900",
+      "city": "Zalaegerszeg",
+      "area": "Zalaegerszeg",
+      "region": "Nyugat-Dunántúl",
+      "address": "8900 Zalaegerszeg, Platán sor 6/A",
+      "lat": 46.84158,
+      "lon": 16.851632,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Zalaegerszeg, Zalaegerszegi járás, Zala vármegye, Nyugat-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Zalaegerszeg",
+        "8900 Zalaegerszeg, Platán sor 6/A"
+      ]
+    },
+    {
+      "store_id": "lidl_zalaegerszeg_atkoto_utca_3_117",
+      "company": "Lidl",
+      "name": "Lidl Zalaegerszeg",
+      "postcode": "8900",
+      "city": "Zalaegerszeg",
+      "area": "Zalaegerszeg",
+      "region": "Nyugat-Dunántúl",
+      "address": "8900 Zalaegerszeg, Átkötő utca 3.",
+      "lat": 46.84158,
+      "lon": 16.838132,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Zalaegerszeg, Zalaegerszegi járás, Zala vármegye, Nyugat-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Zalaegerszeg",
+        "8900 Zalaegerszeg, Átkötő utca 3."
+      ]
+    },
+    {
+      "store_id": "lidl_baja_bajcsy_zsilinszky_utca_9_118",
+      "company": "Lidl",
+      "name": "Lidl Baja",
+      "postcode": "6500",
+      "city": "Baja",
+      "area": "Baja",
+      "region": "Dél-Alföld",
+      "address": "6500 Baja, Bajcsy-Zsilinszky utca 9.",
+      "lat": 46.178547,
+      "lon": 18.951725,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Baja, Bajai járás, Bács-Kiskun vármegye, Dél-Alföld, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Baja",
+        "6500 Baja, Bajcsy-Zsilinszky utca 9."
+      ]
+    },
+    {
+      "store_id": "lidl_biatorbagy_budaorsi_ut_4_7720_2_hrsz_119",
+      "company": "Lidl",
+      "name": "Lidl Biatorbágy",
+      "postcode": "2051",
+      "city": "Biatorbágy",
+      "area": "Biatorbágy",
+      "region": "n.a.",
+      "address": "2051 Biatorbágy, Budaörsi út 4., 7720/2 hrsz",
+      "lat": 47.473944,
+      "lon": 18.823286,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Biatorbágy, Budakeszi járás, Pest vármegye, Közép-Magyarország, 2051, Magyarország",
+      "keywords": [
+        "Lidl Biatorbágy",
+        "2051 Biatorbágy, Budaörsi út 4., 7720/2 hrsz"
+      ]
+    },
+    {
+      "store_id": "lidl_bicske_szent_laszlo_utca_55_120",
+      "company": "Lidl",
+      "name": "Lidl Bicske",
+      "postcode": "2060",
+      "city": "Bicske",
+      "area": "Bicske",
+      "region": "n.a.",
+      "address": "2060 Bicske, Szent László utca 55.",
+      "lat": 47.490707,
+      "lon": 18.635805,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Bicske, Bicskei járás, Fejér vármegye, Közép-Dunántúl, Dunántúl, 2060, Magyarország",
+      "keywords": [
+        "Lidl Bicske",
+        "2060 Bicske, Szent László utca 55."
+      ]
+    },
+    {
+      "store_id": "lidl_bonyhad_deak_ferenc_utca_10_a_121",
+      "company": "Lidl",
+      "name": "Lidl Bonyhád",
+      "postcode": "7150",
+      "city": "Bonyhád",
+      "area": "Bonyhád",
+      "region": "Dél-Dunántúl",
+      "address": "7150 Bonyhád, Deák Ferenc utca 10/A",
+      "lat": 46.298421,
+      "lon": 18.532191,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Bonyhád, Bonyhádi járás, Tolna vármegye, Dél-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Bonyhád",
+        "7150 Bonyhád, Deák Ferenc utca 10/A"
+      ]
+    },
+    {
+      "store_id": "lidl_budakeszi_kert_utca_27_29_122",
+      "company": "Lidl",
+      "name": "Lidl Budakeszi",
+      "postcode": "2092",
+      "city": "Budakeszi",
+      "area": "Budakeszi",
+      "region": "Közép-Magyarország",
+      "address": "2092 Budakeszi, Kert utca 27-29.",
+      "lat": 47.509944,
+      "lon": 18.929382,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budakeszi, Budakeszi járás, Pest vármegye, Közép-Magyarország, 2092, Magyarország",
+      "keywords": [
+        "Lidl Budakeszi",
+        "2092 Budakeszi, Kert utca 27-29."
+      ]
+    },
+    {
+      "store_id": "lidl_budaors_karoly_kiraly_ut_145_123",
+      "company": "Lidl",
+      "name": "Lidl Budaörs",
+      "postcode": "2040",
+      "city": "Budaörs",
+      "area": "Budaörs",
+      "region": "Közép-Magyarország",
+      "address": "2040 Budaörs, Károly király út 145.",
+      "lat": 47.461126,
+      "lon": 18.961184,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budaörs, Budakeszi járás, Pest vármegye, Közép-Magyarország, 2040, Magyarország",
+      "keywords": [
+        "Lidl Budaörs",
+        "2040 Budaörs, Károly király út 145."
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_budaorsi_ut_121_124",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1118",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1118 Budapest, Budaörsi út 121.",
+      "lat": 47.477207,
+      "lon": 19.155403,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1118 Budapest, Budaörsi út 121."
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_haraszti_ut_34_125",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1239",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1239 Budapest, Haraszti út 34.",
+      "lat": 47.479771,
+      "lon": 19.15155,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1239 Budapest, Haraszti út 34."
+      ]
+    },
+    {
+      "store_id": "lidl_budapest_nagytetenyi_ut_216_218_126",
+      "company": "Lidl",
+      "name": "Lidl Budapest",
+      "postcode": "1225",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1225 Budapest, Nagytétényi út 216-218.",
+      "lat": 47.480369,
+      "lon": 19.153202,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Budapest, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Budapest",
+        "1225 Budapest, Nagytétényi út 216-218."
+      ]
+    },
+    {
+      "store_id": "lidl_csongrad_fo_u_59_127",
+      "company": "Lidl",
+      "name": "Lidl Csongrád",
+      "postcode": "6640",
+      "city": "Csongrád",
+      "area": "Csongrád",
+      "region": "n.a.",
+      "address": "6640 Csongrád, Fő u. 59.",
+      "lat": 46.709762,
+      "lon": 20.153731,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Csongrád, Csongrádi járás, Csongrád-Csanád vármegye, Dél-Alföld, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Csongrád",
+        "6640 Csongrád, Fő u. 59."
+      ]
+    },
+    {
+      "store_id": "lidl_dabas_bartok_bela_ut_63_128",
+      "company": "Lidl",
+      "name": "Lidl Dabas",
+      "postcode": "2370",
+      "city": "Dabas",
+      "area": "Dabas",
+      "region": "n.a.",
+      "address": "2370 Dabas, Bartók Béla út 63.",
+      "lat": 47.188612,
+      "lon": 19.320306,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Dabas, Dabasi járás, Pest vármegye, Közép-Magyarország, Magyarország",
+      "keywords": [
+        "Lidl Dabas",
+        "2370 Dabas, Bartók Béla út 63."
+      ]
+    },
+    {
+      "store_id": "lidl_dunaharaszti_nemedi_ut_102_a_129",
+      "company": "Lidl",
+      "name": "Lidl Dunaharaszti",
+      "postcode": "2330",
+      "city": "Dunaharaszti",
+      "area": "Dunaharaszti",
+      "region": "n.a.",
+      "address": "2330 Dunaharaszti, Némedi út 102/A",
+      "lat": 47.354155,
+      "lon": 19.09122,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Dunaharaszti, Szigetszentmiklósi járás, Pest vármegye, Közép-Magyarország, 2330, Magyarország",
+      "keywords": [
+        "Lidl Dunaharaszti",
+        "2330 Dunaharaszti, Némedi út 102/A"
+      ]
+    },
+    {
+      "store_id": "lidl_dunaujvaros_magyar_ut_11_130",
+      "company": "Lidl",
+      "name": "Lidl Dunaújváros",
+      "postcode": "2400",
+      "city": "Dunaújváros",
+      "area": "Dunaújváros",
+      "region": "Közép-Dunántúl",
+      "address": "2400 Dunaújváros, Magyar út 11.",
+      "lat": 46.964905,
+      "lon": 18.946505,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Dunaújváros, Dunaújvárosi járás, Fejér vármegye, Közép-Dunántúl, Dunántúl, 2400, Magyarország",
+      "keywords": [
+        "Lidl Dunaújváros",
+        "2400 Dunaújváros, Magyar út 11."
+      ]
+    },
+    {
+      "store_id": "lidl_dunaujvaros_velinszky_utca_1_131",
+      "company": "Lidl",
+      "name": "Lidl Dunaújváros",
+      "postcode": "2400",
+      "city": "Dunaújváros",
+      "area": "Dunaújváros",
+      "region": "Közép-Dunántúl",
+      "address": "2400 Dunaújváros, Velinszky utca 1.",
+      "lat": 46.964905,
+      "lon": 18.933005,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Dunaújváros, Dunaújvárosi járás, Fejér vármegye, Közép-Dunántúl, Dunántúl, 2400, Magyarország",
+      "keywords": [
+        "Lidl Dunaújváros",
+        "2400 Dunaújváros, Velinszky utca 1."
+      ]
+    },
+    {
+      "store_id": "lidl_erd_balatoni_ut_73_75_132",
+      "company": "Lidl",
+      "name": "Lidl Érd",
+      "postcode": "2030",
+      "city": "Érd",
+      "area": "Érd",
+      "region": "Közép-Magyarország",
+      "address": "2030 Érd, Balatoni út 73-75.",
+      "lat": 47.377249,
+      "lon": 18.927383,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Érd, Érdi járás, Pest vármegye, Közép-Magyarország, 2030, Magyarország",
+      "keywords": [
+        "Lidl Érd",
+        "2030 Érd, Balatoni út 73-75."
+      ]
+    },
+    {
+      "store_id": "lidl_erd_diosdi_u_2_4_133",
+      "company": "Lidl",
+      "name": "Lidl Érd",
+      "postcode": "2030",
+      "city": "Érd",
+      "area": "Érd",
+      "region": "Közép-Magyarország",
+      "address": "2030 Érd, Diósdi u. 2-4",
+      "lat": 47.377249,
+      "lon": 18.913883,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Érd, Érdi járás, Pest vármegye, Közép-Magyarország, 2030, Magyarország",
+      "keywords": [
+        "Lidl Érd",
+        "2030 Érd, Diósdi u. 2-4"
+      ]
+    },
+    {
+      "store_id": "lidl_hodmezovasarhely_hodto_u_2_134",
+      "company": "Lidl",
+      "name": "Lidl Hódmezővásárhely",
+      "postcode": "6800",
+      "city": "Hódmezővásárhely",
+      "area": "Hódmezővásárhely",
+      "region": "Dél-Alföld",
+      "address": "6800 Hódmezővásárhely, Hódtó u. 2.",
+      "lat": 46.417134,
+      "lon": 20.319607,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Hódmezővásárhely, Hódmezővásárhelyi járás, Csongrád-Csanád vármegye, Dél-Alföld, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Hódmezővásárhely",
+        "6800 Hódmezővásárhely, Hódtó u. 2."
+      ]
+    },
+    {
+      "store_id": "lidl_kalocsa_pataji_ut_31_135",
+      "company": "Lidl",
+      "name": "Lidl Kalocsa",
+      "postcode": "6300",
+      "city": "Kalocsa",
+      "area": "Kalocsa",
+      "region": "n.a.",
+      "address": "6300 Kalocsa, Pataji út 31.",
+      "lat": 46.523027,
+      "lon": 18.982504,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Kalocsa, Kalocsai járás, Bács-Kiskun vármegye, Dél-Alföld, Alföld és Észak, 6300, Magyarország",
+      "keywords": [
+        "Lidl Kalocsa",
+        "6300 Kalocsa, Pataji út 31."
+      ]
+    },
+    {
+      "store_id": "lidl_kecskemet_izsaki_ut_2_136",
+      "company": "Lidl",
+      "name": "Lidl Kecskemét",
+      "postcode": "6000",
+      "city": "Kecskemét",
+      "area": "Kecskemét",
+      "region": "Dél-Alföld",
+      "address": "6000 Kecskemét, Izsáki út 2.",
+      "lat": 46.907476,
+      "lon": 19.698085,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Kecskemét, Kecskeméti járás, Bács-Kiskun vármegye, Dél-Alföld, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Kecskemét",
+        "6000 Kecskemét, Izsáki út 2."
+      ]
+    },
+    {
+      "store_id": "lidl_kecskemet_nyiri_ut_38_e_137",
+      "company": "Lidl",
+      "name": "Lidl Kecskemét",
+      "postcode": "6000",
+      "city": "Kecskemét",
+      "area": "Kecskemét",
+      "region": "Dél-Alföld",
+      "address": "6000 Kecskemét, Nyíri út 38/E",
+      "lat": 46.913971,
+      "lon": 19.688335,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Kecskemét, Kecskeméti járás, Bács-Kiskun vármegye, Dél-Alföld, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Kecskemét",
+        "6000 Kecskemét, Nyíri út 38/E"
+      ]
+    },
+    {
+      "store_id": "lidl_kecskemet_szolnoki_ut_18_138",
+      "company": "Lidl",
+      "name": "Lidl Kecskemét",
+      "postcode": "6000",
+      "city": "Kecskemét",
+      "area": "Kecskemét",
+      "region": "Dél-Alföld",
+      "address": "6000 Kecskemét, Szolnoki út 18.",
+      "lat": 46.899682,
+      "lon": 19.687585,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Kecskemét, Kecskeméti járás, Bács-Kiskun vármegye, Dél-Alföld, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Kecskemét",
+        "6000 Kecskemét, Szolnoki út 18."
+      ]
+    },
+    {
+      "store_id": "lidl_kiskoros_kossuth_utca_13_139",
+      "company": "Lidl",
+      "name": "Lidl Kiskőrös",
+      "postcode": "6200",
+      "city": "Kiskőrös",
+      "area": "Kiskőrös",
+      "region": "n.a.",
+      "address": "6200 Kiskőrös, Kossuth utca 13.",
+      "lat": 46.620571,
+      "lon": 19.284355,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Kiskőrös, Kiskőrösi járás, Bács-Kiskun vármegye, Dél-Alföld, Alföld és Észak, 6200, Magyarország",
+      "keywords": [
+        "Lidl Kiskőrös",
+        "6200 Kiskőrös, Kossuth utca 13."
+      ]
+    },
+    {
+      "store_id": "lidl_kiskunfelegyhaza_majsai_ut_5_140",
+      "company": "Lidl",
+      "name": "Lidl Kiskunfélegyháza",
+      "postcode": "6100",
+      "city": "Kiskunfélegyháza",
+      "area": "Kiskunfélegyháza",
+      "region": "n.a.",
+      "address": "6100 Kiskunfélegyháza, Majsai út 5.",
+      "lat": 46.711438,
+      "lon": 19.850165,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Kiskunfélegyháza, Kiskunfélegyházi járás, Bács-Kiskun vármegye, Dél-Alföld, Alföld és Észak, 6100, Magyarország",
+      "keywords": [
+        "Lidl Kiskunfélegyháza",
+        "6100 Kiskunfélegyháza, Majsai út 5."
+      ]
+    },
+    {
+      "store_id": "lidl_kiskunhalas_szechenyi_ut_1_3_141",
+      "company": "Lidl",
+      "name": "Lidl Kiskunhalas",
+      "postcode": "6400",
+      "city": "Kiskunhalas",
+      "area": "Kiskunhalas",
+      "region": "n.a.",
+      "address": "6400 Kiskunhalas, Széchenyi út 1-3.",
+      "lat": 46.430445,
+      "lon": 19.481257,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Kiskunhalas, Kiskunhalasi járás, Bács-Kiskun vármegye, Dél-Alföld, Alföld és Észak, 6400, Magyarország",
+      "keywords": [
+        "Lidl Kiskunhalas",
+        "6400 Kiskunhalas, Széchenyi út 1-3."
+      ]
+    },
+    {
+      "store_id": "lidl_komarom_martirok_utja_80_142",
+      "company": "Lidl",
+      "name": "Lidl Komárom",
+      "postcode": "2900",
+      "city": "Komárom",
+      "area": "Komárom",
+      "region": "n.a.",
+      "address": "2900 Komárom, Mártírok útja 80.",
+      "lat": 47.741735,
+      "lon": 18.121826,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Komárom, Komáromi járás, Komárom-Esztergom vármegye, Közép-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Komárom",
+        "2900 Komárom, Mártírok útja 80."
+      ]
+    },
+    {
+      "store_id": "lidl_komlo_troszt_utca_1_143",
+      "company": "Lidl",
+      "name": "Lidl Komló",
+      "postcode": "7300",
+      "city": "Komló",
+      "area": "Komló",
+      "region": "n.a.",
+      "address": "7300 Komló, Tröszt utca 1.",
+      "lat": 46.191167,
+      "lon": 18.261378,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Komló, Komlói járás, Baranya vármegye, Dél-Dunántúl, Dunántúl, 7300, Magyarország",
+      "keywords": [
+        "Lidl Komló",
+        "7300 Komló, Tröszt utca 1."
+      ]
+    },
+    {
+      "store_id": "lidl_mako_szegedi_u_63_144",
+      "company": "Lidl",
+      "name": "Lidl Makó",
+      "postcode": "6900",
+      "city": "Makó",
+      "area": "Makó",
+      "region": "n.a.",
+      "address": "6900 Makó, Szegedi u. 63.",
+      "lat": 46.215044,
+      "lon": 20.475102,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Makó, Makói járás, Csongrád-Csanád vármegye, Dél-Alföld, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Makó",
+        "6900 Makó, Szegedi u. 63."
+      ]
+    },
+    {
+      "store_id": "lidl_mohacs_pecsi_ut_41_145",
+      "company": "Lidl",
+      "name": "Lidl Mohács",
+      "postcode": "7700",
+      "city": "Mohács",
+      "area": "Mohács",
+      "region": "n.a.",
+      "address": "7700 Mohács, Pécsi út 41.",
+      "lat": 45.993384,
+      "lon": 18.682108,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Mohács, Mohácsi járás, Baranya vármegye, Dél-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Mohács",
+        "7700 Mohács, Pécsi út 41."
+      ]
+    },
+    {
+      "store_id": "lidl_nagykoros_kecskemeti_ut_73_146",
+      "company": "Lidl",
+      "name": "Lidl Nagykőrös",
+      "postcode": "2750",
+      "city": "Nagykőrös",
+      "area": "Nagykőrös",
+      "region": "n.a.",
+      "address": "2750 Nagykőrös, Kecskeméti út 73.",
+      "lat": 47.037426,
+      "lon": 19.786314,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Nagykőrös, Nagykőrösi járás, Pest vármegye, Közép-Magyarország, 2750, Magyarország",
+      "keywords": [
+        "Lidl Nagykőrös",
+        "2750 Nagykőrös, Kecskeméti út 73."
+      ]
+    },
+    {
+      "store_id": "lidl_oroszlany_kornyei_u_2_147",
+      "company": "Lidl",
+      "name": "Lidl Oroszlány",
+      "postcode": "2840",
+      "city": "Oroszlány",
+      "area": "Oroszlány",
+      "region": "n.a.",
+      "address": "2840 Oroszlány, Környei u. 2.",
+      "lat": 47.487135,
+      "lon": 18.315208,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Oroszlány, Oroszlányi járás, Komárom-Esztergom vármegye, Közép-Dunántúl, Dunántúl, 2840, Magyarország",
+      "keywords": [
+        "Lidl Oroszlány",
+        "2840 Oroszlány, Környei u. 2."
+      ]
+    },
+    {
+      "store_id": "lidl_paks_tolnai_ut_70_148",
+      "company": "Lidl",
+      "name": "Lidl Paks",
+      "postcode": "7030",
+      "city": "Paks",
+      "area": "Paks",
+      "region": "n.a.",
+      "address": "7030 Paks, Tolnai út 70.",
+      "lat": 46.622947,
+      "lon": 18.858936,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Paks, Paksi járás, Tolna vármegye, Dél-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Paks",
+        "7030 Paks, Tolnai út 70."
+      ]
+    },
+    {
+      "store_id": "lidl_pecs_lahti_utca_45_149",
+      "company": "Lidl",
+      "name": "Lidl Pécs",
+      "postcode": "7632",
+      "city": "Pécs",
+      "area": "Pécs",
+      "region": "Dél-Dunántúl",
+      "address": "7632 Pécs, Lahti utca 45.",
+      "lat": 46.076509,
+      "lon": 18.234032,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Pécs, Pécsi járás, Baranya vármegye, Dél-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Pécs",
+        "7632 Pécs, Lahti utca 45."
+      ]
+    },
+    {
+      "store_id": "lidl_pecs_lazar_vilmos_utca_10_150",
+      "company": "Lidl",
+      "name": "Lidl Pécs",
+      "postcode": "7633",
+      "city": "Pécs",
+      "area": "Pécs",
+      "region": "Dél-Dunántúl",
+      "address": "7633 Pécs, Lázár Vilmos utca 10.",
+      "lat": 46.083642,
+      "lon": 18.23035,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Pécs, Pécsi járás, Baranya vármegye, Dél-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Pécs",
+        "7633 Pécs, Lázár Vilmos utca 10."
+      ]
+    },
+    {
+      "store_id": "lidl_pecs_malomi_ut_3_151",
+      "company": "Lidl",
+      "name": "Lidl Pécs",
+      "postcode": "7632",
+      "city": "Pécs",
+      "area": "Pécs",
+      "region": "Dél-Dunántúl",
+      "address": "7632 Pécs, Málomi út 3.",
+      "lat": 46.081799,
+      "lon": 18.220751,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Pécs, Pécsi járás, Baranya vármegye, Dél-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Pécs",
+        "7632 Pécs, Málomi út 3."
+      ]
+    },
+    {
+      "store_id": "lidl_pecs_puskin_ter_22_152",
+      "company": "Lidl",
+      "name": "Lidl Pécs",
+      "postcode": "7627",
+      "city": "Pécs",
+      "area": "Pécs",
+      "region": "Dél-Dunántúl",
+      "address": "7627 Pécs, Puskin tér 22.",
+      "lat": 46.070337,
+      "lon": 18.219537,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Pécs, Pécsi járás, Baranya vármegye, Dél-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Pécs",
+        "7627 Pécs, Puskin tér 22."
+      ]
+    },
+    {
+      "store_id": "lidl_pecs_siklosi_ut_52_a_153",
+      "company": "Lidl",
+      "name": "Lidl Pécs",
+      "postcode": "7622",
+      "city": "Pécs",
+      "area": "Pécs",
+      "region": "Dél-Dunántúl",
+      "address": "7622 Pécs, Siklósi út 52/A",
+      "lat": 46.070803,
+      "lon": 18.229886,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Pécs, Pécsi járás, Baranya vármegye, Dél-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Pécs",
+        "7622 Pécs, Siklósi út 52/A"
+      ]
+    },
+    {
+      "store_id": "lidl_rackeve_lachazi_ut_26_154",
+      "company": "Lidl",
+      "name": "Lidl Ráckeve",
+      "postcode": "2300",
+      "city": "Ráckeve",
+      "area": "Ráckeve",
+      "region": "n.a.",
+      "address": "2300 Ráckeve, Lacházi út 26",
+      "lat": 47.160976,
+      "lon": 18.943627,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Ráckeve, Ráckevei járás, Pest vármegye, Közép-Magyarország, 2300, Magyarország",
+      "keywords": [
+        "Lidl Ráckeve",
+        "2300 Ráckeve, Lacházi út 26"
+      ]
+    },
+    {
+      "store_id": "lidl_siklos_szent_istvan_ter_2_155",
+      "company": "Lidl",
+      "name": "Lidl Siklós",
+      "postcode": "7800",
+      "city": "Siklós",
+      "area": "Siklós",
+      "region": "n.a.",
+      "address": "7800 Siklós, Szent István tér 2.",
+      "lat": 45.852145,
+      "lon": 18.298382,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Siklós, Siklósi járás, Baranya vármegye, Dél-Dunántúl, Dunántúl, 7800, Magyarország",
+      "keywords": [
+        "Lidl Siklós",
+        "7800 Siklós, Szent István tér 2."
+      ]
+    },
+    {
+      "store_id": "lidl_solt_kossuth_lajos_utca_2_8_156",
+      "company": "Lidl",
+      "name": "Lidl Solt",
+      "postcode": "6320",
+      "city": "Solt",
+      "area": "Solt",
+      "region": "n.a.",
+      "address": "6320 Solt, Kossuth Lajos utca 2-8.",
+      "lat": 46.802256,
+      "lon": 19.004644,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Solt, Kalocsai járás, Bács-Kiskun vármegye, Dél-Alföld, Alföld és Észak, 6320, Magyarország",
+      "keywords": [
+        "Lidl Solt",
+        "6320 Solt, Kossuth Lajos utca 2-8."
+      ]
+    },
+    {
+      "store_id": "lidl_soltvadkert_kossuth_lajos_u_110_157",
+      "company": "Lidl",
+      "name": "Lidl Soltvadkert",
+      "postcode": "6230",
+      "city": "Soltvadkert",
+      "area": "Soltvadkert",
+      "region": "n.a.",
+      "address": "6230 Soltvadkert, Kossuth Lajos u. 110.",
+      "lat": 46.58202,
+      "lon": 19.394273,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Soltvadkert, Kiskőrösi járás, Bács-Kiskun vármegye, Dél-Alföld, Alföld és Észak, 6230, Magyarország",
+      "keywords": [
+        "Lidl Soltvadkert",
+        "6230 Soltvadkert, Kossuth Lajos u. 110."
+      ]
+    },
+    {
+      "store_id": "lidl_szeged_makkoshazi_krt_21_158",
+      "company": "Lidl",
+      "name": "Lidl Szeged",
+      "postcode": "6723",
+      "city": "Szeged",
+      "area": "Szeged",
+      "region": "Dél-Alföld",
+      "address": "6723 Szeged, Makkosházi krt. 21.",
+      "lat": 46.254631,
+      "lon": 20.154602,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Szeged, Szegedi járás, Csongrád-Csanád vármegye, Dél-Alföld, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Szeged",
+        "6723 Szeged, Makkosházi krt. 21."
+      ]
+    },
+    {
+      "store_id": "lidl_szeged_szabadkai_ut_1_c_159",
+      "company": "Lidl",
+      "name": "Lidl Szeged",
+      "postcode": "6725",
+      "city": "Szeged",
+      "area": "Szeged",
+      "region": "Dél-Alföld",
+      "address": "6725 Szeged, Szabadkai út 1/c.",
+      "lat": 46.261126,
+      "lon": 20.144852,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Szeged, Szegedi járás, Csongrád-Csanád vármegye, Dél-Alföld, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Szeged",
+        "6725 Szeged, Szabadkai út 1/c."
+      ]
+    },
+    {
+      "store_id": "lidl_szeged_vasarhelyi_pal_ut_7_160",
+      "company": "Lidl",
+      "name": "Lidl Szeged",
+      "postcode": "6724",
+      "city": "Szeged",
+      "area": "Szeged",
+      "region": "Dél-Alföld",
+      "address": "6724 Szeged, Vásárhelyi Pál út 7.",
+      "lat": 46.246837,
+      "lon": 20.144102,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Szeged, Szegedi járás, Csongrád-Csanád vármegye, Dél-Alföld, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Szeged",
+        "6724 Szeged, Vásárhelyi Pál út 7."
+      ]
+    },
+    {
+      "store_id": "lidl_szekszard_arany_janos_utca_4_161",
+      "company": "Lidl",
+      "name": "Lidl Szekszárd",
+      "postcode": "7100",
+      "city": "Szekszárd",
+      "area": "Szekszárd",
+      "region": "Dél-Dunántúl",
+      "address": "7100 Szekszárd, Arany János utca 4.",
+      "lat": 46.348488,
+      "lon": 18.707663,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Szekszárd, Szekszárdi járás, Tolna vármegye, Dél-Dunántúl, Dunántúl, 7100, Magyarország",
+      "keywords": [
+        "Lidl Szekszárd",
+        "7100 Szekszárd, Arany János utca 4."
+      ]
+    },
+    {
+      "store_id": "lidl_szekszard_beri_balogh_adam_utca_94_b_162",
+      "company": "Lidl",
+      "name": "Lidl Szekszárd",
+      "postcode": "7100",
+      "city": "Szekszárd",
+      "area": "Szekszárd",
+      "region": "Dél-Dunántúl",
+      "address": "7100 Szekszárd, Béri Balogh Ádám utca 94/B",
+      "lat": 46.348488,
+      "lon": 18.694163,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Szekszárd, Szekszárdi járás, Tolna vármegye, Dél-Dunántúl, Dunántúl, 7100, Magyarország",
+      "keywords": [
+        "Lidl Szekszárd",
+        "7100 Szekszárd, Béri Balogh Ádám utca 94/B"
+      ]
+    },
+    {
+      "store_id": "lidl_szentes_ipartelepi_ut_2_6_163",
+      "company": "Lidl",
+      "name": "Lidl Szentes",
+      "postcode": "6600",
+      "city": "Szentes",
+      "area": "Szentes",
+      "region": "n.a.",
+      "address": "6600 Szentes, Ipartelepi út 2-6.",
+      "lat": 46.652405,
+      "lon": 20.256641,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Szentes, Szentesi járás, Csongrád-Csanád vármegye, Dél-Alföld, Alföld és Észak, 6600, Magyarország",
+      "keywords": [
+        "Lidl Szentes",
+        "6600 Szentes, Ipartelepi út 2-6."
+      ]
+    },
+    {
+      "store_id": "lidl_szigethalom_mu_ut_7_164",
+      "company": "Lidl",
+      "name": "Lidl Szigethalom",
+      "postcode": "2315",
+      "city": "Szigethalom",
+      "area": "Szigethalom",
+      "region": "n.a.",
+      "address": "2315 Szigethalom, Mű út 7.",
+      "lat": 47.324507,
+      "lon": 19.000188,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Szigethalom, Szigetszentmiklósi járás, Pest vármegye, Közép-Magyarország, 2315, Magyarország",
+      "keywords": [
+        "Lidl Szigethalom",
+        "2315 Szigethalom, Mű út 7."
+      ]
+    },
+    {
+      "store_id": "lidl_szigetszentmiklos_csepeli_ut_16_a_165",
+      "company": "Lidl",
+      "name": "Lidl Szigetszentmiklós",
+      "postcode": "2310",
+      "city": "Szigetszentmiklós",
+      "area": "Szigetszentmiklós",
+      "region": "Közép-Magyarország",
+      "address": "2310 Szigetszentmiklós, Csepeli út 16/a.",
+      "lat": 47.348706,
+      "lon": 19.045241,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Szigetszentmiklós, Szigetszentmiklósi járás, Pest vármegye, Közép-Magyarország, 2310, Magyarország",
+      "keywords": [
+        "Lidl Szigetszentmiklós",
+        "2310 Szigetszentmiklós, Csepeli út 16/a."
+      ]
+    },
+    {
+      "store_id": "lidl_tata_piac_ter_8_166",
+      "company": "Lidl",
+      "name": "Lidl Tata",
+      "postcode": "2890",
+      "city": "Tata",
+      "area": "Tata",
+      "region": "n.a.",
+      "address": "2890 Tata, Piac tér 8.",
+      "lat": 47.651621,
+      "lon": 18.328208,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Tata, Tatai járás, Komárom-Esztergom vármegye, Közép-Dunántúl, Dunántúl, Magyarország",
+      "keywords": [
+        "Lidl Tata",
+        "2890 Tata, Piac tér 8."
+      ]
+    },
+    {
+      "store_id": "lidl_tatabanya_gyori_ut_31_167",
+      "company": "Lidl",
+      "name": "Lidl Tatabánya",
+      "postcode": "2800",
+      "city": "Tatabánya",
+      "area": "Tatabánya",
+      "region": "Közép-Dunántúl",
+      "address": "2800 Tatabánya, Győri út 31.",
+      "lat": 47.583845,
+      "lon": 18.403986,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Tatabánya, Tatabányai járás, Komárom-Esztergom vármegye, Közép-Dunántúl, Dunántúl, 2800, Magyarország",
+      "keywords": [
+        "Lidl Tatabánya",
+        "2800 Tatabánya, Győri út 31."
+      ]
+    },
+    {
+      "store_id": "lidl_tatabanya_szent_borbala_ut_31_168",
+      "company": "Lidl",
+      "name": "Lidl Tatabánya",
+      "postcode": "2800",
+      "city": "Tatabánya",
+      "area": "Tatabánya",
+      "region": "Közép-Dunántúl",
+      "address": "2800 Tatabánya, Szent Borbála út 31.",
+      "lat": 47.583845,
+      "lon": 18.390486,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Tatabánya, Tatabányai járás, Komárom-Esztergom vármegye, Közép-Dunántúl, Dunántúl, 2800, Magyarország",
+      "keywords": [
+        "Lidl Tatabánya",
+        "2800 Tatabánya, Szent Borbála út 31."
+      ]
+    },
+    {
+      "store_id": "lidl_balmazujvaros_boszormenyi_u_1_169",
+      "company": "Lidl",
+      "name": "Lidl Balmazújváros",
+      "postcode": "4060",
+      "city": "Balmazújváros",
+      "area": "Balmazújváros",
+      "region": "n.a.",
+      "address": "4060 Balmazújváros, Böszörményi u. 1.",
+      "lat": 47.611628,
+      "lon": 21.343738,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Balmazújváros, Balmazújvárosi járás, Hajdú-Bihar vármegye, Észak-Alföld, Alföld és Észak, 4060, Magyarország",
+      "keywords": [
+        "Lidl Balmazújváros",
+        "4060 Balmazújváros, Böszörményi u. 1."
+      ]
+    },
+    {
+      "store_id": "lidl_batonyterenye_berekgat_koz_2_170",
+      "company": "Lidl",
+      "name": "Lidl Bátonyterenye",
+      "postcode": "3070",
+      "city": "Bátonyterenye",
+      "area": "Bátonyterenye",
+      "region": "n.a.",
+      "address": "3070 Bátonyterenye, Berekgát köz 2.",
+      "lat": 47.995553,
+      "lon": 19.82721,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Bátonyterenye, Bátonyterenyei járás, Nógrád vármegye, Észak-Magyarország, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Bátonyterenye",
+        "3070 Bátonyterenye, Berekgát köz 2."
+      ]
+    },
+    {
+      "store_id": "lidl_bekes_kossuth_l_u_31_171",
+      "company": "Lidl",
+      "name": "Lidl Békés",
+      "postcode": "5630",
+      "city": "Békés",
+      "area": "Békés",
+      "region": "n.a.",
+      "address": "5630 Békés, Kossuth L. u. 31.",
+      "lat": 46.786299,
+      "lon": 20.982074,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Békés vármegye, Dél-Alföld, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Békés",
+        "5630 Békés, Kossuth L. u. 31."
+      ]
+    },
+    {
+      "store_id": "lidl_bekescsaba_corvin_u_29_33_172",
+      "company": "Lidl",
+      "name": "Lidl Békéscsaba",
+      "postcode": "5600",
+      "city": "Békéscsaba",
+      "area": "Békéscsaba",
+      "region": "Dél-Alföld",
+      "address": "5600 Békéscsaba, Corvin u. 29-33.",
+      "lat": 46.6798,
+      "lon": 21.104543,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Békéscsaba, Békéscsabai járás, Békés vármegye, Dél-Alföld, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Békéscsaba",
+        "5600 Békéscsaba, Corvin u. 29-33."
+      ]
+    },
+    {
+      "store_id": "lidl_bekescsaba_szarvasi_ut_15_17_173",
+      "company": "Lidl",
+      "name": "Lidl Békéscsaba",
+      "postcode": "5600",
+      "city": "Békéscsaba",
+      "area": "Békéscsaba",
+      "region": "Dél-Alföld",
+      "address": "5600 Békéscsaba, Szarvasi út 15-17.",
+      "lat": 46.6798,
+      "lon": 21.091043,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Békéscsaba, Békéscsabai járás, Békés vármegye, Dél-Alföld, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Békéscsaba",
+        "5600 Békéscsaba, Szarvasi út 15-17."
+      ]
+    },
+    {
+      "store_id": "lidl_berettyoujfalu_kossuth_u_98_174",
+      "company": "Lidl",
+      "name": "Lidl Berettyóújfalu",
+      "postcode": "4100",
+      "city": "Berettyóújfalu",
+      "area": "Berettyóújfalu",
+      "region": "Észak-Alföld",
+      "address": "4100 Berettyóújfalu, Kossuth u. 98.",
+      "lat": 47.224727,
+      "lon": 21.535521,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Berettyóújfalu, Berettyóújfalui járás, Hajdú-Bihar vármegye, Észak-Alföld, Alföld és Észak, 4100, Magyarország",
+      "keywords": [
+        "Lidl Berettyóújfalu",
+        "4100 Berettyóújfalu, Kossuth u. 98."
+      ]
+    },
+    {
+      "store_id": "lidl_debrecen_derek_u_31_175",
+      "company": "Lidl",
+      "name": "Lidl Debrecen",
+      "postcode": "4031",
+      "city": "Debrecen",
+      "area": "Debrecen",
+      "region": "Észak-Alföld",
+      "address": "4031 Debrecen, Derék u. 31.",
+      "lat": 47.531399,
+      "lon": 21.631978,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Debrecen, Debreceni járás, Hajdú-Bihar vármegye, Észak-Alföld, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Debrecen",
+        "4031 Debrecen, Derék u. 31."
+      ]
+    },
+    {
+      "store_id": "lidl_debrecen_faraktar_utca_58_176",
+      "company": "Lidl",
+      "name": "Lidl Debrecen",
+      "postcode": "4034",
+      "city": "Debrecen",
+      "area": "Debrecen",
+      "region": "Észak-Alföld",
+      "address": "4034 Debrecen, Faraktár utca 58.",
+      "lat": 47.538532,
+      "lon": 21.628296,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Debrecen, Debreceni járás, Hajdú-Bihar vármegye, Észak-Alföld, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Debrecen",
+        "4034 Debrecen, Faraktár utca 58."
+      ]
+    },
+    {
+      "store_id": "lidl_debrecen_balmazujvarosi_ut_7_177",
+      "company": "Lidl",
+      "name": "Lidl Debrecen",
+      "postcode": "4002",
+      "city": "Debrecen",
+      "area": "Debrecen",
+      "region": "Észak-Alföld",
+      "address": "4002 Debrecen, Balmazújvárosi út 7.",
+      "lat": 47.536689,
+      "lon": 21.618697,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Debrecen, Debreceni járás, Hajdú-Bihar vármegye, Észak-Alföld, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Debrecen",
+        "4002 Debrecen, Balmazújvárosi út 7."
+      ]
+    },
+    {
+      "store_id": "lidl_debrecen_mikepercsi_ut_168_178",
+      "company": "Lidl",
+      "name": "Lidl Debrecen",
+      "postcode": "4030",
+      "city": "Debrecen",
+      "area": "Debrecen",
+      "region": "Észak-Alföld",
+      "address": "4030 Debrecen, Mikepércsi út 168.",
+      "lat": 47.525227,
+      "lon": 21.617483,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Debrecen, Debreceni járás, Hajdú-Bihar vármegye, Észak-Alföld, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Debrecen",
+        "4030 Debrecen, Mikepércsi út 168."
+      ]
+    },
+    {
+      "store_id": "lidl_debrecen_szechenyi_u_59_179",
+      "company": "Lidl",
+      "name": "Lidl Debrecen",
+      "postcode": "4031",
+      "city": "Debrecen",
+      "area": "Debrecen",
+      "region": "Észak-Alföld",
+      "address": "4031 Debrecen, Széchenyi u. 59",
+      "lat": 47.525693,
+      "lon": 21.627832,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Debrecen, Debreceni járás, Hajdú-Bihar vármegye, Észak-Alföld, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Debrecen",
+        "4031 Debrecen, Széchenyi u. 59"
+      ]
+    },
+    {
+      "store_id": "lidl_eger_ii_rakoczi_ferenc_u_141_180",
+      "company": "Lidl",
+      "name": "Lidl Eger",
+      "postcode": "3300",
+      "city": "Eger",
+      "area": "Eger",
+      "region": "Észak-Magyarország",
+      "address": "3300 Eger, II. Rákóczi Ferenc u. 141.",
+      "lat": 47.898989,
+      "lon": 20.380367,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Eger, Egri járás, Heves vármegye, Észak-Magyarország, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Eger",
+        "3300 Eger, II. Rákóczi Ferenc u. 141."
+      ]
+    },
+    {
+      "store_id": "lidl_eger_matyas_kiraly_ut_144_181",
+      "company": "Lidl",
+      "name": "Lidl Eger",
+      "postcode": "3300",
+      "city": "Eger",
+      "area": "Eger",
+      "region": "Észak-Magyarország",
+      "address": "3300 Eger, Mátyás király út 144.",
+      "lat": 47.898989,
+      "lon": 20.366867,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Eger, Egri járás, Heves vármegye, Észak-Magyarország, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Eger",
+        "3300 Eger, Mátyás király út 144."
+      ]
+    },
+    {
+      "store_id": "lidl_gyomaendrod_fo_ut_81_2_182",
+      "company": "Lidl",
+      "name": "Lidl Gyomaendrőd",
+      "postcode": "5500",
+      "city": "Gyomaendrőd",
+      "area": "Gyomaendrőd",
+      "region": "n.a.",
+      "address": "5500 Gyomaendrőd, Fő út 81/2.",
+      "lat": 46.935803,
+      "lon": 20.826092,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Gyomaendrőd, Gyomaendrődi járás, Békés vármegye, Dél-Alföld, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Gyomaendrőd",
+        "5500 Gyomaendrőd, Fő út 81/2."
+      ]
+    },
+    {
+      "store_id": "lidl_gyongyos_budai_nagy_antal_ter_10_183",
+      "company": "Lidl",
+      "name": "Lidl Gyöngyös",
+      "postcode": "3200",
+      "city": "Gyöngyös",
+      "area": "Gyöngyös",
+      "region": "n.a.",
+      "address": "3200 Gyöngyös, Budai Nagy Antal tér 10.",
+      "lat": 47.779984,
+      "lon": 19.929118,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Gyöngyös, Gyöngyösi járás, Heves vármegye, Észak-Magyarország, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Gyöngyös",
+        "3200 Gyöngyös, Budai Nagy Antal tér 10."
+      ]
+    },
+    {
+      "store_id": "lidl_gyula_szent_istvan_u_69_1_184",
+      "company": "Lidl",
+      "name": "Lidl Gyula",
+      "postcode": "5700",
+      "city": "Gyula",
+      "area": "Gyula",
+      "region": "Dél-Alföld",
+      "address": "5700 Gyula, Szent István u. 69/1.",
+      "lat": 46.643866,
+      "lon": 21.274757,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Gyula, Gyulai járás, Békés vármegye, Dél-Alföld, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Gyula",
+        "5700 Gyula, Szent István u. 69/1."
+      ]
+    },
+    {
+      "store_id": "lidl_hajduboszormeny_bansag_ter_10_185",
+      "company": "Lidl",
+      "name": "Lidl Hajdúböszörmény",
+      "postcode": "4220",
+      "city": "Hajdúböszörmény",
+      "area": "Hajdúböszörmény",
+      "region": "Észak-Alföld",
+      "address": "4220 Hajdúböszörmény, Bánság tér 10.",
+      "lat": 47.671662,
+      "lon": 21.507894,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Hajdúböszörmény, Hajdúböszörményi járás, Hajdú-Bihar vármegye, Észak-Alföld, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Hajdúböszörmény",
+        "4220 Hajdúböszörmény, Bánság tér 10."
+      ]
+    },
+    {
+      "store_id": "lidl_hajduhadhaz_dr_foldi_janos_utca_55_186",
+      "company": "Lidl",
+      "name": "Lidl Hajdúhadház",
+      "postcode": "4242",
+      "city": "Hajdúhadház",
+      "area": "Hajdúhadház",
+      "region": "n.a.",
+      "address": "4242 Hajdúhadház, Dr. Földi János utca 55.",
+      "lat": 47.682205,
+      "lon": 21.669216,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Hajdúhadház, Hajdúhadházi járás, Hajdú-Bihar vármegye, Észak-Alföld, Alföld és Észak, 4242, Magyarország",
+      "keywords": [
+        "Lidl Hajdúhadház",
+        "4242 Hajdúhadház, Dr. Földi János utca 55."
+      ]
+    },
+    {
+      "store_id": "lidl_hajdunanas_dorogi_u_108_187",
+      "company": "Lidl",
+      "name": "Lidl Hajdúnánás",
+      "postcode": "4080",
+      "city": "Hajdúnánás",
+      "area": "Hajdúnánás",
+      "region": "n.a.",
+      "address": "4080 Hajdúnánás, Dorogi u. 108.",
+      "lat": 47.845224,
+      "lon": 21.4279,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Hajdúnánás, Hajdúnánási járás, Hajdú-Bihar vármegye, Észak-Alföld, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Hajdúnánás",
+        "4080 Hajdúnánás, Dorogi u. 108."
+      ]
+    },
+    {
+      "store_id": "lidl_hajdusamson_kiscsere_utca_3_188",
+      "company": "Lidl",
+      "name": "Lidl Hajdúsámson",
+      "postcode": "4251",
+      "city": "Hajdúsámson",
+      "area": "Hajdúsámson",
+      "region": "n.a.",
+      "address": "4251 Hajdúsámson, Kiscsere utca 3.",
+      "lat": 47.598951,
+      "lon": 21.753714,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Hajdúsámson, Debreceni járás, Hajdú-Bihar vármegye, Észak-Alföld, Alföld és Észak, 4251, Magyarország",
+      "keywords": [
+        "Lidl Hajdúsámson",
+        "4251 Hajdúsámson, Kiscsere utca 3."
+      ]
+    },
+    {
+      "store_id": "lidl_hajduszoboszlo_dozsa_gyorgy_ut_62_189",
+      "company": "Lidl",
+      "name": "Lidl Hajdúszoboszló",
+      "postcode": "4200",
+      "city": "Hajdúszoboszló",
+      "area": "Hajdúszoboszló",
+      "region": "n.a.",
+      "address": "4200 Hajdúszoboszló, Dózsa György út 62.",
+      "lat": 47.443129,
+      "lon": 21.3903,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Hajdúszoboszló, Hajdúszoboszlói járás, Hajdú-Bihar vármegye, Észak-Alföld, Alföld és Észak, 4200, Magyarország",
+      "keywords": [
+        "Lidl Hajdúszoboszló",
+        "4200 Hajdúszoboszló, Dózsa György út 62."
+      ]
+    },
+    {
+      "store_id": "lidl_hatvan_radnoti_ter_19_190",
+      "company": "Lidl",
+      "name": "Lidl Hatvan",
+      "postcode": "3000",
+      "city": "Hatvan",
+      "area": "Hatvan",
+      "region": "n.a.",
+      "address": "3000 Hatvan, Radnóti tér 19.",
+      "lat": 47.668397,
+      "lon": 19.674387,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Hatvan, Hatvani járás, Heves vármegye, Észak-Magyarország, Alföld és Észak, 3000, Magyarország",
+      "keywords": [
+        "Lidl Hatvan",
+        "3000 Hatvan, Radnóti tér 19."
+      ]
+    },
+    {
+      "store_id": "lidl_heves_kolozsvari_ut_2_a_191",
+      "company": "Lidl",
+      "name": "Lidl Heves",
+      "postcode": "3360",
+      "city": "Heves",
+      "area": "Heves",
+      "region": "n.a.",
+      "address": "3360 Heves, Kolozsvári út 2/A.",
+      "lat": 47.788441,
+      "lon": 20.171441,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Heves vármegye, Észak-Magyarország, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Heves",
+        "3360 Heves, Kolozsvári út 2/A."
+      ]
+    },
+    {
+      "store_id": "lidl_kazincbarcika_matyas_kiraly_ut_34_a_192",
+      "company": "Lidl",
+      "name": "Lidl Kazincbarcika",
+      "postcode": "3700",
+      "city": "Kazincbarcika",
+      "area": "Kazincbarcika",
+      "region": "Észak-Magyarország",
+      "address": "3700 Kazincbarcika, Mátyás király út 34/A.",
+      "lat": 48.254441,
+      "lon": 20.622325,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Kazincbarcika, Kazincbarcikai járás, Borsod-Abaúj-Zemplén vármegye, Észak-Magyarország, Alföld és Észak, 3700, Magyarország",
+      "keywords": [
+        "Lidl Kazincbarcika",
+        "3700 Kazincbarcika, Mátyás király út 34/A."
+      ]
+    },
+    {
+      "store_id": "lidl_kisujszallas_deak_ferenc_u_10_193",
+      "company": "Lidl",
+      "name": "Lidl Kisújszállás",
+      "postcode": "5310",
+      "city": "Kisújszállás",
+      "area": "Kisújszállás",
+      "region": "n.a.",
+      "address": "5310 Kisújszállás, Deák Ferenc u. 10.",
+      "lat": 47.216205,
+      "lon": 20.754667,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Kisújszállás, Karcagi járás, Jász-Nagykun-Szolnok vármegye, Észak-Alföld, Alföld és Észak, 5310, Magyarország",
+      "keywords": [
+        "Lidl Kisújszállás",
+        "5310 Kisújszállás, Deák Ferenc u. 10."
+      ]
+    },
+    {
+      "store_id": "lidl_kisvarda_attila_ut_2_a_194",
+      "company": "Lidl",
+      "name": "Lidl Kisvárda",
+      "postcode": "4600",
+      "city": "Kisvárda",
+      "area": "Kisvárda",
+      "region": "n.a.",
+      "address": "4600 Kisvárda, Attila út 2/A.",
+      "lat": 48.225759,
+      "lon": 22.078425,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Kisvárda, Kisvárdai járás, Szabolcs-Szatmár-Bereg vármegye, Észak-Alföld, Alföld és Észak, 4600, Magyarország",
+      "keywords": [
+        "Lidl Kisvárda",
+        "4600 Kisvárda, Attila út 2/A."
+      ]
+    },
+    {
+      "store_id": "lidl_kunszentmarton_kossuth_lajos_u_23_195",
+      "company": "Lidl",
+      "name": "Lidl Kunszentmárton",
+      "postcode": "5440",
+      "city": "Kunszentmárton",
+      "area": "Kunszentmárton",
+      "region": "n.a.",
+      "address": "5440 Kunszentmárton, Kossuth Lajos u. 23",
+      "lat": 46.839905,
+      "lon": 20.290881,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Kunszentmárton, Kunszentmártoni járás, Jász-Nagykun-Szolnok vármegye, Észak-Alföld, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Kunszentmárton",
+        "5440 Kunszentmárton, Kossuth Lajos u. 23"
+      ]
+    },
+    {
+      "store_id": "lidl_martfu_foldvari_ut_1_196",
+      "company": "Lidl",
+      "name": "Lidl Martfű",
+      "postcode": "5435",
+      "city": "Martfű",
+      "area": "Martfű",
+      "region": "n.a.",
+      "address": "5435 Martfű, Földvári út 1.",
+      "lat": 47.018615,
+      "lon": 20.281393,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Martfű, Szolnoki járás, Jász-Nagykun-Szolnok vármegye, Észak-Alföld, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Martfű",
+        "5435 Martfű, Földvári út 1."
+      ]
+    },
+    {
+      "store_id": "lidl_mezokovacshaza_arpad_u_135_197",
+      "company": "Lidl",
+      "name": "Lidl Mezőkovácsháza",
+      "postcode": "5800",
+      "city": "Mezőkovácsháza",
+      "area": "Mezőkovácsháza",
+      "region": "n.a.",
+      "address": "5800 Mezőkovácsháza, Árpád u. 135.",
+      "lat": 46.407338,
+      "lon": 20.923601,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Mezőkovácsháza, Mezőkovácsházai járás, Békés vármegye, Dél-Alföld, Alföld és Észak, 5800, Magyarország",
+      "keywords": [
+        "Lidl Mezőkovácsháza",
+        "5800 Mezőkovácsháza, Árpád u. 135."
+      ]
+    },
+    {
+      "store_id": "lidl_mezokovesd_dohany_ut_2_a_198",
+      "company": "Lidl",
+      "name": "Lidl Mezőkövesd",
+      "postcode": "3400",
+      "city": "Mezőkövesd",
+      "area": "Mezőkövesd",
+      "region": "n.a.",
+      "address": "3400 Mezőkövesd, Dohány út 2/A.",
+      "lat": 47.809753,
+      "lon": 20.566089,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Mezőkövesd, Mezőkövesdi járás, Borsod-Abaúj-Zemplén vármegye, Észak-Magyarország, Alföld és Észak, 3400, Magyarország",
+      "keywords": [
+        "Lidl Mezőkövesd",
+        "3400 Mezőkövesd, Dohány út 2/A."
+      ]
+    },
+    {
+      "store_id": "lidl_mezotur_foldvari_ut_21_199",
+      "company": "Lidl",
+      "name": "Lidl Mezőtúr",
+      "postcode": "5400",
+      "city": "Mezőtúr",
+      "area": "Mezőtúr",
+      "region": "n.a.",
+      "address": "5400 Mezőtúr, Földvári út 21.",
+      "lat": 47.000472,
+      "lon": 20.629951,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Mezőtúr, Mezőtúri járás, Jász-Nagykun-Szolnok vármegye, Észak-Alföld, Alföld és Észak, 5400, Magyarország",
+      "keywords": [
+        "Lidl Mezőtúr",
+        "5400 Mezőtúr, Földvári út 21."
+      ]
+    },
+    {
+      "store_id": "lidl_miskolc_csermokei_ut_207_200",
+      "company": "Lidl",
+      "name": "Lidl Miskolc",
+      "postcode": "3533",
+      "city": "Miskolc",
+      "area": "Miskolc",
+      "region": "Észak-Magyarország",
+      "address": "3533 Miskolc, Csermőkei út 207.",
+      "lat": 48.103064,
+      "lon": 20.796043,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Miskolc, Miskolci járás, Borsod-Abaúj-Zemplén vármegye, Észak-Magyarország, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Miskolc",
+        "3533 Miskolc, Csermőkei út 207."
+      ]
+    },
+    {
+      "store_id": "lidl_miskolc_kiss_erno_u_13_b_202",
+      "company": "Lidl",
+      "name": "Lidl Miskolc",
+      "postcode": "3531",
+      "city": "Miskolc",
+      "area": "Miskolc",
+      "region": "Észak-Magyarország",
+      "address": "3531 Miskolc, Kiss Ernő u. 13/b.",
+      "lat": 48.109559,
+      "lon": 20.786293,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Miskolc, Miskolci járás, Borsod-Abaúj-Zemplén vármegye, Észak-Magyarország, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Miskolc",
+        "3531 Miskolc, Kiss Ernő u. 13/b."
+      ]
+    },
+    {
+      "store_id": "lidl_miskolc_pesti_ut_5_203",
+      "company": "Lidl",
+      "name": "Lidl Miskolc",
+      "postcode": "3516",
+      "city": "Miskolc",
+      "area": "Miskolc",
+      "region": "Észak-Magyarország",
+      "address": "3516 Miskolc, Pesti út 5.",
+      "lat": 48.09527,
+      "lon": 20.785543,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Miskolc, Miskolci járás, Borsod-Abaúj-Zemplén vármegye, Észak-Magyarország, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Miskolc",
+        "3516 Miskolc, Pesti út 5."
+      ]
+    },
+    {
+      "store_id": "lidl_nyiregyhaza_pazonyi_ut_37_a_204",
+      "company": "Lidl",
+      "name": "Lidl Nyíregyháza",
+      "postcode": "4400",
+      "city": "Nyíregyháza",
+      "area": "Nyíregyháza",
+      "region": "Észak-Alföld",
+      "address": "4400 Nyíregyháza, Pazonyi út 37/a.",
+      "lat": 47.95578,
+      "lon": 21.722798,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Nyíregyháza, Nyíregyházi járás, Szabolcs-Szatmár-Bereg vármegye, Észak-Alföld, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Nyíregyháza",
+        "4400 Nyíregyháza, Pazonyi út 37/a."
+      ]
+    },
+    {
+      "store_id": "lidl_nyiregyhaza_debreceni_u_106_c_205",
+      "company": "Lidl",
+      "name": "Lidl Nyíregyháza",
+      "postcode": "4400",
+      "city": "Nyíregyháza",
+      "area": "Nyíregyháza",
+      "region": "Észak-Alföld",
+      "address": "4400 Nyíregyháza, Debreceni u. 106/c.",
+      "lat": 47.95578,
+      "lon": 21.709298,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Nyíregyháza, Nyíregyházi járás, Szabolcs-Szatmár-Bereg vármegye, Észak-Alföld, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Nyíregyháza",
+        "4400 Nyíregyháza, Debreceni u. 106/c."
+      ]
+    },
+    {
+      "store_id": "lidl_oroshaza_hovirag_u_1_5_206",
+      "company": "Lidl",
+      "name": "Lidl Orosháza",
+      "postcode": "5900",
+      "city": "Orosháza",
+      "area": "Orosháza",
+      "region": "n.a.",
+      "address": "5900 Orosháza, Hóvirág u. 1-5.",
+      "lat": 46.55828,
+      "lon": 20.672015,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Orosháza, Orosházi járás, Békés vármegye, Dél-Alföld, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Orosháza",
+        "5900 Orosháza, Hóvirág u. 1-5."
+      ]
+    },
+    {
+      "store_id": "lidl_ozd_sarli_ut_2_207",
+      "company": "Lidl",
+      "name": "Lidl Ózd",
+      "postcode": "3600",
+      "city": "Ózd",
+      "area": "Ózd",
+      "region": "n.a.",
+      "address": "3600 Ózd, Sárli út 2.",
+      "lat": 48.219176,
+      "lon": 20.281073,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Ózd, Ózdi járás, Borsod-Abaúj-Zemplén vármegye, Észak-Magyarország, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Ózd",
+        "3600 Ózd, Sárli út 2."
+      ]
+    },
+    {
+      "store_id": "lidl_puspokladany_rakoczi_utca_16_20_208",
+      "company": "Lidl",
+      "name": "Lidl Püspökladány",
+      "postcode": "4150",
+      "city": "Püspökladány",
+      "area": "Püspökladány",
+      "region": "n.a.",
+      "address": "4150 Püspökladány, Rákóczi utca 16-20.",
+      "lat": 47.319604,
+      "lon": 21.112252,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Püspökladány, Püspökladányi járás, Hajdú-Bihar vármegye, Észak-Alföld, Alföld és Észak, 4150, Magyarország",
+      "keywords": [
+        "Lidl Püspökladány",
+        "4150 Püspökladány, Rákóczi utca 16-20."
+      ]
+    },
+    {
+      "store_id": "lidl_salgotarjan_csokonai_ut_23_209",
+      "company": "Lidl",
+      "name": "Lidl Salgótarján",
+      "postcode": "3104",
+      "city": "Salgótarján",
+      "area": "Salgótarján",
+      "region": "Észak-Magyarország",
+      "address": "3104 Salgótarján, Csokonai út 23.",
+      "lat": 48.096068,
+      "lon": 19.800564,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Salgótarján, Salgótarjáni járás, Nógrád vármegye, Észak-Magyarország, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Salgótarján",
+        "3104 Salgótarján, Csokonai út 23."
+      ]
+    },
+    {
+      "store_id": "lidl_satoraljaujhely_esze_tamas_u_92_210",
+      "company": "Lidl",
+      "name": "Lidl Sátoraljaújhely",
+      "postcode": "3980",
+      "city": "Sátoraljaújhely",
+      "area": "Sátoraljaújhely",
+      "region": "n.a.",
+      "address": "3980 Sátoraljaújhely, Esze Tamás u. 92.",
+      "lat": 48.396098,
+      "lon": 21.65615,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Sátoraljaújhely, Sátoraljaújhelyi járás, Borsod-Abaúj-Zemplén vármegye, Észak-Magyarország, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Sátoraljaújhely",
+        "3980 Sátoraljaújhely, Esze Tamás u. 92."
+      ]
+    },
+    {
+      "store_id": "lidl_szarvas_csabai_ut_1_4_211",
+      "company": "Lidl",
+      "name": "Lidl Szarvas",
+      "postcode": "5540",
+      "city": "Szarvas",
+      "area": "Szarvas",
+      "region": "n.a.",
+      "address": "5540 Szarvas, Csabai út 1/4.",
+      "lat": 46.862143,
+      "lon": 20.552147,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Szarvas, Szarvasi járás, Békés vármegye, Dél-Alföld, Alföld és Észak, 5540, Magyarország",
+      "keywords": [
+        "Lidl Szarvas",
+        "5540 Szarvas, Csabai út 1/4."
+      ]
+    },
+    {
+      "store_id": "lidl_szeghalom_szechenyi_u_45_49_212",
+      "company": "Lidl",
+      "name": "Lidl Szeghalom",
+      "postcode": "5520",
+      "city": "Szeghalom",
+      "area": "Szeghalom",
+      "region": "n.a.",
+      "address": "5520 Szeghalom, Széchenyi u. 45-49.",
+      "lat": 47.021349,
+      "lon": 21.169393,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Szeghalom, Szeghalmi járás, Békés vármegye, Dél-Alföld, Alföld és Észak, 5520, Magyarország",
+      "keywords": [
+        "Lidl Szeghalom",
+        "5520 Szeghalom, Széchenyi u. 45-49."
+      ]
+    },
+    {
+      "store_id": "lidl_szerencs_csalogany_ut_58_213",
+      "company": "Lidl",
+      "name": "Lidl Szerencs",
+      "postcode": "3900",
+      "city": "Szerencs",
+      "area": "Szerencs",
+      "region": "n.a.",
+      "address": "3900 Szerencs, Csalogány út 58.",
+      "lat": 48.163385,
+      "lon": 21.201088,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Szerencs, Szerencsi járás, Borsod-Abaúj-Zemplén vármegye, Észak-Magyarország, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Szerencs",
+        "3900 Szerencs, Csalogány út 58."
+      ]
+    },
+    {
+      "store_id": "lidl_szolnok_szechenyi_krt_4_b_214",
+      "company": "Lidl",
+      "name": "Lidl Szolnok",
+      "postcode": "5000",
+      "city": "Szolnok",
+      "area": "Szolnok",
+      "region": "Észak-Alföld",
+      "address": "5000 Szolnok, Széchenyi krt. 4/b.",
+      "lat": 47.175383,
+      "lon": 20.200628,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Szolnok, Szolnoki járás, Jász-Nagykun-Szolnok vármegye, Észak-Alföld, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Szolnok",
+        "5000 Szolnok, Széchenyi krt. 4/b."
+      ]
+    },
+    {
+      "store_id": "lidl_szolnok_delibab_u_6_215",
+      "company": "Lidl",
+      "name": "Lidl Szolnok",
+      "postcode": "5000",
+      "city": "Szolnok",
+      "area": "Szolnok",
+      "region": "Észak-Alföld",
+      "address": "5000 Szolnok, Délibáb u. 6.",
+      "lat": 47.181878,
+      "lon": 20.190878,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Szolnok, Szolnoki járás, Jász-Nagykun-Szolnok vármegye, Észak-Alföld, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Szolnok",
+        "5000 Szolnok, Délibáb u. 6."
+      ]
+    },
+    {
+      "store_id": "lidl_szolnok_toszegi_ut_5_216",
+      "company": "Lidl",
+      "name": "Lidl Szolnok",
+      "postcode": "5000",
+      "city": "Szolnok",
+      "area": "Szolnok",
+      "region": "Észak-Alföld",
+      "address": "5000 Szolnok, Tószegi út 5.",
+      "lat": 47.167589,
+      "lon": 20.190128,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Szolnok, Szolnoki járás, Jász-Nagykun-Szolnok vármegye, Észak-Alföld, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Szolnok",
+        "5000 Szolnok, Tószegi út 5."
+      ]
+    },
+    {
+      "store_id": "lidl_tiszafured_huszoles_ut_25_217",
+      "company": "Lidl",
+      "name": "Lidl Tiszafüred",
+      "postcode": "5350",
+      "city": "Tiszafüred",
+      "area": "Tiszafüred",
+      "region": "n.a.",
+      "address": "5350 Tiszafüred, Húszöles út 25.",
+      "lat": 47.613088,
+      "lon": 20.750226,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Tiszafüred, Tiszafüredi járás, Jász-Nagykun-Szolnok vármegye, Észak-Alföld, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Tiszafüred",
+        "5350 Tiszafüred, Húszöles út 25."
+      ]
+    },
+    {
+      "store_id": "lidl_tiszaujvaros_levay_u_118_218",
+      "company": "Lidl",
+      "name": "Lidl Tiszaújváros",
+      "postcode": "3580",
+      "city": "Tiszaújváros",
+      "area": "Tiszaújváros",
+      "region": "n.a.",
+      "address": "3580 Tiszaújváros, Lévay u. 118.",
+      "lat": 47.928034,
+      "lon": 21.046706,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Tiszaújváros, Tiszaújvárosi járás, Borsod-Abaúj-Zemplén vármegye, Észak-Magyarország, Alföld és Észak, 3580, Magyarország",
+      "keywords": [
+        "Lidl Tiszaújváros",
+        "3580 Tiszaújváros, Lévay u. 118."
+      ]
+    },
+    {
+      "store_id": "lidl_torokszentmiklos_kossuth_lajos_u_102_108_219",
+      "company": "Lidl",
+      "name": "Lidl Törökszentmiklós",
+      "postcode": "5200",
+      "city": "Törökszentmiklós",
+      "area": "Törökszentmiklós",
+      "region": "n.a.",
+      "address": "5200 Törökszentmiklós, Kossuth Lajos u. 102-108.",
+      "lat": 47.179357,
+      "lon": 20.409153,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Törökszentmiklós, Törökszentmiklósi járás, Jász-Nagykun-Szolnok vármegye, Észak-Alföld, Alföld és Észak, Magyarország",
+      "keywords": [
+        "Lidl Törökszentmiklós",
+        "5200 Törökszentmiklós, Kossuth Lajos u. 102-108."
+      ]
+    },
+    {
+      "store_id": "lidl_ujfeherto_debreceni_ut_14_24_220",
+      "company": "Lidl",
+      "name": "Lidl Újfehértó",
+      "postcode": "4244",
+      "city": "Újfehértó",
+      "area": "Újfehértó",
+      "region": "n.a.",
+      "address": "4244 Újfehértó, Debreceni út 14-24.",
+      "lat": 47.800898,
+      "lon": 21.682993,
+      "source": "lidl_static_excel_city_geocoded",
+      "confidence": "city_level_estimate",
+      "city_geocode_display_name": "Újfehértó, Nyíregyházi járás, Szabolcs-Szatmár-Bereg vármegye, Észak-Alföld, Alföld és Észak, 4244, Magyarország",
+      "keywords": [
+        "Lidl Újfehértó",
+        "4244 Újfehértó, Debreceni út 14-24."
+      ]
+    }
+  ]
 }
