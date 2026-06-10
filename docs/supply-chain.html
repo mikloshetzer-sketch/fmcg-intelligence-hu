@@ -201,6 +201,127 @@
       .risk-driver-list{grid-template-columns:1fr;}
     }
 
+
+    .matrix-wrap{
+      overflow-x:auto;
+      overflow-y:visible;
+      max-height:none;
+      scrollbar-width:thin;
+    }
+    .matrix-table{
+      font-size:11px;
+      line-height:1.25;
+      min-width:100%;
+    }
+    .matrix-table th,.matrix-table td{
+      padding:5px 6px;
+      white-space:nowrap;
+    }
+    .matrix-table th{
+      font-size:10px;
+      letter-spacing:.025em;
+    }
+    .matrix-table td:first-child,.matrix-table th:first-child{
+      max-width:180px;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .chartbox{
+      height:300px;
+    }
+    .chartbox.small{
+      height:238px;
+    }
+    .chart-insight{
+      font-size:12px;
+      line-height:1.55;
+      padding:11px 13px;
+    }
+    .explain-box{
+      font-size:12px;
+      line-height:1.62;
+      padding:12px 14px;
+    }
+    .block-method{
+      margin-top:12px;
+      padding:13px 15px;
+      border-radius:16px;
+      border:1px solid #bfdbfe;
+      background:#eff6ff;
+      color:#243b64;
+      font-size:12px;
+      line-height:1.68;
+    }
+    .block-method b{
+      color:#05284f;
+    }
+    .block-method ul{
+      margin:7px 0 0 18px;
+      padding:0;
+    }
+    .block-method li{
+      margin:3px 0;
+    }
+    .mini-definition-grid{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:10px;
+      margin-top:12px;
+    }
+    .mini-definition{
+      background:#ffffff;
+      border:1px solid #dbe7f2;
+      border-radius:15px;
+      padding:11px;
+      font-size:11.5px;
+      line-height:1.45;
+      color:#334155;
+    }
+    .mini-definition b{
+      display:block;
+      color:#05284f;
+      font-size:12.5px;
+      margin-bottom:4px;
+    }
+    .compact-rank-list{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:10px;
+      margin-top:10px;
+    }
+    .rank-card{
+      border:1px solid #dbe7f2;
+      border-radius:15px;
+      padding:10px 11px;
+      background:#fff;
+      font-size:11.5px;
+      line-height:1.42;
+    }
+    .rank-card-title{
+      font-weight:950;
+      color:#05284f;
+      font-size:13px;
+      margin-bottom:6px;
+    }
+    .rank-card-value{
+      font-weight:950;
+      font-size:19px;
+      color:#0f172a;
+    }
+    .rank-card-sub{
+      color:#64748b;
+      margin-top:3px;
+    }
+    @media(max-width:1250px){
+      .mini-definition-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+      .compact-rank-list{grid-template-columns:repeat(2,minmax(0,1fr));}
+    }
+    @media(max-width:760px){
+      .mini-definition-grid,.compact-rank-list{grid-template-columns:1fr;}
+      .matrix-table{font-size:10.5px;}
+      .matrix-table th,.matrix-table td{padding:4px 5px;}
+    }
+
     @media(max-width:1250px){
       .network-card-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
     }
@@ -233,7 +354,7 @@
 
 <section class="hero">
   <div class="hero-box">
-    <div class="hero-kicker">Supply Chain Intelligence V2.6</div>
+    <div class="hero-kicker">Supply Chain Intelligence V2.7</div>
     <h1>Országos bolthálózat, logisztikai központok és ellátási távolságok</h1>
     <p>
       Az oldal elsődlegesen a <b>store-network-hu-final.json</b> véglegesített országos hálózati adatbázisból dolgozik.
@@ -285,9 +406,11 @@
       <div id="companyNetworkCards" class="network-card-grid">Adatok betöltése...</div>
       <div class="explain-box">
         <b>Mit látunk?</b><br>
-        Ez a blokk lánconként mutatja az OpenStreetMap/Overpass alapján talált üzleteket, az aktív logisztikai központokat,
-        az átlagos Store→DC távolságot és a Store/DC arányt. Nem hivatalos bolthálózati adatbázis, hanem OSINT-alapú
-        fizikai hálózati modell. A cél a földrajzi lefedettség és az ellátási távolságok gyors összehasonlítása.
+        Ez a blokk lánconként mutatja az országos üzletszámot, az aktív logisztikai központok számát, az átlagos Store→DC távolságot, a maximális távolságot és a Store/DC arányt.
+      </div>
+      <div class="block-method">
+        <b>Hogyan kell értelmezni?</b><br>
+        Ez a felső áttekintő a fizikai hálózat gyors állapotképe. A <b>Store/DC arány</b> azt jelzi, hogy egy aktív raktárra átlagosan hány üzlet jut. A <b>magas arány</b> nem automatikusan rossz, de nagyobb szervezési és kiesési kitettséget jelezhet. Az <b>átlagos km</b> és a <b>max km</b> légvonalbeli becslés, ezért közúti útvonalnál a valós távolság általában magasabb lehet.
       </div>
     </div>
 
@@ -304,9 +427,11 @@
       </div>
       <div class="explain-box">
         <b>Mit látunk?</b><br>
-        A térkép egyszerre mutatja az országos bolthálózatot és a logisztikai központokat. A halvány vonalak az adott bolt és
-        a legközelebbi, azonos lánchoz tartozó aktív DC közötti légvonalbeli kapcsolatot jelölik. Nagy adatmennyiségnél a
-        térkép sűrű lehet, ezért a jobb oldali szűrők láncra és régióra szűkítik a nézetet.
+        A térkép egyszerre mutatja az országos bolthálózatot és a logisztikai központokat. A halvány vonalak az adott bolt és a legközelebbi, azonos lánchoz tartozó aktív DC közötti becsült kapcsolatot jelölik.
+      </div>
+      <div class="block-method">
+        <b>Hogyan kell értelmezni?</b><br>
+        A térkép nem valós vállalati szállítási útvonalakat mutat, hanem <b>nearest active DC</b> modellt. Ez azt jelenti, hogy a rendszer minden üzlethez megkeresi a lánc legközelebbi aktív raktárát. Nagy hálózatnál érdemes láncra szűrni, mert csak így látszanak jól az ellátási vonalak és a földrajzi mintázatok.
       </div>
     </div>
 
@@ -327,7 +452,10 @@
       <div class="explain-box">
         <b>Mit látunk?</b><br>
         A lista minden figyelt üzlethez megmutatja a hozzá rendelt legközelebbi aktív logisztikai központot és a becsült távolságot.
-        A szűrők segítségével egy lánc vagy régió külön vizsgálható. Kártyára kattintva a térkép az adott üzletre fókuszál.
+      </div>
+      <div class="block-method">
+        <b>Hogyan kell értelmezni?</b><br>
+        Ez az operatív keresőréteg. Egy adott láncra vagy régióra szűrve meg lehet nézni, hogy az üzletek melyik DC-hez kerülnek a modell szerint. Ha egy bolt nagyon távol esik a legközelebbi DC-től, az nem feltétlenül valós ellátási hiba, de a modellben <b>magasabb logisztikai figyelmet</b> érdemel.
       </div>
     </div>
 
@@ -528,8 +656,10 @@
       <div class="explain-box">
         <b>Mit látunk?</b><br>
         A diagram azt mutatja, mely láncok boltjai vannak átlagosan közelebb vagy távolabb az aktív DC-hálózattól.
-        A kisebb érték sűrűbb logisztikai lefedettséget jelezhet, de az eredmény csak légvonalbeli közelítés.
-        Közúti idő, szállítási körzet és raktárkapacitás még nincs beépítve.
+      </div>
+      <div class="block-method">
+        <b>Hogyan számolódik?</b><br>
+        Minden üzlethez kiszámoljuk a legközelebbi aktív DC légvonalbeli távolságát, majd lánconként átlagoljuk. A kisebb átlag általában kedvezőbb földrajzi lefedettséget jelez. A mutató nem tartalmaz közúti távolságot, rakodási időt, autópályadíjat, hűtött árut vagy sofőridő-korlátot.
       </div>
     </div>
 
@@ -543,8 +673,10 @@
       <div class="explain-box">
         <b>Mit látunk?</b><br>
         A Store/DC arány azt jelzi, hogy a jelenlegi modellben hány üzlet jut egy aktív logisztikai központra.
-        A magasabb érték nagyobb hálózati koncentrációt mutathat, de nem minősíti önmagában a lánc hatékonyságát.
-        Ehhez később raktárméret, útvonal, kapacitás és napi szállítási frekvencia is kell.
+      </div>
+      <div class="block-method">
+        <b>Hogyan kell értelmezni?</b><br>
+        Ha egy láncnál 1 DC és 180 üzlet szerepel, akkor a Store/DC arány 180. Ez magasabb koncentrációt jelent. Ez nem bizonyítja, hogy a lánc rosszul működik, mert egy nagy, korszerű DC sok üzletet is kiszolgálhat. Elemzői szempontból viszont a magas arány <b>kiesési és kapacitási érzékenységre</b> utalhat.
       </div>
     </div>
 
@@ -557,9 +689,11 @@
       <div class="chart-insight" id="regionalCoverageInsight">Adatok betöltése...</div>
       <div class="explain-box">
         <b>Mit látunk?</b><br>
-        A blokk az üzletek régiók szerinti koncentrációját mutatja. Az OpenStreetMap-adatok nem minden településnél tartalmaznak
-        tökéletes régióbesorolást, ezért az „n.a.” érték adatminőségi figyelmeztetés. A következő fejlesztés ezt megye/régió
-        leképezéssel javíthatja.
+        A blokk az üzletek régiók szerinti koncentrációját mutatja.
+      </div>
+      <div class="block-method">
+        <b>Hogyan kell értelmezni?</b><br>
+        Ez a diagram azt mutatja, hol sűrűsödik a vizsgált FMCG-hálózat. A magas értékű régiókban erősebb a fizikai jelenlét és a verseny. Az <b>n.a.</b> érték azt jelzi, hogy egyes települések régióbesorolása még hiányos. Ez nem üzlethiány, hanem adatminőségi kérdés.
       </div>
     </div>
 
@@ -572,7 +706,10 @@
       <div class="explain-box">
         <b>Mit látunk?</b><br>
         Ez a blokk azokat az üzleteket emeli ki, amelyek a modell szerint a legtávolabb esnek a saját láncuk legközelebbi aktív DC-jétől.
-        Ezek nem feltétlenül problémás boltok, de hálózati és ellátási szempontból magasabb figyelmet érdemelhetnek.
+      </div>
+      <div class="block-method">
+        <b>Hogyan kell értelmezni?</b><br>
+        A legtávolabbi üzletek gyakran a hálózat peremén helyezkednek el. Ezeknél nagyobb lehet az üzemanyag-, idő- és tartalékútvonal-kitettség. A blokk nem azt mondja, hogy az adott bolt ellátása rossz, hanem azt, hogy a földrajzi modellben <b>magasabb ellátási komplexitást</b> kap.
       </div>
     </div>
 
@@ -585,7 +722,10 @@
       <div class="explain-box">
         <b>Mit látunk?</b><br>
         A mátrix azt mutatja, hogy az egyes láncok mely régiókban mennyi üzlettel jelennek meg az OSINT-alapú adatbázisban.
-        Ez a Supply oldal egyik legfontosabb eleme, mert a térképi látványt számszerű regionális lefedettségi képpé alakítja.
+      </div>
+      <div class="block-method">
+        <b>Hogyan kell értelmezni?</b><br>
+        Ez a versenytársi lefedettség egyik legfontosabb táblája. Megmutatja, hogy melyik lánc melyik régióban erős vagy gyenge. A regionális jelenlét később összeköthető népességi, vásárlóerő- és közúti elérhetőségi adatokkal.
       </div>
     </div>
 
@@ -597,8 +737,11 @@
       <div id="distanceMatrix" class="matrix-wrap compact-scrollless">Adatok betöltése...</div>
       <div class="explain-box">
         <b>Mit látunk?</b><br>
-        A mátrix üzletszinten mutatja a legközelebbi aktív DC-t és a becsült távolságot. Ez már nem egyszerű bolttérkép,
-        hanem hálózati kapcsolatokat számoló ellátási réteg. Később közúti távolsággal, szállítási idővel és útvonal-kockázattal bővíthető.
+        A mátrix üzletszinten mutatja a legközelebbi aktív DC-t és a becsült távolságot.
+      </div>
+      <div class="block-method">
+        <b>Hogyan kell értelmezni?</b><br>
+        Ez az alapja a szimulációs és kockázati blokkoknak. A rendszer minden üzlethez hozzárendeli a legközelebbi aktív DC-t. Ez egy <b>modellezett hozzárendelés</b>, nem belső vállalati fuvarszervezési adat. A valóságban régiós körzetek, kapacitások, termékkategóriák és útvonaloptimalizálás is befolyásolhatja a raktár-hozzárendelést.
       </div>
     </div>
 
@@ -678,6 +821,65 @@
         A modell nem csak a DC-k számát nézi. Az Auchan 24 üzletes, kisebb hálózat. Az ALDI 188 üzletes, országosabb és nagyobb távolsági szórással működő hálózatként jelenik meg. Ezért ugyanannyi DC mellett az ALDI komplexitása magasabb lehet. A mutató tehát a hálózat méretét, földrajzi kiterjedését és távolsági szerkezetét együtt értelmezi.
         <br><br>
         <b>Lidl DC Exposure megjegyzés:</b> ha a DC Exposure blokkban csak egy Lidl raktár látszik, az vagy megjelenítési szűkítés, vagy a nearest-DC modell minden Lidl-pontot ugyanahhoz a DC-hez rendelt. Ezt külön DC-load bontással érdemes ellenőrizni, mert a felső áttekintő szerint a Lidl DC-szám már 4 aktív raktárként szerepel.
+      </div>
+    </div>
+
+
+    <div class="card span12">
+      <div class="section-title">
+        <h2>Block-by-block Interpretation Guide</h2>
+        <span>az új szimulációs és kockázati ábrák részletes olvasata</span>
+      </div>
+
+      <div class="mini-definition-grid">
+        <div class="mini-definition">
+          <b>Network Efficiency Benchmark</b>
+          A láncok becsült logisztikai hatékonyságát hasonlítja össze. Magasabb érték akkor jön ki, ha kisebb az átlagos és maximális távolság, alacsonyabb a Store/DC arány és kevesebb a klaszter.
+        </div>
+        <div class="mini-definition">
+          <b>Route Complexity Benchmark</b>
+          A szervezési nehézséget mutatja. Magas érték akkor jellemző, ha sok üzlet jut kevés DC-re, nagy a földrajzi szórás, és több külön kiszolgálási klaszter alakul ki.
+        </div>
+        <div class="mini-definition">
+          <b>Estimated Routes & Clusters</b>
+          A becsült túraszám nem pontos kamionszám, hanem kiszállítási körök száma. Egy túra a modellben 4–6 üzletet jelenthet. A klaszter a földrajzi kiszolgálási csoport.
+        </div>
+        <div class="mini-definition">
+          <b>DC Load Ranking</b>
+          Azt mutatja, melyik DC-hez mennyi üzlet kerül a nearest-DC modellben. Ha egy láncnál több DC van, itt látszik, hogy a modell szerint melyik raktár kapja a legtöbb boltot.
+        </div>
+        <div class="mini-definition">
+          <b>Network Vulnerability</b>
+          Egy DC kiesési hatását becsüli. Minél nagyobb az érintett üzletszám és arány, annál nagyobb a hálózati sérülékenység.
+        </div>
+        <div class="mini-definition">
+          <b>Distance Bucket Simulation</b>
+          Az üzleteket távolsági sávokba sorolja: 0–50, 50–100, 100–150, 150–200 és 200+ km. Ez jobban mutatja a távolsági profilt, mint egyetlen átlag.
+        </div>
+        <div class="mini-definition">
+          <b>Supply Risk Ranking</b>
+          Összetett kockázati index. A complexity, DC-kitettség, távolsági nyomás, Store/DC arány és klaszterezési nyomás alapján készül.
+        </div>
+        <div class="mini-definition">
+          <b>Population Coverage Proxy</b>
+          Települési népességi becslés. Nem valós vásárlószám, hanem annak közelítése, hogy a bolthálózat mekkora lakossági térben van jelen.
+        </div>
+        <div class="mini-definition">
+          <b>DC Exposure Ranking</b>
+          A legnagyobb egyedi DC-kitettséget mutatja. Ha 100%, akkor a modell szerint az adott lánc minden üzlete egy DC-hez tartozik.
+        </div>
+        <div class="mini-definition">
+          <b>Risk Driver Breakdown</b>
+          Megmutatja, mi húzza fel a kockázati pontszámot: komplexitás, DC-kitettség, hosszú távolság, Store/DC koncentráció vagy klaszterezési nyomás.
+        </div>
+        <div class="mini-definition">
+          <b>Failure Impact</b>
+          Azt mutatja, egy DC kiesése mekkora üzletszámot és becsült lakossági lefedettséget érintene.
+        </div>
+        <div class="mini-definition">
+          <b>Fontos korlát</b>
+          Minden szimuláció OSINT-alapú becslés. Nem látjuk a valós rendelési mennyiséget, kamionkihasználtságot, raktárkapacitást vagy belső vállalati útvonalterveket.
+        </div>
       </div>
     </div>
 
@@ -1534,6 +1736,23 @@ function renderRiskFailureImpactTable(){
         </tr>`).join('')}
       </tbody>
     </table>`;
+}
+
+
+function compactAllTables(){
+  document.querySelectorAll('.matrix-table').forEach(tbl=>{
+    tbl.classList.add('compact-table');
+    tbl.querySelectorAll('td,th').forEach(cell=>{
+      if(!cell.title) cell.title = cell.textContent.trim();
+    });
+  });
+}
+const originalRenderTables = typeof renderTables === 'function' ? renderTables : null;
+if(originalRenderTables){
+  renderTables = function(){
+    originalRenderTables();
+    compactAllTables();
+  }
 }
 
 loadData();
