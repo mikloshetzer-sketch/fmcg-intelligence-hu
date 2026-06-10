@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-06-10T10:40:21.792199+00:00",
+  "updated_at": "2026-06-10T16:14:00.769482+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-06-10T10:40:21.792199+00:00",
+    "updated_at": "2026-06-10T16:14:00.769482+00:00",
     "leader_social": "Lidl",
     "leader_social_index": 52,
     "dominant_social_topic": "árak és akciók",
@@ -400,21 +400,21 @@
     },
     {
       "company": "Tesco",
-      "social_mentions": 6,
-      "raw_social_mentions": 17,
+      "social_mentions": 7,
+      "raw_social_mentions": 18,
       "dashboard_mentions": 4,
-      "background_mentions": 2,
+      "background_mentions": 3,
       "discarded_mentions": 11,
-      "weighted_social_mentions": 5.0,
+      "weighted_social_mentions": 5.5,
       "hu_relevant_mentions": 4,
       "social_index": 29,
       "social_sources": {
-        "reddit": 6,
+        "reddit": 7,
         "youtube": 0,
         "mastodon": 0
       },
       "raw_social_sources": {
-        "reddit": 17,
+        "reddit": 18,
         "youtube": 0,
         "mastodon": 0
       },
@@ -422,7 +422,7 @@
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 6.0
+          "score": 6.5
         },
         {
           "topic": "bolti élmény",
@@ -440,7 +440,7 @@
       "topic_sentiment": {
         "árak és akciók": {
           "positive": 1.0,
-          "neutral": 4.0,
+          "neutral": 4.5,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -524,6 +524,19 @@
       ],
       "background_items": [
         {
+          "id": "b064788a28decc03",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "£3.85 Tesco Clubcard Leeds Bridgewater Place",
+          "summary": "Rate /10 please submitted by /u/ObsidianFlesh to r/MealDealRates [link] [comments]",
+          "url": "https://www.reddit.com/r/MealDealRates/comments/1u1zat6/385_tesco_clubcard_leeds_bridgewater_place/",
+          "published": "2026-06-10T11:20:03+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        },
+        {
           "id": "95b1a43b526ea2e6",
           "source": "reddit",
           "company": "Tesco",
@@ -552,7 +565,7 @@
       ],
       "quality_summary": {
         "dashboard_items": 4,
-        "background_items": 2,
+        "background_items": 3,
         "discarded_items": 11,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
