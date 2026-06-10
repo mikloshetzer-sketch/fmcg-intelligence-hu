@@ -312,6 +312,82 @@
       color:#64748b;
       margin-top:3px;
     }
+
+    .expansion-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:14px;
+    }
+    .expansion-card{
+      border:1px solid #dbe7f2;
+      border-radius:18px;
+      background:#fbfdff;
+      padding:14px;
+      min-height:145px;
+    }
+    .expansion-card h3{
+      margin:0 0 8px 0;
+      font-size:16px;
+      font-weight:950;
+      color:var(--navy);
+    }
+    .expansion-big{
+      font-size:27px;
+      line-height:1;
+      color:var(--navy);
+      font-weight:950;
+      margin:8px 0 5px;
+    }
+    .expansion-sub{
+      font-size:12px;
+      color:#64748b;
+      line-height:1.45;
+    }
+    .region-tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:6px;
+      margin-top:9px;
+    }
+    .stress-table{
+      width:100%;
+      border-collapse:collapse;
+      font-size:11.2px;
+    }
+    .stress-table th,.stress-table td{
+      padding:6px 7px;
+      border-bottom:1px solid #e2edf6;
+      text-align:left;
+      white-space:nowrap;
+    }
+    .stress-table th{
+      background:#f8fafc;
+      color:#334155;
+      font-size:10px;
+      text-transform:uppercase;
+      letter-spacing:.03em;
+    }
+    .stress-table td:first-child{
+      font-weight:950;
+      color:var(--navy);
+    }
+    .scenario-note{
+      margin-top:10px;
+      padding:11px 13px;
+      background:#f8fafc;
+      border:1px solid #dbe7f2;
+      border-radius:15px;
+      color:#334155;
+      font-size:12px;
+      line-height:1.62;
+    }
+    @media(max-width:1150px){
+      .expansion-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+    }
+    @media(max-width:760px){
+      .expansion-grid{grid-template-columns:1fr;}
+    }
+
     @media(max-width:1250px){
       .mini-definition-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
       .compact-rank-list{grid-template-columns:repeat(2,minmax(0,1fr));}
@@ -354,7 +430,7 @@
 
 <section class="hero">
   <div class="hero-box">
-    <div class="hero-kicker">Supply Chain Intelligence V2.7</div>
+    <div class="hero-kicker">Supply Chain Intelligence V2.8</div>
     <h1>Országos bolthálózat, logisztikai központok és ellátási távolságok</h1>
     <p>
       Az oldal elsődlegesen a <b>store-network-hu-final.json</b> véglegesített országos hálózati adatbázisból dolgozik.
@@ -745,6 +821,61 @@
       </div>
     </div>
 
+
+    <div class="card span12">
+      <div class="section-title">
+        <h2>Expansion Simulator</h2>
+        <span>üzletszám-növekedési forgatókönyvek és becsült DC-igény</span>
+      </div>
+
+      <div id="expansionCapacityCards" class="expansion-grid">Adatok betöltése...</div>
+
+      <div class="block-method">
+        <b>Mit mutat a Growth Capacity Ranking?</b><br>
+        A blokk azt becsüli, hogy az adott lánc hány további üzletet tudna elvileg befogadni új DC nélkül a jelenlegi Store/DC célérték alapján.
+        Az értéket két módon kell nézni: <b>százalékban</b> és <b>darabszámban</b>. A százalék egy kis hálózatnál, például Auchan esetében, nagyon magas lehet, miközben darabszámban ez csak néhány tucat üzletet jelent.
+      </div>
+    </div>
+
+    <div class="card span6">
+      <div class="section-title">
+        <h2>+50% Growth Stress Test</h2>
+        <span>mi történne, ha minden lánc 50%-kal növelné üzletszámát?</span>
+      </div>
+      <div id="expansionStressTable" class="matrix-wrap">Adatok betöltése...</div>
+      <div class="block-method">
+        <b>Hogyan kell értelmezni?</b><br>
+        A stresszteszt nem konkrét beruházási terv. Azt mutatja meg, hogy egy erős növekedési hullám hogyan terhelné a jelenlegi raktárhálózatot.
+        A <b>Required DC</b> a cél Store/DC arány alapján becsült szükséges DC-szám. Az <b>Additional DC</b> azt mutatja, hány új raktár vagy cross-dock jellegű pont kellhet a modell szerint.
+      </div>
+    </div>
+
+    <div class="card span6">
+      <div class="section-title">
+        <h2>Suggested Expansion Regions</h2>
+        <span>becsült új DC / cross-dock térségek növekedési nyomás esetén</span>
+      </div>
+      <div id="expansionRegionCards" class="expansion-grid">Adatok betöltése...</div>
+      <div class="block-method">
+        <b>Hogyan számolódik?</b><br>
+        A jelenlegi V1 modell még szabályalapú javaslatokat ad. A keleti, déli és nyugati régiók ott kerülnek elő, ahol a jelenlegi hálózat távolsági vagy Store/DC nyomása növekedés mellett emelkedne.
+        A következő verzióban ezt már konkrét boltpontok, régiós boltarányok és távolságjavulás alapján lehet tovább pontosítani.
+      </div>
+    </div>
+
+    <div class="card span12">
+      <div class="section-title">
+        <h2>Expansion Executive Interpretation</h2>
+        <span>vezetői olvasat a növekedési szimulációhoz</span>
+      </div>
+      <div id="expansionExecutiveText" class="notice">Adatok betöltése...</div>
+      <div class="block-method">
+        <b>Miért hasznos?</b><br>
+        Ez a blokk megfordítja a korábbi gondolkodást. Nem azt kérdezi, hogy hova kellene új DC-t tenni, hanem azt, hogy <b>egy üzlethálózat-növekedési terv meddig bírható el</b> a jelenlegi logisztikai struktúrával.
+        Ez stratégiai kérdés: ha egy lánc 10–20%-kal nő, lehet, hogy elég optimalizálni; ha 50–100%-kal nő, már új raktár, cross-dock, regionális depó vagy kiszolgálási körzet-újratervezés kellhet.
+      </div>
+    </div>
+
     <div class="span12">
       <details>
         <summary>Distribution center adattábla <span class="small">distribution-centers.json / items</span></summary>
@@ -917,6 +1048,7 @@
 const storeNetworkUrl = './data/store-network-hu-final.json';
 const pilotStoreProfilesUrl = './data/store-profiles.json';
 const distributionCentersUrl = './data/distribution-centers.json';
+const expansionSimulationUrl = './data/expansion-simulation.json';
 const supplySimulationUrl = './data/supply-simulation.json';
 const supplyRiskUrl = './data/supply-risk-intelligence.json';
 
@@ -929,6 +1061,7 @@ let storeMarkers = {};
 let allStores = [];
 let allDcs = [];
 let allLinks = [];
+let expansionSimulation = null;
 let storeSourceMode = 'national';
 let supplySimulation = null;
 let supplyRisk = null;
@@ -1076,6 +1209,7 @@ function renderPage(){
   renderRemoteStores();
   renderRegionalMatrix();
   renderDistanceMatrix(allLinks);
+  renderExpansionSimulator();
   renderTables();
 }
 
@@ -1738,6 +1872,135 @@ function renderRiskFailureImpactTable(){
     </table>`;
 }
 
+
+
+function expansionRiskClass(level){
+  if(level === 'high') return 'red';
+  if(level === 'medium') return 'orange';
+  return 'green';
+}
+
+function renderExpansionSimulator(){
+  if(!expansionSimulation){
+    const msg = '<div class="notice">Az expansion-simulation.json még nem érhető el. Futtasd: Simulate Expansion Scenarios.</div>';
+    ['expansionCapacityCards','expansionStressTable','expansionRegionCards','expansionExecutiveText'].forEach(id=>{
+      const el=document.getElementById(id); if(el) el.innerHTML=msg;
+    });
+    return;
+  }
+
+  renderExpansionCapacity();
+  renderExpansionStress();
+  renderExpansionRegions();
+  renderExpansionExecutive();
+}
+
+function renderExpansionCapacity(){
+  const rows = expansionSimulation.capacity_ranking || [];
+  const el = document.getElementById('expansionCapacityCards');
+  if(!el) return;
+
+  el.innerHTML = rows.map(r=>{
+    const spareStores = Math.max(0, Math.round((r.active_dc_count * r.target_store_dc_ratio) - r.current_store_count));
+    const firstNeed = r.first_growth_level_requiring_new_dc === null ? '100% felett' : '+' + r.first_growth_level_requiring_new_dc + '%';
+    const pillClass = r.growth_capacity_without_new_dc_pct > 25 ? 'green' : (r.growth_capacity_without_new_dc_pct > 0 ? 'orange' : 'red');
+
+    return `
+      <div class="expansion-card">
+        <h3>${r.company}</h3>
+        <div class="expansion-big">+${fmtNum(spareStores)}</div>
+        <div class="expansion-sub">becsült további üzlet új DC nélkül</div>
+        <div style="margin-top:9px;display:flex;gap:6px;flex-wrap:wrap;">
+          <span class="pill ${pillClass}">+${fmtNum(r.growth_capacity_without_new_dc_pct)}%</span>
+          <span class="pill blue">${fmtNum(r.current_store_count)} jelenlegi üzlet</span>
+          <span class="pill gray">${fmtNum(r.active_dc_count)} DC</span>
+          <span class="pill orange">új DC küszöb: ${firstNeed}</span>
+        </div>
+      </div>`;
+  }).join('');
+}
+
+function renderExpansionStress(){
+  const rows = expansionSimulation.stress_test_50_pct || [];
+  const el = document.getElementById('expansionStressTable');
+  if(!el) return;
+
+  el.innerHTML = `
+    <table class="stress-table">
+      <thead>
+        <tr>
+          <th>Lánc</th>
+          <th>Új üzlet</th>
+          <th>Required DC</th>
+          <th>Additional DC</th>
+          <th>Store/DC</th>
+          <th>Túra</th>
+          <th>Risk</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${rows.map(r=>`
+          <tr>
+            <td>${r.company}</td>
+            <td>${fmtNum(r.new_store_count)}</td>
+            <td>${fmtNum(r.required_dc_count)}</td>
+            <td><b>${fmtNum(r.additional_dc_needed)}</b></td>
+            <td>${fmtNum(r.new_store_dc_ratio)}</td>
+            <td>${fmtNum(r.estimated_routes)}</td>
+            <td><span class="pill ${expansionRiskClass(r.new_supply_risk_level)}">${fmtNum(r.new_supply_risk_score)} ${r.new_supply_risk_level}</span></td>
+          </tr>`).join('')}
+      </tbody>
+    </table>
+    <div class="scenario-note">
+      <b>Megjegyzés:</b> a +50%-os stresszteszt minden láncra azonos növekedési nyomást tesz rá, ezért összehasonlíthatóvá teszi, melyik hálózat feszül túl gyorsabban.
+    </div>`;
+}
+
+function renderExpansionRegions(){
+  const rows = expansionSimulation.stress_test_50_pct || [];
+  const el = document.getElementById('expansionRegionCards');
+  if(!el) return;
+
+  const withRegions = rows.filter(r => (r.suggested_new_dc_regions || []).length > 0);
+
+  if(!withRegions.length){
+    el.innerHTML = '<div class="notice">A +50%-os stresszteszt nem jelzett új DC-régiót.</div>';
+    return;
+  }
+
+  el.innerHTML = withRegions.map(r=>`
+    <div class="expansion-card">
+      <h3>${r.company}</h3>
+      <div class="expansion-sub">+50% növekedés mellett becsült új DC / cross-dock térségek</div>
+      <div class="region-tags">
+        ${(r.suggested_new_dc_regions || []).map(region=>`<span class="pill purple">${region}</span>`).join('')}
+      </div>
+      <div class="small" style="margin-top:9px;">
+        Additional DC: <b>${fmtNum(r.additional_dc_needed)}</b> • New risk: <b>${fmtNum(r.new_supply_risk_score)}</b>
+      </div>
+    </div>`).join('');
+}
+
+function renderExpansionExecutive(){
+  const el = document.getElementById('expansionExecutiveText');
+  if(!el) return;
+
+  const capacity = expansionSimulation.capacity_ranking || [];
+  const stress = expansionSimulation.stress_test_50_pct || [];
+
+  const best = capacity[0];
+  const lidl = capacity.find(x=>x.company==='Lidl');
+  const zeroCapacity = capacity.filter(x=>Number(x.growth_capacity_without_new_dc_pct) === 0).map(x=>x.company);
+  const mostNewDc = [...stress].sort((a,b)=>b.additional_dc_needed-a.additional_dc_needed)[0];
+
+  el.innerHTML = `
+    A V1 szimuláció szerint a legnagyobb növekedési tartalék jelenleg <b>${best?.company || 'n.a.'}</b> hálózatában látszik,
+    de ezt darabszámban is értelmezni kell, mert kis bolthálózatnál a magas százalék félrevezető lehet.
+    ${lidl ? `A <b>Lidl</b> esetében a modell kb. <b>+${fmtNum(lidl.growth_capacity_without_new_dc_pct)}%</b> növekedési tartalékot jelez új DC nélkül, vagyis egy mérsékelt bővülés még kezelhetőnek tűnik.` : ''}
+    A <b>${zeroCapacity.join(', ')}</b> csoportnál a modell szerint már kisebb növekedés is új logisztikai kapacitást vagy kiszolgálási körzet-újratervezést igényelhet.
+    +50%-os stressztesztben a legtöbb új DC-igényt <b>${mostNewDc?.company || 'n.a.'}</b> mutatja, kb. <b>${fmtNum(mostNewDc?.additional_dc_needed || 0)}</b> új ponttal.
+  `;
+}
 
 function compactAllTables(){
   document.querySelectorAll('.matrix-table').forEach(tbl=>{
