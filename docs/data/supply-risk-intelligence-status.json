@@ -1,0 +1,66 @@
+{
+  "updated_at": "2026-06-10T12:01:45.024443+00:00",
+  "status": "ok",
+  "version": "supply-risk-intelligence-v1",
+  "store_count": 1376,
+  "dc_count": 15,
+  "company_count": 6,
+  "companies": [
+    "ALDI",
+    "Auchan",
+    "Lidl",
+    "Penny",
+    "SPAR",
+    "Tesco"
+  ],
+  "risk_ranking": [
+    {
+      "company": "ALDI",
+      "supply_risk_score": 83.7,
+      "supply_risk_level": "high",
+      "coverage_score": 46.8,
+      "reached_population_proxy": 4490000,
+      "largest_dc_exposure_pct": 100.0
+    },
+    {
+      "company": "Tesco",
+      "supply_risk_score": 83.7,
+      "supply_risk_level": "high",
+      "coverage_score": 50.2,
+      "reached_population_proxy": 4819000,
+      "largest_dc_exposure_pct": 100.0
+    },
+    {
+      "company": "SPAR",
+      "supply_risk_score": 77.7,
+      "supply_risk_level": "high",
+      "coverage_score": 51.0,
+      "reached_population_proxy": 4892000,
+      "largest_dc_exposure_pct": 63.3
+    },
+    {
+      "company": "Auchan",
+      "supply_risk_score": 65.4,
+      "supply_risk_level": "medium",
+      "coverage_score": 30.0,
+      "reached_population_proxy": 2876000,
+      "largest_dc_exposure_pct": 100.0
+    },
+    {
+      "company": "Lidl",
+      "supply_risk_score": 52.9,
+      "supply_risk_level": "medium",
+      "coverage_score": 52.7,
+      "reached_population_proxy": 5063000,
+      "largest_dc_exposure_pct": 40.9
+    },
+    {
+      "company": "Penny",
+      "supply_risk_score": 51.9,
+      "supply_risk_level": "medium",
+      "coverage_score": 46.7,
+      "reached_population_proxy": 4482000,
+      "largest_dc_exposure_pct": 36.0
+    }
+  ]
+}
