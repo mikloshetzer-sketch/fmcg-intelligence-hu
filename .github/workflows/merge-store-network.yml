@@ -1,0 +1,31 @@
+name: Merge FMCG Store Network
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  merge-store-network:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository letöltése
+        uses: actions/checkout@v4
+
+      - name: Python telepítése
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Store network összefésülése
+        run: python scripts/merge_store_network.py
+
+      - name: Változások mentése
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add docs/data/store-network-hu-final.json docs/data/store-network-hu-final-status.json
+          git commit -m "Merge final FMCG store network" || echo "Nincs változás"
+          git push
