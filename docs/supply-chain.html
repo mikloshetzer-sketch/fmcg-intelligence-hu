@@ -130,7 +130,7 @@
     <div class="hero-kicker">Supply Chain Intelligence V2.2</div>
     <h1>Országos bolthálózat, logisztikai központok és ellátási távolságok</h1>
     <p>
-      Az oldal elsődlegesen a <b>store-network-hu.json</b> országos OpenStreetMap/Overpass adatbázisból dolgozik.
+      Az oldal elsődlegesen a <b>store-network-hu-final.json</b> véglegesített országos hálózati adatbázisból dolgozik.
       A <b>distribution-centers.json</b> a nyilvánosan azonosított logisztikai központokat tartalmazza.
       A távolságok légvonalbeli becslések, nem közúti útvonaltervek.
     </p>
@@ -316,7 +316,7 @@
       </details>
 
       <details>
-        <summary>Store network adattábla <span class="small">store-network-hu.json / stores</span></summary>
+        <summary>Store network adattábla <span class="small">store-network-hu-final.json / stores</span></summary>
         <div class="details-body"><table id="storeNetworkTable"></table></div>
       </details>
     </div>
@@ -339,7 +339,7 @@
 <footer class="footer">FMCG Intelligence Hungary – Supply Chain Intelligence.</footer>
 
 <script>
-const storeNetworkUrl = './data/store-network-hu.json';
+const storeNetworkUrl = './data/store-network-hu-final.json';
 const pilotStoreProfilesUrl = './data/store-profiles.json';
 const distributionCentersUrl = './data/distribution-centers.json';
 
@@ -834,4 +834,5 @@ loadData();
 </script>
 </body>
 </html>
+
 
