@@ -1,0 +1,34 @@
+name: Update LinkedIn Jobs Monitor
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: "30 5 * * 1"
+
+permissions:
+  contents: write
+
+jobs:
+  update-linkedin-jobs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository letöltése
+        uses: actions/checkout@v4
+
+      - name: Python telepítése
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: LinkedIn Jobs monitor futtatása
+        run: python scripts/update_linkedin_jobs.py
+
+      - name: Változások mentése
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add docs/data/linkedin-jobs-monitor.json
+          git commit -m "Update LinkedIn jobs monitor" || echo "No changes"
+          git push
