@@ -119,6 +119,88 @@
     .riskbar span{display:block;height:100%;background:linear-gradient(90deg,#22c55e,#f97316,#ef4444);border-radius:999px;}
     .risk-note{font-size:12px;color:#64748b;line-height:1.45;margin-top:8px;}
 
+
+    .simulation-explain-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:14px;
+      margin-top:14px;
+    }
+    .method-card{
+      border:1px solid #dbe7f2;
+      background:#fbfdff;
+      border-radius:18px;
+      padding:14px;
+      font-size:12.5px;
+      line-height:1.55;
+      color:#334155;
+    }
+    .method-card h3{
+      margin:0 0 7px 0;
+      color:var(--navy);
+      font-size:15px;
+      font-weight:950;
+    }
+    .method-card b{color:var(--navy);}
+    .method-note-strong{
+      background:#eef6ff;
+      border:1px solid #bfdbfe;
+      color:#0f315f;
+      border-radius:18px;
+      padding:14px 16px;
+      line-height:1.65;
+      font-size:13px;
+      margin-top:12px;
+    }
+    .compact-table{font-size:12px;}
+    .compact-table th,.compact-table td{padding:7px 8px;}
+    .compact-scrollless{
+      overflow:visible !important;
+      max-height:none !important;
+    }
+    .risk-driver-list{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:10px;
+    }
+    .risk-driver-card{
+      border:1px solid #dbe7f2;
+      border-radius:16px;
+      background:#ffffff;
+      padding:11px;
+      font-size:12px;
+      line-height:1.45;
+    }
+    .risk-driver-title{
+      font-weight:950;
+      color:var(--navy);
+      margin-bottom:7px;
+    }
+    .bar-row{
+      display:grid;
+      grid-template-columns:95px 1fr 42px;
+      gap:8px;
+      align-items:center;
+      margin:5px 0;
+    }
+    .bar-label{font-size:11.5px;color:#475569;font-weight:800;}
+    .bar-track{height:7px;background:#e2e8f0;border-radius:999px;overflow:hidden;}
+    .bar-fill{height:7px;background:#0ea5e9;border-radius:999px;}
+    .bar-value{font-size:11.5px;font-weight:900;color:#0f172a;text-align:right;}
+    .whatif-preview{
+      border:1px dashed #93c5fd;
+      background:#f8fbff;
+      border-radius:18px;
+      padding:15px;
+      font-size:13px;
+      line-height:1.65;
+      color:#334155;
+    }
+    @media(max-width:1000px){
+      .simulation-explain-grid{grid-template-columns:1fr;}
+      .risk-driver-list{grid-template-columns:1fr;}
+    }
+
     @media(max-width:1250px){
       .network-card-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
     }
@@ -151,12 +233,12 @@
 
 <section class="hero">
   <div class="hero-box">
-    <div class="hero-kicker">Supply Chain Intelligence V2.2</div>
+    <div class="hero-kicker">Supply Chain Intelligence V2.6</div>
     <h1>Országos bolthálózat, logisztikai központok és ellátási távolságok</h1>
     <p>
       Az oldal elsődlegesen a <b>store-network-hu-final.json</b> véglegesített országos hálózati adatbázisból dolgozik.
       A <b>distribution-centers.json</b> a nyilvánosan azonosított logisztikai központokat tartalmazza.
-      A távolságok légvonalbeli becslések, nem közúti útvonaltervek.
+      A távolságok légvonalbeli becslések, nem közúti útvonaltervek. A szimulációs és kockázati blokkok döntéstámogató becslések, nem belső vállalati TMS-adatok.
     </p>
     <div class="btn-row">
       <a class="btn btn-primary" href="./index.html">Vissza a fő dashboardra</a>
@@ -298,7 +380,7 @@
         <h2>Estimated Routes & Clusters</h2>
         <span>becsült túraszám és klaszterszám lánconként</span>
       </div>
-      <div id="routeClusterTable" class="matrix-wrap">Szimulációs adatok betöltése...</div>
+      <div id="routeClusterTable" class="matrix-wrap compact-scrollless">Szimulációs adatok betöltése...</div>
       <div class="explain-box">
         <b>Mit látunk?</b><br>
         A klaszter a modellben DC × régió páros. A becsült túraszám azt jelzi, hány körjárat jellegű egységre lehetne bontani a hálózatot,
@@ -311,7 +393,7 @@
         <h2>DC Load Ranking</h2>
         <span>legnagyobb becsült raktárterhelések</span>
       </div>
-      <div id="dcLoadTable" class="matrix-wrap">Szimulációs adatok betöltése...</div>
+      <div id="dcLoadTable" class="matrix-wrap compact-scrollless">Szimulációs adatok betöltése...</div>
       <div class="explain-box">
         <b>Mit látunk?</b><br>
         A tábla azt mutatja, hogy a nearest-DC modell szerint egy-egy logisztikai központ hány üzletet szolgálna ki.
@@ -324,7 +406,7 @@
         <h2>Network Vulnerability Simulation</h2>
         <span>becsült DC-kiesési hatás</span>
       </div>
-      <div id="failureTable" class="matrix-wrap">Szimulációs adatok betöltése...</div>
+      <div id="failureTable" class="matrix-wrap compact-scrollless">Szimulációs adatok betöltése...</div>
       <div class="explain-box">
         <b>Mit látunk?</b><br>
         A blokk azt becsüli, hogy egy adott DC kiesése esetén hány üzlet lenne érintett a jelenlegi hozzárendelési modell alapján.
@@ -398,7 +480,7 @@
         <h2>DC Exposure Ranking</h2>
         <span>legnagyobb becsült DC-kitettség lánconként</span>
       </div>
-      <div id="dcExposureTable" class="matrix-wrap">Supply risk adatok betöltése...</div>
+      <div id="dcExposureTable" class="matrix-wrap compact-scrollless">Supply risk adatok betöltése...</div>
       <div class="explain-box">
         <b>Mit jelent?</b><br>
         A DC exposure azt mutatja, hogy a legnagyobb terhelésű logisztikai központ kiesése esetén az adott lánc üzleteinek mekkora része válhatna érintetté.
@@ -428,7 +510,7 @@
         <h2>Failure Impact by Population Proxy</h2>
         <span>DC kiesési hatás üzlet- és lakossági proxy alapján</span>
       </div>
-      <div id="riskFailureImpactTable" class="matrix-wrap">Supply risk adatok betöltése...</div>
+      <div id="riskFailureImpactTable" class="matrix-wrap compact-scrollless">Supply risk adatok betöltése...</div>
       <div class="explain-box">
         <b>Mit látunk?</b><br>
         Ez a tábla azt mutatja, hogy a nearest-DC modell alapján egy-egy logisztikai központ kiesése hány üzletet és mekkora becsült lakossági lefedettséget érinthet.
@@ -486,7 +568,7 @@
         <h2>Most Remote Stores</h2>
         <span>legtávolabbi Store→DC kapcsolatok</span>
       </div>
-      <div id="remoteStoresTable" class="matrix-wrap">Adatok betöltése...</div>
+      <div id="remoteStoresTable" class="matrix-wrap compact-scrollless">Adatok betöltése...</div>
       <div class="explain-box">
         <b>Mit látunk?</b><br>
         Ez a blokk azokat az üzleteket emeli ki, amelyek a modell szerint a legtávolabb esnek a saját láncuk legközelebbi aktív DC-jétől.
@@ -499,7 +581,7 @@
         <h2>Regional Coverage Matrix</h2>
         <span>lánc × régió mátrix</span>
       </div>
-      <div id="regionalMatrix" class="matrix-wrap">Adatok betöltése...</div>
+      <div id="regionalMatrix" class="matrix-wrap compact-scrollless">Adatok betöltése...</div>
       <div class="explain-box">
         <b>Mit látunk?</b><br>
         A mátrix azt mutatja, hogy az egyes láncok mely régiókban mennyi üzlettel jelennek meg az OSINT-alapú adatbázisban.
@@ -512,7 +594,7 @@
         <h2>Distance Intelligence Matrix</h2>
         <span>üzletek legközelebbi DC-je és becsült távolsága</span>
       </div>
-      <div id="distanceMatrix" class="matrix-wrap">Adatok betöltése...</div>
+      <div id="distanceMatrix" class="matrix-wrap compact-scrollless">Adatok betöltése...</div>
       <div class="explain-box">
         <b>Mit látunk?</b><br>
         A mátrix üzletszinten mutatja a legközelebbi aktív DC-t és a becsült távolságot. Ez már nem egyszerű bolttérkép,
@@ -530,6 +612,86 @@
         <summary>Store network adattábla <span class="small">store-network-hu-final.json / stores</span></summary>
         <div class="details-body"><table id="storeNetworkTable"></table></div>
       </details>
+    </div>
+
+
+    <div class="card span12">
+      <div class="section-title">
+        <h2>How to Read the Supply Simulation?</h2>
+        <span>fogalmi magyarázat a fuvarszervezési és ellátási kockázati mutatókhoz</span>
+      </div>
+
+      <div class="simulation-explain-grid">
+        <div class="method-card">
+          <h3>Efficiency Score</h3>
+          <b>Mit jelent?</b><br>
+          A hálózat becsült logisztikai hatékonyságát mutatja 0–100 skálán. Magasabb érték kedvezőbb szerkezetet jelez.
+          A számítás az átlagos Store→DC távolságot, a maximális távolságot, a Store/DC arányt és a klaszterek számát veszi figyelembe.
+          <br><br>
+          <b>Fontos:</b> nem valódi költségadat. Egy összehasonlító index, amely azt mutatja, hogy a bolthálózat földrajzilag mennyire könnyen szervezhető.
+        </div>
+
+        <div class="method-card">
+          <h3>Cluster</h3>
+          <b>Mit jelent?</b><br>
+          A klaszter egy becsült földrajzi kiszolgálási csoport. A modell jelenleg DC + régió alapján képez csoportokat.
+          Például egy láncnál külön klaszter lehet Közép-Magyarország, Észak-Alföld vagy Nyugat-Dunántúl ugyanazon DC kiszolgálása alatt.
+          <br><br>
+          <b>Értelmezés:</b> több klaszter általában nagyobb földrajzi szóródást és összetettebb fuvarszervezést jelez.
+        </div>
+
+        <div class="method-card">
+          <h3>Estimated Route / Túra</h3>
+          <b>Mit jelent?</b><br>
+          A túra egy becsült kiszállítási kör. A modell nem kamiondarabszámot mér közvetlenül, hanem azt becsüli, hány kiszállítási körre bontható a bolthálózat.
+          <br><br>
+          <b>Jelenlegi feltételezés:</b> 1 túra körülbelül 4–6 üzletet érint, lánctól függően. A gyakorlatban egy túra jellemzően 1 kamiont, 1 sofőrt és több bolti lerakót jelenthet, de a valós érték függ raklaptól, hűtött árutól, idősávtól és útvonaltól.
+        </div>
+
+        <div class="method-card">
+          <h3>Complexity Score</h3>
+          <b>Mit jelent?</b><br>
+          A hálózat becsült szervezési nehézségét mutatja. Magasabb érték bonyolultabb, sérülékenyebb vagy nagyobb koordinációt igénylő struktúrát jelez.
+          <br><br>
+          <b>Növeli:</b> kevés DC, sok üzlet, nagy átlagos távolság, nagy maximális távolság, sok klaszter és magas Store/DC arány.
+        </div>
+
+        <div class="method-card">
+          <h3>DC Exposure</h3>
+          <b>Mit jelent?</b><br>
+          Azt mutatja, hogy a modell szerint egy adott DC kiesése hány üzletet érintene. Ha egy láncnál csak egy aktív DC szerepel az adatbázisban, akkor a kitettség 100% lesz.
+          <br><br>
+          <b>Értelmezési korlát:</b> ez nearest-DC modell. Nem tartalmaz valós átterhelési szabályokat, raktárkapacitást vagy szerződéses kiszolgálási körzeteket.
+        </div>
+
+        <div class="method-card">
+          <h3>Supply Risk Score</h3>
+          <b>Mit jelent?</b><br>
+          Összetett kockázati index. A complexity score, a legnagyobb DC-kitettség, a hosszú távolsági nyomás, a Store/DC arány és a klaszterezési nyomás alapján készül.
+          <br><br>
+          <b>Magas érték:</b> nagyobb ellátásbiztonsági érzékenységet jelez a modellben. Nem azt jelenti, hogy a vállalat valós működése rossz, hanem azt, hogy az OSINT-alapú hálózati szerkezetben magasabb a becsült kitettség.
+        </div>
+      </div>
+
+      <div class="method-note-strong">
+        <b>Miért lehet egy 1 DC-s Auchan jobb, mint egy 1 DC-s ALDI?</b><br>
+        A modell nem csak a DC-k számát nézi. Az Auchan 24 üzletes, kisebb hálózat. Az ALDI 188 üzletes, országosabb és nagyobb távolsági szórással működő hálózatként jelenik meg. Ezért ugyanannyi DC mellett az ALDI komplexitása magasabb lehet. A mutató tehát a hálózat méretét, földrajzi kiterjedését és távolsági szerkezetét együtt értelmezi.
+        <br><br>
+        <b>Lidl DC Exposure megjegyzés:</b> ha a DC Exposure blokkban csak egy Lidl raktár látszik, az vagy megjelenítési szűkítés, vagy a nearest-DC modell minden Lidl-pontot ugyanahhoz a DC-hez rendelt. Ezt külön DC-load bontással érdemes ellenőrizni, mert a felső áttekintő szerint a Lidl DC-szám már 4 aktív raktárként szerepel.
+      </div>
+    </div>
+
+    <div class="card span12">
+      <div class="section-title">
+        <h2>Future What-if Direction: Store Expansion Simulation</h2>
+        <span>nem új DC nyitását, hanem új boltnyitási hullámot szimulálunk</span>
+      </div>
+      <div class="whatif-preview">
+        <b>Következő logikus modul:</b> „Mi történik, ha egy lánc új üzleteket nyit?”<br>
+        Példák: <b>Auchan +500 üzlet</b>, <b>Lidl +20%</b>, <b>Penny +50 üzlet</b>. A modell azt becsülné, hogy az új üzletszámhoz elég-e a meglévő DC-hálózat, hol nő meg a Store/DC arány, hol romlik a távolsági profil, és melyik térségben lenne indokolt új DC vagy regionális cross-dock pont.
+        <br><br>
+        <b>Lehetséges kimenetek:</b> szükséges új DC-k száma, javasolt DC-térségek, új átlagos Store→DC távolság, új Supply Risk Score, új túraszám és becsült hálózati komplexitás.
+      </div>
     </div>
 
     <div class="card span12">
@@ -693,7 +855,7 @@ async function loadData(){
 
     renderPage();
   }catch(e){
-    showError('<b>Adatbetöltési hiba.</b><br>'+e.message+'<br><br>Ellenőrizd, hogy a docs/data/store-network-hu.json, store-profiles.json és distribution-centers.json elérhető-e.');
+    showError('<b>Adatbetöltési hiba.</b><br>'+e.message+'<br><br>Ellenőrizd, hogy a docs/data/store-network-hu-final.json, store-profiles.json, distribution-centers.json, supply-simulation.json és supply-risk-intelligence.json elérhető-e.');
     console.error(e);
   }
 }
@@ -962,7 +1124,7 @@ function renderRegionalCoverageChart(){
 function renderRemoteStores(){
   const rows=[...allLinks].sort((a,b)=>b.distance_km-a.distance_km).slice(0,20);
   document.getElementById('remoteStoresTable').innerHTML=`
-    <table class="matrix-table">
+    <table class="matrix-table compact-table">
       <thead>
         <tr><th>Áruház</th><th>Lánc</th><th>Város</th><th>Régió</th><th>DC</th><th>Távolság</th></tr>
       </thead>
@@ -991,7 +1153,7 @@ function renderRegionalMatrix(){
   });
 
   document.getElementById('regionalMatrix').innerHTML=`
-    <table class="matrix-table">
+    <table class="matrix-table compact-table">
       <thead>
         <tr><th>Lánc</th>${regions.map(r=>`<th>${r}</th>`).join('')}<th>Összesen</th></tr>
       </thead>
@@ -1011,7 +1173,7 @@ function renderRegionalMatrix(){
 function renderDistanceMatrix(links){
   const rows=[...links].sort((a,b)=>b.distance_km-a.distance_km).slice(0,500);
   document.getElementById('distanceMatrix').innerHTML=`
-    <table class="matrix-table">
+    <table class="matrix-table compact-table">
       <thead>
         <tr>
           <th>Áruház</th><th>Lánc</th><th>Város</th><th>Régió</th><th>Legközelebbi aktív DC</th><th>DC város</th><th>Távolság</th><th>DC bizalom</th>
@@ -1140,7 +1302,7 @@ function renderComplexityChart(){
 function renderRouteClusterTable(){
   const rows=[...getSimulationBenchmark()].sort((a,b)=>b.estimated_routes-a.estimated_routes);
   document.getElementById('routeClusterTable').innerHTML=`
-    <table class="matrix-table">
+    <table class="matrix-table compact-table">
       <thead><tr><th>Lánc</th><th>Üzlet</th><th>DC</th><th>Klaszter</th><th>Becsült túra</th><th>Átlag km</th><th>Max km</th></tr></thead>
       <tbody>
         ${rows.map(r=>`<tr>
@@ -1161,7 +1323,7 @@ function renderDcLoadTable(){
   rows.sort((a,b)=>b.stores-a.stores);
   const top=rows.slice(0,18);
   document.getElementById('dcLoadTable').innerHTML=`
-    <table class="matrix-table">
+    <table class="matrix-table compact-table">
       <thead><tr><th>DC</th><th>Lánc</th><th>Város</th><th>Üzlet</th><th>Átlag km</th><th>Max km</th></tr></thead>
       <tbody>
         ${top.map(r=>`<tr>
@@ -1174,7 +1336,7 @@ function renderDcLoadTable(){
 function renderFailureTable(){
   const rows=[...(supplySimulation?.failure_simulation||[])].sort((a,b)=>b.affected_stores-a.affected_stores).slice(0,18);
   document.getElementById('failureTable').innerHTML=`
-    <table class="matrix-table">
+    <table class="matrix-table compact-table">
       <thead><tr><th>DC</th><th>Lánc</th><th>Város</th><th>Érintett üzlet</th><th>Arány</th><th>Kockázat</th></tr></thead>
       <tbody>
         ${rows.map(r=>`<tr>
@@ -1303,7 +1465,7 @@ function renderDcExposureTable(){
   }).sort((a,b)=>b.affected_share-a.affected_share);
 
   document.getElementById('dcExposureTable').innerHTML=`
-    <table class="matrix-table">
+    <table class="matrix-table compact-table">
       <thead><tr><th>Lánc</th><th>Legnagyobb DC-kitettség</th><th>DC város</th><th>Érintett üzlet</th><th>Arány</th><th>Lakossági proxy</th><th>Risk</th></tr></thead>
       <tbody>
         ${rows.map(r=>`<tr>
@@ -1363,7 +1525,7 @@ function renderRiskFailureImpactTable(){
   const top=rows.slice(0,24);
 
   document.getElementById('riskFailureImpactTable').innerHTML=`
-    <table class="matrix-table">
+    <table class="matrix-table compact-table">
       <thead><tr><th>DC</th><th>Lánc</th><th>Város</th><th>Érintett üzlet</th><th>Üzletarány</th><th>Lakossági proxy</th><th>Átlag km</th><th>Max km</th><th>Risk</th></tr></thead>
       <tbody>
         ${top.map(r=>`<tr>
