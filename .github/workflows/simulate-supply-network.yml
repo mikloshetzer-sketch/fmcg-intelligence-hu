@@ -1,0 +1,31 @@
+name: Simulate Supply Network
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  simulate-supply-network:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository letöltése
+        uses: actions/checkout@v4
+
+      - name: Python telepítése
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Supply hálózati szimuláció futtatása
+        run: python scripts/simulate_supply_network.py
+
+      - name: Változások mentése
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add docs/data/supply-simulation.json docs/data/supply-simulation-status.json
+          git commit -m "Simulate supply network" || echo "Nincs változás"
+          git push
