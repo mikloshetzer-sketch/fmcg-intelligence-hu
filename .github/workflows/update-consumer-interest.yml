@@ -1,0 +1,38 @@
+name: Update Consumer Interest
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: "15 6 * * 1"
+
+permissions:
+  contents: write
+
+jobs:
+  update-consumer-interest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository letöltése
+        uses: actions/checkout@v4
+
+      - name: Python telepítése
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Python csomagok telepítése
+        run: |
+          pip install pytrends pandas
+
+      - name: Consumer Interest frissítése
+        run: python scripts/update_consumer_interest.py
+
+      - name: Változások mentése
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add docs/data/consumer-interest.json
+          git commit -m "Update consumer interest data" || echo "No changes"
+          git push
