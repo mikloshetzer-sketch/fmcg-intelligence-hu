@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FMCG Intelligence Hungary – News, Reputation & Social Monitor V6.8 LinkedIn</title>
+  <title>FMCG Intelligence Hungary – News, Reputation & Social Monitor V6.9 LinkedIn + Consumer Interest</title>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="./css/style.css" />
@@ -259,11 +259,98 @@
       font-size:13px;
       line-height:1.55;
     }
+
+    .consumer-interest-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:14px;
+      margin-top:12px;
+    }
+    .consumer-card{
+      border:1px solid #dbe7f2;
+      border-radius:18px;
+      background:linear-gradient(145deg,#ffffff,#f7fffb);
+      padding:15px;
+      min-height:210px;
+      position:relative;
+      overflow:hidden;
+    }
+    .consumer-card:after{
+      content:"";
+      position:absolute;
+      right:-30px;
+      top:-35px;
+      width:95px;
+      height:95px;
+      border-radius:999px;
+      background:rgba(34,197,94,.11);
+    }
+    .consumer-head{
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      align-items:flex-start;
+      margin-bottom:10px;
+      position:relative;
+      z-index:1;
+    }
+    .consumer-company{
+      font-size:18px;
+      font-weight:950;
+      color:var(--navy);
+    }
+    .consumer-metrics{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:8px;
+      margin-top:10px;
+      position:relative;
+      z-index:1;
+    }
+    .consumer-metric{
+      border-radius:12px;
+      background:#eefdf4;
+      padding:8px;
+    }
+    .consumer-metric span{
+      display:block;
+      color:#64748b;
+      font-size:10px;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.03em;
+    }
+    .consumer-metric b{
+      display:block;
+      color:var(--navy);
+      font-size:16px;
+      margin-top:3px;
+    }
+    .consumer-note{
+      margin-top:12px;
+      padding:13px 15px;
+      border-radius:16px;
+      background:#ecfdf5;
+      border:1px solid #bbf7d0;
+      color:#14532d;
+      font-size:13px;
+      line-height:1.55;
+    }
+    .consumer-interpretation{
+      margin-top:10px;
+      font-size:12.5px;
+      line-height:1.45;
+      color:#334155;
+      position:relative;
+      z-index:1;
+    }
+
     @media(max-width:1200px){
       .index-card-grid{grid-template-columns:repeat(2,1fr)}
       .warning-grid{grid-template-columns:repeat(2,1fr)}
       .reputation-grid{grid-template-columns:repeat(2,1fr)}
       .linkedin-recruitment-grid{grid-template-columns:repeat(2,1fr)}
+      .consumer-interest-grid{grid-template-columns:repeat(2,1fr)}
     }
     @media(max-width:1000px){
       .span8,.span7,.span6,.span5,.span4,.span3{grid-column:span 12}
@@ -273,6 +360,7 @@
       .warning-grid{grid-template-columns:1fr}
       .metric-strip{grid-template-columns:repeat(2,1fr)}
       .linkedin-recruitment-grid{grid-template-columns:1fr}
+      .consumer-interest-grid{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -282,7 +370,7 @@
   <div class="header-inner">
     <div class="brand">
       <div class="brand-title">FMCG Intelligence Hungary</div>
-      <div class="brand-subtitle">News, Reputation & Social Monitor V6.8</div>
+      <div class="brand-subtitle">News, Reputation & Social Monitor V6.9</div>
     </div>
     <nav class="nav">
       <a href="./index.html">Dashboard</a>
@@ -296,13 +384,13 @@
 
 <section class="hero">
   <div class="hero-box">
-    <div class="hero-kicker">News, Reputation & Social Intelligence V6.8</div>
+    <div class="hero-kicker">News, Reputation & Social Intelligence V6.9</div>
     <h1>FMCG média-, kockázati-, social- és reputációs intelligence központ</h1>
     <p>
       A friss hírmonitor a <b>news-social.json</b> fájlból dolgozik. A történeti háttér a
       <b>news-social-history-2026.json</b> fájlból töltődik be. A social réteg a
       <b>social-monitor.json</b> és <b>social-history-2026.json</b> fájlokat használja.
-      A social index nem teljes közösségimédia-elemzés, hanem nyílt forrású social signal. A store reputation summary a <b>store-reputation.json</b> fájlból érkező áruházi reputációs jelzést emeli be vezetői szinten. A LinkedIn Recruitment Intelligence a <b>linkedin-recruitment-intelligence.json</b> fájl alapján óvatos munkaerőpiaci jelzést ad.
+      A social index nem teljes közösségimédia-elemzés, hanem nyílt forrású social signal. A store reputation summary a <b>store-reputation.json</b> fájlból érkező áruházi reputációs jelzést emeli be vezetői szinten. A LinkedIn Recruitment Intelligence a <b>linkedin-recruitment-intelligence.json</b> fájl alapján óvatos munkaerőpiaci jelzést ad. A Consumer Interest Engine a <b>consumer-interest.json</b> fájlból, Google Trends alapú keresési érdeklődési jeleket jelenít meg.
     </p>
     <div class="btn-row">
       <a class="btn btn-primary" href="./index.html">Vissza a fő dashboardra</a>
@@ -438,6 +526,40 @@
         A rendszer Reddit, YouTube discovery és Mastodon jellegű forrásokat figyel, ezért nem azonos a teljes social media piaccal.
         A magyar relevancia súlyozás csökkenti a nemzetközi zajt.
         A blokk célja a korai jelzés, nem a végleges reputációs ítélet.
+      </div>
+    </div>
+
+    <div class="card span12">
+      <div class="section-title">
+        <h2>Consumer Interest Engine</h2>
+        <span>Google Trends alapú fogyasztói keresési érdeklődés és momentum</span>
+      </div>
+
+      <div id="consumerInterestSummary">Consumer interest adatok betöltése...</div>
+
+      <div class="dashboard-grid" style="margin-top:14px;">
+        <div class="span6">
+          <div class="chartbox"><canvas id="consumerInterestChart"></canvas></div>
+          <div class="chart-insight" id="consumerInterestInsight">Consumer interest adatok betöltése...</div>
+        </div>
+        <div class="span6">
+          <div class="chartbox"><canvas id="consumerMomentumChart"></canvas></div>
+          <div class="chart-insight" id="consumerMomentumInsight">Consumer momentum adatok betöltése...</div>
+        </div>
+      </div>
+
+      <div id="consumerInterestCards" class="consumer-interest-grid"></div>
+
+      <div class="consumer-note">
+        <b>Fontos értelmezési keret:</b> a Google Trends relatív keresési indexet mutat, nem abszolút keresésszámot.
+        A márkák eltérő kulcsszóval is szerepelhetnek. Ezért a blokk fogyasztói érdeklődési jelzésként értelmezhető,
+        nem piaci részesedésként és nem értékesítési előrejelzésként.
+      </div>
+
+      <div class="block-explain">
+        <b>Mit látunk?</b> A Consumer Interest Engine azt mutatja, hogy a magyar keresési térben mely FMCG láncok iránt erősebb az érdeklődés.
+        A consumer interest index az érdeklődési szintet, a consumer momentum score a friss változási irányt mutatja.
+        Így különválasztható az, aki tartósan erős keresési szereplő, és az, aki éppen most kap nagyobb figyelmet.
       </div>
     </div>
 
@@ -783,7 +905,7 @@
   </div>
 </main>
 
-<footer class="footer">FMCG Intelligence Hungary – News, Reputation & Social Monitor V6.8 LinkedIn.</footer>
+<footer class="footer">FMCG Intelligence Hungary – News, Reputation & Social Monitor V6.9 LinkedIn + Consumer Interest.</footer>
 
 <script>
 const currentUrl = './data/news-social.json';
@@ -796,6 +918,7 @@ const socialHistoryUrl = './data/social-history-2026.json';
 const storeUrl = './data/store-reputation.json';
 const storeStatusUrl = './data/store-reputation-status.json';
 const linkedinRecruitmentUrl = './data/linkedin-recruitment-intelligence.json';
+const consumerInterestUrl = './data/consumer-interest.json';
 
 let charts = {};
 
@@ -1937,8 +2060,145 @@ function recruitmentLevelPill(level){
   return '<span class="pill gray">GYENGE</span>';
 }
 
+
+async function loadConsumerInterestEngine(){
+  const summaryBox=document.getElementById('consumerInterestSummary');
+  const cardsBox=document.getElementById('consumerInterestCards');
+  const interestInsight=document.getElementById('consumerInterestInsight');
+  const momentumInsight=document.getElementById('consumerMomentumInsight');
+
+  if(!summaryBox || !cardsBox) return;
+
+  try{
+    const data=await fetchJson(consumerInterestUrl,true);
+
+    if(!data || !Array.isArray(data.companies) || !data.companies.length){
+      summaryBox.innerHTML='<div class="notice">A consumer-interest.json még nem érhető el.</div>';
+      cardsBox.innerHTML='';
+      if(interestInsight) interestInsight.innerHTML='A Consumer Interest Engine a consumer-interest.json bekötése után jelenik meg.';
+      if(momentumInsight) momentumInsight.innerHTML='Nincs értékelhető consumer momentum adat.';
+      return;
+    }
+
+    const valid=data.companies.filter(c=>c.data_status==='ok');
+
+    if(!valid.length){
+      summaryBox.innerHTML=`<div class="notice">A Google Trends lekérés lefutott, de nincs értékelhető adat. Státusz: <b>${data.status||'n.a.'}</b>. ${data.error||''}</div>`;
+      cardsBox.innerHTML=data.companies.map(c=>`
+        <div class="consumer-card">
+          <div class="consumer-head">
+            <div class="consumer-company">${c.company}</div>
+            <span class="pill gray">nincs adat</span>
+          </div>
+          <div class="consumer-interpretation">${c.interpretation || 'Nincs értelmezhető Google Trends adat.'}</div>
+        </div>
+      `).join('');
+      if(interestInsight) interestInsight.innerHTML='Nincs értékelhető keresési érdeklődési adat.';
+      if(momentumInsight) momentumInsight.innerHTML='Nincs értékelhető momentum adat.';
+      return;
+    }
+
+    const interestLeader=[...valid].sort((a,b)=>num(b.consumer_interest_index)-num(a.consumer_interest_index))[0];
+    const momentumLeader=[...valid].sort((a,b)=>num(b.consumer_momentum_score)-num(a.consumer_momentum_score))[0];
+
+    summaryBox.innerHTML=`
+      <div class="reputation-grid">
+        <div class="reputation-tile">
+          <div class="kpi-label">Interest Leader</div>
+          <div class="reputation-value">${interestLeader?.company || 'n.a.'}</div>
+          <div class="small">interest index: ${fmtNum(interestLeader?.consumer_interest_index)}</div>
+        </div>
+        <div class="reputation-tile">
+          <div class="kpi-label">Momentum Leader</div>
+          <div class="reputation-value">${momentumLeader?.company || 'n.a.'}</div>
+          <div class="small">momentum score: ${fmtNum(momentumLeader?.consumer_momentum_score)}</div>
+        </div>
+        <div class="reputation-tile">
+          <div class="kpi-label">Adatstátusz</div>
+          <div class="reputation-value">${valid.length}/${data.companies.length}</div>
+          <div class="small">értékelhető márka</div>
+        </div>
+        <div class="reputation-tile">
+          <div class="kpi-label">Időablak</div>
+          <div class="reputation-value">${data.timeframe || 'n.a.'}</div>
+          <div class="small">geo: ${data.geo || 'n.a.'}</div>
+        </div>
+      </div>
+    `;
+
+    const byInterest=[...valid].sort((a,b)=>num(b.consumer_interest_index)-num(a.consumer_interest_index));
+    const byMomentum=[...valid].sort((a,b)=>num(b.consumer_momentum_score)-num(a.consumer_momentum_score));
+
+    makeChart(
+      'consumerInterestChart',
+      'bar',
+      byInterest.map(c=>c.company),
+      [{label:'Consumer Interest Index',data:byInterest.map(c=>num(c.consumer_interest_index))}],
+      {plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,max:100,ticks:{color:'#64748b'},grid:{color:'#eef3f7'}},x:{ticks:{color:'#64748b'},grid:{color:'#eef3f7'}}}}
+    );
+
+    makeChart(
+      'consumerMomentumChart',
+      'bar',
+      byMomentum.map(c=>c.company),
+      [{label:'Consumer Momentum Score',data:byMomentum.map(c=>num(c.consumer_momentum_score))}],
+      {plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,max:100,ticks:{color:'#64748b'},grid:{color:'#eef3f7'}},x:{ticks:{color:'#64748b'},grid:{color:'#eef3f7'}}}}
+    );
+
+    if(interestInsight){
+      interestInsight.innerHTML=`A legerősebb keresési érdeklődés jelenleg <b>${interestLeader?.company || 'n.a.'}</b> körül látszik. Ez tartós fogyasztói figyelmet jelezhet, de nem azonos forgalmi vagy piaci részesedési adattal.`;
+    }
+    if(momentumInsight){
+      momentumInsight.innerHTML=`A legerősebb friss keresési momentum jelenleg <b>${momentumLeader?.company || 'n.a.'}</b> esetében látszik. A momentum a rövid távú változást mutatja, ezért együtt érdemes nézni az interest indexszel.`;
+    }
+
+    cardsBox.innerHTML=byInterest.map(c=>`
+      <div class="consumer-card">
+        <div class="consumer-head">
+          <div class="consumer-company">${c.company}</div>
+          ${consumerLevelPill(c.consumer_interest_level)}
+        </div>
+        <div class="score-line"><div class="score-fill" style="width:${Math.min(100,num(c.consumer_interest_index))}%"></div></div>
+        <div class="consumer-metrics">
+          <div class="consumer-metric"><span>Interest</span><b>${fmtNum(c.consumer_interest_index)}</b></div>
+          <div class="consumer-metric"><span>Momentum</span><b>${fmtNum(c.consumer_momentum_score)}</b></div>
+          <div class="consumer-metric"><span>Irány</span><b>${trendArrow(c.trend_direction)}</b></div>
+          <div class="consumer-metric"><span>7 nap</span><b>${fmtNum(c.avg_last_7)}</b></div>
+          <div class="consumer-metric"><span>30 nap</span><b>${fmtNum(c.avg_last_30)}</b></div>
+          <div class="consumer-metric"><span>Kulcsszó</span><b>${c.keyword || 'n.a.'}</b></div>
+        </div>
+        <div class="consumer-interpretation">${c.interpretation || ''}</div>
+      </div>
+    `).join('');
+
+  }catch(error){
+    summaryBox.innerHTML='<div class="notice">A Consumer Interest Engine adatbetöltése nem sikerült.</div>';
+    cardsBox.innerHTML='';
+    if(interestInsight) interestInsight.innerHTML='Consumer interest adatbetöltési hiba.';
+    if(momentumInsight) momentumInsight.innerHTML='Consumer momentum adatbetöltési hiba.';
+    console.error(error);
+  }
+}
+
+function consumerLevelPill(level){
+  const value=(level || '').toUpperCase();
+  if(value.includes('ERŐS')) return '<span class="pill green">ERŐS</span>';
+  if(value.includes('KÖZEPES') && !value.includes('GYENGE')) return '<span class="pill orange">KÖZEPES</span>';
+  if(value.includes('GYENGE-KÖZEPES')) return '<span class="pill purple">GYENGE-KÖZEPES</span>';
+  if(value.includes('NINCS')) return '<span class="pill gray">NINCS ADAT</span>';
+  return '<span class="pill gray">GYENGE</span>';
+}
+
+function trendArrow(direction){
+  if(direction==='up') return '↑';
+  if(direction==='down') return '↓';
+  if(direction==='stable') return '→';
+  return 'n.a.';
+}
+
 loadData();
 loadLinkedInRecruitmentIntelligence();
+loadConsumerInterestEngine();
 </script>
 </body>
 </html>
