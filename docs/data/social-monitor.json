@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-06-11T05:08:37.750311+00:00",
+  "updated_at": "2026-06-11T11:08:40.625211+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-06-11T05:08:37.750311+00:00",
+    "updated_at": "2026-06-11T11:08:40.625211+00:00",
     "leader_social": "Lidl",
     "leader_social_index": 52,
     "dominant_social_topic": "árak és akciók",
@@ -13,37 +13,37 @@
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 16,
-      "raw_social_mentions": 20,
-      "dashboard_mentions": 11,
+      "social_mentions": 15,
+      "raw_social_mentions": 19,
+      "dashboard_mentions": 10,
       "background_mentions": 5,
       "discarded_mentions": 4,
-      "weighted_social_mentions": 13.5,
-      "hu_relevant_mentions": 11,
+      "weighted_social_mentions": 12.5,
+      "hu_relevant_mentions": 10,
       "social_index": 52,
       "social_sources": {
         "reddit": 13,
-        "youtube": 2,
+        "youtube": 1,
         "mastodon": 1
       },
       "raw_social_sources": {
         "reddit": 16,
-        "youtube": 2,
+        "youtube": 1,
         "mastodon": 2
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 13.0
+          "score": 12.0
         },
         {
           "topic": "digitalizáció és önkiszolgálás",
-          "score": 8.5
+          "score": 9.0
         },
         {
           "topic": "bolti élmény",
-          "score": 7.5
+          "score": 5.5
         },
         {
           "topic": "ellátási lánc és logisztika",
@@ -57,21 +57,21 @@
       "topic_sentiment": {
         "árak és akciók": {
           "positive": 2.0,
-          "neutral": 10.0,
+          "neutral": 9.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
         },
         "digitalizáció és önkiszolgálás": {
           "positive": 2.0,
-          "neutral": 1.5,
+          "neutral": 2.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "positive"
         },
         "bolti élmény": {
           "positive": 0.0,
-          "neutral": 4.5,
+          "neutral": 3.5,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -205,19 +205,6 @@
           "item_sentiment": "neutral"
         },
         {
-          "id": "b66eb9263d3a4213",
-          "source": "youtube",
-          "company": "Lidl",
-          "title": "Miket vettem a lidben, aldiban #vásárlás #shopping #debrecencity #aldi #lidl #hungary #fyp - YouTube",
-          "summary": "Miket vettem a lidben, aldiban #vásárlás #shopping #debrecencity #aldi #lidl #hungary #fyp YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1leG9mTkQ1NFltMHBoMzZ3MXNFNTZxWldJV1E5dm1kV0EzTzYtMGk1ZmZNWFNGLVV0Xy13bzRraV9KbXJ5el90T21RRXlsSklqVmhvV2R3?oc=5",
-          "published": "Thu, 21 May 2026 15:12:20 GMT",
-          "query": "site:youtube.com \"Lidl Hungary\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
           "id": "179156c267cde2c1",
           "source": "reddit",
           "company": "Lidl",
@@ -245,19 +232,6 @@
         }
       ],
       "background_items": [
-        {
-          "id": "880c8b76d9fc018b",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "My LIDL plus card is not working?",
-          "summary": "submitted by /u/r2cyp to r/adressme [link] [comments]",
-          "url": "https://www.reddit.com/r/adressme/comments/1u1xzsd/my_lidl_plus_card_is_not_working/",
-          "published": "2026-06-10T10:11:00+00:00",
-          "query": "Lidl Plus",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "neutral"
-        },
         {
           "id": "e815c8b6028e6449",
           "source": "reddit",
@@ -298,6 +272,19 @@
           "item_sentiment": "neutral"
         },
         {
+          "id": "6edd884211532e4b",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "Juni-tip voor Nederlanders: goedkoop boodschappen doen én je EV opladen in Duitsland",
+          "summary": "Net een interessante actie van Lidl Duitsland gezien voor iedereen die regelmatig de grens over gaat. De hele maand juni kun je bij Lidl Duitsland je elektrische auto laden voor €0,27 per kWh (DC-snelladen) via Lidl Plus en Lidl Pay. Volgens de advertentie is dat een flinke korting ten opzichte van het normale tarief van €0,44 per kWh. Combineer dat met je boodschappen en je kunt op twee manieren besparen: Goedkopere boodschappen dan vaak in Nederland Voordelig laden tijdens het winkelen Vooral ",
+          "url": "https://www.reddit.com/r/EVMobiliteit/comments/1twst6j/junitip_voor_nederlanders_goedkoop_boodschappen/",
+          "published": "2026-06-04T16:31:19+00:00",
+          "query": "Lidl Plus",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        },
+        {
           "id": "b84ac3489023b1f5",
           "source": "reddit",
           "company": "Lidl",
@@ -312,7 +299,7 @@
         }
       ],
       "quality_summary": {
-        "dashboard_items": 11,
+        "dashboard_items": 10,
         "background_items": 5,
         "discarded_items": 4,
         "dashboard_relevance_threshold": 0.8,
@@ -401,10 +388,10 @@
     {
       "company": "Tesco",
       "social_mentions": 7,
-      "raw_social_mentions": 19,
+      "raw_social_mentions": 17,
       "dashboard_mentions": 4,
       "background_mentions": 3,
-      "discarded_mentions": 12,
+      "discarded_mentions": 10,
       "weighted_social_mentions": 5.5,
       "hu_relevant_mentions": 4,
       "social_index": 29,
@@ -414,7 +401,7 @@
         "mastodon": 0
       },
       "raw_social_sources": {
-        "reddit": 19,
+        "reddit": 17,
         "youtube": 0,
         "mastodon": 0
       },
@@ -566,7 +553,7 @@
       "quality_summary": {
         "dashboard_items": 4,
         "background_items": 3,
-        "discarded_items": 12,
+        "discarded_items": 10,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
       },
@@ -773,35 +760,35 @@
     },
     {
       "company": "CBA",
-      "social_mentions": 2,
-      "raw_social_mentions": 2,
-      "dashboard_mentions": 2,
+      "social_mentions": 4,
+      "raw_social_mentions": 4,
+      "dashboard_mentions": 4,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 2.0,
-      "hu_relevant_mentions": 2,
-      "social_index": 16,
+      "weighted_social_mentions": 4.0,
+      "hu_relevant_mentions": 4,
+      "social_index": 29,
       "social_sources": {
         "reddit": 0,
-        "youtube": 2,
+        "youtube": 4,
         "mastodon": 0
       },
       "raw_social_sources": {
         "reddit": 0,
-        "youtube": 2,
+        "youtube": 4,
         "mastodon": 0
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 2.0
+          "score": 4.0
         }
       ],
       "topic_sentiment": {
         "árak és akciók": {
           "positive": 0.0,
-          "neutral": 2.0,
+          "neutral": 4.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -809,6 +796,32 @@
       },
       "social_sentiment": "neutral",
       "latest_items": [
+        {
+          "id": "d0f51e13b8db9389",
+          "source": "youtube",
+          "company": "CBA",
+          "title": "CBA Príma akciós újság 05.21. - 05.27. - YouTube",
+          "summary": "CBA Príma akciós újság 05.21. - 05.27. YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9ENFF4RkNzUS1NdUhLSzFGUUNpdXQybXFQU2d5a0hMUENCdm1sRTF5U2JIZFA5ejB5S0QtMjVnOHNPTFdVSS1qNExsUVk1NmxXQUZRdGh3?oc=5",
+          "published": "Sat, 16 May 2026 14:15:33 GMT",
+          "query": "site:youtube.com \"CBA Prima\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "9a1fea266272003d",
+          "source": "youtube",
+          "company": "CBA",
+          "title": "CBA Príma akciós újság 04.23. - 04.29. - YouTube",
+          "summary": "CBA Príma akciós újság 04.23. - 04.29. YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBULTZqM00ySGtMZF9FV0s4ekRtTG5lMlNDemNySGRwOGp1bTZPT2tPbmpxekRlX3d3NENkZVl5VW51V1VOekZMNk1RLTNsZDB0S3h4UVhB?oc=5",
+          "published": "Mon, 20 Apr 2026 15:11:20 GMT",
+          "query": "site:youtube.com \"CBA Prima\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
         {
           "id": "fbd381886ee81a57",
           "source": "youtube",
@@ -838,7 +851,7 @@
       ],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 2,
+        "dashboard_items": 4,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,

@@ -1,26 +1,26 @@
 {
-  "updated_at": "2026-06-11T05:08:37.750311+00:00",
+  "updated_at": "2026-06-11T11:08:40.625211+00:00",
   "status": "ok",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "companies": [
     {
       "company": "Lidl",
-      "mentions": 16,
-      "raw_mentions": 20,
-      "dashboard_mentions": 11,
+      "mentions": 15,
+      "raw_mentions": 19,
+      "dashboard_mentions": 10,
       "background_mentions": 5,
       "discarded_mentions": 4,
-      "weighted_mentions": 13.5,
-      "hu_relevant_mentions": 11,
+      "weighted_mentions": 12.5,
+      "hu_relevant_mentions": 10,
       "index": 52,
       "sources": {
         "reddit": 13,
-        "youtube": 2,
+        "youtube": 1,
         "mastodon": 1
       },
       "raw_sources": {
         "reddit": 16,
-        "youtube": 2,
+        "youtube": 1,
         "mastodon": 2
       },
       "sentiment": "positive",
@@ -54,10 +54,10 @@
     {
       "company": "Tesco",
       "mentions": 7,
-      "raw_mentions": 19,
+      "raw_mentions": 17,
       "dashboard_mentions": 4,
       "background_mentions": 3,
-      "discarded_mentions": 12,
+      "discarded_mentions": 10,
       "weighted_mentions": 5.5,
       "hu_relevant_mentions": 4,
       "index": 29,
@@ -67,7 +67,7 @@
         "mastodon": 0
       },
       "raw_sources": {
-        "reddit": 19,
+        "reddit": 17,
         "youtube": 0,
         "mastodon": 0
       },
@@ -149,22 +149,22 @@
     },
     {
       "company": "CBA",
-      "mentions": 2,
-      "raw_mentions": 2,
-      "dashboard_mentions": 2,
+      "mentions": 4,
+      "raw_mentions": 4,
+      "dashboard_mentions": 4,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_mentions": 2.0,
-      "hu_relevant_mentions": 2,
-      "index": 16,
+      "weighted_mentions": 4.0,
+      "hu_relevant_mentions": 4,
+      "index": 29,
       "sources": {
         "reddit": 0,
-        "youtube": 2,
+        "youtube": 4,
         "mastodon": 0
       },
       "raw_sources": {
         "reddit": 0,
-        "youtube": 2,
+        "youtube": 4,
         "mastodon": 0
       },
       "sentiment": "neutral",
