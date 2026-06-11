@@ -1,49 +1,49 @@
 {
-  "updated_at": "2026-06-11T16:35:37.716420+00:00",
+  "updated_at": "2026-06-11T20:42:27.886459+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-06-11T16:35:37.716420+00:00",
+    "updated_at": "2026-06-11T20:42:27.886459+00:00",
     "leader_social": "Lidl",
-    "leader_social_index": 52,
+    "leader_social_index": 37,
     "dominant_social_topic": "árak és akciók",
     "overall_social_sentiment": "neutral"
   },
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 16,
-      "raw_social_mentions": 20,
-      "dashboard_mentions": 11,
-      "background_mentions": 5,
-      "discarded_mentions": 4,
-      "weighted_social_mentions": 13.5,
-      "hu_relevant_mentions": 11,
-      "social_index": 52,
+      "social_mentions": 4,
+      "raw_social_mentions": 5,
+      "dashboard_mentions": 4,
+      "background_mentions": 0,
+      "discarded_mentions": 1,
+      "weighted_social_mentions": 4.0,
+      "hu_relevant_mentions": 4,
+      "social_index": 37,
       "social_sources": {
-        "reddit": 13,
+        "reddit": 1,
         "youtube": 2,
         "mastodon": 1
       },
       "raw_social_sources": {
-        "reddit": 16,
+        "reddit": 1,
         "youtube": 2,
         "mastodon": 2
       },
-      "dominant_social_topic": "árak és akciók",
+      "dominant_social_topic": "bolti élmény",
       "top_social_topics": [
         {
-          "topic": "árak és akciók",
-          "score": 13.0
+          "topic": "bolti élmény",
+          "score": 7.0
         },
         {
           "topic": "digitalizáció és önkiszolgálás",
-          "score": 9.0
+          "score": 6.0
         },
         {
-          "topic": "bolti élmény",
-          "score": 7.5
+          "topic": "árak és akciók",
+          "score": 5.0
         },
         {
           "topic": "ellátási lánc és logisztika",
@@ -56,22 +56,15 @@
       ],
       "topic_sentiment": {
         "árak és akciók": {
-          "positive": 2.0,
-          "neutral": 10.0,
+          "positive": 0.0,
+          "neutral": 4.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
         },
-        "digitalizáció és önkiszolgálás": {
-          "positive": 2.0,
-          "neutral": 2.0,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "positive"
-        },
         "bolti élmény": {
           "positive": 0.0,
-          "neutral": 4.5,
+          "neutral": 4.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -90,6 +83,13 @@
           "mixed": 0.0,
           "dominant": "neutral"
         },
+        "digitalizáció és önkiszolgálás": {
+          "positive": 0.0,
+          "neutral": 1.0,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        },
         "ellátási lánc és logisztika": {
           "positive": 0.0,
           "neutral": 1.0,
@@ -98,34 +98,8 @@
           "dominant": "neutral"
         }
       },
-      "social_sentiment": "positive",
+      "social_sentiment": "neutral",
       "latest_items": [
-        {
-          "id": "f0d6acbdaaf79ee4",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Hvilke indkøbs- og madapps bruger I egentlig i Danmark?",
-          "summary": "Hej r/DenmarkDK Jeg arbejder på et studie-/startup-projekt om danskernes brug af indkøbs- og madapps, og jeg prøver at forstå, hvilke apps folk faktisk bruger i hverdagen — fx eTilbudsavis, Netto+, Lidl Plus, TooGoodToGo, Mambeno, REMA 1000, minetilbud osv. Jeg har lavet en kort anonym undersøgelse, hvor man kan vælge én eller flere apps, man har brugt, og vurdere dem ud fra helt simple spørgsmål som: hvor nem appen er at bruge om den hjælper med at spare penge om den sparer tid hvad der fungere",
-          "url": "https://www.reddit.com/r/DanmarkDK/comments/1u0b4vb/hvilke_indkøbs_og_madapps_bruger_i_egentlig_i/",
-          "published": "2026-06-08T15:26:01+00:00",
-          "query": "Lidl Plus",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "positive"
-        },
-        {
-          "id": "f06cce67517b88e4",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Hvilke indkøbs- og madapps bruger I egentlig i Danmark?",
-          "summary": "Hej r/dkkarriere Jeg arbejder på et studie-/startup-projekt om danskernes brug af indkøbs- og madapps, og jeg prøver at forstå, hvilke apps folk faktisk bruger i hverdagen , fx eTilbudsavis, Netto+, Lidl Plus, TooGoodToGo, Mambeno, REMA 1000, minetilbud osv. Jeg har lavet en kort anonym undersøgelse, hvor man kan vælge én eller flere apps, man har brugt, og vurdere dem ud fra helt simple spørgsmål som: hvor nem appen er at bruge om den hjælper med at spare penge om den sparer tid hvad der funger",
-          "url": "https://www.reddit.com/r/dkkarriere/comments/1u03j4t/hvilke_indkøbs_og_madapps_bruger_i_egentlig_i/",
-          "published": "2026-06-08T10:02:46+00:00",
-          "query": "Lidl Plus",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "positive"
-        },
         {
           "id": "9a1a05a2743ae3c0",
           "source": "reddit",
@@ -153,32 +127,6 @@
           "item_sentiment": "neutral"
         },
         {
-          "id": "8a19756d6a424170",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Lidl akciós újság (06.11.)",
-          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
-          "url": "https://www.reddit.com/r/lidlaldihun/comments/1tylop5/lidl_akciós_újság_0611/",
-          "published": "2026-06-06T16:24:17+00:00",
-          "query": "Lidl akció",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "17637c9982395103",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Lidl akciós újság (06.04)",
-          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
-          "url": "https://www.reddit.com/r/lidlaldihun/comments/1ts4dt0/lidl_akciós_újság_0604/",
-          "published": "2026-05-30T16:25:08+00:00",
-          "query": "Lidl akció",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
           "id": "0dd8bedbcff5dfc6",
           "source": "youtube",
           "company": "Lidl",
@@ -187,19 +135,6 @@
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE44TUNxYWcwVTFoVDdjaXgwYXFOZDZrSEYwRkZ5cVNnUjRjUDNXUHFjdHFYWi1hdGt1Vi1LQ0VVdmtZQ0pRWE5NRGZ3T2NQeFI5ZWVXSDh3?oc=5",
           "published": "Fri, 29 May 2026 16:40:42 GMT",
           "query": "site:youtube.com \"Lidl Hungary\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "87f5729132f7fbb2",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Lidl akciós újság (05.28.)",
-          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
-          "url": "https://www.reddit.com/r/lidlaldihun/comments/1tm1twi/lidl_akciós_újság_0528/",
-          "published": "2026-05-24T04:24:03+00:00",
-          "query": "Lidl akció",
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
           "item_sentiment": "neutral"
@@ -216,105 +151,13 @@
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
           "item_sentiment": "neutral"
-        },
-        {
-          "id": "179156c267cde2c1",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Lidl, Hungary. 11452 HUF, 31.78 EUR, 36.94 USD.",
-          "summary": "submitted by /u/Odd_Falcon_5665 to r/Grocerycost [link] [comments]",
-          "url": "https://www.reddit.com/r/Grocerycost/comments/1tfz796/lidl_hungary_11452_huf_3178_eur_3694_usd/",
-          "published": "2026-05-17T19:27:28+00:00",
-          "query": "Lidl Hungary",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "89360baa0d3fb2db",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Lidl akciós újság (05.21.)",
-          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
-          "url": "https://www.reddit.com/r/lidlaldihun/comments/1teprr8/lidl_akciós_újság_0521/",
-          "published": "2026-05-16T10:22:25+00:00",
-          "query": "Lidl akció",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
         }
       ],
-      "background_items": [
-        {
-          "id": "e815c8b6028e6449",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Hvor meget går I op i at optimere jeres dagligvare forbrug?",
-          "summary": "Hej r/dkfinance Jeg er nysgerrig hvor meget folk herinde egentlig forsøger at optimere deres dagligvareindkøb🤔 Bruger I fx eTilbudsavis, minetilbud, Netto+, Lidl Plus, REMA 1000-appen osv. aktivt for at spare penge, eller handler I mest i den samme butik af convenience? Jeg er interesseret i at høre jer: - om I planlægger indkøb ud fra tilbud - om I tager flere butikker med for at spare penge - hvor stor besparelsen skal være, før det er besværet værd (ved godt det er et svært spørgsmål) - om ti",
-          "url": "https://www.reddit.com/r/dkfinance/comments/1u1221e/hvor_meget_går_i_op_i_at_optimere_jeres/",
-          "published": "2026-06-09T11:17:02+00:00",
-          "query": "Lidl Plus",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "0609ae7c67d5d813",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Picked up the flux core welder for 53 euros",
-          "summary": "Saw the welder was in store and with lidl plus it was only 53 euros submitted by /u/Reasonable-Ladder300 to r/Parkside [link] [comments]",
-          "url": "https://www.reddit.com/r/Parkside/comments/1tyhih6/picked_up_the_flux_core_welder_for_53_euros/",
-          "published": "2026-06-06T13:37:38+00:00",
-          "query": "Lidl Plus",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "a794e319f06fbf31",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Sammelpunkte - nein danke?",
-          "summary": "Wer hat soviel Zeit? https://www.golem.de/news/neues-rabattsystem-gestartet-lidl-plus-wird-fuer-sparfuechse-zur-zeitvernichtungsmaschine-2606-209433.html submitted by /u/AlzHeimer1963 to r/LIDL_de [link] [comments]",
-          "url": "https://www.reddit.com/r/LIDL_de/comments/1ty8wi3/sammelpunkte_nein_danke/",
-          "published": "2026-06-06T05:52:16+00:00",
-          "query": "Lidl Plus",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "6edd884211532e4b",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Juni-tip voor Nederlanders: goedkoop boodschappen doen én je EV opladen in Duitsland",
-          "summary": "Net een interessante actie van Lidl Duitsland gezien voor iedereen die regelmatig de grens over gaat. De hele maand juni kun je bij Lidl Duitsland je elektrische auto laden voor €0,27 per kWh (DC-snelladen) via Lidl Plus en Lidl Pay. Volgens de advertentie is dat een flinke korting ten opzichte van het normale tarief van €0,44 per kWh. Combineer dat met je boodschappen en je kunt op twee manieren besparen: Goedkopere boodschappen dan vaak in Nederland Voordelig laden tijdens het winkelen Vooral ",
-          "url": "https://www.reddit.com/r/EVMobiliteit/comments/1twst6j/junitip_voor_nederlanders_goedkoop_boodschappen/",
-          "published": "2026-06-04T16:31:19+00:00",
-          "query": "Lidl Plus",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "b84ac3489023b1f5",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "LidlPlus_NL",
-          "summary": "Lidl plus aanbiedingen om te delen [link]",
-          "url": "https://www.reddit.com/r/LidlPlus_NL/",
-          "published": "",
-          "query": "Lidl Plus",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "neutral"
-        }
-      ],
+      "background_items": [],
       "quality_summary": {
-        "dashboard_items": 11,
-        "background_items": 5,
-        "discarded_items": 4,
+        "dashboard_items": 4,
+        "background_items": 0,
+        "discarded_items": 1,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
       },
@@ -386,173 +229,34 @@
     },
     {
       "company": "Tesco",
-      "social_mentions": 7,
-      "raw_social_mentions": 17,
-      "dashboard_mentions": 4,
-      "background_mentions": 3,
-      "discarded_mentions": 10,
-      "weighted_social_mentions": 5.5,
-      "hu_relevant_mentions": 4,
-      "social_index": 29,
+      "social_mentions": 0,
+      "raw_social_mentions": 0,
+      "dashboard_mentions": 0,
+      "background_mentions": 0,
+      "discarded_mentions": 0,
+      "weighted_social_mentions": 0,
+      "hu_relevant_mentions": 0,
+      "social_index": 0,
       "social_sources": {
-        "reddit": 7,
+        "reddit": 0,
         "youtube": 0,
         "mastodon": 0
       },
       "raw_social_sources": {
-        "reddit": 17,
+        "reddit": 0,
         "youtube": 0,
         "mastodon": 0
       },
-      "dominant_social_topic": "árak és akciók",
-      "top_social_topics": [
-        {
-          "topic": "árak és akciók",
-          "score": 6.5
-        },
-        {
-          "topic": "bolti élmény",
-          "score": 3.0
-        },
-        {
-          "topic": "termék és minőség",
-          "score": 1.0
-        },
-        {
-          "topic": "digitalizáció és önkiszolgálás",
-          "score": 1.0
-        }
-      ],
-      "topic_sentiment": {
-        "árak és akciók": {
-          "positive": 1.0,
-          "neutral": 4.5,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
-        },
-        "bolti élmény": {
-          "positive": 0.0,
-          "neutral": 3.0,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
-        },
-        "termék és minőség": {
-          "positive": 1.0,
-          "neutral": 0.0,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "positive"
-        },
-        "digitalizáció és önkiszolgálás": {
-          "positive": 0.0,
-          "neutral": 0.5,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
-        }
-      },
-      "social_sentiment": "positive",
-      "latest_items": [
-        {
-          "id": "657f7414e5b5bd40",
-          "source": "reddit",
-          "company": "Tesco",
-          "title": "Tesco Clubcard Jumper (thrifted at Fara Charity Shop)",
-          "summary": "submitted by /u/AntRnd to r/Thrift [link] [comments]",
-          "url": "https://www.reddit.com/r/Thrift/comments/1tzbiff/tesco_clubcard_jumper_thrifted_at_fara_charity/",
-          "published": "2026-06-07T13:00:06+00:00",
-          "query": "Tesco Clubcard",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "5811e91faa424105",
-          "source": "reddit",
-          "company": "Tesco",
-          "title": "Tesco Clubcard Jumper (thrifted at Fara Charity Shop)",
-          "summary": "submitted by /u/AntRnd to r/CharityShopHauls [link] [comments]",
-          "url": "https://www.reddit.com/r/CharityShopHauls/comments/1tzbif2/tesco_clubcard_jumper_thrifted_at_fara_charity/",
-          "published": "2026-06-07T13:00:05+00:00",
-          "query": "Tesco Clubcard",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "0b59be6f486529b6",
-          "source": "reddit",
-          "company": "Tesco",
-          "title": "Tesco Clubcard Jumper (thrifted at Fara Charity Shop)",
-          "summary": "submitted by /u/AntRnd to r/ganddee [link] [comments]",
-          "url": "https://www.reddit.com/r/ganddee/comments/1tzbidf/tesco_clubcard_jumper_thrifted_at_fara_charity/",
-          "published": "2026-06-07T13:00:03+00:00",
-          "query": "Tesco Clubcard",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "bbb38677d5f222f0",
-          "source": "reddit",
-          "company": "Tesco",
-          "title": "Tried the new This vegan steak picked up on Tesco clubcard offer. 🥲",
-          "summary": "Really enjoyed it personally, the texture inside was still a little soft, but the flavour was there if cooked longer than it suggested. My partner agreed. Wish they were a bit bigger also. Served with wedges and salady bits for helf. 😅✌️ submitted by /u/Jessica-Beth to r/ShittyVeganFoodPorn [link] [comments]",
-          "url": "https://www.reddit.com/r/ShittyVeganFoodPorn/comments/1te2ij6/tried_the_new_this_vegan_steak_picked_up_on_tesco/",
-          "published": "2026-05-15T17:07:44+00:00",
-          "query": "Tesco Clubcard",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "positive"
-        }
-      ],
-      "background_items": [
-        {
-          "id": "b064788a28decc03",
-          "source": "reddit",
-          "company": "Tesco",
-          "title": "£3.85 Tesco Clubcard Leeds Bridgewater Place",
-          "summary": "Rate /10 please submitted by /u/ObsidianFlesh to r/MealDealRates [link] [comments]",
-          "url": "https://www.reddit.com/r/MealDealRates/comments/1u1zat6/385_tesco_clubcard_leeds_bridgewater_place/",
-          "published": "2026-06-10T11:20:03+00:00",
-          "query": "Tesco Clubcard",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "95b1a43b526ea2e6",
-          "source": "reddit",
-          "company": "Tesco",
-          "title": "Is there a way to rig tesco clubcard points?",
-          "summary": "submitted by /u/Neat-Specialist-6349 to r/ShittyIllegalLifeTips [link] [comments]",
-          "url": "https://www.reddit.com/r/ShittyIllegalLifeTips/comments/1t9sl5f/is_there_a_way_to_rig_tesco_clubcard_points/",
-          "published": "2026-05-11T04:19:46+00:00",
-          "query": "Tesco Clubcard",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "aa43dc51c694b26a",
-          "source": "reddit",
-          "company": "Tesco",
-          "title": "tescoclubcard",
-          "summary": "Doing an experiment to see how much tesco club card would max out at? Is there a limit? We shall find out maybe? I will post a picture of a club card for anyone to scan at the till or self checkout. [link]",
-          "url": "https://www.reddit.com/r/tescoclubcard/",
-          "published": "",
-          "query": "Tesco Clubcard",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "neutral"
-        }
-      ],
+      "dominant_social_topic": "általános vállalati említés",
+      "top_social_topics": [],
+      "topic_sentiment": {},
+      "social_sentiment": "neutral",
+      "latest_items": [],
+      "background_items": [],
       "quality_summary": {
-        "dashboard_items": 4,
-        "background_items": 3,
-        "discarded_items": 10,
+        "dashboard_items": 0,
+        "background_items": 0,
+        "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
       },
@@ -561,122 +265,32 @@
     },
     {
       "company": "ALDI",
-      "social_mentions": 5,
-      "raw_social_mentions": 5,
-      "dashboard_mentions": 5,
+      "social_mentions": 0,
+      "raw_social_mentions": 0,
+      "dashboard_mentions": 0,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 5.0,
-      "hu_relevant_mentions": 5,
-      "social_index": 29,
+      "weighted_social_mentions": 0,
+      "hu_relevant_mentions": 0,
+      "social_index": 0,
       "social_sources": {
-        "reddit": 5,
+        "reddit": 0,
         "youtube": 0,
         "mastodon": 0
       },
       "raw_social_sources": {
-        "reddit": 5,
+        "reddit": 0,
         "youtube": 0,
         "mastodon": 0
       },
-      "dominant_social_topic": "árak és akciók",
-      "top_social_topics": [
-        {
-          "topic": "árak és akciók",
-          "score": 5.0
-        },
-        {
-          "topic": "termék és minőség",
-          "score": 1.0
-        }
-      ],
-      "topic_sentiment": {
-        "árak és akciók": {
-          "positive": 0.0,
-          "neutral": 5.0,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
-        },
-        "termék és minőség": {
-          "positive": 0.0,
-          "neutral": 1.0,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
-        }
-      },
+      "dominant_social_topic": "általános vállalati említés",
+      "top_social_topics": [],
+      "topic_sentiment": {},
       "social_sentiment": "neutral",
-      "latest_items": [
-        {
-          "id": "47a90d92d52b0817",
-          "source": "reddit",
-          "company": "ALDI",
-          "title": "Aldi akciós újság (06.11.)",
-          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
-          "url": "https://www.reddit.com/r/lidlaldihun/comments/1tylo3o/aldi_akciós_újság_0611/",
-          "published": "2026-06-06T16:23:36+00:00",
-          "query": "ALDI akció",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "92a12dd18cd363a5",
-          "source": "reddit",
-          "company": "ALDI",
-          "title": "Aldi akciós újság (06.04.)",
-          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
-          "url": "https://www.reddit.com/r/lidlaldihun/comments/1ts4ejr/aldi_akciós_újság_0604/",
-          "published": "2026-05-30T16:26:01+00:00",
-          "query": "ALDI akció",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "599894496965ef7f",
-          "source": "reddit",
-          "company": "ALDI",
-          "title": "Aldi akciós újság (05.28.)",
-          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
-          "url": "https://www.reddit.com/r/lidlaldihun/comments/1tm1uei/aldi_akciós_újság_0528/",
-          "published": "2026-05-24T04:24:45+00:00",
-          "query": "ALDI akció",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "f34ad4746b31aeb0",
-          "source": "reddit",
-          "company": "ALDI",
-          "title": "2026 május 20. - Nyolc évre szóló szívecskés kitűző",
-          "summary": "Frissítve: 2026. május 20. 21:00 CEST 1. Varsói tárgyalás: Tusk magyar szív-kitűzőt adott Magyarnak, V4-újraindítás Budapesten júniusban Telex | 444 | HVG | Magyar Hang · külpolitikai irányváltás Magyar Péter miniszterelnök szerdán Varsóba érkezett, ahol Donald Tusk lengyel kormányfővel tárgyalt. A 444 beszámolt arról, hogy a négyszemközti tárgyalás után közös sajtótájékoztatón Tusk kijelentette: kevesen hittek Magyar Péter &quot;fantasztikus győzelmében&quot; , de ő igen, és Lengyelország a 202",
-          "url": "https://www.reddit.com/r/hungary/comments/1tivywt/2026_május_20_nyolc_évre_szóló_szívecskés_kitűző/",
-          "published": "2026-05-20T19:20:52+00:00",
-          "query": "ALDI Magyarország",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "94ed5545c5a64b92",
-          "source": "reddit",
-          "company": "ALDI",
-          "title": "Aldi akciós újság (05.21.)",
-          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
-          "url": "https://www.reddit.com/r/lidlaldihun/comments/1tepr7v/aldi_akciós_újság_0521/",
-          "published": "2026-05-16T10:21:35+00:00",
-          "query": "ALDI akció",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        }
-      ],
+      "latest_items": [],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 5,
+        "dashboard_items": 0,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,

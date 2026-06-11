@@ -1,30 +1,30 @@
 {
-  "updated_at": "2026-06-11T16:35:37.716420+00:00",
+  "updated_at": "2026-06-11T20:42:27.886459+00:00",
   "status": "ok",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "companies": [
     {
       "company": "Lidl",
-      "mentions": 16,
-      "raw_mentions": 20,
-      "dashboard_mentions": 11,
-      "background_mentions": 5,
-      "discarded_mentions": 4,
-      "weighted_mentions": 13.5,
-      "hu_relevant_mentions": 11,
-      "index": 52,
+      "mentions": 4,
+      "raw_mentions": 5,
+      "dashboard_mentions": 4,
+      "background_mentions": 0,
+      "discarded_mentions": 1,
+      "weighted_mentions": 4.0,
+      "hu_relevant_mentions": 4,
+      "index": 37,
       "sources": {
-        "reddit": 13,
+        "reddit": 1,
         "youtube": 2,
         "mastodon": 1
       },
       "raw_sources": {
-        "reddit": 16,
+        "reddit": 1,
         "youtube": 2,
         "mastodon": 2
       },
-      "sentiment": "positive",
-      "topic": "árak és akciók",
+      "sentiment": "neutral",
+      "topic": "bolti élmény",
       "errors": []
     },
     {
@@ -53,50 +53,50 @@
     },
     {
       "company": "Tesco",
-      "mentions": 7,
-      "raw_mentions": 17,
-      "dashboard_mentions": 4,
-      "background_mentions": 3,
-      "discarded_mentions": 10,
-      "weighted_mentions": 5.5,
-      "hu_relevant_mentions": 4,
-      "index": 29,
-      "sources": {
-        "reddit": 7,
-        "youtube": 0,
-        "mastodon": 0
-      },
-      "raw_sources": {
-        "reddit": 17,
-        "youtube": 0,
-        "mastodon": 0
-      },
-      "sentiment": "positive",
-      "topic": "árak és akciók",
-      "errors": []
-    },
-    {
-      "company": "ALDI",
-      "mentions": 5,
-      "raw_mentions": 5,
-      "dashboard_mentions": 5,
+      "mentions": 0,
+      "raw_mentions": 0,
+      "dashboard_mentions": 0,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_mentions": 5.0,
-      "hu_relevant_mentions": 5,
-      "index": 29,
+      "weighted_mentions": 0,
+      "hu_relevant_mentions": 0,
+      "index": 0,
       "sources": {
-        "reddit": 5,
+        "reddit": 0,
         "youtube": 0,
         "mastodon": 0
       },
       "raw_sources": {
-        "reddit": 5,
+        "reddit": 0,
         "youtube": 0,
         "mastodon": 0
       },
       "sentiment": "neutral",
-      "topic": "árak és akciók",
+      "topic": "általános vállalati említés",
+      "errors": []
+    },
+    {
+      "company": "ALDI",
+      "mentions": 0,
+      "raw_mentions": 0,
+      "dashboard_mentions": 0,
+      "background_mentions": 0,
+      "discarded_mentions": 0,
+      "weighted_mentions": 0,
+      "hu_relevant_mentions": 0,
+      "index": 0,
+      "sources": {
+        "reddit": 0,
+        "youtube": 0,
+        "mastodon": 0
+      },
+      "raw_sources": {
+        "reddit": 0,
+        "youtube": 0,
+        "mastodon": 0
+      },
+      "sentiment": "neutral",
+      "topic": "általános vállalati említés",
       "errors": []
     },
     {
