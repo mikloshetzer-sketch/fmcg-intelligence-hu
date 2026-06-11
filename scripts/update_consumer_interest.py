@@ -11,16 +11,16 @@ DATA_DIR.mkdir(parents=True, exist_ok=True)
 OUTPUT_FILE = DATA_DIR / "consumer-interest.json"
 
 BRANDS = [
-    {"id": "lidl", "company": "Lidl", "keyword": "Lidl"},
-    {"id": "aldi", "company": "ALDI", "keyword": "ALDI"},
-    {"id": "penny", "company": "Penny", "keyword": "Penny Market"},
-    {"id": "spar", "company": "SPAR", "keyword": "SPAR"},
-    {"id": "tesco", "company": "Tesco", "keyword": "Tesco"},
-    {"id": "auchan", "company": "Auchan", "keyword": "Auchan"},
+    {"id": "lidl", "company": "Lidl", "keywords": ["Lidl", "Lidl Magyarország", "Lidl akció"]},
+    {"id": "aldi", "company": "ALDI", "keywords": ["ALDI", "ALDI Magyarország", "ALDI akció"]},
+    {"id": "penny", "company": "Penny", "keywords": ["Penny Market", "Penny Magyarország", "Penny akció"]},
+    {"id": "spar", "company": "SPAR", "keywords": ["SPAR", "SPAR Magyarország", "SPAR akció"]},
+    {"id": "tesco", "company": "Tesco", "keywords": ["Tesco", "Tesco Magyarország", "Tesco akció"]},
+    {"id": "auchan", "company": "Auchan", "keywords": ["Auchan", "Auchan Magyarország", "Auchan akció"]},
 ]
 
 GEO = "HU"
-TIMEFRAME = "today 3-m"
+TIMEFRAME = "today 12-m"
 
 
 def clamp(value, low=0, high=100):
@@ -96,7 +96,10 @@ def classify_level(score):
     return "GYENGE"
 
 
-def interpretation(company, interest, momentum, direction):
+def interpretation(company, data_status, interest, direction):
+    if data_status != "ok":
+        return f"{company} esetében jelenleg nincs megbízható Google Trends adat. A mutató nem értelmezhető."
+
     if interest >= 70 and direction == "up":
         return f"{company} esetében magas és emelkedő fogyasztói keresési érdeklődés látszik."
     if interest >= 70:
@@ -108,155 +111,216 @@ def interpretation(company, interest, momentum, direction):
     return f"{company} esetében stabil vagy mérsékelt fogyasztói keresési érdeklődés látszik."
 
 
-def fetch_single_brand_trends(pytrends, keyword):
-    pytrends.build_payload(
-        kw_list=[keyword],
-        cat=0,
-        timeframe=TIMEFRAME,
-        geo=GEO,
-        gprop=""
-    )
+def create_pytrends_client():
+    from pytrends.request import TrendReq
 
-    time.sleep(3)
-
-    df = pytrends.interest_over_time()
-
-    if df is None or df.empty:
-        return []
-
-    if "isPartial" in df.columns:
-        df = df.drop(columns=["isPartial"])
-
-    if keyword not in df.columns:
-        return []
-
-    return [float(v) for v in df[keyword].fillna(0).tolist()]
-
-
-def fetch_google_trends_by_brand():
-    try:
-        from pytrends.request import TrendReq
-    except Exception as e:
-        raise RuntimeError(f"PyTrends import error: {e}")
-
-    pytrends = TrendReq(
+    return TrendReq(
         hl="hu-HU",
-        tz=60
+        tz=60,
+        requests_args={
+            "headers": {
+                "User-Agent": (
+                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                    "AppleWebKit/537.36 (KHTML, like Gecko) "
+                    "Chrome/125.0 Safari/537.36"
+                ),
+                "Accept-Language": "hu-HU,hu;q=0.9,en-US;q=0.8,en;q=0.7",
+            }
+        }
     )
 
-    result = {}
 
-    for brand in BRANDS:
-        keyword = brand["keyword"]
+def fetch_keyword_values(keyword):
+    from pytrends.exceptions import ResponseError
 
-        try:
-            values = fetch_single_brand_trends(pytrends, keyword)
-            result[keyword] = values
-            print(f"Fetched Google Trends data for: {keyword} ({len(values)} points)")
-        except Exception as e:
-            result[keyword] = []
-            print(f"Failed Google Trends data for: {keyword} | {e}")
+    pytrends = create_pytrends_client()
 
-        time.sleep(5)
-
-    return result
-
-
-def build_company_rows(series_map):
-    rows = []
-
-    for brand in BRANDS:
-        keyword = brand["keyword"]
-        company = brand["company"]
-
-        values = series_map.get(keyword, [])
-
-        last_7 = safe_avg(values[-7:]) if values else 0
-        previous_7 = safe_avg(values[-14:-7]) if len(values) >= 14 else 0
-        avg_30 = safe_avg(values[-30:]) if values else 0
-        avg_all = safe_avg(values)
-        peak = max(values) if values else 0
-
-        direction = trend_direction(last_7, previous_7)
-        momentum = momentum_score(last_7, previous_7, avg_30)
-        volatility = volatility_score(values)
-
-        interest_index = clamp(
-            (last_7 * 0.45)
-            + (avg_30 * 0.35)
-            + (peak * 0.20)
+    try:
+        pytrends.build_payload(
+            kw_list=[keyword],
+            cat=0,
+            timeframe=TIMEFRAME,
+            geo=GEO,
+            gprop=""
         )
 
-        consumer_momentum = clamp(
-            (interest_index * 0.55)
-            + (momentum * 0.30)
-            + (volatility * 0.15)
-        )
+        time.sleep(4)
 
-        data_status = "ok" if values else "no_data"
+        df = pytrends.interest_over_time()
 
-        rows.append({
-            "id": brand["id"],
-            "company": company,
+        if df is None or df.empty:
+            return [], "empty_dataframe"
+
+        if "isPartial" in df.columns:
+            df = df.drop(columns=["isPartial"])
+
+        if keyword not in df.columns:
+            return [], "keyword_missing_from_dataframe"
+
+        values = [float(v) for v in df[keyword].fillna(0).tolist()]
+
+        if not values:
+            return [], "empty_values"
+
+        if max(values) <= 0:
+            return [], "all_zero_values"
+
+        return values, None
+
+    except ResponseError as e:
+        return [], f"google_response_error: {e}"
+    except Exception as e:
+        return [], f"exception: {type(e).__name__}: {e}"
+
+
+def fetch_brand_values(brand):
+    errors = []
+
+    for keyword in brand["keywords"]:
+        values, error = fetch_keyword_values(keyword)
+
+        if values:
+            return {
+                "selected_keyword": keyword,
+                "values": values,
+                "errors": errors,
+                "data_status": "ok"
+            }
+
+        errors.append({
             "keyword": keyword,
-            "data_status": data_status,
-            "consumer_interest_index": interest_index,
-            "consumer_interest_level": classify_level(interest_index),
-            "consumer_momentum_score": consumer_momentum,
-            "momentum_score": momentum,
-            "trend_direction": direction,
-            "avg_last_7": round(last_7, 2),
-            "avg_previous_7": round(previous_7, 2),
-            "avg_last_30": round(avg_30, 2),
-            "avg_period": round(avg_all, 2),
-            "peak_period": round(peak, 2),
-            "search_volatility": volatility,
-            "interpretation": interpretation(company, interest_index, momentum, direction)
+            "error": error
         })
 
-    return sorted(
-        rows,
-        key=lambda x: x["consumer_momentum_score"],
-        reverse=True
+        time.sleep(6)
+
+    return {
+        "selected_keyword": brand["keywords"][0],
+        "values": [],
+        "errors": errors,
+        "data_status": "no_data"
+    }
+
+
+def build_company_row(brand, fetch_result):
+    company = brand["company"]
+    values = fetch_result["values"]
+    data_status = fetch_result["data_status"]
+
+    if not values:
+        return {
+            "id": brand["id"],
+            "company": company,
+            "keyword": fetch_result["selected_keyword"],
+            "data_status": data_status,
+            "consumer_interest_index": None,
+            "consumer_interest_level": "NINCS ADAT",
+            "consumer_momentum_score": None,
+            "momentum_score": None,
+            "trend_direction": "n.a.",
+            "avg_last_7": None,
+            "avg_previous_7": None,
+            "avg_last_30": None,
+            "avg_period": None,
+            "peak_period": None,
+            "search_volatility": None,
+            "errors": fetch_result["errors"],
+            "interpretation": interpretation(company, data_status, 0, "n.a.")
+        }
+
+    last_7 = safe_avg(values[-7:])
+    previous_7 = safe_avg(values[-14:-7]) if len(values) >= 14 else 0
+    avg_30 = safe_avg(values[-30:])
+    avg_all = safe_avg(values)
+    peak = max(values)
+
+    direction = trend_direction(last_7, previous_7)
+    momentum = momentum_score(last_7, previous_7, avg_30)
+    volatility = volatility_score(values)
+
+    interest_index = clamp(
+        (last_7 * 0.45)
+        + (avg_30 * 0.35)
+        + (peak * 0.20)
     )
+
+    consumer_momentum = clamp(
+        (interest_index * 0.55)
+        + (momentum * 0.30)
+        + (volatility * 0.15)
+    )
+
+    return {
+        "id": brand["id"],
+        "company": company,
+        "keyword": fetch_result["selected_keyword"],
+        "data_status": data_status,
+        "consumer_interest_index": interest_index,
+        "consumer_interest_level": classify_level(interest_index),
+        "consumer_momentum_score": consumer_momentum,
+        "momentum_score": momentum,
+        "trend_direction": direction,
+        "avg_last_7": round(last_7, 2),
+        "avg_previous_7": round(previous_7, 2),
+        "avg_last_30": round(avg_30, 2),
+        "avg_period": round(avg_all, 2),
+        "peak_period": round(peak, 2),
+        "search_volatility": volatility,
+        "errors": fetch_result["errors"],
+        "interpretation": interpretation(company, data_status, interest_index, direction)
+    }
 
 
 def main():
     updated_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
+    companies = []
+    global_errors = []
+
     try:
-        series_map = fetch_google_trends_by_brand()
-        companies = build_company_rows(series_map)
-
-        ok_count = sum(1 for c in companies if c.get("data_status") == "ok")
-
-        status = "ok" if ok_count > 0 else "fallback_error"
-        error = None if ok_count > 0 else "No Google Trends data returned for any brand"
-
+        import pytrends
+        pytrends_available = True
     except Exception as e:
-        companies = []
-        status = "fallback_error"
-        error = str(e)
+        pytrends_available = False
+        global_errors.append(f"pytrends_import_error: {e}")
 
-    leader = None
+    if pytrends_available:
+        for brand in BRANDS:
+            print(f"Fetching Google Trends data for {brand['company']}...")
+            result = fetch_brand_values(brand)
+            row = build_company_row(brand, result)
+            companies.append(row)
+            time.sleep(8)
+
     valid_companies = [c for c in companies if c.get("data_status") == "ok"]
 
     if valid_companies:
+        status = "ok"
+        error = None
         leader = sorted(
             valid_companies,
-            key=lambda x: x["consumer_momentum_score"],
+            key=lambda x: x["consumer_momentum_score"] or 0,
             reverse=True
         )[0]
+    else:
+        status = "fallback_error"
+        error = "No valid Google Trends data returned. Check per-company errors."
+        leader = None
 
     output = {
         "updated_at": updated_at,
         "status": status,
         "source": "google_trends",
-        "method": "pytrends_unofficial_best_effort_v3_single_brand_queries",
+        "method": "pytrends_unofficial_best_effort_v4_debug_and_keyword_fallback",
         "geo": GEO,
         "timeframe": TIMEFRAME,
-        "important_note": "A Google Trends értékek relatív keresési indexek, nem abszolút keresési darabszámok. A márkák külön lekérdezéssel készülnek, ezért az index főleg cégenkénti érdeklődési és momentumjelzésként értelmezhető.",
+        "important_note": (
+            "A Google Trends értékek relatív keresési indexek, nem abszolút keresési darabszámok. "
+            "A PyTrends nem hivatalos Google API. GitHub Actions környezetben előfordulhat, hogy "
+            "a Google nem ad vissza adatot vagy blokkolja a lekérést. Nincs adat esetén a mutató nem értelmezhető."
+        ),
         "error": error,
+        "global_errors": global_errors,
         "leader": leader,
         "companies": companies
     }
