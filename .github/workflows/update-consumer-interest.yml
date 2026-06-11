@@ -24,7 +24,10 @@ jobs:
 
       - name: Python csomagok telepítése
         run: |
-          pip install pytrends pandas
+          python -m pip install --upgrade pip
+          pip install pandas
+          pip install "urllib3<2"
+          pip install pytrends==4.9.2
 
       - name: Consumer Interest frissítése
         run: python scripts/update_consumer_interest.py
