@@ -1,5 +1,6 @@
 import json
 import statistics
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -23,11 +24,20 @@ TIMEFRAME = "today 3-m"
 
 
 def clamp(value, low=0, high=100):
+    try:
+        value = float(value)
+    except Exception:
+        value = 0
     return max(low, min(high, round(value)))
 
 
 def safe_avg(values):
-    clean = [float(v) for v in values if v is not None]
+    clean = []
+    for v in values:
+        try:
+            clean.append(float(v))
+        except Exception:
+            pass
     return sum(clean) / len(clean) if clean else 0
 
 
@@ -59,12 +69,20 @@ def momentum_score(last_7, previous_7, avg_30):
 
 
 def volatility_score(values):
-    clean = [float(v) for v in values if v is not None]
+    clean = []
+    for v in values:
+        try:
+            clean.append(float(v))
+        except Exception:
+            pass
+
     if len(clean) < 3:
         return 0
+
     avg = safe_avg(clean)
     if avg <= 0:
         return 0
+
     return clamp((statistics.pstdev(clean) / avg) * 100)
 
 
@@ -98,13 +116,11 @@ def fetch_google_trends():
 
     pytrends = TrendReq(
         hl="hu-HU",
-        tz=60,
-        timeout=(10, 25),
-        retries=2,
-        backoff_factor=0.3
+        tz=60
     )
 
     keywords = [b["keyword"] for b in BRANDS]
+
     pytrends.build_payload(
         kw_list=keywords,
         cat=0,
@@ -112,6 +128,8 @@ def fetch_google_trends():
         geo=GEO,
         gprop=""
     )
+
+    time.sleep(2)
 
     df = pytrends.interest_over_time()
 
@@ -146,8 +164,17 @@ def build_company_rows(df):
         momentum = momentum_score(last_7, previous_7, avg_30)
         volatility = volatility_score(values)
 
-        interest_index = clamp((last_7 * 0.45) + (avg_30 * 0.35) + (peak * 0.20))
-        consumer_momentum = clamp((interest_index * 0.55) + (momentum * 0.30) + (volatility * 0.15))
+        interest_index = clamp(
+            (last_7 * 0.45)
+            + (avg_30 * 0.35)
+            + (peak * 0.20)
+        )
+
+        consumer_momentum = clamp(
+            (interest_index * 0.55)
+            + (momentum * 0.30)
+            + (volatility * 0.15)
+        )
 
         rows.append({
             "id": brand["id"],
@@ -167,7 +194,11 @@ def build_company_rows(df):
             "interpretation": interpretation(company, interest_index, momentum, direction)
         })
 
-    return sorted(rows, key=lambda x: x["consumer_momentum_score"], reverse=True)
+    return sorted(
+        rows,
+        key=lambda x: x["consumer_momentum_score"],
+        reverse=True
+    )
 
 
 def main():
@@ -189,7 +220,7 @@ def main():
         "updated_at": updated_at,
         "status": status,
         "source": "google_trends",
-        "method": "pytrends_unofficial_best_effort",
+        "method": "pytrends_unofficial_best_effort_v2",
         "geo": GEO,
         "timeframe": TIMEFRAME,
         "important_note": "A Google Trends értékek relatív keresési indexek, nem abszolút keresési darabszámok. A PyTrends nem hivatalos Google API, ezért időnként rate limit vagy adatbetöltési hiba előfordulhat.",
@@ -198,7 +229,11 @@ def main():
         "companies": companies
     }
 
-    OUTPUT_FILE.write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8")
+    OUTPUT_FILE.write_text(
+        json.dumps(output, ensure_ascii=False, indent=2),
+        encoding="utf-8"
+    )
+
     print(json.dumps(output, ensure_ascii=False, indent=2))
 
 
