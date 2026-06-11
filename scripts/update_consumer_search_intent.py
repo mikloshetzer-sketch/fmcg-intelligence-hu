@@ -14,21 +14,72 @@ GEO = "HU"
 TIMEFRAME = "today 12-m"
 
 BRANDS = [
-    {"id": "lidl", "company": "Lidl", "base": "Lidl"},
-    {"id": "aldi", "company": "ALDI", "base": "ALDI"},
-    {"id": "penny", "company": "Penny", "base": "Penny"},
-    {"id": "spar", "company": "SPAR", "base": "SPAR"},
-    {"id": "tesco", "company": "Tesco", "base": "Tesco"},
-    {"id": "auchan", "company": "Auchan", "base": "Auchan"},
-]
-
-INTENTS = [
-    {"id": "promotion", "label": "Akció / promóció", "terms": ["akció", "újság", "kupon"]},
-    {"id": "store_access", "label": "Bolt / nyitvatartás", "terms": ["nyitvatartás", "bolt", "áruház"]},
-    {"id": "price", "label": "Ár / drágulás", "terms": ["ár", "olcsó", "drága"]},
-    {"id": "jobs", "label": "Állás / karrier", "terms": ["állás", "karrier", "munka"]},
-    {"id": "digital", "label": "App / online", "terms": ["app", "online", "webshop"]},
-    {"id": "complaint", "label": "Panasz / probléma", "terms": ["panasz", "reklamáció", "probléma"]},
+    {
+        "id": "lidl",
+        "company": "Lidl",
+        "queries": {
+            "promotion": {"label": "Akció / promóció", "keyword": "Lidl akció"},
+            "store_access": {"label": "Bolt / nyitvatartás", "keyword": "Lidl nyitvatartás"},
+            "price": {"label": "Ár / drágulás", "keyword": "Lidl ár"},
+            "jobs": {"label": "Állás / karrier", "keyword": "Lidl állás"},
+            "digital": {"label": "App / online", "keyword": "Lidl app"},
+        },
+    },
+    {
+        "id": "aldi",
+        "company": "ALDI",
+        "queries": {
+            "promotion": {"label": "Akció / promóció", "keyword": "ALDI akció"},
+            "store_access": {"label": "Bolt / nyitvatartás", "keyword": "ALDI nyitvatartás"},
+            "price": {"label": "Ár / drágulás", "keyword": "ALDI ár"},
+            "jobs": {"label": "Állás / karrier", "keyword": "ALDI állás"},
+            "digital": {"label": "App / online", "keyword": "ALDI app"},
+        },
+    },
+    {
+        "id": "penny",
+        "company": "Penny",
+        "queries": {
+            "promotion": {"label": "Akció / promóció", "keyword": "Penny akció"},
+            "store_access": {"label": "Bolt / nyitvatartás", "keyword": "Penny nyitvatartás"},
+            "price": {"label": "Ár / drágulás", "keyword": "Penny ár"},
+            "jobs": {"label": "Állás / karrier", "keyword": "Penny állás"},
+            "digital": {"label": "App / online", "keyword": "Penny app"},
+        },
+    },
+    {
+        "id": "spar",
+        "company": "SPAR",
+        "queries": {
+            "promotion": {"label": "Akció / promóció", "keyword": "SPAR akció"},
+            "store_access": {"label": "Bolt / nyitvatartás", "keyword": "SPAR nyitvatartás"},
+            "price": {"label": "Ár / drágulás", "keyword": "SPAR ár"},
+            "jobs": {"label": "Állás / karrier", "keyword": "SPAR állás"},
+            "digital": {"label": "App / online", "keyword": "SPAR app"},
+        },
+    },
+    {
+        "id": "tesco",
+        "company": "Tesco",
+        "queries": {
+            "promotion": {"label": "Akció / promóció", "keyword": "Tesco akció"},
+            "store_access": {"label": "Bolt / nyitvatartás", "keyword": "Tesco nyitvatartás"},
+            "price": {"label": "Ár / drágulás", "keyword": "Tesco ár"},
+            "jobs": {"label": "Állás / karrier", "keyword": "Tesco állás"},
+            "digital": {"label": "Clubcard / digitális", "keyword": "Tesco clubcard"},
+        },
+    },
+    {
+        "id": "auchan",
+        "company": "Auchan",
+        "queries": {
+            "promotion": {"label": "Akció / promóció", "keyword": "Auchan akció"},
+            "store_access": {"label": "Bolt / nyitvatartás", "keyword": "Auchan nyitvatartás"},
+            "price": {"label": "Ár / drágulás", "keyword": "Auchan ár"},
+            "jobs": {"label": "Állás / karrier", "keyword": "Auchan állás"},
+            "digital": {"label": "Online / digitális", "keyword": "Auchan online"},
+        },
+    },
 ]
 
 
@@ -98,156 +149,154 @@ def create_pytrends_client():
                 ),
                 "Accept-Language": "hu-HU,hu;q=0.9,en-US;q=0.8,en;q=0.7",
             }
-        }
+        },
     )
 
 
-def fetch_keyword_values(keyword):
-    from pytrends.exceptions import ResponseError
-
+def fetch_brand_payload(brand):
     pytrends = create_pytrends_client()
+    intent_items = list(brand["queries"].items())
+    keywords = [item[1]["keyword"] for item in intent_items]
 
     try:
         pytrends.build_payload(
-            kw_list=[keyword],
+            kw_list=keywords,
             cat=0,
             timeframe=TIMEFRAME,
             geo=GEO,
-            gprop=""
+            gprop="",
         )
 
-        time.sleep(4)
+        time.sleep(5)
 
         df = pytrends.interest_over_time()
 
         if df is None or df.empty:
-            return [], "empty_dataframe"
+            return {}, "empty_dataframe"
 
         if "isPartial" in df.columns:
             df = df.drop(columns=["isPartial"])
 
-        if keyword not in df.columns:
-            return [], "keyword_missing_from_dataframe"
+        result = {}
 
-        values = [float(v) for v in df[keyword].fillna(0).tolist()]
+        for intent_id, item in intent_items:
+            keyword = item["keyword"]
 
-        if not values:
-            return [], "empty_values"
+            if keyword not in df.columns:
+                result[intent_id] = {
+                    "keyword": keyword,
+                    "values": [],
+                    "error": "keyword_missing_from_dataframe",
+                }
+                continue
 
-        if max(values) <= 0:
-            return [], "all_zero_values"
+            values = [float(v) for v in df[keyword].fillna(0).tolist()]
 
-        return values, None
+            if not values:
+                result[intent_id] = {
+                    "keyword": keyword,
+                    "values": [],
+                    "error": "empty_values",
+                }
+                continue
 
-    except ResponseError as e:
-        return [], f"google_response_error: {e}"
+            if max(values) <= 0:
+                result[intent_id] = {
+                    "keyword": keyword,
+                    "values": [],
+                    "error": "all_zero_values",
+                }
+                continue
+
+            result[intent_id] = {
+                "keyword": keyword,
+                "values": values,
+                "error": None,
+            }
+
+        return result, None
+
     except Exception as e:
-        return [], f"exception: {type(e).__name__}: {e}"
+        return {}, f"{type(e).__name__}: {e}"
 
 
-def build_intent_query(base, term):
-    return f"{base} {term}"
+def build_intent_record(intent_id, label, keyword, values, error):
+    if not values:
+        return {
+            "intent_id": intent_id,
+            "intent_label": label,
+            "keyword": keyword,
+            "data_status": "no_data",
+            "intent_score": None,
+            "trend_direction": "n.a.",
+            "avg_last_7": None,
+            "avg_previous_7": None,
+            "avg_last_30": None,
+            "avg_period": None,
+            "peak_period": None,
+            "search_volatility": None,
+            "error": error,
+        }
 
+    last_7 = safe_avg(values[-7:])
+    previous_7 = safe_avg(values[-14:-7]) if len(values) >= 14 else 0
+    avg_30 = safe_avg(values[-30:])
+    avg_period = safe_avg(values)
+    peak = max(values)
+    volatility = volatility_score(values)
+    direction = trend_direction(last_7, previous_7)
 
-def build_intent_result(brand, intent):
-    base = brand["base"]
-    term_results = []
-    best_score = 0
-    best_term = None
-    best_values = []
-    errors = []
-
-    for term in intent["terms"]:
-        keyword = build_intent_query(base, term)
-        values, error = fetch_keyword_values(keyword)
-
-        if values:
-            last_7 = safe_avg(values[-7:])
-            previous_7 = safe_avg(values[-14:-7]) if len(values) >= 14 else 0
-            avg_30 = safe_avg(values[-30:])
-            avg_period = safe_avg(values)
-            peak = max(values)
-            volatility = volatility_score(values)
-            direction = trend_direction(last_7, previous_7)
-
-            score = clamp(
-                last_7 * 0.40
-                + avg_30 * 0.35
-                + peak * 0.15
-                + volatility * 0.10
-            )
-
-            term_results.append({
-                "term": term,
-                "keyword": keyword,
-                "status": "ok",
-                "intent_score": score,
-                "avg_last_7": round(last_7, 2),
-                "avg_previous_7": round(previous_7, 2),
-                "avg_last_30": round(avg_30, 2),
-                "avg_period": round(avg_period, 2),
-                "peak_period": round(peak, 2),
-                "trend_direction": direction,
-                "search_volatility": volatility
-            })
-
-            if score > best_score:
-                best_score = score
-                best_term = term
-                best_values = values
-
-        else:
-            errors.append({
-                "term": term,
-                "keyword": keyword,
-                "error": error
-            })
-            term_results.append({
-                "term": term,
-                "keyword": keyword,
-                "status": "no_data",
-                "intent_score": None
-            })
-
-        time.sleep(8)
-
-    valid_terms = [x for x in term_results if x.get("status") == "ok"]
-
-    if valid_terms:
-        avg_score = safe_avg([x["intent_score"] for x in valid_terms])
-        strongest = sorted(valid_terms, key=lambda x: x["intent_score"], reverse=True)[0]
-        direction = strongest.get("trend_direction", "stable")
-        data_status = "ok"
-    else:
-        avg_score = None
-        strongest = None
-        direction = "n.a."
-        data_status = "no_data"
+    score = clamp(
+        last_7 * 0.40
+        + avg_30 * 0.35
+        + peak * 0.15
+        + volatility * 0.10
+    )
 
     return {
-        "intent_id": intent["id"],
-        "intent_label": intent["label"],
-        "data_status": data_status,
-        "intent_score": clamp(avg_score) if avg_score is not None else None,
-        "strongest_term": strongest["term"] if strongest else None,
-        "strongest_keyword": strongest["keyword"] if strongest else None,
+        "intent_id": intent_id,
+        "intent_label": label,
+        "keyword": keyword,
+        "data_status": "ok",
+        "intent_score": score,
         "trend_direction": direction,
-        "terms": term_results,
-        "errors": errors
+        "avg_last_7": round(last_7, 2),
+        "avg_previous_7": round(previous_7, 2),
+        "avg_last_30": round(avg_30, 2),
+        "avg_period": round(avg_period, 2),
+        "peak_period": round(peak, 2),
+        "search_volatility": volatility,
+        "error": None,
     }
 
 
 def build_company_result(brand):
-    print(f"Building search intent profile for {brand['company']}...")
+    print(f"Fetching search intent payload for {brand['company']}...")
+
+    payload, payload_error = fetch_brand_payload(brand)
 
     intents = []
 
-    for intent in INTENTS:
-        result = build_intent_result(brand, intent)
-        intents.append(result)
-        time.sleep(12)
+    for intent_id, item in brand["queries"].items():
+        label = item["label"]
+        keyword = item["keyword"]
+        data = payload.get(intent_id, {
+            "keyword": keyword,
+            "values": [],
+            "error": payload_error or "no_payload_data",
+        })
 
-    valid_intents = [i for i in intents if i.get("data_status") == "ok"]
+        record = build_intent_record(
+            intent_id=intent_id,
+            label=label,
+            keyword=data.get("keyword", keyword),
+            values=data.get("values", []),
+            error=data.get("error"),
+        )
+
+        intents.append(record)
+
+    valid_intents = [x for x in intents if x["data_status"] == "ok"]
 
     if valid_intents:
         dominant = sorted(
@@ -256,40 +305,43 @@ def build_company_result(brand):
             reverse=True
         )[0]
 
-        total_score = sum((i["intent_score"] or 0) for i in valid_intents)
+        total_score = sum((x["intent_score"] or 0) for x in valid_intents)
 
         intent_share = []
-        for i in valid_intents:
-            share = ((i["intent_score"] or 0) / total_score * 100) if total_score > 0 else 0
+        for x in valid_intents:
+            share = ((x["intent_score"] or 0) / total_score * 100) if total_score > 0 else 0
             intent_share.append({
-                "intent_id": i["intent_id"],
-                "intent_label": i["intent_label"],
-                "score": i["intent_score"],
-                "share_pct": round(share, 1)
+                "intent_id": x["intent_id"],
+                "intent_label": x["intent_label"],
+                "score": x["intent_score"],
+                "share_pct": round(share, 1),
             })
 
         interpretation = (
             f"{brand['company']} esetében a legerősebb keresési szándék: "
             f"{dominant['intent_label']}."
         )
+
+        status = "ok"
     else:
         dominant = None
         intent_share = []
         interpretation = (
             f"{brand['company']} esetében jelenleg nincs értelmezhető Google Trends keresési szándék adat."
         )
+        status = "no_data"
 
     return {
         "id": brand["id"],
         "company": brand["company"],
-        "base_keyword": brand["base"],
-        "data_status": "ok" if valid_intents else "no_data",
+        "data_status": status,
         "dominant_intent": dominant["intent_id"] if dominant else None,
         "dominant_intent_label": dominant["intent_label"] if dominant else None,
         "dominant_intent_score": dominant["intent_score"] if dominant else None,
         "intent_share": intent_share,
         "intents": intents,
-        "interpretation": interpretation
+        "payload_error": payload_error,
+        "interpretation": interpretation,
     }
 
 
@@ -300,7 +352,7 @@ def main():
     global_errors = []
 
     try:
-        import pytrends
+        import pytrends  # noqa: F401
         pytrends_available = True
     except Exception as e:
         pytrends_available = False
@@ -308,34 +360,31 @@ def main():
 
     if pytrends_available:
         for brand in BRANDS:
-            company_result = build_company_result(brand)
-            companies.append(company_result)
-            time.sleep(20)
+            result = build_company_result(brand)
+            companies.append(result)
+            time.sleep(12)
 
     valid_companies = [c for c in companies if c.get("data_status") == "ok"]
 
-    if valid_companies:
-        status = "ok"
-        error = None
-    else:
-        status = "fallback_error"
-        error = "No valid Google Trends search intent data returned."
+    status = "ok" if valid_companies else "fallback_error"
+    error = None if valid_companies else "No valid Google Trends search intent data returned."
 
     output = {
         "updated_at": updated_at,
         "status": status,
         "source": "google_trends",
-        "method": "pytrends_unofficial_best_effort_search_intent_v1",
+        "method": "pytrends_unofficial_best_effort_search_intent_v2_one_payload_per_company",
         "geo": GEO,
         "timeframe": TIMEFRAME,
         "important_note": (
             "A Google Trends keresési szándék mutató relatív keresési indexekből készül. "
             "Nem abszolút keresési darabszám, nem reprezentatív fogyasztói kutatás. "
-            "A PyTrends nem hivatalos Google API, ezért rate limit és adatkimaradás előfordulhat."
+            "A PyTrends nem hivatalos Google API, ezért rate limit és adatkimaradás előfordulhat. "
+            "Egy céghez egyszerre legfeljebb 5 kulcsszó kerül lekérdezésre."
         ),
         "error": error,
         "global_errors": global_errors,
-        "companies": companies
+        "companies": companies,
     }
 
     OUTPUT_FILE.write_text(
