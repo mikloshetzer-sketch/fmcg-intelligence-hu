@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-06-11T05:10:45Z",
+  "updated_at": "2026-06-11T05:26:37Z",
   "status": "fallback_error",
   "source": "google_trends",
-  "method": "pytrends_unofficial_best_effort",
+  "method": "pytrends_unofficial_best_effort_v2",
   "geo": "HU",
   "timeframe": "today 3-m",
   "important_note": "A Google Trends értékek relatív keresési indexek, nem abszolút keresési darabszámok. A PyTrends nem hivatalos Google API, ezért időnként rate limit vagy adatbetöltési hiba előfordulhat.",
-  "error": "Retry.__init__() got an unexpected keyword argument 'method_whitelist'",
+  "error": "The request failed: Google returned a response with code 400",
   "leader": null,
   "companies": []
 }
