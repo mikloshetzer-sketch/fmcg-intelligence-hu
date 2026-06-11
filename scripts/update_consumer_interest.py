@@ -108,7 +108,32 @@ def interpretation(company, interest, momentum, direction):
     return f"{company} esetében stabil vagy mérsékelt fogyasztói keresési érdeklődés látszik."
 
 
-def fetch_google_trends():
+def fetch_single_brand_trends(pytrends, keyword):
+    pytrends.build_payload(
+        kw_list=[keyword],
+        cat=0,
+        timeframe=TIMEFRAME,
+        geo=GEO,
+        gprop=""
+    )
+
+    time.sleep(3)
+
+    df = pytrends.interest_over_time()
+
+    if df is None or df.empty:
+        return []
+
+    if "isPartial" in df.columns:
+        df = df.drop(columns=["isPartial"])
+
+    if keyword not in df.columns:
+        return []
+
+    return [float(v) for v in df[keyword].fillna(0).tolist()]
+
+
+def fetch_google_trends_by_brand():
     try:
         from pytrends.request import TrendReq
     except Exception as e:
@@ -119,40 +144,32 @@ def fetch_google_trends():
         tz=60
     )
 
-    keywords = [b["keyword"] for b in BRANDS]
+    result = {}
 
-    pytrends.build_payload(
-        kw_list=keywords,
-        cat=0,
-        timeframe=TIMEFRAME,
-        geo=GEO,
-        gprop=""
-    )
+    for brand in BRANDS:
+        keyword = brand["keyword"]
 
-    time.sleep(2)
+        try:
+            values = fetch_single_brand_trends(pytrends, keyword)
+            result[keyword] = values
+            print(f"Fetched Google Trends data for: {keyword} ({len(values)} points)")
+        except Exception as e:
+            result[keyword] = []
+            print(f"Failed Google Trends data for: {keyword} | {e}")
 
-    df = pytrends.interest_over_time()
+        time.sleep(5)
 
-    if df is None or df.empty:
-        raise RuntimeError("Google Trends returned empty dataframe")
-
-    if "isPartial" in df.columns:
-        df = df.drop(columns=["isPartial"])
-
-    return df
+    return result
 
 
-def build_company_rows(df):
+def build_company_rows(series_map):
     rows = []
 
     for brand in BRANDS:
         keyword = brand["keyword"]
         company = brand["company"]
 
-        if keyword not in df.columns:
-            values = []
-        else:
-            values = [float(v) for v in df[keyword].fillna(0).tolist()]
+        values = series_map.get(keyword, [])
 
         last_7 = safe_avg(values[-7:]) if values else 0
         previous_7 = safe_avg(values[-14:-7]) if len(values) >= 14 else 0
@@ -176,10 +193,13 @@ def build_company_rows(df):
             + (volatility * 0.15)
         )
 
+        data_status = "ok" if values else "no_data"
+
         rows.append({
             "id": brand["id"],
             "company": company,
             "keyword": keyword,
+            "data_status": data_status,
             "consumer_interest_index": interest_index,
             "consumer_interest_level": classify_level(interest_index),
             "consumer_momentum_score": consumer_momentum,
@@ -205,25 +225,37 @@ def main():
     updated_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
     try:
-        df = fetch_google_trends()
-        companies = build_company_rows(df)
-        status = "ok"
-        error = None
+        series_map = fetch_google_trends_by_brand()
+        companies = build_company_rows(series_map)
+
+        ok_count = sum(1 for c in companies if c.get("data_status") == "ok")
+
+        status = "ok" if ok_count > 0 else "fallback_error"
+        error = None if ok_count > 0 else "No Google Trends data returned for any brand"
+
     except Exception as e:
         companies = []
         status = "fallback_error"
         error = str(e)
 
-    leader = companies[0] if companies else None
+    leader = None
+    valid_companies = [c for c in companies if c.get("data_status") == "ok"]
+
+    if valid_companies:
+        leader = sorted(
+            valid_companies,
+            key=lambda x: x["consumer_momentum_score"],
+            reverse=True
+        )[0]
 
     output = {
         "updated_at": updated_at,
         "status": status,
         "source": "google_trends",
-        "method": "pytrends_unofficial_best_effort_v2",
+        "method": "pytrends_unofficial_best_effort_v3_single_brand_queries",
         "geo": GEO,
         "timeframe": TIMEFRAME,
-        "important_note": "A Google Trends értékek relatív keresési indexek, nem abszolút keresési darabszámok. A PyTrends nem hivatalos Google API, ezért időnként rate limit vagy adatbetöltési hiba előfordulhat.",
+        "important_note": "A Google Trends értékek relatív keresési indexek, nem abszolút keresési darabszámok. A márkák külön lekérdezéssel készülnek, ezért az index főleg cégenkénti érdeklődési és momentumjelzésként értelmezhető.",
         "error": error,
         "leader": leader,
         "companies": companies
