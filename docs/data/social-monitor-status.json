@@ -1,30 +1,30 @@
 {
-  "updated_at": "2026-06-13T05:00:22.342404+00:00",
+  "updated_at": "2026-06-13T09:42:24.412201+00:00",
   "status": "ok",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "companies": [
     {
       "company": "Lidl",
-      "mentions": 1,
-      "raw_mentions": 2,
-      "dashboard_mentions": 1,
+      "mentions": 2,
+      "raw_mentions": 3,
+      "dashboard_mentions": 2,
       "background_mentions": 0,
       "discarded_mentions": 1,
-      "weighted_mentions": 1.0,
-      "hu_relevant_mentions": 1,
-      "index": 16,
+      "weighted_mentions": 2.0,
+      "hu_relevant_mentions": 2,
+      "index": 20,
       "sources": {
         "reddit": 0,
-        "youtube": 0,
+        "youtube": 1,
         "mastodon": 1
       },
       "raw_sources": {
         "reddit": 0,
-        "youtube": 0,
+        "youtube": 1,
         "mastodon": 2
       },
       "sentiment": "neutral",
-      "topic": "ellátási lánc és logisztika",
+      "topic": "bolti élmény",
       "errors": []
     },
     {
