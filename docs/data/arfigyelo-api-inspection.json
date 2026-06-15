@@ -1,0 +1,711 @@
+{
+  "updated_at": "2026-06-15T09:42:52.051214",
+  "status": "ok",
+  "tested_url": "https://arfigyelo.gvh.hu/api/products-by-category/2046?limit=24&offset=0&order=unitAmount_asc",
+  "root_type": "dict",
+  "top_level_keys": [
+    "products",
+    "count"
+  ],
+  "sample": {
+    "products": [
+      {
+        "id": "5998706906434",
+        "name": "Kemencés kedvencek, fehér kenyér  400g",
+        "imageUrl": "https://cdnarfigyeloprodweu.azureedge.net/images/product-image-5998706906434.jpg",
+        "unit": "kg",
+        "unitTitle": "db",
+        "bulk": false,
+        "returnType": null,
+        "returnFee": 0,
+        "packaging": "0.4",
+        "categoryPath": "pekaru/kenyerfelek/feherkenyer_cipo",
+        "minUnitPrice": 397.5,
+        "pricesOfChainStores": [
+          {
+            "id": "f95031d8-84a5-4edf-b4fa-18b2cbae2ea1",
+            "name": "Lidl",
+            "priceSameEverywhere": true,
+            "productMinAmount": 159.0,
+            "prices": [
+              {
+                "type": "NORMAL",
+                "amount": 159.0,
+                "unitAmount": 397.5,
+                "sameAmountEverywhere": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "2000007217256",
+        "name": "Auchan Kedvenc fehér kenyér 500 g ",
+        "imageUrl": "https://cdnarfigyeloprodweu.azureedge.net/images/product-image-2000007217256.jpg",
+        "unit": "kg",
+        "unitTitle": "db",
+        "bulk": false,
+        "returnType": null,
+        "returnFee": 0,
+        "packaging": "0.5",
+        "categoryPath": "pekaru/kenyerfelek/feherkenyer_cipo",
+        "minUnitPrice": 412.0,
+        "pricesOfChainStores": [
+          {
+            "id": "e9cc63fd-52e0-4c1e-ba8d-d135d7285c63",
+            "name": "Auchan",
+            "priceSameEverywhere": true,
+            "productMinAmount": 206.0,
+            "prices": [
+              {
+                "type": "NORMAL",
+                "amount": 206.0,
+                "unitAmount": 412.0,
+                "sameAmountEverywhere": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "5998706500151",
+        "name": "Kemencés Kedvenc Fehér kenyér",
+        "imageUrl": "https://cdnarfigyeloprodweu.azureedge.net/images/product-image-5998706500151.jpg",
+        "unit": "kg",
+        "unitTitle": "db",
+        "bulk": false,
+        "returnType": null,
+        "returnFee": 0,
+        "packaging": "0.4",
+        "categoryPath": "pekaru/kenyerfelek/feherkenyer_cipo",
+        "minUnitPrice": 447.5,
+        "pricesOfChainStores": [
+          {
+            "id": "55b678e0-4e02-49d7-86da-ba6fba862a7e",
+            "name": "Aldi",
+            "priceSameEverywhere": true,
+            "productMinAmount": 179.0,
+            "prices": [
+              {
+                "type": "NORMAL",
+                "amount": 179.0,
+                "unitAmount": 447.5,
+                "sameAmountEverywhere": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "5998706500168",
+        "name": "Kemencés Kedvenc TK kenyér",
+        "imageUrl": "https://cdnarfigyeloprodweu.azureedge.net/images/product-image-5998706500168.jpg",
+        "unit": "kg",
+        "unitTitle": "db",
+        "bulk": false,
+        "returnType": null,
+        "returnFee": 0,
+        "packaging": "0.4",
+        "categoryPath": "pekaru/kenyerfelek/teljeskiorlesu_kenyer_cipo",
+        "minUnitPrice": 447.5,
+        "pricesOfChainStores": [
+          {
+            "id": "55b678e0-4e02-49d7-86da-ba6fba862a7e",
+            "name": "Aldi",
+            "priceSameEverywhere": true,
+            "productMinAmount": 179.0,
+            "prices": [
+              {
+                "type": "NORMAL",
+                "amount": 179.0,
+                "unitAmount": 447.5,
+                "sameAmountEverywhere": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "5998706500205",
+        "name": "Kemencés Kedvenc Félbarna kenyér",
+        "imageUrl": "https://cdnarfigyeloprodweu.azureedge.net/images/product-image-5998706500205.jpg",
+        "unit": "kg",
+        "unitTitle": "db",
+        "bulk": false,
+        "returnType": null,
+        "returnFee": 0,
+        "packaging": "0.4",
+        "categoryPath": "pekaru/kenyerfelek/felbarnakenyer_cipo",
+        "minUnitPrice": 447.5,
+        "pricesOfChainStores": [
+          {
+            "id": "55b678e0-4e02-49d7-86da-ba6fba862a7e",
+            "name": "Aldi",
+            "priceSameEverywhere": true,
+            "productMinAmount": 179.0,
+            "prices": [
+              {
+                "type": "NORMAL",
+                "amount": 179.0,
+                "unitAmount": 447.5,
+                "sameAmountEverywhere": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "5998706906441",
+        "name": "Kemencés kedvencek  (teljes kiőrlésű kenyér és félbarna kenyér) vegyes karton, 400g",
+        "imageUrl": "https://cdnarfigyeloprodweu.azureedge.net/images/product-image-5998706906441.jpg",
+        "unit": "kg",
+        "unitTitle": "db",
+        "bulk": false,
+        "returnType": null,
+        "returnFee": 0,
+        "packaging": "0.4",
+        "categoryPath": "pekaru/kenyerfelek/teljeskiorlesu_kenyer_cipo",
+        "minUnitPrice": 447.5,
+        "pricesOfChainStores": [
+          {
+            "id": "f95031d8-84a5-4edf-b4fa-18b2cbae2ea1",
+            "name": "Lidl",
+            "priceSameEverywhere": true,
+            "productMinAmount": 179.0,
+            "prices": [
+              {
+                "type": "NORMAL",
+                "amount": 179.0,
+                "unitAmount": 447.5,
+                "sameAmountEverywhere": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "2000009139570",
+        "name": "Félbarna kenyér 1 kg",
+        "imageUrl": "https://cdnarfigyeloprodweu.azureedge.net/images/product-image-2000009139570.jpg",
+        "unit": "kg",
+        "unitTitle": "db",
+        "bulk": false,
+        "returnType": null,
+        "returnFee": 0,
+        "packaging": "1",
+        "categoryPath": "pekaru/kenyerfelek/felbarnakenyer_cipo",
+        "minUnitPrice": 499.0,
+        "pricesOfChainStores": [
+          {
+            "id": "e9cc63fd-52e0-4c1e-ba8d-d135d7285c63",
+            "name": "Auchan",
+            "priceSameEverywhere": true,
+            "productMinAmount": 499.0,
+            "prices": [
+              {
+                "type": "NORMAL",
+                "amount": 499.0,
+                "unitAmount": 499.0,
+                "sameAmountEverywhere": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "5998704301095",
+        "name": "Teljes kiőrlésű kenyér 400 g",
+        "imageUrl": "https://cdnarfigyeloprodweu.azureedge.net/images/product-image-5998704301095.jpg",
+        "unit": "kg",
+        "unitTitle": "db",
+        "bulk": false,
+        "returnType": null,
+        "returnFee": 0,
+        "packaging": "0.4",
+        "categoryPath": "pekaru/kenyerfelek/teljeskiorlesu_kenyer_cipo",
+        "minUnitPrice": 512.5,
+        "pricesOfChainStores": [
+          {
+            "id": "3ccc9f35-604c-4ccf-8376-64822ce4bc70",
+            "name": "Spar",
+            "priceSameEverywhere": true,
+            "productMinAmount": 205.0,
+            "prices": [
+              {
+                "type": "NORMAL",
+                "amount": 205.0,
+                "unitAmount": 512.5,
+                "sameAmountEverywhere": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "2000004155797",
+        "name": "Auchan Kedvenc félbarna kenyér 1 kg",
+        "imageUrl": "https://cdnarfigyeloprodweu.azureedge.net/images/product-image-2000004155797.jpg",
+        "unit": "kg",
+        "unitTitle": "db",
+        "bulk": false,
+        "returnType": null,
+        "returnFee": 0,
+        "packaging": "1",
+        "categoryPath": "pekaru/kenyerfelek/felbarnakenyer_cipo",
+        "minUnitPrice": 575.0,
+        "pricesOfChainStores": [
+          {
+            "id": "e9cc63fd-52e0-4c1e-ba8d-d135d7285c63",
+            "name": "Auchan",
+            "priceSameEverywhere": true,
+            "productMinAmount": 575.0,
+            "prices": [
+              {
+                "type": "NORMAL",
+                "amount": 575.0,
+                "unitAmount": 575.0,
+                "sameAmountEverywhere": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "2000008247801",
+        "name": "Auchan Kedvenc félbarna kenyér kovászos 1 kg",
+        "imageUrl": "https://cdnarfigyeloprodweu.azureedge.net/images/product-image-2000008247801.jpg",
+        "unit": "kg",
+        "unitTitle": "db",
+        "bulk": false,
+        "returnType": null,
+        "returnFee": 0,
+        "packaging": "1",
+        "categoryPath": "pekaru/kenyerfelek/felbarnakenyer_cipo",
+        "minUnitPrice": 575.0,
+        "pricesOfChainStores": [
+          {
+            "id": "e9cc63fd-52e0-4c1e-ba8d-d135d7285c63",
+            "name": "Auchan",
+            "priceSameEverywhere": true,
+            "productMinAmount": 575.0,
+            "prices": [
+              {
+                "type": "NORMAL",
+                "amount": 575.0,
+                "unitAmount": 575.0,
+                "sameAmountEverywhere": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "2000007534087",
+        "name": "Auchan Kedvenc vándor kenyér 500 g ",
+        "imageUrl": "https://cdnarfigyeloprodweu.azureedge.net/images/product-image-2000007534087.jpg",
+        "unit": "kg",
+        "unitTitle": "db",
+        "bulk": false,
+        "returnType": null,
+        "returnFee": 0,
+        "packaging": "0.5",
+        "categoryPath": "pekaru/kenyerfelek/rozskenyer_cipo",
+        "minUnitPrice": 578.0,
+        "pricesOfChainStores": [
+          {
+            "id": "e9cc63fd-52e0-4c1e-ba8d-d135d7285c63",
+            "name": "Auchan",
+            "priceSameEverywhere": true,
+            "productMinAmount": 289.0,
+            "prices": [
+              {
+                "type": "NORMAL",
+                "amount": 289.0,
+                "unitAmount": 578.0,
+                "sameAmountEverywhere": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "5998706902542",
+        "name": "Rozskenyér (szeletelt, csomagolt) 500g",
+        "imageUrl": "https://cdnarfigyeloprodweu.azureedge.net/images/product-image-5998706902542.jpg",
+        "unit": "kg",
+        "unitTitle": "db",
+        "bulk": false,
+        "returnType": null,
+        "returnFee": 0,
+        "packaging": "0.5",
+        "categoryPath": "pekaru/kenyerfelek/rozskenyer_cipo",
+        "minUnitPrice": 578.0,
+        "pricesOfChainStores": [
+          {
+            "id": "f95031d8-84a5-4edf-b4fa-18b2cbae2ea1",
+            "name": "Lidl",
+            "priceSameEverywhere": true,
+            "productMinAmount": 289.0,
+            "prices": [
+              {
+                "type": "NORMAL",
+                "amount": 289.0,
+                "unitAmount": 578.0,
+                "sameAmountEverywhere": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "aldi-58734",
+        "name": "Frissen a péktől E-Mentes szeletelt rozskenyér 500g",
+        "imageUrl": "https://cdnarfigyeloprodweu.azureedge.net/images/product-image-aldi-58734.jpg",
+        "unit": "kg",
+        "unitTitle": "db",
+        "bulk": false,
+        "returnType": null,
+        "returnFee": 0,
+        "packaging": "0.5",
+        "categoryPath": "pekaru/kenyerfelek/rozskenyer_cipo",
+        "minUnitPrice": 578.0,
+        "pricesOfChainStores": [
+          {
+            "id": "55b678e0-4e02-49d7-86da-ba6fba862a7e",
+            "name": "Aldi",
+            "priceSameEverywhere": true,
+            "productMinAmount": 289.0,
+            "prices": [
+              {
+                "type": "NORMAL",
+                "amount": 289.0,
+                "unitAmount": 578.0,
+                "sameAmountEverywhere": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "penny-14661",
+        "name": "Teljes kiőrlésű rozsos kenyér",
+        "imageUrl": "https://cdnarfigyeloprodweu.azureedge.net/images/product-image-penny-14661.jpg",
+        "unit": "kg",
+        "unitTitle": "db",
+        "bulk": false,
+        "returnType": null,
+        "returnFee": 0,
+        "packaging": "0.5",
+        "categoryPath": "pekaru/kenyerfelek/teljeskiorlesu_kenyer_cipo",
+        "minUnitPrice": 598.0,
+        "pricesOfChainStores": [
+          {
+            "id": "53b66cb6-a24f-420d-9861-d38757467d07",
+            "name": "Penny",
+            "priceSameEverywhere": true,
+            "productMinAmount": 299.0,
+            "prices": [
+              {
+                "type": "NORMAL",
+                "amount": 299.0,
+                "unitAmount": 598.0,
+                "sameAmountEverywhere": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "2000007216822",
+        "name": "Auchan Kedvenc fehér kenyér 1 kg",
+        "imageUrl": "https://cdnarfigyeloprodweu.azureedge.net/images/product-image-2000007216822.jpg",
+        "unit": "kg",
+        "unitTitle": "db",
+        "bulk": false,
+        "returnType": null,
+        "returnFee": 0,
+        "packaging": "1",
+        "categoryPath": "pekaru/kenyerfelek/feherkenyer_cipo",
+        "minUnitPrice": 599.0,
+        "pricesOfChainStores": [
+          {
+            "id": "e9cc63fd-52e0-4c1e-ba8d-d135d7285c63",
+            "name": "Auchan",
+            "priceSameEverywhere": true,
+            "productMinAmount": 599.0,
+            "prices": [
+              {
+                "type": "NORMAL",
+                "amount": 599.0,
+                "unitAmount": 599.0,
+                "sameAmountEverywhere": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "5997853155412",
+        "name": "Fehér kenyér 1 kg",
+        "imageUrl": "https://cdnarfigyeloprodweu.azureedge.net/images/product-image-5997853155412.jpg",
+        "unit": "kg",
+        "unitTitle": "db",
+        "bulk": false,
+        "returnType": null,
+        "returnFee": 0,
+        "packaging": "1",
+        "categoryPath": "pekaru/kenyerfelek/feherkenyer_cipo",
+        "minUnitPrice": 599.0,
+        "pricesOfChainStores": [
+          {
+            "id": "e9cc63fd-52e0-4c1e-ba8d-d135d7285c63",
+            "name": "Auchan",
+            "priceSameEverywhere": true,
+            "productMinAmount": 599.0,
+            "prices": [
+              {
+                "type": "NORMAL",
+                "amount": 599.0,
+                "unitAmount": 599.0,
+                "sameAmountEverywhere": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "5999501710233",
+        "name": "Fehér kenyér 1 kg",
+        "imageUrl": "https://cdnarfigyeloprodweu.azureedge.net/images/product-image-5999501710233.jpg",
+        "unit": "kg",
+        "unitTitle": "db",
+        "bulk": false,
+        "returnType": null,
+        "returnFee": 0,
+        "packaging": "1",
+        "categoryPath": "pekaru/kenyerfelek/feherkenyer_cipo",
+        "minUnitPrice": 599.0,
+        "pricesOfChainStores": [
+          {
+            "id": "3ccc9f35-604c-4ccf-8376-64822ce4bc70",
+            "name": "Spar",
+            "priceSameEverywhere": true,
+            "productMinAmount": 599.0,
+            "prices": [
+              {
+                "type": "NORMAL",
+                "amount": 599.0,
+                "unitAmount": 599.0,
+                "sameAmountEverywhere": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "5999885534081",
+        "name": "Félbarna kenyér 1000 g",
+        "imageUrl": "https://cdnarfigyeloprodweu.azureedge.net/images/product-image-5999885534081.jpg",
+        "unit": "kg",
+        "unitTitle": "db",
+        "bulk": false,
+        "returnType": null,
+        "returnFee": 0,
+        "packaging": "1",
+        "categoryPath": "pekaru/kenyerfelek/felbarnakenyer_cipo",
+        "minUnitPrice": 599.0,
+        "pricesOfChainStores": [
+          {
+            "id": "3ccc9f35-604c-4ccf-8376-64822ce4bc70",
+            "name": "Spar",
+            "priceSameEverywhere": true,
+            "productMinAmount": 599.0,
+            "prices": [
+              {
+                "type": "NORMAL",
+                "amount": 599.0,
+                "unitAmount": 599.0,
+                "sameAmountEverywhere": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "lidl-0004027",
+        "name": "Félbarna kenyér, 1kg",
+        "imageUrl": "https://cdnarfigyeloprodweu.azureedge.net/images/product-image-lidl-0004027.jpg",
+        "unit": "kg",
+        "unitTitle": "db",
+        "bulk": false,
+        "returnType": null,
+        "returnFee": 0,
+        "packaging": "1",
+        "categoryPath": "pekaru/kenyerfelek/felbarnakenyer_cipo",
+        "minUnitPrice": 599.0,
+        "pricesOfChainStores": [
+          {
+            "id": "f95031d8-84a5-4edf-b4fa-18b2cbae2ea1",
+            "name": "Lidl",
+            "priceSameEverywhere": true,
+            "productMinAmount": 599.0,
+            "prices": [
+              {
+                "type": "NORMAL",
+                "amount": 599.0,
+                "unitAmount": 599.0,
+                "sameAmountEverywhere": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "penny-1304",
+        "name": "Félbarna kenyér",
+        "imageUrl": "https://cdnarfigyeloprodweu.azureedge.net/images/product-image-penny-1304.jpg",
+        "unit": "kg",
+        "unitTitle": "db",
+        "bulk": false,
+        "returnType": null,
+        "returnFee": 0,
+        "packaging": "1",
+        "categoryPath": "pekaru/kenyerfelek/felbarnakenyer_cipo",
+        "minUnitPrice": 599.0,
+        "pricesOfChainStores": [
+          {
+            "id": "53b66cb6-a24f-420d-9861-d38757467d07",
+            "name": "Penny",
+            "priceSameEverywhere": true,
+            "productMinAmount": 599.0,
+            "prices": [
+              {
+                "type": "NORMAL",
+                "amount": 599.0,
+                "unitAmount": 599.0,
+                "sameAmountEverywhere": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "2000007199804",
+        "name": "Auchan Kedvenc szeletelt fehér kenyér 500 g",
+        "imageUrl": "https://cdnarfigyeloprodweu.azureedge.net/images/product-image-2000007199804.jpg",
+        "unit": "kg",
+        "unitTitle": "db",
+        "bulk": false,
+        "returnType": null,
+        "returnFee": 0,
+        "packaging": "0.5",
+        "categoryPath": "pekaru/kenyerfelek/feherkenyer_cipo",
+        "minUnitPrice": 618.0,
+        "pricesOfChainStores": [
+          {
+            "id": "e9cc63fd-52e0-4c1e-ba8d-d135d7285c63",
+            "name": "Auchan",
+            "priceSameEverywhere": true,
+            "productMinAmount": 309.0,
+            "prices": [
+              {
+                "type": "NORMAL",
+                "amount": 309.0,
+                "unitAmount": 618.0,
+                "sameAmountEverywhere": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "5998706500229",
+        "name": "Teljeskiőrlésű kenyér 400 g",
+        "imageUrl": "https://cdnarfigyeloprodweu.azureedge.net/images/product-image-5998706500229.jpg",
+        "unit": "kg",
+        "unitTitle": "db",
+        "bulk": false,
+        "returnType": null,
+        "returnFee": 0,
+        "packaging": "0.4",
+        "categoryPath": "pekaru/kenyerfelek/teljeskiorlesu_kenyer_cipo",
+        "minUnitPrice": 622.5,
+        "pricesOfChainStores": [
+          {
+            "id": "3ccc9f35-604c-4ccf-8376-64822ce4bc70",
+            "name": "Spar",
+            "priceSameEverywhere": true,
+            "productMinAmount": 249.0,
+            "prices": [
+              {
+                "type": "NORMAL",
+                "amount": 249.0,
+                "unitAmount": 622.5,
+                "sameAmountEverywhere": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "5999028602769",
+        "name": "Kanizsa Pékség szeletelt bajor rozscipó 500 g",
+        "imageUrl": "https://cdnarfigyeloprodweu.azureedge.net/images/product-image-5999028602769.jpg",
+        "unit": "kg",
+        "unitTitle": "db",
+        "bulk": false,
+        "returnType": null,
+        "returnFee": 0,
+        "packaging": "0.5",
+        "categoryPath": "pekaru/kenyerfelek/rozskenyer_cipo",
+        "minUnitPrice": 638.0,
+        "pricesOfChainStores": [
+          {
+            "id": "3ccc9f35-604c-4ccf-8376-64822ce4bc70",
+            "name": "Spar",
+            "priceSameEverywhere": true,
+            "productMinAmount": 319.0,
+            "prices": [
+              {
+                "type": "NORMAL",
+                "amount": 319.0,
+                "unitAmount": 638.0,
+                "sameAmountEverywhere": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "2000004155810",
+        "name": "Auchan Kedvenc félbarna kenyér szeletelt 1 kg ",
+        "imageUrl": "https://cdnarfigyeloprodweu.azureedge.net/images/product-image-2000004155810.jpg",
+        "unit": "kg",
+        "unitTitle": "db",
+        "bulk": false,
+        "returnType": null,
+        "returnFee": 0,
+        "packaging": "1",
+        "categoryPath": "pekaru/kenyerfelek/felbarnakenyer_cipo",
+        "minUnitPrice": 675.0,
+        "pricesOfChainStores": [
+          {
+            "id": "e9cc63fd-52e0-4c1e-ba8d-d135d7285c63",
+            "name": "Auchan",
+            "priceSameEverywhere": true,
+            "productMinAmount": 675.0,
+            "prices": [
+              {
+                "type": "NORMAL",
+                "amount": 675.0,
+                "unitAmount": 675.0,
+                "sameAmountEverywhere": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "count": 124
+  }
+}
