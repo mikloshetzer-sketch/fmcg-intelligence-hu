@@ -13,6 +13,7 @@ PRICE_PRODUCTS = DATA_DIR / "price-products.json"
 PRICE_SNAPSHOT = DATA_DIR / "price-snapshot.json"
 PRICE_INTELLIGENCE = DATA_DIR / "price-intelligence.json"
 PRICE_HISTORY = DATA_DIR / "price-history.json"
+PRICE_ANALYSIS = DATA_DIR / "price-analysis.json"
 
 ARFIGYELO_BASE = "https://arfigyelo.gvh.hu/api"
 
@@ -328,6 +329,144 @@ def calculate_price_index(price_products):
     return result
 
 
+def build_price_analysis(price_products, price_index_data):
+    cheapest_count = {company: 0 for company in COMPANIES}
+    most_expensive_count = {company: 0 for company in COMPANIES}
+    product_leaders = []
+    product_spreads = []
+
+    category_scores = {}
+    category_leaders = []
+
+    for product in price_products["products"]:
+        prices = {
+            company: float(price)
+            for company, price in product.get("prices", {}).items()
+            if price is not None and float(price) > 0
+        }
+
+        if len(prices) < 3:
+            continue
+
+        cheapest_company = min(prices, key=prices.get)
+        most_expensive_company = max(prices, key=prices.get)
+
+        cheapest_price = prices[cheapest_company]
+        most_expensive_price = prices[most_expensive_company]
+
+        average_price = sum(prices.values()) / len(prices)
+        spread_pct = ((most_expensive_price - cheapest_price) / cheapest_price) * 100 if cheapest_price > 0 else None
+
+        cheapest_count[cheapest_company] += 1
+        most_expensive_count[most_expensive_company] += 1
+
+        if spread_pct is None:
+            intensity = "n.a."
+        elif spread_pct <= 5:
+            intensity = "erős árverseny"
+        elif spread_pct <= 15:
+            intensity = "közepes árverseny"
+        else:
+            intensity = "nagy árszórás"
+
+        product_leaders.append({
+            "product": product["product"],
+            "category": product["category"],
+            "cheapest_company": cheapest_company,
+            "cheapest_price": round(cheapest_price, 2),
+            "most_expensive_company": most_expensive_company,
+            "most_expensive_price": round(most_expensive_price, 2),
+            "average_price": round(average_price, 2),
+            "spread_pct": round(spread_pct, 2) if spread_pct is not None else None,
+            "competition_intensity": intensity,
+            "coverage": len(prices)
+        })
+
+        product_spreads.append({
+            "product": product["product"],
+            "category": product["category"],
+            "spread_pct": round(spread_pct, 2) if spread_pct is not None else None,
+            "competition_intensity": intensity,
+            "coverage": len(prices)
+        })
+
+        category = product["category"]
+
+        if category not in category_scores:
+            category_scores[category] = {company: [] for company in COMPANIES}
+
+        for company in COMPANIES:
+            price = prices.get(company)
+
+            if price is None:
+                continue
+
+            category_scores[category][company].append((price / average_price) * 100)
+
+    for category, scores_by_company in category_scores.items():
+        category_indexes = []
+
+        for company, scores in scores_by_company.items():
+            if not scores:
+                continue
+
+            category_indexes.append({
+                "company": company,
+                "category_index": round(sum(scores) / len(scores)),
+                "coverage": len(scores)
+            })
+
+        category_indexes.sort(key=lambda item: item["category_index"])
+
+        category_leaders.append({
+            "category": category,
+            "leader": category_indexes[0]["company"] if category_indexes else None,
+            "leader_index": category_indexes[0]["category_index"] if category_indexes else None,
+            "ranking": category_indexes
+        })
+
+    product_leaders.sort(key=lambda item: item["spread_pct"] if item["spread_pct"] is not None else -1, reverse=True)
+    product_spreads.sort(key=lambda item: item["spread_pct"] if item["spread_pct"] is not None else -1, reverse=True)
+
+    value_scores = []
+
+    for company in COMPANIES:
+        price_index = price_index_data[company]["price_index"]
+
+        if price_index is None:
+            value_score = None
+        else:
+            value_score = round(200 - price_index)
+
+        value_scores.append({
+            "company": company,
+            "price_index": price_index,
+            "value_score": value_score,
+            "index_coverage": price_index_data[company]["index_coverage"]
+        })
+
+    value_scores.sort(key=lambda item: item["value_score"] if item["value_score"] is not None else -999, reverse=True)
+
+    return {
+        "updated_at": utc_now(),
+        "source": "GVH Árfigyelő API",
+        "status": "ok",
+        "method": "product-level price leadership and spread analysis",
+        "cheapest_count": [
+            {"company": company, "count": cheapest_count[company]}
+            for company in sorted(cheapest_count, key=cheapest_count.get, reverse=True)
+        ],
+        "most_expensive_count": [
+            {"company": company, "count": most_expensive_count[company]}
+            for company in sorted(most_expensive_count, key=most_expensive_count.get, reverse=True)
+        ],
+        "value_scores": value_scores,
+        "category_leaders": sorted(category_leaders, key=lambda item: item["category"]),
+        "product_leaders": product_leaders,
+        "product_spreads": product_spreads
+    }
+
+
 def load_history():
     return load_json(
         PRICE_HISTORY,
@@ -463,17 +602,20 @@ def main():
 
     snapshot = build_snapshot(company_totals, weekly_change)
     intelligence = build_price_intelligence(company_totals, price_index_data, weekly_change)
+    analysis = build_price_analysis(price_products, price_index_data)
     history = update_history(price_index_data)
 
     save_json(PRICE_PRODUCTS, price_products)
     save_json(PRICE_SNAPSHOT, snapshot)
     save_json(PRICE_INTELLIGENCE, intelligence)
+    save_json(PRICE_ANALYSIS, analysis)
     save_json(PRICE_HISTORY, history)
 
     print("Kész. Frissített fájlok:")
     print("-", PRICE_PRODUCTS)
     print("-", PRICE_SNAPSHOT)
     print("-", PRICE_INTELLIGENCE)
+    print("-", PRICE_ANALYSIS)
     print("-", PRICE_HISTORY)
 
 
