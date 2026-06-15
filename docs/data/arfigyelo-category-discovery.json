@@ -1,0 +1,1581 @@
+{
+  "updated_at": "2026-06-15T10:16:27Z",
+  "results": [
+    {
+      "url": "https://arfigyelo.gvh.hu/api/categories",
+      "status": 200,
+      "content_type": "application/json",
+      "json": true,
+      "summary": {
+        "type": "dict",
+        "keys": [
+          "categories"
+        ],
+        "sample": {
+          "categories": [
+            {
+              "id": 1001,
+              "name": "Tejtermék, sajt, tojás",
+              "path": "tejtermek_sajt_tojas",
+              "icon": null,
+              "categoryNodes": [
+                {
+                  "id": 2001,
+                  "name": "Tej",
+                  "path": "tejtermek_sajt_tojas/tej",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 1,
+                      "name": "Pasztőrözött ESL tej, 2,8% zsírtart.",
+                      "path": "tejtermek_sajt_tojas/tej/esl_28",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 2,
+                      "name": "Pasztőrözött ESL tej, 1,5% zsírtart.",
+                      "path": "tejtermek_sajt_tojas/tej/esl_15",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 3,
+                      "name": "UHT tej dobozban, 2,8% zsírtart.",
+                      "path": "tejtermek_sajt_tojas/tej/uht_28",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 4,
+                      "name": "UHT tej dobozban, 1,5% zsírtart.",
+                      "path": "tejtermek_sajt_tojas/tej/uht_15",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                },
+                {
+                  "id": 2005,
+                  "name": "Tejföl",
+                  "path": "tejtermek_sajt_tojas/tejfol",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 5,
+                      "name": "Tejföl 20% zsírtart.",
+                      "path": "tejtermek_sajt_tojas/tejfol/tejfol_20",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 6,
+                      "name": "Tejföl 12% zsírtart.",
+                      "path": "tejtermek_sajt_tojas/tejfol/tejfol_12",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                },
+                {
+                  "id": 2007,
+                  "name": "Joghurt, túró, kefír",
+                  "path": "tejtermek_sajt_tojas/joghurt_turo_kefir",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 7,
+                      "name": "Natúr joghurt",
+                      "path": "tejtermek_sajt_tojas/joghurt_turo_kefir/natur_joghurt",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 8,
+                      "name": "Kefir és kaukázusi kefir",
+                      "path": "tejtermek_sajt_tojas/joghurt_turo_kefir/kefir",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 9,
+                      "name": "Tehéntúró",
+                      "path": "tejtermek_sajt_tojas/joghurt_turo_kefir/tehenturo",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 84,
+                      "name": "Gyümölcsjoghurt",
+                      "path": "tejtermek_sajt_tojas/joghurt_turo_kefir/gyumolcsjoghurt",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                },
+                {
+                  "id": 2010,
+                  "name": "Sajt",
+                  "path": "tejtermek_sajt_tojas/sajt",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 10,
+                      "name": "Trappista tömbsajt",
+                      "path": "tejtermek_sajt_tojas/sajt/trappista_tombsajt",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 105,
+                      "name": "Trappista darabolt sajt",
+                      "path": "tejtermek_sajt_tojas/sajt/trappista_darabolt_sajt",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 106,
+                      "name": "Trappista szeletelt sajt",
+                      "path": "tejtermek_sajt_tojas/sajt/trappista_szeletelt_sajt",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 107,
+                      "name": "Ementáli",
+                      "path": "tejtermek_sajt_tojas/sajt/ementali",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 108,
+                      "name": "Cheddar",
+                      "path": "tejtermek_sajt_tojas/sajt/cheddar",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 109,
+                      "name": "Gouda",
+                      "path": "tejtermek_sajt_tojas/sajt/gouda",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 110,
+                      "name": "Edami",
+                      "path": "tejtermek_sajt_tojas/sajt/edami",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 111,
+                      "name": "Camambert",
+                      "path": "tejtermek_sajt_tojas/sajt/camambert",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 112,
+                      "name": "Brie",
+                      "path": "tejtermek_sajt_tojas/sajt/brie",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 113,
+                      "name": "Feta",
+                      "path": "tejtermek_sajt_tojas/sajt/feta",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 114,
+                      "name": "Mozzarella",
+                      "path": "tejtermek_sajt_tojas/sajt/mozzarella",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 115,
+                      "name": "Ömlesztett sajtok",
+                      "path": "tejtermek_sajt_tojas/sajt/omlesztettsajtok",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                },
+                {
+                  "id": 2011,
+                  "name": "Vajak, vajkrém, margarin",
+                  "path": "tejtermek_sajt_tojas/vaj_vajkrem_margarin",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 11,
+                      "name": "Margarin",
+                      "path": "tejtermek_sajt_tojas/vaj_vajkrem_margarin/margarin",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 12,
+                      "name": "Vaj",
+                      "path": "tejtermek_sajt_tojas/vaj_vajkrem_margarin/vaj",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 13,
+                      "name": "Vajkrém",
+                      "path": "tejtermek_sajt_tojas/vaj_vajkrem_margarin/vajkrem",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 63,
+                      "name": "Sütőmargarin",
+                      "path": "tejtermek_sajt_tojas/vaj_vajkrem_margarin/sutomargarin",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                },
+                {
+                  "id": 2014,
+                  "name": "Tojás",
+                  "path": "tejtermek_sajt_tojas/tojasok",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 14,
+                      "name": "Tojás",
+                      "path": "tejtermek_sajt_tojas/tojasok/tojas",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                },
+                {
+                  "id": 2081,
+                  "name": "Tejszín",
+                  "path": "tejtermek_sajt_tojas/tejszin",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 81,
+                      "name": "Főzőtejszín",
+                      "path": "tejtermek_sajt_tojas/tejszin/fozotejszin",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 82,
+                      "name": "Habtejszín",
+                      "path": "tejtermek_sajt_tojas/tejszin/habtejszin",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                },
+                {
+                  "id": 2116,
+                  "name": "Tejdesszert",
+                  "path": "tejtermek_sajt_tojas/tejdesszert",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 116,
+                      "name": "Túródesszert",
+                      "path": "tejtermek_sajt_tojas/tejdesszert/turodesszert",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 1015,
+              "name": "Hús, hal, felvágott",
+              "path": "hus_hal_felvagott",
+              "icon": null,
+              "categoryNodes": [
+                {
+                  "id": 2015,
+                  "name": "Sertés",
+                  "path": "hus_hal_felvagott/sertes",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 15,
+                      "name": "Sertéscomb",
+                      "path": "hus_hal_felvagott/sertes/sertes_comb",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 16,
+                      "name": "Sertéskaraj",
+                      "path": "hus_hal_felvagott/sertes/sertes_karaj",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 85,
+                      "name": "Darált sertéshús",
+                      "path": "hus_hal_felvagott/sertes/daralt_serteshus",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 118,
+                      "name": "Sertésoldalas",
+                      "path": "hus_hal_felvagott/sertes/sertesoldalas",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 119,
+                      "name": "Sertéstarja",
+                      "path": "hus_hal_felvagott/sertes/sertestarja",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                },
+                {
+                  "id": 2017,
+                  "name": "Szárnyasok",
+                  "path": "hus_hal_felvagott/szarnyas",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 17,
+                      "name": "Egész csirke és tyúk",
+                      "path": "hus_hal_felvagott/szarnyas/csirke_egesz",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 18,
+                      "name": "Csirkemellfilé",
+                      "path": "hus_hal_felvagott/szarnyas/csirkemell",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 19,
+                      "name": "Csirkecomb",
+                      "path": "hus_hal_felvagott/szarnyas/csirkecomb",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 20,
+                      "name": "Csirkeszárny",
+                      "path": "hus_hal_felvagott/szarnyas/csirkeszarny",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 21,
+                      "name": "Pulykamellfilé",
+                      "path": "hus_hal_felvagott/szarnyas/pulykamell",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                },
+                {
+                  "id": 2064,
+                  "name": "Marha",
+                  "path": "hus_hal_felvagott/marha",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 64,
+                      "name": "Marhalábszár",
+                      "path": "hus_hal_felvagott/marha/marhalabszar",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 86,
+                      "name": "Darált marhahús",
+                      "path": "hus_hal_felvagott/marha/daralt_marhahus",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 87,
+                      "name": "Fehérpecsenye",
+                      "path": "hus_hal_felvagott/marha/feherpecsenye",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                },
+                {
+                  "id": 2022,
+                  "name": "Egyéb húskészítmények",
+                  "path": "hus_hal_felvagott/egyeb_huskeszitmeny",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 22,
+                      "name": "Sertészsír",
+                      "path": "hus_hal_felvagott/egyeb_huskeszitmeny/sertes_zsir",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 23,
+                      "name": "Virsli",
+                      "path": "hus_hal_felvagott/egyeb_huskeszitmeny/virsli",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                },
+                {
+                  "id": 2024,
+                  "name": "Felvágottak",
+                  "path": "hus_hal_felvagott/felvagott",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 24,
+                      "name": "Párizsi",
+                      "path": "hus_hal_felvagott/felvagott/parizsi",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 25,
+                      "name": "Téliszalámi",
+                      "path": "hus_hal_felvagott/felvagott/teliszalami",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 26,
+                      "name": "Pulykamell sonka",
+                      "path": "hus_hal_felvagott/felvagott/sonka_pulykamell",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 27,
+                      "name": "Sonka, sertéscombból",
+                      "path": "hus_hal_felvagott/felvagott/sonka_sertescomb",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                },
+                {
+                  "id": 2088,
+                  "name": "Kolbász",
+                  "path": "hus_hal_felvagott/kolbasz",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 88,
+                      "name": "Szárazkolbász",
+                      "path": "hus_hal_felvagott/kolbasz/szarazkolbasz",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                },
+                {
+                  "id": 2089,
+                  "name": "Szalonna",
+                  "path": "hus_hal_felvagott/szalonna",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 89,
+                      "name": "Császárszalonna",
+                      "path": "hus_hal_felvagott/szalonna/csaszarszalonna",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 90,
+                      "name": "Kolozsvári szalonna",
+                      "path": "hus_hal_felvagott/szalonna/kolozsvariszalonna",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                },
+                {
+                  "id": 2091,
+                  "name": "Halak",
+                  "path": "hus_hal_felvagott/hal",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 91,
+                      "name": "Pontyszelet",
+                      "path": "hus_hal_felvagott/hal/pontyszelet",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 92,
+                      "name": "Harcsafilé",
+                      "path": "hus_hal_felvagott/hal/harcsafile",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 93,
+                      "name": "Tengeri halfilé",
+                      "path": "hus_hal_felvagott/hal/tengeri_halfile",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 1028,
+              "name": "Zöldség, gyümölcs",
+              "path": "zoldseg_gyumolcs",
+              "icon": null,
+              "categoryNodes": [
+                {
+                  "id": 2028,
+                  "name": "Gyümölcs",
+                  "path": "zoldseg_gyumolcs/gyumolcs",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 28,
+                      "name": "Alma",
+                      "path": "zoldseg_gyumolcs/gyumolcs/alma",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 29,
+                      "name": "Körte",
+                      "path": "zoldseg_gyumolcs/gyumolcs/korte",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 30,
+                      "name": "Földieper",
+                      "path": "zoldseg_gyumolcs/gyumolcs/foldieper",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 31,
+                      "name": "Banán",
+                      "path": "zoldseg_gyumolcs/gyumolcs/banan",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 32,
+                      "name": "Citrom",
+                      "path": "zoldseg_gyumolcs/gyumolcs/citrom",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 33,
+                      "name": "Narancs",
+                      "path": "zoldseg_gyumolcs/gyumolcs/narancs",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                },
+                {
+                  "id": 2034,
+                  "name": "Zöldség",
+                  "path": "zoldseg_gyumolcs/zoldseg",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 34,
+                      "name": "Paradicsom",
+                      "path": "zoldseg_gyumolcs/zoldseg/paradicsom",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 35,
+                      "name": "Zöldpaprika",
+                      "path": "zoldseg_gyumolcs/zoldseg/zoldpaprika",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 36,
+                      "name": "Sárgarépa",
+                      "path": "zoldseg_gyumolcs/zoldseg/sargarepa",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 37,
+                      "name": "Petrezselyemgyökér",
+                      "path": "zoldseg_gyumolcs/zoldseg/petrezselyemgyoker",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 38,
+                      "name": "Uborka",
+                      "path": "zoldseg_gyumolcs/zoldseg/uborka",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 39,
+                      "name": "Fokhagyma",
+                      "path": "zoldseg_gyumolcs/zoldseg/fokhagyma",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 40,
+                      "name": "Vöröshagyma",
+                      "path": "zoldseg_gyumolcs/zoldseg/voroshagyma",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 41,
+                      "name": "Étkezési burgonya",
+                      "path": "zoldseg_gyumolcs/zoldseg/burgonya",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 42,
+                      "name": "Étkezési újburgonya",
+                      "path": "zoldseg_gyumolcs/zoldseg/ujburgonya",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 43,
+                      "name": "Fejes káposzta",
+                      "path": "zoldseg_gyumolcs/zoldseg/fejeskaposzta",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 44,
+                      "name": "Kelkáposzta",
+                      "path": "zoldseg_gyumolcs/zoldseg/kelkaposzta",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 45,
+                      "name": "Karfiol",
+                      "path": "zoldseg_gyumolcs/zoldseg/karfiol",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 97,
+                      "name": "Brokkoli",
+                      "path": "zoldseg_gyumolcs/zoldseg/brokkoli",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                },
+                {
+                  "id": 2059,
+                  "name": "Fagyasztott zöldségek",
+                  "path": "zoldseg_gyumolcs/fagyasztott_zoldseg",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 59,
+                      "name": "Gyorsfagyasztott zöldborsó",
+                      "path": "zoldseg_gyumolcs/fagyasztott_zoldseg/gyorsfagyasztott_zoldborso",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 60,
+                      "name": "Hasábburgonya",
+                      "path": "zoldseg_gyumolcs/fagyasztott_zoldseg/hasabburgonya",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 98,
+                      "name": "Fagyasztott brokkoli",
+                      "path": "zoldseg_gyumolcs/fagyasztott_zoldseg/fagyasztott_brokkoli",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 1046,
+              "name": "Pékáru",
+              "path": "pekaru",
+              "icon": null,
+              "categoryNodes": [
+                {
+                  "id": 2046,
+                  "name": "Kenyérfélék",
+                  "path": "pekaru/kenyerfelek",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 46,
+                      "name": "Fehér kenyér, cipó és vekni",
+                      "path": "pekaru/kenyerfelek/feherkenyer_cipo",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 47,
+                      "name": "Félbarna kenyér, cipó és vekni",
+                      "path": "pekaru/kenyerfelek/felbarnakenyer_cipo",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 48,
+                      "name": "Teljes kiőrlésű kenyér, cipó és vekni",
+                      "path": "pekaru/kenyerfelek/teljeskiorlesu_kenyer_cipo",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 49,
+                      "name": "Rozsos kenyér, cipó és vekni",
+                      "path": "pekaru/kenyerfelek/rozskenyer_cipo",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                },
+                {
+                  "id": 2094,
+                  "name": "Zsemle",
+                  "path": "pekaru/zsemle",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 94,
+                      "name": "Zsemle",
+                      "path": "pekaru/zsemle/zsemle",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 1050,
+              "name": "Tartós élelmiszerek, italok",
+              "path": "tartos_elelmiszer_ital",
+              "icon": null,
+              "categoryNodes": [
+                {
+                  "id": 2050,
+                  "name": "Tészta, háztartási keksz",
+                  "path": "tartos_elelmiszer_ital/teszta_haztartasikeksz",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 50,
+                      "name": "Száraztészta",
+                      "path": "tartos_elelmiszer_ital/teszta_haztartasikeksz/szarazteszta",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 58,
+                      "name": "Háztartási keksz",
+                      "path": "tartos_elelmiszer_ital/teszta_haztartasikeksz/haztartasikeksz",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                },
+                {
+                  "id": 2051,
+                  "name": "Liszt, cukor, olaj",
+                  "path": "tartos_elelmiszer_ital/liszt_cukor_olaj",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 51,
+                      "name": "Étolaj, napraforgó",
+                      "path": "tartos_elelmiszer_ital/liszt_cukor_olaj/etolaj",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 52,
+                      "name": "Finomliszt",
+                      "path": "tartos_elelmiszer_ital/liszt_cukor_olaj/finomliszt",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 53,
+                      "name": "Rétesliszt",
+                      "path": "tartos_elelmiszer_ital/liszt_cukor_olaj/retesliszt",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 54,
+                      "name": "Kristálycukor",
+                      "path": "tartos_elelmiszer_ital/liszt_cukor_olaj/kristalycukor",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 55,
+                      "name": "Porcukor",
+                      "path": "tartos_elelmiszer_ital/liszt_cukor_olaj/porcukor",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 120,
+                      "name": "Extra szűz olívaolaj",
+                      "path": "tartos_elelmiszer_ital/liszt_cukor_olaj/extraszuzolivaolaj",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 121,
+                      "name": "Olívapogácsa olaj",
+                      "path": "tartos_elelmiszer_ital/liszt_cukor_olaj/olivapogacsaolaj",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                },
+                {
+                  "id": 2056,
+                  "name": "Konzervek, savanyúságok",
+                  "path": "tartos_elelmiszer_ital/konzerv_savanyusag",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 56,
+                      "name": "Csemegekukorica-konzerv",
+                      "path": "tartos_elelmiszer_ital/konzerv_savanyusag/csemegekukoricakonzerv",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 57,
+                      "name": "Csemegeuborka",
+                      "path": "tartos_elelmiszer_ital/konzerv_savanyusag/csemegeuborka",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                },
+                {
+                  "id": 2061,
+                  "name": "Víz, gyümölcslé",
+                  "path": "tartos_elelmiszer_ital/viz_gyumolcsle",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 61,
+                      "name": "Narancslé",
+                      "path": "tartos_elelmiszer_ital/viz_gyumolcsle/narancsle",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 62,
+                      "name": "Almalé",
+                      "path": "tartos_elelmiszer_ital/viz_gyumolcsle/almale",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 67,
+                      "name": "Ásványvíz",
+                      "path": "tartos_elelmiszer_ital/viz_gyumolcsle/asvanyviz",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                },
+                {
+                  "id": 2095,
+                  "name": "Rizs",
+                  "path": "tartos_elelmiszer_ital/rizs",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 95,
+                      "name": "Rizs",
+                      "path": "tartos_elelmiszer_ital/rizs/rizs",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                },
+                {
+                  "id": 2096,
+                  "name": "Hüvelyesek, magvak",
+                  "path": "tartos_elelmiszer_ital/huvelyesek_magvak",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 96,
+                      "name": "Lencse",
+                      "path": "tartos_elelmiszer_ital/huvelyesek_magvak/lencse",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 100,
+                      "name": "Földimogyoró",
+                      "path": "tartos_elelmiszer_ital/huvelyesek_magvak/foldimogyoro",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                },
+                {
+                  "id": 2101,
+                  "name": "Tea és kávé",
+                  "path": "tartos_elelmiszer_ital/tea_kave",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 101,
+                      "name": "Őrölt kávé",
+                      "path": "tartos_elelmiszer_ital/tea_kave/orolt_kave",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 102,
+                      "name": "Tea",
+                      "path": "tartos_elelmiszer_ital/tea_kave/tea",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 122,
+                      "name": "Szemes kávé",
+                      "path": "tartos_elelmiszer_ital/tea_kave/szemeskave",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                },
+                {
+                  "id": 2103,
+                  "name": "Kakaó",
+                  "path": "tartos_elelmiszer_ital/kakao",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 103,
+                      "name": "Kakaópor 10-12% kakaóvajjal",
+                      "path": "tartos_elelmiszer_ital/kakao/kakaopor_10_12",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 104,
+                      "name": "Kakaópor 20-22% kakaóvajjal",
+                      "path": "tartos_elelmiszer_ital/kakao/kakaopor_20_22",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 1068,
+              "name": "Speciális étrend",
+              "path": "specialis_etrend",
+              "icon": null,
+              "categoryNodes": [
+                {
+                  "id": 2068,
+                  "name": "Növényi termékek",
+                  "path": "specialis_etrend/novenyi_termekek",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 68,
+                      "name": "Növényi italok",
+                      "path": "specialis_etrend/novenyi_termekek/novenyi_italok",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 78,
+                      "name": "Tejföl helyettesítésére szolgáló vegán növényi krém",
+                      "path": "specialis_etrend/novenyi_termekek/vegan_novenyi_krem_tejfol",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 83,
+                      "name": "Tejszín helyettesítésére szolgáló növényi krém",
+                      "path": "specialis_etrend/novenyi_termekek/vegan_novenyi_krem_tejszin",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                },
+                {
+                  "id": 2069,
+                  "name": "Laktózmentes termékek",
+                  "path": "specialis_etrend/laktozmentes_termekek",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 69,
+                      "name": "Laktózmentes tej",
+                      "path": "specialis_etrend/laktozmentes_termekek/laktozmentes_tej",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 70,
+                      "name": "Laktózmentes tejföl",
+                      "path": "specialis_etrend/laktozmentes_termekek/laktozmentes_tejfol",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 71,
+                      "name": "Laktózmentes natúr joghurt",
+                      "path": "specialis_etrend/laktozmentes_termekek/laktozmentes_natur_joghurt",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 72,
+                      "name": "Laktózmentes kefir",
+                      "path": "specialis_etrend/laktozmentes_termekek/laktozmentes_kefir",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 73,
+                      "name": "Laktózmentes túró",
+                      "path": "specialis_etrend/laktozmentes_termekek/laktozmentes_turo",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 74,
+                      "name": "Laktózmentes trappista sajt",
+                      "path": "specialis_etrend/laktozmentes_termekek/laktozmentes_trappista_sajt",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 75,
+                      "name": "Laktózmentes margarin és sütőmargarin",
+                      "path": "specialis_etrend/laktozmentes_termekek/laktozmentes_margarin_sutomargarin",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 76,
+                      "name": "Laktózmentes vaj",
+                      "path": "specialis_etrend/laktozmentes_termekek/laktozmentes_vaj",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 77,
+                      "name": "Laktózmentes vajkrém",
+                      "path": "specialis_etrend/laktozmentes_termekek/laktozmentes_vajkrem",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                },
+                {
+                  "id": 2079,
+                  "name": "Gluténmentes termékek",
+                  "path": "specialis_etrend/glutenmentes_termekek",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 79,
+                      "name": "Gluténmentes kenyér, cipó és vekni",
+                      "path": "specialis_etrend/glutenmentes_termekek/glutenmentes_kenyer_cipo_vekni",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 80,
+                      "name": "Gluténmentes száraztészta",
+                      "path": "specialis_etrend/glutenmentes_termekek/glutozmentes_szarazteszta",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 99,
+                      "name": "Gluténmentes liszt",
+                      "path": "specialis_etrend/glutenmentes_termekek/glutenmentes_liszt",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                },
+                {
+                  "id": 2117,
+                  "name": "Laktózmentes tejdesszert",
+                  "path": "specialis_etrend/laktozmentestejdesszert",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 117,
+                      "name": "Laktózmentes túródesszert",
+                      "path": "specialis_etrend/laktozmentestejdesszert/laktozmentesturodesszert",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 1123,
+              "name": "Baba",
+              "path": "baba",
+              "icon": null,
+              "categoryNodes": [
+                {
+                  "id": 2123,
+                  "name": "Bébiétel, tápszer",
+                  "path": "baba/bebietel_tapszer",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 123,
+                      "name": "Pépes bébiétel",
+                      "path": "baba/bebietel_tapszer/pepesbebietel",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 124,
+                      "name": "Tej- és gabonapép",
+                      "path": "baba/bebietel_tapszer/tej_gabonapep",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 125,
+                      "name": "Tápszer",
+                      "path": "baba/bebietel_tapszer/tapszer",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                },
+                {
+                  "id": 2142,
+                  "name": "Babaápolás",
+                  "path": "baba/babaapolas",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 142,
+                      "name": "Babasampon",
+                      "path": "baba/babaapolas/babasampon",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 144,
+                      "name": "Babatusfürdő és fürdető",
+                      "path": "baba/babaapolas/babatusfurdo_furdeto",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 150,
+                      "name": "Babatestápló",
+                      "path": "baba/babaapolas/babatestaplo",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 163,
+                      "name": "Hintőpor",
+                      "path": "baba/babaapolas/hintopor",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                },
+                {
+                  "id": 2161,
+                  "name": "Eldobható pelenka",
+                  "path": "baba/eldobhatopelenka",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 161,
+                      "name": "Nadrágpelenka",
+                      "path": "baba/eldobhatopelenka/nadragpelenka",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 162,
+                      "name": "Bugyipelenka",
+                      "path": "baba/eldobhatopelenka/bugyipelenka",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 1126,
+              "name": "Háztartás",
+              "path": "haztartas",
+              "icon": null,
+              "categoryNodes": [
+                {
+                  "id": 2126,
+                  "name": "Háztartási papíráru és csomagoló",
+                  "path": "haztartas/haztartasi_papiraru_csomagolo",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 126,
+                      "name": "Toalettpapír",
+                      "path": "haztartas/haztartasi_papiraru_csomagolo/toalettpapir",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 127,
+                      "name": "Papír kéztörlő henger",
+                      "path": "haztartas/haztartasi_papiraru_csomagolo/papirkeztorlohenger",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 128,
+                      "name": "Papír zsebkendő",
+                      "path": "haztartas/haztartasi_papiraru_csomagolo/papirzsebkendo",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 129,
+                      "name": "Alufólia",
+                      "path": "haztartas/haztartasi_papiraru_csomagolo/alufolia",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                },
+                {
+                  "id": 2130,
+                  "name": "Ruhatisztítás",
+                  "path": "haztartas/ruhatisztitas",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 130,
+                      "name": "Mosópor",
+                      "path": "haztartas/ruhatisztitas/mosopor",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 131,
+                      "name": "Folyékony mosószer",
+                      "path": "haztartas/ruhatisztitas/folyekonymososzer",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 132,
+                      "name": "Mosókapszula",
+                      "path": "haztartas/ruhatisztitas/mosokapszula",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 133,
+                      "name": "Öblítő",
+                      "path": "haztartas/ruhatisztitas/oblito",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                },
+                {
+                  "id": 2134,
+                  "name": "Tisztítószer",
+                  "path": "haztartas/tisztitoszer",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 134,
+                      "name": "Mosogatószer",
+                      "path": "haztartas/tisztitoszer/mosogatoszer",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 135,
+                      "name": "Gépi mosogató tabletta",
+                      "path": "haztartas/tisztitoszer/gepimosogatotabletta",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 136,
+                      "name": "Folyékony súrolószer",
+                      "path": "haztartas/tisztitoszer/folyekonysuroloszer",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 137,
+                      "name": "Általános tisztítószer",
+                      "path": "haztartas/tisztitoszer/altalanostisztitoszer",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 1138,
+              "name": "Szépség és higiénia",
+              "path": "szepseg_higienia",
+              "icon": null,
+              "categoryNodes": [
+                {
+                  "id": 2138,
+                  "name": "Tisztálkodás",
+                  "path": "szepseg_higienia/tisztalkodas",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 138,
+                      "name": "Folyékony szappan",
+                      "path": "szepseg_higienia/tisztalkodas/folyekonyszappan",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 139,
+                      "name": "Szappan",
+                      "path": "szepseg_higienia/tisztalkodas/szappan",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 140,
+                      "name": "Kézfertőtlenítő gél",
+                      "path": "szepseg_higienia/tisztalkodas/kezfertotlenitogel",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 141,
+                      "name": "Sampon",
+                      "path": "szepseg_higienia/tisztalkodas/sampon",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 143,
+                      "name": "Tusfürdő",
+                      "path": "szepseg_higienia/tisztalkodas/tusfurdo",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 145,
+                      "name": "Fogkrém",
+                      "path": "szepseg_higienia/tisztalkodas/fogkrem",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 146,
+                      "name": "Gyermek fogkrém",
+                      "path": "szepseg_higienia/tisztalkodas/gyermekfogkrem",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 147,
+                      "name": "Fogkefe",
+                      "path": "szepseg_higienia/tisztalkodas/fogkefe",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 148,
+                      "name": "Gyermek fogkefe",
+                      "path": "szepseg_higienia/tisztalkodas/gyermekfogkefe",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                },
+                {
+                  "id": 2149,
+                  "name": "Szépségápolás",
+                  "path": "szepseg_higienia/szepsegapolas",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 149,
+                      "name": "Testápoló",
+                      "path": "szepseg_higienia/szepsegapolas/testapolo",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 151,
+                      "name": "Golyós dezodor",
+                      "path": "szepseg_higienia/szepsegapolas/golyosdezodor",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 152,
+                      "name": "Izzadásgátló stift",
+                      "path": "szepseg_higienia/szepsegapolas/izzadasgatlostift",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 153,
+                      "name": "Dezodor",
+                      "path": "szepseg_higienia/szepsegapolas/dezodor",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 154,
+                      "name": "Eldobható borotva",
+                      "path": "szepseg_higienia/szepsegapolas/eldobhatoborotva",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 155,
+                      "name": "Utántöltő borotvafej",
+                      "path": "szepseg_higienia/szepsegapolas/utantoltoborotvafej",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 156,
+                      "name": "Borotvahab",
+                      "path": "szepseg_higienia/szepsegapolas/borotvahab",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 157,
+                      "name": "Borotvazselé",
+                      "path": "szepseg_higienia/szepsegapolas/borotvazsele",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                },
+                {
+                  "id": 2158,
+                  "name": "Intim higiénia",
+                  "path": "szepseg_higienia/intimhigienia",
+                  "icon": null,
+                  "categoryNodes": [
+                    {
+                      "id": 158,
+                      "name": "Egészségügyi betét",
+                      "path": "szepseg_higienia/intimhigienia/egeszsegugyibetet",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 159,
+                      "name": "Tisztasági betét",
+                      "path": "szepseg_higienia/intimhigienia/tisztasagibetet",
+                      "icon": null,
+                      "categoryNodes": []
+                    },
+                    {
+                      "id": 160,
+                      "name": "Tampon",
+                      "path": "szepseg_higienia/intimhigienia/tampon",
+                      "icon": null,
+                      "categoryNodes": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "url": "https://arfigyelo.gvh.hu/api/product-categories",
+      "status": "error",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://arfigyelo.gvh.hu/api/category",
+      "status": "error",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://arfigyelo.gvh.hu/api/categories/tree",
+      "status": "error",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://arfigyelo.gvh.hu/api/menu",
+      "status": "error",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://arfigyelo.gvh.hu/api/filters",
+      "status": "error",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ]
+}
