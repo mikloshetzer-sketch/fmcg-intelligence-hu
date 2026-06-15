@@ -1,0 +1,32 @@
+name: Inspect GVH Arfigyelo API
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  inspect-arfigyelo-api:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run API inspection script
+        run: |
+          python scripts/inspect-arfigyelo-api.py
+
+      - name: Commit inspection result
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add docs/data/arfigyelo-api-inspection.json
+          git commit -m "Inspect GVH Arfigyelo API" || echo "No changes to commit"
+          git push
