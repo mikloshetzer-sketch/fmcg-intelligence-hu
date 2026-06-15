@@ -31,7 +31,7 @@
       <div class="hero-kicker">Executive dashboard</div>
       <h1>Magyar FMCG szereplők gazdasági és hálózati összehasonlítása</h1>
       <p>
-        A főoldal a gazdasági főmutatókat és az üzlethálózati adatokat mutatja.
+        A főoldal a gazdasági főmutatókat, az üzlethálózati adatokat és az árverseny első benchmark mutatóit mutatja.
         A humán mutatók külön oldalon szerepelnek, hogy a fő dashboard tiszta vezetői áttekintés maradjon.
       </p>
 
@@ -69,6 +69,58 @@
         <div class="kpi-label">Vizsgált szereplők</div>
         <div class="kpi" id="kpiCompanies">–</div>
         <div class="kpi-sub">aktív vállalati adatprofil</div>
+      </div>
+
+      <div class="card span12">
+        <div class="section-title">
+          <h2>Retail Price Intelligence</h2>
+          <span>árkosár, heti árváltozás és fogyasztói árverseny</span>
+        </div>
+
+        <div class="grid" style="margin-top:0">
+          <div class="card span4" style="box-shadow:none;border:1px solid #e5edf5">
+            <div class="kpi-label">Legolcsóbb árkosár</div>
+            <div class="kpi" id="kpiPriceLeader">–</div>
+            <div class="kpi-sub" id="kpiPriceLeaderSub">árindex alapján</div>
+          </div>
+
+          <div class="card span4" style="box-shadow:none;border:1px solid #e5edf5">
+            <div class="kpi-label">Átlagos árindex</div>
+            <div class="kpi" id="kpiAveragePriceIndex">–</div>
+            <div class="kpi-sub">100 = hat szereplő benchmark átlaga</div>
+          </div>
+
+          <div class="card span4" style="box-shadow:none;border:1px solid #e5edf5">
+            <div class="kpi-label">Legnagyobb heti árcsökkenés</div>
+            <div class="kpi" id="kpiBestWeeklyChange">–</div>
+            <div class="kpi-sub" id="kpiBestWeeklyChangeSub">heti változás</div>
+          </div>
+        </div>
+
+        <div class="grid" style="margin-top:14px">
+          <div class="card span6" style="box-shadow:none;border:1px solid #e5edf5">
+            <div class="section-title">
+              <h2>Árverseny rangsor</h2>
+              <span>alacsonyabb érték = kedvezőbb árkosár</span>
+            </div>
+            <div id="priceRankingTable"></div>
+          </div>
+
+          <div class="card span6" style="box-shadow:none;border:1px solid #e5edf5">
+            <div class="section-title">
+              <h2>Heti árváltozás</h2>
+              <span>százalékos elmozdulás</span>
+            </div>
+            <div class="chartbox">
+              <canvas id="priceWeeklyChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="notice" style="margin-top:14px">
+          Az ármodul jelenleg a saját árkosár-alapú Price Intelligence adatfájlból dolgozik.
+          A következő fejlesztési fázisban a GVH Árfigyelőből, akciós újságokból és vállalati oldalakból érkező adatokkal bővíthető.
+        </div>
       </div>
 
       <div class="card span5">
@@ -178,22 +230,23 @@
           <span>következő bővítési kör</span>
         </div>
         <div class="notice">
-          A fő dashboardon a gazdasági főmutatók és az üzlethálózati adatok jelennek meg.
+          A fő dashboardon a gazdasági főmutatók, az üzlethálózati adatok és az árverseny első mutatói jelennek meg.
           A humán mutatókat külön oldalon kezeljük. A következő adatgyűjtési körben érdemes bevonni
           a KSH, e-beszámoló, vállalati beszámolók, álláshirdetések, sajtóközlemények,
-          NielsenIQ, Circana, Trade Magazin, Store Insider és Portfolio nyilvános adatait.
+          NielsenIQ, Circana, Trade Magazin, Store Insider, Portfolio, GVH Árfigyelő és vállalati árkommunikáció nyilvános adatait.
         </div>
       </div>
     </div>
   </main>
 
   <footer class="footer">
-    FMCG Intelligence Hungary – fő dashboard. A dashboard a gazdasági és hálózati mutatókat különíti el a humán mutatóktól.
+    FMCG Intelligence Hungary – fő dashboard. A dashboard a gazdasági, hálózati és árverseny mutatókat különíti el a humán mutatóktól.
   </footer>
 
   <script>
     const companiesUrl = './data/companies.json';
     const storesUrl = './data/stores.json';
+    const priceIntelligenceUrl = './data/price-intelligence.json';
 
     function n(v){
       return v === null || v === undefined || v === '' ? 'n.a.' : v;
@@ -250,9 +303,13 @@
 
     async function loadData(){
       try{
-        const [companies, stores] = await Promise.all([
+        const [companies, stores, priceData] = await Promise.all([
           fetchJson(companiesUrl),
-          fetchJson(storesUrl)
+          fetchJson(storesUrl),
+          fetchJson(priceIntelligenceUrl).catch(error => {
+            console.warn('Price Intelligence adat nem érhető el:', error.message);
+            return null;
+          })
         ]);
 
         const storesById = new Map(stores.map(s => [s.id, s]));
@@ -267,13 +324,21 @@
         });
 
         renderDashboard(companies);
+
+        if(priceData){
+          renderPriceIntelligence(priceData);
+        }else{
+          renderPriceFallback();
+        }
+
       }catch(error){
         showError(
           '<b>Adatbetöltési hiba.</b><br>' +
           error.message +
           '<br><br>Ellenőrizd, hogy elérhető-e:<br>' +
           '<b>/fmcg-intelligence-hu/data/companies.json</b><br>' +
-          '<b>/fmcg-intelligence-hu/data/stores.json</b>'
+          '<b>/fmcg-intelligence-hu/data/stores.json</b><br>' +
+          '<b>/fmcg-intelligence-hu/data/price-intelligence.json</b>'
         );
         console.error(error);
       }
@@ -301,6 +366,79 @@
       renderFormatBox(companies);
       renderInsight(ranked, byRevenue, byStores, byRevenuePerStore);
       renderSummaryTable(ranked);
+    }
+
+    function renderPriceIntelligence(priceData){
+      const ranking = Array.isArray(priceData.ranking) ? [...priceData.ranking] : [];
+      const weekly = Array.isArray(priceData.weekly_change) ? [...priceData.weekly_change] : [];
+
+      if(!ranking.length){
+        renderPriceFallback();
+        return;
+      }
+
+      ranking.sort((a,b) => num(a.price_index,999) - num(b.price_index,999));
+      weekly.sort((a,b) => num(a.change_pct,999) - num(b.change_pct,999));
+
+      const leader = ranking[0];
+      const avgIndex = ranking.reduce((sum,item) => sum + num(item.price_index,0), 0) / ranking.length;
+      const bestChange = weekly[0];
+
+      document.getElementById('kpiPriceLeader').textContent = leader ? leader.company : 'n.a.';
+      document.getElementById('kpiPriceLeaderSub').textContent = leader ? 'árindex: ' + fmtNum(leader.price_index) : 'árindex alapján';
+
+      document.getElementById('kpiAveragePriceIndex').textContent = Number(avgIndex).toLocaleString('hu-HU', {maximumFractionDigits:1});
+
+      document.getElementById('kpiBestWeeklyChange').textContent = bestChange ? bestChange.company : 'n.a.';
+      document.getElementById('kpiBestWeeklyChangeSub').textContent = bestChange ? fmtPct(bestChange.change_pct) : 'heti változás';
+
+      const rows = ranking.map((item, index) => {
+        const cls = index === 0 ? 'one' : index === 1 ? 'two' : index === 2 ? 'three' : '';
+        const width = Math.max(5, Math.min(100, num(item.price_index,0)));
+        return `
+          <div class="rank-row">
+            <div class="rank ${cls}">${index + 1}</div>
+            <div>
+              <div style="font-weight:900;color:var(--navy)">${item.company}</div>
+              <div class="small">árkosár benchmark</div>
+            </div>
+            <div>
+              <div class="metric-value">${fmtNum(item.price_index)}</div>
+              <div class="bar"><div class="fill" style="width:${width}%"></div></div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      document.getElementById('priceRankingTable').innerHTML = rows;
+
+      new Chart(document.getElementById('priceWeeklyChart'), {
+        type:'bar',
+        data:{
+          labels:weekly.map(item => item.company),
+          datasets:[
+            {label:'Heti árváltozás, %', data:weekly.map(item => num(item.change_pct,0))}
+          ]
+        },
+        options:{
+          responsive:true,
+          maintainAspectRatio:false,
+          plugins:{legend:{labels:{color:'#16324f'}}},
+          scales:{
+            x:{ticks:{color:'#64748b'},grid:{color:'#eef3f7'}},
+            y:{ticks:{color:'#64748b'},grid:{color:'#eef3f7'}}
+          }
+        }
+      });
+    }
+
+    function renderPriceFallback(){
+      document.getElementById('kpiPriceLeader').textContent = 'n.a.';
+      document.getElementById('kpiPriceLeaderSub').textContent = 'nincs betöltött árindex';
+      document.getElementById('kpiAveragePriceIndex').textContent = 'n.a.';
+      document.getElementById('kpiBestWeeklyChange').textContent = 'n.a.';
+      document.getElementById('kpiBestWeeklyChangeSub').textContent = 'nincs heti adat';
+      document.getElementById('priceRankingTable').innerHTML = '<div class="notice">A Price Intelligence adatfájl még nem érhető el.</div>';
     }
 
     function renderRanking(companies){
@@ -457,7 +595,7 @@
         text += `Az árbevétel / üzlet mutatóban <b>${byRevenuePerStore[0].company}</b> emelkedik ki, ${fmtBn(byRevenuePerStore[0].revenue_per_store)} / üzlet értékkel. `;
       }
 
-      text += `A humán mutatók külön oldalon szerepelnek, így a fő dashboard tisztán a gazdasági és hálózati képet mutatja.`;
+      text += `Az árverseny külön Price Intelligence blokkban jelenik meg, így a fő dashboard már nemcsak vállalati teljesítményt, hanem fogyasztói árpozíciót is mutat.`;
 
       document.getElementById('autoInsight').innerHTML = text;
     }
