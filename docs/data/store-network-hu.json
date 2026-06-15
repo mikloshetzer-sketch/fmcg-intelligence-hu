@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-09T13:21:25.205649+00:00",
+  "updated_at": "2026-06-15T09:34:06.787483+00:00",
   "version": "store-network-hu-v2.0-non-lidl-osm",
   "scope": "Hungarian FMCG store network from OSM + optional overrides",
   "method_note": "Ez a verzió Lidl nélkül építi a bolthálózatot. ALDI, SPAR, Tesco, Auchan és Penny OSM/Overpass alapján frissül. Ha egy láncra 0 találat jön, a script megtartja a korábbi store-network-hu.json adott láncra vonatkozó adatait. Lidl külön, saját üzletlista alapján kerül majd be.",
@@ -20711,6 +20711,27 @@
       ]
     },
     {
+      "store_id": "tesco_budapest_tesco_483596662",
+      "company": "Tesco",
+      "name": "Tesco",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1152 Budapest, Szentmihályi út 131",
+      "lat": 47.551792,
+      "lon": 19.13918,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 483596662,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco",
+        "Tesco Budapest",
+        "1152 Budapest, Szentmihályi út 131"
+      ]
+    },
+    {
       "store_id": "tesco_budapest_tesco_866731937",
       "company": "Tesco",
       "name": "Tesco",
@@ -20718,8 +20739,8 @@
       "area": "Budapest",
       "region": "Közép-Magyarország",
       "address": "1117 Budapest, Hengermalom út 19-21",
-      "lat": 47.458997,
-      "lon": 19.051365,
+      "lat": 47.458944,
+      "lon": 19.051452,
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 866731937,
@@ -20813,6 +20834,48 @@
         "Tesco",
         "Tesco Budapest",
         "1202 Budapest, Mártírok útja 281"
+      ]
+    },
+    {
+      "store_id": "tesco_budapest_tesco_131174319",
+      "company": "Tesco",
+      "name": "Tesco",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1097 Budapest, Koppány utca 2-4",
+      "lat": 47.466148,
+      "lon": 19.079641,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 131174319,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco",
+        "Tesco Budapest",
+        "1097 Budapest, Koppány utca 2-4"
+      ]
+    },
+    {
+      "store_id": "tesco_budapest_tesco_173493269",
+      "company": "Tesco",
+      "name": "Tesco",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1044 Budapest, Garam utca 3",
+      "lat": 47.570072,
+      "lon": 19.078899,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 173493269,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco",
+        "Tesco Budapest",
+        "1044 Budapest, Garam utca 3"
       ]
     },
     {
@@ -20981,6 +21044,27 @@
         "Tesco Expressz",
         "Tesco Budapest",
         "1119 Budapest, Andor utca 2"
+      ]
+    },
+    {
+      "store_id": "tesco_budapest_tesco_expressz_1232504673",
+      "company": "Tesco",
+      "name": "Tesco Expressz",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1131 Budapest, Reitter Ferenc utca 132",
+      "lat": 47.540318,
+      "lon": 19.090753,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 1232504673,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco Expressz",
+        "Tesco Budapest",
+        "1131 Budapest, Reitter Ferenc utca 132"
       ]
     },
     {
@@ -22103,7 +22187,7 @@
       "city": "Hatvan",
       "area": "Hatvan",
       "region": "n.a.",
-      "address": "3000 Hatvan, Bibó István út 1",
+      "address": "3000 Hatvan, Bibó István utca 1",
       "lat": 47.678541,
       "lon": 19.666296,
       "source": "openstreetmap_overpass",
@@ -22114,7 +22198,7 @@
       "keywords": [
         "Tesco",
         "Tesco Hatvan",
-        "3000 Hatvan, Bibó István út 1"
+        "3000 Hatvan, Bibó István utca 1"
       ]
     },
     {
@@ -24173,27 +24257,6 @@
         "Tesco",
         "Tesco Zirc",
         "8420 Zirc, Állomás utca 5"
-      ]
-    },
-    {
-      "store_id": "tesco_na_tesco_13904233110",
-      "company": "Tesco",
-      "name": "Tesco",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.551878,
-      "lon": 19.139225,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 13904233110,
-      "brand": "Tesco",
-      "operator": "",
-      "keywords": [
-        "Tesco",
-        "Tesco n.a.",
-        "n.a."
       ]
     },
     {
