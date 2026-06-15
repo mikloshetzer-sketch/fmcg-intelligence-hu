@@ -201,6 +201,40 @@
           </div>
         </div>
 
+        <div class="grid" style="margin-top:14px">
+          <div class="card span3" style="box-shadow:none;border:1px solid #e5edf5">
+            <div class="section-title">
+              <h2>Value Score</h2>
+              <span>magasabb érték = jobb árérték</span>
+            </div>
+            <div id="priceValueScoreBox"></div>
+          </div>
+
+          <div class="card span3" style="box-shadow:none;border:1px solid #e5edf5">
+            <div class="section-title">
+              <h2>Árvezető termékek</h2>
+              <span>hány termékben legolcsóbb</span>
+            </div>
+            <div id="priceCheapestCountBox"></div>
+          </div>
+
+          <div class="card span3" style="box-shadow:none;border:1px solid #e5edf5">
+            <div class="section-title">
+              <h2>Árstratégiai profil</h2>
+              <span>legolcsóbb + legdrágább pozíciók</span>
+            </div>
+            <div id="pricePersonalityBox"></div>
+          </div>
+
+          <div class="card span3" style="box-shadow:none;border:1px solid #e5edf5">
+            <div class="section-title">
+              <h2>Árérzékenységi térkép</h2>
+              <span>termékek árszórás szerint</span>
+            </div>
+            <div id="priceSensitivityBox"></div>
+          </div>
+        </div>
+
         <div class="notice" style="margin-top:14px">
           Az ármodul a GVH Árfigyelő API-ból frissül. A felső rangsor termékszintű relatív indexet használ.
           A kategória-mini chartok termékköri pozíciót mutatnak, az alsó mini chartok pedig egy-egy konkrét termék árát hasonlítják össze a hat lánc között.
@@ -332,6 +366,7 @@
     const storesUrl = './data/stores.json';
     const priceIntelligenceUrl = './data/price-intelligence.json';
     const priceProductsUrl = './data/price-products.json';
+    const priceAnalysisUrl = './data/price-analysis.json';
 
     function n(v){
       return v === null || v === undefined || v === '' ? 'n.a.' : v;
@@ -393,7 +428,7 @@
 
     async function loadData(){
       try{
-        const [companies, stores, priceData, priceProducts] = await Promise.all([
+        const [companies, stores, priceData, priceProducts, priceAnalysis] = await Promise.all([
           fetchJson(companiesUrl),
           fetchJson(storesUrl),
           fetchJson(priceIntelligenceUrl).catch(error => {
@@ -402,6 +437,10 @@
           }),
           fetchJson(priceProductsUrl).catch(error => {
             console.warn('Price Products adat nem érhető el:', error.message);
+            return null;
+          }),
+          fetchJson(priceAnalysisUrl).catch(error => {
+            console.warn('Price Analysis adat nem érhető el:', error.message);
             return null;
           })
         ]);
@@ -430,6 +469,10 @@
           renderPriceProductMiniCharts(priceProducts);
         }
 
+        if(priceAnalysis){
+          renderPriceAnalysis(priceAnalysis);
+        }
+
       }catch(error){
         showError(
           '<b>Adatbetöltési hiba.</b><br>' +
@@ -438,7 +481,8 @@
           '<b>/fmcg-intelligence-hu/data/companies.json</b><br>' +
           '<b>/fmcg-intelligence-hu/data/stores.json</b><br>' +
           '<b>/fmcg-intelligence-hu/data/price-intelligence.json</b><br>' +
-          '<b>/fmcg-intelligence-hu/data/price-products.json</b>'
+          '<b>/fmcg-intelligence-hu/data/price-products.json</b><br>' +
+          '<b>/fmcg-intelligence-hu/data/price-analysis.json</b>'
         );
         console.error(error);
       }
@@ -708,6 +752,109 @@
         'priceProductFlourChart',
         findProduct(products, '52')
       );
+    }
+
+
+    function renderMetricList(targetId, rows, valueKey, suffix = ''){
+      const target = document.getElementById(targetId);
+      if(!target) return;
+
+      if(!rows || !rows.length){
+        target.innerHTML = '<div class="small">Nincs adat.</div>';
+        return;
+      }
+
+      target.innerHTML = rows.map((item, index) => {
+        const width = Math.max(5, Math.min(100, Number(item[valueKey] || 0)));
+        return `
+          <div class="rank-row" style="grid-template-columns:32px 1fr 60px;gap:8px;padding:8px 0">
+            <div class="rank ${index === 0 ? 'one' : index === 1 ? 'two' : index === 2 ? 'three' : ''}" style="width:28px;height:28px;font-size:12px">${index + 1}</div>
+            <div>
+              <div style="font-weight:900;color:var(--navy);font-size:13px">${item.company}</div>
+              <div class="bar"><div class="fill" style="width:${width}%"></div></div>
+            </div>
+            <div class="metric-value" style="font-size:15px">${fmtNum(item[valueKey])}${suffix}</div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderPricePersonality(analysis){
+      const cheapest = {};
+      const expensive = {};
+
+      (analysis.cheapest_count || []).forEach(item => cheapest[item.company] = Number(item.count || 0));
+      (analysis.most_expensive_count || []).forEach(item => expensive[item.company] = Number(item.count || 0));
+
+      const companies = ['ALDI', 'Auchan', 'Lidl', 'Penny', 'SPAR', 'Tesco'];
+
+      const rows = companies.map(company => ({
+        company,
+        personality_score: (cheapest[company] || 0) + (expensive[company] || 0),
+        cheapest: cheapest[company] || 0,
+        expensive: expensive[company] || 0
+      })).sort((a,b) => b.personality_score - a.personality_score);
+
+      const target = document.getElementById('pricePersonalityBox');
+      if(!target) return;
+
+      target.innerHTML = rows.map((item, index) => `
+        <div class="metric-row" style="padding:8px 0">
+          <span class="metric-name">${index + 1}. ${item.company}</span>
+          <span class="metric-value">${item.personality_score}</span>
+        </div>
+        <div class="small" style="margin-top:-6px;margin-bottom:4px">
+          olcsó: ${item.cheapest} | drága: ${item.expensive}
+        </div>
+      `).join('');
+    }
+
+    function renderPriceSensitivity(analysis){
+      const spreads = Array.isArray(analysis.product_spreads) ? analysis.product_spreads : [];
+
+      const buckets = [
+        {label:'Árháborús', min:0, max:5},
+        {label:'Versenyző', min:5, max:15},
+        {label:'Kiegyensúlyozott', min:15, max:30},
+        {label:'Differenciált', min:30, max:9999}
+      ];
+
+      const html = buckets.map(bucket => {
+        const items = spreads.filter(item => {
+          const spread = Number(item.spread_pct);
+          return Number.isFinite(spread) && spread >= bucket.min && spread < bucket.max;
+        });
+
+        const names = items.slice(0,3).map(item => item.product).join(', ');
+
+        return `
+          <div class="metric-row" style="padding:8px 0">
+            <span class="metric-name">${bucket.label}</span>
+            <span class="metric-value">${items.length}</span>
+          </div>
+          <div class="small" style="margin-top:-6px;margin-bottom:4px">${names || 'n.a.'}</div>
+        `;
+      }).join('');
+
+      const target = document.getElementById('priceSensitivityBox');
+      if(target) target.innerHTML = html;
+    }
+
+    function renderPriceAnalysis(analysis){
+      renderMetricList(
+        'priceValueScoreBox',
+        (analysis.value_scores || []).slice(0,6),
+        'value_score'
+      );
+
+      renderMetricList(
+        'priceCheapestCountBox',
+        (analysis.cheapest_count || []).slice(0,6),
+        'count'
+      );
+
+      renderPricePersonality(analysis);
+      renderPriceSensitivity(analysis);
     }
 
     function renderPriceFallback(){
