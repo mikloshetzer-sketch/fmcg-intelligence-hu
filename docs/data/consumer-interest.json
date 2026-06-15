@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-11T09:37:07Z",
+  "updated_at": "2026-06-15T12:40:29Z",
   "status": "ok",
   "source": "google_trends",
   "method": "pytrends_unofficial_best_effort_v4_debug_and_keyword_fallback",
@@ -11,151 +11,197 @@
   "leader": {
     "id": "penny",
     "company": "Penny",
-    "keyword": "Penny Magyarország",
+    "keyword": "Penny Market",
     "data_status": "ok",
-    "consumer_interest_index": 36,
-    "consumer_interest_level": "GYENGE-KÖZEPES",
-    "consumer_momentum_score": 65,
-    "momentum_score": 100,
-    "trend_direction": "up",
-    "avg_last_7": 30.14,
-    "avg_previous_7": 0.0,
-    "avg_last_30": 7.03,
-    "avg_period": 3.98,
+    "consumer_interest_index": 67,
+    "consumer_interest_level": "KÖZEPES",
+    "consumer_momentum_score": 53,
+    "momentum_score": 44,
+    "trend_direction": "down",
+    "avg_last_7": 56.71,
+    "avg_previous_7": 69.43,
+    "avg_last_30": 60.87,
+    "avg_period": 56.94,
     "peak_period": 100.0,
-    "search_volatility": 100,
-    "errors": [
-      {
-        "keyword": "Penny Market",
-        "error": "google_response_error: The request failed: Google returned a response with code 429"
-      }
-    ],
-    "interpretation": "Penny esetében emelkedő keresési momentum látszik, de az érdeklődési szint még nem kiugró."
+    "search_volatility": 21,
+    "errors": [],
+    "interpretation": "Penny esetében csökkenő keresési momentum látszik."
   },
   "companies": [
     {
       "id": "lidl",
       "company": "Lidl",
       "keyword": "Lidl",
-      "data_status": "ok",
-      "consumer_interest_index": 83,
-      "consumer_interest_level": "ERŐS",
-      "consumer_momentum_score": 63,
-      "momentum_score": 52,
-      "trend_direction": "stable",
-      "avg_last_7": 80.14,
-      "avg_previous_7": 76.14,
-      "avg_last_30": 77.5,
-      "avg_period": 76.79,
-      "peak_period": 100.0,
-      "search_volatility": 10,
-      "errors": [],
-      "interpretation": "Lidl esetében magas keresési érdeklődés látszik, de a rövid távú momentum nem feltétlenül erősödik."
+      "data_status": "no_data",
+      "consumer_interest_index": null,
+      "consumer_interest_level": "NINCS ADAT",
+      "consumer_momentum_score": null,
+      "momentum_score": null,
+      "trend_direction": "n.a.",
+      "avg_last_7": null,
+      "avg_previous_7": null,
+      "avg_last_30": null,
+      "avg_period": null,
+      "peak_period": null,
+      "search_volatility": null,
+      "errors": [
+        {
+          "keyword": "Lidl",
+          "error": "google_response_error: The request failed: Google returned a response with code 429"
+        },
+        {
+          "keyword": "Lidl Magyarország",
+          "error": "google_response_error: The request failed: Google returned a response with code 429"
+        },
+        {
+          "keyword": "Lidl akció",
+          "error": "google_response_error: The request failed: Google returned a response with code 429"
+        }
+      ],
+      "interpretation": "Lidl esetében jelenleg nincs megbízható Google Trends adat. A mutató nem értelmezhető."
     },
     {
       "id": "aldi",
       "company": "ALDI",
-      "keyword": "ALDI",
+      "keyword": "ALDI akció",
       "data_status": "ok",
-      "consumer_interest_index": 70,
-      "consumer_interest_level": "KÖZEPES",
-      "consumer_momentum_score": 56,
-      "momentum_score": 53,
-      "trend_direction": "stable",
-      "avg_last_7": 63.43,
-      "avg_previous_7": 57.71,
-      "avg_last_30": 62.73,
-      "avg_period": 66.21,
+      "consumer_interest_index": 32,
+      "consumer_interest_level": "GYENGE",
+      "consumer_momentum_score": 44,
+      "momentum_score": 49,
+      "trend_direction": "up",
+      "avg_last_7": 13.86,
+      "avg_previous_7": 12.57,
+      "avg_last_30": 16.8,
+      "avg_period": 20.72,
       "peak_period": 100.0,
-      "search_volatility": 14,
-      "errors": [],
-      "interpretation": "ALDI esetében magas keresési érdeklődés látszik, de a rövid távú momentum nem feltétlenül erősödik."
+      "search_volatility": 77,
+      "errors": [
+        {
+          "keyword": "ALDI",
+          "error": "google_response_error: The request failed: Google returned a response with code 429"
+        },
+        {
+          "keyword": "ALDI Magyarország",
+          "error": "google_response_error: The request failed: Google returned a response with code 429"
+        }
+      ],
+      "interpretation": "ALDI esetében emelkedő keresési momentum látszik, de az érdeklődési szint még nem kiugró."
     },
     {
       "id": "penny",
       "company": "Penny",
-      "keyword": "Penny Magyarország",
+      "keyword": "Penny Market",
       "data_status": "ok",
-      "consumer_interest_index": 36,
-      "consumer_interest_level": "GYENGE-KÖZEPES",
-      "consumer_momentum_score": 65,
-      "momentum_score": 100,
-      "trend_direction": "up",
-      "avg_last_7": 30.14,
-      "avg_previous_7": 0.0,
-      "avg_last_30": 7.03,
-      "avg_period": 3.98,
+      "consumer_interest_index": 67,
+      "consumer_interest_level": "KÖZEPES",
+      "consumer_momentum_score": 53,
+      "momentum_score": 44,
+      "trend_direction": "down",
+      "avg_last_7": 56.71,
+      "avg_previous_7": 69.43,
+      "avg_last_30": 60.87,
+      "avg_period": 56.94,
       "peak_period": 100.0,
-      "search_volatility": 100,
-      "errors": [
-        {
-          "keyword": "Penny Market",
-          "error": "google_response_error: The request failed: Google returned a response with code 429"
-        }
-      ],
-      "interpretation": "Penny esetében emelkedő keresési momentum látszik, de az érdeklődési szint még nem kiugró."
+      "search_volatility": 21,
+      "errors": [],
+      "interpretation": "Penny esetében csökkenő keresési momentum látszik."
     },
     {
       "id": "spar",
       "company": "SPAR",
-      "keyword": "SPAR Magyarország",
-      "data_status": "ok",
-      "consumer_interest_index": 30,
-      "consumer_interest_level": "GYENGE",
-      "consumer_momentum_score": 45,
-      "momentum_score": 45,
-      "trend_direction": "up",
-      "avg_last_7": 11.0,
-      "avg_previous_7": 0.0,
-      "avg_last_30": 14.57,
-      "avg_period": 8.25,
-      "peak_period": 100.0,
-      "search_volatility": 100,
+      "keyword": "SPAR",
+      "data_status": "no_data",
+      "consumer_interest_index": null,
+      "consumer_interest_level": "NINCS ADAT",
+      "consumer_momentum_score": null,
+      "momentum_score": null,
+      "trend_direction": "n.a.",
+      "avg_last_7": null,
+      "avg_previous_7": null,
+      "avg_last_30": null,
+      "avg_period": null,
+      "peak_period": null,
+      "search_volatility": null,
       "errors": [
         {
           "keyword": "SPAR",
           "error": "google_response_error: The request failed: Google returned a response with code 429"
+        },
+        {
+          "keyword": "SPAR Magyarország",
+          "error": "google_response_error: The request failed: Google returned a response with code 429"
+        },
+        {
+          "keyword": "SPAR akció",
+          "error": "google_response_error: The request failed: Google returned a response with code 429"
         }
       ],
-      "interpretation": "SPAR esetében emelkedő keresési momentum látszik, de az érdeklődési szint még nem kiugró."
+      "interpretation": "SPAR esetében jelenleg nincs megbízható Google Trends adat. A mutató nem értelmezhető."
     },
     {
       "id": "tesco",
       "company": "Tesco",
       "keyword": "Tesco",
-      "data_status": "ok",
-      "consumer_interest_index": 58,
-      "consumer_interest_level": "KÖZEPES",
-      "consumer_momentum_score": 50,
-      "momentum_score": 48,
-      "trend_direction": "stable",
-      "avg_last_7": 45.71,
-      "avg_previous_7": 45.29,
-      "avg_last_30": 50.3,
-      "avg_period": 50.21,
-      "peak_period": 100.0,
-      "search_volatility": 22,
-      "errors": [],
-      "interpretation": "Tesco esetében stabil vagy mérsékelt fogyasztói keresési érdeklődés látszik."
+      "data_status": "no_data",
+      "consumer_interest_index": null,
+      "consumer_interest_level": "NINCS ADAT",
+      "consumer_momentum_score": null,
+      "momentum_score": null,
+      "trend_direction": "n.a.",
+      "avg_last_7": null,
+      "avg_previous_7": null,
+      "avg_last_30": null,
+      "avg_period": null,
+      "peak_period": null,
+      "search_volatility": null,
+      "errors": [
+        {
+          "keyword": "Tesco",
+          "error": "google_response_error: The request failed: Google returned a response with code 429"
+        },
+        {
+          "keyword": "Tesco Magyarország",
+          "error": "google_response_error: The request failed: Google returned a response with code 429"
+        },
+        {
+          "keyword": "Tesco akció",
+          "error": "google_response_error: The request failed: Google returned a response with code 429"
+        }
+      ],
+      "interpretation": "Tesco esetében jelenleg nincs megbízható Google Trends adat. A mutató nem értelmezhető."
     },
     {
       "id": "auchan",
       "company": "Auchan",
       "keyword": "Auchan",
-      "data_status": "ok",
-      "consumer_interest_index": 65,
-      "consumer_interest_level": "KÖZEPES",
-      "consumer_momentum_score": 53,
-      "momentum_score": 47,
-      "trend_direction": "stable",
-      "avg_last_7": 53.29,
-      "avg_previous_7": 53.57,
-      "avg_last_30": 60.7,
-      "avg_period": 61.79,
-      "peak_period": 100.0,
-      "search_volatility": 21,
-      "errors": [],
-      "interpretation": "Auchan esetében stabil vagy mérsékelt fogyasztói keresési érdeklődés látszik."
+      "data_status": "no_data",
+      "consumer_interest_index": null,
+      "consumer_interest_level": "NINCS ADAT",
+      "consumer_momentum_score": null,
+      "momentum_score": null,
+      "trend_direction": "n.a.",
+      "avg_last_7": null,
+      "avg_previous_7": null,
+      "avg_last_30": null,
+      "avg_period": null,
+      "peak_period": null,
+      "search_volatility": null,
+      "errors": [
+        {
+          "keyword": "Auchan",
+          "error": "google_response_error: The request failed: Google returned a response with code 429"
+        },
+        {
+          "keyword": "Auchan Magyarország",
+          "error": "google_response_error: The request failed: Google returned a response with code 429"
+        },
+        {
+          "keyword": "Auchan akció",
+          "error": "google_response_error: The request failed: Google returned a response with code 429"
+        }
+      ],
+      "interpretation": "Auchan esetében jelenleg nincs megbízható Google Trends adat. A mutató nem értelmezhető."
     }
   ]
 }
