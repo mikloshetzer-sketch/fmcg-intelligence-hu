@@ -1,0 +1,168 @@
+{
+  "module": "price_intelligence",
+  "version": "v1.0",
+  "updated_at": "2026-06-15",
+  "status": "config_only",
+  "source_strategy": {
+    "primary_source": "GVH Árfigyelő",
+    "source_url": "https://arfigyelo.gvh.hu/",
+    "note": "Az Árfigyelő alkalmas árösszehasonlításra, de külön ellenőrizni kell, hogy automatizált adatkinyerés milyen stabilan működik."
+  },
+  "companies": [
+    "ALDI",
+    "Auchan",
+    "Lidl",
+    "Penny",
+    "SPAR",
+    "Tesco"
+  ],
+  "basket": [
+    {
+      "id": "milk_15",
+      "name_hu": "Tej 1,5%",
+      "category": "dairy",
+      "unit": "liter",
+      "weight": 1.0
+    },
+    {
+      "id": "butter",
+      "name_hu": "Vaj",
+      "category": "dairy",
+      "unit": "kg",
+      "weight": 1.0
+    },
+    {
+      "id": "egg_10",
+      "name_hu": "Tojás 10 db",
+      "category": "fresh",
+      "unit": "pack",
+      "weight": 1.0
+    },
+    {
+      "id": "chicken_breast",
+      "name_hu": "Csirkemellfilé",
+      "category": "meat",
+      "unit": "kg",
+      "weight": 1.2
+    },
+    {
+      "id": "pork_leg",
+      "name_hu": "Sertéscomb",
+      "category": "meat",
+      "unit": "kg",
+      "weight": 1.0
+    },
+    {
+      "id": "trappista_cheese",
+      "name_hu": "Trappista sajt",
+      "category": "dairy",
+      "unit": "kg",
+      "weight": 1.0
+    },
+    {
+      "id": "apple",
+      "name_hu": "Alma",
+      "category": "fruit_vegetable",
+      "unit": "kg",
+      "weight": 0.8
+    },
+    {
+      "id": "banana",
+      "name_hu": "Banán",
+      "category": "fruit_vegetable",
+      "unit": "kg",
+      "weight": 0.8
+    },
+    {
+      "id": "potato",
+      "name_hu": "Burgonya",
+      "category": "fruit_vegetable",
+      "unit": "kg",
+      "weight": 0.8
+    },
+    {
+      "id": "flour",
+      "name_hu": "Finomliszt",
+      "category": "dry_goods",
+      "unit": "kg",
+      "weight": 0.7
+    },
+    {
+      "id": "sugar",
+      "name_hu": "Kristálycukor",
+      "category": "dry_goods",
+      "unit": "kg",
+      "weight": 0.7
+    },
+    {
+      "id": "rice",
+      "name_hu": "Rizs",
+      "category": "dry_goods",
+      "unit": "kg",
+      "weight": 0.7
+    },
+    {
+      "id": "pasta",
+      "name_hu": "Száraztészta",
+      "category": "dry_goods",
+      "unit": "kg",
+      "weight": 0.7
+    },
+    {
+      "id": "sunflower_oil",
+      "name_hu": "Étolaj",
+      "category": "dry_goods",
+      "unit": "liter",
+      "weight": 0.9
+    },
+    {
+      "id": "mineral_water",
+      "name_hu": "Ásványvíz",
+      "category": "drink",
+      "unit": "liter",
+      "weight": 0.5
+    },
+    {
+      "id": "cola",
+      "name_hu": "Kóla típusú üdítő",
+      "category": "drink",
+      "unit": "liter",
+      "weight": 0.4
+    },
+    {
+      "id": "toilet_paper",
+      "name_hu": "Toalettpapír",
+      "category": "household",
+      "unit": "roll",
+      "weight": 0.5
+    },
+    {
+      "id": "dishwashing_liquid",
+      "name_hu": "Mosogatószer",
+      "category": "household",
+      "unit": "liter",
+      "weight": 0.4
+    },
+    {
+      "id": "detergent",
+      "name_hu": "Mosószer",
+      "category": "household",
+      "unit": "wash",
+      "weight": 0.4
+    },
+    {
+      "id": "diaper",
+      "name_hu": "Pelenka",
+      "category": "baby",
+      "unit": "piece",
+      "weight": 0.3
+    }
+  ],
+  "planned_metrics": {
+    "basket_price_index": "100 = six-company average",
+    "weekly_price_change": "percentage change compared to previous snapshot",
+    "price_stability_index": "lower volatility means higher score",
+    "promotion_intensity": "share of discounted items",
+    "consumer_competitiveness_score": "combined price, promotion and stability score"
+  }
+}
