@@ -8,7 +8,6 @@ from pathlib import Path
 
 
 BASE = Path(__file__).resolve().parents[1]
-
 DATA_DIR = BASE / "docs" / "data"
 
 PRICE_PRODUCTS = DATA_DIR / "price-products.json"
@@ -19,14 +18,7 @@ INSPECTION = DATA_DIR / "arfigyelo-api-inspection.json"
 
 ARFIGYELO_BASE = "https://arfigyelo.gvh.hu/api"
 
-COMPANIES = [
-    "ALDI",
-    "Auchan",
-    "Lidl",
-    "Penny",
-    "SPAR",
-    "Tesco"
-]
+COMPANIES = ["ALDI", "Auchan", "Lidl", "Penny", "SPAR", "Tesco"]
 
 CHAIN_NORMALIZATION = {
     "aldi": "ALDI",
@@ -38,181 +30,31 @@ CHAIN_NORMALIZATION = {
 }
 
 BENCHMARK_BASKET = [
-    {
-        "id": "milk_15",
-        "name": "Tej 1,5%",
-        "category": "Tejtermék",
-        "keywords": ["tej", "1,5"],
-        "exclude": ["laktózmentes", "kakaó", "ital"]
-    },
-    {
-        "id": "milk_28",
-        "name": "Tej 2,8%",
-        "category": "Tejtermék",
-        "keywords": ["tej", "2,8"],
-        "exclude": ["laktózmentes", "kakaó", "ital"]
-    },
-    {
-        "id": "butter",
-        "name": "Vaj",
-        "category": "Tejtermék",
-        "keywords": ["vaj"],
-        "exclude": ["margarin", "vajkrém"]
-    },
-    {
-        "id": "trappista",
-        "name": "Trappista sajt",
-        "category": "Tejtermék",
-        "keywords": ["trappista"],
-        "exclude": ["szeletelt"]
-    },
-    {
-        "id": "yoghurt",
-        "name": "Natúr joghurt",
-        "category": "Tejtermék",
-        "keywords": ["natúr", "joghurt"],
-        "exclude": ["gyümölcs", "ivó"]
-    },
-    {
-        "id": "chicken_breast",
-        "name": "Csirkemellfilé",
-        "category": "Húsáru",
-        "keywords": ["csirkemell"],
-        "exclude": ["panírozott", "sonka"]
-    },
-    {
-        "id": "pork_leg",
-        "name": "Sertéscomb",
-        "category": "Húsáru",
-        "keywords": ["sertéscomb"],
-        "exclude": ["szeletelt", "pácolt"]
-    },
-    {
-        "id": "minced_pork",
-        "name": "Darált sertéshús",
-        "category": "Húsáru",
-        "keywords": ["darált", "sertés"],
-        "exclude": ["marha", "mix"]
-    },
-    {
-        "id": "turkey_breast",
-        "name": "Pulykamell",
-        "category": "Húsáru",
-        "keywords": ["pulykamell"],
-        "exclude": ["sonka", "felvágott"]
-    },
-    {
-        "id": "potato",
-        "name": "Burgonya",
-        "category": "Zöldség",
-        "keywords": ["burgonya"],
-        "exclude": ["chips", "fagyasztott"]
-    },
-    {
-        "id": "onion",
-        "name": "Vöröshagyma",
-        "category": "Zöldség",
-        "keywords": ["vöröshagyma"],
-        "exclude": []
-    },
-    {
-        "id": "tomato",
-        "name": "Paradicsom",
-        "category": "Zöldség",
-        "keywords": ["paradicsom"],
-        "exclude": ["sűrített", "konzerv", "lé"]
-    },
-    {
-        "id": "pepper",
-        "name": "Paprika",
-        "category": "Zöldség",
-        "keywords": ["paprika"],
-        "exclude": ["őrölt", "fűszer"]
-    },
-    {
-        "id": "apple",
-        "name": "Alma",
-        "category": "Gyümölcs",
-        "keywords": ["alma"],
-        "exclude": ["lé", "püré", "ecet"]
-    },
-    {
-        "id": "banana",
-        "name": "Banán",
-        "category": "Gyümölcs",
-        "keywords": ["banán"],
-        "exclude": ["chips"]
-    },
-    {
-        "id": "lemon",
-        "name": "Citrom",
-        "category": "Gyümölcs",
-        "keywords": ["citrom"],
-        "exclude": ["lé", "ital"]
-    },
-    {
-        "id": "flour",
-        "name": "Finomliszt",
-        "category": "Alapélelmiszer",
-        "keywords": ["finomliszt"],
-        "exclude": ["rétes", "teljes"]
-    },
-    {
-        "id": "sugar",
-        "name": "Kristálycukor",
-        "category": "Alapélelmiszer",
-        "keywords": ["kristálycukor"],
-        "exclude": []
-    },
-    {
-        "id": "rice",
-        "name": "Rizs",
-        "category": "Alapélelmiszer",
-        "keywords": ["rizs"],
-        "exclude": ["tejberizs", "készétel"]
-    },
-    {
-        "id": "pasta",
-        "name": "Száraztészta",
-        "category": "Alapélelmiszer",
-        "keywords": ["tészta"],
-        "exclude": ["friss", "készétel"]
-    },
-    {
-        "id": "oil",
-        "name": "Étolaj",
-        "category": "Alapélelmiszer",
-        "keywords": ["étolaj"],
-        "exclude": ["olíva"]
-    },
-    {
-        "id": "mineral_water",
-        "name": "Ásványvíz",
-        "category": "Ital",
-        "keywords": ["ásványvíz"],
-        "exclude": ["ízesített"]
-    },
-    {
-        "id": "cola",
-        "name": "Kóla",
-        "category": "Ital",
-        "keywords": ["cola"],
-        "exclude": ["zero", "light"]
-    },
-    {
-        "id": "detergent",
-        "name": "Mosószer",
-        "category": "Háztartás",
-        "keywords": ["mosószer"],
-        "exclude": ["öblítő"]
-    },
-    {
-        "id": "toilet_paper",
-        "name": "Toalettpapír",
-        "category": "Háztartás",
-        "keywords": ["toalettpapír"],
-        "exclude": []
-    }
+    {"id": "milk_15", "name": "Tej 1,5%", "category": "Tejtermék", "keywords": ["tej", "1,5"], "exclude": ["laktózmentes", "kakaó", "ital"]},
+    {"id": "milk_28", "name": "Tej 2,8%", "category": "Tejtermék", "keywords": ["tej", "2,8"], "exclude": ["laktózmentes", "kakaó", "ital"]},
+    {"id": "butter", "name": "Vaj", "category": "Tejtermék", "keywords": ["vaj"], "exclude": ["margarin", "vajkrém"]},
+    {"id": "trappista", "name": "Trappista sajt", "category": "Tejtermék", "keywords": ["trappista"], "exclude": ["szeletelt"]},
+    {"id": "yoghurt", "name": "Natúr joghurt", "category": "Tejtermék", "keywords": ["natúr", "joghurt"], "exclude": ["gyümölcs", "ivó"]},
+    {"id": "chicken_breast", "name": "Csirkemellfilé", "category": "Húsáru", "keywords": ["csirkemell"], "exclude": ["panírozott", "sonka"]},
+    {"id": "pork_leg", "name": "Sertéscomb", "category": "Húsáru", "keywords": ["sertéscomb"], "exclude": ["szeletelt", "pácolt"]},
+    {"id": "minced_pork", "name": "Darált sertéshús", "category": "Húsáru", "keywords": ["darált", "sertés"], "exclude": ["marha", "mix"]},
+    {"id": "turkey_breast", "name": "Pulykamell", "category": "Húsáru", "keywords": ["pulykamell"], "exclude": ["sonka", "felvágott"]},
+    {"id": "potato", "name": "Burgonya", "category": "Zöldség", "keywords": ["burgonya"], "exclude": ["chips", "fagyasztott"]},
+    {"id": "onion", "name": "Vöröshagyma", "category": "Zöldség", "keywords": ["vöröshagyma"], "exclude": []},
+    {"id": "tomato", "name": "Paradicsom", "category": "Zöldség", "keywords": ["paradicsom"], "exclude": ["sűrített", "konzerv", "lé"]},
+    {"id": "pepper", "name": "Paprika", "category": "Zöldség", "keywords": ["paprika"], "exclude": ["őrölt", "fűszer"]},
+    {"id": "apple", "name": "Alma", "category": "Gyümölcs", "keywords": ["alma"], "exclude": ["lé", "püré", "ecet"]},
+    {"id": "banana", "name": "Banán", "category": "Gyümölcs", "keywords": ["banán"], "exclude": ["chips"]},
+    {"id": "lemon", "name": "Citrom", "category": "Gyümölcs", "keywords": ["citrom"], "exclude": ["lé", "ital"]},
+    {"id": "flour", "name": "Finomliszt", "category": "Alapélelmiszer", "keywords": ["finomliszt"], "exclude": ["rétes", "teljes"]},
+    {"id": "sugar", "name": "Kristálycukor", "category": "Alapélelmiszer", "keywords": ["kristálycukor"], "exclude": []},
+    {"id": "rice", "name": "Rizs", "category": "Alapélelmiszer", "keywords": ["rizs"], "exclude": ["tejberizs", "készétel"]},
+    {"id": "pasta", "name": "Száraztészta", "category": "Alapélelmiszer", "keywords": ["tészta"], "exclude": ["friss", "készétel"]},
+    {"id": "oil", "name": "Étolaj", "category": "Alapélelmiszer", "keywords": ["étolaj"], "exclude": ["olíva"]},
+    {"id": "mineral_water", "name": "Ásványvíz", "category": "Ital", "keywords": ["ásványvíz"], "exclude": ["ízesített"]},
+    {"id": "cola", "name": "Kóla", "category": "Ital", "keywords": ["cola"], "exclude": ["zero", "light"]},
+    {"id": "detergent", "name": "Mosószer", "category": "Háztartás", "keywords": ["mosószer"], "exclude": ["öblítő"]},
+    {"id": "toilet_paper", "name": "Toalettpapír", "category": "Háztartás", "keywords": ["toalettpapír"], "exclude": []}
 ]
 
 
@@ -227,21 +69,14 @@ def today():
 def load_json(path, fallback):
     if not path.exists():
         return fallback
-
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
 def save_json(path, data):
     path.parent.mkdir(parents=True, exist_ok=True)
-
     with open(path, "w", encoding="utf-8") as f:
-        json.dump(
-            data,
-            f,
-            ensure_ascii=False,
-            indent=2
-        )
+        json.dump(data, f, ensure_ascii=False, indent=2)
 
 
 def fetch_json(url):
@@ -252,15 +87,12 @@ def fetch_json(url):
             "Accept": "application/json"
         }
     )
-
     with urllib.request.urlopen(request, timeout=40) as response:
-        raw = response.read().decode("utf-8")
-        return json.loads(raw)
+        return json.loads(response.read().decode("utf-8"))
 
 
 def normalize_chain_name(name):
-    key = str(name or "").strip().lower()
-    return CHAIN_NORMALIZATION.get(key)
+    return CHAIN_NORMALIZATION.get(str(name or "").strip().lower())
 
 
 def normalize_text(value):
@@ -283,19 +115,13 @@ def product_matches(product_name, basket_item):
 
 def get_normal_price(chain_store):
     prices = chain_store.get("prices", [])
+    normal_prices = [p for p in prices if str(p.get("type", "")).upper() == "NORMAL"]
+    selected = normal_prices if normal_prices else prices
 
-    normal_prices = [
-        price for price in prices
-        if str(price.get("type", "")).upper() == "NORMAL"
-    ]
-
-    selected_prices = normal_prices if normal_prices else prices
-
-    if not selected_prices:
+    if not selected:
         return None
 
-    price = selected_prices[0]
-
+    price = selected[0]
     amount = price.get("amount")
     unit_amount = price.get("unitAmount")
 
@@ -309,33 +135,18 @@ def get_normal_price(chain_store):
     }
 
 
-def get_category_ids_from_env():
+def get_category_ids():
     raw = os.environ.get("ARFIGYELO_CATEGORY_IDS", "").strip()
 
-    if not raw:
-        return []
+    if raw:
+        ids = []
+        for item in raw.split(","):
+            item = item.strip()
+            if item.isdigit():
+                ids.append(int(item))
+        return ids
 
-    result = []
-
-    for item in raw.split(","):
-        item = item.strip()
-        if item.isdigit():
-            result.append(int(item))
-
-    return result
-
-
-def discover_category_ids():
-    env_ids = get_category_ids_from_env()
-
-    if env_ids:
-        return env_ids, "env"
-
-    fallback_ids = [
-        2046
-    ]
-
-    return fallback_ids, "fallback"
+    return [2046]
 
 
 def fetch_products_by_category(category_id, limit=100):
@@ -351,7 +162,6 @@ def fetch_products_by_category(category_id, limit=100):
         })
 
         url = f"{ARFIGYELO_BASE}/products-by-category/{category_id}?{query}"
-
         data = fetch_json(url)
 
         batch = data.get("products", [])
@@ -370,13 +180,13 @@ def fetch_products_by_category(category_id, limit=100):
         if total_count is not None and offset >= total_count:
             break
 
-        time.sleep(0.4)
+        time.sleep(0.3)
 
     return products, total_count
 
 
 def collect_live_products():
-    category_ids, category_source = discover_category_ids()
+    category_ids = get_category_ids()
 
     all_products = []
     category_results = []
@@ -404,16 +214,15 @@ def collect_live_products():
     inspection = {
         "updated_at": utc_now(),
         "status": "ok" if all_products else "error",
-        "category_source": category_source,
         "category_ids": category_ids,
         "category_results": category_results,
         "downloaded_products": len(all_products),
-        "note": "Ha csak 2046 szerepel, akkor még csak a kenyér kategória aktív. További kategória ID-ket az ARFIGYELO_CATEGORY_IDS környezeti változóval lehet megadni."
+        "note": "Ha nincs lefedettség, akkor a kategóriaazonosítók nem illeszkednek a benchmark kosárhoz."
     }
 
     save_json(INSPECTION, inspection)
 
-    return all_products, inspection
+    return all_products
 
 
 def build_price_products(all_products):
@@ -424,9 +233,7 @@ def build_price_products(all_products):
         selected_products = {}
 
         for product in all_products:
-            product_name = product.get("name", "")
-
-            if not product_matches(product_name, basket_item):
+            if not product_matches(product.get("name", ""), basket_item):
                 continue
 
             for chain_store in product.get("pricesOfChainStores", []):
@@ -442,7 +249,6 @@ def build_price_products(all_products):
 
                 amount = price_data.get("amount")
                 unit_amount = price_data.get("unit_amount")
-
                 comparable_price = unit_amount if unit_amount is not None else amount
 
                 if comparable_price is None:
@@ -480,6 +286,26 @@ def build_price_products(all_products):
     }
 
 
+def validate_coverage(price_products):
+    total_hits = sum(product.get("coverage", 0) for product in price_products["products"])
+    covered_items = sum(1 for product in price_products["products"] if product.get("coverage", 0) > 0)
+
+    validation = {
+        "total_chain_price_hits": total_hits,
+        "covered_basket_items": covered_items,
+        "basket_size": price_products["basket_size"]
+    }
+
+    if total_hits == 0 or covered_items == 0:
+        raise RuntimeError(
+            "Nincs egyetlen lefedett benchmark termék sem. "
+            "Nem írjuk felül a price fájlokat. "
+            "Bővíteni kell az ARFIGYELO_CATEGORY_IDS listát."
+        )
+
+    return validation
+
+
 def calculate_company_totals(price_products):
     totals = {}
 
@@ -504,14 +330,8 @@ def calculate_company_totals(price_products):
     return totals
 
 
-def load_previous_history():
-    return load_json(
-        PRICE_HISTORY,
-        {
-            "updated_at": utc_now(),
-            "history": []
-        }
-    )
+def load_history():
+    return load_json(PRICE_HISTORY, {"updated_at": utc_now(), "history": []})
 
 
 def get_previous_history_row(history):
@@ -520,12 +340,12 @@ def get_previous_history_row(history):
     if not rows:
         return None
 
-    rows_sorted = sorted(rows, key=lambda item: item.get("date", ""))
+    rows = sorted(rows, key=lambda item: item.get("date", ""))
 
-    if rows_sorted[-1].get("date") == today() and len(rows_sorted) > 1:
-        return rows_sorted[-2]
+    if rows[-1].get("date") == today() and len(rows) > 1:
+        return rows[-2]
 
-    return rows_sorted[-1]
+    return rows[-1]
 
 
 def calculate_weekly_change(company_totals, history):
@@ -535,46 +355,40 @@ def calculate_weekly_change(company_totals, history):
     for company in COMPANIES:
         current = company_totals[company]["basket_price_huf"]
 
-        if previous and company in previous and previous[company]:
+        if current <= 0:
+            change = None
+        elif previous and company in previous and previous[company] and float(previous[company]) > 0:
             old = float(previous[company])
-            change = ((current - old) / old) * 100 if old else 0
+            change = round(((current - old) / old) * 100, 2)
         else:
             change = 0
 
         changes.append({
             "company": company,
-            "change_pct": round(change, 2)
+            "change_pct": change
         })
 
     return changes
 
 
 def build_snapshot(company_totals, weekly_change):
-    weekly_by_company = {
-        item["company"]: item["change_pct"]
-        for item in weekly_change
-    }
-
-    companies = []
-
-    for company in COMPANIES:
-        total = company_totals[company]["basket_price_huf"]
-        covered = company_totals[company]["covered_products"]
-
-        companies.append({
-            "company": company,
-            "basket_price_huf": total,
-            "covered_products": covered,
-            "weekly_change_pct": weekly_by_company.get(company, 0),
-            "stability_score": None,
-            "promotion_intensity": None
-        })
+    weekly = {item["company"]: item["change_pct"] for item in weekly_change}
 
     return {
         "updated_at": utc_now(),
         "source": "GVH Árfigyelő API",
         "status": "ok",
-        "companies": companies
+        "companies": [
+            {
+                "company": company,
+                "basket_price_huf": company_totals[company]["basket_price_huf"],
+                "covered_products": company_totals[company]["covered_products"],
+                "weekly_change_pct": weekly.get(company),
+                "stability_score": None,
+                "promotion_intensity": None
+            }
+            for company in COMPANIES
+        ]
     }
 
 
@@ -593,10 +407,7 @@ def build_price_intelligence(company_totals, weekly_change):
         total = company_totals[company]["basket_price_huf"]
         covered = company_totals[company]["covered_products"]
 
-        if average > 0 and total > 0:
-            price_index = round((total / average) * 100)
-        else:
-            price_index = None
+        price_index = round((total / average) * 100) if average > 0 and total > 0 else None
 
         ranking.append({
             "company": company,
@@ -605,9 +416,7 @@ def build_price_intelligence(company_totals, weekly_change):
             "covered_products": covered
         })
 
-    ranking.sort(
-        key=lambda item: item["price_index"] if item["price_index"] is not None else 9999
-    )
+    ranking.sort(key=lambda item: item["price_index"] if item["price_index"] is not None else 9999)
 
     return {
         "updated_at": utc_now(),
@@ -619,46 +428,40 @@ def build_price_intelligence(company_totals, weekly_change):
 
 
 def update_history(company_totals):
-    history = load_previous_history()
-
+    history = load_history()
     current_date = today()
 
-    row = {
-        "date": current_date
-    }
+    row = {"date": current_date}
 
     for company in COMPANIES:
         row[company] = company_totals[company]["basket_price_huf"]
 
-    rows = history.get("history", [])
-
-    rows = [
-        item for item in rows
-        if item.get("date") != current_date
-    ]
-
+    rows = [item for item in history.get("history", []) if item.get("date") != current_date]
     rows.append(row)
-
     rows.sort(key=lambda item: item.get("date", ""))
 
-    history["updated_at"] = utc_now()
-    history["history"] = rows
-
-    return history
+    return {
+        "updated_at": utc_now(),
+        "history": rows
+    }
 
 
 def main():
     print("GVH Árfigyelő élő adatgyűjtés indul...")
 
-    all_products, inspection = collect_live_products()
+    all_products = collect_live_products()
 
     if not all_products:
-        raise RuntimeError("Nem sikerült élő termékadatot lekérni az Árfigyelőből.")
+        raise RuntimeError("Nem sikerült termékadatot lekérni az Árfigyelőből.")
 
     price_products = build_price_products(all_products)
+
+    validation = validate_coverage(price_products)
+    print("Coverage validation:", validation)
+
     company_totals = calculate_company_totals(price_products)
 
-    history_before = load_previous_history()
+    history_before = load_history()
     weekly_change = calculate_weekly_change(company_totals, history_before)
 
     snapshot = build_snapshot(company_totals, weekly_change)
@@ -671,8 +474,6 @@ def main():
     save_json(PRICE_HISTORY, history)
 
     print("Árfigyelő adatgyűjtés kész.")
-    print("Letöltött termékek:", inspection.get("downloaded_products"))
-    print("Kosárméret:", price_products["basket_size"])
     print("Mentve:")
     print("-", PRICE_PRODUCTS)
     print("-", PRICE_SNAPSHOT)
