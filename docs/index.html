@@ -97,6 +97,10 @@
           </div>
         </div>
 
+        <div class="notice" style="margin-top:14px;font-size:13px;line-height:1.6">
+          <b>Mit látunk?</b> A Price Intelligence fő KPI-sora a vezető árpozíciót, a benchmark átlagot és a rövid távú árindex-elmozdulást foglalja össze. <b>Forrás:</b> GVH Árfigyelő API-ból előállított price-intelligence.json. <b>Mérőszám:</b> termékszintű relatív árindex, ahol 100 a vizsgált láncok aktuális átlaga. <b>Következtetés:</b> gyorsan látható, ki van kedvezőbb fogyasztói árpozícióban.
+        </div>
+
         <div class="grid" style="margin-top:14px">
           <div class="card span6" style="box-shadow:none;border:1px solid #e5edf5">
             <div class="section-title">
@@ -104,6 +108,9 @@
               <span>alacsonyabb index = kedvezőbb árpozíció</span>
             </div>
             <div id="priceRankingTable"></div>
+            <div class="notice" style="margin-top:10px;font-size:13px;line-height:1.6">
+              <b>Mit látunk?</b> A hat vizsgált lánc összesített árpozícióját. <b>Forrás:</b> GVH Árfigyelő API, 25 termékes benchmark kosár. <b>Számolás:</b> minden terméknél a lánc egységára a piaci átlaghoz viszonyul, majd ezek átlaga adja az indexet. <b>Következtetés:</b> az alacsonyabb index jobb fogyasztói árpozíciót jelez.
+            </div>
           </div>
 
           <div class="card span6" style="box-shadow:none;border:1px solid #e5edf5">
@@ -113,6 +120,9 @@
             </div>
             <div class="chartbox">
               <canvas id="priceWeeklyChart"></canvas>
+            </div>
+            <div class="notice" style="margin-top:10px;font-size:13px;line-height:1.6">
+              <b>Mit látunk?</b> Az árindex elmozdulását. <b>Forrás:</b> price-history.json, amelyet a napi GitHub Actions futás frissít. <b>Számolás:</b> az aktuális árindexet hasonlítjuk a korábbi mentett értékhez. <b>Következtetés:</b> negatív érték javuló árpozíciót, pozitív érték romló árpozíciót mutat.
             </div>
           </div>
         </div>
@@ -126,6 +136,9 @@
             <div class="chartbox" style="height:180px">
               <canvas id="priceCategoryDairyChart"></canvas>
             </div>
+            <div class="notice" style="margin-top:10px;font-size:13px;line-height:1.6">
+              <b>Értelmezés:</b> a tej, joghurt, sajt, vaj és tojás árpozícióját mutatja. A 100 alatti index kedvezőbb termékköri árat jelez.
+            </div>
           </div>
 
           <div class="card span3" style="box-shadow:none;border:1px solid #e5edf5">
@@ -135,6 +148,9 @@
             </div>
             <div class="chartbox" style="height:180px">
               <canvas id="priceCategoryMeatChart"></canvas>
+            </div>
+            <div class="notice" style="margin-top:10px;font-size:13px;line-height:1.6">
+              <b>Értelmezés:</b> a húsáruk egységár-alapú relatív indexe. A mutató segít látni, melyik lánc erősebb az alapvető húsféleségekben.
             </div>
           </div>
 
@@ -146,6 +162,9 @@
             <div class="chartbox" style="height:180px">
               <canvas id="priceCategoryFreshChart"></canvas>
             </div>
+            <div class="notice" style="margin-top:10px;font-size:13px;line-height:1.6">
+              <b>Értelmezés:</b> a zöldség és gyümölcs kategória árversenyét mutatja. Itt a szezonális mozgás és a kiszerelés erősen befolyásolhatja az eredményt.
+            </div>
           </div>
 
           <div class="card span3" style="box-shadow:none;border:1px solid #e5edf5">
@@ -155,6 +174,9 @@
             </div>
             <div class="chartbox" style="height:180px">
               <canvas id="priceCategoryBasicChart"></canvas>
+            </div>
+            <div class="notice" style="margin-top:10px;font-size:13px;line-height:1.6">
+              <b>Értelmezés:</b> liszt, cukor, rizs, tészta, olaj, víz és háztartási alaptermékek összesített pozíciója. Ez a leginkább árérzékeny kosárrész.
             </div>
           </div>
         </div>
@@ -168,6 +190,9 @@
             <div class="chartbox" style="height:180px">
               <canvas id="priceProductMilkChart"></canvas>
             </div>
+            <div class="notice" style="margin-top:10px;font-size:13px;line-height:1.6">
+              <b>Értelmezés:</b> egy konkrét termék egységáras összehasonlítása. A különbség azt mutatja, hol erősebb az alapáras tejpozíció.
+            </div>
           </div>
 
           <div class="card span3" style="box-shadow:none;border:1px solid #e5edf5">
@@ -177,6 +202,9 @@
             </div>
             <div class="chartbox" style="height:180px">
               <canvas id="priceProductChickenChart"></canvas>
+            </div>
+            <div class="notice" style="margin-top:10px;font-size:13px;line-height:1.6">
+              <b>Értelmezés:</b> csirkemellfilé Ft/kg alapon. Ez erős fogyasztói figyelmet kapó termék, ezért jól jelzi a friss hús árversenyét.
             </div>
           </div>
 
@@ -188,6 +216,9 @@
             <div class="chartbox" style="height:180px">
               <canvas id="priceProductBananaChart"></canvas>
             </div>
+            <div class="notice" style="margin-top:10px;font-size:13px;line-height:1.6">
+              <b>Értelmezés:</b> banán Ft/kg alapon. A blokk kiszűri a db-alapú csomagolási torzítást, ezért az összehasonlítás tisztább.
+            </div>
           </div>
 
           <div class="card span3" style="box-shadow:none;border:1px solid #e5edf5">
@@ -197,6 +228,9 @@
             </div>
             <div class="chartbox" style="height:180px">
               <canvas id="priceProductFlourChart"></canvas>
+            </div>
+            <div class="notice" style="margin-top:10px;font-size:13px;line-height:1.6">
+              <b>Értelmezés:</b> finomliszt Ft/kg alapon. Kis szórás esetén ez árháborús, erősen standardizált termékkört jelez.
             </div>
           </div>
         </div>
@@ -208,6 +242,9 @@
               <span>magasabb érték = jobb árérték</span>
             </div>
             <div id="priceValueScoreBox"></div>
+            <div class="notice" style="margin-top:10px;font-size:13px;line-height:1.6">
+              <b>Mit látunk?</b> Az árindexből képzett pozitív értékelési pontszámot. <b>Számolás:</b> Value Score = 200 - price_index. <b>Következtetés:</b> magasabb érték jobb relatív árértéket jelent.
+            </div>
           </div>
 
           <div class="card span3" style="box-shadow:none;border:1px solid #e5edf5">
@@ -216,6 +253,9 @@
               <span>hány termékben legolcsóbb</span>
             </div>
             <div id="priceCheapestCountBox"></div>
+            <div class="notice" style="margin-top:10px;font-size:13px;line-height:1.6">
+              <b>Mit látunk?</b> Hány termékben adott lánc a legolcsóbb. <b>Forrás:</b> price-analysis.json. <b>Következtetés:</b> ez az árvezetői aktivitást mutatja, nem az általános olcsóságot.
+            </div>
           </div>
 
           <div class="card span3" style="box-shadow:none;border:1px solid #e5edf5">
@@ -224,6 +264,9 @@
               <span>legolcsóbb + legdrágább pozíciók</span>
             </div>
             <div id="pricePersonalityBox"></div>
+            <div class="notice" style="margin-top:10px;font-size:13px;line-height:1.6">
+              <b>Mit látunk?</b> A legolcsóbb és legdrágább pozíciók együttes számát. <b>Mérőszám:</b> Price Personality Index. <b>Következtetés:</b> magasabb érték szélsőségesebb, erősebben pozicionált árstratégiát jelez.
+            </div>
           </div>
 
           <div class="card span3" style="box-shadow:none;border:1px solid #e5edf5">
@@ -232,12 +275,14 @@
               <span>termékek árszórás szerint</span>
             </div>
             <div id="priceSensitivityBox"></div>
+            <div class="notice" style="margin-top:10px;font-size:13px;line-height:1.6">
+              <b>Mit látunk?</b> A termékek árszórás szerinti besorolását. <b>Számolás:</b> legdrágább és legolcsóbb ár közötti százalékos különbség. <b>Következtetés:</b> kis szórás árháborút, nagy szórás differenciált piacot jelez.
+            </div>
           </div>
         </div>
 
         <div class="notice" style="margin-top:14px">
-          Az ármodul a GVH Árfigyelő API-ból frissül. A felső rangsor termékszintű relatív indexet használ.
-          A kategória-mini chartok termékköri pozíciót mutatnak, az alsó mini chartok pedig egy-egy konkrét termék árát hasonlítják össze a hat lánc között.
+          <b>Összefoglaló értelmezés:</b> az ármodul a GVH Árfigyelő API-ból frissülő napi adatokat használja. A price-products.json termékszintű egységárakat tartalmaz, a price-intelligence.json az összesített árindexet, a price-analysis.json pedig az árvezetői, árszórási és stratégiai mutatókat. A blokk célja nemcsak az, hogy megmutassa, ki olcsóbb, hanem az is, hogy feltárja: mely termékkörökben erős az árverseny, hol nagy a szórás, és mely láncok alkalmaznak szélsőségesebb árstratégiát.
         </div>
       </div>
 
