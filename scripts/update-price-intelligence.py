@@ -1,5 +1,4 @@
 import json
-import os
 import time
 import urllib.parse
 import urllib.request
@@ -14,7 +13,6 @@ PRICE_PRODUCTS = DATA_DIR / "price-products.json"
 PRICE_SNAPSHOT = DATA_DIR / "price-snapshot.json"
 PRICE_INTELLIGENCE = DATA_DIR / "price-intelligence.json"
 PRICE_HISTORY = DATA_DIR / "price-history.json"
-INSPECTION = DATA_DIR / "arfigyelo-api-inspection.json"
 
 ARFIGYELO_BASE = "https://arfigyelo.gvh.hu/api"
 
@@ -29,32 +27,32 @@ CHAIN_NORMALIZATION = {
     "tesco": "Tesco"
 }
 
-BENCHMARK_BASKET = [
-    {"id": "milk_15", "name": "Tej 1,5%", "category": "Tejtermék", "keywords": ["tej", "1,5"], "exclude": ["laktózmentes", "kakaó", "ital"]},
-    {"id": "milk_28", "name": "Tej 2,8%", "category": "Tejtermék", "keywords": ["tej", "2,8"], "exclude": ["laktózmentes", "kakaó", "ital"]},
-    {"id": "butter", "name": "Vaj", "category": "Tejtermék", "keywords": ["vaj"], "exclude": ["margarin", "vajkrém"]},
-    {"id": "trappista", "name": "Trappista sajt", "category": "Tejtermék", "keywords": ["trappista"], "exclude": ["szeletelt"]},
-    {"id": "yoghurt", "name": "Natúr joghurt", "category": "Tejtermék", "keywords": ["natúr", "joghurt"], "exclude": ["gyümölcs", "ivó"]},
-    {"id": "chicken_breast", "name": "Csirkemellfilé", "category": "Húsáru", "keywords": ["csirkemell"], "exclude": ["panírozott", "sonka"]},
-    {"id": "pork_leg", "name": "Sertéscomb", "category": "Húsáru", "keywords": ["sertéscomb"], "exclude": ["szeletelt", "pácolt"]},
-    {"id": "minced_pork", "name": "Darált sertéshús", "category": "Húsáru", "keywords": ["darált", "sertés"], "exclude": ["marha", "mix"]},
-    {"id": "turkey_breast", "name": "Pulykamell", "category": "Húsáru", "keywords": ["pulykamell"], "exclude": ["sonka", "felvágott"]},
-    {"id": "potato", "name": "Burgonya", "category": "Zöldség", "keywords": ["burgonya"], "exclude": ["chips", "fagyasztott"]},
-    {"id": "onion", "name": "Vöröshagyma", "category": "Zöldség", "keywords": ["vöröshagyma"], "exclude": []},
-    {"id": "tomato", "name": "Paradicsom", "category": "Zöldség", "keywords": ["paradicsom"], "exclude": ["sűrített", "konzerv", "lé"]},
-    {"id": "pepper", "name": "Paprika", "category": "Zöldség", "keywords": ["paprika"], "exclude": ["őrölt", "fűszer"]},
-    {"id": "apple", "name": "Alma", "category": "Gyümölcs", "keywords": ["alma"], "exclude": ["lé", "püré", "ecet"]},
-    {"id": "banana", "name": "Banán", "category": "Gyümölcs", "keywords": ["banán"], "exclude": ["chips"]},
-    {"id": "lemon", "name": "Citrom", "category": "Gyümölcs", "keywords": ["citrom"], "exclude": ["lé", "ital"]},
-    {"id": "flour", "name": "Finomliszt", "category": "Alapélelmiszer", "keywords": ["finomliszt"], "exclude": ["rétes", "teljes"]},
-    {"id": "sugar", "name": "Kristálycukor", "category": "Alapélelmiszer", "keywords": ["kristálycukor"], "exclude": []},
-    {"id": "rice", "name": "Rizs", "category": "Alapélelmiszer", "keywords": ["rizs"], "exclude": ["tejberizs", "készétel"]},
-    {"id": "pasta", "name": "Száraztészta", "category": "Alapélelmiszer", "keywords": ["tészta"], "exclude": ["friss", "készétel"]},
-    {"id": "oil", "name": "Étolaj", "category": "Alapélelmiszer", "keywords": ["étolaj"], "exclude": ["olíva"]},
-    {"id": "mineral_water", "name": "Ásványvíz", "category": "Ital", "keywords": ["ásványvíz"], "exclude": ["ízesített"]},
-    {"id": "cola", "name": "Kóla", "category": "Ital", "keywords": ["cola"], "exclude": ["zero", "light"]},
-    {"id": "detergent", "name": "Mosószer", "category": "Háztartás", "keywords": ["mosószer"], "exclude": ["öblítő"]},
-    {"id": "toilet_paper", "name": "Toalettpapír", "category": "Háztartás", "keywords": ["toalettpapír"], "exclude": []}
+BENCHMARK_CATEGORIES = [
+    {"id": 2, "name": "ESL tej 1,5%", "category": "Tejtermék"},
+    {"id": 1, "name": "ESL tej 2,8%", "category": "Tejtermék"},
+    {"id": 7, "name": "Natúr joghurt", "category": "Tejtermék"},
+    {"id": 10, "name": "Trappista sajt", "category": "Tejtermék"},
+    {"id": 12, "name": "Vaj", "category": "Tejtermék"},
+    {"id": 14, "name": "Tojás", "category": "Frissáru"},
+    {"id": 15, "name": "Sertéscomb", "category": "Húsáru"},
+    {"id": 85, "name": "Darált sertéshús", "category": "Húsáru"},
+    {"id": 18, "name": "Csirkemellfilé", "category": "Húsáru"},
+    {"id": 21, "name": "Pulykamellfilé", "category": "Húsáru"},
+    {"id": 28, "name": "Alma", "category": "Gyümölcs"},
+    {"id": 31, "name": "Banán", "category": "Gyümölcs"},
+    {"id": 32, "name": "Citrom", "category": "Gyümölcs"},
+    {"id": 34, "name": "Paradicsom", "category": "Zöldség"},
+    {"id": 35, "name": "Zöldpaprika", "category": "Zöldség"},
+    {"id": 40, "name": "Vöröshagyma", "category": "Zöldség"},
+    {"id": 41, "name": "Étkezési burgonya", "category": "Zöldség"},
+    {"id": 50, "name": "Száraztészta", "category": "Alapélelmiszer"},
+    {"id": 51, "name": "Étolaj", "category": "Alapélelmiszer"},
+    {"id": 52, "name": "Finomliszt", "category": "Alapélelmiszer"},
+    {"id": 54, "name": "Kristálycukor", "category": "Alapélelmiszer"},
+    {"id": 67, "name": "Ásványvíz", "category": "Ital"},
+    {"id": 95, "name": "Rizs", "category": "Alapélelmiszer"},
+    {"id": 126, "name": "Toalettpapír", "category": "Háztartás"},
+    {"id": 131, "name": "Folyékony mosószer", "category": "Háztartás"}
 ]
 
 
@@ -69,12 +67,14 @@ def today():
 def load_json(path, fallback):
     if not path.exists():
         return fallback
+
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
 def save_json(path, data):
     path.parent.mkdir(parents=True, exist_ok=True)
+
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
@@ -87,66 +87,13 @@ def fetch_json(url):
             "Accept": "application/json"
         }
     )
+
     with urllib.request.urlopen(request, timeout=40) as response:
         return json.loads(response.read().decode("utf-8"))
 
 
 def normalize_chain_name(name):
     return CHAIN_NORMALIZATION.get(str(name or "").strip().lower())
-
-
-def normalize_text(value):
-    return str(value or "").lower().strip()
-
-
-def product_matches(product_name, basket_item):
-    name = normalize_text(product_name)
-
-    for keyword in basket_item["keywords"]:
-        if normalize_text(keyword) not in name:
-            return False
-
-    for word in basket_item.get("exclude", []):
-        if normalize_text(word) in name:
-            return False
-
-    return True
-
-
-def get_normal_price(chain_store):
-    prices = chain_store.get("prices", [])
-    normal_prices = [p for p in prices if str(p.get("type", "")).upper() == "NORMAL"]
-    selected = normal_prices if normal_prices else prices
-
-    if not selected:
-        return None
-
-    price = selected[0]
-    amount = price.get("amount")
-    unit_amount = price.get("unitAmount")
-
-    if amount is None and unit_amount is None:
-        return None
-
-    return {
-        "amount": amount,
-        "unit_amount": unit_amount,
-        "price_type": price.get("type")
-    }
-
-
-def get_category_ids():
-    raw = os.environ.get("ARFIGYELO_CATEGORY_IDS", "").strip()
-
-    if raw:
-        ids = []
-        for item in raw.split(","):
-            item = item.strip()
-            if item.isdigit():
-                ids.append(int(item))
-        return ids
-
-    return [2046]
 
 
 def fetch_products_by_category(category_id, limit=100):
@@ -180,62 +127,51 @@ def fetch_products_by_category(category_id, limit=100):
         if total_count is not None and offset >= total_count:
             break
 
-        time.sleep(0.3)
+        time.sleep(0.2)
 
-    return products, total_count
+    return products
 
 
-def collect_live_products():
-    category_ids = get_category_ids()
+def get_normal_price(chain_store):
+    prices = chain_store.get("prices", [])
 
-    all_products = []
-    category_results = []
+    normal_prices = [
+        price for price in prices
+        if str(price.get("type", "")).upper() == "NORMAL"
+    ]
 
-    for category_id in category_ids:
-        try:
-            products, count = fetch_products_by_category(category_id)
+    selected = normal_prices if normal_prices else prices
 
-            category_results.append({
-                "category_id": category_id,
-                "status": "ok",
-                "count": count,
-                "downloaded": len(products)
-            })
+    if not selected:
+        return None
 
-            all_products.extend(products)
+    price = selected[0]
 
-        except Exception as error:
-            category_results.append({
-                "category_id": category_id,
-                "status": "error",
-                "error": str(error)
-            })
+    amount = price.get("amount")
+    unit_amount = price.get("unitAmount")
 
-    inspection = {
-        "updated_at": utc_now(),
-        "status": "ok" if all_products else "error",
-        "category_ids": category_ids,
-        "category_results": category_results,
-        "downloaded_products": len(all_products),
-        "note": "Ha nincs lefedettség, akkor a kategóriaazonosítók nem illeszkednek a benchmark kosárhoz."
+    if amount is None and unit_amount is None:
+        return None
+
+    return {
+        "amount": amount,
+        "unit_amount": unit_amount,
+        "price_type": price.get("type")
     }
 
-    save_json(INSPECTION, inspection)
 
-    return all_products
-
-
-def build_price_products(all_products):
+def build_price_products():
     result_products = []
 
-    for basket_item in BENCHMARK_BASKET:
+    for item in BENCHMARK_CATEGORIES:
+        print(f"Lekérés: {item['id']} - {item['name']}")
+
+        products = fetch_products_by_category(item["id"])
+
         company_prices = {}
         selected_products = {}
 
-        for product in all_products:
-            if not product_matches(product.get("name", ""), basket_item):
-                continue
-
+        for product in products:
             for chain_store in product.get("pricesOfChainStores", []):
                 company = normalize_chain_name(chain_store.get("name"))
 
@@ -247,9 +183,7 @@ def build_price_products(all_products):
                 if not price_data:
                     continue
 
-                amount = price_data.get("amount")
-                unit_amount = price_data.get("unit_amount")
-                comparable_price = unit_amount if unit_amount is not None else amount
+                comparable_price = price_data["unit_amount"] if price_data["unit_amount"] is not None else price_data["amount"]
 
                 if comparable_price is None:
                     continue
@@ -261,17 +195,17 @@ def build_price_products(all_products):
                     selected_products[company] = {
                         "source_product_id": product.get("id"),
                         "source_product_name": product.get("name"),
-                        "amount": amount,
-                        "unit_amount": unit_amount,
+                        "amount": price_data["amount"],
+                        "unit_amount": price_data["unit_amount"],
                         "unit": product.get("unit"),
                         "packaging": product.get("packaging"),
-                        "price_type": price_data.get("price_type")
+                        "price_type": price_data["price_type"]
                     }
 
         result_products.append({
-            "id": basket_item["id"],
-            "product": basket_item["name"],
-            "category": basket_item["category"],
+            "id": str(item["id"]),
+            "product": item["name"],
+            "category": item["category"],
             "prices": company_prices,
             "selected_products": selected_products,
             "coverage": len(company_prices)
@@ -281,29 +215,27 @@ def build_price_products(all_products):
         "updated_at": utc_now(),
         "source": "GVH Árfigyelő API",
         "status": "ok",
-        "basket_size": len(BENCHMARK_BASKET),
+        "basket_size": len(BENCHMARK_CATEGORIES),
         "products": result_products
     }
 
 
 def validate_coverage(price_products):
-    total_hits = sum(product.get("coverage", 0) for product in price_products["products"])
-    covered_items = sum(1 for product in price_products["products"] if product.get("coverage", 0) > 0)
+    covered_items = sum(
+        1 for product in price_products["products"]
+        if product.get("coverage", 0) > 0
+    )
 
-    validation = {
-        "total_chain_price_hits": total_hits,
-        "covered_basket_items": covered_items,
-        "basket_size": price_products["basket_size"]
-    }
+    total_hits = sum(
+        product.get("coverage", 0)
+        for product in price_products["products"]
+    )
 
-    if total_hits == 0 or covered_items == 0:
-        raise RuntimeError(
-            "Nincs egyetlen lefedett benchmark termék sem. "
-            "Nem írjuk felül a price fájlokat. "
-            "Bővíteni kell az ARFIGYELO_CATEGORY_IDS listát."
-        )
+    if covered_items == 0 or total_hits == 0:
+        raise RuntimeError("Nincs lefedett termék. Nem írunk adatfájlokat.")
 
-    return validation
+    print(f"Lefedett kosártermékek: {covered_items}/{price_products['basket_size']}")
+    print(f"Összes láncár-találat: {total_hits}")
 
 
 def calculate_company_totals(price_products):
@@ -331,7 +263,13 @@ def calculate_company_totals(price_products):
 
 
 def load_history():
-    return load_json(PRICE_HISTORY, {"updated_at": utc_now(), "history": []})
+    return load_json(
+        PRICE_HISTORY,
+        {
+            "updated_at": utc_now(),
+            "history": []
+        }
+    )
 
 
 def get_previous_history_row(history):
@@ -372,23 +310,28 @@ def calculate_weekly_change(company_totals, history):
 
 
 def build_snapshot(company_totals, weekly_change):
-    weekly = {item["company"]: item["change_pct"] for item in weekly_change}
+    weekly = {
+        item["company"]: item["change_pct"]
+        for item in weekly_change
+    }
+
+    companies = []
+
+    for company in COMPANIES:
+        companies.append({
+            "company": company,
+            "basket_price_huf": company_totals[company]["basket_price_huf"],
+            "covered_products": company_totals[company]["covered_products"],
+            "weekly_change_pct": weekly.get(company),
+            "stability_score": None,
+            "promotion_intensity": None
+        })
 
     return {
         "updated_at": utc_now(),
         "source": "GVH Árfigyelő API",
         "status": "ok",
-        "companies": [
-            {
-                "company": company,
-                "basket_price_huf": company_totals[company]["basket_price_huf"],
-                "covered_products": company_totals[company]["covered_products"],
-                "weekly_change_pct": weekly.get(company),
-                "stability_score": None,
-                "promotion_intensity": None
-            }
-            for company in COMPANIES
-        ]
+        "companies": companies
     }
 
 
@@ -399,7 +342,7 @@ def build_price_intelligence(company_totals, weekly_change):
         if item["basket_price_huf"] > 0
     ]
 
-    average = sum(valid_totals) / len(valid_totals) if valid_totals else 0
+    average = sum(valid_totals) / len(valid_totals)
 
     ranking = []
 
@@ -407,7 +350,7 @@ def build_price_intelligence(company_totals, weekly_change):
         total = company_totals[company]["basket_price_huf"]
         covered = company_totals[company]["covered_products"]
 
-        price_index = round((total / average) * 100) if average > 0 and total > 0 else None
+        price_index = round((total / average) * 100) if total > 0 else None
 
         ranking.append({
             "company": company,
@@ -416,7 +359,9 @@ def build_price_intelligence(company_totals, weekly_change):
             "covered_products": covered
         })
 
-    ranking.sort(key=lambda item: item["price_index"] if item["price_index"] is not None else 9999)
+    ranking.sort(
+        key=lambda item: item["price_index"] if item["price_index"] is not None else 9999
+    )
 
     return {
         "updated_at": utc_now(),
@@ -429,14 +374,19 @@ def build_price_intelligence(company_totals, weekly_change):
 
 def update_history(company_totals):
     history = load_history()
-    current_date = today()
 
-    row = {"date": current_date}
+    row = {
+        "date": today()
+    }
 
     for company in COMPANIES:
         row[company] = company_totals[company]["basket_price_huf"]
 
-    rows = [item for item in history.get("history", []) if item.get("date") != current_date]
+    rows = [
+        item for item in history.get("history", [])
+        if item.get("date") != today()
+    ]
+
     rows.append(row)
     rows.sort(key=lambda item: item.get("date", ""))
 
@@ -447,17 +397,10 @@ def update_history(company_totals):
 
 
 def main():
-    print("GVH Árfigyelő élő adatgyűjtés indul...")
+    print("GVH Árfigyelő Price Intelligence indul...")
 
-    all_products = collect_live_products()
-
-    if not all_products:
-        raise RuntimeError("Nem sikerült termékadatot lekérni az Árfigyelőből.")
-
-    price_products = build_price_products(all_products)
-
-    validation = validate_coverage(price_products)
-    print("Coverage validation:", validation)
+    price_products = build_price_products()
+    validate_coverage(price_products)
 
     company_totals = calculate_company_totals(price_products)
 
@@ -473,8 +416,7 @@ def main():
     save_json(PRICE_INTELLIGENCE, intelligence)
     save_json(PRICE_HISTORY, history)
 
-    print("Árfigyelő adatgyűjtés kész.")
-    print("Mentve:")
+    print("Kész. Frissített fájlok:")
     print("-", PRICE_PRODUCTS)
     print("-", PRICE_SNAPSHOT)
     print("-", PRICE_INTELLIGENCE)
