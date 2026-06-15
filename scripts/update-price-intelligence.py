@@ -99,7 +99,6 @@ def normalize_chain_name(name):
 def fetch_products_by_category(category_id, limit=100):
     products = []
     offset = 0
-    total_count = None
 
     while True:
         query = urllib.parse.urlencode({
@@ -112,10 +111,7 @@ def fetch_products_by_category(category_id, limit=100):
         data = fetch_json(url)
 
         batch = data.get("products", [])
-        count = data.get("count")
-
-        if total_count is None:
-            total_count = count
+        count = data.get("count", 0)
 
         products.extend(batch)
 
@@ -124,7 +120,7 @@ def fetch_products_by_category(category_id, limit=100):
 
         offset += limit
 
-        if total_count is not None and offset >= total_count:
+        if offset >= count:
             break
 
         time.sleep(0.2)
@@ -183,7 +179,11 @@ def build_price_products():
                 if not price_data:
                     continue
 
-                comparable_price = price_data["unit_amount"] if price_data["unit_amount"] is not None else price_data["amount"]
+                comparable_price = (
+                    price_data["unit_amount"]
+                    if price_data["unit_amount"] is not None
+                    else price_data["amount"]
+                )
 
                 if comparable_price is None:
                     continue
@@ -198,6 +198,7 @@ def build_price_products():
                         "amount": price_data["amount"],
                         "unit_amount": price_data["unit_amount"],
                         "unit": product.get("unit"),
+                        "unit_title": product.get("unitTitle"),
                         "packaging": product.get("packaging"),
                         "price_type": price_data["price_type"]
                     }
@@ -231,8 +232,11 @@ def validate_coverage(price_products):
         for product in price_products["products"]
     )
 
-    if covered_items == 0 or total_hits == 0:
-        raise RuntimeError("Nincs lefedett termék. Nem írunk adatfájlokat.")
+    if covered_items < 5 or total_hits < 10:
+        raise RuntimeError(
+            "Túl alacsony lefedettség. Nem írunk adatfájlokat. "
+            f"Lefedett termék: {covered_items}, találat: {total_hits}."
+        )
 
     print(f"Lefedett kosártermékek: {covered_items}/{price_products['basket_size']}")
     print(f"Összes láncár-találat: {total_hits}")
@@ -315,23 +319,21 @@ def build_snapshot(company_totals, weekly_change):
         for item in weekly_change
     }
 
-    companies = []
-
-    for company in COMPANIES:
-        companies.append({
-            "company": company,
-            "basket_price_huf": company_totals[company]["basket_price_huf"],
-            "covered_products": company_totals[company]["covered_products"],
-            "weekly_change_pct": weekly.get(company),
-            "stability_score": None,
-            "promotion_intensity": None
-        })
-
     return {
         "updated_at": utc_now(),
         "source": "GVH Árfigyelő API",
         "status": "ok",
-        "companies": companies
+        "companies": [
+            {
+                "company": company,
+                "basket_price_huf": company_totals[company]["basket_price_huf"],
+                "covered_products": company_totals[company]["covered_products"],
+                "weekly_change_pct": weekly.get(company),
+                "stability_score": None,
+                "promotion_intensity": None
+            }
+            for company in COMPANIES
+        ]
     }
 
 
@@ -341,6 +343,9 @@ def build_price_intelligence(company_totals, weekly_change):
         for item in company_totals.values()
         if item["basket_price_huf"] > 0
     ]
+
+    if not valid_totals:
+        raise RuntimeError("Nincs számolható kosárérték.")
 
     average = sum(valid_totals) / len(valid_totals)
 
