@@ -1,0 +1,33 @@
+name: Test GVH Arfigyelo IDs
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  test-arfigyelo-ids:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run ID test
+        run: |
+          python scripts/test-arfigyelo-ids.py
+
+      - name: Commit test result
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add docs/data/arfigyelo-id-test.json
+          git commit -m "Test GVH Arfigyelo IDs" || echo "No changes"
+          git push
