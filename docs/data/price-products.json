@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-15T11:25:15Z",
+  "updated_at": "2026-06-16T09:14:07Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -472,7 +472,7 @@
       "category": "Húsáru",
       "expected_unit": "kg",
       "prices": {
-        "Auchan": 1325.0,
+        "Auchan": 1315.0,
         "Tesco": 1343.0,
         "Lidl": 1465.0,
         "ALDI": 1465.0,
@@ -481,10 +481,10 @@
       },
       "selected_products": {
         "Auchan": {
-          "source_product_id": "2173290000000",
-          "source_product_name": "Süldő Sertés Comb bőrös, csontos védőgázas csomagolásban Ft/kg",
-          "amount": 1325.0,
-          "unit_amount": 1325.0,
+          "source_product_id": "2165400000000",
+          "source_product_name": "Auchan Kedvenc Friss Sertés Comb csont nélkül Húspultban kapható Ft/kg",
+          "amount": 1315.0,
+          "unit_amount": 1315.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -549,14 +549,24 @@
       "category": "Húsáru",
       "expected_unit": "kg",
       "prices": {
+        "Lidl": 1579.0,
         "Tesco": 1748.75,
         "SPAR": 1954.44,
         "Auchan": 1739.0,
         "ALDI": 1749.0,
-        "Lidl": 1749.0,
         "Penny": 1749.0
       },
       "selected_products": {
+        "Lidl": {
+          "source_product_id": "lidl-0005545",
+          "source_product_name": "Húsfarm XXL Sertés darálthús 30%,  1000g",
+          "amount": 1579.0,
+          "unit_amount": 1579.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "Tesco": {
           "source_product_id": "5059944688985",
           "source_product_name": "TS DARÁLT SERTÉSHÚS 30% ZSÍRTART. 800 g",
@@ -594,16 +604,6 @@
           "unit_amount": 1749.0,
           "unit": "kg",
           "unit_title": "csomag",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Lidl": {
-          "source_product_id": "lidl-0005545",
-          "source_product_name": "Húsfarm XXL Sertés darálthús 30%,  1000g",
-          "amount": 1749.0,
-          "unit_amount": 1749.0,
-          "unit": "kg",
-          "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
         },
@@ -1088,14 +1088,24 @@
       "category": "Zöldség",
       "expected_unit": "kg",
       "prices": {
+        "Penny": 999.0,
         "Tesco": 862.0,
         "Lidl": 899.0,
         "ALDI": 949.0,
         "Auchan": 977.0,
-        "SPAR": 1011.0,
-        "Penny": 1029.0
+        "SPAR": 1011.0
       },
       "selected_products": {
+        "Penny": {
+          "source_product_id": "penny-308",
+          "source_product_name": "Magyar tv paprika lédig kg",
+          "amount": 999.0,
+          "unit_amount": 999.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "Tesco": {
           "source_product_id": "2896050000000",
           "source_product_name": "PAPRIKA LÉDIG QQ",
@@ -1141,16 +1151,6 @@
           "source_product_name": "Étkezési paprika lédig",
           "amount": 1011.0,
           "unit_amount": 1011.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-308",
-          "source_product_name": "Magyar tv paprika lédig kg",
-          "amount": 1029.0,
-          "unit_amount": 1029.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1558,7 +1558,7 @@
         },
         "Penny": {
           "source_product_id": "5998571525020",
-          "source_product_name": "Diamant Kristálycukor 1kg",
+          "source_product_name": "Diamant kristálycukor",
           "amount": 295.0,
           "unit_amount": 295.0,
           "unit": "kg",

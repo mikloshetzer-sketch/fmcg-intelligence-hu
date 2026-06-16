@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-06-15T11:25:15Z",
+  "updated_at": "2026-06-16T09:14:07Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "method": "product-level price leadership and spread analysis",
   "cheapest_count": [
     {
       "company": "Auchan",
-      "count": 7
-    },
-    {
-      "company": "SPAR",
       "count": 6
     },
     {
       "company": "Lidl",
-      "count": 5
+      "count": 6
+    },
+    {
+      "company": "SPAR",
+      "count": 6
     },
     {
       "company": "Tesco",
@@ -36,15 +36,15 @@
     },
     {
       "company": "Penny",
-      "count": 6
-    },
-    {
-      "company": "Tesco",
       "count": 5
     },
     {
       "company": "SPAR",
-      "count": 4
+      "count": 5
+    },
+    {
+      "company": "Tesco",
+      "count": 5
     },
     {
       "company": "ALDI",
@@ -58,8 +58,8 @@
   "value_scores": [
     {
       "company": "Lidl",
-      "price_index": 95,
-      "value_score": 105,
+      "price_index": 94,
+      "value_score": 106,
       "index_coverage": 24
     },
     {
@@ -70,8 +70,8 @@
     },
     {
       "company": "Auchan",
-      "price_index": 99,
-      "value_score": 101,
+      "price_index": 100,
+      "value_score": 100,
       "index_coverage": 25
     },
     {
@@ -253,13 +253,13 @@
           "coverage": 4
         },
         {
-          "company": "Tesco",
-          "category_index": 98,
+          "company": "Lidl",
+          "category_index": 97,
           "coverage": 4
         },
         {
-          "company": "Lidl",
-          "category_index": 99,
+          "company": "Tesco",
+          "category_index": 98,
           "coverage": 4
         },
         {
@@ -375,7 +375,7 @@
         },
         {
           "company": "Penny",
-          "category_index": 107,
+          "category_index": 106,
           "coverage": 4
         },
         {
@@ -513,14 +513,26 @@
       "coverage": 5
     },
     {
+      "product": "Darált sertéshús",
+      "category": "Húsáru",
+      "cheapest_company": "Lidl",
+      "cheapest_price": 1579.0,
+      "most_expensive_company": "SPAR",
+      "most_expensive_price": 1954.44,
+      "average_price": 1753.2,
+      "spread_pct": 23.78,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 6
+    },
+    {
       "product": "Zöldpaprika",
       "category": "Zöldség",
       "cheapest_company": "Tesco",
       "cheapest_price": 862.0,
-      "most_expensive_company": "Penny",
-      "most_expensive_price": 1029.0,
-      "average_price": 954.5,
-      "spread_pct": 19.37,
+      "most_expensive_company": "SPAR",
+      "most_expensive_price": 1011.0,
+      "average_price": 949.5,
+      "spread_pct": 17.29,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
@@ -528,11 +540,11 @@
       "product": "Sertéscomb",
       "category": "Húsáru",
       "cheapest_company": "Auchan",
-      "cheapest_price": 1325.0,
+      "cheapest_price": 1315.0,
       "most_expensive_company": "SPAR",
       "most_expensive_price": 1505.0,
-      "average_price": 1428.0,
-      "spread_pct": 13.58,
+      "average_price": 1426.33,
+      "spread_pct": 14.45,
       "competition_intensity": "közepes árverseny",
       "coverage": 6
     },
@@ -581,18 +593,6 @@
       "most_expensive_price": 1199.0,
       "average_price": 1130.61,
       "spread_pct": 12.58,
-      "competition_intensity": "közepes árverseny",
-      "coverage": 6
-    },
-    {
-      "product": "Darált sertéshús",
-      "category": "Húsáru",
-      "cheapest_company": "Auchan",
-      "cheapest_price": 1739.0,
-      "most_expensive_company": "SPAR",
-      "most_expensive_price": 1954.44,
-      "average_price": 1781.53,
-      "spread_pct": 12.39,
       "competition_intensity": "közepes árverseny",
       "coverage": 6
     },
@@ -765,16 +765,23 @@
       "coverage": 5
     },
     {
+      "product": "Darált sertéshús",
+      "category": "Húsáru",
+      "spread_pct": 23.78,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 6
+    },
+    {
       "product": "Zöldpaprika",
       "category": "Zöldség",
-      "spread_pct": 19.37,
+      "spread_pct": 17.29,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
     {
       "product": "Sertéscomb",
       "category": "Húsáru",
-      "spread_pct": 13.58,
+      "spread_pct": 14.45,
       "competition_intensity": "közepes árverseny",
       "coverage": 6
     },
@@ -803,13 +810,6 @@
       "product": "Citrom",
       "category": "Gyümölcs",
       "spread_pct": 12.58,
-      "competition_intensity": "közepes árverseny",
-      "coverage": 6
-    },
-    {
-      "product": "Darált sertéshús",
-      "category": "Húsáru",
-      "spread_pct": 12.39,
       "competition_intensity": "közepes árverseny",
       "coverage": 6
     },
