@@ -1,0 +1,55 @@
+name: Employer Review OSINT
+
+on:
+
+  workflow_dispatch:
+
+  schedule:
+    - cron: '0 4 * * 1'
+
+permissions:
+  contents: write
+
+jobs:
+
+  employer_review_monitor:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python setup
+        uses: actions/setup-python@v5
+
+        with:
+          python-version: '3.12'
+
+      - name: Install packages
+
+        run: |
+
+          pip install requests
+          pip install beautifulsoup4
+          pip install pandas
+
+      - name: Run script
+
+        run: |
+
+          python scripts/update_employer_review_texts.py
+
+      - name: Commit changes
+
+        run: |
+
+          git config --global user.name github-actions
+          git config --global user.email github-actions@github.com
+
+          git add docs/data/employer-review-texts.json
+
+          git diff --cached --quiet || git commit -m "Update employer review texts"
+
+          git push
