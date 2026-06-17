@@ -1,14 +1,15 @@
 {
-  "updated_at": "2026-06-17T09:42:26+00:00",
+  "updated_at": "2026-06-17T10:01:40+00:00",
   "status": "ok",
   "source_type": "public_osint_employee_reviews",
-  "method": "profession_reddit_linkedin_google_news_osint_v3",
-  "important_note": "Az adatok publikus OSINT forrásokból származó szöveges minták. A gyűjtés nem reprezentatív dolgozói felmérés, hanem munkáltatói reputációs jelzés. A LinkedIn és Profession esetében az első kör Google News/RSS találatokra és publikus említésekre támaszkodik, nem belépéshez kötött tartalomra.",
+  "method": "strict_employee_voice_filter_v4",
+  "important_note": "A fő items tömb csak olyan szövegeket tartalmazhat, amelyek valódi dolgozói vélemény jellegűek. A sajtóhírek, bérhírek, álláshirdetések és karrieroldal-címek az excluded_items részbe kerülnek. Az eredmény OSINT jelzés, nem reprezentatív felmérés.",
   "privacy_note": "A script automatikusan eltávolítja az e-mail címeket, telefonszámokat és felismerhető teljes neveket. Személyes adatot nem szabad menteni.",
   "companies": [
     {
       "company": "Auchan",
       "review_text_count": 8,
+      "excluded_count": 30,
       "dominant_topics": [
         {
           "topic": "bérezés",
@@ -36,6 +37,24 @@
         {
           "source": "profession_via_google_news",
           "count": 3
+        }
+      ],
+      "exclusion_counts": [
+        {
+          "reason": "company_not_found",
+          "count": 19
+        },
+        {
+          "reason": "too_short",
+          "count": 6
+        },
+        {
+          "reason": "weak_employee_review_signal",
+          "count": 3
+        },
+        {
+          "reason": "too_few_words",
+          "count": 2
         }
       ],
       "sample_quotes": [
@@ -114,11 +133,47 @@
           "confidence": "medium",
           "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
         }
+      ],
+      "sample_excluded": [
+        {
+          "id": "7d90d694640bf5cf",
+          "company": "Auchan",
+          "source": "google_news_rss",
+          "source_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE4zbF9wU0h6QnNFSERVbzRoYzJ6enFoRy1SN3NVMTN2VDRUMjZGZHZuSmltQjR6Z1FvMFdoaWFaY0F6NGpZN3FVdkIzSHQ0aE1TYmFnN0w0azlaSkN1NkR3bXVnS0VNNWpqUHdKLTJuWlhfNHEtd3c?oc=5",
+          "published_or_found_date": "Mon, 05 Aug 2024 07:00:00 GMT",
+          "date_collected": "2026-06-17T09:48:44+00:00",
+          "reason": "company_not_found",
+          "quote": "„Számomra az ember a legfontosabb érték” - [név eltávolítva]. „Számomra az ember a legfontosabb érték” [név eltávolítva]",
+          "length": 120
+        },
+        {
+          "id": "478e167c07670fbd",
+          "company": "Auchan",
+          "source": "google_news_rss",
+          "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOTm9zeHA1eENNb2JJdmZ5VmVtbzZuZ2x1NFV5ekUzT3NLa3lOT0tueURUMF9FLWR6N1BNQW1hQVFYdncyT1k5bHVpRFlUZWpsUm55RUc4WXNOMFBLUEgyQWtoeHNoTjR5NkVfaDRMQlNCUzRVanZ0T2hzOXZjMHlxY0ppanFITWl6YTNPOEJNS3dDVjY4RU5tTFhZVQ?oc=5",
+          "published_or_found_date": "Fri, 13 Jun 2025 07:00:00 GMT",
+          "date_collected": "2026-06-17T09:48:44+00:00",
+          "reason": "company_not_found",
+          "quote": "[név eltávolítva]: „az előttünk álló közös utat valódi élményként éljük meg” - Trade magazin. [név eltávolítva]: „az előttünk álló közös utat valódi élményként éljük meg” Trade magazin",
+          "length": 184
+        },
+        {
+          "id": "5f3678428ce2c6e4",
+          "company": "Auchan",
+          "source": "google_news_rss",
+          "source_url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1YbDAyR2ZzQndLNnZ6WEQ3WDVSYldHaWdiZDRBdFNuaUdjT0pvcFdnRlZsVGxreFloWUlpU1p3d2lzaUR0d3U5RXY1VHpjS2lIUlJLc1ZLdXlPNkphY0pCY2tfYTNOWFg2ejlqWWE3cw?oc=5",
+          "published_or_found_date": "Mon, 21 Jun 2021 07:00:00 GMT",
+          "date_collected": "2026-06-17T09:48:44+00:00",
+          "reason": "company_not_found",
+          "quote": "\"A vezetői stílust nem lehet pusztán könyvekből elsajátítani\" - [név eltávolítva] - INSTYLE.hu. \"A vezetői stílust nem lehet pusztán könyvekből elsajátítani\" - [név eltávolítva] INSTYLE.hu",
+          "length": 188
+        }
       ]
     },
     {
       "company": "Lidl",
       "review_text_count": 25,
+      "excluded_count": 30,
       "dominant_topics": [
         {
           "topic": "beosztás",
@@ -158,6 +213,24 @@
         {
           "source": "google_news_rss",
           "count": 9
+        }
+      ],
+      "exclusion_counts": [
+        {
+          "reason": "weak_employee_review_signal",
+          "count": 22
+        },
+        {
+          "reason": "company_not_found",
+          "count": 3
+        },
+        {
+          "reason": "too_short",
+          "count": 3
+        },
+        {
+          "reason": "news_or_pr_content",
+          "count": 2
         }
       ],
       "sample_quotes": [
@@ -236,11 +309,47 @@
           "confidence": "medium",
           "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
         }
+      ],
+      "sample_excluded": [
+        {
+          "id": "a1a9ffb9ea4311a4",
+          "company": "Lidl",
+          "source": "google_news_rss",
+          "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9LS1BKZ0ktR1lsa0RMUEt4dXpOV2R0X212VmFob3hkNnVCdXdhLXJ1SmxnaGRKMVJaNGQwTTdpVEhIN25mN2dhU1FPMklDNlo0U3lxRExSRXNZcXhBUXBBQ2V6VUVuVWlJQmhCbzZLLVVuUGMxdDd5SGRzdUVjUlk?oc=5",
+          "published_or_found_date": "Tue, 25 Nov 2025 08:00:00 GMT",
+          "date_collected": "2026-06-17T09:50:27+00:00",
+          "reason": "news_or_pr_content",
+          "quote": "Mi a Lidl titka? A multilánc első számú vezetője avat be minket - 24.hu. Mi a Lidl titka? A multilánc első számú vezetője avat be minket 24.hu",
+          "length": 142
+        },
+        {
+          "id": "4cd89687de6967c7",
+          "company": "Lidl",
+          "source": "google_news_rss",
+          "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxORDZhWVNPWXNFU1FjSllpQWZwWE0taHBla1dFYUx5Mmx5dC1CUGpodkhiTXNrWnlWNUFvVlYzOG90T1dMdDZzX0lNMktOQXc0ak5IbmxmYnRzc1lPakdfS3IxcHpJc1NzM1FXbEV5RVhlYVJfNXNnem9oaDJWR01RWThiX0dUeDNnd25HNzY3YUdpMTRvOV9XNDY4el9ZbDU1?oc=5",
+          "published_or_found_date": "Tue, 23 Jan 2018 08:00:00 GMT",
+          "date_collected": "2026-06-17T09:50:40+00:00",
+          "reason": "news_or_pr_content",
+          "quote": "20 százalékkal emeli dolgozóinak bérét a [név eltávolítva] - HR Portál. 20 százalékkal emeli dolgozóinak bérét a [név eltávolítva] HR Portál",
+          "length": 140
+        },
+        {
+          "id": "e118ce1526ba6eeb",
+          "company": "Lidl",
+          "source": "google_news_rss",
+          "source_url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE01Z3dYVVRmbzRtV2FOZjRaWXA5YlpOd0x4MzZMN3Z4a3ZISThzYjNXa05CeFc5Ny1MWHNrZWVsb0Q4TFZ3NE5lVnphUDRoYU5XRDZhMWxoM0tGNHFkUjVZZWdnanljd0lLTlljRA?oc=5",
+          "published_or_found_date": "Wed, 05 May 2021 07:00:00 GMT",
+          "date_collected": "2026-06-17T09:50:43+00:00",
+          "reason": "weak_employee_review_signal",
+          "quote": "A nők vagy a férfiak jobb főnökök? [név eltávolítva], a Lidl HR-vezetője szerint egy dolog dönti el - [név eltávolítva] interjúja - Femina.hu. A nők vagy a férfiak jobb főnökök? [név eltávolítva], a Lidl HR-vezetője szerint egy dolog dönti el - [név eltávolítva] interjúja Femina.hu",
+          "length": 282
+        }
       ]
     },
     {
       "company": "Aldi",
       "review_text_count": 22,
+      "excluded_count": 30,
       "dominant_topics": [
         {
           "topic": "általános munkáltatói tapasztalat",
@@ -276,6 +385,24 @@
         {
           "source": "profession_via_google_news",
           "count": 8
+        }
+      ],
+      "exclusion_counts": [
+        {
+          "reason": "company_not_found",
+          "count": 21
+        },
+        {
+          "reason": "weak_employee_review_signal",
+          "count": 6
+        },
+        {
+          "reason": "too_few_words",
+          "count": 2
+        },
+        {
+          "reason": "hard_excluded_news_or_job_listing",
+          "count": 1
         }
       ],
       "sample_quotes": [
@@ -354,11 +481,47 @@
           "confidence": "medium",
           "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
         }
+      ],
+      "sample_excluded": [
+        {
+          "id": "60c2957dc086d122",
+          "company": "Aldi",
+          "source": "profession_via_google_news",
+          "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9UYm0tWlFMYldOZWxsQVV3UTBmZDhNUVgwWTBDNDNkMldfR0RvcWNycDVnRlJzNmlYTkxBcGFXZjJaNTJoOTljODdWX3F2STg2TDVIM2YyMXp2ZWhUZkhIVVFCRHdsSklBSXc3TWVUWWlZRVlRVUlLVXVZMUtJVHc?oc=5",
+          "published_or_found_date": "Wed, 02 Nov 2022 17:19:28 GMT",
+          "date_collected": "2026-06-17T09:52:26+00:00",
+          "reason": "too_few_words",
+          "quote": "ALDI MAGYARORSZÁG ÉLELMISZER Bt. vélemények - Profession.hu. ALDI MAGYARORSZÁG ÉLELMISZER Bt. vélemények Profession.hu",
+          "length": 118
+        },
+        {
+          "id": "98cc79cf28968efc",
+          "company": "Aldi",
+          "source": "profession_via_google_news",
+          "source_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNUVVrVG9UdFlYNEVGYm1HNWdVTXhITW0tX0dxdGVHX0VHQnRzbXVNUGM2dkZ2a19jOEN3a01VQU9heFVxUlVXUGpHVkU1X2dLVXBBT2JaNGNHdjNqLVQyTF83clVxWVdaWk9ETGFUMDRicEh3akNLSWRqTUZLSl82WQ?oc=5",
+          "published_or_found_date": "Fri, 25 Mar 2022 23:11:36 GMT",
+          "date_collected": "2026-06-17T09:52:26+00:00",
+          "reason": "too_few_words",
+          "quote": "ALDI MAGYARORSZÁG ÉLELMISZER Bt. értékelések - Profession.hu. ALDI MAGYARORSZÁG ÉLELMISZER Bt. értékelések Profession.hu",
+          "length": 120
+        },
+        {
+          "id": "56a4d551629de91d",
+          "company": "Aldi",
+          "source": "profession_via_google_news",
+          "source_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOUkFhZEFkQ0Y4ODY2bE56WTJzS1FGZlU3a1pVNnlWdzZZWk1SZ2Ixb1ZHbHdtU0xaODNfZ3RzdkE0NFBTeWZnRnd5X0F0ZzUxZWhnRFR0MmRORFlac0FweE1tZFBBYWxsU3RXNDVlTVNsUnFlYWxxdlg0R0w1cWlVWUtGa1A2dmt3eFF0bzNzWTBjSUlKWHc?oc=5",
+          "published_or_found_date": "Wed, 10 Feb 2016 06:49:11 GMT",
+          "date_collected": "2026-06-17T09:52:26+00:00",
+          "reason": "weak_employee_review_signal",
+          "quote": "Sürgős aLDI MAGYARORSZÁG ÉLELMISZER Bt. állás, munka, karrier - 2026 Június - Profession.hu. Sürgős aLDI MAGYARORSZÁG ÉLELMISZER Bt. állás, munka, karrier - 2026 [név eltávolítva].hu",
+          "length": 182
+        }
       ]
     },
     {
       "company": "Penny",
       "review_text_count": 8,
+      "excluded_count": 30,
       "dominant_topics": [
         {
           "topic": "bérezés",
@@ -374,6 +537,24 @@
         {
           "source": "google_news_rss",
           "count": 8
+        }
+      ],
+      "exclusion_counts": [
+        {
+          "reason": "weak_employee_review_signal",
+          "count": 21
+        },
+        {
+          "reason": "too_short",
+          "count": 4
+        },
+        {
+          "reason": "company_not_found",
+          "count": 3
+        },
+        {
+          "reason": "too_few_words",
+          "count": 2
         }
       ],
       "sample_quotes": [
@@ -452,11 +633,47 @@
           "confidence": "medium",
           "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
         }
+      ],
+      "sample_excluded": [
+        {
+          "id": "4edb3c729cfa3a42",
+          "company": "Penny",
+          "source": "google_news_rss",
+          "source_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOWjRiSTExaW15UWlWUVFZbmlVcVRqeDNhQmFsN3E5WHIxQVRGVUQ1VE1SU0p6d0dKRl9MVXI2VXpYQ0JSdDM0Si1qMW1HZ0RBTC1TU2xfU2p0SkRTbFctY2Fac1RXWERrSXg5enJmNlQxclFZa08yLW5mWGdvMEJVdnRCV0ZvZkRmcFYxMkVYVmxUZzgtLXR5MHZ3?oc=5",
+          "published_or_found_date": "Thu, 01 Jun 2023 07:00:00 GMT",
+          "date_collected": "2026-06-17T09:54:30+00:00",
+          "reason": "weak_employee_review_signal",
+          "quote": "Új vezérigazgató érkezik a PENNY Magyarország élére - digitalhungary.hu. Új vezérigazgató érkezik a PENNY Magyarország élére digitalhungary.hu",
+          "length": 142
+        },
+        {
+          "id": "b1a6e95c61dcae7a",
+          "company": "Penny",
+          "source": "google_news_rss",
+          "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFA3T283VHY2OHdlQ1RDLWtQTmcxcTZFSWxNcnd0bDJQS0otM0RMUVRkT3NPbHZ5WThMb2RvQ2UxZmVBUlBwMXVpQVhrN1g2bEZ2WlE0eXlqTGl0dk8wM1JhcVppNjFTSjBjRjJzRmVTN2syaU05ZmxwbDdWMA?oc=5",
+          "published_or_found_date": "Thu, 11 Sep 2025 07:00:00 GMT",
+          "date_collected": "2026-06-17T09:54:30+00:00",
+          "reason": "too_few_words",
+          "quote": "Sikeres nők: [név eltávolítva] - marieclaire.hu. Sikeres nők: [név eltávolítva] marieclaire.hu",
+          "length": 94
+        },
+        {
+          "id": "08d42d561c45f8b3",
+          "company": "Penny",
+          "source": "google_news_rss",
+          "source_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1NdkNhVG5jNFpTY0RHOGowdUhYLWhONEUzbDA2bHNsUnVSX19abWhfb1BvbVdSelFHWE9FNGtlOURzWTFYT1NyYWxPVllUcnh6WnhSMlNrVUJDR2I1?oc=5",
+          "published_or_found_date": "Sat, 21 Nov 2015 13:15:04 GMT",
+          "date_collected": "2026-06-17T09:54:58+00:00",
+          "reason": "weak_employee_review_signal",
+          "quote": "[név eltávolítva] - [név eltávolítva] Director at [név eltávolítva] - LinkedIn. [név eltávolítva] - [név eltávolítva] Director at [név eltávolítva] LinkedIn",
+          "length": 156
+        }
       ]
     },
     {
       "company": "Spar",
       "review_text_count": 25,
+      "excluded_count": 30,
       "dominant_topics": [
         {
           "topic": "bérezés",
@@ -480,6 +697,28 @@
         {
           "source": "google_news_rss",
           "count": 25
+        }
+      ],
+      "exclusion_counts": [
+        {
+          "reason": "weak_employee_review_signal",
+          "count": 18
+        },
+        {
+          "reason": "company_not_found",
+          "count": 6
+        },
+        {
+          "reason": "too_short",
+          "count": 3
+        },
+        {
+          "reason": "news_or_pr_content",
+          "count": 2
+        },
+        {
+          "reason": "hard_excluded_news_or_job_listing",
+          "count": 1
         }
       ],
       "sample_quotes": [
@@ -558,11 +797,47 @@
           "confidence": "medium",
           "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
         }
+      ],
+      "sample_excluded": [
+        {
+          "id": "2d58d79adc04a3b7",
+          "company": "Spar",
+          "source": "google_news_rss",
+          "source_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQUXQxeDBUYWRiRkRlQ2luMEY1Q2NtNGF2cm11X3dfYjE1Ymc0ektRQmJaQi1sMFkxR1o0VGwtb19Fem1wMEt0WUUyTThhMXVWNHFTc2xOSFlnZUxGTUpyeHVVZkQxMjVpTE9vaGlfNTZidm5GYTd0VWJESnlsU3I1bG9Kb2puSnpaUmFSdC1FWl91LU5HdVdHTkdtNzJkcTRtTTgySm8xUzA0N3Z0NlBsVlZEQUpUMEJWSEE?oc=5",
+          "published_or_found_date": "Wed, 20 Dec 2017 08:00:00 GMT",
+          "date_collected": "2026-06-17T09:57:40+00:00",
+          "reason": "company_not_found",
+          "quote": "[név eltávolítva], az Észak-zalai Víz- és [név eltávolítva]. elnök-vezérigazgatója - HR Portál. [név eltávolítva], az Észak-zalai Víz- és [név eltávolítva]. elnök-vezérigazgatója HR Portál",
+          "length": 188
+        },
+        {
+          "id": "1d888a97ea87de75",
+          "company": "Spar",
+          "source": "google_news_rss",
+          "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNZDBsSGREcW4taHROaUZyNm1yZHBBc2JkQXNsTlZCbjlqRkhrbUgwLVd2VjA1LXFPRlF6Z3J3ZDVPWm1aSm13ZWFMMFZMRFdGNTNiWGdST3daOXZGUDFWaUd6al9ncEdyLXlVVC1SSEZYZ2VsVGNUTzVYZTgtSWVZOS0zb1dJdw?oc=5",
+          "published_or_found_date": "Mon, 07 Apr 2014 07:00:00 GMT",
+          "date_collected": "2026-06-17T09:57:40+00:00",
+          "reason": "company_not_found",
+          "quote": "Dr. [név eltávolítva], a BCE egyetemi docense - HR Portál. Dr. [név eltávolítva], a BCE egyetemi docense HR Portál",
+          "length": 114
+        },
+        {
+          "id": "202ad26e2ef36fd6",
+          "company": "Spar",
+          "source": "google_news_rss",
+          "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOTmR6dXh2dlBnV0M0b195ellRXzVyRGYwS1ZCbDF3N3dKazE5SmJhME51THAwSmZET3ViUUU1Z0VtNWJtaGdTdGVsMnduOFpsc1lfNFQtejB2LUF5RWg2dHZzRzV0eU1VYWJFRVF6b05UZmVxYnlvemQyY3NGa1hnWTFvSzllZEgtZDNr?oc=5",
+          "published_or_found_date": "Tue, 24 Jan 2017 22:02:19 GMT",
+          "date_collected": "2026-06-17T09:57:40+00:00",
+          "reason": "company_not_found",
+          "quote": "[név eltávolítva], a Magyar PR Szövetség elnöke - HR Portál. [név eltávolítva], a Magyar PR Szövetség elnöke HR Portál",
+          "length": 118
+        }
       ]
     },
     {
       "company": "Tesco",
       "review_text_count": 1,
+      "excluded_count": 30,
       "dominant_topics": [
         {
           "topic": "általános munkáltatói tapasztalat",
@@ -580,6 +855,20 @@
           "count": 1
         }
       ],
+      "exclusion_counts": [
+        {
+          "reason": "company_not_found",
+          "count": 12
+        },
+        {
+          "reason": "weak_employee_review_signal",
+          "count": 10
+        },
+        {
+          "reason": "too_short",
+          "count": 8
+        }
+      ],
       "sample_quotes": [
         {
           "id": "ebd6b08cdebfd3a4",
@@ -595,6 +884,41 @@
           "length": 100,
           "confidence": "medium",
           "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
+        }
+      ],
+      "sample_excluded": [
+        {
+          "id": "1b17e03415be7f0d",
+          "company": "Tesco",
+          "source": "google_news_rss",
+          "source_url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5qT05hOUx0NHRpYm9GZGs5enIyb2drQzVtTmVkSnFzTFV6cnJjRGM2aEJ1UzFyaWxBNVh5RDJySWFENFBsbHpKMjl2MmstRnotZ1VqbWVvc2NuM2tsN1FNcWhGZ0NHbnB4QnFhdk1BUERjR3Q0cEJn?oc=5",
+          "published_or_found_date": "Thu, 05 May 2022 07:00:00 GMT",
+          "date_collected": "2026-06-17T10:00:05+00:00",
+          "reason": "company_not_found",
+          "quote": "[név eltávolítva]: A figyelmesség, a másikra való odafigyelés csodákra képes - Női váltó. [név eltávolítva]: A figyelmesség, a másikra való odafigyelés csodákra képes Női váltó",
+          "length": 176
+        },
+        {
+          "id": "0cbd32acccece12a",
+          "company": "Tesco",
+          "source": "google_news_rss",
+          "source_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOY18zX2VIWmpHX2lhcldSdGtZTnltT3lWaW5Scmk4N2x1ZUh1d1JEQXZPcU9lbGtVaGVXbllzMlBYQW5BdU1HNzNmY2hyMmRtTklfRDdZcWtQUGh5dzgwdjN6SXplUm1yNk1EUVpkTHkwY2ZRRnk4OTFleW5BSEVKOFU4blg2dEU2cUt0QnBrc1h3azdGWURYLURmYmw5WG5zYjFkVzZkYkM5MDkzWnIzQkRDRzg?oc=5",
+          "published_or_found_date": "Wed, 06 Nov 2024 14:50:35 GMT",
+          "date_collected": "2026-06-17T10:00:33+00:00",
+          "reason": "weak_employee_review_signal",
+          "quote": "[név eltávolítva] Munkaerő-felvétel Sofőr (on-line vásárlás) itt: Budapest - LinkedIn. [név eltávolítva] Munkaerő-felvétel Sofőr (on-line vásárlás) itt: Budapest LinkedIn",
+          "length": 170
+        },
+        {
+          "id": "f1d4cc77080a8227",
+          "company": "Tesco",
+          "source": "google_news_rss",
+          "source_url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1nU2s4bW1wY0ZZb0dWZXlETGdKYjZDaTl5dGpwVjZNejZwX3JyRjcwaFE5MFhleXAwc1VQX3JtR0xBTUhUcFd6NXBCdm9RZ0VMNG8xaVNBNDNCZnVreXMwLWNVSHZ0Y3c?oc=5",
+          "published_or_found_date": "Sat, 17 Dec 2016 09:10:38 GMT",
+          "date_collected": "2026-06-17T10:00:33+00:00",
+          "reason": "too_short",
+          "quote": "[név eltávolítva] - LinkedIn. [név eltávolítva] LinkedIn",
+          "length": 56
         }
       ]
     }
@@ -1934,6 +2258,1988 @@
       "length": 100,
       "confidence": "medium",
       "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
+    }
+  ],
+  "excluded_items": [
+    {
+      "id": "7d90d694640bf5cf",
+      "company": "Auchan",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE4zbF9wU0h6QnNFSERVbzRoYzJ6enFoRy1SN3NVMTN2VDRUMjZGZHZuSmltQjR6Z1FvMFdoaWFaY0F6NGpZN3FVdkIzSHQ0aE1TYmFnN0w0azlaSkN1NkR3bXVnS0VNNWpqUHdKLTJuWlhfNHEtd3c?oc=5",
+      "published_or_found_date": "Mon, 05 Aug 2024 07:00:00 GMT",
+      "date_collected": "2026-06-17T09:48:44+00:00",
+      "reason": "company_not_found",
+      "quote": "„Számomra az ember a legfontosabb érték” - [név eltávolítva]. „Számomra az ember a legfontosabb érték” [név eltávolítva]",
+      "length": 120
+    },
+    {
+      "id": "478e167c07670fbd",
+      "company": "Auchan",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOTm9zeHA1eENNb2JJdmZ5VmVtbzZuZ2x1NFV5ekUzT3NLa3lOT0tueURUMF9FLWR6N1BNQW1hQVFYdncyT1k5bHVpRFlUZWpsUm55RUc4WXNOMFBLUEgyQWtoeHNoTjR5NkVfaDRMQlNCUzRVanZ0T2hzOXZjMHlxY0ppanFITWl6YTNPOEJNS3dDVjY4RU5tTFhZVQ?oc=5",
+      "published_or_found_date": "Fri, 13 Jun 2025 07:00:00 GMT",
+      "date_collected": "2026-06-17T09:48:44+00:00",
+      "reason": "company_not_found",
+      "quote": "[név eltávolítva]: „az előttünk álló közös utat valódi élményként éljük meg” - Trade magazin. [név eltávolítva]: „az előttünk álló közös utat valódi élményként éljük meg” Trade magazin",
+      "length": 184
+    },
+    {
+      "id": "5f3678428ce2c6e4",
+      "company": "Auchan",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1YbDAyR2ZzQndLNnZ6WEQ3WDVSYldHaWdiZDRBdFNuaUdjT0pvcFdnRlZsVGxreFloWUlpU1p3d2lzaUR0d3U5RXY1VHpjS2lIUlJLc1ZLdXlPNkphY0pCY2tfYTNOWFg2ejlqWWE3cw?oc=5",
+      "published_or_found_date": "Mon, 21 Jun 2021 07:00:00 GMT",
+      "date_collected": "2026-06-17T09:48:44+00:00",
+      "reason": "company_not_found",
+      "quote": "\"A vezetői stílust nem lehet pusztán könyvekből elsajátítani\" - [név eltávolítva] - INSTYLE.hu. \"A vezetői stílust nem lehet pusztán könyvekből elsajátítani\" - [név eltávolítva] INSTYLE.hu",
+      "length": 188
+    },
+    {
+      "id": "124c560539e11869",
+      "company": "Auchan",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOVGlMOE1TX3ZvZ3RXYXUwbWZrOHVzSGd5WGh3XzJWQmQta0F4clcwN1hHREFWZ29NeDZsRWRCWlE4Uy1tUVhhYzg0Z0tVSkpTbGhsMEJuUloyU2hOM25FbmRTb3hKbThBMHBzTi1Dd09uV2Z6eHlRdmFFQkpXMUxzUmRBM2M4anljdG1R?oc=5",
+      "published_or_found_date": "Mon, 23 Sep 2024 07:00:00 GMT",
+      "date_collected": "2026-06-17T09:49:01+00:00",
+      "reason": "company_not_found",
+      "quote": "Megvannak az Év Kereskedője 2024 nyertesek - Trade magazin. Megvannak az Év Kereskedője 2024 nyertesek Trade magazin",
+      "length": 116
+    },
+    {
+      "id": "88474aafad625f41",
+      "company": "Auchan",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE12a0VYUG9aZ0RHSjdfekpIWHFSeFduU2pQcUkxSU1zTWNyREpsQkp3ODJWbU4yamI1MEhDWVkyNzFNaWY0R2RFMEZRME9rR1RRQm1DUXlyeXlYNlVuOXNCSk9yZ3ZkTDlXSWhRb1l0aGVORFAz?oc=5",
+      "published_or_found_date": "Thu, 10 Aug 2023 02:34:14 GMT",
+      "date_collected": "2026-06-17T09:49:12+00:00",
+      "reason": "too_short",
+      "quote": "AUCHAN vélemények - Profession.hu. AUCHAN vélemények Profession.hu",
+      "length": 66
+    },
+    {
+      "id": "6401a438ea25467b",
+      "company": "Auchan",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5KTjBjVHFobFRWUEhpUlBZM2N5bWxiNVFzMFR5MWMwMlpUdkNaY1JPOUVJMVhITWxndFRsclUtcHI0dURHNHgxZWU3UHJ3QVBhY2I1VmFMU3dLdGFMMi1oS0lwZG5ySFJyc2FUZmppekpJcldsQ0E?oc=5",
+      "published_or_found_date": "Sun, 03 Apr 2022 13:50:09 GMT",
+      "date_collected": "2026-06-17T09:49:12+00:00",
+      "reason": "too_short",
+      "quote": "AUCHAN értékelések - Profession.hu. AUCHAN értékelések Profession.hu",
+      "length": 68
+    },
+    {
+      "id": "d812b6d9dd170266",
+      "company": "Auchan",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBpTTcxZzFvVGU2cFJ2VU1acWpiOFZjZkF2OXFWRlpQS3lhR0FDV0xOYTJZeEI4NTczWFg1dWpVSjYzUkhCSHpSamtPWXBfUkFxUE5vRmREUFJYSTRwa1RsN1YwdFhSdEJXdXFXejE1NW4?oc=5",
+      "published_or_found_date": "Tue, 21 Jun 2022 06:48:50 GMT",
+      "date_collected": "2026-06-17T09:49:12+00:00",
+      "reason": "too_short",
+      "quote": "AUCHAN állások, karrier - Profession.hu. AUCHAN állások, karrier Profession.hu",
+      "length": 78
+    },
+    {
+      "id": "59bd7e0f59390ba4",
+      "company": "Auchan",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFA5Q0RiRXl6UEZNdGxzdlVJLU5mSVFRUDAyTWx2QjlhOVpIOWlnZUhpUjlndHMtSnZtZ1hUQV9rOHNNSUg4UWdjVFVOb3djY1JuZUE5emloRGRESGw1TDdOTXJxUndPQUFIM2NDdW5za1JnS0FxV3pYMmFR?oc=5",
+      "published_or_found_date": "Tue, 26 Feb 2019 08:00:00 GMT",
+      "date_collected": "2026-06-17T09:49:12+00:00",
+      "reason": "too_few_words",
+      "quote": "Ilyen egy fogyatékosság-barát munkahely - Profession.hu. Ilyen egy fogyatékosság-barát munkahely Profession.hu",
+      "length": 110
+    },
+    {
+      "id": "64a884cbb577c2c5",
+      "company": "Auchan",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFByRDBUV01UQ2RJcXM5OUltVDNDM2QtZTF4WG9PRWFJSjdVLU5VYjdHaHRkU2RvZFU1UGwydThjNG1zN3ZpV2FON0VoMl80N1prNTRYdw?oc=5",
+      "published_or_found_date": "Wed, 18 Feb 2026 15:18:19 GMT",
+      "date_collected": "2026-06-17T09:49:12+00:00",
+      "reason": "too_short",
+      "quote": "SIWENA Kft. - Profession.hu. SIWENA Kft. Profession.hu",
+      "length": 54
+    },
+    {
+      "id": "48de373fdcdf796d",
+      "company": "Auchan",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBhVTgtVmlhSEFmMDRSRnVqQUVyQi1fX0FQRW1KWUdSSHEyM1oyaEtldzUtVnlWOVlLYXA2M3F4ZEZ5Vl9uaUx0bThFMTRXT2w1Q2g4cUFUMU1RR2dUanVVZVltWFhONUNq?oc=5",
+      "published_or_found_date": "Mon, 26 Sep 2016 18:26:51 GMT",
+      "date_collected": "2026-06-17T09:49:15+00:00",
+      "reason": "company_not_found",
+      "quote": "[név eltávolítva] - [név eltávolítva] (HR) - LinkedIn. [név eltávolítva] - [név eltávolítva] (HR) LinkedIn",
+      "length": 106
+    },
+    {
+      "id": "47683a2e2fed0bdb",
+      "company": "Auchan",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBDZXhMRDY5cXZpQVY0SnN0Q1k2eGJlUW5OOGp0RUxTS2N2WEhnTDlCbTZXTjFoc2pXMVJtU0NocWR6d2kycmdrWFdmUVVKTWNDb0pYb3pPVWJyQVMyRC1TUnVB?oc=5",
+      "published_or_found_date": "Sat, 24 Oct 2020 03:55:00 GMT",
+      "date_collected": "2026-06-17T09:49:15+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "[név eltávolítva]-Kutasi - [név eltávolítva] Manager at [név eltávolítva] Magyarország - LinkedIn. [név eltávolítva]-Kutasi - [név eltávolítva] Manager at [név eltávolítva] Magyarország LinkedIn",
+      "length": 194
+    },
+    {
+      "id": "39ee0680c07b94e0",
+      "company": "Auchan",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE55VUVHV3NKdWVYS0t5S3VwNHFrSmtKbVVHQWpsN1RBbExEZTU5ZVpNZ0E5anJQakdKVTloODlUTHNoVng4Z2RtWW9YbU5ucGowRFpwTV9XdWVMQWVJb2lhRDhLcWJRQQ?oc=5",
+      "published_or_found_date": "Wed, 15 Jan 2025 21:37:56 GMT",
+      "date_collected": "2026-06-17T09:49:15+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "[név eltávolítva] - Operatív vezető itt: [név eltávolítva] Magyarország - LinkedIn. [név eltávolítva] - Operatív vezető itt: [név eltávolítva] Magyarország LinkedIn",
+      "length": 164
+    },
+    {
+      "id": "f49f4692318d9c0a",
+      "company": "Auchan",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1Uc0N2MHp4US10SlFIRWRHTTJ2TzVBMGJLNkdEclJHRGF4UFo3UUR6ZFZ2NUFmcHlLRC01UkxlVUhtVDh4bG96UFYxcGZqQQ?oc=5",
+      "published_or_found_date": "Sat, 16 Nov 2024 13:09:54 GMT",
+      "date_collected": "2026-06-17T09:49:15+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "[név eltávolítva] - 💻 Webfejlesztő | Weboldal készítés | 50+ projekt | Modern, gyors weboldalak, amelyek ügyfeleket hoznak | 🏅[név eltávolítva] & Reg fejlesztője | 10K követő - LinkedIn. [név eltávolítva] - 💻 Webfejlesztő | Weboldal készítés | 50+ projekt | Modern, gyors weboldalak, amelyek ügyfeleket hoznak | 🏅[név eltávolítva] & Reg fejlesztője | 10K követő LinkedIn",
+      "length": 370
+    },
+    {
+      "id": "bd6b2b5fc2b9744f",
+      "company": "Auchan",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9CTUZTTUFpQ1hydHh6RzZDb2tERDFUcTlyM0lLUFowWWx5SHYtNnE0M0RtU0Q2TmZuRGNPcFE2XzdwSHBVbVJLN2VrVG9SUzNoaGs5Vw?oc=5",
+      "published_or_found_date": "Mon, 02 Jul 2018 06:11:18 GMT",
+      "date_collected": "2026-06-17T09:49:15+00:00",
+      "reason": "too_few_words",
+      "quote": "Attila SÁROSI - [név eltávolítva] - LinkedIn. Attila SÁROSI - [név eltávolítva] LinkedIn",
+      "length": 88
+    },
+    {
+      "id": "09c04273e30ca348",
+      "company": "Auchan",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFB5N29JbWlCRm13eTl0ZTNwV2cwOXlTSjNRLW9Pc2hBai14OGRoWW1KVlBDcjcyS1RGZDlrUV8tRlRsSW9uMUlSYUE4NXBFaHM?oc=5",
+      "published_or_found_date": "Thu, 06 Feb 2025 03:51:39 GMT",
+      "date_collected": "2026-06-17T09:49:15+00:00",
+      "reason": "company_not_found",
+      "quote": "[név eltávolítva] / [név eltávolítva] / [név eltávolítva] / [név eltávolítva] Manager / [név eltávolítva] - LinkedIn. [név eltávolítva] / [név eltávolítva] / [név eltávolítva] / [név eltávolítva] Manager / [név eltávolítva] LinkedIn",
+      "length": 232
+    },
+    {
+      "id": "d39bda4caa9d022b",
+      "company": "Auchan",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5ERUxKNnhPS0VJcTVIZ2U4anN3QjhwQ3dGZHJtQ29aZzl5MEJLcUp6ZWlyWE1xaWxVSnhMYmtWckNZNldQZnFNMGRqR2xRLWJNOU1aOGhyXzdpVUFJQVlSMw?oc=5",
+      "published_or_found_date": "Wed, 10 Jul 2019 13:39:48 GMT",
+      "date_collected": "2026-06-17T09:49:15+00:00",
+      "reason": "company_not_found",
+      "quote": "[név eltávolítva] - Jogi szakokleveles egyetemi ápoló, Egészségügyi manager - LinkedIn. [név eltávolítva] - Jogi szakokleveles egyetemi ápoló, Egészségügyi manager LinkedIn",
+      "length": 172
+    },
+    {
+      "id": "e52dcd5beca94739",
+      "company": "Auchan",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE40cXBpdmVBaGFqcDktX0Fxa1lKNmpoY0FTWE9FMU9yemxCbUZDLUUxSHlrazU2Q2NaR25heXFoSlFnVm5PV0ktbHgxcTFKU1ZXNUQxVVc2cXh3akpEWUEycVBR?oc=5",
+      "published_or_found_date": "Fri, 04 May 2018 23:09:23 GMT",
+      "date_collected": "2026-06-17T09:49:15+00:00",
+      "reason": "company_not_found",
+      "quote": "[név eltávolítva] - E-commerce Sales and [név eltávolítva] - LinkedIn. [név eltávolítva] - E-commerce Sales and [név eltávolítva] LinkedIn",
+      "length": 138
+    },
+    {
+      "id": "7770e9e3b1378cfd",
+      "company": "Auchan",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBMOEJJVExNU1pOUV9XS1d1VmtsNVRjZkJ4S1NrZlFPUUJKUW1lZFk5Mlg4cjFvaExUbjE3Vno2WUd0c1p1aXF3WHo0ZlBqSUNIaTI3enpEMlZFbDRLRmlN?oc=5",
+      "published_or_found_date": "Sat, 02 Oct 2021 05:31:13 GMT",
+      "date_collected": "2026-06-17T09:49:15+00:00",
+      "reason": "company_not_found",
+      "quote": "[név eltávolítva] - [név eltávolítva] | [név eltávolítva] | 8+ years | Retail FMCG | Fruit and [név eltávolítva] - LinkedIn. [név eltávolítva] - [név eltávolítva] | [név eltávolítva] | 8+ years | Retail FMCG | Fruit and [név eltávolítva] LinkedIn",
+      "length": 246
+    },
+    {
+      "id": "2c390f4662815b45",
+      "company": "Auchan",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9XSFd2dkxNM0Y0Q1Bud01yWDRpTFFxSXJTVDhDMnRJbi1Vd0NIbXc3NUozYVkydmRYbm1hUm1RNjlaUnpkcXhZSDhyNjFrVHEwQUE?oc=5",
+      "published_or_found_date": "Wed, 15 Oct 2014 23:38:00 GMT",
+      "date_collected": "2026-06-17T09:49:15+00:00",
+      "reason": "company_not_found",
+      "quote": "Levente FABIAN - eCommerce 14+y | former CEO of Kalmia.hu - LinkedIn. Levente FABIAN - eCommerce 14+y | former CEO of Kalmia.hu LinkedIn",
+      "length": 136
+    },
+    {
+      "id": "8cf8775c32037ef7",
+      "company": "Auchan",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBqb0NzSGJaN1VYQ1ZvdzljeGRnd0ZDb0hZZ0xVMEktaW1FckpIekZOalhBUWhXM3RDaVpPSU05S0RDaXhMRjFGM0VVX0c2cHVjMDNmekhCWXhVb09VdHhESVlVZk5yUHE3MjA3dk8ya0QzUQ?oc=5",
+      "published_or_found_date": "Thu, 24 Nov 2016 06:37:21 GMT",
+      "date_collected": "2026-06-17T09:49:15+00:00",
+      "reason": "too_short",
+      "quote": "[név eltávolítva] - LinkedIn. [név eltávolítva] LinkedIn",
+      "length": 56
+    },
+    {
+      "id": "edf711efda9e25a0",
+      "company": "Auchan",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE54WUFEM2RlemxqRXM2MG0wSFYyVzBxZVB5YUx6S2JtRGNPR3ZlaVpYM2c3ZVJPNUV0Ul9lUTh0UE9kNXhxY3hfSlU0RzdWVXM0aDVna19pU28tZ2JEMnRPRXJXNC11TzA?oc=5",
+      "published_or_found_date": "Sat, 14 Nov 2015 06:05:25 GMT",
+      "date_collected": "2026-06-17T09:49:15+00:00",
+      "reason": "company_not_found",
+      "quote": "[név eltávolítva] - Head of Finance and Accounting with expertise in [név eltávolítva] and [név eltávolítva] - LinkedIn. [név eltávolítva] - Head of Finance and Accounting with expertise in [név eltávolítva] and [név eltávolítva] LinkedIn",
+      "length": 238
+    },
+    {
+      "id": "f8c396e0c4b397d3",
+      "company": "Auchan",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1WdEZ2ZXQybHJuTVNLYTZLUVdMS1dxSjBwV2RRRkxlLUpfQTRZSGZnWmxuXzZpQ3luY3RISnZTM0NSTlZHTWVPakoxckxKRzcyRFk5dVhn?oc=5",
+      "published_or_found_date": "Sat, 15 May 2021 22:08:41 GMT",
+      "date_collected": "2026-06-17T09:49:15+00:00",
+      "reason": "company_not_found",
+      "quote": "Klaudia ANGOUJARD - Driven by Passion | [név eltávolítva] | Internal & [név eltávolítva] - LinkedIn. Klaudia ANGOUJARD - Driven by Passion | [név eltávolítva] | Internal & [név eltávolítva] LinkedIn",
+      "length": 198
+    },
+    {
+      "id": "fddd98ddb166165a",
+      "company": "Auchan",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE0xSGR4OWhyWmdfdjFSVXVQekMwam1BUFY4dmI4WUo5WWVBbC13SVRBUnA4UjBIQVRKeTI5RWswOGZNZFlEVU8tTWFnNXExS3FqOGdWSVh4d2pEX2tkQ08tSURocjlCWnhPSmlr?oc=5",
+      "published_or_found_date": "Fri, 13 Jun 2025 20:10:55 GMT",
+      "date_collected": "2026-06-17T09:49:15+00:00",
+      "reason": "company_not_found",
+      "quote": "JANOS NAGY - [név eltávolítva] [név eltávolítva] Pressure | [név eltávolítva] | HRV-based Regulation | [név eltávolítva] NeuroLean - LinkedIn. JANOS NAGY - [név eltávolítva] [név eltávolítva] Pressure | [név eltávolítva] | HRV-based Regulation | [név eltávolítva] NeuroLean LinkedIn",
+      "length": 282
+    },
+    {
+      "id": "5b9ca9eddc982dbf",
+      "company": "Auchan",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9lMG5XOXp6VTRScHlyeWRwWnJzZnVBSFJQUmhIOEdiQUllUTV0cmFfOFlncFNmZGJKSXliWndoVE1iODU2V2FkbWtwMEszaHJEMkJ0SA?oc=5",
+      "published_or_found_date": "Fri, 16 Jun 2023 14:27:16 GMT",
+      "date_collected": "2026-06-17T09:49:15+00:00",
+      "reason": "company_not_found",
+      "quote": "[név eltávolítva] - [név eltávolítva] Officer (CHRO) at [név eltávolítva] | [név eltávolítva] [név eltávolítva] (CEE) | European HR [név eltávolítva] of the Year 2024 - LinkedIn. [név eltávolítva] - [név eltávolítva] Officer (CHRO) at [név eltávolítva] | [név eltávolítva] [név eltávolítva] (CEE) | European HR [név eltávolítva] of the Year 2024 LinkedIn",
+      "length": 354
+    },
+    {
+      "id": "e4a72fcfa9756072",
+      "company": "Auchan",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBzMFZxZUhBQ09DT0JWRlhzLXE0N0NGZU11NWE2WXVLUjBQRGZTQm9VY1FaVXJEcEE0WE16bmFsUnRXOVMxMFdPeVVoWWxua1pLWFBVTzIydmlSd041NVhfbVNR?oc=5",
+      "published_or_found_date": "Tue, 24 Nov 2015 02:58:51 GMT",
+      "date_collected": "2026-06-17T09:49:15+00:00",
+      "reason": "company_not_found",
+      "quote": "[név eltávolítva] - GA and HR manager at [név eltávolítva] [név eltávolítva]. - LinkedIn. [név eltávolítva] - GA and HR manager at [név eltávolítva] [név eltávolítva]. LinkedIn",
+      "length": 176
+    },
+    {
+      "id": "2fa64934c6003523",
+      "company": "Auchan",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFAtcW1TV182VjdJNWlUZFU1UjBJc2VobUFjSnRNOTlFX3g2aWQzUjdWRGZzdzRzUUNoYmVUa0kzRTZnRXpKR3ZNekJGRThxVV9vNjV0Vkt3OA?oc=5",
+      "published_or_found_date": "Sun, 07 Jan 2024 11:47:39 GMT",
+      "date_collected": "2026-06-17T09:49:15+00:00",
+      "reason": "company_not_found",
+      "quote": "[név eltávolítva] - Az [név eltávolítva] Toborzási HR Tanácsadója és [név eltávolítva] Menedzsere. Segítek, hogy megtaláld azokat az értékesítőket, akikkel a következő szintre tudsz lépni. - LinkedIn. [név eltávolítva] - Az [név eltávolítva] Toborzási HR Tanácsadója és [név eltávolítva] Menedzsere. Segítek, hogy megtaláld azokat az értékesítőket, akikkel a következő szintre tudsz lépni. LinkedIn",
+      "length": 398
+    },
+    {
+      "id": "0023eff4fa1516aa",
+      "company": "Auchan",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1uU3ZvU1FsMGhMU0V0X1hlXzBUUkdSVFhBVGhpUUEya1AwRHdreGg5RFIwZnV0UmpDYkVPNDNXV1M5bkh2TG9wSHI2Mmt6TVZOLUdZeVQtTUJhWTJHU3NLcTg2MA?oc=5",
+      "published_or_found_date": "Sun, 23 Apr 2017 15:50:15 GMT",
+      "date_collected": "2026-06-17T09:49:15+00:00",
+      "reason": "company_not_found",
+      "quote": "[név eltávolítva] - Head of [név eltávolítva] - LinkedIn. [név eltávolítva] - Head of [név eltávolítva] LinkedIn",
+      "length": 112
+    },
+    {
+      "id": "486030db1fea6836",
+      "company": "Auchan",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1JMUpudEZ3bnl2LWVPYWRtVVVSWnVlYlI0aFZYMjVjelhrWk5Zc1A3eWJhQW1aWXFsc0lFQ1hSRFVaLVdjTGU3RDI3T0ZCRldwWUJVVQ?oc=5",
+      "published_or_found_date": "Sun, 23 Apr 2023 15:08:25 GMT",
+      "date_collected": "2026-06-17T09:49:15+00:00",
+      "reason": "company_not_found",
+      "quote": "[név eltávolítva] - ICF ACC [név eltávolítva] | [név eltávolítva] [név eltávolítva]. Középvezetőkkel és csapatokkal dolgozom – teret teremtek a tisztánlátáshoz és a valódi változáshoz. 🏆 2024 Budapesti TOP 15 Coach - LinkedIn. [név eltávolítva] - ICF ACC [név eltávolítva] | [név eltávolítva] [név eltávolítva]. Középvezetőkkel és csapatokkal dolgozom – teret teremtek a tisztánlátáshoz és a valódi változáshoz. 🏆 2024...",
+      "length": 421
+    },
+    {
+      "id": "af8513c7cb58c040",
+      "company": "Auchan",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5JRzNFTHNiTFpEOWZkeGV6Z1hoWS13TUpkOV9zX2lQVUhlX2hwMGdUQ1o1S0JiSzNzN0JnY1JlLUFnVm1FSVNOMFhucHB1MTh0X1FVd1RXX3ZxWTRadXQ0?oc=5",
+      "published_or_found_date": "Thu, 29 Oct 2020 02:12:08 GMT",
+      "date_collected": "2026-06-17T09:49:15+00:00",
+      "reason": "company_not_found",
+      "quote": "[név eltávolítva] - [név eltávolítva] Manager at RISE [név eltávolítva] KFT - LinkedIn. [név eltávolítva] - [név eltávolítva] Manager at RISE [név eltávolítva] KFT LinkedIn",
+      "length": 172
+    },
+    {
+      "id": "e28203104bb72a1c",
+      "company": "Auchan",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5TcjZod1FXckxLaEJWWHB0Z0VfUV9kWWpwVUxkR0dMZ3YtMGNEZ0xBTWhHOTRab01TN2VkLTNaUjVZQm51d200Zjg1ZGRaVXhJSXpKMGtqc1FOUXlta0FELTJwdEx5V1VYQmZ4M1pHbw?oc=5",
+      "published_or_found_date": "Sat, 21 Nov 2015 11:16:38 GMT",
+      "date_collected": "2026-06-17T09:49:15+00:00",
+      "reason": "too_short",
+      "quote": "[név eltávolítva]-Budai - LinkedIn. [név eltávolítva]-Budai LinkedIn",
+      "length": 68
+    },
+    {
+      "id": "a1a9ffb9ea4311a4",
+      "company": "Lidl",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9LS1BKZ0ktR1lsa0RMUEt4dXpOV2R0X212VmFob3hkNnVCdXdhLXJ1SmxnaGRKMVJaNGQwTTdpVEhIN25mN2dhU1FPMklDNlo0U3lxRExSRXNZcXhBUXBBQ2V6VUVuVWlJQmhCbzZLLVVuUGMxdDd5SGRzdUVjUlk?oc=5",
+      "published_or_found_date": "Tue, 25 Nov 2025 08:00:00 GMT",
+      "date_collected": "2026-06-17T09:50:27+00:00",
+      "reason": "news_or_pr_content",
+      "quote": "Mi a Lidl titka? A multilánc első számú vezetője avat be minket - 24.hu. Mi a Lidl titka? A multilánc első számú vezetője avat be minket 24.hu",
+      "length": 142
+    },
+    {
+      "id": "4cd89687de6967c7",
+      "company": "Lidl",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxORDZhWVNPWXNFU1FjSllpQWZwWE0taHBla1dFYUx5Mmx5dC1CUGpodkhiTXNrWnlWNUFvVlYzOG90T1dMdDZzX0lNMktOQXc0ak5IbmxmYnRzc1lPakdfS3IxcHpJc1NzM1FXbEV5RVhlYVJfNXNnem9oaDJWR01RWThiX0dUeDNnd25HNzY3YUdpMTRvOV9XNDY4el9ZbDU1?oc=5",
+      "published_or_found_date": "Tue, 23 Jan 2018 08:00:00 GMT",
+      "date_collected": "2026-06-17T09:50:40+00:00",
+      "reason": "news_or_pr_content",
+      "quote": "20 százalékkal emeli dolgozóinak bérét a [név eltávolítva] - HR Portál. 20 százalékkal emeli dolgozóinak bérét a [név eltávolítva] HR Portál",
+      "length": 140
+    },
+    {
+      "id": "e118ce1526ba6eeb",
+      "company": "Lidl",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE01Z3dYVVRmbzRtV2FOZjRaWXA5YlpOd0x4MzZMN3Z4a3ZISThzYjNXa05CeFc5Ny1MWHNrZWVsb0Q4TFZ3NE5lVnphUDRoYU5XRDZhMWxoM0tGNHFkUjVZZWdnanljd0lLTlljRA?oc=5",
+      "published_or_found_date": "Wed, 05 May 2021 07:00:00 GMT",
+      "date_collected": "2026-06-17T09:50:43+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "A nők vagy a férfiak jobb főnökök? [név eltávolítva], a Lidl HR-vezetője szerint egy dolog dönti el - [név eltávolítva] interjúja - Femina.hu. A nők vagy a férfiak jobb főnökök? [név eltávolítva], a Lidl HR-vezetője szerint egy dolog dönti el - [név eltávolítva] interjúja Femina.hu",
+      "length": 282
+    },
+    {
+      "id": "7567d60ce0fbffd7",
+      "company": "Lidl",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOVGlMOE1TX3ZvZ3RXYXUwbWZrOHVzSGd5WGh3XzJWQmQta0F4clcwN1hHREFWZ29NeDZsRWRCWlE4Uy1tUVhhYzg0Z0tVSkpTbGhsMEJuUloyU2hOM25FbmRTb3hKbThBMHBzTi1Dd09uV2Z6eHlRdmFFQkpXMUxzUmRBM2M4anljdG1R?oc=5",
+      "published_or_found_date": "Mon, 23 Sep 2024 07:00:00 GMT",
+      "date_collected": "2026-06-17T09:50:43+00:00",
+      "reason": "company_not_found",
+      "quote": "Megvannak az Év Kereskedője 2024 nyertesek - Trade magazin. Megvannak az Év Kereskedője 2024 nyertesek Trade magazin",
+      "length": 116
+    },
+    {
+      "id": "ce1eb0294952bd45",
+      "company": "Lidl",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9PTU1kSG1HSmJyYlhqZ2VMMFg5WTN5NS14dWsyejN4ZHRRSWRzeTBtSjgxb2NvdGpiUXJQY1VISHJCcTNhbjI2MDBsdWJua0V2bEpWNHcxcHB1VEdkdnM3VjU3Ulc?oc=5",
+      "published_or_found_date": "Thu, 03 Sep 2015 13:34:08 GMT",
+      "date_collected": "2026-06-17T09:50:50+00:00",
+      "reason": "company_not_found",
+      "quote": "Sürgős bajai állás, munka - 29 friss állásajánlat - 2026 Június - Profession.hu. Sürgős bajai állás, munka - 29 friss állásajánlat - 2026 [név eltávolítva].hu",
+      "length": 158
+    },
+    {
+      "id": "a788b601be5f71d3",
+      "company": "Lidl",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNVElYRVJ1ak5lekZ1eEVvTERCQU8tYXZqWEFnQmZiT2pycWdrTU5EVWNTVjNTaTRqeVRNZ1JVLUV2YXI0ZkFxdzg0REM0WWx5eDRTUUU2VDhQdTRfQkNwY25KZ3g3Z1NnUlBGaUpjT3Y3MGtEUjRvUGJGQkVKQXlyODhpek9sQQ?oc=5",
+      "published_or_found_date": "Wed, 02 Sep 2015 08:47:18 GMT",
+      "date_collected": "2026-06-17T09:50:50+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős lIDL Magyarország Bt. állás, munka, karrier - 2026 Június - Profession.hu. Sürgős lIDL Magyarország Bt. állás, munka, karrier - 2026 [név eltávolítva].hu",
+      "length": 160
+    },
+    {
+      "id": "ade2ae56d1bdca85",
+      "company": "Lidl",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE11cXlzd3dJTGRTUzU3bVEtd0xsY19jUUl0bmdDZnF1ZXdXU1JfaGd6VzdxSWVxMy12ZWtJbHppSmJiQURhcmJ1M2FYRUJuUDcxTDZ4eDN1UHN4aG5IMVc1dmFBYzJiUG0zNnFoTU5wOXE?oc=5",
+      "published_or_found_date": "Thu, 16 Mar 2023 23:38:51 GMT",
+      "date_collected": "2026-06-17T09:50:50+00:00",
+      "reason": "too_short",
+      "quote": "Lidl vélemények - Profession.hu. Lidl vélemények Profession.hu",
+      "length": 62
+    },
+    {
+      "id": "0be43bea0a1c1aaf",
+      "company": "Lidl",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5QXzc1a3FJZjNaM1ZuT1RIWGUwQi1EREFrSkRheUVUaTRKc2hBNElCOXVSY1BxMVRpSmM3VkZRenhNSENnYWJPS3Fvam90VGR6YkFnRjFoZnJEYmJ1M0FwZU91ZkkxU2lzM2p0Y1JLeTVWZw?oc=5",
+      "published_or_found_date": "Fri, 25 Mar 2022 23:13:47 GMT",
+      "date_collected": "2026-06-17T09:50:50+00:00",
+      "reason": "too_short",
+      "quote": "Lidl értékelések - Profession.hu. Lidl értékelések Profession.hu",
+      "length": 64
+    },
+    {
+      "id": "37755575d6c54e7c",
+      "company": "Lidl",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE41aGowU3p4REZhdHNsTlF4SDRqSDNVTnVVLVhOYy02dXpqRG5pdDM4VUJISkwyLVRwU18xLVhHeE1HcEUybVNJa1JOOVBpSkJpQk83UnlCVkpxNFNsbWtiVjRoRVViVGF5c1NBVkFia2E5TDA4aXVBb2dR?oc=5",
+      "published_or_found_date": "Thu, 17 Mar 2022 08:29:41 GMT",
+      "date_collected": "2026-06-17T09:50:50+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős lidl magyarország bt. állás, munka - 136 db - 2026 Június - Profession.hu. Sürgős lidl magyarország bt. állás, munka - 136 db - 2026 [név eltávolítva].hu",
+      "length": 160
+    },
+    {
+      "id": "8398d0c960d0c2b1",
+      "company": "Lidl",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQRFNnZ0V2RkdYWkRaQXJ6OHZUckJZUU5uTF9BeTFFZi04TGRCTmZzNFkwaXNqZ3BlQ0EwNGRfTUt1N3pqZDA2SVBYdC11bC15cEtIY3hhWkQ2d3FoSV83QkVuckRxb1lhU3FBb3lzQlpQbUlmRFRQMVd5YzNrRUdjbWtkWXZTRnFvWFczZEZIeTE?oc=5",
+      "published_or_found_date": "Sun, 17 Apr 2022 03:16:45 GMT",
+      "date_collected": "2026-06-17T09:50:50+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős lidl magyarország bt. állás, munka III. kerületben - 2026 Június - Profession.hu. Sürgős lidl magyarország bt. állás, munka III. kerületben - 2026 [név eltávolítva].hu",
+      "length": 174
+    },
+    {
+      "id": "a5fda34ca145899a",
+      "company": "Lidl",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBXaHVRR2g0eDdVQi1yT0hTZ2VfT3VMOVpuWWxHX1cxMmFnN1BMZXE2ZlVtd3ZPbmlsSmswNmFHeklLVUp6a01QdmRNTjM2NHBSV0l3eGN2Zlhib3hSQTRjM21GOVNmZEhPU3MyTHFfcUdZZzZOei1QaDBkcGpfZms?oc=5",
+      "published_or_found_date": "Thu, 01 Aug 2024 00:28:52 GMT",
+      "date_collected": "2026-06-17T09:50:50+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős lidl magyarország állás, munka Budapesten - 2026 Június - Profession.hu. Sürgős lidl magyarország állás, munka Budapesten - 2026 [név eltávolítva].hu",
+      "length": 156
+    },
+    {
+      "id": "3fc20842ffc6effb",
+      "company": "Lidl",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB4WlJselF1eXpsS3prOG9uRTNldHpfZnA2enZPaEJOYmJ0RGlIajA3b2V2QnV0elZILVh6ck8ybWNqWDA5b09XRmt2emROeEVPczdvZmFJdHlSekxhTUg0U25iVUNBdnpoOFNiTQ?oc=5",
+      "published_or_found_date": "Tue, 04 Oct 2022 17:38:05 GMT",
+      "date_collected": "2026-06-17T09:50:50+00:00",
+      "reason": "too_short",
+      "quote": "Lidl állások, karrier - Profession.hu. Lidl állások, karrier Profession.hu",
+      "length": 74
+    },
+    {
+      "id": "9c3e26648a36cc6b",
+      "company": "Lidl",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPRUxJS2NDc2puSnVqSUFRZzNsQVJJRlhOVHF5aXo4NlNuRXp2VV92SUJqc0puRUx2TkFoSC1EcXZfZWZXQ2tLZ0JqN0RoUWUwdU5yeWxybXExR1Yzc2JaNWg4Tkhod1phdkZzbFRheWRTekZuSFRwR0xrOW1vcVNfV1NhcXJ1dFBRSkJv?oc=5",
+      "published_or_found_date": "Sun, 08 May 2022 06:57:36 GMT",
+      "date_collected": "2026-06-17T09:50:50+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős lidl magyarország bt. állás, munka Bács-Kiskun megyében - 2026 Június - Profession.hu. Sürgős lidl magyarország bt. állás, munka Bács-Kiskun megyében - 2026 [név eltávolítva].hu",
+      "length": 184
+    },
+    {
+      "id": "be775e23657d7d49",
+      "company": "Lidl",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPSXFQRzVvOF9BQk9EX05GNXc5c21EUFJmSkNyT0pFUlBNUmUxUkYyMzdSZ1pVMlRScXpETThMU2hSb3R6aUtFa1c4aXhaak96c3lxSG5CdXFGV2VsQ2VIQVFpWjdXSldteUFYeWVFWG9BbHJPS3lMVmFSTHVjMmJkOFlXeU12WHVXSlVz?oc=5",
+      "published_or_found_date": "Sat, 15 Jun 2024 21:47:14 GMT",
+      "date_collected": "2026-06-17T09:50:50+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős lidl magyarország bt állás, munka Pomázon - 2026 Június - Profession.hu. Sürgős lidl magyarország bt állás, munka Pomázon - 2026 [név eltávolítva].hu",
+      "length": 156
+    },
+    {
+      "id": "789b6d2dfc0f977b",
+      "company": "Lidl",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNRXhLTkk4M3BDeWkxc2QxRUVpOW9USFJXLUNzdUdGb0Utc2o3ZXkyT3Q0bmdCbnZMVVg2MnZhSVp3YVVFZlJ5dXc4em1zelczZGFFRjNKY1NsdHFSbWZrbmFHVGFzdUpVODZTcFZVeGFiMlc5Y0RKamo4akNnZDhwQjNlLXhrbVJv?oc=5",
+      "published_or_found_date": "Tue, 14 Jan 2025 05:53:30 GMT",
+      "date_collected": "2026-06-17T09:50:50+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős lidl magyarország bt állás, munka Érden - 2026 Június - Profession.hu. Sürgős lidl magyarország bt állás, munka Érden - 2026 [név eltávolítva].hu",
+      "length": 152
+    },
+    {
+      "id": "5878a869062dd733",
+      "company": "Lidl",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPLXJIV1VNMWxKWWFiSFpxZ09DZkdMYm1Qc2dScVVTUXBxQVJlR2tTZF9FUG1jbWJVNEFjVzEwbWN5Uzl1OE5fMVoyeGtKdnJzY0hQcmRrTzUyVm5nWTgzM01Bd25jZG85Y2ZRajBUc1ZuR2I1U0NHVHRCaERDeGV0ZFhEczhJZUJIbnhMcVJVT0UzSm1ERjl5b2E0RHZhVjZ1ejUxMmhJeVM4Ry1CaVY5N3o3SUhTVUJOb1RRVERCakYxRlNXeWVfenFPM0V6ajREX3FURlllZmgyeDd5OTNzU0dnd1pkTzFsMjBkbVpqTQ?oc=5",
+      "published_or_found_date": "Fri, 22 May 2026 14:20:10 GMT",
+      "date_collected": "2026-06-17T09:50:50+00:00",
+      "reason": "company_not_found",
+      "quote": "Bolti dolgozó - Fonyód (8 órás munkaidő határozott idejű szerződéssel és főszezonban szállással) - Profession.hu. Bolti dolgozó - Fonyód (8 órás munkaidő határozott idejű szerződéssel és főszezonban szállással) Profession.hu",
+      "length": 224
+    },
+    {
+      "id": "a374ae4e18591792",
+      "company": "Lidl",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1iLXN2Xy1MalhiUWN0RjBLRWExWlV3Y09fOXVWMlNOLWFmLUg0Q2IyRFFVeG84bkdpaVZBQi0xdHhkVUJncGlUTUR3TmtwQjhhUnh6SnB3YWg0dGhXUVlXeU1nbEg?oc=5",
+      "published_or_found_date": "Thu, 19 Dec 2019 06:24:32 GMT",
+      "date_collected": "2026-06-17T09:50:50+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős lidl állás, munka Budapesten - 40 ajánlat - 2026 Június - Profession.hu. Sürgős lidl állás, munka Budapesten - 40 ajánlat - 2026 [név eltávolítva].hu",
+      "length": 156
+    },
+    {
+      "id": "829c2d042f409eb2",
+      "company": "Lidl",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQVFJyOFFHeWhqaWF1YUxtTW8yYm4xQWNQV1l6cFV5OHhUcnNSYk93MGRDQTRRdjlJRE5ELVVxR1lCb1J2YlJWMzhlT2xoMXQtMHdvMGNRNlk5RDNEUklERHZiYXpxZXlkNmtIdnl2Mk5KTm5PaVhqcXR1V1dRbUtud0hKdHFfVHhtY2c0b2hnS29SQ2JWLU50MHVfcGNVNXdlR1JBRHA3b0pPbldCV3VTQVVPSTktMnJJQlRN?oc=5",
+      "published_or_found_date": "Tue, 26 May 2026 14:40:16 GMT",
+      "date_collected": "2026-06-17T09:50:50+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "2. Üzletvezető-helyettes - Csongrád, Fő u. 59. (7 órás munkaidő) állás, munka: LIDL Magyarország Bt., Csongrád - Profession.hu. 2. Üzletvezető-helyettes - Csongrád, Fő u. 59. (7 órás munkaidő) állás, munka: LIDL Magyarország Bt., [név eltávolítva].hu",
+      "length": 250
+    },
+    {
+      "id": "4565b992fa0118f2",
+      "company": "Lidl",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPNk1rb1Zfd0xHNGU1VG42My1la3hvd1djOGRER1RuR1RodFpxeXg5WUJQak55a1FNM2lCWEw0Qy1meklidEEwZ1ZIZGxveWRjdDJTOWJfR0E4aF9DNU1DQzB5Zjh1ZWVJYnVjd2JudkZsNWNxR0pucnc3dTNmWC1lWm1aQzNnRDF2?oc=5",
+      "published_or_found_date": "Wed, 10 Sep 2025 18:44:13 GMT",
+      "date_collected": "2026-06-17T09:50:50+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős lidl magyarország állás, munka Nagykátán - 2026 Június - Profession.hu. Sürgős lidl magyarország állás, munka Nagykátán - 2026 [név eltávolítva].hu",
+      "length": 154
+    },
+    {
+      "id": "f2389e726e812f27",
+      "company": "Lidl",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQTXo1OEtxRjdBRFJPVFpNYjVydzZVek5UVEpYR3dXVUhIS24tYXNFcEVURWZGa2s1Tlp0aEJDbEpaeXFFOWVNR2lRQUR5aExKeHdRTjhXYm5tTzFvbXhzY0NjM2pDVEQtQnNuOTFjazJ1RkVBOWVfWm4zWW95X3hVazcyRjJmQ3NYRVh1Wjh1Q2dNQTRkS3REWDhOWHphQQ?oc=5",
+      "published_or_found_date": "Tue, 16 Jun 2026 15:10:12 GMT",
+      "date_collected": "2026-06-17T09:50:50+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "[név eltávolítva]-Food területre állás, munka: LIDL Magyarország Bt., Budapest - Profession.hu. [név eltávolítva]-Food területre állás, munka: LIDL Magyarország Bt., [név eltávolítva].hu",
+      "length": 186
+    },
+    {
+      "id": "b11f6318fce93a87",
+      "company": "Lidl",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5KMEtvd1Y5eHZRUEM1M0lmYXZaTU9Xa0Nqck8zUzlXNWd6d0ZJQ3VWRkhzSGt6b2pCekZFOVlFRDZPaHlMcWZ4VmxNQ1Q0aUxfWXlHdFpXZw?oc=5",
+      "published_or_found_date": "Wed, 02 Sep 2015 18:58:35 GMT",
+      "date_collected": "2026-06-17T09:50:50+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős lidl állás, munka - 141 friss állásajánlat - 2026 Június - Profession.hu. Sürgős lidl állás, munka - 141 friss állásajánlat - 2026 [név eltávolítva].hu",
+      "length": 158
+    },
+    {
+      "id": "a6e7d41708d1bfac",
+      "company": "Lidl",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE80WlhEcWtWNzEzXzMyaVJaR2FCX2xyR19oejJkcnduMF9acTN6ZEpkaEtveU9ocjEtUnFUeEtHMl9qb25OakJod2dsbUYtWlFKRFFzYzd4RW1LWHFMN2Yw?oc=5",
+      "published_or_found_date": "Thu, 19 Dec 2019 17:51:39 GMT",
+      "date_collected": "2026-06-17T09:50:50+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős lidl állás, munka Pest megyében - 31 db - 2026 Június - Profession.hu. Sürgős lidl állás, munka Pest megyében - 31 db - 2026 [név eltávolítva].hu",
+      "length": 152
+    },
+    {
+      "id": "4c095a746a5813a3",
+      "company": "Lidl",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFB5SVZjVS1ZV2twdlBqUWlnVlNTVEV3aGVBREpzSlRXWGVWUEhjMXBDa1hJcXJ3SVFKWGVDT3l2ajFhT0NFNzBjcURyenFKdy1HVFdXb3lVaHlXV09UQURacEx0djJWaDdNRGdjd2tDbw?oc=5",
+      "published_or_found_date": "Thu, 29 Jun 2023 00:50:55 GMT",
+      "date_collected": "2026-06-17T09:50:50+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős lidl allas állás, munka Budapesten - 34 db - 2026 Június - Profession.hu. Sürgős lidl allas állás, munka Budapesten - 34 db - 2026 [név eltávolítva].hu",
+      "length": 158
+    },
+    {
+      "id": "9e8ff3a8f56183e9",
+      "company": "Lidl",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQb2V4ZkhxUFpvZWNwaHQ3dzI5V2liT2hFLTBZSkRwcmtmZ0xOOE1DYzJDWGRTNVU5QmlVYUYwVlpRVTNNZ1pOSDRGeVpmNEpiTktma0VVLTZkTEFZX3RBZzRRSHNacHhVeTZNamJ1MjhlY0lfOFVjSjF3a3M0TzBTa3FFRQ?oc=5",
+      "published_or_found_date": "Wed, 21 Feb 2024 16:44:34 GMT",
+      "date_collected": "2026-06-17T09:50:50+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős bolti dolgozó lidl állás, munka Budapesten - 2026 Május - Profession.hu. Sürgős bolti dolgozó lidl állás, munka Budapesten - 2026 [név eltávolítva].hu",
+      "length": 157
+    },
+    {
+      "id": "86e00b373774936f",
+      "company": "Lidl",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNWUh3Y2dGMGxDS1BjZ05DSjFzTFVmdXRTVjFzVDBEUVRURGpjaWNFRkpOenJMMmZjVVRiRGtGdVg3ZzFiLUswbGFGbk9oZ0ZjVm9SbW9tZ0FhVDc5bzFxczV0VWxfbUtRSkJoVEJDLVgwZ3JabzlZVUhxUlRXanlLYlM3QWR3ZXphR01OZjBUcEtkelRVeHMxNjF3S3N6bms5Z3BrLUducThwcDBUb0pNWHBHWXJEUHh6Y0FWVnU4eWhGTUFhSW9UdFFyaktJZw?oc=5",
+      "published_or_found_date": "Fri, 12 Jun 2026 15:30:13 GMT",
+      "date_collected": "2026-06-17T09:50:50+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Területi értékesítési vezető - Jász-[név eltávolítva] megye állás, munka: LIDL Magyarország Bt., Kiskunfélegyháza - Profession.hu. Területi értékesítési vezető - Jász-[név eltávolítva] megye állás, munka: LIDL Magyarország Bt., [név eltávolítva].hu",
+      "length": 248
+    },
+    {
+      "id": "2b6081881ea5cd87",
+      "company": "Lidl",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBLUzdwem5BSWpwLUtlNjZQeU5BR1lrdnFMQWhaekZSVS1jM3gzbnF6aWhYOExTd3MtNjQwVmpJRlZESWFWMWoxUG5IanZWX3Zkdm5tN3gxZm9iNXhpd214RzFVdkpldkw5TXFFUlZ3?oc=5",
+      "published_or_found_date": "Mon, 10 Feb 2025 21:56:40 GMT",
+      "date_collected": "2026-06-17T09:50:50+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős lidl bt állás, munka Fóton - 14 ajánlat - 2026 Június - Profession.hu. Sürgős lidl bt állás, munka Fóton - 14 ajánlat - 2026 [név eltávolítva].hu",
+      "length": 152
+    },
+    {
+      "id": "b657b224448e6b93",
+      "company": "Lidl",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9uRTFVY0pRQ3FteDAxX3dFdl9QRmVPNXlpeVlicmJUQVpQWnFiTE4xRXlBLU1tRDhhaVd5RUE1NjVnUTBrbzNCektVek8yTm4yN25DQlh4c29JbWVRV0VzZm51U3YxRjFwQk1MUTVMS1FGd3RZVjc5cHk3RDVXdFk?oc=5",
+      "published_or_found_date": "Wed, 24 Apr 2024 18:48:43 GMT",
+      "date_collected": "2026-06-17T09:50:50+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős lidl eladó állás, munka XVI. kerületben - 2026 Június - Profession.hu. Sürgős lidl eladó állás, munka XVI. kerületben - 2026 [név eltávolítva].hu",
+      "length": 152
+    },
+    {
+      "id": "0122d9196e900d72",
+      "company": "Lidl",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPa0FOLVJOYktsMXY3aTBUTGRiV0RhZzFpZ1Z6dDFuSDZDanpDSGlNOW5kLWFvVG52NnA1eWlwbjNscGI2UTkzRFMyUndCTzJiRmlWdldGODJGM0kwcUFMOWZ6aTQ2TGc0aVBwZ0liYnVsV0VfQ2ZTMGI0dXV6U1hVLWxhb0NBeUZSdDBpQmFqdU9UOElGdFAyNFFFRzJ5NkhaU3RtZHNQdEtlRHFPR2c?oc=5",
+      "published_or_found_date": "Tue, 09 Jun 2026 11:51:42 GMT",
+      "date_collected": "2026-06-17T09:50:50+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "[név eltávolítva] állás, munka: LIDL Magyarország Bt., Kiskunfélegyháza - Profession.hu. [név eltávolítva] állás, munka: LIDL Magyarország Bt., [név eltávolítva].hu",
+      "length": 164
+    },
+    {
+      "id": "914d85502c675f22",
+      "company": "Lidl",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5XOUEtN05lSmRpZE9BX3hqUHpFNEhuS0JaV3IxN21ia1Fha2pISm5EQ2NlMGEtV1VlRmFNeGJCa2lNRHdHRlo2N2I1R21UaUEyeWRMZzN6TzhfbWxGemhHaEFGZGNuWE5Xb1lmTm9n?oc=5",
+      "published_or_found_date": "Mon, 24 Jul 2023 13:27:43 GMT",
+      "date_collected": "2026-06-17T09:50:50+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős lidl állás, munka XI. kerületben - 6 db - 2026 Június - Profession.hu. Sürgős lidl állás, munka XI. kerületben - 6 db - 2026 [név eltávolítva].hu",
+      "length": 152
+    },
+    {
+      "id": "bf97e46845f120b2",
+      "company": "Lidl",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFAyd2xRNGpXSzZVU1F6U1R6UFlFYWJJaWNBZDE2SnJGWkdlVW5iNU5FWnFUT3NZVTdFcXktdkZtTmxSM1hhT2E4X3JacmVYMFVvZjJKLVNzcXh1QlROanlxYVZrMkpLeDJQVzJKcXZZcmI?oc=5",
+      "published_or_found_date": "Sun, 06 Nov 2022 04:34:17 GMT",
+      "date_collected": "2026-06-17T09:50:50+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős lidl állás, munka Nagytarcsán - 8 ajánlat - 2026 Június - Profession.hu. Sürgős lidl állás, munka Nagytarcsán - 8 ajánlat - 2026 [név eltávolítva].hu",
+      "length": 156
+    },
+    {
+      "id": "60c2957dc086d122",
+      "company": "Aldi",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9UYm0tWlFMYldOZWxsQVV3UTBmZDhNUVgwWTBDNDNkMldfR0RvcWNycDVnRlJzNmlYTkxBcGFXZjJaNTJoOTljODdWX3F2STg2TDVIM2YyMXp2ZWhUZkhIVVFCRHdsSklBSXc3TWVUWWlZRVlRVUlLVXVZMUtJVHc?oc=5",
+      "published_or_found_date": "Wed, 02 Nov 2022 17:19:28 GMT",
+      "date_collected": "2026-06-17T09:52:26+00:00",
+      "reason": "too_few_words",
+      "quote": "ALDI MAGYARORSZÁG ÉLELMISZER Bt. vélemények - Profession.hu. ALDI MAGYARORSZÁG ÉLELMISZER Bt. vélemények Profession.hu",
+      "length": 118
+    },
+    {
+      "id": "98cc79cf28968efc",
+      "company": "Aldi",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNUVVrVG9UdFlYNEVGYm1HNWdVTXhITW0tX0dxdGVHX0VHQnRzbXVNUGM2dkZ2a19jOEN3a01VQU9heFVxUlVXUGpHVkU1X2dLVXBBT2JaNGNHdjNqLVQyTF83clVxWVdaWk9ETGFUMDRicEh3akNLSWRqTUZLSl82WQ?oc=5",
+      "published_or_found_date": "Fri, 25 Mar 2022 23:11:36 GMT",
+      "date_collected": "2026-06-17T09:52:26+00:00",
+      "reason": "too_few_words",
+      "quote": "ALDI MAGYARORSZÁG ÉLELMISZER Bt. értékelések - Profession.hu. ALDI MAGYARORSZÁG ÉLELMISZER Bt. értékelések Profession.hu",
+      "length": 120
+    },
+    {
+      "id": "56a4d551629de91d",
+      "company": "Aldi",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOUkFhZEFkQ0Y4ODY2bE56WTJzS1FGZlU3a1pVNnlWdzZZWk1SZ2Ixb1ZHbHdtU0xaODNfZ3RzdkE0NFBTeWZnRnd5X0F0ZzUxZWhnRFR0MmRORFlac0FweE1tZFBBYWxsU3RXNDVlTVNsUnFlYWxxdlg0R0w1cWlVWUtGa1A2dmt3eFF0bzNzWTBjSUlKWHc?oc=5",
+      "published_or_found_date": "Wed, 10 Feb 2016 06:49:11 GMT",
+      "date_collected": "2026-06-17T09:52:26+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős aLDI MAGYARORSZÁG ÉLELMISZER Bt. állás, munka, karrier - 2026 Június - Profession.hu. Sürgős aLDI MAGYARORSZÁG ÉLELMISZER Bt. állás, munka, karrier - 2026 [név eltávolítva].hu",
+      "length": 182
+    },
+    {
+      "id": "ece8017b0c37f53d",
+      "company": "Aldi",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQRkktS3I3a01KenZGRDgzV2EybWhmQVoycnAyTWk3VmFXQW84Ukx4TFhidGU4Tjg0NXNha1BMOUdxQ0ZHRExZNnR3bXFINzV3eDRhLTAyUmIyTU85b3pwaTlOb2UzVm9BT3N1SnVYVi01X2dRUXlJMjFkSTgtcHNFUmNOM1RzeTJpU1ItZzNlN3NwVXhMbGJEQ3dlVjRRWFhra2E0?oc=5",
+      "published_or_found_date": "Wed, 13 May 2026 09:25:17 GMT",
+      "date_collected": "2026-06-17T09:52:26+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Bolti eladó - Veszprém állás, munka: ALDI MAGYARORSZÁG ÉLELMISZER Bt., Veszprém - Profession.hu. Bolti eladó - Veszprém állás, munka: ALDI MAGYARORSZÁG ÉLELMISZER Bt., [név eltávolítva].hu",
+      "length": 188
+    },
+    {
+      "id": "50d2a110dcc844a2",
+      "company": "Aldi",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQOUc2Z1hxWTA5Z0JXb1poUXVuQnFSX1lOcHh3aGJIZm5OdTFEX3l2UjAzWGtXRm1tMFY2MGZYQWVOS21jSXRfd0xSZ1BybTh4a2RROUJBR2lXMEpWOGZkYTJrbTNmOGhEV3p4cWhzTXg0blBJRWsxYzFydl9WTjRkbmtXT18tX1VjVW81RE82dGlKZW52dWVYS1hxT1FwbWhVNWozYjZTeVp3cmwtQ2ExWXU2X3V6cUJnd0FkUXJoZVFXc3lkYVlFdEE5MThNbm5sNkd3Y1U0cUNKcWdsZmc?oc=5",
+      "published_or_found_date": "Thu, 04 Jun 2026 05:55:09 GMT",
+      "date_collected": "2026-06-17T09:52:26+00:00",
+      "reason": "company_not_found",
+      "quote": "Bolti eladó - Balatoni szezonális munkavégzés - Balatonfenyves - Profession.hu. Bolti eladó - Balatoni szezonális munkavégzés - [név eltávolítva].hu",
+      "length": 148
+    },
+    {
+      "id": "653ade0d1ba65075",
+      "company": "Aldi",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBkS0FTcmFnQ1U2czZQOG1BT3BCUW9JZ1dUTXF3b2lVTnZSZGJHNF9DWjZ6cVZ4NkRoNzRjUWtVcEhpMmRxaHU2TzkwMTB1VlphY2NyVnBBLW1wRldGbS1TOEpMb0d1ZDJKVDMtU1JvRzVtUXB3SFg4a3VGcw?oc=5",
+      "published_or_found_date": "Fri, 01 Apr 2022 17:09:32 GMT",
+      "date_collected": "2026-06-17T09:52:26+00:00",
+      "reason": "hard_excluded_news_or_job_listing",
+      "quote": "ALDI MAGYARORSZÁG ÉLELMISZER Bt. állások, karrier - Profession.hu. ALDI MAGYARORSZÁG ÉLELMISZER Bt. állások, karrier Profession.hu",
+      "length": 130
+    },
+    {
+      "id": "1b5471498e1f6abc",
+      "company": "Aldi",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBza3BKLTU2TzNHX3AwQlhXWFVWU3hwVEpYU0U3ajYwNlNROXpsSUdqLWpJUFJtMXRPWjRoMVNlUHJOeDhKMFdIMnctelN5aWIxLVBCb00xSGo4WS1GY3pEWEJB?oc=5",
+      "published_or_found_date": "Sun, 21 May 2023 00:49:17 GMT",
+      "date_collected": "2026-06-17T09:52:26+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős aldi allas állás, munka - 12 állásajánlat - 2026 Június - Profession.hu. Sürgős aldi allas állás, munka - 12 állásajánlat - 2026 [név eltávolítva].hu",
+      "length": 156
+    },
+    {
+      "id": "55e7f314a942a95f",
+      "company": "Aldi",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5RVGZQY2FwRUVHOGtEdGJDb2JPcnVnSEZtR29nWUZ6TlJ2YWVkZnI5MFZXRUhyVmpyMXdtdlBBcDFKVWJkTUp5SFNYRDFabGEwUkhPbXdfdHVyVk9kSVNpMVNIdmlJdUpPUndXTQ?oc=5",
+      "published_or_found_date": "Thu, 19 Dec 2019 17:37:40 GMT",
+      "date_collected": "2026-06-17T09:52:26+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős aldi állás, munka Budaörsön - 5 ajánlat - 2026 Június - Profession.hu. Sürgős aldi állás, munka Budaörsön - 5 ajánlat - 2026 [név eltávolítva].hu",
+      "length": 152
+    },
+    {
+      "id": "06ef78904813960c",
+      "company": "Aldi",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5iczhYaFNQTVRmbnVvcFlZZW55TWJ4ajJhMExTTXdYZVowTGluVkhCbWVROGJPbzdZMS1XRlU4X1VmZ0lFZEc5Wkl5X08telZEcS1XQ3NsRThLb1QyNHZGWDhkdVJULW9FQWtpQ3hsUkQ?oc=5",
+      "published_or_found_date": "Mon, 13 Jan 2020 05:25:51 GMT",
+      "date_collected": "2026-06-17T09:52:26+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős aldi állás, munka Biatorbágyon - 4 ajánlat - 2026 Június - Profession.hu. Sürgős aldi állás, munka Biatorbágyon - 4 ajánlat - 2026 [név eltávolítva].hu",
+      "length": 158
+    },
+    {
+      "id": "5855000db70d74f8",
+      "company": "Aldi",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9uQWtFSWhsOEJRQVdvNEVHb1hoOUpWMWU0SUJTb1g2UWJJQndWY0t4VlFoeU9hdjlFdWRQOXhtMnRTT2dfcWk2VnhBN3R2N3dTaWx2VEJGNHozbW1yTE1LUVNZUWktdw?oc=5",
+      "published_or_found_date": "Thu, 03 Sep 2015 23:51:52 GMT",
+      "date_collected": "2026-06-17T09:52:26+00:00",
+      "reason": "company_not_found",
+      "quote": "[név eltávolítva] állás, munka - 417 állásajánlat - 2026 Június - Profession.hu. [név eltávolítva] állás, munka - 417 állásajánlat - 2026 [név eltávolítva].hu",
+      "length": 158
+    },
+    {
+      "id": "2a4466f7d0a08bc2",
+      "company": "Aldi",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE53TUdvdm9CZG1pdUdibTF6UmFfLURCVkFtaGs4VmZKQ1lwVFNqYTc2T0l3ZGJRT1VILXNwOFVfdThNMVk1b21NbnlCQVhSSnZ6OUFEWExPQ1ZJWFNwUTg1MEVwNVNhdEszOUNKaXhydHJ6bVVVZkthbTJR?oc=5",
+      "published_or_found_date": "Mon, 06 May 2024 21:59:44 GMT",
+      "date_collected": "2026-06-17T09:52:26+00:00",
+      "reason": "company_not_found",
+      "quote": "[név eltávolítva] kereskedelem állás, munka - 2026 Június - Profession.hu. [név eltávolítva] kereskedelem állás, munka - 2026 [név eltávolítva].hu",
+      "length": 146
+    },
+    {
+      "id": "ac4d47a7e4d98b5e",
+      "company": "Aldi",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9WdEgyMzhJbjBUcC1LYWUzODhmWHBJc1play04TWlGRjUyMnA1MnFHX0N4ci05UGFBMS1Bb1pYS2JONUJYbXViSDRnc2h3OGVidU94dkRhZEZVUGtWWmhMMGJrMVZYQTA?oc=5",
+      "published_or_found_date": "Wed, 17 Nov 2021 14:03:46 GMT",
+      "date_collected": "2026-06-17T09:52:26+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős aldi állás, munka Érden - 2 állásajánlat - 2026 Június - Profession.hu. Sürgős aldi állás, munka Érden - 2 állásajánlat - 2026 [név eltávolítva].hu",
+      "length": 154
+    },
+    {
+      "id": "eb7cd86e23455fed",
+      "company": "Aldi",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOVU1LSEN5RldEbWlibC13bHZzYWlvOWJZRmVRTE1JZ2NBR2dJS3d6RTVnWllpRWFDS2Z0QV9NN2VUVHZqRTdXYk9Pcm9xZDlhbXZtZk5lN18xOTJEajdSWFAwak5nWEtDblFVeUM0UDFQSmRZY3B2OHZRYWxqaEhEWnEzVUVlZ3BT?oc=5",
+      "published_or_found_date": "Fri, 08 Mar 2024 18:04:27 GMT",
+      "date_collected": "2026-06-17T09:52:26+00:00",
+      "reason": "company_not_found",
+      "quote": "Sürgős magyarország bt állás, munka Biatorbágyon - 2026 Június - Profession.hu. Sürgős magyarország bt állás, munka Biatorbágyon - 2026 [név eltávolítva].hu",
+      "length": 156
+    },
+    {
+      "id": "b3b269458b5b924b",
+      "company": "Aldi",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBnVDZ5VndBUi10ZFRlcjZEdjNGV2dtdmVSeUFZUHNkd1BkM3RMYjRkejZSd2tCVTlMaEZ3b2hlMEJ6RHh5cXhLZkJ0cDdFWUpOa3NzUDVhQ25yZXdZWFN1Y3JTUHBscTVOYXdNTEhrMTdqMDdBQmQyZVZBOA?oc=5",
+      "published_or_found_date": "Wed, 23 Mar 2022 09:41:18 GMT",
+      "date_collected": "2026-06-17T09:52:26+00:00",
+      "reason": "company_not_found",
+      "quote": "Sürgős göngyölegkezelés állás, munka - 13 ajánlat - 2026 Június - Profession.hu. Sürgős göngyölegkezelés állás, munka - 13 ajánlat - 2026 [név eltávolítva].hu",
+      "length": 158
+    },
+    {
+      "id": "d0c55e04552d981a",
+      "company": "Aldi",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9TWWVnQkl1VVZ1MHBoanI3TW01V01EdzllRHhXOVFRQ1U5QU1CZjVxNjNnaVdRMy01OEk2NFBBTVVVYmpKSlZIbEtaa2tNUUNLb0N2MnlVc0dVX3JIWHdFaWtETUVhcUUyWXZIeDZ0ODJjM00?oc=5",
+      "published_or_found_date": "Sat, 28 Dec 2024 21:01:24 GMT",
+      "date_collected": "2026-06-17T09:52:26+00:00",
+      "reason": "company_not_found",
+      "quote": "Sürgős 6. bt állás, munka Budakesziben - 19 db - 2026 Június - Profession.hu. Sürgős 6. bt állás, munka Budakesziben - 19 db - 2026 [név eltávolítva].hu",
+      "length": 152
+    },
+    {
+      "id": "869902ba862ae705",
+      "company": "Aldi",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1UelRhZ084ZHg5dG53c3doQVU2REljNUJrUEE1cHd4eUFyV2lmcDdsSkc5RzdLUWlFcDA4VEZJVHZHRzJ6NFJVZ1o3NXM4UEtzNGFiRzF3elJuWWNHTUdsRF94dzBxY3dBMGRabl9GM1ZCcV9fOVE?oc=5",
+      "published_or_found_date": "Tue, 15 Jun 2021 15:41:24 GMT",
+      "date_collected": "2026-06-17T09:52:26+00:00",
+      "reason": "company_not_found",
+      "quote": "Sürgős targonca állás, munka Biatorbágyon - 20 db - 2026 Június - Profession.hu. Sürgős targonca állás, munka Biatorbágyon - 20 db - 2026 [név eltávolítva].hu",
+      "length": 158
+    },
+    {
+      "id": "9e075efc33e42a22",
+      "company": "Aldi",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOUDMybGgxUWtWSGt0aEhLMWxjQXMwbGR0TW5aUlVzcWN6M3M1VDJwM2xKUXNlWU42dTBWdVVPS3g4Tm5kZTlCa2JGMjlWSzkzZlNaVzZSdXVWallsVGVsdWFUX2tYcERDbEVRRmFWaFh4SzNCcGRPbVB3UHRRNHV2cXBjQzVsUG8?oc=5",
+      "published_or_found_date": "Mon, 20 Jan 2025 02:48:24 GMT",
+      "date_collected": "2026-06-17T09:52:26+00:00",
+      "reason": "company_not_found",
+      "quote": "Sürgős eladó-üzletvezető állás, munka Somogy megyében - 2026 Június - Profession.hu. Sürgős eladó-üzletvezető állás, munka Somogy megyében - 2026 [név eltávolítva].hu",
+      "length": 166
+    },
+    {
+      "id": "371941c825c11b4d",
+      "company": "Aldi",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5GQmlOT05Rc1FIdjZKUlV2dTVwc3V6Y0xGaVdaYzJTTkFLa3pDMkdfR2RXaXVndlpEZHQwYnhzcmcxakQ0QkFjblJNSHZwT2oxbzRSbHVFc0hHa004ZXE0b2szaWc5dXpMVzhLUy1xclU?oc=5",
+      "published_or_found_date": "Wed, 06 Mar 2024 12:48:00 GMT",
+      "date_collected": "2026-06-17T09:52:26+00:00",
+      "reason": "company_not_found",
+      "quote": "Sürgős szezonális munka állás, munka - 115 ajánlat - 2026 Június - Profession.hu. Sürgős szezonális munka állás, munka - 115 ajánlat - 2026 [név eltávolítva].hu",
+      "length": 160
+    },
+    {
+      "id": "2067e453474c6e64",
+      "company": "Aldi",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQa2hLUXQ5TzcwU2h6T1ZrdWtnVGt1aFRmdEpLVVlDbTdQYlZxTk50QllRampUb1hnZ2VURTAxTU5BZ28yZjV1MnZQT2pUUmRzaXRTYTlMZ2VkVzZsQVlWT1V5WjBFeUF3YkxCb3I3c0dQWnNwMERSN1U0aUhXREQ4WkltRFk0ZEhUUFNDX3VtVnljY0pH?oc=5",
+      "published_or_found_date": "Sun, 14 Sep 2025 15:24:30 GMT",
+      "date_collected": "2026-06-17T09:52:26+00:00",
+      "reason": "company_not_found",
+      "quote": "Sürgős bolti eladó bolti állás, munka nyelvtudás nélkül, pályakezdőknek - 2026 Június - Profession.hu. Sürgős bolti eladó bolti állás, munka nyelvtudás nélkül, pályakezdőknek - 2026 [név eltávolítva].hu",
+      "length": 202
+    },
+    {
+      "id": "89e3adde1619559b",
+      "company": "Aldi",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPTFhWMkhhX0MwelhCeDBWRVd3RU5UdHltNU1DNVBsVXVXVFF6QjF4OXd6U0RsQ0x1bEVyNE9rMzU2c194TUhrMXhkb2FuQ09mWnl4V0VCWHBZNWxJUVA0RGtoNnRDWHFWQWU1bmIzMHhZSVZrTl9RUERZLVNZeTRkTUJFMl9YSXAzVkE5MUdMTQ?oc=5",
+      "published_or_found_date": "Wed, 12 Apr 2023 15:38:08 GMT",
+      "date_collected": "2026-06-17T09:52:26+00:00",
+      "reason": "company_not_found",
+      "quote": "[név eltávolítva] munka heti fizetéssel állás, munka - 2026 Június - Profession.hu. [név eltávolítva] munka heti fizetéssel állás, munka - 2026 [név eltávolítva].hu",
+      "length": 164
+    },
+    {
+      "id": "918238be56bb21be",
+      "company": "Aldi",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9UUkFVcjFvSTNIRDlDYmJHb21Pam83cGJoeC0xMWpTSVdSYU5vR3YyeWtLRDFPV1dVdnFwX0FVN19PUXhvNTlndHpJSEMtdlVXeWlkSlVGajBqRGpJUnAwNGtGM2JmUQ?oc=5",
+      "published_or_found_date": "Wed, 14 Jun 2023 11:11:17 GMT",
+      "date_collected": "2026-06-17T09:52:26+00:00",
+      "reason": "company_not_found",
+      "quote": "Sürgős szezonális állás, munka - 120 állásajánlat - 2026 Június - Profession.hu. Sürgős szezonális állás, munka - 120 állásajánlat - 2026 [név eltávolítva].hu",
+      "length": 158
+    },
+    {
+      "id": "13903017c29ec103",
+      "company": "Aldi",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPNXBKWUlYclBfQVNQdl9NYmYyRmJ0Z0s5Tm9RaDd1ZVRyc1hwcVM4RG4tRFVaWjgzeDRVSGNTWG9uYUVQQk81NUgyeGNTLWFlMTRtN0lNcDZBREVXd2c2UVhDX0RERGdrbEluWUctaDhVc3Z0eFNZa1JtV2lpZHhhNGk3VWk?oc=5",
+      "published_or_found_date": "Mon, 07 Sep 2015 02:59:15 GMT",
+      "date_collected": "2026-06-17T09:52:26+00:00",
+      "reason": "company_not_found",
+      "quote": "Sürgős anyaggazdálkodás, Beszerzés állás, munka Pest megyében - 2026 Június - Profession.hu. Sürgős anyaggazdálkodás, Beszerzés állás, munka Pest megyében - 2026 [név eltávolítva].hu",
+      "length": 182
+    },
+    {
+      "id": "162ec3a7c81bed97",
+      "company": "Aldi",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFB2V2dlTG1uY3BfMHhGeS1nQ1F2dDZCSnFHek13cS1RU3U2Z29JVzZuUVhyTzBOT2F1RUZMR0RjdHhfYTR0TDBuY2tHQXowaU1MRG4yVTltaHFIcEhTUmlvaFJKSDdadXR1dFJEeTV2cVNZeGVFZ05jQWNEMnE?oc=5",
+      "published_or_found_date": "Wed, 16 Mar 2022 11:39:45 GMT",
+      "date_collected": "2026-06-17T09:52:26+00:00",
+      "reason": "company_not_found",
+      "quote": "Sürgős beszerzési munkatárs állás, munka - 807 db - 2026 Június - Profession.hu. Sürgős beszerzési munkatárs állás, munka - 807 db - 2026 [név eltávolítva].hu",
+      "length": 158
+    },
+    {
+      "id": "7ae991c7789f91de",
+      "company": "Aldi",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxORGw0RThDeWpYRDIyRVpSdnJyZkpCSWtiNWJiclFMRE9kdGp2OWVXUEFyY0t6ZXZaNUpLX1VTUm9wQUZBby0ySGJPLWxuLWg1ZmpTcFotWUdoU09CMnpKQ29rNmhfRk9VWGhWVWF2OF8zSDlmM0tBZENzZEJVVU9ZbDd4T1c4WHpi?oc=5",
+      "published_or_found_date": "Sat, 27 Aug 2022 19:14:01 GMT",
+      "date_collected": "2026-06-17T09:52:26+00:00",
+      "reason": "company_not_found",
+      "quote": "Sürgős junior beszerzési munkatárs állás, munka - 2026 Június - Profession.hu. Sürgős junior beszerzési munkatárs állás, munka - 2026 [név eltávolítva].hu",
+      "length": 154
+    },
+    {
+      "id": "923acd514af9807c",
+      "company": "Aldi",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNUG5pa2tDYUx1R0dLRFlGNEFUeE11Y3poaFoxalU5a2l1RUhlUFNDVDFvNGFHeDUzQ2ZzSjFkYUY5MDBSN1BwSHVTelF1azZKamtWNk1TSkc4YU5JeTd3VE1wTUJDWVVnZmJUeFRFTzhTM2JUbEwtbTJPUlhKekFwZjUwd2VlZkxQUHM4b18wbi1SZVVk?oc=5",
+      "published_or_found_date": "Fri, 20 Dec 2024 13:37:01 GMT",
+      "date_collected": "2026-06-17T09:52:26+00:00",
+      "reason": "company_not_found",
+      "quote": "Sürgős bolti eladó üzletvezető állás, munka Somogy megyében - 2026 Június - Profession.hu. Sürgős bolti eladó üzletvezető állás, munka Somogy megyében - 2026 [név eltávolítva].hu",
+      "length": 178
+    },
+    {
+      "id": "5bdf5d3a3a71df37",
+      "company": "Aldi",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5sVE1ETWJ1WVlUNjA0V2otQlpLa0VmMVBHN2xTZnRESU9Gakh0bWNLazJpclNsY2ZWRW5WMlpIVWVLakN6TFNXc2xIZ1dsUmMxejJlLTZXeWwtaUtXVzVvSE5aTDM5SF9CdVBrbnlHWGJxU3M?oc=5",
+      "published_or_found_date": "Sun, 29 Jan 2023 15:19:30 GMT",
+      "date_collected": "2026-06-17T09:52:26+00:00",
+      "reason": "company_not_found",
+      "quote": "Sürgős beszerzési manager állás, munka - 32 db - 2026 Június - Profession.hu. Sürgős beszerzési manager állás, munka - 32 db - 2026 [név eltávolítva].hu",
+      "length": 152
+    },
+    {
+      "id": "0f97024163d6b750",
+      "company": "Aldi",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQV01RNk41Nm5wMHg1QmotVkFtUVVXY1laRldMV2RYUjcydWRrYjNWVkJUNWh5Q0JDdGJ6c19CNE53SzJLQUpTMGhHMDZmckQxazNwN2pvMHFLRE9haW9IRURoU085Wm93bXFnblROanBwNFZlc3hOWXhfWjVlUGF3R1RXbzRhaWJaMWc?oc=5",
+      "published_or_found_date": "Thu, 05 Oct 2023 04:21:22 GMT",
+      "date_collected": "2026-06-17T09:52:26+00:00",
+      "reason": "company_not_found",
+      "quote": "Sürgős termékek manager állás, munka Biatorbágyon - 2026 Június - Profession.hu. Sürgős termékek manager állás, munka Biatorbágyon - 2026 [név eltávolítva].hu",
+      "length": 158
+    },
+    {
+      "id": "c7f66167f6c1bd84",
+      "company": "Aldi",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBHNXhXb3E5MFl3S0Y5YURrT24za0d3eFVOaUNwZFRXeFVOZGVsYWRLdmJlRGU0TV9QYWczWGxjMHVHVnduY2RiOGYwOUxLQjJnRmJJa0tlTWsycDRGTEQ0Ykl6MA?oc=5",
+      "published_or_found_date": "Thu, 13 Dec 2018 22:25:45 GMT",
+      "date_collected": "2026-06-17T09:52:26+00:00",
+      "reason": "company_not_found",
+      "quote": "[név eltávolítva] állás, munka - 460 friss állásajánlat - 2026 Június - Profession.hu. [név eltávolítva] állás, munka - 460 friss állásajánlat - 2026 [név eltávolítva].hu",
+      "length": 170
+    },
+    {
+      "id": "e8d79867f7c8a3fb",
+      "company": "Aldi",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1IM0R1b3VNSUNxZ1FGX0YzYTk4WUZMWVBfdjVZS1pxX1o3RUFnTDdTVmY1bDRnSWxwZTBVc0FCY3dKNVAwMkVPT3Y3a09XQ1Fhc3VCLVo4SXdjMnNhdHBMblZNT242b0dtdUNyeVhtNTZxMUVt?oc=5",
+      "published_or_found_date": "Wed, 16 Mar 2022 18:14:59 GMT",
+      "date_collected": "2026-06-17T09:52:26+00:00",
+      "reason": "company_not_found",
+      "quote": "Sürgős bolti eladó állás, munka Somogy megyében - 2026 Június - Profession.hu. Sürgős bolti eladó állás, munka Somogy megyében - 2026 [név eltávolítva].hu",
+      "length": 154
+    },
+    {
+      "id": "7a7db3dae3fba7f4",
+      "company": "Aldi",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBpSGtDTDJ6Z19SdW91c1RHRHptT0xMMlhCU1llX1h0T19SSUVZdTNYX2l5a0d3N2w2QnlPV3BDZFAtRWZOZjRoSjBOUmRBc2p6Y2JsYURNZ2RrcDhkZnNXdVhzMG1uNDlvNjRZWHBR?oc=5",
+      "published_or_found_date": "Wed, 16 Mar 2022 12:13:38 GMT",
+      "date_collected": "2026-06-17T09:52:26+00:00",
+      "reason": "company_not_found",
+      "quote": "Sürgős termék manager állás, munka - 211 ajánlat - 2026 Június - Profession.hu. Sürgős termék manager állás, munka - 211 ajánlat - 2026 [név eltávolítva].hu",
+      "length": 156
+    },
+    {
+      "id": "4edb3c729cfa3a42",
+      "company": "Penny",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOWjRiSTExaW15UWlWUVFZbmlVcVRqeDNhQmFsN3E5WHIxQVRGVUQ1VE1SU0p6d0dKRl9MVXI2VXpYQ0JSdDM0Si1qMW1HZ0RBTC1TU2xfU2p0SkRTbFctY2Fac1RXWERrSXg5enJmNlQxclFZa08yLW5mWGdvMEJVdnRCV0ZvZkRmcFYxMkVYVmxUZzgtLXR5MHZ3?oc=5",
+      "published_or_found_date": "Thu, 01 Jun 2023 07:00:00 GMT",
+      "date_collected": "2026-06-17T09:54:30+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Új vezérigazgató érkezik a PENNY Magyarország élére - digitalhungary.hu. Új vezérigazgató érkezik a PENNY Magyarország élére digitalhungary.hu",
+      "length": 142
+    },
+    {
+      "id": "b1a6e95c61dcae7a",
+      "company": "Penny",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFA3T283VHY2OHdlQ1RDLWtQTmcxcTZFSWxNcnd0bDJQS0otM0RMUVRkT3NPbHZ5WThMb2RvQ2UxZmVBUlBwMXVpQVhrN1g2bEZ2WlE0eXlqTGl0dk8wM1JhcVppNjFTSjBjRjJzRmVTN2syaU05ZmxwbDdWMA?oc=5",
+      "published_or_found_date": "Thu, 11 Sep 2025 07:00:00 GMT",
+      "date_collected": "2026-06-17T09:54:30+00:00",
+      "reason": "too_few_words",
+      "quote": "Sikeres nők: [név eltávolítva] - marieclaire.hu. Sikeres nők: [név eltávolítva] marieclaire.hu",
+      "length": 94
+    },
+    {
+      "id": "08d42d561c45f8b3",
+      "company": "Penny",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1NdkNhVG5jNFpTY0RHOGowdUhYLWhONEUzbDA2bHNsUnVSX19abWhfb1BvbVdSelFHWE9FNGtlOURzWTFYT1NyYWxPVllUcnh6WnhSMlNrVUJDR2I1?oc=5",
+      "published_or_found_date": "Sat, 21 Nov 2015 13:15:04 GMT",
+      "date_collected": "2026-06-17T09:54:58+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "[név eltávolítva] - [név eltávolítva] Director at [név eltávolítva] - LinkedIn. [név eltávolítva] - [név eltávolítva] Director at [név eltávolítva] LinkedIn",
+      "length": 156
+    },
+    {
+      "id": "9e2402be37434f26",
+      "company": "Penny",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE50VmhPekdUV1haekNPRlhRSE9ORjJsTUZrTjJUQkpUbHJRbXU1bUFQUjlqT19reGZfdkE3aldQMWdZNDhUUnpFdzBiZmV3Nm9Ua2EycjhxczFXSVJGeHVUSWFWV3k1Ync?oc=5",
+      "published_or_found_date": "Sat, 22 Apr 2023 07:23:21 GMT",
+      "date_collected": "2026-06-17T09:54:58+00:00",
+      "reason": "too_short",
+      "quote": "[név eltávolítva] - LinkedIn. [név eltávolítva] LinkedIn",
+      "length": 56
+    },
+    {
+      "id": "4958f98be78a0dda",
+      "company": "Penny",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1fWVVZZTc1ODE5QlN0ZGJBOXdxelF3ZDlfQ2Z5ZEc4T2RvX1pWRWVfanRGMkRWN1Q2MGxSSUZJZm9YRkxyb2tleERTZUZtcm1tU1R3TzdvbkFKOUJC?oc=5",
+      "published_or_found_date": "Thu, 07 Mar 2024 00:29:02 GMT",
+      "date_collected": "2026-06-17T09:54:58+00:00",
+      "reason": "too_short",
+      "quote": "[név eltávolítva] - LinkedIn. [név eltávolítva] LinkedIn",
+      "length": 56
+    },
+    {
+      "id": "2afec612daa4395f",
+      "company": "Penny",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFAxNEhWTUF1TE9YUXNOLVUtdTcxQ2ZSRmpFMktoaEhtU3VfZ3p1VHRhZXhCbVhjMnE5aXo2WTJNRWpYNVJOWXJJalNsUVFtZncw?oc=5",
+      "published_or_found_date": "Mon, 30 Jun 2025 18:35:15 GMT",
+      "date_collected": "2026-06-17T09:54:58+00:00",
+      "reason": "company_not_found",
+      "quote": "[név eltávolítva] - [név eltávolítva] at JÓkenyér - Ludwig&[név eltávolítva] ---[név eltávolítva] / [név eltávolítva] [név eltávolítva] [név eltávolítva] Hungary (Ex-[név eltávolítva] Manager at KLUDI) - LinkedIn. [név eltávolítva] - [név eltávolítva] at JÓkenyér - Ludwig&[név eltávolítva] ---[név eltávolítva] / [név eltávolítva] [név eltávolítva] [név eltávolítva] Hungary (Ex-[név eltávolítva] Manager at KLUDI)...",
+      "length": 418
+    },
+    {
+      "id": "fdb849239fa9fc0f",
+      "company": "Penny",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9vQ3p3d1EzNUpzRURtYzVEQXk2UDE3NVpFYk1YaFFqQjFTV2hvQzdKZ3FzNjEwalUwMG1xcWVCUmo4bWhVSDh3TVdYUy1ESUotWmkxbUNzdzVBejBkM3FtcGs3TQ?oc=5",
+      "published_or_found_date": "Sun, 24 Apr 2016 13:35:37 GMT",
+      "date_collected": "2026-06-17T09:54:58+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "[név eltávolítva] Egri - [név eltávolítva] at [név eltávolítva] Hungary - LinkedIn. [név eltávolítva] Egri - [név eltávolítva] at [név eltávolítva] Hungary LinkedIn",
+      "length": 164
+    },
+    {
+      "id": "bd62783f99651b37",
+      "company": "Penny",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNdmdodEt4TUs0aVlyVFlZbnpSV0ozNzYxR1M2ak5mbXY0Vlo4c3hRaTd1Zk5xeHg1TURlMFFyTTE4UXI5UndSd2dTd01oTk5qU05BS2ZkQ0p0OThpdzhjMElhNU5qWF9qUm9tVW0zUy1NdFJEdVVTVWxFOVBaVkoxZl81YzdBZ085U0Rj?oc=5",
+      "published_or_found_date": "Mon, 13 Feb 2023 08:00:00 GMT",
+      "date_collected": "2026-06-17T09:55:01+00:00",
+      "reason": "company_not_found",
+      "quote": "„Akkor tudunk fejlődni, ha támogató környezet vesz körül” - [név eltávolítva]. „Akkor tudunk fejlődni, ha támogató környezet vesz körül” [név eltávolítva]",
+      "length": 154
+    },
+    {
+      "id": "305b3376c8bda6bb",
+      "company": "Penny",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE11bFgwYkp1eXVCeEh5WUxSeEx4TGlyWkJaMzdCdEQ4TGt5c1VheWszODM5bXNaRXlMTGpOQ2RTNFktcTI0WHUxMzEtNTFnT1ktc1RSeU8zbVlySXozZldlSG9lWko2ZlZRdXc?oc=5",
+      "published_or_found_date": "Tue, 01 Sep 2015 18:46:22 GMT",
+      "date_collected": "2026-06-17T09:55:26+00:00",
+      "reason": "company_not_found",
+      "quote": "Sürgős veszprémi állás, munka - 190 állásajánlat - 2026 Június - Profession.hu. Sürgős veszprémi állás, munka - 190 állásajánlat - 2026 [név eltávolítva].hu",
+      "length": 156
+    },
+    {
+      "id": "d253e6757ccdbbee",
+      "company": "Penny",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBYR3dHcjN2dExkcjhJZURMU2JuOHQxS1N5alpaM0dHcEhvMi1leVNjMVE1NXRtUGh1QlA1dGswWDU3X1pfdWlQamhEY3JyalhTcm51TGo3VUtsR05ic1g4c2M0anRPN0NqMjdMYQ?oc=5",
+      "published_or_found_date": "Fri, 25 Mar 2022 23:14:06 GMT",
+      "date_collected": "2026-06-17T09:55:26+00:00",
+      "reason": "too_short",
+      "quote": "Penny-Market értékelések - Profession.hu. Penny-Market értékelések Profession.hu",
+      "length": 80
+    },
+    {
+      "id": "44d20a15e5d0027a",
+      "company": "Penny",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1NbHVaT08xcWxmYVJDS3VJM2tYTnRvWWNlLVBQRXlUaFB2YTZNRS10UDZQZjNsSXQ2aEh4MDVCNUpHWUdTUDAyMktpZ2VvWktEQzZkVE5seDVhRzV6aGk1eURLVm5iQ3RacFJJ?oc=5",
+      "published_or_found_date": "Sat, 20 May 2023 02:40:56 GMT",
+      "date_collected": "2026-06-17T09:55:26+00:00",
+      "reason": "too_short",
+      "quote": "Penny-Market vélemények - Profession.hu. Penny-Market vélemények Profession.hu",
+      "length": 78
+    },
+    {
+      "id": "db75ce06214e34d9",
+      "company": "Penny",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNakRncGwyVF9oczFLWno3N3g5bHNnRHR2Qkx2MVBHT3BuSkhFT3NvZ0hXRnhsVXpZdmVNRUxBcG9QOHVZaERCZl9NUkdaeVk1ZEZPM2hDZzU5MElQZDU1V1BNZHc1QTI2Q0p3SWtqbDJGY2lDMWpLS3JKU1FiaW5VbQ?oc=5",
+      "published_or_found_date": "Tue, 01 Sep 2015 19:04:58 GMT",
+      "date_collected": "2026-06-17T09:55:26+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős penny-[név eltávolítva]. állás, munka, karrier - 2026 Június - Profession.hu. Sürgős penny-[név eltávolítva]. állás, munka, karrier - 2026 [név eltávolítva].hu",
+      "length": 166
+    },
+    {
+      "id": "f3325888ad3098f6",
+      "company": "Penny",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9YeF9udnJwT2d5VTJ6TWgxZm9rZGhPNDlIaUhqV2RQQm14bTRPTnBCcGlxd1lpTFRjZWRmNncySnJWZTZXRmtOZGR5OXlLZHR3T1BmY3lpMjdMdlh6LUxabUZoaHpZWWlTd1luQkRjaDA4d0JLNjNTYQ?oc=5",
+      "published_or_found_date": "Mon, 14 Mar 2022 00:51:02 GMT",
+      "date_collected": "2026-06-17T09:55:26+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős penny market kft. állás, munka Somogy megyében - 2026 Június - Profession.hu. Sürgős penny market kft. állás, munka Somogy megyében - 2026 [név eltávolítva].hu",
+      "length": 166
+    },
+    {
+      "id": "0cb96cfe45b336e9",
+      "company": "Penny",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBPWUlJRDNJYTB2R2dWbmhkZ0pZTU5XX3I0S3BneEJyeldqZ3VZRncxTnpPNDUteWFaVjJHLThhbTRWLS1fVlg4Y2R1SDNIZnpkWFFTWmZXcnY3bVF3d3ltanFITXUtT2VseHJ2WUxQbGxPcHlIVFNndg?oc=5",
+      "published_or_found_date": "Sat, 03 Sep 2022 13:06:43 GMT",
+      "date_collected": "2026-06-17T09:55:26+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős penny-market kft. állás, munka Veszprém megyében - 2026 Június - Profession.hu. Sürgős penny-market kft. állás, munka Veszprém megyében - 2026 [név eltávolítva].hu",
+      "length": 170
+    },
+    {
+      "id": "807330e609ed513f",
+      "company": "Penny",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOcE1mdHlhOGo1bWZQN09ycFlIay1uR3ZMX3FFdlhQeEtiNnpSWFNrenZiOW1Pb0NpWDczb3c3N0FWNWc2NkhIQmhSWHVKMTF4Um11VVNOeXpLclJTdjNhREFuajhsRFJteG5POFFmOTRDX2RtNENtQ3ZEU1htUFhyWW5lSmdHOEU?oc=5",
+      "published_or_found_date": "Sun, 27 Feb 2022 12:08:56 GMT",
+      "date_collected": "2026-06-17T09:55:26+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős penny market kft. állás, munka Győr-Moson-Sopron megyében - 2026 Június - Profession.hu. Sürgős penny market kft. állás, munka Győr-Moson-Sopron megyében - 2026 [név eltávolítva].hu",
+      "length": 188
+    },
+    {
+      "id": "98898a16c235ca99",
+      "company": "Penny",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNM3FxTUFmOEVTcTY4UjExWjBSMmlLV2xVWEgzOE81MGdMU2hQSHpzdnFlMVNtZFRtOU1fQWItMFlISnA3SFc4akdIVjV6NllXRDVJcnRzU1hqLXBpWHI0aDNRY2xSck5DZkdlSlVSdm1ZQVdna0JHb1M3Zk1WcTdlZA?oc=5",
+      "published_or_found_date": "Wed, 10 Apr 2024 20:14:02 GMT",
+      "date_collected": "2026-06-17T09:55:26+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős penny market kft. állás, munka Monoron - 2026 Június - Profession.hu. Sürgős penny market kft. állás, munka Monoron - 2026 [név eltávolítva].hu",
+      "length": 150
+    },
+    {
+      "id": "45d3c3acfe1e5054",
+      "company": "Penny",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1zNHBPYjgya1M2U3E0a0l2Vm5fTk5lQ2JNT0NXYnB2c3Iybk1LX0YxTkUyd0tCQllwdmQxV3RRa2dvMWg2dlBTOS10NHRISzhQSTN2WFk1N2pwcTJJNzFfV1Y0cmVQWjVIaDhFMVhnM0Q1TnVLY0E2bkpHUDhrVnM?oc=5",
+      "published_or_found_date": "Tue, 30 Aug 2022 18:28:45 GMT",
+      "date_collected": "2026-06-17T09:55:26+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős penny market kft. állás, munka Gyálon - 2026 Június - Profession.hu. Sürgős penny market kft. állás, munka Gyálon - 2026 [név eltávolítva].hu",
+      "length": 148
+    },
+    {
+      "id": "2bb4792fab19e413",
+      "company": "Penny",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBaNFFnS1FGSWFqb2NhbC13OUZhVEpwME8wUFk5QWpBYnZROXVscTlCQUlwS3JJZjZYdDBNd29OOVVmeXFJSWh0V0xYdndCaHJnZGdYa0lpVHBGNTJQSnV3TWFpZ05TdXJLMFVtVEVyd2wyRFlPTUtVczZZZkxIanM?oc=5",
+      "published_or_found_date": "Sun, 18 Aug 2024 18:40:15 GMT",
+      "date_collected": "2026-06-17T09:55:26+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős penny market kft. állás, munka Turán - 2026 Június - Profession.hu. Sürgős penny market kft. állás, munka Turán - 2026 [név eltávolítva].hu",
+      "length": 146
+    },
+    {
+      "id": "2426e9191b51641f",
+      "company": "Penny",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQalV2MTJ4TVRfMXBncGxvMzgtdUZaVnRxSDFBNVNsR0NJRktrNDNKbmduS2RWTU9qdUh6WFJYSjZJbjZhcmdoU0FCTlBtTVJhNmo4ZEZVYllnUlVHc3F0ajlEQVRXNWQ1X1Z1SE1NUUVwNmlmMjB4WHBBd2RjVnkzWU9n?oc=5",
+      "published_or_found_date": "Tue, 29 Oct 2024 06:21:04 GMT",
+      "date_collected": "2026-06-17T09:55:26+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős penny market kft. állás, munka Hatvanban - 2026 Június - Profession.hu. Sürgős penny market kft. állás, munka Hatvanban - 2026 [név eltávolítva].hu",
+      "length": 154
+    },
+    {
+      "id": "79fcb0d7c56e0414",
+      "company": "Penny",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNWEZKZU42S0FjMnVuM2hybVRqbHQ0cS1LSjhfTU1Dd0ZEaXJxMDFXVnVDanZKZUNPY3RwcVdCd3FpRmp6UmdnNmM2S2FGbEJQT0djbU1OS2NpSzZEeVlUcUFKanBSX1VMRGdUWnpwd3ZhRkE3ckJKWFVxaDE4T2M5ME1mZzlTRkFUU3pF?oc=5",
+      "published_or_found_date": "Mon, 07 Mar 2022 18:31:04 GMT",
+      "date_collected": "2026-06-17T09:55:26+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős penny market kft. állás, munka Jász-Nagykun-Szolnok megyében - 2026 Június - Profession.hu. Sürgős penny market kft. állás, munka Jász-Nagykun-Szolnok megyében - 2026 [név eltávolítva].hu",
+      "length": 194
+    },
+    {
+      "id": "d46b5fb67f97d946",
+      "company": "Penny",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9qYm1PNFQ1Z3ZPNlY3aWZ4dUYzUVdlck1aRzEtMGliNmRrRGlHTkZLaW9DNXdoSDZvZDhEdTdnSEk2azNSVVNSeU1yUjZzdDBZOE8yV2tGeUhHYXdCa29ORUNvUk96QlE?oc=5",
+      "published_or_found_date": "Tue, 30 Aug 2022 19:07:26 GMT",
+      "date_collected": "2026-06-17T09:55:26+00:00",
+      "reason": "too_few_words",
+      "quote": "Penny-Market állások, karrier - Profession.hu. Penny-Market állások, karrier Profession.hu",
+      "length": 90
+    },
+    {
+      "id": "93e4f6a839eb35a2",
+      "company": "Penny",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPbzE3cFhNS18xV1lEdjdYQjVkRC1HbTF1c1pVSW5kcDB4WHVqWGdYQ0Mzbno2ZmtyWS1NUlZBdVAzTlE4NzdzSHBRMlRMRHV3amFBQUxId2F1T0d4bUlxaS1JM3p3X19HOHlvTDJzbXhwMDBqZTA1TjRQeG54YW9TQkp4amdRaUFRT3pz?oc=5",
+      "published_or_found_date": "Sun, 29 May 2022 12:23:26 GMT",
+      "date_collected": "2026-06-17T09:55:26+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős penny market kft. állás, munka Borsod-Abaúj-Zemplén megyében - 2026 Június - Profession.hu. Sürgős penny market kft. állás, munka Borsod-Abaúj-Zemplén megyében - 2026 [név eltávolítva].hu",
+      "length": 194
+    },
+    {
+      "id": "de32afef5ade18f4",
+      "company": "Penny",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBBZWcwS3B2ajM2OUNaOUhnR3lUZllsdlRfb1JpMnQyeXVpR0VCWHBBX3lfV0dpQ2hldVBsV0ZTTUtfLS1RUmVLQTFxQkFxb2J5MFgtd2pDZTBfaHNSLUJ2VC00cWVpMUhNNnc?oc=5",
+      "published_or_found_date": "Thu, 29 Feb 2024 11:18:27 GMT",
+      "date_collected": "2026-06-17T09:55:26+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős penny-market kft állás, munka - 55 ajánlat - 2026 Június - Profession.hu. Sürgős penny-market kft állás, munka - 55 ajánlat - 2026 [név eltávolítva].hu",
+      "length": 158
+    },
+    {
+      "id": "89cfc7a5601ddd5c",
+      "company": "Penny",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQLUUwclg4eDVBejk5bGZFTnVmbGlvb0sxSzNoM3A1ZGpqS2laWVJBSTFkWkItTksybklTX0gzd2c4TUw4Z2NYeVl3ejdCT0xjQXlWTElMMlFxejRxSklXd1lOZERCVVpLSGpxWWlrZjQtRldNLThXcjJPc1o0c0VJakZPajZ1cHFhRFYwMV9lbHZWbU5SSkcw?oc=5",
+      "published_or_found_date": "Mon, 08 Jun 2026 07:45:14 GMT",
+      "date_collected": "2026-06-17T09:55:26+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Üzletvezető (Felsőzsolca) állás, munka: Penny-[név eltávolítva]., Felsőzsolca - Profession.hu. Üzletvezető (Felsőzsolca) állás, munka: Penny-[név eltávolítva]., [név eltávolítva].hu",
+      "length": 181
+    },
+    {
+      "id": "8040d67f6dc7969c",
+      "company": "Penny",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1teTVFQnk1bHZxMWZPdEl3aTh1ZU1pTEVyaFpRd0ZXakFjbnpfb2gwM3FjbVc5M2NmeW5oRjI5bVJlRVBlMi1nN01qZjlrZDhuWE9nVUFfQWF6ZDlPZ3pHbWtyUHpDbHFfZEQ0Y0Vjd1Jod3BoRnUw?oc=5",
+      "published_or_found_date": "Sun, 13 Oct 2024 14:58:35 GMT",
+      "date_collected": "2026-06-17T09:55:26+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős penny market kft állás, munka Dabason - 2026 Május - Profession.hu. Sürgős penny market kft állás, munka Dabason - 2026 [név eltávolítva].hu",
+      "length": 147
+    },
+    {
+      "id": "1475eafdd4dc143e",
+      "company": "Penny",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9haEQyLVhzX1RjbmtqV3MtbFhvc1o1X2NhMXZtd1U1dDhITFhyRFEyRV95SmhYcEF5aVc3dDgxVzBOZFJZMGQ1ZXIwT29jaldaMVBYR0phU3lCSmRGYlRoMEtUV2stTFNTVWVON1hEVWRaRU4zTlE?oc=5",
+      "published_or_found_date": "Mon, 07 Mar 2022 11:38:45 GMT",
+      "date_collected": "2026-06-17T09:55:26+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős penny market kft. állás, munka Pest megyében - 2026 Június - Profession.hu. Sürgős penny market kft. állás, munka Pest megyében - 2026 [név eltávolítva].hu",
+      "length": 162
+    },
+    {
+      "id": "af9b37528c6764a8",
+      "company": "Penny",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPUThOWDRiUWNyMTdDaGRlOGpvTzNTSlVXQWxybUhhT040cXpzUndWclo5cDllZGhjbzFKQ0JqZXIyN0RURXFpSjl5TXpncXVNZU92elZ0dDhKTm9TdXc0YTVkYWNlVTFLQUw3WldpeTFKbkdzdHZhVmhyLWdBZXl3M2FZZHdJbm1J?oc=5",
+      "published_or_found_date": "Tue, 02 Jun 2026 10:05:36 GMT",
+      "date_collected": "2026-06-17T09:55:26+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Áruösszekészítő állás, munka: Penny-[név eltávolítva]., Veszprém - Profession.hu. Áruösszekészítő állás, munka: Penny-[név eltávolítva]., [név eltávolítva].hu",
+      "length": 158
+    },
+    {
+      "id": "fc78a41c2c2b16f7",
+      "company": "Penny",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNcno2ekhUd19fUmczUzlYT2U5T1FTN3FXazVPaXE5Tmtscm1EQ1U2VHlWMHpyWVQ0MGNEOGU3MDJJN1lZOEkwVTBVekpOdmZDdThvbFhMa2FhcEh1eElKc3VTQ09ud0RmWXdPZW1tQXY2RmY3c0M0WEJHaloyLS1NWHJHMVFaR2tQeUNv?oc=5",
+      "published_or_found_date": "Tue, 09 Jun 2026 15:35:14 GMT",
+      "date_collected": "2026-06-17T09:55:26+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Áruösszekészítő állás, munka: Penny-[név eltávolítva]., Alsónémedi - Profession.hu. Áruösszekészítő állás, munka: Penny-[név eltávolítva]., [név eltávolítva].hu",
+      "length": 160
+    },
+    {
+      "id": "ba9466ee1e17aaaa",
+      "company": "Penny",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNNHktZmk4eTAtV1ozRXdTV0JJT2NQa0gycWwzOUNucWJYWnhWSWxNWTM0MFRqc3M0RENpRTkxRGxPckdJcm14bms2MUY2WjF2aWVQOC0wLURKbEJIVklaRjdoS2JqcWNWOTlyN3k2cW42YWJZR0VkNVREYmVmWmltT3FxSFRvbFNRSGhqUm1mb3RxT2JhbzNuMVFR?oc=5",
+      "published_or_found_date": "Tue, 02 Jun 2026 10:05:44 GMT",
+      "date_collected": "2026-06-17T09:55:26+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Eladó-pénztáros (Békéscsaba) állás, munka: Penny-[név eltávolítva]., Békéscsaba - Profession.hu. Eladó-pénztáros (Békéscsaba) állás, munka: Penny-[név eltávolítva]., [név eltávolítva].hu",
+      "length": 186
+    },
+    {
+      "id": "1f23b518f5a61eef",
+      "company": "Penny",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOSVlpLVlzWFhqeEJ5Q21YWkZ5Y3hoSzhvUERVOGFaX3pOVFk0WktqX0hYWGVYUmo0Y0lMS2lvVWlzUk9FanFlMG5sdjZkRURUbEVmd2dwd25xcm4zczhuLXpqZE4wOXZJc29HOTQ2dXhnZDBISnF6Rno1TUxUZzJzOHhfdzlhclY1ZHpNaEV3Vm9XY3BibWVIOA?oc=5",
+      "published_or_found_date": "Tue, 02 Jun 2026 10:05:42 GMT",
+      "date_collected": "2026-06-17T09:55:26+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "[név eltávolítva] állás, munka: Penny-[név eltávolítva]., Veszprém - Profession.hu. [név eltávolítva] állás, munka: Penny-[név eltávolítva]., [név eltávolítva].hu",
+      "length": 162
+    },
+    {
+      "id": "2d58d79adc04a3b7",
+      "company": "Spar",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQUXQxeDBUYWRiRkRlQ2luMEY1Q2NtNGF2cm11X3dfYjE1Ymc0ektRQmJaQi1sMFkxR1o0VGwtb19Fem1wMEt0WUUyTThhMXVWNHFTc2xOSFlnZUxGTUpyeHVVZkQxMjVpTE9vaGlfNTZidm5GYTd0VWJESnlsU3I1bG9Kb2puSnpaUmFSdC1FWl91LU5HdVdHTkdtNzJkcTRtTTgySm8xUzA0N3Z0NlBsVlZEQUpUMEJWSEE?oc=5",
+      "published_or_found_date": "Wed, 20 Dec 2017 08:00:00 GMT",
+      "date_collected": "2026-06-17T09:57:40+00:00",
+      "reason": "company_not_found",
+      "quote": "[név eltávolítva], az Észak-zalai Víz- és [név eltávolítva]. elnök-vezérigazgatója - HR Portál. [név eltávolítva], az Észak-zalai Víz- és [név eltávolítva]. elnök-vezérigazgatója HR Portál",
+      "length": 188
+    },
+    {
+      "id": "1d888a97ea87de75",
+      "company": "Spar",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNZDBsSGREcW4taHROaUZyNm1yZHBBc2JkQXNsTlZCbjlqRkhrbUgwLVd2VjA1LXFPRlF6Z3J3ZDVPWm1aSm13ZWFMMFZMRFdGNTNiWGdST3daOXZGUDFWaUd6al9ncEdyLXlVVC1SSEZYZ2VsVGNUTzVYZTgtSWVZOS0zb1dJdw?oc=5",
+      "published_or_found_date": "Mon, 07 Apr 2014 07:00:00 GMT",
+      "date_collected": "2026-06-17T09:57:40+00:00",
+      "reason": "company_not_found",
+      "quote": "Dr. [név eltávolítva], a BCE egyetemi docense - HR Portál. Dr. [név eltávolítva], a BCE egyetemi docense HR Portál",
+      "length": 114
+    },
+    {
+      "id": "202ad26e2ef36fd6",
+      "company": "Spar",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOTmR6dXh2dlBnV0M0b195ellRXzVyRGYwS1ZCbDF3N3dKazE5SmJhME51THAwSmZET3ViUUU1Z0VtNWJtaGdTdGVsMnduOFpsc1lfNFQtejB2LUF5RWg2dHZzRzV0eU1VYWJFRVF6b05UZmVxYnlvemQyY3NGa1hnWTFvSzllZEgtZDNr?oc=5",
+      "published_or_found_date": "Tue, 24 Jan 2017 22:02:19 GMT",
+      "date_collected": "2026-06-17T09:57:40+00:00",
+      "reason": "company_not_found",
+      "quote": "[név eltávolítva], a Magyar PR Szövetség elnöke - HR Portál. [név eltávolítva], a Magyar PR Szövetség elnöke HR Portál",
+      "length": 118
+    },
+    {
+      "id": "69436db22203e214",
+      "company": "Spar",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxQLUFFRTFVMTU1OHZCOHU5dmdoNjFWVXdaTWFRYjR1QXd1XzdSWGJzZnR1X0Jha284dzJJbml3MnIxU0Utc3g4MDNhTkJuaXpTR2NqQ1Jxb0lBeXFlRWVPY05hd3Jkc2taRFhUajFYOGdoUE5RY01NUjRTb1BxTWtMM1g1ckNVSDR2NHFfTkVWQ2ViMWZGSmFxS3lGNDM0QlNoTnFRaXNDMEtHU3owOVBSMDloYmxlczk5ZlAzRjBQaElWaDdJR2R4ZHRjak1TNkZ1MjJHcmxSM1FuR1ZHdWxzTlFqa1NUak53ZTNPb2xKX3pjcGlwNjVGUkNJZzZsLWk4NUtRRWpMa0ZRSUNEbWc?oc=5",
+      "published_or_found_date": "Tue, 25 Jun 2024 07:00:00 GMT",
+      "date_collected": "2026-06-17T09:57:43+00:00",
+      "reason": "news_or_pr_content",
+      "quote": "A 20 legbefolyásosabb magyar HR vezető 2024-ben: [név eltávolítva] Ildikó, Személyzetfejlesztési és HR vezető, SPAR [név eltávolítva] Kft. - HR Portál. A 20 legbefolyásosabb magyar HR vezető 2024-ben: [név eltávolítva] Ildikó, Személyzetfejlesztési és HR vezető, SPAR [név eltávolítva] Kft. HR Portál",
+      "length": 300
+    },
+    {
+      "id": "c90e52fff3678258",
+      "company": "Spar",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQbGx1TEVkMDNrUmhKQjItZWg3cnNTUGN2MUhTMkFsX2hnb3BzZnpReEFVMk05Z2pvY005VXNMZmxKRGpsc2wxOHVIV1g2cE5FazBIempabk1xRklkOTFkVmpKSG00NVZ0VWcycjdZRGhzRWp2NTBxNVRfSExmR20zNHJEanhnNm8ySlJ3?oc=5",
+      "published_or_found_date": "Thu, 02 Jan 2025 08:00:00 GMT",
+      "date_collected": "2026-06-17T09:57:51+00:00",
+      "reason": "news_or_pr_content",
+      "quote": "Így emelkednek a bérek a SPAR-nál 2025-ben - HR Portál. Így emelkednek a bérek a SPAR-nál 2025-ben HR Portál",
+      "length": 108
+    },
+    {
+      "id": "c142c711b986de2f",
+      "company": "Spar",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQaHNia21XN2VVR1JmNWpaZThxc1RXa2pMZFNVSkNBbGxQbmhDSlVITFNBVU9hLVR0azg0LVlKRndYOGhEb0dZU0VCY1I0d3UxcG1tS0s4YXpuYmtVU2EzRmdUMk9kVURUYmtfdFJxVGVyamJiMDlVdzdGdUszUGI3S21yN1Fzd2JQVndiejktdGpPQnI5UEY5Ug?oc=5",
+      "published_or_found_date": "Tue, 02 Jan 2024 08:00:00 GMT",
+      "date_collected": "2026-06-17T09:57:51+00:00",
+      "reason": "hard_excluded_news_or_job_listing",
+      "quote": "Megvan a megállapodás, ennyivel emeli a béreket a Spar - HR Portál. Megvan a megállapodás, ennyivel emeli a béreket a Spar HR Portál",
+      "length": 132
+    },
+    {
+      "id": "47669a23d29ebe08",
+      "company": "Spar",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNdlpUX0dWX1FGOEJ3QUM3dVZZQ2kxMUwzbTY1aVdLanhYR1IwOXN4MGQzVWtNVS03SUpXUVlJQzZEajk1bjIzTHNxSGdtTy0tTWxFNTc5OUZVb0l0bkY2SHIwV01mSlhXSURqalJJR254cEJWVmRpdERjYU53V0hfZHZtZ3dWRDRQdnVYTzYwSWhSdnRqajdKbw?oc=5",
+      "published_or_found_date": "Tue, 02 Jan 2024 08:00:00 GMT",
+      "date_collected": "2026-06-17T09:57:51+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Ennyi a fizetése a SPAR-ban és InterSparban dolgozóknak 2024-től - ProfitLine. Ennyi a fizetése a SPAR-ban és InterSparban dolgozóknak 2024-től ProfitLine",
+      "length": 154
+    },
+    {
+      "id": "f897796355997fac",
+      "company": "Spar",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOVGlMOE1TX3ZvZ3RXYXUwbWZrOHVzSGd5WGh3XzJWQmQta0F4clcwN1hHREFWZ29NeDZsRWRCWlE4Uy1tUVhhYzg0Z0tVSkpTbGhsMEJuUloyU2hOM25FbmRTb3hKbThBMHBzTi1Dd09uV2Z6eHlRdmFFQkpXMUxzUmRBM2M4anljdG1R?oc=5",
+      "published_or_found_date": "Mon, 23 Sep 2024 07:00:00 GMT",
+      "date_collected": "2026-06-17T09:57:53+00:00",
+      "reason": "company_not_found",
+      "quote": "Megvannak az Év Kereskedője 2024 nyertesek - Trade magazin. Megvannak az Év Kereskedője 2024 nyertesek Trade magazin",
+      "length": 116
+    },
+    {
+      "id": "7ac66f09fa9b3dfb",
+      "company": "Spar",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE4tb3hqeUZ3QlVENi1jemR0eUhWeFRmTWlEM1k2WG9GazJ0ZUxDeUhHRF94X0xwRVVzb0ptZXFCNVZONV9OYl9HZlFPLWE1b2tzLVRESFhOZFpBYTY5dWhteHQyV0ZBdnJHMXNFV21fU0JMUFhDcVdr?oc=5",
+      "published_or_found_date": "Tue, 01 Sep 2015 15:05:13 GMT",
+      "date_collected": "2026-06-17T09:58:04+00:00",
+      "reason": "company_not_found",
+      "quote": "Sürgős szállítás, beszerzés, logisztika állás, munka - 2026 Június - Profession.hu. Sürgős szállítás, beszerzés, logisztika állás, munka - 2026 [név eltávolítva].hu",
+      "length": 164
+    },
+    {
+      "id": "5216e389c329f7b8",
+      "company": "Spar",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMickFVX3lxTE83cVVHQkZZWFBMVFVsMTN4aXM1aGU1NzZhTU4tamk4QUxadzdtLXBWc2k3bzd6S3NTRnJERlgyUlpnRUhXQl9vQjBCTHFKWlBXR0o3elMyNE4yZjY0anpPY3VQNHZHeEFHYjZnNXQzSWFxUQ?oc=5",
+      "published_or_found_date": "Mon, 22 May 2023 00:56:17 GMT",
+      "date_collected": "2026-06-17T09:58:04+00:00",
+      "reason": "too_short",
+      "quote": "SPAR vélemények - Profession.hu. SPAR vélemények Profession.hu",
+      "length": 62
+    },
+    {
+      "id": "1bf14db9529a1630",
+      "company": "Spar",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPZWZmSWxNLWlGZmstR3VtWUFMdm5xdU1CZG53bWlRQnYyZ081Y00tS3AxVFMwTGNsejJpMnhVUld6WndqS3A4dlBEOHp6MFlJWGRaRWh5QlZjWE9TNVM0UTdlRWFiMzQ1ZVBQenlZZ2NiakJLRXF4dTIycnFnV1BfU1NoU2l2Rzg?oc=5",
+      "published_or_found_date": "Wed, 02 Sep 2015 08:51:14 GMT",
+      "date_collected": "2026-06-17T09:58:04+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős sPAR [név eltávolítva]. állás, munka, karrier - 2026 Június - Profession.hu. Sürgős sPAR [név eltávolítva]. állás, munka, karrier - 2026 [név eltávolítva].hu",
+      "length": 164
+    },
+    {
+      "id": "b48e0c42399b24a4",
+      "company": "Spar",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9BMHpGUldfc0kxT25VaEgwdjAyRmlQYVpWUkVrMkxicFY2NE1mQkJSTnpTb0lWN0ZjWlZCdG8yQVJYa21IeV90dnVlTGpzYTZNYjNyNVR0WndQdGotaEI0WGhscWdJdkRSVXNLTEpjdG5yR0RjZDNJSG9Kbw?oc=5",
+      "published_or_found_date": "Fri, 15 Apr 2022 22:31:45 GMT",
+      "date_collected": "2026-06-17T09:58:04+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős spar magyarország kft. állás, munka - 69 db - 2026 Június - Profession.hu. Sürgős spar magyarország kft. állás, munka - 69 db - 2026 [név eltávolítva].hu",
+      "length": 160
+    },
+    {
+      "id": "9cf22bb22af5c25b",
+      "company": "Spar",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQcktaSkl0cUVPMU42WXpLVFNqOWdVSjQ5S2FPMlVGd0J5TnNpcTBBQ1c5UXU0Rl9fbTNPTXBDNnpSTzZxWDVBUkNZSFFLMWJlek1XX3ZHT3MxMkxjLUlhSlZXQm5IQXkzbEhISDhWZ3ZOc1JVeUdnSVhuWWpkd2VHYW1iQ3ZPS2tHc3JCdGhfalNCQQ?oc=5",
+      "published_or_found_date": "Mon, 09 Jun 2025 11:24:10 GMT",
+      "date_collected": "2026-06-17T09:58:04+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős spar magyarország kft. állás, munka XVIII. kerületben - 2026 Június - Profession.hu. Sürgős spar magyarország kft. állás, munka XVIII. kerületben - 2026 [név eltávolítva].hu",
+      "length": 180
+    },
+    {
+      "id": "70128c7ef78dda17",
+      "company": "Spar",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE01dHVSLTh4eE0zelpWTjB2RHV1dnNjQ3IyTFcxZGZEZjk1YzRUcXBWRlljM1oxX0dycWRHS29PcDhGUWhHVl9kdjdrb2R1ajlTdk41VWJGdVFXU1FOb3FlYWV4UVJnOElmLV9pVWNiZ1MtWnM?oc=5",
+      "published_or_found_date": "Fri, 25 Mar 2022 17:14:33 GMT",
+      "date_collected": "2026-06-17T09:58:04+00:00",
+      "reason": "too_short",
+      "quote": "SPAR értékelések - Profession.hu. SPAR értékelések Profession.hu",
+      "length": 64
+    },
+    {
+      "id": "ac16b5cfa6b5cab8",
+      "company": "Spar",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQMzlSQmlGZlM5X2t5dFRkeXVScFppZWdOcFJlSVpvcDg0Y19aNEY1eFNJb3pJc1hSeEpPRUtPa0dodUxrS1FCbVE0T2VORk1yRENsTy1KalhaV0JjMGJ5blc1S2dvcTRuOHE3b2RhYVdpVVkzU2tyUkFGQVliMVJYZ2M1X2wycHp6dERVUGFaVQ?oc=5",
+      "published_or_found_date": "Thu, 29 Feb 2024 18:30:29 GMT",
+      "date_collected": "2026-06-17T09:58:04+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős spar magyarország kft. állás, munka Bicskén - 2026 Június - Profession.hu. Sürgős spar magyarország kft. állás, munka Bicskén - 2026 [név eltávolítva].hu",
+      "length": 160
+    },
+    {
+      "id": "cf41edf8d98a3fee",
+      "company": "Spar",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQVEJiS0FIRlV5NWk1T0xDS2hmUXFlX3pXNlpoYkZDVGl1Z3AtUTJGRGlFa2p2LWRpT0EtNGxhV3JOV0dqZXRoaW0zTUpuSVcwcDJSeDBySjc0clltaU9SblMxcHRLSVp1VkdWcFlJc1VrMFZkTFdjNGJpU1pEY2M5ekhxSnBkYzJ1RVUxZGpkRlZuV0ZSVk9UNGt5ZFZBdw?oc=5",
+      "published_or_found_date": "Wed, 03 Jun 2026 10:15:09 GMT",
+      "date_collected": "2026-06-17T09:58:04+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Eladó-pénztáros (Kecskemét) állás, munka: SPAR [név eltávolítva]., Kecskemét - Profession.hu. Eladó-pénztáros (Kecskemét) állás, munka: SPAR [név eltávolítva]., [név eltávolítva].hu",
+      "length": 181
+    },
+    {
+      "id": "a6c5e7da2fd9678c",
+      "company": "Spar",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPS19PZEo4ZVBwcFNoMnFoTnI1QjdUalUzeWRteldtOGc4ZmNzV05fbmFyWFNWTDM2Rm5Ud0RQVVAtVEtfQkxENGJ3R2EyU1U1Vk9mNkN2dHVaYkZIS2RVUUlnMl9ua3lFWVlOejd2ZFJlRTJyblhTbjZpajVQSmlnNzdWWW5tZWtQMDVwNmF2OA?oc=5",
+      "published_or_found_date": "Tue, 09 Jun 2026 15:18:14 GMT",
+      "date_collected": "2026-06-17T09:58:04+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Eladó-pénztáros (Budapest) állás, munka: SPAR [név eltávolítva]., Budapest - Profession.hu. Eladó-pénztáros (Budapest) állás, munka: SPAR [név eltávolítva]., [név eltávolítva].hu",
+      "length": 178
+    },
+    {
+      "id": "083ddb067d8f26a1",
+      "company": "Spar",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBDV2Z6NWRFNnVEREh6YzdCZk9LSmI2eDVFcHZDcHJqMFYxNzRtRDN3UmVLbFlnOW5hdDNZWmo2OXlZV0MxcjFRY3NPd2F6bFZERnU0SThDajNtUXBHVnNVYWZsUWtSeDNuNjRObkFB?oc=5",
+      "published_or_found_date": "Fri, 25 Mar 2022 04:02:16 GMT",
+      "date_collected": "2026-06-17T09:58:04+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős spar kft. állás, munka Budapesten - 19 db - 2026 Június - Profession.hu. Sürgős spar kft. állás, munka Budapesten - 19 db - 2026 [név eltávolítva].hu",
+      "length": 156
+    },
+    {
+      "id": "0339044a4438f623",
+      "company": "Spar",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNRUg4ckFKMjFDVUVVa05ZeGxhbDFtZnN1cFpCQVZLY0FEWlNmc1pTTm12clVDVU81QUZZc2VHQ3BIRGVzNzdlM01TOFVrSjg0Wm56RnBqZFE2dzlVMWdKU1Q2Sm1tTkJiWjVwcG9IY0tyTDhPYmNZVmNnTWlldU9qQ0Zwd0RNc3Nkd3Q5ZDBfdFZRck02V1pUYg?oc=5",
+      "published_or_found_date": "Tue, 16 Jun 2026 15:15:08 GMT",
+      "date_collected": "2026-06-17T09:58:04+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Eladó-pénztáros ( Kapuvár ) állás, munka: SPAR [név eltávolítva]., Kapuvár - Profession.hu. Eladó-pénztáros ( Kapuvár ) állás, munka: SPAR [név eltávolítva]., [név eltávolítva].hu",
+      "length": 179
+    },
+    {
+      "id": "9dab85d9cb2a4307",
+      "company": "Spar",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQYzJYbU40UFMxQ0tXOTIzVmdPcWowUUhwYzVTemN3Nlo0WnRyWUs3VFhWR0hfV0xmTzZ6UmFnR1RiQV9UUU5GUkpiNHJtcTZGM1l0RUxMdnJPczFwVzlZY3BtYWltNmIxTmkteDNfX0s2V0JrU3lOXzc3UDVYeERCTHJ6a3RUVl9BUUZwTXVhTjVqcEhEeVM3ZWZUUVg?oc=5",
+      "published_or_found_date": "Fri, 22 May 2026 03:15:16 GMT",
+      "date_collected": "2026-06-17T09:58:04+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Tehergépkocsi vezető (Bicske) állás, munka: SPAR [név eltávolítva]., Bicske - Profession.hu. Tehergépkocsi vezető (Bicske) állás, munka: SPAR [név eltávolítva]., [név eltávolítva].hu",
+      "length": 182
+    },
+    {
+      "id": "2b9b558d79441472",
+      "company": "Spar",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5tQlF2ZTJsa2lzajhZUUlxcThmNTNwc210bDlLYXVRMktVeWlzNXBBM0lPcm9NejFJbDZCZDZYYUR2NjBQQUl6X1pPUm5UbFRpaHFjWTY2R3BBNHNvY2hwblh2dkIybngzTC1LcGd3?oc=5",
+      "published_or_found_date": "Sat, 30 Apr 2022 08:14:13 GMT",
+      "date_collected": "2026-06-17T09:58:04+00:00",
+      "reason": "too_short",
+      "quote": "SPAR állások, karrier - Profession.hu. SPAR állások, karrier Profession.hu",
+      "length": 74
+    },
+    {
+      "id": "3c1ab309e0726c86",
+      "company": "Spar",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE81NERfdHFzRGJYeXQzZ3JmbjJhUklOdG5LTGk1Q0l6ZGFDR250WVFHSjVETHJlSTl5bERKQWRtZnBCSzVaRThsTThWUk56TWVIdGU4NEJSOE1qVWIxNmFKZ2FubVI?oc=5",
+      "published_or_found_date": "Mon, 11 Apr 2022 19:16:35 GMT",
+      "date_collected": "2026-06-17T09:58:04+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős spar partner állás, munka - 18 állásajánlat - 2026 Június - Profession.hu. Sürgős spar partner állás, munka - 18 állásajánlat - 2026 [név eltávolítva].hu",
+      "length": 160
+    },
+    {
+      "id": "ae12e7f5c2b9e4d6",
+      "company": "Spar",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPMThwSGZoOGFmWHREUlRtYktLOVFGbzVmOW9sVVl6RUFnWGE5MDhmekJlZTQyamJhdmFiTGRvbjdiZ1VHWTF2SDdtZzBxUDAxcVhXTDZQVjFvbE0xVHVLNEN5bUtqYWVKM2h3bG9qcGo5eEhGOVVkakhjdV9PNm90T1pXTVg4NnRIeHlhUk5vZE1VVmJwQms0UTFfU0FiSkh5emlRZ1pCbEg4VEdLcW5lcktLc1lhQQ?oc=5",
+      "published_or_found_date": "Fri, 05 Jun 2026 07:15:19 GMT",
+      "date_collected": "2026-06-17T09:58:04+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Eladó-pénztáros szezonmunka (Balatonfüred) állás, munka: SPAR [név eltávolítva]., Balatonfüred - Profession.hu. Eladó-pénztáros szezonmunka (Balatonfüred) állás, munka: SPAR [név eltávolítva]., [név eltávolítva].hu",
+      "length": 214
+    },
+    {
+      "id": "9c53d487c3f8a5f4",
+      "company": "Spar",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNTFNFYXluQVdTTExBcUNzN0RHOEF3LWFSWS1xNlpWa25mSmhyLXQzQ0JvLTgxeFFERzlEajRETHRVd2ZtSjg5SEg3TXFnUFQ0RlhXYjA1MzZ5TDhPZUwtLXBxbVJNSHBhdjZqbkNMTUtCTEgyLVNMS0VSbDRpOGlWb1p2TDZRZW40cnMtdXdERTM0VmRBZDBqa3hqeWQ1ckM4ZGZ6bkR0X0s?oc=5",
+      "published_or_found_date": "Tue, 26 May 2026 07:15:23 GMT",
+      "date_collected": "2026-06-17T09:58:04+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Húsüzemi termelési szakmunkás- Perbál állás, munka: SPAR [név eltávolítva]., Perbál - Profession.hu. Húsüzemi termelési szakmunkás- Perbál állás, munka: SPAR [név eltávolítva]., [név eltávolítva].hu",
+      "length": 198
+    },
+    {
+      "id": "47d5ad352378acf6",
+      "company": "Spar",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQLWlpbW9waG04QUY0V0J1T3Y3bDJ6ampSVzhIaVMyaVFVZjktSFdIWHFQeEx0SEduT2wyMHNQZERycUtKX0tWQTBoVW5FWHJzVGRFOWFDakFodVB6bUE0T1VnMUViMldYY2htbl81Z2RYakl1b1VaVWNLbm1kdW95WTN6TkpqUlpIV3lN?oc=5",
+      "published_or_found_date": "Wed, 06 Mar 2024 07:42:51 GMT",
+      "date_collected": "2026-06-17T09:58:04+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős spar magyarország kft állás, munka Üllőn - 2026 Június - Profession.hu. Sürgős spar magyarország kft állás, munka Üllőn - 2026 [név eltávolítva].hu",
+      "length": 154
+    },
+    {
+      "id": "2ac9fafc1afb0dc9",
+      "company": "Spar",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9sSWZBanFiczZfeHJMZHh3eU9RSTkwLTNhMVRteFJJN1JLVndFOUNfVjVqeVljNUFqTlZtV0dNZ2ZxSTdfOUVwbkhNNWY5X2pOaE04SlZ4ckVMVE1BbUNKZ1lkVWZZYTlnajVCZDZn?oc=5",
+      "published_or_found_date": "Tue, 09 Sep 2025 11:47:47 GMT",
+      "date_collected": "2026-06-17T09:58:04+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős spar állás, munka XV. kerületben - 13 db - 2026 Június - Profession.hu. Sürgős spar állás, munka XV. kerületben - 13 db - 2026 [név eltávolítva].hu",
+      "length": 154
+    },
+    {
+      "id": "313f36e22e50c5dc",
+      "company": "Spar",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBxZ2tmZ09ZbE1td3B0T0thSTdxSWpPRnFZWG1aMEM4eDlVa25aYW1QZFNIU0YxMktsaHBVRnJwbjNRNGo4bFVkb0t1Z1NKN0o3aFFiT3A1amFEeFhZZmc?oc=5",
+      "published_or_found_date": "Wed, 27 Sep 2023 11:50:36 GMT",
+      "date_collected": "2026-06-17T09:58:04+00:00",
+      "reason": "company_not_found",
+      "quote": "Sürgős spár állás, munka - 102 friss állásajánlat - 2026 Június - Profession.hu. Sürgős spár állás, munka - 102 friss állásajánlat - 2026 [név eltávolítva].hu",
+      "length": 158
+    },
+    {
+      "id": "48d739dc77d870c4",
+      "company": "Spar",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE4zdDl0eU92V3Rldno5THFSMnJ6a3M0aGpfNmptUHRwTmtHdDF4dFl4Tm4yejlGWWdGd29JMEhNTlBBNW1DeEFIbVdUX1NPRW90T25VZXJRMVhET21IbFM0dnJFZVc5ckNBVVhLRzQ2SWdCSmJUTF9POGJMYw?oc=5",
+      "published_or_found_date": "Sat, 03 Jun 2023 22:48:56 GMT",
+      "date_collected": "2026-06-17T09:58:04+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős spar állás bicske állás, munka - 10 ajánlat - 2026 Június - Profession.hu. Sürgős spar állás bicske állás, munka - 10 ajánlat - 2026 [név eltávolítva].hu",
+      "length": 160
+    },
+    {
+      "id": "f77c41b182a0a580",
+      "company": "Spar",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQYnVLNW8zWFViT3l3VVJoX25oeE84bU9jVVFUWmd0c21CTEh5VmNNVlVpaU1mQ0Q1ejJEdURBeU5lb1ZqNWpSTTlsakNWUkZCRmdUUjE2LTJVOVpSaEVUMFhSUk1OOU8xUTRsMVRZWXp2TDlFTkVBOXdtbEhESVdITms2U2p4cW5aY29mMU0zVGx6YlhiRkE?oc=5",
+      "published_or_found_date": "Mon, 18 May 2026 10:15:12 GMT",
+      "date_collected": "2026-06-17T09:58:04+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Eladó-pénztáros (Csorna) állás, munka: SPAR [név eltávolítva]., Csorna - Profession.hu. Eladó-pénztáros (Csorna) állás, munka: SPAR [név eltávolítva]., [név eltávolítva].hu",
+      "length": 172
+    },
+    {
+      "id": "20061dad5589e389",
+      "company": "Spar",
+      "source": "profession_via_google_news",
+      "source_url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9WWmF4aXhGOW1HMW1jYmhzSXo3bmI1T3JtRkhuUXVoV2VPUVN3cXFLR3N1Zm9VcmJjV2VId3ZqMVRPQkpOU0dfYlpUb0xqNWg5cFkzN2JpeG55d3V5bUM1aUJQei1LbzBJQU5LS0cyUDVrQQ?oc=5",
+      "published_or_found_date": "Wed, 23 Feb 2022 13:40:57 GMT",
+      "date_collected": "2026-06-17T09:58:04+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Sürgős spar kft. állás, munka Üllőn - 6 ajánlat - 2026 Június - Profession.hu. Sürgős spar kft. állás, munka Üllőn - 6 ajánlat - 2026 [név eltávolítva].hu",
+      "length": 154
+    },
+    {
+      "id": "1b17e03415be7f0d",
+      "company": "Tesco",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5qT05hOUx0NHRpYm9GZGs5enIyb2drQzVtTmVkSnFzTFV6cnJjRGM2aEJ1UzFyaWxBNVh5RDJySWFENFBsbHpKMjl2MmstRnotZ1VqbWVvc2NuM2tsN1FNcWhGZ0NHbnB4QnFhdk1BUERjR3Q0cEJn?oc=5",
+      "published_or_found_date": "Thu, 05 May 2022 07:00:00 GMT",
+      "date_collected": "2026-06-17T10:00:05+00:00",
+      "reason": "company_not_found",
+      "quote": "[név eltávolítva]: A figyelmesség, a másikra való odafigyelés csodákra képes - Női váltó. [név eltávolítva]: A figyelmesség, a másikra való odafigyelés csodákra képes Női váltó",
+      "length": 176
+    },
+    {
+      "id": "0cbd32acccece12a",
+      "company": "Tesco",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOY18zX2VIWmpHX2lhcldSdGtZTnltT3lWaW5Scmk4N2x1ZUh1d1JEQXZPcU9lbGtVaGVXbllzMlBYQW5BdU1HNzNmY2hyMmRtTklfRDdZcWtQUGh5dzgwdjN6SXplUm1yNk1EUVpkTHkwY2ZRRnk4OTFleW5BSEVKOFU4blg2dEU2cUt0QnBrc1h3azdGWURYLURmYmw5WG5zYjFkVzZkYkM5MDkzWnIzQkRDRzg?oc=5",
+      "published_or_found_date": "Wed, 06 Nov 2024 14:50:35 GMT",
+      "date_collected": "2026-06-17T10:00:33+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "[név eltávolítva] Munkaerő-felvétel Sofőr (on-line vásárlás) itt: Budapest - LinkedIn. [név eltávolítva] Munkaerő-felvétel Sofőr (on-line vásárlás) itt: Budapest LinkedIn",
+      "length": 170
+    },
+    {
+      "id": "f1d4cc77080a8227",
+      "company": "Tesco",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1nU2s4bW1wY0ZZb0dWZXlETGdKYjZDaTl5dGpwVjZNejZwX3JyRjcwaFE5MFhleXAwc1VQX3JtR0xBTUhUcFd6NXBCdm9RZ0VMNG8xaVNBNDNCZnVreXMwLWNVSHZ0Y3c?oc=5",
+      "published_or_found_date": "Sat, 17 Dec 2016 09:10:38 GMT",
+      "date_collected": "2026-06-17T10:00:33+00:00",
+      "reason": "too_short",
+      "quote": "[név eltávolítva] - LinkedIn. [név eltávolítva] LinkedIn",
+      "length": 56
+    },
+    {
+      "id": "772acf9700f39795",
+      "company": "Tesco",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPVkVNSWM0dkJtaGROa0gtR1dyM21ISDYtem5nMGJuVUlWczdPX0JUUGg3V1luaXRYM3dZTi1STzRmUmhpYkoxLVlSdUo1TWRSeTJ0cWppalFWcklvTU4tR3NGU2JqTzIzV2d2RUpmckNseTFVRXJwRUpiX2NvV1B5eFVwcE1LblFvQVdmZEZJMU85VFdFT0RiMkxuMWJSSVE?oc=5",
+      "published_or_found_date": "Thu, 19 Dec 2024 14:52:45 GMT",
+      "date_collected": "2026-06-17T10:00:33+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "[név eltávolítva] Munkaerő-felvétel Telephely koordinátor itt: Szigetszentmiklós - LinkedIn. [név eltávolítva] Munkaerő-felvétel Telephely koordinátor itt: Szigetszentmiklós LinkedIn",
+      "length": 182
+    },
+    {
+      "id": "896b47b0c40442ec",
+      "company": "Tesco",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNbEZIeERZeElZcFJEMGJmOVBpU3I1SUMydWV6U1BmUENZNHZ6ZkFKTl9iVlV5NEdhWXJ5Q2ZDSTU1WE54N0g4eDZDM1IxRmgxSURRc0JpNmdmWVNnZlpmMGhuSXVrQTl0aHlDQklOMWZTTmhydmk0dzNZd2RCRW1EWnVUbzFjc3BmRE10YVFKVDNadW4yVjlLLUY2SllnTk5QY3lJckhwc2JvNkZyNXJmb3pyX24wcHJwbm8taDRESW0yRi12Szc2ZlJzdTNQQQ?oc=5",
+      "published_or_found_date": "Tue, 04 Mar 2025 13:39:05 GMT",
+      "date_collected": "2026-06-17T10:00:33+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "[név eltávolítva] Munkaerő-felvétel Áruházvezető - utánpótlás program itt: Budapest - LinkedIn. [név eltávolítva] Munkaerő-felvétel Áruházvezető - utánpótlás program itt: Budapest LinkedIn",
+      "length": 188
+    },
+    {
+      "id": "c8e3d3e35c3862c4",
+      "company": "Tesco",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9UUnlVN1hCcUQySzhaMnVGQ0RtZ3lXT1JaV21maTZvY0c3dThfWjZDRWlmUFFMcXBINGVYTjM5ZW42MDVhbWRUSkJyUGM?oc=5",
+      "published_or_found_date": "Tue, 20 Feb 2024 00:00:34 GMT",
+      "date_collected": "2026-06-17T10:00:33+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "[név eltávolítva] - [név eltávolítva] Manager at [név eltávolítva] - LinkedIn. [név eltávolítva] - [név eltávolítva] Manager at [név eltávolítva] LinkedIn",
+      "length": 154
+    },
+    {
+      "id": "8ab22d1f31aa932c",
+      "company": "Tesco",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBrNmxPU0FhbGVHN01zODFyMWx4eG50LWZWYi1mNnhNWnhVdzRSV2taem9hbkZrNGJRLWR6a0E0bGU4cmk4YlhRdXZJdlJKUDBhNFlPTk5UT3VQbkE?oc=5",
+      "published_or_found_date": "Tue, 10 Nov 2015 20:09:45 GMT",
+      "date_collected": "2026-06-17T10:00:33+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "Head of Communications and Campaigns at [név eltávolítva], Member of the Board, [név eltávolítva] Foundation - LinkedIn. Head of Communications and Campaigns at [név eltávolítva], Member of the Board, [név eltávolítva] Foundation LinkedIn",
+      "length": 238
+    },
+    {
+      "id": "31008e9ec70f8dea",
+      "company": "Tesco",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE05NGsxdHFuelhTUWdUejFKeVZBSXVvQUExV0Y4X0ZxVFBPb2gtWkliRVl2aUd6U3FUalhWYUtQU05na04yTWo4Q3pQWi14WU56ZGJLV3hKSGROQQ?oc=5",
+      "published_or_found_date": "Wed, 02 Oct 2019 06:47:17 GMT",
+      "date_collected": "2026-06-17T10:00:33+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "[név eltávolítva] - Community and CSR Manager at [név eltávolítva] - LinkedIn. [név eltávolítva] - Community and CSR Manager at [név eltávolítva] LinkedIn",
+      "length": 154
+    },
+    {
+      "id": "33f3ee9d679c129a",
+      "company": "Tesco",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8tQk5WUWNYVXBYd0ZyUS1PbVJDWXJTV2p3TU1ZY0tjbmE0SVRXQ0hBRjlwbm52VEV5YWxtRU9ZWDQ1REhKSHl2YTRuZXhQN3A1eDdnSFJIdC1QMHFlQTQ5OVFGbw?oc=5",
+      "published_or_found_date": "Tue, 16 Jul 2019 18:12:55 GMT",
+      "date_collected": "2026-06-17T10:00:33+00:00",
+      "reason": "too_short",
+      "quote": "[név eltávolítva] - LinkedIn. [név eltávolítva] LinkedIn",
+      "length": 56
+    },
+    {
+      "id": "23a61adb684c1fbd",
+      "company": "Tesco",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE4zRUp1WHNBbHpxN0ZrcTJtWG1SRWFjbzVseWlzYVNlQUw2RlBELUZrNHAtOUx2YXIyd2JfTVNmNFRWNFFRbEs0amRzQjh5SVJYRkRYTGZBT3VGVkdwbE9DVmRR?oc=5",
+      "published_or_found_date": "Fri, 20 Nov 2015 09:42:49 GMT",
+      "date_collected": "2026-06-17T10:00:33+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "[név eltávolítva] - [név eltávolítva] of Customer at [név eltávolítva] - LinkedIn. [név eltávolítva] - [név eltávolítva] of Customer at [név eltávolítva] LinkedIn",
+      "length": 162
+    },
+    {
+      "id": "55abbfd5ff5842fb",
+      "company": "Tesco",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPWDZERG1wcVVVQlQwRmh6YThSVGJyM0xOcmxwa3F2MTgzYXB0RzUzM3dmWnRzRDFqSHg2bUgwQjFUVGxEY0dpS3ZicjhyQUZsSFp0eExucWdOMWxzbFU5ekZGZHRqY1ltZGJQOGE2TnpVeUV1SElRd3ZyWGhPQzNUeE1INllncG1mUHN5bTFJYVBnTVRfdjUyUl9lY0xSV051cVlfcG95R2FCWVJDZWpNYTVnNXFka1dEd0xUUlVBZ3M5cGJWRnJVallEb2JUZEZaWWJzUTAyczhxWjF1Y1ZaM255VnRLRlB6clNNQ0pzbmgxekhRQWxqYw?oc=5",
+      "published_or_found_date": "Fri, 19 May 2023 07:00:00 GMT",
+      "date_collected": "2026-06-17T10:00:33+00:00",
+      "reason": "company_not_found",
+      "quote": "A Sokszínűségi hónap első hetének végéhez értünk! Ezen a héten a nők egyedisége és sokszínűsége volt a főszerepben. Többek között szó esett arról, miért fontos számunkra a sokszínűség és befogadás, miért csatlakozott vezérigazgatónk, [név eltávolítva] a - LinkedIn. A Sokszínűségi hónap első hetének végéhez értünk! Ezen a héten a nők egyedisége és sokszínűsége volt a főszerepben. Többek között szó esett arról, miért...",
+      "length": 421
+    },
+    {
+      "id": "f757687430e89139",
+      "company": "Tesco",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE95THJFZ25jcFAyS013aHJZSDVFZmMtbDZ5eEF5NEhSREh5bDlxck91VGl4Q0dPZHFJUkJaZDZMY0pOdWtFNEdxWlVmZU5sYmx6eTRlblVpaE5HbjQ?oc=5",
+      "published_or_found_date": "Sun, 15 Nov 2015 03:46:55 GMT",
+      "date_collected": "2026-06-17T10:00:33+00:00",
+      "reason": "too_short",
+      "quote": "[név eltávolítva] - LinkedIn. [név eltávolítva] LinkedIn",
+      "length": 56
+    },
+    {
+      "id": "081f1f17987432c7",
+      "company": "Tesco",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBfY2hNUXNUWUtGQ3NOU2dZQmI4LVRjbW5HUEdXd3JkQmNiMGlvR0xXc3ZVdkJiaEtZeFp1WTAxYkZIQ01DREczV0NRbm9kZzU2UXVhY04yQ05SZldab0NjUXdSbFF0NFZ5ZGNrQmR3?oc=5",
+      "published_or_found_date": "Thu, 19 Nov 2015 17:59:03 GMT",
+      "date_collected": "2026-06-17T10:00:33+00:00",
+      "reason": "too_short",
+      "quote": "[név eltávolítva] - Tesco - LinkedIn. [név eltávolítva] - Tesco LinkedIn",
+      "length": 72
+    },
+    {
+      "id": "21107f4e3fcd6c13",
+      "company": "Tesco",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE85bUlvU2tlMmJUQTYtdUtYVWVtdHZuRFVON3BCU3hqQUh5anBVdzQ1RGlmaHVReDhJRW5sVmQ3T0NaTjY0aXVBOGpBc2NTcXhKRWtVTWlCcHdrd3kwT0gtZE1mRVdPd1l2blJB?oc=5",
+      "published_or_found_date": "Fri, 01 Apr 2022 01:17:19 GMT",
+      "date_collected": "2026-06-17T10:00:33+00:00",
+      "reason": "too_short",
+      "quote": "[név eltávolítva] - LinkedIn. [név eltávolítva] LinkedIn",
+      "length": 56
+    },
+    {
+      "id": "c6bab2914f819287",
+      "company": "Tesco",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBzZXBCNkZ2RWNYOWhSbExHczRLVUl6VnFwS0pNSUlPdjB3TVB0VGFGUmhReDFFZXVEeXBMOGN4bVZydGJPSEoxRnJvaURfS2ktMzk4dEJIUGpZSlZJa1pJ?oc=5",
+      "published_or_found_date": "Thu, 03 Dec 2015 01:21:15 GMT",
+      "date_collected": "2026-06-17T10:00:33+00:00",
+      "reason": "company_not_found",
+      "quote": "[név eltávolítva] - CE [név eltávolítva] Manager 'Procurement is more than just buying!' - LinkedIn. [név eltávolítva] - CE [név eltávolítva] Manager 'Procurement is more than just buying!' LinkedIn",
+      "length": 198
+    },
+    {
+      "id": "222720d601a862c3",
+      "company": "Tesco",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFA4UTZWQXJjMXNTRy1weWJoQ2MwM2x5RF9SYzJ3WERET2tpR19PQ1BLNmk3U25TUFJrRmNudUhxZjRPVXk0bkUwbkhKalNqS2Z1TTBPMENDYkkzaVJZ?oc=5",
+      "published_or_found_date": "Thu, 19 Nov 2015 08:18:37 GMT",
+      "date_collected": "2026-06-17T10:00:33+00:00",
+      "reason": "company_not_found",
+      "quote": "[név eltávolítva] - Head of [név eltávolítva] HU - LinkedIn. [név eltávolítva] - Head of [név eltávolítva] HU LinkedIn",
+      "length": 118
+    },
+    {
+      "id": "066cb5580d2d45ff",
+      "company": "Tesco",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBiT3JRUWVTSHl4WlV1NzZyVkNVQkZfVkRTdURDRkJhWnRhUE84bl9YOTNYT0paVk0za29EOGVMV0pSYmFKcHVuWXUyQTA1WnF0dGxRUEZRY2F2QUE?oc=5",
+      "published_or_found_date": "Wed, 27 Mar 2024 08:46:27 GMT",
+      "date_collected": "2026-06-17T10:00:33+00:00",
+      "reason": "too_short",
+      "quote": "[név eltávolítva] - LinkedIn. [név eltávolítva] LinkedIn",
+      "length": 56
+    },
+    {
+      "id": "ab8545b32bb5e871",
+      "company": "Tesco",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5MUV9fa0xjOE9QZXZ1ZjdLWFV6V2NSeGlGRkRZTW5ad2pPdW01Y3UtMjY2QnBmMnd3LTBvVThDOWR0WkV6YTZSQ2lVQQ?oc=5",
+      "published_or_found_date": "Thu, 06 Nov 2014 17:37:35 GMT",
+      "date_collected": "2026-06-17T10:00:33+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "[név eltávolítva] - Tesco-[név eltávolítva] Plc - LinkedIn. [név eltávolítva] - Tesco-[név eltávolítva] Plc LinkedIn",
+      "length": 116
+    },
+    {
+      "id": "dff4dd2f79aab8f1",
+      "company": "Tesco",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBqbS1HNUFoM2dqM1VMV2I0NlhCSXZ0T20wRkRLaGVJWm5PR19zNWd4cnlIbURTWUJBSzFUdl9LdXNiWDdiWEVmRVVOVEVPa0UydFE?oc=5",
+      "published_or_found_date": "Sun, 01 Mar 2026 04:47:51 GMT",
+      "date_collected": "2026-06-17T10:00:33+00:00",
+      "reason": "company_not_found",
+      "quote": "[név eltávolítva] - [név eltávolítva] & [név eltávolítva] - LinkedIn. [név eltávolítva] - [név eltávolítva] & [név eltávolítva] LinkedIn",
+      "length": 136
+    },
+    {
+      "id": "d6fd9d2e011e0400",
+      "company": "Tesco",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBnTmJPOVVmQ3oyZTlYYlZjaDE0bDhUVncyTUpOOHdfNVlWcTQxdUJEZGZpaG8yUTlOUmJqY2xoWThXQ1YxUzI3X1dyQjg3Q1l6LWc?oc=5",
+      "published_or_found_date": "Thu, 18 Jun 2020 02:02:36 GMT",
+      "date_collected": "2026-06-17T10:00:33+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "[név eltávolítva]-Aranyos - [név eltávolítva] & [név eltávolítva] Lead at [név eltávolítva] Services & Technology (Hungary) - LinkedIn. [név eltávolítva]-Aranyos - [név eltávolítva] & [név eltávolítva] Lead at [név eltávolítva] Services & Technology (Hungary) LinkedIn",
+      "length": 268
+    },
+    {
+      "id": "09b4d812670d49ea",
+      "company": "Tesco",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1WQVBETzEtLUlCTG5kSmNLUU1nQVk2bWZjSzFXNFEtWTVZOC1CVFRRUjFkS2Y1UlBWWFlQc1J1RFBDRENGM2g3QzN6QjFiMTE1S2I3eXFfcHJPRGt2cFZj?oc=5",
+      "published_or_found_date": "Mon, 11 Jan 2016 23:22:12 GMT",
+      "date_collected": "2026-06-17T10:00:33+00:00",
+      "reason": "company_not_found",
+      "quote": "[név eltávolítva] - [név eltávolítva] [név eltávolítva] - LinkedIn. [név eltávolítva] - [név eltávolítva] [név eltávolítva] LinkedIn",
+      "length": 132
+    },
+    {
+      "id": "0d5c0a32829c907c",
+      "company": "Tesco",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5XTk5rUjgza212djdkMUM0OEhEbHpZb01xaHBLczFORzl1ZmNOd0hfNEplVFUyeUUtVW1xUWdrR0k1WGtoS1d3QzVzRWx6QTdGVjhmSWItTGVHcE9YNGFDU3VVaVhOR1lE?oc=5",
+      "published_or_found_date": "Thu, 30 Aug 2018 13:17:39 GMT",
+      "date_collected": "2026-06-17T10:00:33+00:00",
+      "reason": "company_not_found",
+      "quote": "[név eltávolítva] - CE [név eltávolítva] Manager - LinkedIn. [név eltávolítva] - CE [név eltávolítva] Manager LinkedIn",
+      "length": 118
+    },
+    {
+      "id": "9bf5ae70d982e82d",
+      "company": "Tesco",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFB5N29JbWlCRm13eTl0ZTNwV2cwOXlTSjNRLW9Pc2hBai14OGRoWW1KVlBDcjcyS1RGZDlrUV8tRlRsSW9uMUlSYUE4NXBFaHM?oc=5",
+      "published_or_found_date": "Thu, 06 Feb 2025 03:51:39 GMT",
+      "date_collected": "2026-06-17T10:00:33+00:00",
+      "reason": "company_not_found",
+      "quote": "[név eltávolítva] / [név eltávolítva] / [név eltávolítva] / [név eltávolítva] Manager / [név eltávolítva] - LinkedIn. [név eltávolítva] / [név eltávolítva] / [név eltávolítva] / [név eltávolítva] Manager / [név eltávolítva] LinkedIn",
+      "length": 232
+    },
+    {
+      "id": "3c643dd78543376c",
+      "company": "Tesco",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1SbkdkUjQ3Q0pKMU1oOE5TVFdkejN6OHZTd25BYUlULW5iVTQ5RmsybVBPa1hJWUhmNmxPM3VZLVFBZGNYWDNFOTlPLWozNlhJOHRDdmhCMWdsZw?oc=5",
+      "published_or_found_date": "Thu, 03 Dec 2020 08:04:38 GMT",
+      "date_collected": "2026-06-17T10:00:33+00:00",
+      "reason": "weak_employee_review_signal",
+      "quote": "[név eltávolítva] - [név eltávolítva] Ordering & [név eltávolítva] at Tesco - LinkedIn. [név eltávolítva] - [név eltávolítva] Ordering & [név eltávolítva] at Tesco LinkedIn",
+      "length": 172
+    },
+    {
+      "id": "6b7dc823703f0634",
+      "company": "Tesco",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5uNzduOTRNWTNvMnRDb2laanI0aWVLMVlaR29CUzJBX2pPWjRtWFlObUlfd0FteFdkVnU0bXljaDdSdDI3ajZaZ0xTR09WQQ?oc=5",
+      "published_or_found_date": "Tue, 29 Mar 2022 21:29:04 GMT",
+      "date_collected": "2026-06-17T10:00:33+00:00",
+      "reason": "too_short",
+      "quote": "[név eltávolítva] - LinkedIn. [név eltávolítva] LinkedIn",
+      "length": 56
+    },
+    {
+      "id": "ace9096a5ce91a14",
+      "company": "Tesco",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1RTWNxU0RFbHB3SEJvSGJfbkM2ZmFRYzVKRjhlOURaVXFZQk9rZjJGX1pGVTNfNENhb21xMnVnSXdPU3l1bmNIazllT1ZwQy1VcFlRNWtWZWd3bllsNzcybVJnamUwNnIt?oc=5",
+      "published_or_found_date": "Mon, 09 Nov 2015 13:21:29 GMT",
+      "date_collected": "2026-06-17T10:00:33+00:00",
+      "reason": "company_not_found",
+      "quote": "[név eltávolítva] - [név eltávolítva] of Procurement at SPAR Magyarország - LinkedIn. [név eltávolítva] - [név eltávolítva] of Procurement at SPAR Magyarország LinkedIn",
+      "length": 168
+    },
+    {
+      "id": "a1971b004163e91f",
+      "company": "Tesco",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPTFUtcEs1WGJZbjNFd2xlMDR0OU0tbWlHNW44TW5UWFp4SnJxLTRKdEJic2xNSXpfS0piZUFvVEJQbV9qOGJRLXFhcUdRTXc2MVpqU241V3JjandJTVVKY0JrYU1sNWVLZDFPWTUza0ZYTGxadFp0RVhma2ZHS19wcy1nbTBLNVBZUHYzbnlzSG81SnE1MmJWc2NFLXlvQzlkQ01HSVpfYk93eVpkLWloTkRyczlRS1NLZ1hYZ09YQW53YjFLRHBERlRYTQ?oc=5",
+      "published_or_found_date": "Tue, 07 Jun 2022 07:00:00 GMT",
+      "date_collected": "2026-06-17T10:00:33+00:00",
+      "reason": "company_not_found",
+      "quote": "Looking forward to next week’s [név eltávolítva] conference 👏 - LinkedIn. Looking forward to next week’s [név eltávolítva] conference 👏 LinkedIn",
+      "length": 144
+    },
+    {
+      "id": "0bb250650168c289",
+      "company": "Tesco",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1XNXNCSUNwOXUwbVV1Mnc4cFBwbXFKYzl0ekloRFpIZHg2TFhzX1p0aVFpaXY0SXhzYnpLempNUXpBeXFsVTh3b1FHd1o2QXU0cTVBbXVXX3FwNWV0NjJGSw?oc=5",
+      "published_or_found_date": "Wed, 24 Apr 2019 09:01:40 GMT",
+      "date_collected": "2026-06-17T10:00:33+00:00",
+      "reason": "company_not_found",
+      "quote": "[név eltávolítva] - Revízió vezető at ROSSMANN Magyarország - LinkedIn. [név eltávolítva] - Revízió vezető at ROSSMANN Magyarország LinkedIn",
+      "length": 140
+    },
+    {
+      "id": "f67657eb561eda16",
+      "company": "Tesco",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQUk1kTFBCWXBVRW5CZkYtQ3Z3R1M0NXRycjROSWZkeHpFN29GV2I3Z21DQTNkM1dFcVFhaGU1U0xTLW12Mi1sUTBBblVxX3FrMUNSdG9yUFVQSmhnVlFIVmJJZVZvUmQzSWFQMHMxRFVvT0ZiYWVIRWpXaEpmZUl0UE5IdldWd2lQdmYwOFJQbVJFZjgzNG1NaDFHM0lESnpRRnJfNlYzZVpXSDRwUlZ5RDVBRjZjRkdSdjZqNTJxeHc3ZG8?oc=5",
+      "published_or_found_date": "Thu, 14 May 2026 07:00:00 GMT",
+      "date_collected": "2026-06-17T10:00:33+00:00",
+      "reason": "company_not_found",
+      "quote": "Ma délelőtt a Női váltó / noivalto.hu - női online magazin fesztiválon szuper társaságban - nagy köszönet [név eltávolítva] [név eltávolítva] (she/her) [név eltávolítva], hogy újra és újra inspiráltok! - voltam egy panelbeszélgetésben, ahol a béregyenlőségről, a láthatatlan mun - LinkedIn. Ma délelőtt a Női váltó / noivalto.hu - női online magazin fesztiválon szuper társaságban - nagy köszönet [név eltávolítva] [név...",
+      "length": 422
+    },
+    {
+      "id": "d0b49d22049d791c",
+      "company": "Tesco",
+      "source": "google_news_rss",
+      "source_url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBHLUthaVdaSWZHeVFlbjV0SUN6TFdNaFJ3Rm9nc002eHdRWE1rNTVOY0xHY2FHLWJKU19pRTFfM0dRVENSYmJ4ZGJFcmViYVJDTUdaTVRaYTNiWmktc3Y3aEZqMS1pNnpuVzNQZw?oc=5",
+      "published_or_found_date": "Wed, 19 Apr 2023 20:55:41 GMT",
+      "date_collected": "2026-06-17T10:00:33+00:00",
+      "reason": "too_short",
+      "quote": "[név eltávolítva]-Pajer - LinkedIn. [név eltávolítva]-Pajer LinkedIn",
+      "length": 68
     }
   ]
 }
