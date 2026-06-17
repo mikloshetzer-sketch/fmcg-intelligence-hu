@@ -6,25 +6,26 @@ FMCG Intelligence Hungary
 Employer Review Text Collector
 
 Cél:
-- Publikus munkáltatói értékelések szöveges mintáinak kigyűjtése.
-- Személyes adatok eltávolítása.
-- Téma- és hangulatelemzés egyszerű kulcsszavas logikával.
-- Kimenet mentése:
+- Publikus munkáltatói vélemények szöveges kigyűjtése.
+- Cégenkénti témázás és egyszerű hangulatelemzés.
+- Személyes adatok automatikus eltávolítása.
+- Kimenet:
   docs/data/employer-review-texts.json
 
 Fontos:
-- Csak publikus, jogszerűen hozzáférhető oldalakhoz használd.
-- Ne kerüljön mentésre név, e-mail, telefonszám vagy más személyes adat.
-- A script nem tör fel oldalt, nem lép be fiókba, nem kerül meg védelmet.
+- Csak publikus, jogszerűen hozzáférhető oldalakat használj.
+- Ne használj belépést, fiókot, cookie-t, zárt oldalt vagy tiltott scrapinget.
+- A direct_urls mezőbe kézzel kell betenni a publikus véleményoldalakat.
 """
 
 import json
 import re
 import time
 import random
+import hashlib
 from pathlib import Path
 from datetime import datetime, timezone
-from typing import Dict, List, Any, Optional
+from typing import Any, Dict, List, Optional
 
 import requests
 from bs4 import BeautifulSoup
@@ -33,7 +34,6 @@ from bs4 import BeautifulSoup
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "docs" / "data"
 OUTPUT_FILE = DATA_DIR / "employer-review-texts.json"
-SOURCE_REVIEW_FILE = DATA_DIR / "employer-reviews.json"
 
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -41,100 +41,84 @@ USER_AGENT = (
     "Chrome/124.0 Safari/537.36"
 )
 
-REQUEST_TIMEOUT = 20
+REQUEST_TIMEOUT = 25
 SLEEP_MIN = 2.0
 SLEEP_MAX = 5.0
+MAX_QUOTES_PER_COMPANY = 20
+MAX_QUOTE_LENGTH = 320
 
 
 COMPANIES = [
-    {
-        "company": "Auchan",
-        "search_names": ["Auchan", "Auchan Magyarország"],
-    },
-    {
-        "company": "Lidl",
-        "search_names": ["Lidl", "Lidl Magyarország"],
-    },
-    {
-        "company": "Aldi",
-        "search_names": ["ALDI", "ALDI Magyarország"],
-    },
-    {
-        "company": "Penny",
-        "search_names": ["Penny", "PENNY Magyarország"],
-    },
-    {
-        "company": "Spar",
-        "search_names": ["SPAR", "SPAR Magyarország"],
-    },
-    {
-        "company": "Tesco",
-        "search_names": ["Tesco", "Tesco Magyarország"],
-    },
+    "Auchan",
+    "Lidl",
+    "Aldi",
+    "Penny",
+    "Spar",
+    "Tesco",
 ]
 
 
-# Itt bővíthető később konkrét, ellenőrzött publikus forrásoldalakkal.
-# A direct_urls mezőbe olyan oldalt tegyél, ahol valóban publikus értékelések vannak.
 REVIEW_SOURCE_CONFIG = {
-    "profession": {
-        "enabled": True,
-        "base": "https://www.profession.hu",
-        "direct_urls": {
-            "Auchan": [],
-            "Lidl": [],
-            "Aldi": [],
-            "Penny": [],
-            "Spar": [],
-            "Tesco": [],
-        },
-    },
     "manual_public_sources": {
         "enabled": True,
         "direct_urls": {
-            "Auchan": [],
-            "Lidl": [],
-            "Aldi": [],
-            "Penny": [],
-            "Spar": [],
-            "Tesco": [],
+            "Auchan": [
+                # Ide jöhetnek az Auchan publikus munkáltatói véleményoldalai.
+                # Példa:
+                # "https://www.example.hu/auchan-velemenyek"
+            ],
+            "Lidl": [
+                # Ide jöhetnek a Lidl publikus munkáltatói véleményoldalai.
+            ],
+            "Aldi": [
+                # Ide jöhetnek az Aldi publikus munkáltatói véleményoldalai.
+            ],
+            "Penny": [
+                # Ide jöhetnek a Penny publikus munkáltatói véleményoldalai.
+            ],
+            "Spar": [
+                # Ide jöhetnek a SPAR publikus munkáltatói véleményoldalai.
+            ],
+            "Tesco": [
+                # Ide jöhetnek a Tesco publikus munkáltatói véleményoldalai.
+            ],
         },
-    },
+    }
 }
 
 
 TOPIC_KEYWORDS = {
     "bérezés": [
-        "fizetés", "bér", "alacsony bér", "kevés pénz", "órabér",
-        "jövedelem", "kereset", "pénz", "fizetnek"
+        "fizetés", "bér", "bérezés", "órabér", "kereset", "jövedelem",
+        "pénz", "alulfizetett", "keveset fizet", "nettó", "bruttó"
     ],
     "juttatások": [
-        "juttatás", "cafeteria", "bónusz", "kedvezmény", "étkezési",
-        "utalvány", "prémium", "jutalom"
+        "juttatás", "cafeteria", "bónusz", "prémium", "kedvezmény",
+        "utalvány", "jutalom", "dolgozói kedvezmény"
     ],
     "munkaterhelés": [
         "sok munka", "leterhel", "túlterhel", "hajtás", "fárasztó",
-        "munka mennyisége", "kevés ember", "létszámhiány", "tempó"
+        "kevés ember", "létszámhiány", "tempó", "pörgés", "nehéz munka"
     ],
     "beosztás": [
-        "beosztás", "műszak", "hétvége", "túlóra", "rugalmas",
-        "munkaidő", "éjszaka", "vasárnap"
+        "beosztás", "műszak", "hétvége", "túlóra", "munkaidő",
+        "vasárnap", "éjszaka", "rugalmas", "szabadnap"
     ],
     "vezetés": [
-        "vezető", "főnök", "menedzser", "irányítás", "kommunikáció",
-        "vezetőség", "felettes", "vezetői"
+        "vezető", "főnök", "menedzser", "vezetőség", "felettes",
+        "irányítás", "kommunikáció", "vezetői", "boltvezető"
     ],
     "csapat": [
-        "csapat", "kolléga", "munkatárs", "közösség", "hangulat",
-        "segítőkész", "összetartás"
+        "csapat", "kolléga", "munkatárs", "közösség", "segítőkész",
+        "összetartás", "jó hangulat", "barátságos"
     ],
     "előrelépés": [
         "karrier", "előrelépés", "fejlődés", "képzés", "betanítás",
-        "tanulás", "lehetőség"
+        "tanulás", "lehetőség", "előmenetel"
     ],
     "munkahelyi légkör": [
         "légkör", "stressz", "megbecsülés", "tisztelet", "hangulat",
-        "konfliktus", "nyomás"
+        "konfliktus", "nyomás", "kiégés", "mérgező"
     ],
 }
 
@@ -142,13 +126,13 @@ TOPIC_KEYWORDS = {
 POSITIVE_WORDS = [
     "jó", "pozitív", "korrekt", "segítőkész", "stabil", "rugalmas",
     "barátságos", "megbecsül", "támogató", "fejlődés", "lehetőség",
-    "biztos", "kiszámítható", "elégedett"
+    "biztos", "kiszámítható", "elégedett", "szeretek", "ajánlom"
 ]
 
 NEGATIVE_WORDS = [
     "rossz", "kevés", "alacsony", "nehéz", "stressz", "túlóra",
     "leterhel", "létszámhiány", "fárasztó", "probléma", "gyenge",
-    "elégedetlen", "nyomás", "konfliktus", "kaotikus"
+    "elégedetlen", "nyomás", "konfliktus", "kaotikus", "nem ajánlom"
 ]
 
 
@@ -156,49 +140,33 @@ def now_iso() -> str:
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
 
 
-def load_json(path: Path, fallback: Any) -> Any:
-    if not path.exists():
-        return fallback
-
-    try:
-        with path.open("r", encoding="utf-8") as f:
-            return json.load(f)
-    except Exception:
-        return fallback
-
-
-def save_json(path: Path, data: Any) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-
-    with path.open("w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-
-
 def clean_whitespace(text: str) -> str:
     return re.sub(r"\s+", " ", text or "").strip()
+
+
+def text_hash(text: str) -> str:
+    normalized = clean_whitespace(text.lower())
+    return hashlib.sha256(normalized.encode("utf-8")).hexdigest()[:16]
 
 
 def remove_personal_data(text: str) -> str:
     text = text or ""
 
-    # E-mail címek eltávolítása
     text = re.sub(
         r"[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+",
         "[email eltávolítva]",
         text,
     )
 
-    # Telefonszám jellegű minták eltávolítása
     text = re.sub(
         r"(\+36|06)?[\s\-]?\(?\d{1,2}\)?[\s\-]?\d{3}[\s\-]?\d{3,4}",
         "[telefonszám eltávolítva]",
         text,
     )
 
-    # Teljes nevek durva kiszűrése: két nagybetűs szó egymás után
     text = re.sub(
-        r"\b[A-ZÁÉÍÓÖŐÚÜŰ][a-záéíóöőúüű]+ "
-        r"[A-ZÁÉÍÓÖŐÚÜŰ][a-záéíóöőúüű]+\b",
+        r"\b[A-ZÁÉÍÓÖŐÚÜŰ][a-záéíóöőúüű]{2,}\s+"
+        r"[A-ZÁÉÍÓÖŐÚÜŰ][a-záéíóöőúüű]{2,}\b",
         "[név eltávolítva]",
         text,
     )
@@ -206,26 +174,70 @@ def remove_personal_data(text: str) -> str:
     return clean_whitespace(text)
 
 
-def normalize_quote(text: str, max_len: int = 260) -> str:
+def normalize_quote(text: str) -> str:
     text = remove_personal_data(text)
     text = clean_whitespace(text)
 
-    if len(text) > max_len:
-        text = text[:max_len].rsplit(" ", 1)[0] + "..."
+    if len(text) > MAX_QUOTE_LENGTH:
+        text = text[:MAX_QUOTE_LENGTH].rsplit(" ", 1)[0] + "..."
 
     return text
 
 
+def is_probably_review_text(text: str) -> bool:
+    text = clean_whitespace(text)
+
+    if len(text) < 45:
+        return False
+
+    if len(text.split()) < 7:
+        return False
+
+    lower = text.lower()
+
+    blocked = [
+        "cookie",
+        "javascript",
+        "adatvédelmi",
+        "bejelentkezés",
+        "regisztráció",
+        "elfogadom",
+        "hirdetés",
+        "newsletter",
+        "feliratkozás",
+        "összes állás",
+        "állások mentése",
+        "keresés mentése",
+    ]
+
+    if any(word in lower for word in blocked):
+        return False
+
+    review_signals = [
+        "munka",
+        "dolgozó",
+        "munkatárs",
+        "kolléga",
+        "fizetés",
+        "vezető",
+        "beosztás",
+        "műszak",
+        "csapat",
+        "munkahely",
+        "tapasztalat",
+        "ajánlom",
+        "nem ajánlom",
+    ]
+
+    return any(signal in lower for signal in review_signals)
+
+
 def classify_topic(text: str) -> str:
     lower = text.lower()
-    scores = {}
+    scores: Dict[str, int] = {}
 
     for topic, keywords in TOPIC_KEYWORDS.items():
-        score = 0
-        for kw in keywords:
-            if kw.lower() in lower:
-                score += 1
-        scores[topic] = score
+        scores[topic] = sum(1 for keyword in keywords if keyword in lower)
 
     best_topic = max(scores, key=scores.get)
 
@@ -243,98 +255,101 @@ def classify_sentiment(text: str) -> str:
 
     if positive > negative:
         return "positive"
+
     if negative > positive:
         return "negative"
+
     return "neutral"
 
 
-def make_text_hash(text: str) -> str:
-    import hashlib
-    clean = clean_whitespace(text.lower())
-    return hashlib.sha256(clean.encode("utf-8")).hexdigest()[:16]
+def load_json(path: Path, fallback: Any) -> Any:
+    if not path.exists():
+        return fallback
+
+    try:
+        with path.open("r", encoding="utf-8") as file:
+            return json.load(file)
+    except Exception:
+        return fallback
 
 
-def is_valid_review_text(text: str) -> bool:
-    text = clean_whitespace(text)
+def save_json(path: Path, data: Any) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
 
-    if len(text) < 35:
-        return False
-
-    if len(text.split()) < 6:
-        return False
-
-    banned_fragments = [
-        "cookie",
-        "javascript",
-        "adatvédelmi",
-        "bejelentkezés",
-        "regisztráció",
-        "elfogadom",
-        "hirdetés",
-    ]
-
-    lower = text.lower()
-    if any(fragment in lower for fragment in banned_fragments):
-        return False
-
-    return True
+    with path.open("w", encoding="utf-8") as file:
+        json.dump(data, file, ensure_ascii=False, indent=2)
 
 
 def fetch_html(url: str) -> Optional[str]:
-    headers = {"User-Agent": USER_AGENT}
+    headers = {
+        "User-Agent": USER_AGENT,
+        "Accept-Language": "hu-HU,hu;q=0.9,en-US;q=0.8,en;q=0.7",
+    }
 
     try:
         response = requests.get(url, headers=headers, timeout=REQUEST_TIMEOUT)
+
         if response.status_code != 200:
+            print(f"  skipped {url} status={response.status_code}")
             return None
+
         return response.text
-    except Exception:
+
+    except Exception as error:
+        print(f"  fetch failed {url}: {error}")
         return None
 
 
-def extract_candidate_texts_from_html(html: str) -> List[str]:
+def extract_text_blocks(html: str) -> List[str]:
     soup = BeautifulSoup(html, "html.parser")
 
-    for tag in soup(["script", "style", "noscript", "svg"]):
+    for tag in soup(["script", "style", "noscript", "svg", "header", "footer", "nav"]):
         tag.decompose()
-
-    candidates = []
 
     selectors = [
         "article",
         ".review",
         ".reviews",
-        ".rating",
         ".comment",
         ".opinion",
+        ".rating",
         ".description",
+        ".content",
+        "[class*='review']",
+        "[class*='comment']",
+        "[class*='opinion']",
         "p",
         "li",
     ]
 
+    texts: List[str] = []
     seen = set()
 
     for selector in selectors:
         for node in soup.select(selector):
             text = clean_whitespace(node.get_text(" ", strip=True))
 
-            if not is_valid_review_text(text):
+            if not is_probably_review_text(text):
                 continue
 
-            text_hash = make_text_hash(text)
-            if text_hash in seen:
+            normalized = normalize_quote(text)
+            item_hash = text_hash(normalized)
+
+            if item_hash in seen:
                 continue
 
-            seen.add(text_hash)
-            candidates.append(text)
+            seen.add(item_hash)
+            texts.append(normalized)
 
-    return candidates
+    return texts
 
 
-def collect_from_direct_urls(company: str, source_name: str, urls: List[str]) -> List[Dict[str, Any]]:
-    collected = []
+def collect_from_urls(company: str, source_name: str, urls: List[str]) -> List[Dict[str, Any]]:
+    results: List[Dict[str, Any]] = []
 
     for url in urls:
+        print(f"  reading source: {url}")
+
         html = fetch_html(url)
 
         time.sleep(random.uniform(SLEEP_MIN, SLEEP_MAX))
@@ -342,16 +357,16 @@ def collect_from_direct_urls(company: str, source_name: str, urls: List[str]) ->
         if not html:
             continue
 
-        texts = extract_candidate_texts_from_html(html)
+        blocks = extract_text_blocks(html)
 
-        for text in texts:
-            quote = normalize_quote(text)
+        for block in blocks:
+            quote = normalize_quote(block)
 
-            if not is_valid_review_text(quote):
+            if not is_probably_review_text(quote):
                 continue
 
-            collected.append({
-                "id": make_text_hash(company + source_name + quote),
+            item = {
+                "id": text_hash(company + source_name + url + quote),
                 "company": company,
                 "source": source_name,
                 "source_url": url,
@@ -362,52 +377,79 @@ def collect_from_direct_urls(company: str, source_name: str, urls: List[str]) ->
                 "quote": quote,
                 "length": len(quote),
                 "confidence": "medium",
-                "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
-            })
+                "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak.",
+            }
 
-    return collected
+            results.append(item)
+
+    return results
 
 
-def collect_company_reviews(company: str) -> List[Dict[str, Any]]:
-    all_items = []
-
-    for source_name, config in REVIEW_SOURCE_CONFIG.items():
-        if not config.get("enabled", False):
+def has_configured_sources() -> bool:
+    for source_config in REVIEW_SOURCE_CONFIG.values():
+        if not source_config.get("enabled", False):
             continue
 
-        direct_urls = config.get("direct_urls", {}).get(company, [])
-        if not direct_urls:
-            continue
+        direct_urls = source_config.get("direct_urls", {})
 
-        items = collect_from_direct_urls(
-            company=company,
-            source_name=source_name,
-            urls=direct_urls,
-        )
-        all_items.extend(items)
+        for urls in direct_urls.values():
+            if urls:
+                return True
+
+    return False
+
+
+def collect_all_reviews() -> List[Dict[str, Any]]:
+    all_items: List[Dict[str, Any]] = []
+
+    for company in COMPANIES:
+        print(f"Collecting employer review texts for: {company}")
+
+        company_items: List[Dict[str, Any]] = []
+
+        for source_name, source_config in REVIEW_SOURCE_CONFIG.items():
+            if not source_config.get("enabled", False):
+                continue
+
+            urls = source_config.get("direct_urls", {}).get(company, [])
+
+            if not urls:
+                continue
+
+            source_items = collect_from_urls(
+                company=company,
+                source_name=source_name,
+                urls=urls,
+            )
+
+            company_items.extend(source_items)
+
+        company_items = company_items[:MAX_QUOTES_PER_COMPANY]
+        print(f"  collected valid quotes: {len(company_items)}")
+
+        all_items.extend(company_items)
 
     return all_items
 
 
-def merge_with_existing(existing: Dict[str, Any], new_items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-    old_items = existing.get("items", [])
-    merged_by_id = {}
+def merge_existing_items(existing: Dict[str, Any], new_items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    merged: Dict[str, Dict[str, Any]] = {}
 
-    for item in old_items:
+    for item in existing.get("items", []):
         item_id = item.get("id")
         if item_id:
-            merged_by_id[item_id] = item
+            merged[item_id] = item
 
     for item in new_items:
         item_id = item.get("id")
         if item_id:
-            merged_by_id[item_id] = item
+            merged[item_id] = item
 
-    return list(merged_by_id.values())
+    return list(merged.values())
 
 
 def summarize_company(company: str, items: List[Dict[str, Any]]) -> Dict[str, Any]:
-    company_items = [x for x in items if x.get("company") == company]
+    company_items = [item for item in items if item.get("company") == company]
 
     topic_counts: Dict[str, int] = {}
     sentiment_counts = {
@@ -417,20 +459,20 @@ def summarize_company(company: str, items: List[Dict[str, Any]]) -> Dict[str, An
     }
 
     for item in company_items:
-        topic = item.get("topic") or "általános"
-        sentiment = item.get("sentiment") or "neutral"
+        topic = item.get("topic", "általános munkáltatói tapasztalat")
+        sentiment = item.get("sentiment", "neutral")
 
         topic_counts[topic] = topic_counts.get(topic, 0) + 1
 
-        if sentiment in sentiment_counts:
-            sentiment_counts[sentiment] += 1
-        else:
-            sentiment_counts["neutral"] += 1
+        if sentiment not in sentiment_counts:
+            sentiment = "neutral"
+
+        sentiment_counts[sentiment] += 1
 
     dominant_topics = sorted(
         topic_counts.items(),
-        key=lambda x: x[1],
-        reverse=True
+        key=lambda pair: pair[1],
+        reverse=True,
     )
 
     sample_quotes = company_items[:5]
@@ -439,7 +481,10 @@ def summarize_company(company: str, items: List[Dict[str, Any]]) -> Dict[str, An
         "company": company,
         "review_text_count": len(company_items),
         "dominant_topics": [
-            {"topic": topic, "count": count}
+            {
+                "topic": topic,
+                "count": count,
+            }
             for topic, count in dominant_topics[:6]
         ],
         "sentiment_counts": sentiment_counts,
@@ -447,75 +492,27 @@ def summarize_company(company: str, items: List[Dict[str, Any]]) -> Dict[str, An
     }
 
 
-def build_output(items: List[Dict[str, Any]]) -> Dict[str, Any]:
-    summaries = []
-
-    for company_config in COMPANIES:
-        company = company_config["company"]
-        summaries.append(summarize_company(company, items))
-
+def build_output(items: List[Dict[str, Any]], status: str) -> Dict[str, Any]:
     return {
         "updated_at": now_iso(),
-        "status": "ok",
+        "status": status,
         "source_type": "public_osint_employee_reviews",
-        "method": "direct_public_url_text_extraction_keyword_topic_sentiment_v1",
+        "method": "direct_public_url_text_extraction_keyword_topic_sentiment_v2",
         "important_note": (
             "A szöveges dolgozói értékelések publikus forrásokból származó, "
-            "automatikusan tisztított minták. Az eredmény nem reprezentatív közvélemény-kutatás, "
-            "hanem OSINT jellegű reputációs jelzés."
+            "automatikusan tisztított minták. Az eredmény nem reprezentatív kutatás, "
+            "hanem OSINT jellegű munkáltatói reputációs jelzés."
         ),
         "privacy_note": (
             "A script eltávolítja az e-mail címeket, telefonszámokat és felismerhető teljes neveket. "
             "A kimenetbe nem szabad személyes adatot menteni."
         ),
-        "companies": summaries,
-        "items": items,
-    }
-
-
-def create_empty_template_if_no_sources() -> Dict[str, Any]:
-    return {
-        "updated_at": now_iso(),
-        "status": "no_sources_configured",
-        "source_type": "public_osint_employee_reviews",
-        "method": "direct_public_url_text_extraction_keyword_topic_sentiment_v1",
-        "important_note": (
-            "Még nincs beállítva konkrét publikus értékelési URL. "
-            "A REVIEW_SOURCE_CONFIG direct_urls mezőibe kell felvenni a vizsgált oldalakat."
-        ),
-        "privacy_note": (
-            "Csak személyes adatot nem tartalmazó, publikus szöveges mintákat szabad menteni."
-        ),
         "companies": [
-            {
-                "company": company["company"],
-                "review_text_count": 0,
-                "dominant_topics": [],
-                "sentiment_counts": {
-                    "positive": 0,
-                    "neutral": 0,
-                    "negative": 0,
-                },
-                "sample_quotes": [],
-            }
+            summarize_company(company, items)
             for company in COMPANIES
         ],
-        "items": [],
+        "items": items,
     }
-
-
-def has_any_configured_url() -> bool:
-    for _, config in REVIEW_SOURCE_CONFIG.items():
-        if not config.get("enabled", False):
-            continue
-
-        direct_urls = config.get("direct_urls", {})
-
-        for _, urls in direct_urls.items():
-            if urls:
-                return True
-
-    return False
 
 
 def main() -> None:
@@ -525,30 +522,23 @@ def main() -> None:
 
     existing = load_json(OUTPUT_FILE, fallback={})
 
-    if not has_any_configured_url():
-        output = create_empty_template_if_no_sources()
+    if not has_configured_sources():
+        output = build_output(items=[], status="no_sources_configured")
         save_json(OUTPUT_FILE, output)
-        print(f"No source URLs configured. Empty template saved: {OUTPUT_FILE}")
+        print("No source URLs configured.")
+        print(f"Template saved: {OUTPUT_FILE}")
         return
 
-    new_items = []
+    new_items = collect_all_reviews()
+    merged_items = merge_existing_items(existing, new_items)
 
-    for company_config in COMPANIES:
-        company = company_config["company"]
-        print(f"Collecting review texts for: {company}")
+    status = "ok" if merged_items else "no_valid_review_texts_found"
 
-        company_items = collect_company_reviews(company)
-        print(f"  collected: {len(company_items)}")
-
-        new_items.extend(company_items)
-
-    merged_items = merge_with_existing(existing, new_items)
-
-    output = build_output(merged_items)
+    output = build_output(items=merged_items, status=status)
     save_json(OUTPUT_FILE, output)
 
     print(f"Saved: {OUTPUT_FILE}")
-    print(f"Total review text items: {len(merged_items)}")
+    print(f"Total stored review text items: {len(merged_items)}")
 
 
 if __name__ == "__main__":
