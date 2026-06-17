@@ -3,16 +3,15 @@
 
 """
 FMCG Intelligence Hungary
-Employer Review Text Collector v3
+Employer Review Text Collector v4
 
-Források első körben:
-- Profession jellegű találatok Google News RSS-en keresztül
-- Reddit publikus keresés
-- LinkedIn publikus említések Google News RSS-en keresztül
-- Google News RSS általános dolgozói vélemény keresések
-
-Kimenet:
-docs/data/employer-review-texts.json
+Cél:
+- Valódi dolgozói vélemény jellegű szövegek gyűjtése.
+- Sajtóhírek, bérhírek, karrieroldal-címek és álláshirdetés-címek kiszűrése.
+- Reddit, Google News/RSS, Profession és LinkedIn publikus említések vizsgálata.
+- A nem megfelelő találatok külön excluded_items részbe kerülnek.
+- Kimenet:
+  docs/data/employer-review-texts.json
 """
 
 import json
@@ -43,52 +42,54 @@ USER_AGENT = (
 REQUEST_TIMEOUT = 25
 SLEEP_MIN = 1.5
 SLEEP_MAX = 4.0
-MAX_ITEMS_PER_COMPANY = 25
-MAX_QUOTE_LENGTH = 360
+MAX_ITEMS_PER_COMPANY = 20
+MAX_EXCLUDED_PER_COMPANY = 30
+MAX_QUOTE_LENGTH = 420
 
 
 COMPANIES = {
-    "Auchan": ["Auchan Magyarország", "Auchan munkahely", "Auchan dolgozói vélemény"],
-    "Lidl": ["Lidl Magyarország", "Lidl munkahely", "Lidl dolgozói vélemény"],
-    "Aldi": ["ALDI Magyarország", "ALDI munkahely", "ALDI dolgozói vélemény"],
-    "Penny": ["PENNY Magyarország", "Penny Market munkahely", "PENNY dolgozói vélemény"],
-    "Spar": ["SPAR Magyarország", "SPAR munkahely", "SPAR dolgozói vélemény"],
-    "Tesco": ["Tesco Magyarország", "Tesco munkahely", "Tesco dolgozói vélemény"],
+    "Auchan": ["Auchan Magyarország", "Auchan"],
+    "Lidl": ["Lidl Magyarország", "Lidl"],
+    "Aldi": ["ALDI Magyarország", "Aldi", "ALDI"],
+    "Penny": ["PENNY Magyarország", "Penny Market", "PENNY", "Penny"],
+    "Spar": ["SPAR Magyarország", "SPAR", "Spar"],
+    "Tesco": ["Tesco Magyarország", "Tesco"],
 }
 
 
 TOPIC_KEYWORDS = {
     "bérezés": [
         "fizetés", "bér", "bérezés", "órabér", "kereset", "jövedelem",
-        "pénz", "nettó", "bruttó", "alulfizetett"
+        "pénz", "nettó", "bruttó", "alulfizetett", "keveset fizetnek"
     ],
     "juttatások": [
         "juttatás", "cafeteria", "bónusz", "prémium", "kedvezmény",
-        "utalvány", "jutalom"
+        "utalvány", "jutalom", "dolgozói kedvezmény"
     ],
     "munkaterhelés": [
         "sok munka", "leterhelt", "túlterhelt", "hajtás", "fárasztó",
-        "kevés ember", "létszámhiány", "tempó", "pörgés", "nehéz munka"
+        "kevés ember", "létszámhiány", "tempó", "pörgés", "nehéz munka",
+        "széthajtják", "robotolni", "pakolni"
     ],
     "beosztás": [
         "beosztás", "műszak", "hétvége", "túlóra", "munkaidő",
-        "vasárnap", "éjszaka", "szabadnap"
+        "vasárnap", "éjszaka", "szabadnap", "váltás"
     ],
     "vezetés": [
         "vezető", "főnök", "menedzser", "vezetőség", "felettes",
-        "kommunikáció", "boltvezető", "irányítás"
+        "kommunikáció", "boltvezető", "irányítás", "osztályvezető"
     ],
     "csapat": [
         "csapat", "kolléga", "munkatárs", "közösség", "segítőkész",
-        "összetartás", "jó hangulat"
+        "összetartás", "jó hangulat", "brigád"
     ],
     "előrelépés": [
         "karrier", "előrelépés", "fejlődés", "képzés", "betanítás",
-        "tanulás", "lehetőség"
+        "tanulás", "lehetőség", "előmenetel"
     ],
     "munkahelyi légkör": [
         "légkör", "stressz", "megbecsülés", "tisztelet", "hangulat",
-        "konfliktus", "nyomás", "kiégés"
+        "konfliktus", "nyomás", "kiégés", "mérgező"
     ],
 }
 
@@ -96,13 +97,103 @@ TOPIC_KEYWORDS = {
 POSITIVE_WORDS = [
     "jó", "pozitív", "korrekt", "segítőkész", "stabil", "rugalmas",
     "barátságos", "megbecsül", "támogató", "fejlődés", "lehetőség",
-    "kiszámítható", "elégedett", "szeretek", "ajánlom"
+    "kiszámítható", "elégedett", "szeretek", "ajánlom", "rendben van",
+    "jó csapat", "jó hely"
 ]
 
 NEGATIVE_WORDS = [
     "rossz", "kevés", "alacsony", "nehéz", "stressz", "túlóra",
     "leterhelt", "létszámhiány", "fárasztó", "probléma", "gyenge",
-    "elégedetlen", "nyomás", "konfliktus", "kaotikus", "nem ajánlom"
+    "elégedetlen", "nyomás", "konfliktus", "kaotikus", "nem ajánlom",
+    "széthajtják", "nem fizetik", "borzalmas", "kizsigerel"
+]
+
+
+HARD_EXCLUDE_PATTERNS = [
+    r"\bbéremelés\b",
+    r"\bbérfejlesztés\b",
+    r"\bemeli a béreket\b",
+    r"\bemel a fizetéseken\b",
+    r"\bfizetésemelés\b",
+    r"\bjuttatási csomag\b",
+    r"\begészségprogramot indított\b",
+    r"\bállások, karrier\b",
+    r"\bkarrier profession\b",
+    r"\bvélemények profession\.hu\b",
+    r"\bértékelések profession\.hu\b",
+    r"\bállás profession\.hu\b",
+    r"\bálláshirdetés\b",
+    r"\bállások\b",
+    r"\bmunkaadója\b",
+    r"\blegismertebb munkaadó\b",
+    r"\bszezonális állások\b",
+    r"\bfelvételét tervezik\b",
+    r"\bközlemény\b",
+    r"\b(x)\b",
+]
+
+
+NEWS_SOURCE_HINTS = [
+    "hvg.hu",
+    "pénzcentrum",
+    "24.hu",
+    "portfolio.hu",
+    "blikk",
+    "index.hu",
+    "világgazdaság",
+    "trade magazin",
+    "hr portál",
+    "mindmegette",
+    "nool",
+    "azüzlet",
+    "onbrands",
+]
+
+
+FIRST_PERSON_REVIEW_HINTS = [
+    "dolgoztam",
+    "dolgozom",
+    "ott dolgoztam",
+    "náluk dolgoztam",
+    "náluk dolgozom",
+    "munkatársként",
+    "eladóként",
+    "pénztárosként",
+    "árufeltöltőként",
+    "raktárosként",
+    "vezetőként",
+    "szerintem",
+    "tapasztalatom",
+    "az én tapasztalatom",
+    "nem ajánlom",
+    "ajánlom",
+    "felmondtam",
+    "kiléptem",
+    "ott hagytam",
+    "ott dolgozik",
+    "ismerősöm ott dolgozik",
+]
+
+
+WORKPLACE_REVIEW_HINTS = [
+    "munkahely",
+    "munkavállaló",
+    "dolgozó",
+    "kolléga",
+    "munkatárs",
+    "főnök",
+    "vezető",
+    "beosztás",
+    "műszak",
+    "túlóra",
+    "fizetés",
+    "bér",
+    "cafeteria",
+    "létszámhiány",
+    "stressz",
+    "munkaterhelés",
+    "hangulat",
+    "csapat",
 ]
 
 
@@ -155,6 +246,101 @@ def normalize_quote(text: str) -> str:
     return text
 
 
+def contains_company(text: str, company: str) -> bool:
+    lower = text.lower()
+    aliases = COMPANIES.get(company, [company])
+
+    return any(alias.lower() in lower for alias in aliases)
+
+
+def has_hard_exclusion(text: str) -> bool:
+    lower = text.lower()
+
+    for pattern in HARD_EXCLUDE_PATTERNS:
+        if re.search(pattern, lower, flags=re.IGNORECASE):
+            return True
+
+    return False
+
+
+def looks_like_news_or_pr(text: str) -> bool:
+    lower = text.lower()
+
+    news_hits = sum(1 for hint in NEWS_SOURCE_HINTS if hint in lower)
+
+    pr_terms = [
+        "jelentett be",
+        "közölte",
+        "tájékoztatása szerint",
+        "sajtóközlemény",
+        "programot indított",
+        "megállapodott",
+        "döntött",
+        "kapnak a dolgozók",
+        "minden dolgozójának üzent",
+    ]
+
+    pr_hits = sum(1 for term in pr_terms if term in lower)
+
+    return news_hits >= 1 or pr_hits >= 1
+
+
+def review_signal_score(text: str) -> int:
+    lower = text.lower()
+
+    first_person_score = sum(2 for hint in FIRST_PERSON_REVIEW_HINTS if hint in lower)
+    workplace_score = sum(1 for hint in WORKPLACE_REVIEW_HINTS if hint in lower)
+
+    opinion_terms = [
+        "szerintem",
+        "tapasztalat",
+        "vélemény",
+        "pozitívum",
+        "negatívum",
+        "előny",
+        "hátrány",
+        "jó volt",
+        "rossz volt",
+        "nehéz volt",
+        "megérte",
+        "nem érte meg",
+    ]
+
+    opinion_score = sum(1 for term in opinion_terms if term in lower)
+
+    return first_person_score + workplace_score + opinion_score
+
+
+def exclusion_reason(text: str, company: str) -> Optional[str]:
+    text = clean_text(text)
+
+    if len(text) < 90:
+        return "too_short"
+
+    if len(text.split()) < 14:
+        return "too_few_words"
+
+    if not contains_company(text, company):
+        return "company_not_found"
+
+    if has_hard_exclusion(text):
+        return "hard_excluded_news_or_job_listing"
+
+    if looks_like_news_or_pr(text):
+        return "news_or_pr_content"
+
+    score = review_signal_score(text)
+
+    if score < 4:
+        return "weak_employee_review_signal"
+
+    return None
+
+
+def is_real_employee_review(text: str, company: str) -> bool:
+    return exclusion_reason(text, company) is None
+
+
 def classify_topic(text: str) -> str:
     lower = text.lower()
     scores = {}
@@ -183,47 +369,6 @@ def classify_sentiment(text: str) -> str:
     return "neutral"
 
 
-def is_relevant_review_text(text: str, company: str) -> bool:
-    text = clean_text(text)
-    lower = text.lower()
-
-    if len(text) < 45:
-        return False
-
-    if len(text.split()) < 7:
-        return False
-
-    company_terms = [company.lower()]
-    if company == "Aldi":
-        company_terms.append("aldi")
-    if company == "Spar":
-        company_terms.append("spar")
-    if company == "Penny":
-        company_terms.append("penny")
-
-    if not any(term in lower for term in company_terms):
-        return False
-
-    review_terms = [
-        "dolgozó", "munkavállaló", "munkahely", "munka", "munkatárs",
-        "kolléga", "fizetés", "bér", "beosztás", "műszak", "vezető",
-        "tapasztalat", "vélemény", "értékelés", "állás", "karrier"
-    ]
-
-    if not any(term in lower for term in review_terms):
-        return False
-
-    blocked = [
-        "cookie", "javascript", "adatvédelmi", "bejelentkezés",
-        "regisztráció", "elfogadom", "newsletter", "hirdetés"
-    ]
-
-    if any(term in lower for term in blocked):
-        return False
-
-    return True
-
-
 def request_url(url: str) -> Optional[str]:
     headers = {
         "User-Agent": USER_AGENT,
@@ -232,10 +377,13 @@ def request_url(url: str) -> Optional[str]:
 
     try:
         response = requests.get(url, headers=headers, timeout=REQUEST_TIMEOUT)
+
         if response.status_code != 200:
             print(f"  skipped status={response.status_code}: {url}")
             return None
+
         return response.text
+
     except Exception as error:
         print(f"  request failed: {url} | {error}")
         return None
@@ -258,6 +406,7 @@ def google_news_rss_search(query: str) -> List[Dict[str, str]]:
 
     try:
         root = ET.fromstring(xml_text)
+
         for item in root.findall(".//item"):
             title = clean_text(item.findtext("title", default=""))
             link = clean_text(item.findtext("link", default=""))
@@ -271,6 +420,7 @@ def google_news_rss_search(query: str) -> List[Dict[str, str]]:
                     "description": description,
                     "pub_date": pub_date,
                 })
+
     except Exception as error:
         print(f"  RSS parse failed for query={query}: {error}")
 
@@ -279,7 +429,7 @@ def google_news_rss_search(query: str) -> List[Dict[str, str]]:
 
 def reddit_public_search(query: str) -> List[Dict[str, str]]:
     encoded = quote_plus(query)
-    url = f"https://www.reddit.com/search.json?q={encoded}&sort=new&limit=15"
+    url = f"https://www.reddit.com/search.json?q={encoded}&sort=new&limit=20"
 
     raw = request_url(url)
     time.sleep(random.uniform(SLEEP_MIN, SLEEP_MAX))
@@ -315,7 +465,7 @@ def reddit_public_search(query: str) -> List[Dict[str, str]]:
     return results
 
 
-def build_item(
+def build_valid_item(
     company: str,
     source: str,
     source_url: str,
@@ -324,13 +474,12 @@ def build_item(
 ) -> Optional[Dict[str, Any]]:
     quote = normalize_quote(raw_text)
 
-    if not is_relevant_review_text(quote, company):
+    reason = exclusion_reason(quote, company)
+    if reason:
         return None
 
-    item_id = make_hash(company + source + source_url + quote)
-
     return {
-        "id": item_id,
+        "id": make_hash(company + source + source_url + quote),
         "company": company,
         "source": source,
         "source_url": source_url,
@@ -341,25 +490,66 @@ def build_item(
         "sentiment": classify_sentiment(quote),
         "quote": quote,
         "length": len(quote),
-        "confidence": "medium",
+        "confidence": "high" if review_signal_score(quote) >= 7 else "medium",
         "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak.",
     }
 
 
-def collect_google_news_items(company: str, aliases: List[str]) -> List[Dict[str, Any]]:
+def build_excluded_item(
+    company: str,
+    source: str,
+    source_url: str,
+    raw_text: str,
+    reason: str,
+    pub_date: str = "",
+) -> Dict[str, Any]:
+    quote = normalize_quote(raw_text)
+
+    return {
+        "id": make_hash("excluded" + company + source + source_url + quote),
+        "company": company,
+        "source": source,
+        "source_url": source_url,
+        "published_or_found_date": pub_date,
+        "date_collected": now_iso(),
+        "reason": reason,
+        "quote": quote,
+        "length": len(quote),
+    }
+
+
+def detect_source(link: str, raw_text: str) -> str:
+    lower_link = link.lower()
+    lower_text = raw_text.lower()
+
+    if "profession.hu" in lower_link or "profession.hu" in lower_text:
+        return "profession_via_google_news"
+
+    if "linkedin.com" in lower_link or "linkedin.com" in lower_text:
+        return "linkedin_via_google_news"
+
+    return "google_news_rss"
+
+
+def collect_google_items(company: str, aliases: List[str]) -> Dict[str, List[Dict[str, Any]]]:
     queries = []
 
     for alias in aliases:
         queries.extend([
-            f'"{alias}" dolgozói vélemény',
-            f'"{alias}" munkavállalói vélemény',
-            f'"{alias}" munkahely értékelés',
-            f'"{alias}" fizetés beosztás vezető',
-            f'"{alias}" site:profession.hu',
-            f'"{alias}" site:linkedin.com',
+            f'"{alias}" "dolgoztam"',
+            f'"{alias}" "tapasztalatom"',
+            f'"{alias}" "nem ajánlom"',
+            f'"{alias}" "ajánlom"',
+            f'"{alias}" "fizetés" "műszak"',
+            f'"{alias}" "vezető" "beosztás"',
+            f'"{alias}" "dolgozói vélemény"',
+            f'"{alias}" "munkavállalói vélemény"',
+            f'"{alias}" site:profession.hu vélemény',
+            f'"{alias}" site:linkedin.com dolgoztam',
         ])
 
-    items = []
+    valid_items = []
+    excluded_items = []
 
     for query in queries:
         print(f"  Google News RSS query: {query}")
@@ -370,41 +560,57 @@ def collect_google_news_items(company: str, aliases: List[str]) -> List[Dict[str
                 f"{result.get('title', '')}. {result.get('description', '')}"
             )
 
-            source = "google_news_rss"
-
             link = result.get("link", "")
+            source = detect_source(link, raw_text)
+            pub_date = result.get("pub_date", "")
 
-            if "profession.hu" in link.lower() or "profession.hu" in raw_text.lower():
-                source = "profession_via_google_news"
-            elif "linkedin.com" in link.lower() or "linkedin.com" in raw_text.lower():
-                source = "linkedin_via_google_news"
+            reason = exclusion_reason(raw_text, company)
 
-            item = build_item(
+            if reason:
+                excluded_items.append(
+                    build_excluded_item(
+                        company=company,
+                        source=source,
+                        source_url=link,
+                        raw_text=raw_text,
+                        reason=reason,
+                        pub_date=pub_date,
+                    )
+                )
+                continue
+
+            item = build_valid_item(
                 company=company,
                 source=source,
                 source_url=link,
                 raw_text=raw_text,
-                pub_date=result.get("pub_date", ""),
+                pub_date=pub_date,
             )
 
             if item:
-                items.append(item)
+                valid_items.append(item)
 
-    return items
+    return {
+        "valid": valid_items,
+        "excluded": excluded_items,
+    }
 
 
-def collect_reddit_items(company: str, aliases: List[str]) -> List[Dict[str, Any]]:
+def collect_reddit_items(company: str, aliases: List[str]) -> Dict[str, List[Dict[str, Any]]]:
     queries = []
 
     for alias in aliases:
         queries.extend([
-            f'"{alias}" munka',
+            f'"{alias}" dolgoztam',
             f'"{alias}" fizetés',
-            f'"{alias}" dolgozó',
-            f'"{alias}" vélemény',
+            f'"{alias}" műszak',
+            f'"{alias}" főnök',
+            f'"{alias}" nem ajánlom',
+            f'"{alias}" tapasztalat',
         ])
 
-    items = []
+    valid_items = []
+    excluded_items = []
 
     for query in queries:
         print(f"  Reddit query: {query}")
@@ -415,18 +621,39 @@ def collect_reddit_items(company: str, aliases: List[str]) -> List[Dict[str, Any
                 f"{result.get('title', '')}. {result.get('description', '')}"
             )
 
-            item = build_item(
+            link = result.get("link", "")
+            pub_date = result.get("pub_date", "")
+
+            reason = exclusion_reason(raw_text, company)
+
+            if reason:
+                excluded_items.append(
+                    build_excluded_item(
+                        company=company,
+                        source="reddit_public_search",
+                        source_url=link,
+                        raw_text=raw_text,
+                        reason=reason,
+                        pub_date=pub_date,
+                    )
+                )
+                continue
+
+            item = build_valid_item(
                 company=company,
                 source="reddit_public_search",
-                source_url=result.get("link", ""),
+                source_url=link,
                 raw_text=raw_text,
-                pub_date=result.get("pub_date", ""),
+                pub_date=pub_date,
             )
 
             if item:
-                items.append(item)
+                valid_items.append(item)
 
-    return items
+    return {
+        "valid": valid_items,
+        "excluded": excluded_items,
+    }
 
 
 def load_json(path: Path, fallback: Any) -> Any:
@@ -452,11 +679,7 @@ def deduplicate_items(items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     result = []
 
     for item in items:
-        item_id = item.get("id")
-        quote = item.get("quote", "")
-        quote_hash = make_hash(quote)
-
-        key = item_id or quote_hash
+        key = item.get("id") or make_hash(item.get("quote", ""))
 
         if key in seen:
             continue
@@ -467,7 +690,7 @@ def deduplicate_items(items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     return result
 
 
-def merge_existing(existing: Dict[str, Any], new_items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+def merge_existing_valid(existing: Dict[str, Any], new_items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     merged = {}
 
     for item in existing.get("items", []):
@@ -483,8 +706,9 @@ def merge_existing(existing: Dict[str, Any], new_items: List[Dict[str, Any]]) ->
     return list(merged.values())
 
 
-def summarize_company(company: str, items: List[Dict[str, Any]]) -> Dict[str, Any]:
+def summarize_company(company: str, items: List[Dict[str, Any]], excluded: List[Dict[str, Any]]) -> Dict[str, Any]:
     company_items = [item for item in items if item.get("company") == company]
+    company_excluded = [item for item in excluded if item.get("company") == company]
 
     topic_counts: Dict[str, int] = {}
     sentiment_counts = {
@@ -492,8 +716,8 @@ def summarize_company(company: str, items: List[Dict[str, Any]]) -> Dict[str, An
         "neutral": 0,
         "negative": 0,
     }
-
     source_counts: Dict[str, int] = {}
+    exclusion_counts: Dict[str, int] = {}
 
     for item in company_items:
         topic = item.get("topic", "általános munkáltatói tapasztalat")
@@ -508,12 +732,18 @@ def summarize_company(company: str, items: List[Dict[str, Any]]) -> Dict[str, An
 
         sentiment_counts[sentiment] += 1
 
+    for item in company_excluded:
+        reason = item.get("reason", "unknown")
+        exclusion_counts[reason] = exclusion_counts.get(reason, 0) + 1
+
     dominant_topics = sorted(topic_counts.items(), key=lambda x: x[1], reverse=True)
     dominant_sources = sorted(source_counts.items(), key=lambda x: x[1], reverse=True)
+    dominant_exclusions = sorted(exclusion_counts.items(), key=lambda x: x[1], reverse=True)
 
     return {
         "company": company,
         "review_text_count": len(company_items),
+        "excluded_count": len(company_excluded),
         "dominant_topics": [
             {"topic": topic, "count": count}
             for topic, count in dominant_topics[:6]
@@ -523,76 +753,103 @@ def summarize_company(company: str, items: List[Dict[str, Any]]) -> Dict[str, An
             {"source": source, "count": count}
             for source, count in dominant_sources
         ],
+        "exclusion_counts": [
+            {"reason": reason, "count": count}
+            for reason, count in dominant_exclusions
+        ],
         "sample_quotes": company_items[:5],
+        "sample_excluded": company_excluded[:3],
     }
 
 
-def build_output(items: List[Dict[str, Any]], status: str) -> Dict[str, Any]:
+def build_output(
+    valid_items: List[Dict[str, Any]],
+    excluded_items: List[Dict[str, Any]],
+    status: str,
+) -> Dict[str, Any]:
     return {
         "updated_at": now_iso(),
         "status": status,
         "source_type": "public_osint_employee_reviews",
-        "method": "profession_reddit_linkedin_google_news_osint_v3",
+        "method": "strict_employee_voice_filter_v4",
         "important_note": (
-            "Az adatok publikus OSINT forrásokból származó szöveges minták. "
-            "A gyűjtés nem reprezentatív dolgozói felmérés, hanem munkáltatói reputációs jelzés. "
-            "A LinkedIn és Profession esetében az első kör Google News/RSS találatokra és publikus "
-            "említésekre támaszkodik, nem belépéshez kötött tartalomra."
+            "A fő items tömb csak olyan szövegeket tartalmazhat, amelyek valódi dolgozói "
+            "vélemény jellegűek. A sajtóhírek, bérhírek, álláshirdetések és karrieroldal-címek "
+            "az excluded_items részbe kerülnek. Az eredmény OSINT jelzés, nem reprezentatív felmérés."
         ),
         "privacy_note": (
             "A script automatikusan eltávolítja az e-mail címeket, telefonszámokat "
             "és felismerhető teljes neveket. Személyes adatot nem szabad menteni."
         ),
         "companies": [
-            summarize_company(company, items)
+            summarize_company(company, valid_items, excluded_items)
             for company in COMPANIES.keys()
         ],
-        "items": items,
+        "items": valid_items,
+        "excluded_items": excluded_items,
     }
 
 
-def collect_all() -> List[Dict[str, Any]]:
-    all_items = []
+def collect_all() -> Dict[str, List[Dict[str, Any]]]:
+    all_valid = []
+    all_excluded = []
 
     for company, aliases in COMPANIES.items():
-        print(f"Collecting employee voice data for: {company}")
+        print(f"Collecting strict employee voice data for: {company}")
 
-        company_items = []
+        google_result = collect_google_items(company, aliases)
+        reddit_result = collect_reddit_items(company, aliases)
 
-        google_items = collect_google_news_items(company, aliases)
-        reddit_items = collect_reddit_items(company, aliases)
+        company_valid = []
+        company_excluded = []
 
-        company_items.extend(google_items)
-        company_items.extend(reddit_items)
+        company_valid.extend(google_result["valid"])
+        company_valid.extend(reddit_result["valid"])
 
-        company_items = deduplicate_items(company_items)
-        company_items = company_items[:MAX_ITEMS_PER_COMPANY]
+        company_excluded.extend(google_result["excluded"])
+        company_excluded.extend(reddit_result["excluded"])
 
-        print(f"  valid stored items for {company}: {len(company_items)}")
+        company_valid = deduplicate_items(company_valid)[:MAX_ITEMS_PER_COMPANY]
+        company_excluded = deduplicate_items(company_excluded)[:MAX_EXCLUDED_PER_COMPANY]
 
-        all_items.extend(company_items)
+        print(f"  valid employee reviews for {company}: {len(company_valid)}")
+        print(f"  excluded non-review items for {company}: {len(company_excluded)}")
 
-    return deduplicate_items(all_items)
+        all_valid.extend(company_valid)
+        all_excluded.extend(company_excluded)
+
+    return {
+        "valid": deduplicate_items(all_valid),
+        "excluded": deduplicate_items(all_excluded),
+    }
 
 
 def main() -> None:
-    print("Employer review OSINT collector started.")
+    print("Strict Employer Review OSINT collector started.")
 
     DATA_DIR.mkdir(parents=True, exist_ok=True)
 
     existing = load_json(OUTPUT_FILE, fallback={})
-    new_items = collect_all()
+    collected = collect_all()
 
-    merged_items = merge_existing(existing, new_items)
-    merged_items = deduplicate_items(merged_items)
+    valid_items = merge_existing_valid(existing, collected["valid"])
+    valid_items = deduplicate_items(valid_items)
 
-    status = "ok" if merged_items else "no_valid_review_texts_found"
+    excluded_items = deduplicate_items(collected["excluded"])
 
-    output = build_output(merged_items, status)
+    if valid_items:
+        status = "ok"
+    elif excluded_items:
+        status = "no_valid_employee_reviews_only_excluded_items"
+    else:
+        status = "no_results_found"
+
+    output = build_output(valid_items, excluded_items, status)
     save_json(OUTPUT_FILE, output)
 
     print(f"Saved: {OUTPUT_FILE}")
-    print(f"Total stored items: {len(merged_items)}")
+    print(f"Valid employee review items: {len(valid_items)}")
+    print(f"Excluded items: {len(excluded_items)}")
     print(f"Status: {status}")
 
 
