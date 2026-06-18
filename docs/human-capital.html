@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FMCG Intelligence Hungary – Human Capital V3.1</title>
+  <title>FMCG Intelligence Hungary – Human Capital V3.2</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="./css/style.css" />
   <style>
@@ -76,6 +76,24 @@
     table{font-size:13px;} th{letter-spacing:.04em;}
     .notice{background:var(--hc-warn);border-color:var(--hc-warn-border);}
     .insight{font-size:15px;line-height:1.75;}
+
+    .employee-rep-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:8px;}
+    .employee-rep-card{border:1px solid #dceaf5;border-radius:18px;background:linear-gradient(145deg,#ffffff,#f7fbff);padding:14px;min-height:132px;}
+    .employee-rep-card .company{font-weight:950;color:var(--hc-navy);font-size:15px;}
+    .employee-rep-card .index{font-size:30px;font-weight:950;color:var(--hc-navy);margin:8px 0 4px;}
+    .employee-rep-card .meta{display:flex;gap:6px;flex-wrap:wrap;margin-top:7px;}
+    .risk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px;}
+    .risk-tile{border:1px solid #e2edf6;border-radius:16px;background:#fbfdff;padding:12px;}
+    .risk-label{font-size:12px;color:var(--hc-muted);font-weight:800;}
+    .risk-value{font-size:22px;color:var(--hc-navy);font-weight:950;margin-top:4px;}
+    .voice-list{display:grid;gap:12px;}
+    .voice-item{border-left:5px solid var(--hc-blue);background:#f8fbff;border-radius:14px;padding:12px 14px;line-height:1.55;color:#12345a;}
+    .voice-item b{color:var(--hc-navy);}
+    .voice-quote{font-size:13px;margin-top:6px;}
+    .topic-chip{display:inline-flex;align-items:center;border-radius:999px;padding:3px 8px;font-size:11px;font-weight:850;background:#e0f2fe;color:#075985;margin-right:5px;margin-top:5px;}
+    .trend-placeholder{border:1px dashed #bfd8ec;background:#f8fbff;border-radius:18px;padding:16px;line-height:1.65;color:#334155;}
+    @media(max-width:1200px){.employee-rep-grid{grid-template-columns:repeat(3,1fr)}.risk-grid{grid-template-columns:1fr}}
+    @media(max-width:700px){.employee-rep-grid{grid-template-columns:1fr}}
     @media(max-width:1000px){.span8,.span7,.span6,.span5,.span4,.span3{grid-column:span 12}.chartbox{height:280px}.reputation-grid,.audit-grid{grid-template-columns:1fr}.quality-row{grid-template-columns:110px 1fr 48px}}
   </style>
 </head>
@@ -98,11 +116,11 @@
 
 <section class="hero">
   <div class="hero-box">
-    <div class="hero-kicker">Human Capital Intelligence V3.1</div>
+    <div class="hero-kicker">Human Capital Intelligence V3.2</div>
     <h1>Munkaerő, reputáció, juttatások és toborzási nyomás az FMCG szereplőknél</h1>
     <p>
       A V3 nézet a meglévő HR, pénzügyi és álláshirdetési adatokból vezetői dashboardot készít:
-      munkáltatói rangsor, toborzási mix, benefit mátrix, adatminőségi központ és automatikus heti értelmezés.
+      munkáltatói rangsor, dolgozói véleményindex, toborzási mix, benefit mátrix, adatminőségi központ és automatikus heti értelmezés.
     </p>
     <div class="btn-row">
       <a class="btn btn-primary" href="./index.html">Vissza a fő dashboardra</a>
@@ -129,6 +147,30 @@
     <div class="card span12">
       <div class="section-title"><h2>Human Capital Weekly Insight</h2><span>automatikus vezetői összefoglaló</span></div>
       <div class="weekly-box" id="weeklyInsight">Adatok betöltése...</div>
+    </div>
+
+
+    <div class="card span12">
+      <div class="section-title"><h2>Employee Reputation Intelligence</h2><span>employee-reputation-index.json + employer-review-texts.json</span></div>
+      <div id="employeeReputationOverview" class="employee-rep-grid">Adatok betöltése...</div>
+      <div class="chart-insight" id="employeeReputationInsight">Adatok betöltése...</div>
+    </div>
+
+    <div class="card span6">
+      <div class="section-title"><h2>Employee Risk Radar</h2><span>bérezés, stressz, vezetés, csapat, munkaidő, légkör</span></div>
+      <div class="chartbox tall"><canvas id="employeeRiskRadarChart"></canvas></div>
+      <div class="chart-insight" id="employeeRiskInsight">Adatok betöltése...</div>
+    </div>
+
+    <div class="card span6">
+      <div class="section-title"><h2>Employee Voice</h2><span>valódi dolgozói szöveges véleményekből vett minták</span></div>
+      <div id="employeeVoiceBox" class="voice-list">Adatok betöltése...</div>
+      <div class="formula-box"><b>Értelmezés:</b> az idézetek publikus OSINT forrásokból származó rövid minták. Nem reprezentatív felmérés, hanem dolgozói percepciós jelzés. A dashboard a témát és a hangulatot automatikusan címkézi.</div>
+    </div>
+
+    <div class="card span12">
+      <div class="section-title"><h2>Employee Reputation Trend</h2><span>előkészített idősoros modul</span></div>
+      <div id="employeeReputationTrend" class="trend-placeholder">Adatok betöltése...</div>
     </div>
 
     <div class="card span7">
@@ -237,7 +279,9 @@
     </div>
 
     <div class="span12">
-      <details open><summary>Employer Reputation adattábla <span class="small">employer-reviews.json + benefits.json</span></summary><div class="details-body"><table id="reputationTable"></table></div></details>
+      <details open><summary>Employee Reputation adattábla <span class="small">employee-reputation-index.json</span></summary><div class="details-body"><table id="employeeReputationTable"></table></div></details>
+      <details><summary>Employee Voice idézettábla <span class="small">employer-review-texts.json</span></summary><div class="details-body"><table id="employeeVoiceTable"></table></div></details>
+      <details><summary>Employer Reputation adattábla <span class="small">employer-reviews.json + benefits.json</span></summary><div class="details-body"><table id="reputationTable"></table></div></details>
       <details><summary>Álláshirdetési adattábla <span class="small">jobs.json</span></summary><div class="details-body"><table id="jobsTable"></table></div></details>
       <details><summary>Munkaerő-hatékonysági adattábla <span class="small">workforce.json + stores.json + jobs.json</span></summary><div class="details-body"><table id="workforceTable"></table></div></details>
       <details><summary>Pénzügyi hatékonysági adattábla <span class="small">financials.json + workforce.json + stores.json</span></summary><div class="details-body"><table id="financialEfficiencyTable"></table></div></details>
@@ -255,7 +299,7 @@
   </div>
 </main>
 
-<footer class="footer">FMCG Intelligence Hungary – Human Capital V3.1 modul.</footer>
+<footer class="footer">FMCG Intelligence Hungary – Human Capital V3.2 modul.</footer>
 
 <script>
 const companiesUrl = './data/companies.json';
@@ -266,10 +310,12 @@ const jobsUrl = './data/jobs.json';
 const financialsUrl = './data/financials.json';
 const employerReviewsUrl = './data/employer-reviews.json';
 const benefitsUrl = './data/benefits.json';
+const employeeReputationUrl = './data/employee-reputation-index.json';
+const employeeVoiceUrl = './data/employer-review-texts.json';
 const BENEFIT_MAX_CATEGORIES = 12;
 
 let charts = {};
-let state = {companies:[], salaries:[], workforce:[], stores:[], jobs:[], financials:[], employerReviews:[], benefits:[], history:null};
+let state = {companies:[], salaries:[], workforce:[], stores:[], jobs:[], financials:[], employerReviews:[], benefits:[], employeeReputation:null, employeeVoice:null, history:null};
 
 function n(v){return v === null || v === undefined || v === '' ? 'n.a.' : v;}
 function yesNo(v){if(v === true) return 'Igen'; if(v === false) return 'Nem'; return 'n.a.';}
@@ -327,8 +373,18 @@ function dataQualityBreakdown(c){
 
 async function loadData(){
   try{
-    const [companies, salaries, workforce, stores, jobs, financials, employerReviews, benefits, history] = await Promise.all([
-      fetchJson(companiesUrl), fetchJson(salariesUrl), fetchJson(workforceUrl), fetchJson(storesUrl), fetchJson(jobsUrl), fetchJson(financialsUrl), fetchJson(employerReviewsUrl), fetchJson(benefitsUrl), fetchJson(currentHistoryUrl(), true)
+    const [companies, salaries, workforce, stores, jobs, financials, employerReviews, benefits, employeeReputation, employeeVoice, history] = await Promise.all([
+      fetchJson(companiesUrl),
+      fetchJson(salariesUrl),
+      fetchJson(workforceUrl),
+      fetchJson(storesUrl),
+      fetchJson(jobsUrl),
+      fetchJson(financialsUrl),
+      fetchJson(employerReviewsUrl),
+      fetchJson(benefitsUrl),
+      fetchJson(employeeReputationUrl, true),
+      fetchJson(employeeVoiceUrl, true),
+      fetchJson(currentHistoryUrl(), true)
     ]);
 
     const salaryById = new Map(salaries.map(s => [s.id, s]));
@@ -408,7 +464,7 @@ async function loadData(){
       c.data_quality_parts = dataQualityBreakdown(c);
     });
 
-    state = {companies, salaries, workforce, stores, jobs, financials, employerReviews, benefits, history};
+    state = {companies, salaries, workforce, stores, jobs, financials, employerReviews, benefits, employeeReputation, employeeVoice, history};
     renderPage(companies);
   }catch(error){
     showError('<b>Adatbetöltési hiba.</b><br>'+error.message+'<br><br>Ellenőrizd, hogy minden JSON elérhető-e a docs/data mappában.');
@@ -447,6 +503,7 @@ function renderPage(companies){
   setText('kpiProfitPerEmployeeSub', byProfitPerEmployee[0] ? `${fmtHuf(Math.round(byProfitPerEmployee[0].profit_per_employee_huf))} / fő` : 'adózott eredmény / dolgozó');
 
   renderWeeklyInsight(companies, byEmployer, byRecruit, byBenefit, byRating, byPressure, byDataQuality, avgDataQuality);
+  renderEmployeeReputationModule();
   renderEmployerRanking(byEmployer);
   renderReputationSummary(companies, byRating, byRecruit, byBenefit);
   renderCharts(companies, byEmployer);
@@ -476,6 +533,118 @@ function renderWeeklyInsight(companies, byEmployer, byRecruit, byBenefit, byRati
   text += `Az átlagos adatbizalom <b>${avgDataQuality}%</b>. `;
   if(missingEmployees.length || missingRating.length) text += `Pontosítandó adatok: létszám (${listText(missingEmployees)}), reputáció (${listText(missingRating)}).`;
   document.getElementById('weeklyInsight').innerHTML = text;
+}
+
+
+function getEmployeeReputationCompanies(){
+  const data = state.employeeReputation || {};
+  return Array.isArray(data.companies) ? data.companies : [];
+}
+function getEmployeeVoiceItems(){
+  const data = state.employeeVoice || {};
+  return Array.isArray(data.items) ? data.items : [];
+}
+function riskLevelClass(level){
+  if(level === 'magas') return 'red';
+  if(level === 'közepes') return 'orange';
+  return 'green';
+}
+function indexPillClass(level){
+  if(level === 'kedvező') return 'green';
+  if(level === 'vegyes') return 'orange';
+  return 'red';
+}
+function cleanQuoteForUi(q){
+  if(!q) return 'n.a.';
+  return String(q).replace(/Pozitívumok/g,'Pozitívumok:').replace(/Negatívumok/g,' Negatívumok:').replace(/Ajánlaná ismerőseinek/g,'').replace(/\s+/g,' ').trim();
+}
+function renderEmployeeReputationModule(){
+  const repCompanies = getEmployeeReputationCompanies();
+  const voiceItems = getEmployeeVoiceItems();
+  renderEmployeeReputationOverview(repCompanies);
+  renderEmployeeRiskRadar(repCompanies);
+  renderEmployeeVoice(voiceItems);
+  renderEmployeeReputationTrend(repCompanies);
+}
+function renderEmployeeReputationOverview(repCompanies){
+  const box = document.getElementById('employeeReputationOverview');
+  const insight = document.getElementById('employeeReputationInsight');
+  if(!box || !insight) return;
+  if(!repCompanies.length){
+    box.innerHTML = '<div class="chart-insight">Nincs elérhető employee-reputation-index.json adat.</div>';
+    insight.innerHTML = 'Az Employee Reputation modul akkor jelenik meg, ha a workflow létrehozta a docs/data/employee-reputation-index.json fájlt.';
+    return;
+  }
+  const ordered = [...repCompanies].sort((a,b)=>num(b.employee_reputation_index,0)-num(a.employee_reputation_index,0));
+  box.innerHTML = ordered.map(c=>{
+    const idx = num(c.employee_reputation_index,0);
+    const level = n(c.index_level);
+    return `<div class="employee-rep-card">
+      <div class="company">${c.company}</div>
+      <div class="index">${idx}</div>
+      <div class="small">Employee Reputation Index</div>
+      <div class="meta"><span class="pill ${indexPillClass(level)}">${level}</span><span class="pill gray">${fmtNum(c.review_count)} vélemény</span></div>
+      <div class="small" style="margin-top:8px">Pozitív: <b>${pct(num(c.positive_pct,0))}</b> • Negatív: <b>${pct(num(c.negative_pct,0))}</b></div>
+    </div>`;
+  }).join('');
+  const best = ordered[0];
+  const weakest = ordered[ordered.length-1];
+  const totalReviews = ordered.reduce((a,c)=>a+num(c.review_count,0),0);
+  insight.innerHTML = `<b>${best.company}</b> vezeti az Employee Reputation rangsort ${best.employee_reputation_index}/100 értékkel, míg a leggyengébb aktuális index <b>${weakest.company}</b> esetében látszik. A modul ${fmtNum(totalReviews)} publikus dolgozói véleményből készít összehasonlító jelzést. Ez nem reprezentatív kutatás, hanem OSINT alapú percepciós indikátor.`;
+}
+function renderEmployeeRiskRadar(repCompanies){
+  const insight = document.getElementById('employeeRiskInsight');
+  if(!repCompanies.length){
+    if(insight) insight.innerHTML = 'Nincs elérhető reputációs index adat.';
+    return;
+  }
+  const ordered = [...repCompanies].sort((a,b)=>num(b.review_count,0)-num(a.review_count,0));
+  const selected = ordered.slice(0,6);
+  const labels = ['Bérezés', 'Stressz', 'Vezetés', 'Csapat', 'Munkaidő', 'Légkör'];
+  const datasets = selected.map(c=>({
+    label:c.company,
+    data:[
+      num(c.salary_risk?.score,0),
+      num(c.stress_risk?.score,0),
+      num(c.leadership_risk?.score,0),
+      Math.max(0,100-num(c.team_strength?.score,0)),
+      num(c.dimension_scores?.schedule?.risk_score,0),
+      num(c.dimension_scores?.workplace_climate?.risk_score,0)
+    ],
+    fill:false,
+    tension:.18
+  }));
+  makeChart('employeeRiskRadarChart','radar',labels,datasets,{scales:{r:{beginAtZero:true,max:100,ticks:{display:false},grid:{color:'#e2edf6'},pointLabels:{color:'#16324f'}}}});
+  const stressLeader = [...repCompanies].sort((a,b)=>num(b.stress_risk?.score,0)-num(a.stress_risk?.score,0))[0];
+  const salaryLeader = [...repCompanies].sort((a,b)=>num(b.salary_risk?.score,0)-num(a.salary_risk?.score,0))[0];
+  if(insight) insight.innerHTML = `A radar a kockázati oldalt mutatja: minél magasabb az érték, annál erősebben jelenik meg az adott probléma a dolgozói véleményekben. Stressz és terhelés alapján jelenleg <b>${stressLeader.company}</b> emelkedik ki, bérezési kockázat alapján pedig <b>${salaryLeader.company}</b> mutat erősebb jelzést.`;
+}
+function renderEmployeeVoice(voiceItems){
+  const box = document.getElementById('employeeVoiceBox');
+  if(!box) return;
+  if(!voiceItems.length){
+    box.innerHTML = '<div class="chart-insight">Nincs elérhető dolgozói idézet.</div>';
+    return;
+  }
+  const selected = [...voiceItems]
+    .filter(item=>item.quote && item.company)
+    .sort((a,b)=>num(b.review_signal_score,0)-num(a.review_signal_score,0))
+    .slice(0,6);
+  box.innerHTML = selected.map(item=>`<div class="voice-item">
+    <b>${item.company}</b> <span class="pill gray">${n(item.topic)}</span> <span class="pill ${item.sentiment==='negative'?'red':item.sentiment==='positive'?'green':'gray'}">${n(item.sentiment)}</span>
+    <div class="voice-quote">„${cleanQuoteForUi(item.quote)}”</div>
+    <div class="small">Forrás: ${n(item.source)} • jel erőssége: ${num(item.review_signal_score,0)}</div>
+  </div>`).join('');
+}
+function renderEmployeeReputationTrend(repCompanies){
+  const box = document.getElementById('employeeReputationTrend');
+  if(!box) return;
+  if(!repCompanies.length){
+    box.innerHTML = 'Nincs még reputációs index adat. A trend akkor aktiválható, ha több időpontban is mentésre kerül az employee-reputation-index.json.';
+    return;
+  }
+  const updated = state.employeeReputation?.updated_at || 'n.a.';
+  box.innerHTML = `<b>Trend előkészítve.</b> Jelenleg egy aktuális reputációs mentés látszik: <b>${updated}</b>. A 30 napos trendhez a workflow-nak legalább 4-5 heti mentést kell tárolnia. A következő fejlesztési lépés egy employee-reputation-history mappa létrehozása, amelyből már változás, momentum és romló/javuló dolgozói percepció is számítható.`;
 }
 
 function renderEmployerRanking(companies){
@@ -591,7 +760,7 @@ function renderDataAudit(companies, byDataQuality, avgDataQuality){
     <div class="audit-tile"><div class="kpi-label">Legjobb adatfedettség</div><div class="audit-value">${best?best.company:'n.a.'}</div><div class="small">${best?best.data_quality_score+'%':'n.a.'}</div></div>
     <div class="audit-tile"><div class="kpi-label">Leggyengébb adatfedettség</div><div class="audit-value">${worst?worst.company:'n.a.'}</div><div class="small">${worst?worst.data_quality_score+'%':'n.a.'}</div></div>
     <div class="audit-tile"><div class="kpi-label">Pontosítandó létszám</div><div class="audit-value">${missingEmployees.length}</div><div class="small">${listText(missingEmployees)}</div></div>
-  </div><div class="chart-insight" style="margin-top:12px"><b>Pontosítandó adatok:</b> létszám: ${listText(missingEmployees)}. Profession rating: ${listText(missingRating)}. Aktív hirdetés: ${listText(missingAds)}. Benefit kategória: ${listText(missingBenefits)}. A COOP és CBA franchise jellegű hálózatoknál a létszámadatot nem érdemes becsülni a fő rangsorokban. A Tesco létszáma a V3.1 felületen 8256 fővel szerepel, külön forrásjelöléssel.</div>`;
+  </div><div class="chart-insight" style="margin-top:12px"><b>Pontosítandó adatok:</b> létszám: ${listText(missingEmployees)}. Profession rating: ${listText(missingRating)}. Aktív hirdetés: ${listText(missingAds)}. Benefit kategória: ${listText(missingBenefits)}. A COOP és CBA franchise jellegű hálózatoknál a létszámadatot nem érdemes becsülni a fő rangsorokban. A Tesco létszáma a V3.2 felületen 8256 fővel szerepel, külön forrásjelöléssel.</div>`;
 }
 
 function renderTrendBox(companies){
@@ -606,7 +775,24 @@ function renderTrendBox(companies){
   document.getElementById('trendBox').innerHTML = `<b>Aktuális aktív hirdetések összesen:</b> ${fmtNum(currentTotal)}. <b>History fájlban rögzített érték:</b> ${fmtNum(histTotal)}. A trendmodul építés alatt áll: az első valóban összehasonlítható trendek 4–6 heti futás után jelennek meg. Addig ez a blokk csak az aktuális mentés meglétét és az adatgyűjtési réteg működését jelzi.`;
 }
 
-function renderTables(companies){renderReputationTable(companies);renderJobsTable(companies);renderWorkforceTable(companies);renderFinancialTable(companies);renderHumanTable(companies);}
+function renderTables(companies){renderEmployeeReputationTable();renderEmployeeVoiceTable();renderReputationTable(companies);renderJobsTable(companies);renderWorkforceTable(companies);renderFinancialTable(companies);renderHumanTable(companies);}
+
+function renderEmployeeReputationTable(){
+  const table = document.getElementById('employeeReputationTable');
+  if(!table) return;
+  const rows = getEmployeeReputationCompanies();
+  if(!rows.length){table.innerHTML='<tbody><tr><td>Nincs employee-reputation-index.json adat.</td></tr></tbody>';return;}
+  const ordered=[...rows].sort((a,b)=>num(b.employee_reputation_index,0)-num(a.employee_reputation_index,0));
+  table.innerHTML=`<thead><tr><th>Cég</th><th>Index</th><th>Szint</th><th>Vélemény</th><th>Pozitív</th><th>Semleges</th><th>Negatív</th><th>Stressz</th><th>Bérezés kockázat</th><th>Vezetés kockázat</th><th>Csapat erősség</th></tr></thead><tbody>${ordered.map(c=>`<tr><td><b>${c.company}</b></td><td><b>${num(c.employee_reputation_index,0)}</b></td><td>${n(c.index_level)}</td><td>${fmtNum(c.review_count)}</td><td>${pct(num(c.positive_pct,0))}</td><td>${pct(num(c.neutral_pct,0))}</td><td>${pct(num(c.negative_pct,0))}</td><td>${num(c.stress_risk?.score,0)} / ${n(c.stress_risk?.level)}</td><td>${num(c.salary_risk?.score,0)} / ${n(c.salary_risk?.level)}</td><td>${num(c.leadership_risk?.score,0)} / ${n(c.leadership_risk?.level)}</td><td>${num(c.team_strength?.score,0)} / ${n(c.team_strength?.level)}</td></tr>`).join('')}</tbody>`;
+}
+function renderEmployeeVoiceTable(){
+  const table = document.getElementById('employeeVoiceTable');
+  if(!table) return;
+  const rows = getEmployeeVoiceItems();
+  if(!rows.length){table.innerHTML='<tbody><tr><td>Nincs employer-review-texts.json adat.</td></tr></tbody>';return;}
+  table.innerHTML=`<thead><tr><th>Cég</th><th>Téma</th><th>Hangulat</th><th>Forrás</th><th>Jel erősség</th><th>Idézet</th></tr></thead><tbody>${rows.slice(0,120).map(item=>`<tr><td><b>${item.company}</b></td><td>${n(item.topic)}</td><td>${n(item.sentiment)}</td><td>${n(item.source)}</td><td>${num(item.review_signal_score,0)}</td><td>${cleanQuoteForUi(item.quote)}</td></tr>`).join('')}</tbody>`;
+}
+
 function renderReputationTable(companies){document.getElementById('reputationTable').innerHTML=`<thead><tr><th>Cég</th><th>Profession Rating</th><th>Értékelések</th><th>Vélemények</th><th>Juttatási elemek</th><th>Cafeteria</th><th>Bejárás</th><th>Bónusz</th><th>Egészségbiztosítás</th><th>Képzés</th><th>Adatstátusz</th></tr></thead><tbody>${companies.map(c=>{const b=c.benefit_data||{};return `<tr><td><b>${c.company}</b></td><td><b>${c.profession_rating?c.profession_rating:'n.a.'}</b></td><td>${fmtNum(c.profession_review_count)}</td><td>${fmtNum(c.profession_opinion_count)}</td><td><b>${c.profession_benefits_score} / ${BENEFIT_MAX_CATEGORIES}</b><br><span class="small">${benefitPercent(c)}%</span></td><td>${yesNo(b.cafeteria)}</td><td>${yesNo(b.commuting_support)}</td><td>${yesNo(b.bonus)}</td><td>${yesNo(b.health_insurance)}</td><td>${yesNo(b.training)}</td><td>${c.profession_review_status}</td></tr>`}).join('')}</tbody>`;}
 function renderJobsTable(companies){document.getElementById('jobsTable').innerHTML=`<thead><tr><th>Cég</th><th>Snapshot</th><th>Aktív hirdetés</th><th>Profession</th><th>Bolti</th><th>Raktári</th><th>Vezetői</th><th>Irodai</th><th>Toborzónap</th><th>Hirdetés / üzlet</th><th>Hirdetés / 1000 fő</th><th>Forrásbizalom</th></tr></thead><tbody>${companies.map(c=>{const j=c.jobs_data||{};return `<tr><td><b>${c.company}</b></td><td>${n(j.snapshot_date)}</td><td><b>${fmtNum(c.active_ads)}</b></td><td>${fmtNum(c.profession_active_ads)}</td><td>${fmtNum(c.store_jobs)}</td><td>${fmtNum(c.warehouse_jobs)}</td><td>${fmtNum(c.management_jobs)}</td><td>${fmtNum(c.office_jobs)}</td><td>${fmtNum(c.recruitment_events)}</td><td>${fmtDecimal(c.ads_per_store)}</td><td>${fmtDecimal(c.ads_per_1000_employees)}</td><td>${n(j.source_confidence)}</td></tr>`}).join('')}</tbody>`;}
 function renderWorkforceTable(companies){document.getElementById('workforceTable').innerHTML=`<thead><tr><th>Cég</th><th>Létszám</th><th>Üzlet</th><th>Aktív hirdetés</th><th>Hirdetés / üzlet</th><th>Hirdetés / 1000 fő</th><th>Éves becsült munkaóra</th><th>Nettó árbevétel / munkaóra</th><th>Árbevétel / fő</th><th>Profit / fő</th><th>Adatbizalom</th></tr></thead><tbody>${companies.map(c=>{const w=c.workforce_data||{};return `<tr><td><b>${c.company}</b></td><td>${fmtNum(w.employees_reported)}</td><td>${fmtNum(c.stores_count)}</td><td>${fmtNum(c.active_ads)}</td><td>${fmtDecimal(c.ads_per_store)}</td><td>${fmtDecimal(c.ads_per_1000_employees)}</td><td>${fmtNum(w.estimated_annual_hours)}</td><td><b>${fmtHuf(w.estimated_revenue_per_work_hour_huf)}</b></td><td>${c.revenue_per_employee_huf!==null?fmtHuf(Math.round(c.revenue_per_employee_huf)):'n.a.'}</td><td>${c.profit_per_employee_huf!==null?fmtHuf(Math.round(c.profit_per_employee_huf)):'n.a.'}</td><td>${c.data_quality_score}%</td></tr>`}).join('')}</tbody>`;}
