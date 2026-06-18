@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-06-18T05:16:11.722297+00:00",
+  "updated_at": "2026-06-18T10:53:22.331946+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-06-18T05:16:11.722297+00:00",
+    "updated_at": "2026-06-18T10:53:22.331946+00:00",
     "leader_social": "Lidl",
     "leader_social_index": 20,
     "dominant_social_topic": "árak és akciók",
@@ -183,32 +183,70 @@
     },
     {
       "company": "ALDI",
-      "social_mentions": 0,
-      "raw_social_mentions": 0,
-      "dashboard_mentions": 0,
+      "social_mentions": 1,
+      "raw_social_mentions": 1,
+      "dashboard_mentions": 1,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 0,
-      "hu_relevant_mentions": 0,
-      "social_index": 0,
+      "weighted_social_mentions": 1.0,
+      "hu_relevant_mentions": 1,
+      "social_index": 16,
       "social_sources": {
-        "reddit": 0,
+        "reddit": 1,
         "youtube": 0,
         "mastodon": 0
       },
       "raw_social_sources": {
-        "reddit": 0,
+        "reddit": 1,
         "youtube": 0,
         "mastodon": 0
       },
-      "dominant_social_topic": "általános vállalati említés",
-      "top_social_topics": [],
-      "topic_sentiment": {},
+      "dominant_social_topic": "árak és akciók",
+      "top_social_topics": [
+        {
+          "topic": "árak és akciók",
+          "score": 1.0
+        },
+        {
+          "topic": "termék és minőség",
+          "score": 1.0
+        }
+      ],
+      "topic_sentiment": {
+        "árak és akciók": {
+          "positive": 0.0,
+          "neutral": 1.0,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        },
+        "termék és minőség": {
+          "positive": 0.0,
+          "neutral": 1.0,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        }
+      },
       "social_sentiment": "neutral",
-      "latest_items": [],
+      "latest_items": [
+        {
+          "id": "f34ad4746b31aeb0",
+          "source": "reddit",
+          "company": "ALDI",
+          "title": "2026 május 20. - Nyolc évre szóló szívecskés kitűző",
+          "summary": "Frissítve: 2026. május 20. 21:00 CEST 1. Varsói tárgyalás: Tusk magyar szív-kitűzőt adott Magyarnak, V4-újraindítás Budapesten júniusban Telex | 444 | HVG | Magyar Hang · külpolitikai irányváltás Magyar Péter miniszterelnök szerdán Varsóba érkezett, ahol Donald Tusk lengyel kormányfővel tárgyalt. A 444 beszámolt arról, hogy a négyszemközti tárgyalás után közös sajtótájékoztatón Tusk kijelentette: kevesen hittek Magyar Péter &quot;fantasztikus győzelmében&quot; , de ő igen, és Lengyelország a 202",
+          "url": "https://www.reddit.com/r/hungary/comments/1tivywt/2026_május_20_nyolc_évre_szóló_szívecskés_kitűző/",
+          "published": "2026-05-20T19:20:52+00:00",
+          "query": "ALDI Magyarország",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        }
+      ],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 0,
+        "dashboard_items": 1,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
@@ -219,33 +257,85 @@
     },
     {
       "company": "Penny",
-      "social_mentions": 0,
-      "raw_social_mentions": 0,
-      "dashboard_mentions": 0,
-      "background_mentions": 0,
+      "social_mentions": 2,
+      "raw_social_mentions": 2,
+      "dashboard_mentions": 1,
+      "background_mentions": 1,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 0,
-      "hu_relevant_mentions": 0,
-      "social_index": 0,
+      "weighted_social_mentions": 1.5,
+      "hu_relevant_mentions": 1,
+      "social_index": 16,
       "social_sources": {
         "reddit": 0,
         "youtube": 0,
-        "mastodon": 0
+        "mastodon": 2
       },
       "raw_social_sources": {
         "reddit": 0,
         "youtube": 0,
-        "mastodon": 0
+        "mastodon": 2
       },
-      "dominant_social_topic": "általános vállalati említés",
-      "top_social_topics": [],
-      "topic_sentiment": {},
+      "dominant_social_topic": "digitalizáció és önkiszolgálás",
+      "top_social_topics": [
+        {
+          "topic": "digitalizáció és önkiszolgálás",
+          "score": 1.5
+        },
+        {
+          "topic": "árak és akciók",
+          "score": 1.0
+        }
+      ],
+      "topic_sentiment": {
+        "árak és akciók": {
+          "positive": 0.0,
+          "neutral": 1.0,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        },
+        "digitalizáció és önkiszolgálás": {
+          "positive": 0.0,
+          "neutral": 1.5,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        }
+      },
       "social_sentiment": "neutral",
-      "latest_items": [],
-      "background_items": [],
+      "latest_items": [
+        {
+          "id": "4f4f57b5624eaff2",
+          "source": "mastodon",
+          "company": "Penny",
+          "title": "",
+          "summary": "# ECJ : Hungarian legislation imposing mandatory discounts on large retailers is contrary to # EUlaw # PennyMarket # Rewe 👉 https:// curia.europa.eu/site/upload/do cs/application/pdf/2026-06/cp260089en.pdf",
+          "url": "https://curia.social-network.europa.eu/@Curia/116770181448801920",
+          "published": "Thu, 18 Jun 2026 08:32:47 +0000",
+          "query": "#pennymarket",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        }
+      ],
+      "background_items": [
+        {
+          "id": "eebd566057f05403",
+          "source": "mastodon",
+          "company": "Penny",
+          "title": "",
+          "summary": "# CJUE : La réglementation hongroise imposant des promotions obligatoires aux grands distributeurs de denrées alimentaires est contraire au # droitUE # PennyMarket # Rewe 👉 https:// curia.europa.eu/site/upload/do cs/application/pdf/2026-06/cp260089fr.pdf",
+          "url": "https://curia.social-network.europa.eu/@Curia_fr/116770182489314208",
+          "published": "Thu, 18 Jun 2026 08:33:03 +0000",
+          "query": "#pennymarket",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        }
+      ],
       "quality_summary": {
-        "dashboard_items": 0,
-        "background_items": 0,
+        "dashboard_items": 1,
+        "background_items": 1,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
