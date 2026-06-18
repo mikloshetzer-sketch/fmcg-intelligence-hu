@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-06-18T15:59:27.965509+00:00",
+  "updated_at": "2026-06-18T20:44:20.399368+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-06-18T15:59:27.965509+00:00",
-    "leader_social": "Lidl",
-    "leader_social_index": 16,
+    "updated_at": "2026-06-18T20:44:20.399368+00:00",
+    "leader_social": "ALDI",
+    "leader_social_index": 29,
     "dominant_social_topic": "árak és akciók",
     "overall_social_sentiment": "neutral"
   },
@@ -123,42 +123,6 @@
     },
     {
       "company": "Tesco",
-      "social_mentions": 0,
-      "raw_social_mentions": 0,
-      "dashboard_mentions": 0,
-      "background_mentions": 0,
-      "discarded_mentions": 0,
-      "weighted_social_mentions": 0,
-      "hu_relevant_mentions": 0,
-      "social_index": 0,
-      "social_sources": {
-        "reddit": 0,
-        "youtube": 0,
-        "mastodon": 0
-      },
-      "raw_social_sources": {
-        "reddit": 0,
-        "youtube": 0,
-        "mastodon": 0
-      },
-      "dominant_social_topic": "általános vállalati említés",
-      "top_social_topics": [],
-      "topic_sentiment": {},
-      "social_sentiment": "neutral",
-      "latest_items": [],
-      "background_items": [],
-      "quality_summary": {
-        "dashboard_items": 0,
-        "background_items": 0,
-        "discarded_items": 0,
-        "dashboard_relevance_threshold": 0.8,
-        "background_relevance_threshold": 0.5
-      },
-      "method_note": "Nyílt RSS és keresési alapú social signal. Nem teljes social listening, nem reprezentatív közvélemény-kutatás. A V1.4 verzió szigorúbb HU relevance szűrést, dashboard/background/discarded bontást és topic-szintű sentiment mezőt használ.",
-      "errors": []
-    },
-    {
-      "company": "ALDI",
       "social_mentions": 1,
       "raw_social_mentions": 1,
       "dashboard_mentions": 1,
@@ -168,13 +132,13 @@
       "hu_relevant_mentions": 1,
       "social_index": 16,
       "social_sources": {
-        "reddit": 1,
-        "youtube": 0,
+        "reddit": 0,
+        "youtube": 1,
         "mastodon": 0
       },
       "raw_social_sources": {
-        "reddit": 1,
-        "youtube": 0,
+        "reddit": 0,
+        "youtube": 1,
         "mastodon": 0
       },
       "dominant_social_topic": "árak és akciók",
@@ -184,7 +148,7 @@
           "score": 1.0
         },
         {
-          "topic": "termék és minőség",
+          "topic": "bolti élmény",
           "score": 1.0
         }
       ],
@@ -196,7 +160,7 @@
           "mixed": 0.0,
           "dominant": "neutral"
         },
-        "termék és minőség": {
+        "bolti élmény": {
           "positive": 0.0,
           "neutral": 1.0,
           "negative": 0.0,
@@ -207,14 +171,14 @@
       "social_sentiment": "neutral",
       "latest_items": [
         {
-          "id": "f34ad4746b31aeb0",
-          "source": "reddit",
-          "company": "ALDI",
-          "title": "2026 május 20. - Nyolc évre szóló szívecskés kitűző",
-          "summary": "Frissítve: 2026. május 20. 21:00 CEST 1. Varsói tárgyalás: Tusk magyar szív-kitűzőt adott Magyarnak, V4-újraindítás Budapesten júniusban Telex | 444 | HVG | Magyar Hang · külpolitikai irányváltás Magyar Péter miniszterelnök szerdán Varsóba érkezett, ahol Donald Tusk lengyel kormányfővel tárgyalt. A 444 beszámolt arról, hogy a négyszemközti tárgyalás után közös sajtótájékoztatón Tusk kijelentette: kevesen hittek Magyar Péter &quot;fantasztikus győzelmében&quot; , de ő igen, és Lengyelország a 202",
-          "url": "https://www.reddit.com/r/hungary/comments/1tivywt/2026_május_20_nyolc_évre_szóló_szívecskés_kitűző/",
-          "published": "2026-05-20T19:20:52+00:00",
-          "query": "ALDI Magyarország",
+          "id": "d6cf6dfa6a42e627",
+          "source": "youtube",
+          "company": "Tesco",
+          "title": "A LÁTHATATLAN BOROS MEGINT LECSAPOTT?! 😱 Hóvégi bevásárlás - ALDI ÉS TESCO 😁🥬🍎🥑🥐🧅🧀 - YouTube",
+          "summary": "A LÁTHATATLAN BOROS MEGINT LECSAPOTT?! 😱 Hóvégi bevásárlás - ALDI ÉS TESCO 😁🥬🍎🥑🥐🧅🧀 YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE4xODREeng0akltT2xrajVFb3Z0d0VTSVlucGxvdGwwc0FrXzJEN3Z5N0xxYWtFRUtscThlaWphejlmODZ0ZUlyWmw1d1JOSDJkSXRnY1J3?oc=5",
+          "published": "Mon, 20 Apr 2026 14:05:06 GMT",
+          "query": "site:youtube.com \"Tesco Hungary\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
           "item_sentiment": "neutral"
@@ -232,24 +196,126 @@
       "errors": []
     },
     {
-      "company": "Penny",
-      "social_mentions": 3,
-      "raw_social_mentions": 3,
-      "dashboard_mentions": 1,
-      "background_mentions": 2,
+      "company": "ALDI",
+      "social_mentions": 4,
+      "raw_social_mentions": 4,
+      "dashboard_mentions": 4,
+      "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 2.0,
+      "weighted_social_mentions": 4.0,
+      "hu_relevant_mentions": 4,
+      "social_index": 29,
+      "social_sources": {
+        "reddit": 4,
+        "youtube": 0,
+        "mastodon": 0
+      },
+      "raw_social_sources": {
+        "reddit": 4,
+        "youtube": 0,
+        "mastodon": 0
+      },
+      "dominant_social_topic": "árak és akciók",
+      "top_social_topics": [
+        {
+          "topic": "árak és akciók",
+          "score": 4.0
+        }
+      ],
+      "topic_sentiment": {
+        "árak és akciók": {
+          "positive": 0.0,
+          "neutral": 4.0,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        }
+      },
+      "social_sentiment": "neutral",
+      "latest_items": [
+        {
+          "id": "1a956e16a38afb14",
+          "source": "reddit",
+          "company": "ALDI",
+          "title": "Aldi akciós újság (06.18.)",
+          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
+          "url": "https://www.reddit.com/r/lidlaldihun/comments/1u4ruy0/aldi_akciós_újság_0618/",
+          "published": "2026-06-13T14:05:35+00:00",
+          "query": "ALDI akció",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "47a90d92d52b0817",
+          "source": "reddit",
+          "company": "ALDI",
+          "title": "Aldi akciós újság (06.11.)",
+          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
+          "url": "https://www.reddit.com/r/lidlaldihun/comments/1tylo3o/aldi_akciós_újság_0611/",
+          "published": "2026-06-06T16:23:36+00:00",
+          "query": "ALDI akció",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "92a12dd18cd363a5",
+          "source": "reddit",
+          "company": "ALDI",
+          "title": "Aldi akciós újság (06.04.)",
+          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
+          "url": "https://www.reddit.com/r/lidlaldihun/comments/1ts4ejr/aldi_akciós_újság_0604/",
+          "published": "2026-05-30T16:26:01+00:00",
+          "query": "ALDI akció",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "599894496965ef7f",
+          "source": "reddit",
+          "company": "ALDI",
+          "title": "Aldi akciós újság (05.28.)",
+          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
+          "url": "https://www.reddit.com/r/lidlaldihun/comments/1tm1uei/aldi_akciós_újság_0528/",
+          "published": "2026-05-24T04:24:45+00:00",
+          "query": "ALDI akció",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        }
+      ],
+      "background_items": [],
+      "quality_summary": {
+        "dashboard_items": 4,
+        "background_items": 0,
+        "discarded_items": 0,
+        "dashboard_relevance_threshold": 0.8,
+        "background_relevance_threshold": 0.5
+      },
+      "method_note": "Nyílt RSS és keresési alapú social signal. Nem teljes social listening, nem reprezentatív közvélemény-kutatás. A V1.4 verzió szigorúbb HU relevance szűrést, dashboard/background/discarded bontást és topic-szintű sentiment mezőt használ.",
+      "errors": []
+    },
+    {
+      "company": "Penny",
+      "social_mentions": 4,
+      "raw_social_mentions": 4,
+      "dashboard_mentions": 1,
+      "background_mentions": 3,
+      "discarded_mentions": 0,
+      "weighted_social_mentions": 2.5,
       "hu_relevant_mentions": 1,
       "social_index": 16,
       "social_sources": {
         "reddit": 0,
         "youtube": 0,
-        "mastodon": 3
+        "mastodon": 4
       },
       "raw_social_sources": {
         "reddit": 0,
         "youtube": 0,
-        "mastodon": 3
+        "mastodon": 4
       },
       "dominant_social_topic": "digitalizáció és önkiszolgálás",
       "top_social_topics": [
@@ -296,6 +362,19 @@
       ],
       "background_items": [
         {
+          "id": "533e3092cf784244",
+          "source": "mastodon",
+          "company": "Penny",
+          "title": "",
+          "summary": "🧀 Na sýru z Penny Marketu se vyskytovala plíseň, viditelná byla i přes obal ➡️ Více informací o zjištění: https://www. potravinynapranyri.cz/Detail.a spx # napranyri # potravinynapranyri # potraviny # syr # horovice # penny # pennymarket",
+          "url": "https://zpravobot.news/@NaPranyri/116771944608921354",
+          "published": "Thu, 18 Jun 2026 16:01:11 +0000",
+          "query": "#pennymarket",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        },
+        {
           "id": "77e4af10bfaab3bf",
           "source": "mastodon",
           "company": "Penny",
@@ -324,7 +403,7 @@
       ],
       "quality_summary": {
         "dashboard_items": 1,
-        "background_items": 2,
+        "background_items": 3,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5

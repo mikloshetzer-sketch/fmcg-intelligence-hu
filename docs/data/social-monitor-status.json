@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-18T15:59:27.965509+00:00",
+  "updated_at": "2026-06-18T20:44:20.399368+00:00",
   "status": "ok",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "companies": [
@@ -53,30 +53,6 @@
     },
     {
       "company": "Tesco",
-      "mentions": 0,
-      "raw_mentions": 0,
-      "dashboard_mentions": 0,
-      "background_mentions": 0,
-      "discarded_mentions": 0,
-      "weighted_mentions": 0,
-      "hu_relevant_mentions": 0,
-      "index": 0,
-      "sources": {
-        "reddit": 0,
-        "youtube": 0,
-        "mastodon": 0
-      },
-      "raw_sources": {
-        "reddit": 0,
-        "youtube": 0,
-        "mastodon": 0
-      },
-      "sentiment": "neutral",
-      "topic": "általános vállalati említés",
-      "errors": []
-    },
-    {
-      "company": "ALDI",
       "mentions": 1,
       "raw_mentions": 1,
       "dashboard_mentions": 1,
@@ -86,12 +62,36 @@
       "hu_relevant_mentions": 1,
       "index": 16,
       "sources": {
-        "reddit": 1,
+        "reddit": 0,
+        "youtube": 1,
+        "mastodon": 0
+      },
+      "raw_sources": {
+        "reddit": 0,
+        "youtube": 1,
+        "mastodon": 0
+      },
+      "sentiment": "neutral",
+      "topic": "árak és akciók",
+      "errors": []
+    },
+    {
+      "company": "ALDI",
+      "mentions": 4,
+      "raw_mentions": 4,
+      "dashboard_mentions": 4,
+      "background_mentions": 0,
+      "discarded_mentions": 0,
+      "weighted_mentions": 4.0,
+      "hu_relevant_mentions": 4,
+      "index": 29,
+      "sources": {
+        "reddit": 4,
         "youtube": 0,
         "mastodon": 0
       },
       "raw_sources": {
-        "reddit": 1,
+        "reddit": 4,
         "youtube": 0,
         "mastodon": 0
       },
@@ -101,23 +101,23 @@
     },
     {
       "company": "Penny",
-      "mentions": 3,
-      "raw_mentions": 3,
+      "mentions": 4,
+      "raw_mentions": 4,
       "dashboard_mentions": 1,
-      "background_mentions": 2,
+      "background_mentions": 3,
       "discarded_mentions": 0,
-      "weighted_mentions": 2.0,
+      "weighted_mentions": 2.5,
       "hu_relevant_mentions": 1,
       "index": 16,
       "sources": {
         "reddit": 0,
         "youtube": 0,
-        "mastodon": 3
+        "mastodon": 4
       },
       "raw_sources": {
         "reddit": 0,
         "youtube": 0,
-        "mastodon": 3
+        "mastodon": 4
       },
       "sentiment": "neutral",
       "topic": "digitalizáció és önkiszolgálás",
