@@ -2,15 +2,16 @@
 # -*- coding: utf-8 -*-
 
 """
-Employee Review Collector v8
+Employee Review Collector v9
 
 Cél:
 - Valódi dolgozói vélemények gyűjtése.
-- Profession.hu véleményoldalakból tényleges Pozitívumok / Negatívumok blokkok kinyerése.
+- Profession.hu véleményoldalakból a tiszta Pozitívumok / Negatívumok blokk kinyerése.
 - GyakoriKérdések munkahelyi tapasztalatok beolvasása.
 - Reddit publikus keresés megtartása.
 - Google News, LinkedIn és keresőmotoros scraping nincs használatban.
 - A statisztikai/összesítő blokkok kiszűrése.
+- A Profession fejlécek levágása, hogy csak a vélemény törzse maradjon.
 
 Kimenet:
 docs/data/employer-review-texts.json
@@ -137,7 +138,7 @@ POSITIVE_WORDS = [
     "jó", "korrekt", "pozitív", "segítőkész", "stabil", "rugalmas",
     "elégedett", "ajánlom", "jó csapat", "jó hely", "összetartó",
     "barátságos", "fejlődés", "lehetőség", "kellemes", "motiváló",
-    "remek", "elfogadható"
+    "remek", "elfogadható", "kedves", "támogató"
 ]
 
 NEGATIVE_WORDS = [
@@ -146,7 +147,7 @@ NEGATIVE_WORDS = [
     "borzalmas", "kegyetlen", "kisajtolják", "nincs egyensúlyban",
     "problémás", "feszes", "utolsó másodpercben", "nem megértő",
     "tervezhetetlen", "fejetlenség", "kihasználnak", "gusztustalan",
-    "alacsony bér", "rossz fizetés"
+    "alacsony bér", "rossz fizetés", "túl nagy hajtás"
 ]
 
 
@@ -192,7 +193,6 @@ FAKE_REVIEW_TERMS = [
     "munkavégzés helye",
     "munkakör összes",
     "munkakörnyezet összes",
-    "értékelés kategóriák szerint bérezés és juttatások",
 ]
 
 
@@ -246,11 +246,35 @@ def remove_personal_data(text: str) -> str:
     return clean_text(text)
 
 
+def trim_profession_header(text: str) -> str:
+    text = clean_text(text)
+
+    markers = [
+        "Pozitívumok",
+        "pozitívumok",
+    ]
+
+    for marker in markers:
+        pos = text.find(marker)
+        if pos > 0:
+            text = text[pos:]
+            break
+
+    return clean_text(text)
+
+
 def normalize_quote(text: str) -> str:
     text = remove_personal_data(text)
 
+    if "Pozitívumok" in text or "pozitívumok" in text:
+        text = trim_profession_header(text)
+
     text = text.replace("Tovább olvasom", "")
+
     text = re.sub(r"Hasznos\s*\(\s*\d+\s*\)", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\d{4}\.\s*\d{2}\.\s*\d{2}\.?", "", text)
+    text = re.sub(r"\d{4}\.\s*[a-záéíóöőúüű]+\.\s*\d+\.?", "", text, flags=re.IGNORECASE)
+
     text = clean_text(text)
 
     if len(text) > MAX_QUOTE_LENGTH:
@@ -274,6 +298,10 @@ def is_direct_trusted_source(source: str) -> bool:
 
 def has_fake_review_terms(text: str) -> bool:
     lower = text.lower()
+
+    if "pozitívumok" in lower and "negatívumok" in lower:
+        return False
+
     return any(term in lower for term in FAKE_REVIEW_TERMS)
 
 
@@ -407,26 +435,28 @@ def split_profession_reviews_from_text(text: str) -> List[str]:
 
     pattern = (
         r"(?:\d,\d\s+)?"
-        r"(?:Értékelés kategóriák szerint.{0,500}?)?"
-        r"(?:(?:Jelenlegi|Korábbi) munkavállaló.{0,350}?)?"
-        r"Pozitívumok\s+.{20,900}?"
-        r"Negatívumok\s+.{10,900}?"
-        r"(?:Munkakultúra\s+.{0,400}?)?"
-        r"(?:Előnyök\s+.{0,400}?)?"
+        r"(?:Értékelés kategóriák szerint.{0,600}?)?"
+        r"(?:(?:Jelenlegi|Korábbi) munkavállaló.{0,450}?)?"
+        r"Pozitívumok\s+.{20,1200}?"
+        r"Negatívumok\s+.{10,1200}?"
+        r"(?:Munkakultúra\s+.{0,500}?)?"
+        r"(?:Előnyök\s+.{0,500}?)?"
         r"(?:\d{4}\.\s*\d{2}\.\s*\d{2}\.)?"
     )
 
     for match in re.finditer(pattern, text, flags=re.IGNORECASE):
         block = clean_text(match.group(0))
+        block = trim_profession_header(block)
 
         if len(block) >= 70:
             blocks.append(block)
 
     if not blocks:
-        smaller_pattern = r"Pozitívumok\s+.{20,600}?Negatívumok\s+.{10,600}?(?=Pozitívumok|Negatívumok|$)"
+        smaller_pattern = r"Pozitívumok\s+.{20,700}?Negatívumok\s+.{10,700}?(?=Pozitívumok|Negatívumok|$)"
 
         for match in re.finditer(smaller_pattern, text, flags=re.IGNORECASE):
             block = clean_text(match.group(0))
+            block = trim_profession_header(block)
 
             if len(block) >= 70:
                 blocks.append(block)
@@ -453,6 +483,7 @@ def extract_profession_review_blocks(html_text: str) -> List[str]:
             and "negatívumok" in lower
             and len(node_text) >= 70
         ):
+            node_text = trim_profession_header(node_text)
             blocks.append(node_text)
 
     return deduplicate_texts(blocks)
@@ -796,11 +827,12 @@ def build_output(valid_items: List[Dict[str, Any]], excluded_items: List[Dict[st
         "updated_at": now_iso(),
         "status": status,
         "source_type": "public_osint_employee_reviews",
-        "method": "direct_profession_gyakorikerdesek_reddit_v8",
+        "method": "direct_profession_gyakorikerdesek_reddit_v9",
         "important_note": (
             "A rendszer közvetlen, előre ismert publikus véleményoldalakat használ. "
             "Google News, LinkedIn és keresőmotoros scraping nincs használatban. "
-            "A Profession-oldalakon a cég az URL alapján ismert, ezért a blokkokban nem kötelező a cégnév."
+            "A Profession-oldalakon a cég az URL alapján ismert, ezért a blokkokban nem kötelező a cégnév. "
+            "A Profession-fejlécek levágásra kerülnek, hogy a dashboard főként a Pozitívumok/Negatívumok törzsszöveget használja."
         ),
         "privacy_note": (
             "A script automatikusan eltávolítja az e-mail címeket és telefonszámokat. "
@@ -857,7 +889,7 @@ def save_json(path: Path, data: Any) -> None:
 
 
 def main() -> None:
-    print("Employee Review Collector v8 started.")
+    print("Employee Review Collector v9 started.")
 
     DATA_DIR.mkdir(parents=True, exist_ok=True)
 
