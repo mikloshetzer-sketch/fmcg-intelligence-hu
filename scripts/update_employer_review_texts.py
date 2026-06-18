@@ -2,14 +2,15 @@
 # -*- coding: utf-8 -*-
 
 """
-Employee Review Collector v7
+Employee Review Collector v8
 
 Cél:
-- Valódi dolgozói vélemények gyűjtése közvetlen, előre ismert publikus forrásoldalakról.
-- Google News nincs.
-- LinkedIn nincs.
-- Keresőmotor nincs.
-- Reddit keresés megmarad, de a fő adatforrás a direkt URL-lista.
+- Valódi dolgozói vélemények gyűjtése.
+- Profession.hu véleményoldalakból tényleges Pozitívumok / Negatívumok blokkok kinyerése.
+- GyakoriKérdések munkahelyi tapasztalatok beolvasása.
+- Reddit publikus keresés megtartása.
+- Google News, LinkedIn és keresőmotoros scraping nincs használatban.
+- A statisztikai/összesítő blokkok kiszűrése.
 
 Kimenet:
 docs/data/employer-review-texts.json
@@ -43,7 +44,7 @@ REQUEST_TIMEOUT = 30
 SLEEP_MIN = 2.0
 SLEEP_MAX = 5.0
 
-MAX_ITEMS_PER_COMPANY = 40
+MAX_ITEMS_PER_COMPANY = 45
 MAX_EXCLUDED_PER_COMPANY = 80
 MAX_QUOTE_LENGTH = 700
 
@@ -54,40 +55,34 @@ COMPANIES = {
     "Aldi": ["Aldi", "ALDI", "ALDI Magyarország"],
     "Penny": ["Penny", "PENNY", "Penny Market", "Penny-Market"],
     "Spar": ["Spar", "SPAR", "SPAR Magyarország"],
-    "Tesco": ["Tesco", "TESCO", "Tesco Magyarország"],
+    "Tesco": ["Tesco", "TESCO", "Tesco Magyarország", "TESCO-GLOBAL"],
 }
 
 
 DIRECT_REVIEW_URLS = {
     "Auchan": [
         "https://www.profession.hu/cegek/auchan-magyarorszag-kft/velemenyek",
-        "https://www.profession.hu/cegek/auchan-magyarorszag-kft/ertekelesek",
     ],
     "Lidl": [
         "https://www.profession.hu/cegek/lidl-magyarorszag-bt/velemenyek",
-        "https://www.profession.hu/cegek/lidl-magyarorszag-bt/ertekelesek",
         "https://www.gyakorikerdesek.hu/uzlet-es-penzugyek__karrier-fizetes__11120824-lidl-ben-mennyit-keres-pontosan-egy-bolti-alkalmazott",
         "https://www.gyakorikerdesek.hu/uzlet-es-penzugyek__karrier-fizetes__12023812-ezek-utan-ha-nem-akarok-ott-dolgozni-ertheto-lidl",
         "https://www.gyakorikerdesek.hu/uzlet-es-penzugyek__karrier-fizetes__12662254-mennyi-a-fizetes-a-lidl-ben-4-oras-munkaidoben",
     ],
     "Aldi": [
         "https://www.profession.hu/cegek/aldi-magyarorszag-elelmiszer-bt/velemenyek",
-        "https://www.profession.hu/cegek/aldi-magyarorszag-elelmiszer-bt/ertekelesek",
     ],
     "Penny": [
         "https://www.profession.hu/cegek/penny-market-kft/velemenyek",
-        "https://www.profession.hu/cegek/penny-market-kft/ertekelesek",
         "https://www.gyakorikerdesek.hu/emberek__munkahely-kollegak__13163147-a-tesco-lidl-spar-penny-negyes-kozul-melyikben-a-legjobb-dolgozni",
     ],
     "Spar": [
         "https://www.profession.hu/cegek/spar-magyarorszag-kft/velemenyek",
-        "https://www.profession.hu/cegek/spar-magyarorszag-kft/ertekelesek",
         "https://www.gyakorikerdesek.hu/emberek__munkahely-kollegak__13163147-a-tesco-lidl-spar-penny-negyes-kozul-melyikben-a-legjobb-dolgozni",
     ],
     "Tesco": [
         "https://www.profession.hu/cegek/tesco-zrt/velemenyek",
-        "https://www.profession.hu/cegek/tesco-bst-zrt/velemenyek",
-        "https://www.profession.hu/cegek/tesco-global-zrt/ertekelesek",
+        "https://www.profession.hu/cegek/tesco-global-zrt/velemenyek",
         "https://www.gyakorikerdesek.hu/uzlet-es-penzugyek__karrier-fizetes__7340152-tenyleg-ennyire-kegyetlen-a-tesco-ban-dolgozni",
         "https://www.gyakorikerdesek.hu/emberek__munkahely-kollegak__10813380-nagyon-gaz-a-tescoban-dolgozni",
         "https://www.gyakorikerdesek.hu/emberek__munkahely-kollegak__13163147-a-tesco-lidl-spar-penny-negyes-kozul-melyikben-a-legjobb-dolgozni",
@@ -98,37 +93,42 @@ DIRECT_REVIEW_URLS = {
 TOPIC_KEYWORDS = {
     "bérezés": [
         "fizetés", "bér", "bérezés", "órabér", "kereset", "jövedelem",
-        "nettó", "bruttó", "pénz", "javadalmazás", "alulfizetett"
+        "nettó", "bruttó", "pénz", "javadalmazás", "alulfizetett",
+        "alacsony bér", "elfogadható fizetés", "remek bérezés"
     ],
     "juttatások": [
         "cafeteria", "juttatás", "bónusz", "prémium", "kedvezmény",
-        "utalvány", "jutalom"
+        "utalvány", "jutalom", "gyümölcs", "kávé", "egészség program"
     ],
     "munkaterhelés": [
         "sok munka", "leterhelt", "túlterhelt", "hajtás", "fárasztó",
-        "kevés ember", "létszámhiány", "tempó", "pörgés", "pakolás",
-        "kiszajtolják", "kisajtolják", "fizikailag megterhelő"
+        "kevés ember", "kevés létszám", "létszámhiány", "tempó", "pörgés",
+        "pakolás", "munkatempó", "fizikailag megterhelő", "nagy elvárások",
+        "túl sok az elvárás"
     ],
     "beosztás": [
-        "beosztás", "műszak", "hétvége", "túlóra", "munkaidő",
-        "éjszaka", "vasárnap", "szabadnap", "váltás", "munkarend"
+        "beosztás", "munkaidőbeosztás", "műszak", "hétvége", "túlóra",
+        "munkaidő", "éjszaka", "vasárnap", "szabadnap", "váltás",
+        "munkarend", "tervezhetetlen"
     ],
     "vezetés": [
-        "vezető", "főnök", "menedzser", "felettes", "boltvezető",
-        "osztályvezető", "vezetőség", "kommunikáció", "motíváltak",
-        "motiváltak"
+        "vezető", "főnök", "főnökök", "menedzser", "felettes", "boltvezető",
+        "üzletvezető", "osztályvezető", "vezetőség", "kommunikáció",
+        "nem megértő", "stresszes vezetők"
     ],
     "csapat": [
-        "csapat", "kolléga", "munkatárs", "közösség", "brigád",
-        "jó hangulat", "segítőkész"
+        "csapat", "kolléga", "kollegák", "munkatárs", "közösség",
+        "brigád", "jó hangulat", "segítőkész", "összetartó csapat",
+        "jó dolgozói csapat"
     ],
     "előrelépés": [
         "karrier", "előrelépés", "fejlődés", "betanítás", "képzés",
-        "előmenetel", "fejlődési"
+        "előmenetel", "fejlődési", "előrelépési lehetőség"
     ],
     "munkahelyi légkör": [
-        "stressz", "légkör", "hangulat", "megbecsülés", "nyomás",
-        "konfliktus", "kiégés", "magánélet", "munka-magánélet"
+        "stressz", "stresszes", "légkör", "hangulat", "megbecsülés",
+        "nyomás", "konfliktus", "kiégés", "magánélet", "munka-magánélet",
+        "tisztelet", "fejetlenség"
     ],
 }
 
@@ -136,14 +136,17 @@ TOPIC_KEYWORDS = {
 POSITIVE_WORDS = [
     "jó", "korrekt", "pozitív", "segítőkész", "stabil", "rugalmas",
     "elégedett", "ajánlom", "jó csapat", "jó hely", "összetartó",
-    "barátságos", "fejlődés", "lehetőség"
+    "barátságos", "fejlődés", "lehetőség", "kellemes", "motiváló",
+    "remek", "elfogadható"
 ]
 
 NEGATIVE_WORDS = [
-    "rossz", "kevés", "alacsony", "nehéz", "stressz", "túlóra",
-    "létszámhiány", "fárasztó", "nem ajánlom", "felmondtam",
+    "rossz", "kevés", "alacsony", "nehéz", "stressz", "stresszes",
+    "túlóra", "létszámhiány", "fárasztó", "nem ajánlom", "felmondtam",
     "borzalmas", "kegyetlen", "kisajtolják", "nincs egyensúlyban",
-    "problémás", "feszes", "utolsó másodpercben"
+    "problémás", "feszes", "utolsó másodpercben", "nem megértő",
+    "tervezhetetlen", "fejetlenség", "kihasználnak", "gusztustalan",
+    "alacsony bér", "rossz fizetés"
 ]
 
 
@@ -158,9 +161,12 @@ REVIEW_SIGNALS = [
     "munkavállaló",
     "munkatárs",
     "kolléga",
+    "kollegák",
     "főnök",
+    "főnökök",
     "vezető",
     "beosztás",
+    "munkaidőbeosztás",
     "műszak",
     "munkaidő",
     "munkarend",
@@ -172,11 +178,21 @@ REVIEW_SIGNALS = [
     "tapasztalat",
     "vélemény",
     "értékelés",
-    "munka és magánélet",
-    "kollégák és céges hangulat",
-    "főnökök",
-    "munkaidő és munkarend",
-    "bérezés és juttatások",
+    "munkakultúra",
+    "előnyök",
+    "ajánlaná ismerőseinek",
+]
+
+
+FAKE_REVIEW_TERMS = [
+    "értékelők adatai",
+    "munkahely jellemzői",
+    "összes értékelés alapján",
+    "értékelések szűrése",
+    "munkavégzés helye",
+    "munkakör összes",
+    "munkakörnyezet összes",
+    "értékelés kategóriák szerint bérezés és juttatások",
 ]
 
 
@@ -184,7 +200,6 @@ HARD_EXCLUDE_TERMS = [
     "lejárt a munkameneted",
     "belépés",
     "ezt a véleményt már jelentették",
-    "rendben",
     "értékelje és mondja el véleményét",
     "értékeld és mondd el véleményedet",
     "segítsen és értékelje",
@@ -194,7 +209,6 @@ HARD_EXCLUDE_TERMS = [
     "adatvédelmi",
     "állások",
     "álláshirdetés",
-    "karrier lehetőség",
     "friss állás",
 ]
 
@@ -235,6 +249,10 @@ def remove_personal_data(text: str) -> str:
 def normalize_quote(text: str) -> str:
     text = remove_personal_data(text)
 
+    text = text.replace("Tovább olvasom", "")
+    text = re.sub(r"Hasznos\s*\(\s*\d+\s*\)", "", text, flags=re.IGNORECASE)
+    text = clean_text(text)
+
     if len(text) > MAX_QUOTE_LENGTH:
         text = text[:MAX_QUOTE_LENGTH].rsplit(" ", 1)[0] + "..."
 
@@ -247,6 +265,23 @@ def contains_company(text: str, company: str) -> bool:
     return any(alias.lower() in lower for alias in aliases)
 
 
+def is_direct_trusted_source(source: str) -> bool:
+    return source in {
+        "profession_direct_review_page",
+        "gyakorikerdesek_direct_page",
+    }
+
+
+def has_fake_review_terms(text: str) -> bool:
+    lower = text.lower()
+    return any(term in lower for term in FAKE_REVIEW_TERMS)
+
+
+def has_hard_exclusion(text: str) -> bool:
+    lower = text.lower()
+    return any(term in lower for term in HARD_EXCLUDE_TERMS)
+
+
 def review_score(text: str) -> int:
     lower = text.lower()
     score = 0
@@ -256,23 +291,24 @@ def review_score(text: str) -> int:
             score += 2
 
     if "pozitívumok" in lower:
-        score += 3
+        score += 5
 
     if "negatívumok" in lower:
-        score += 3
-
-    if "jelenlegi munkavállaló" in lower or "korábbi munkavállaló" in lower:
         score += 5
+
+    if "jelenlegi munkavállaló" in lower:
+        score += 5
+
+    if "korábbi munkavállaló" in lower:
+        score += 5
+
+    if "munkakultúra" in lower:
+        score += 3
 
     return score
 
 
-def has_hard_exclusion(text: str) -> bool:
-    lower = text.lower()
-    return any(term in lower for term in HARD_EXCLUDE_TERMS)
-
-
-def exclusion_reason(text: str, company: str) -> Optional[str]:
+def exclusion_reason(text: str, company: str, source: str) -> Optional[str]:
     text = clean_text(text)
 
     if len(text) < 55:
@@ -281,11 +317,15 @@ def exclusion_reason(text: str, company: str) -> Optional[str]:
     if len(text.split()) < 7:
         return "too_few_words"
 
-    if not contains_company(text, company):
-        return "company_not_found"
+    if has_fake_review_terms(text):
+        return "aggregated_statistics"
 
     if has_hard_exclusion(text):
         return "hard_excluded_ui_or_job_content"
+
+    if not is_direct_trusted_source(source):
+        if not contains_company(text, company):
+            return "company_not_found"
 
     if review_score(text) < 4:
         return "weak_review_signal"
@@ -343,42 +383,75 @@ def request_url(url: str) -> Optional[str]:
         return None
 
 
+def deduplicate_texts(texts: List[str]) -> List[str]:
+    seen = set()
+    result = []
+
+    for text in texts:
+        text = clean_text(text)
+        key = make_hash(text)
+
+        if key in seen:
+            continue
+
+        seen.add(key)
+        result.append(text)
+
+    return result
+
+
+def split_profession_reviews_from_text(text: str) -> List[str]:
+    text = clean_text(text)
+
+    blocks = []
+
+    pattern = (
+        r"(?:\d,\d\s+)?"
+        r"(?:Értékelés kategóriák szerint.{0,500}?)?"
+        r"(?:(?:Jelenlegi|Korábbi) munkavállaló.{0,350}?)?"
+        r"Pozitívumok\s+.{20,900}?"
+        r"Negatívumok\s+.{10,900}?"
+        r"(?:Munkakultúra\s+.{0,400}?)?"
+        r"(?:Előnyök\s+.{0,400}?)?"
+        r"(?:\d{4}\.\s*\d{2}\.\s*\d{2}\.)?"
+    )
+
+    for match in re.finditer(pattern, text, flags=re.IGNORECASE):
+        block = clean_text(match.group(0))
+
+        if len(block) >= 70:
+            blocks.append(block)
+
+    if not blocks:
+        smaller_pattern = r"Pozitívumok\s+.{20,600}?Negatívumok\s+.{10,600}?(?=Pozitívumok|Negatívumok|$)"
+
+        for match in re.finditer(smaller_pattern, text, flags=re.IGNORECASE):
+            block = clean_text(match.group(0))
+
+            if len(block) >= 70:
+                blocks.append(block)
+
+    return deduplicate_texts(blocks)
+
+
 def extract_profession_review_blocks(html_text: str) -> List[str]:
     soup = BeautifulSoup(html_text, "html.parser")
 
     for tag in soup(["script", "style", "noscript", "svg", "header", "footer", "nav"]):
         tag.decompose()
 
-    text = clean_text(soup.get_text(" ", strip=True))
+    full_text = clean_text(soup.get_text(" ", strip=True))
 
-    blocks = []
+    blocks = split_profession_reviews_from_text(full_text)
 
-    patterns = [
-        r"(?:##\s*)?(.{20,350}?)(Jelenlegi munkavállaló|Korábbi munkavállaló).{0,350}?(?=(?:##\s*)?.{10,220}?(?:Jelenlegi munkavállaló|Korábbi munkavállaló)|$)",
-        r"(Pozitívumok.{10,350}?Negatívumok.{10,500}?)(?=Pozitívumok|Negatívumok|Értékelés kategóriák|$)",
-    ]
-
-    for pattern in patterns:
-        for match in re.finditer(pattern, text, flags=re.IGNORECASE):
-            block = clean_text(match.group(0))
-            if len(block) >= 60:
-                blocks.append(block)
-
-    headings = soup.find_all(["h1", "h2", "h3", "p", "li", "div"])
-
-    for node in headings:
+    for node in soup.find_all(["article", "section", "div", "li"]):
         node_text = clean_text(node.get_text(" ", strip=True))
-
-        if len(node_text) < 60:
-            continue
-
         lower = node_text.lower()
 
         if (
-            "jelenlegi munkavállaló" in lower
-            or "korábbi munkavállaló" in lower
-            or "pozitívumok" in lower
-            or "negatívumok" in lower
+            "pozitívumok" in lower
+            and "negatívumok" in lower
+            and len(node_text) >= 70
         ):
             blocks.append(node_text)
 
@@ -460,25 +533,9 @@ def extract_blocks_from_page(url: str, html_text: str) -> List[str]:
     return extract_generic_blocks(html_text)
 
 
-def deduplicate_texts(texts: List[str]) -> List[str]:
-    seen = set()
-    result = []
-
-    for text in texts:
-        key = make_hash(text)
-
-        if key in seen:
-            continue
-
-        seen.add(key)
-        result.append(text)
-
-    return result
-
-
 def build_item(company: str, source: str, url: str, raw_text: str) -> Optional[Dict[str, Any]]:
     quote = normalize_quote(raw_text)
-    reason = exclusion_reason(quote, company)
+    reason = exclusion_reason(quote, company, source)
 
     if reason:
         return None
@@ -525,7 +582,7 @@ def process_block(
     valid: List[Dict[str, Any]],
     excluded: List[Dict[str, Any]],
 ) -> None:
-    reason = exclusion_reason(block, company)
+    reason = exclusion_reason(block, company, source)
 
     if reason:
         excluded.append(
@@ -659,7 +716,8 @@ def deduplicate_items(items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     result = []
 
     for item in items:
-        key = item.get("id") or make_hash(item.get("quote", ""))
+        quote = item.get("quote", "")
+        key = make_hash(quote)
 
         if key in seen:
             continue
@@ -738,10 +796,11 @@ def build_output(valid_items: List[Dict[str, Any]], excluded_items: List[Dict[st
         "updated_at": now_iso(),
         "status": status,
         "source_type": "public_osint_employee_reviews",
-        "method": "direct_profession_gyakorikerdesek_reddit_v7",
+        "method": "direct_profession_gyakorikerdesek_reddit_v8",
         "important_note": (
             "A rendszer közvetlen, előre ismert publikus véleményoldalakat használ. "
-            "Google News, LinkedIn és keresőmotoros scraping nincs használatban."
+            "Google News, LinkedIn és keresőmotoros scraping nincs használatban. "
+            "A Profession-oldalakon a cég az URL alapján ismert, ezért a blokkokban nem kötelező a cégnév."
         ),
         "privacy_note": (
             "A script automatikusan eltávolítja az e-mail címeket és telefonszámokat. "
@@ -798,7 +857,7 @@ def save_json(path: Path, data: Any) -> None:
 
 
 def main() -> None:
-    print("Employee Review Collector v7 started.")
+    print("Employee Review Collector v8 started.")
 
     DATA_DIR.mkdir(parents=True, exist_ok=True)
 
