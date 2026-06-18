@@ -1,27 +1,27 @@
 {
-  "updated_at": "2026-06-18T10:53:22.331946+00:00",
+  "updated_at": "2026-06-18T15:59:27.965509+00:00",
   "status": "ok",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "companies": [
     {
       "company": "Lidl",
-      "mentions": 2,
-      "raw_mentions": 3,
-      "dashboard_mentions": 2,
+      "mentions": 1,
+      "raw_mentions": 2,
+      "dashboard_mentions": 1,
       "background_mentions": 0,
       "discarded_mentions": 1,
-      "weighted_mentions": 2.0,
-      "hu_relevant_mentions": 2,
-      "index": 20,
+      "weighted_mentions": 1.0,
+      "hu_relevant_mentions": 1,
+      "index": 16,
       "sources": {
         "reddit": 0,
         "youtube": 1,
-        "mastodon": 1
+        "mastodon": 0
       },
       "raw_sources": {
         "reddit": 0,
         "youtube": 1,
-        "mastodon": 2
+        "mastodon": 1
       },
       "sentiment": "neutral",
       "topic": "bolti élmény",
@@ -101,23 +101,23 @@
     },
     {
       "company": "Penny",
-      "mentions": 2,
-      "raw_mentions": 2,
+      "mentions": 3,
+      "raw_mentions": 3,
       "dashboard_mentions": 1,
-      "background_mentions": 1,
+      "background_mentions": 2,
       "discarded_mentions": 0,
-      "weighted_mentions": 1.5,
+      "weighted_mentions": 2.0,
       "hu_relevant_mentions": 1,
       "index": 16,
       "sources": {
         "reddit": 0,
         "youtube": 0,
-        "mastodon": 2
+        "mastodon": 3
       },
       "raw_sources": {
         "reddit": 0,
         "youtube": 0,
-        "mastodon": 2
+        "mastodon": 3
       },
       "sentiment": "neutral",
       "topic": "digitalizáció és önkiszolgálás",

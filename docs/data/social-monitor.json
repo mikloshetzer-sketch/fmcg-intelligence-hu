@@ -1,67 +1,56 @@
 {
-  "updated_at": "2026-06-18T10:53:22.331946+00:00",
+  "updated_at": "2026-06-18T15:59:27.965509+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-06-18T10:53:22.331946+00:00",
+    "updated_at": "2026-06-18T15:59:27.965509+00:00",
     "leader_social": "Lidl",
-    "leader_social_index": 20,
+    "leader_social_index": 16,
     "dominant_social_topic": "árak és akciók",
     "overall_social_sentiment": "neutral"
   },
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 2,
-      "raw_social_mentions": 3,
-      "dashboard_mentions": 2,
+      "social_mentions": 1,
+      "raw_social_mentions": 2,
+      "dashboard_mentions": 1,
       "background_mentions": 0,
       "discarded_mentions": 1,
-      "weighted_social_mentions": 2.0,
-      "hu_relevant_mentions": 2,
-      "social_index": 20,
+      "weighted_social_mentions": 1.0,
+      "hu_relevant_mentions": 1,
+      "social_index": 16,
       "social_sources": {
         "reddit": 0,
         "youtube": 1,
-        "mastodon": 1
+        "mastodon": 0
       },
       "raw_social_sources": {
         "reddit": 0,
         "youtube": 1,
-        "mastodon": 2
+        "mastodon": 1
       },
       "dominant_social_topic": "bolti élmény",
       "top_social_topics": [
         {
           "topic": "bolti élmény",
-          "score": 3.0
+          "score": 2.0
         },
         {
           "topic": "árak és akciók",
-          "score": 2.0
-        },
-        {
-          "topic": "ellátási lánc és logisztika",
-          "score": 2.0
+          "score": 1.0
         }
       ],
       "topic_sentiment": {
         "árak és akciók": {
           "positive": 0.0,
-          "neutral": 2.0,
+          "neutral": 1.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
         },
         "bolti élmény": {
-          "positive": 0.0,
-          "neutral": 2.0,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
-        },
-        "ellátási lánc és logisztika": {
           "positive": 0.0,
           "neutral": 1.0,
           "negative": 0.0,
@@ -71,19 +60,6 @@
       },
       "social_sentiment": "neutral",
       "latest_items": [
-        {
-          "id": "ea2eb6a1f6852fa5",
-          "source": "mastodon",
-          "company": "Lidl",
-          "title": "",
-          "summary": "A hollandok jövőre átlépik azt a határt, amit a világon még senki — 440 bolt, nulla dízel https:// fed.brid.gy/r/https://e-cars.h u/2026/06/08/lidl-elektromos-teherauto-2027-hollandia/",
-          "url": "https://fed.brid.gy/r/https://e-cars.hu/2026/06/08/lidl-elektromos-teherauto-2027-hollandia/",
-          "published": "Mon, 08 Jun 2026 05:28:00 +0000",
-          "query": "#lidl",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
         {
           "id": "0dd8bedbcff5dfc6",
           "source": "youtube",
@@ -100,7 +76,7 @@
       ],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 2,
+        "dashboard_items": 1,
         "background_items": 0,
         "discarded_items": 1,
         "dashboard_relevance_threshold": 0.8,
@@ -257,29 +233,29 @@
     },
     {
       "company": "Penny",
-      "social_mentions": 2,
-      "raw_social_mentions": 2,
+      "social_mentions": 3,
+      "raw_social_mentions": 3,
       "dashboard_mentions": 1,
-      "background_mentions": 1,
+      "background_mentions": 2,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 1.5,
+      "weighted_social_mentions": 2.0,
       "hu_relevant_mentions": 1,
       "social_index": 16,
       "social_sources": {
         "reddit": 0,
         "youtube": 0,
-        "mastodon": 2
+        "mastodon": 3
       },
       "raw_social_sources": {
         "reddit": 0,
         "youtube": 0,
-        "mastodon": 2
+        "mastodon": 3
       },
       "dominant_social_topic": "digitalizáció és önkiszolgálás",
       "top_social_topics": [
         {
           "topic": "digitalizáció és önkiszolgálás",
-          "score": 1.5
+          "score": 2.0
         },
         {
           "topic": "árak és akciók",
@@ -296,7 +272,7 @@
         },
         "digitalizáció és önkiszolgálás": {
           "positive": 0.0,
-          "neutral": 1.5,
+          "neutral": 2.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -320,6 +296,19 @@
       ],
       "background_items": [
         {
+          "id": "77e4af10bfaab3bf",
+          "source": "mastodon",
+          "company": "Penny",
+          "title": "",
+          "summary": "# CJUE : La réglementation hongroise imposant des promotions obligatoires aux grands distributeurs de denrées alimentaires est contraire au # droitUE # PennyMarket # Rewe 👉 https:// curia.europa.eu/site/upload/do cs/application/pdf/2026-06/cp260089fr.pdf --- https:// nitter.net/CourUEPresse/status /2067525987433095446#m",
+          "url": "https://respublicae.eu/@CourUEPresse/116771781775198805",
+          "published": "Thu, 18 Jun 2026 15:19:46 +0000",
+          "query": "#pennymarket",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        },
+        {
           "id": "eebd566057f05403",
           "source": "mastodon",
           "company": "Penny",
@@ -335,7 +324,7 @@
       ],
       "quality_summary": {
         "dashboard_items": 1,
-        "background_items": 1,
+        "background_items": 2,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
