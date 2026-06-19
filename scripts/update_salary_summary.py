@@ -2,18 +2,19 @@
 # -*- coding: utf-8 -*-
 
 """
-FMCG Salary Summary Builder v1
+FMCG Salary Summary Builder v2
 
 Input:
 - docs/data/salary-raw-data.json
 
-Output:
+Outputs:
 - docs/data/salary-summary.json
+- docs/data/salary-role-summary.json
 
 Cél:
-- A nyers OSINT béradatokból dashboard-kompatibilis összefoglaló készítése.
-- Nem gyűjt új adatot.
-- Nem módosítja a salaries.json fájlt.
+- A nyers béradatokból dashboard-kompatibilis összefoglaló készítése.
+- Külön munkakör szerinti táblázat:
+  egy szereplőnél egy munkakörben mennyi a talált bér.
 """
 
 import json
@@ -26,6 +27,7 @@ DATA_DIR = BASE_DIR / "docs" / "data"
 
 RAW_FILE = DATA_DIR / "salary-raw-data.json"
 SUMMARY_FILE = DATA_DIR / "salary-summary.json"
+ROLE_SUMMARY_FILE = DATA_DIR / "salary-role-summary.json"
 
 
 COMPANIES = [
@@ -36,6 +38,20 @@ COMPANIES = [
     {"company_id": "penny", "company": "PENNY"},
     {"company_id": "auchan", "company": "Auchan"},
 ]
+
+
+ROLE_LABELS = {
+    "general_worker": "Általános / alapbér",
+    "cashier": "Pénztáros",
+    "stocker": "Áruházi / bolti dolgozó",
+    "bakery_worker": "Pék / pékáru dolgozó",
+    "shift_leader": "Műszakvezető",
+    "department_manager": "Osztályvezető / részlegvezető",
+    "store_manager": "Üzletvezető / áruházvezető",
+    "warehouse_worker": "Raktári dolgozó",
+    "office_specialist": "Központi / irodai munkakör",
+    "unknown": "Nem azonosított munkakör",
+}
 
 
 def now_iso():
@@ -71,6 +87,25 @@ def is_raise_record(record):
     return record.get("value_type") == "salary_raise_pct"
 
 
+def normalize_role(record):
+    role = record.get("role_key")
+    text = (record.get("evidence_text") or "").lower()
+
+    if role:
+        return role
+
+    if "alapbér" in text:
+        return "general_worker"
+
+    if "fizikai munkát végző" in text:
+        return "general_worker"
+
+    if "dolgozó" in text or "munkatárs" in text:
+        return "general_worker"
+
+    return "unknown"
+
+
 def get_salary_value(record):
     return record.get("salary_median_huf_month")
 
@@ -83,6 +118,38 @@ def get_salary_max(record):
     return record.get("salary_max_huf_month")
 
 
+def average_confidence(records):
+    values = [
+        record.get("confidence")
+        for record in records
+        if isinstance(record.get("confidence"), (int, float))
+    ]
+
+    if not values:
+        return 0
+
+    return round(sum(values) / len(values))
+
+
+def collect_sources(records):
+    sources = []
+
+    for record in records:
+        item = {
+            "source_name": record.get("source_name"),
+            "source_url": record.get("source_url"),
+            "value_type": record.get("value_type"),
+            "evidence_text": record.get("evidence_text"),
+            "published_or_found_date": record.get("published_or_found_date"),
+            "confidence": record.get("confidence"),
+        }
+
+        if item not in sources:
+            sources.append(item)
+
+    return sources[:10]
+
+
 def choose_base_salary_record(salary_records):
     if not salary_records:
         return None
@@ -90,36 +157,21 @@ def choose_base_salary_record(salary_records):
     base_candidates = []
 
     for record in salary_records:
+        normalized_role = normalize_role(record)
         text = (record.get("evidence_text") or "").lower()
-        role = record.get("role_key")
 
-        if role == "stocker":
+        if normalized_role in ["general_worker", "stocker"]:
             base_candidates.append(record)
             continue
 
-        if "alapbér" in text:
+        if "alapbér" in text or "fizikai munkát végző" in text:
             base_candidates.append(record)
             continue
 
-        if "fizikai munkát végző" in text:
-            base_candidates.append(record)
-            continue
-
-        if "dolgozó" in text or "munkatárs" in text:
-            base_candidates.append(record)
-            continue
-
-    if base_candidates:
-        return sorted(
-            base_candidates,
-            key=lambda item: (
-                get_salary_value(item) or 999999999,
-                -(item.get("confidence") or 0),
-            ),
-        )[0]
+    candidates = base_candidates if base_candidates else salary_records
 
     return sorted(
-        salary_records,
+        candidates,
         key=lambda item: (
             get_salary_value(item) or 999999999,
             -(item.get("confidence") or 0),
@@ -154,44 +206,6 @@ def choose_raise_pct(raise_records):
     return max(values)
 
 
-def average_confidence(records):
-    values = [
-        record.get("confidence")
-        for record in records
-        if isinstance(record.get("confidence"), (int, float))
-    ]
-
-    if not values:
-        return 0
-
-    return round(sum(values) / len(values))
-
-
-def collect_sources(records):
-    sources = []
-
-    for record in records:
-        source_name = record.get("source_name")
-        source_url = record.get("source_url")
-
-        if not source_name and not source_url:
-            continue
-
-        item = {
-            "source_name": source_name,
-            "source_url": source_url,
-            "value_type": record.get("value_type"),
-            "evidence_text": record.get("evidence_text"),
-            "published_or_found_date": record.get("published_or_found_date"),
-            "confidence": record.get("confidence"),
-        }
-
-        if item not in sources:
-            sources.append(item)
-
-    return sources[:10]
-
-
 def build_company_summary(company_id, company_name, records):
     company_records = [
         record for record in records
@@ -210,7 +224,6 @@ def build_company_summary(company_id, company_name, records):
 
     base_record = choose_base_salary_record(salary_records)
     high_record = choose_highest_salary_record(salary_records)
-
     salary_raise_pct = choose_raise_pct(raise_records)
 
     if not company_records:
@@ -260,6 +273,108 @@ def build_company_summary(company_id, company_name, records):
     }
 
 
+def build_role_summary(records):
+    rows = []
+
+    salary_records = [
+        record for record in records
+        if is_salary_record(record)
+    ]
+
+    grouped = {}
+
+    for record in salary_records:
+        company_id = record.get("company_id")
+        company = record.get("company")
+        role_key = normalize_role(record)
+
+        key = (company_id, role_key)
+
+        if key not in grouped:
+            grouped[key] = {
+                "company_id": company_id,
+                "company": company,
+                "role_key": role_key,
+                "role_label": ROLE_LABELS.get(role_key, role_key),
+                "records": [],
+            }
+
+        grouped[key]["records"].append(record)
+
+    for item in grouped.values():
+        role_records = item["records"]
+
+        min_values = [
+            get_salary_min(record)
+            for record in role_records
+            if isinstance(get_salary_min(record), int)
+        ]
+
+        median_values = [
+            get_salary_value(record)
+            for record in role_records
+            if isinstance(get_salary_value(record), int)
+        ]
+
+        max_values = [
+            get_salary_max(record)
+            for record in role_records
+            if isinstance(get_salary_max(record), int)
+        ]
+
+        best_record = sorted(
+            role_records,
+            key=lambda record: (
+                record.get("confidence") or 0,
+                get_salary_value(record) or 0,
+            ),
+            reverse=True,
+        )[0]
+
+        rows.append({
+            "company_id": item["company_id"],
+            "company": item["company"],
+            "role_key": item["role_key"],
+            "role_label": item["role_label"],
+
+            "salary_min_huf_month": min(min_values) if min_values else None,
+            "salary_median_huf_month": round(sum(median_values) / len(median_values)) if median_values else None,
+            "salary_max_huf_month": max(max_values) if max_values else None,
+
+            "record_count": len(role_records),
+            "confidence": average_confidence(role_records),
+
+            "source_name": best_record.get("source_name"),
+            "source_url": best_record.get("source_url"),
+            "published_or_found_date": best_record.get("published_or_found_date"),
+            "evidence_text": best_record.get("evidence_text"),
+
+            "notes": "Egy adott szereplő adott munkakörére talált OSINT béradat.",
+        })
+
+    rows = sorted(
+        rows,
+        key=lambda row: (
+            row["role_label"],
+            -(row["salary_median_huf_month"] or 0),
+            row["company"],
+        )
+    )
+
+    return {
+        "updated_at": now_iso(),
+        "status": "ok",
+        "method": "salary_role_summary_v1_from_salary_raw_data",
+        "input_file": "docs/data/salary-raw-data.json",
+        "important_note": (
+            "Ez munkakör szerinti OSINT bértábla. "
+            "Nem hivatalos bérstatisztika. "
+            "Egy sor egy szereplő egy munkakörének talált béradata."
+        ),
+        "rows": rows,
+    }
+
+
 def build_summary():
     raw = load_json(RAW_FILE, {})
     records = raw.get("records", [])
@@ -276,7 +391,7 @@ def build_summary():
     return {
         "updated_at": now_iso(),
         "status": "ok",
-        "method": "salary_summary_v1_from_salary_raw_data",
+        "method": "salary_summary_v2_from_salary_raw_data",
         "input_file": "docs/data/salary-raw-data.json",
         "important_note": (
             "Ez dashboard-kompatibilis összefoglaló a salary-raw-data.json alapján. "
@@ -287,14 +402,21 @@ def build_summary():
 
 
 def main():
-    print("Salary Summary Builder started.")
+    print("Salary Summary Builder v2 started.")
+
+    raw = load_json(RAW_FILE, {})
+    records = raw.get("records", [])
 
     summary = build_summary()
+    role_summary = build_role_summary(records)
 
     save_json(SUMMARY_FILE, summary)
+    save_json(ROLE_SUMMARY_FILE, role_summary)
 
     print(f"Saved: {SUMMARY_FILE}")
+    print(f"Saved: {ROLE_SUMMARY_FILE}")
     print(f"Companies: {len(summary.get('companies', []))}")
+    print(f"Role rows: {len(role_summary.get('rows', []))}")
 
 
 if __name__ == "__main__":
