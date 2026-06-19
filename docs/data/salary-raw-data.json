@@ -1,28 +1,134 @@
 {
-  "updated_at": "2026-06-19T07:35:02+00:00",
+  "updated_at": "2026-06-19T08:00:54+00:00",
   "status": "ok",
-  "method": "salary_raw_data_v1_google_news_rss_targeted_queries",
+  "method": "salary_raw_data_v2_google_news_rss_targeted_queries_improved_salary_parser",
   "important_note": "Ez nyers OSINT béradat-gyűjtés. Csak konkrét bérszámokat, bérsávokat és béremelési százalékokat ment. Nem hivatalos bérstatisztika, nem módosítja a salaries.json fájlt.",
   "companies": [
     {
       "company_id": "lidl",
       "company": "Lidl",
-      "records_count": 0,
-      "salary_records_count": 0,
+      "records_count": 5,
+      "salary_records_count": 5,
       "raise_records_count": 0,
-      "roles_found": [],
-      "average_confidence": 0,
-      "sample_records": []
+      "roles_found": [
+        "stocker",
+        "store_manager"
+      ],
+      "average_confidence": 82,
+      "sample_records": [
+        {
+          "id": "789ff98424cdccc1",
+          "company_id": "lidl",
+          "company": "Lidl",
+          "role_key": "store_manager",
+          "value_type": "salary_huf_month",
+          "salary_min_huf_month": 1000000,
+          "salary_median_huf_month": 1000000,
+          "salary_max_huf_month": 1000000,
+          "raise_pct": null,
+          "source_name": "24.hu",
+          "source_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPTUxzUTVtREFSOEhhUllubW5WcDRBTVhiNVp6UV9ueUlaYnR5ZF85N0FPLVZfR1czdWtEM0VKUEZWSmp3R2FuZFZjTi1HVDJkVVNPTURGWGo5TmxDaDZZTjZzRF8zMnQ4RHNyVVo2R1lZODVqVE9PT0VuTTBsMFRrQV8wcHM?oc=5",
+          "published_or_found_date": "Fri, 23 Jun 2023 07:00:00 GMT",
+          "evidence_text": "Egymilliós fizetéssel csábít üzletvezetőket az Aldi és a Lidl - 24.hu. Egymilliós fizetéssel csábít üzletvezetőket az Aldi és a Lidl 24.hu",
+          "confidence": 80,
+          "collected_at": "2026-06-19T07:57:30+00:00"
+        },
+        {
+          "id": "c374844fa6f5ffc9",
+          "company_id": "lidl",
+          "company": "Lidl",
+          "role_key": "store_manager",
+          "value_type": "salary_huf_month",
+          "salary_min_huf_month": 1000000,
+          "salary_median_huf_month": 1000000,
+          "salary_max_huf_month": 1000000,
+          "raise_pct": null,
+          "source_name": "hvg.hu",
+          "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBkR3J3clNDeDJvZGlZTlpiaHNIY1FXenQ0TTduMG1VNmZmLW14X3RRT0U4V2ZXQUl0WENGekxaYUItZk5hSVJSV2N2ZTMtWEpSUm5jNlcxa3lTWi14cEE?oc=5",
+          "published_or_found_date": "Fri, 23 Jun 2023 07:00:00 GMT",
+          "evidence_text": "Vállalkozás: Egymilliós fizetésért keres üzletvezetőket az Aldi és a Lidl is - | hvg.hu. Vállalkozás: Egymilliós fizetésért keres üzletvezetőket az Aldi és a Lidl is | hvg.hu",
+          "confidence": 80,
+          "collected_at": "2026-06-19T07:57:30+00:00"
+        },
+        {
+          "id": "8c29417e63bd5306",
+          "company_id": "lidl",
+          "company": "Lidl",
+          "role_key": "stocker",
+          "value_type": "salary_huf_month",
+          "salary_min_huf_month": 587000,
+          "salary_median_huf_month": 587000,
+          "salary_max_huf_month": 587000,
+          "raise_pct": null,
+          "source_name": "hvg.hu",
+          "source_url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tRVVkOXVjc3Y4cTlPWkU2N0U1SU1jd0JXckEyTjRZNWFOZ2F0aGNndVZMNnhMejhZeGtjVHdjQUtrZkJONExHX3I0RzREYjFVU012bWNuYUwzTm9OZ1pnYjdjU2s5VTZmV2k0U1BPaVZ3VVZi?oc=5",
+          "published_or_found_date": "Mon, 11 Sep 2023 07:00:00 GMT",
+          "evidence_text": "Vállalkozás: Lidl: bruttó 587 ezer is járhat az áruházi dolgozóknak az újabb béremelés után - | hvg.hu. Vállalkozás: Lidl: bruttó 587 ezer is járhat az áruházi dolgozóknak az újabb béremelés után | hvg.hu",
+          "confidence": 95,
+          "collected_at": "2026-06-19T07:57:30+00:00"
+        },
+        {
+          "id": "9204cd5ed8d1828d",
+          "company_id": "lidl",
+          "company": "Lidl",
+          "role_key": null,
+          "value_type": "salary_huf_month",
+          "salary_min_huf_month": 674000,
+          "salary_median_huf_month": 674000,
+          "salary_max_huf_month": 674000,
+          "raise_pct": null,
+          "source_name": "24.hu",
+          "source_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOal9zdlVZY0w0T1ZSWTBYQjhJNkl1OFRNRzdjRU5xbWpuNkxzU3lmd3JYajZjbGFQT2ZtbE51Qy1aSS02YjliUTgyYzF2WVFzbXhKOWotY0U2ekVkbDZ5S3pFS0V1bTNFQ0lPLWhQd1NLRUt0Y3pPVi01VVhhZUdMaEc3ZVlDdGtYUzJpNEhQWjNXb0NxREc5ZE55a2tzaFN5S1BGRDhIVW9ZNGo0UjBVMVFkcXQ?oc=5",
+          "published_or_found_date": "Tue, 06 Sep 2016 07:00:00 GMT",
+          "evidence_text": "Lidl-vezér a 674 ezres fizetésről: \"nem ez a megszokott munkáltatói hozzáállás\" - 24.hu. Lidl-vezér a 674 ezres fizetésről: \"nem ez a megszokott munkáltatói hozzáállás\" 24.hu",
+          "confidence": 65,
+          "collected_at": "2026-06-19T07:57:30+00:00"
+        },
+        {
+          "id": "95331cbaa963f578",
+          "company_id": "lidl",
+          "company": "Lidl",
+          "role_key": "store_manager",
+          "value_type": "salary_huf_month",
+          "salary_min_huf_month": 1000000,
+          "salary_median_huf_month": 1000000,
+          "salary_max_huf_month": 1000000,
+          "raise_pct": null,
+          "source_name": "portfolio.hu",
+          "source_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQX2U3MTdmNDhlM3h1b0hvY0Ewd2oyVGV3MWk0bzJLYUpQMlFucnBKN0d4TWMwZFlOWERhUGpibWVlTFFmVUdpanZiclFOUEdaSXVBR0otbUF2OTk4VlY4ei1nSjRlVXRXRlVQSjUtYnZGcWNVNVR5NVpyb1c1OVlZclZUWVRGblRWUWpKLWNadTloSjByaGhlbzhFUTBubHB1RU9XTFV6VWwyY3dvQTdybHAzc9IBuAFBVV95cUxNdDVQcGpXaC1LY0tXVjRPVFZMeUdna3ozTTZkVlJXanU2RFN4SmE4eDZpcVJGWFlYbDBMclBYQVZ5d2wycWVWTlgyeDN2ME9lVVdENl9YSm9GRmk3VnFhY2JTdHBrQzRtWGc1U0tjTUlWeTVVNUNObnVhRUVON3BhWmM2UHV1X1ljVDhxa1VLVnlSaXJkLTVSZEZNMklDcjlQOTBYeU40V04zR1V1UHo4RHBLRF9obS1T?oc=5",
+          "published_or_found_date": "Fri, 23 Jun 2023 07:00:00 GMT",
+          "evidence_text": "Millió körüli bruttóval csábít üzletvezetőket az Aldi és a Lidl - Portfolio.hu. Millió körüli bruttóval csábít üzletvezetőket az Aldi és a Lidl Portfolio.hu",
+          "confidence": 90,
+          "collected_at": "2026-06-19T07:57:33+00:00"
+        }
+      ]
     },
     {
       "company_id": "aldi",
       "company": "ALDI",
-      "records_count": 1,
-      "salary_records_count": 1,
+      "records_count": 3,
+      "salary_records_count": 3,
       "raise_records_count": 0,
       "roles_found": [],
-      "average_confidence": 75,
+      "average_confidence": 74,
       "sample_records": [
+        {
+          "id": "c743beacd6197c06",
+          "company_id": "aldi",
+          "company": "ALDI",
+          "role_key": null,
+          "value_type": "salary_huf_month",
+          "salary_min_huf_month": 800000,
+          "salary_median_huf_month": 800000,
+          "salary_max_huf_month": 800000,
+          "raise_pct": null,
+          "source_name": "hvg.hu",
+          "source_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBnNWlqbEZndkRoVmhITzctMzh6UGU1UnhiX1l0M2FoZVpOb1g0Skx0UmFyX1M3UjVYV2NvNXdfU29xRGVNeDdJUXBGdVE2YjFwR3ZqWGJDbWVCQQ?oc=5",
+          "published_or_found_date": "Thu, 07 Oct 2021 07:00:00 GMT",
+          "evidence_text": "800 ezer nettó és céges BMW: az országos középérték 3,5-szeresét kapják az Aldi pályakezdő vezetői - | hvg.hu. 800 ezer nettó és céges BMW: az országos középérték 3,5-szeresét kapják az Aldi pályakezdő vezetői | hvg.hu",
+          "confidence": 71,
+          "collected_at": "2026-06-19T07:57:38+00:00"
+        },
         {
           "id": "8004dcd4ae1dafa7",
           "company_id": "aldi",
@@ -38,19 +144,54 @@
           "published_or_found_date": "Mon, 28 Apr 2025 07:00:00 GMT",
           "evidence_text": "Vállalkozás: Bruttó 595 200 forintot is lehet majd keresni nyáron az Aldi balatoni üzleteiben - | hvg.hu. Vállalkozás: Bruttó 595 200 forintot is lehet majd keresni nyáron az Aldi balatoni üzleteiben | hvg.hu",
           "confidence": 75,
-          "collected_at": "2026-06-19T07:32:50+00:00"
+          "collected_at": "2026-06-19T07:58:05+00:00"
+        },
+        {
+          "id": "83ff2e38dad91fd4",
+          "company_id": "aldi",
+          "company": "ALDI",
+          "role_key": null,
+          "value_type": "salary_huf_month",
+          "salary_min_huf_month": 550000,
+          "salary_median_huf_month": 550000,
+          "salary_max_huf_month": 550000,
+          "raise_pct": null,
+          "source_name": "hvg.hu",
+          "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQamg2M09CTm12cFRKOHQ4RGl3Q190RkhUWUpOWEFUOXI4ckVVUDhyZGZpRmtvaEkzSTd3MGRPdlR4QUh3bWFQWGhBMjlCMmRGRnBUUUFmTEdsQjB2NG5oYWVYaVdiUXloNzg2ZXpDSF9qTFVobEZ6TmFXV1llNkZCTklvREhsYWt1SnFqT0wzN3pMXy04SUxSQlZVRQ?oc=5",
+          "published_or_found_date": "Mon, 15 Apr 2024 07:00:00 GMT",
+          "evidence_text": "Vállalkozás: Bruttó 550 ezerért keres dolgozókat a nyárra az Aldi - | hvg.hu. Vállalkozás: Bruttó 550 ezerért keres dolgozókat a nyárra az Aldi | hvg.hu",
+          "confidence": 75,
+          "collected_at": "2026-06-19T07:58:05+00:00"
         }
       ]
     },
     {
       "company_id": "spar",
       "company": "SPAR",
-      "records_count": 0,
-      "salary_records_count": 0,
+      "records_count": 1,
+      "salary_records_count": 1,
       "raise_records_count": 0,
       "roles_found": [],
-      "average_confidence": 0,
-      "sample_records": []
+      "average_confidence": 75,
+      "sample_records": [
+        {
+          "id": "69d2a9375c7f3c36",
+          "company_id": "spar",
+          "company": "SPAR",
+          "role_key": null,
+          "value_type": "salary_huf_month",
+          "salary_min_huf_month": 395000,
+          "salary_median_huf_month": 395000,
+          "salary_max_huf_month": 395000,
+          "raise_pct": null,
+          "source_name": "hvg.hu",
+          "source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQQkcxaTJlMVJlMU1pQVpXczB3RUlnMWh0aXJ2bkh3UzcxSFZSZXowVGZpUDRjRUtxTFQ5RlFzY2M2NGRzUkVNWHBodlVhQjRKWTdWT0diS1RmTUp5ZkRhbDVla1FWVTZ1LXdIby16ejRTVi04M1Bfel8temdsRXF5YTdCVXBmS09DeFQ1eDdZZVRsM0VCLW5r?oc=5",
+          "published_or_found_date": "Thu, 02 Jan 2025 08:00:00 GMT",
+          "evidence_text": "Vállalkozás: Spar: 395 ezer bruttó lesz 2025-ben a dolgozók alapbére - | hvg.hu. Vállalkozás: Spar: 395 ezer bruttó lesz 2025-ben a dolgozók alapbére | hvg.hu",
+          "confidence": 75,
+          "collected_at": "2026-06-19T07:58:39+00:00"
+        }
+      ]
     },
     {
       "company_id": "tesco",
@@ -76,18 +217,18 @@
           "published_or_found_date": "Fri, 23 Jan 2026 08:00:00 GMT",
           "evidence_text": "7,2 százalékos béremelést kapnak a Tesco dolgozói - Portfolio.hu. 7,2 százalékos béremelést kapnak a Tesco dolgozói Portfolio.hu",
           "confidence": 65,
-          "collected_at": "2026-06-19T07:33:44+00:00"
+          "collected_at": "2026-06-19T07:59:13+00:00"
         }
       ]
     },
     {
       "company_id": "penny",
       "company": "PENNY",
-      "records_count": 1,
-      "salary_records_count": 0,
+      "records_count": 3,
+      "salary_records_count": 2,
       "raise_records_count": 1,
       "roles_found": [],
-      "average_confidence": 65,
+      "average_confidence": 72,
       "sample_records": [
         {
           "id": "31629ada901b9e33",
@@ -104,19 +245,70 @@
           "published_or_found_date": "Fri, 23 Jan 2026 08:00:00 GMT",
           "evidence_text": "6-8 százalékos béremelés jön a Penny-nél - Portfolio.hu. 6-8 százalékos béremelés jön a Penny-nél Portfolio.hu",
           "confidence": 65,
-          "collected_at": "2026-06-19T07:34:04+00:00"
+          "collected_at": "2026-06-19T07:59:40+00:00"
+        },
+        {
+          "id": "95c99ca697ffc7e8",
+          "company_id": "penny",
+          "company": "PENNY",
+          "role_key": null,
+          "value_type": "salary_huf_month",
+          "salary_min_huf_month": 540000,
+          "salary_median_huf_month": 540000,
+          "salary_max_huf_month": 540000,
+          "raise_pct": null,
+          "source_name": "hvg.hu",
+          "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaTJfejl6VWxrWVktZE51TmVqN284V1I3RmtpeFRHdHpTMVNYQzFYNmtNcTdBNkNNM1ZpcXAtS3gwdUVfZ25PempyR2ZBSnEyREJ5dk9PTDhfSlhpOWk4SEMzbXJXOGRBRVdseXI1QkUxNkRxQUpGNXlDU19LZFR5a3p1T2hPUQ?oc=5",
+          "published_or_found_date": "Tue, 23 Dec 2025 08:00:00 GMT",
+          "evidence_text": "Gazdaság: Bruttó 540 ezerért keres új munkatársakat a Penny, de az összeg felcsúszhat 670 ezerig is - | hvg.hu. Gazdaság: Bruttó 540 ezerért keres új munkatársakat a Penny, de az összeg felcsúszhat 670 ezerig is | hvg.hu",
+          "confidence": 75,
+          "collected_at": "2026-06-19T07:59:47+00:00"
+        },
+        {
+          "id": "d9ba2ce2599599a7",
+          "company_id": "penny",
+          "company": "PENNY",
+          "role_key": null,
+          "value_type": "salary_huf_month",
+          "salary_min_huf_month": 670000,
+          "salary_median_huf_month": 670000,
+          "salary_max_huf_month": 670000,
+          "raise_pct": null,
+          "source_name": "hvg.hu",
+          "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaTJfejl6VWxrWVktZE51TmVqN284V1I3RmtpeFRHdHpTMVNYQzFYNmtNcTdBNkNNM1ZpcXAtS3gwdUVfZ25PempyR2ZBSnEyREJ5dk9PTDhfSlhpOWk4SEMzbXJXOGRBRVdseXI1QkUxNkRxQUpGNXlDU19LZFR5a3p1T2hPUQ?oc=5",
+          "published_or_found_date": "Tue, 23 Dec 2025 08:00:00 GMT",
+          "evidence_text": "Gazdaság: Bruttó 540 ezerért keres új munkatársakat a Penny, de az összeg felcsúszhat 670 ezerig is - | hvg.hu. Gazdaság: Bruttó 540 ezerért keres új munkatársakat a Penny, de az összeg felcsúszhat 670 ezerig is | hvg.hu",
+          "confidence": 75,
+          "collected_at": "2026-06-19T07:59:47+00:00"
         }
       ]
     },
     {
       "company_id": "auchan",
       "company": "Auchan",
-      "records_count": 1,
-      "salary_records_count": 1,
+      "records_count": 2,
+      "salary_records_count": 2,
       "raise_records_count": 0,
       "roles_found": [],
-      "average_confidence": 65,
+      "average_confidence": 70,
       "sample_records": [
+        {
+          "id": "86c2ba0dbc412ccb",
+          "company_id": "auchan",
+          "company": "Auchan",
+          "role_key": null,
+          "value_type": "salary_huf_month",
+          "salary_min_huf_month": 402000,
+          "salary_median_huf_month": 402000,
+          "salary_max_huf_month": 402000,
+          "raise_pct": null,
+          "source_name": "hvg.hu",
+          "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQX1VoRlhsV3B2SzRDdUVUUE5NYWt1UFNibjF3U3ZCQlRhSnU3RkRWbExMQXhVYnNXbWRuSUwwb3hJVkc0ekRPUWxOTlpNdFljTUZ4M0R6S3poUGdnS2JhRmdOYXZ3ZDYzcG9GbHZFaGw3dzA3WmtmeDZ6Um84VURlOWNtankxSFRhaGVj?oc=5",
+          "published_or_found_date": "Thu, 23 Jan 2025 08:00:00 GMT",
+          "evidence_text": "Vállalkozás: Auchan: Bruttó 402 ezer lesz januártól a fizikai munkát végzők alapbére - | hvg.hu. Vállalkozás: Auchan: Bruttó 402 ezer lesz januártól a fizikai munkát végzők alapbére | hvg.hu",
+          "confidence": 75,
+          "collected_at": "2026-06-19T08:00:24+00:00"
+        },
         {
           "id": "018755b1e06aa27c",
           "company_id": "auchan",
@@ -132,12 +324,114 @@
           "published_or_found_date": "Thu, 23 Jan 2025 08:00:00 GMT",
           "evidence_text": "Mutatjuk, kik kereshetnek 715 ezer forintot az Auchanban - Portfolio.hu. Mutatjuk, kik kereshetnek 715 ezer forintot az Auchanban Portfolio.hu",
           "confidence": 65,
-          "collected_at": "2026-06-19T07:34:40+00:00"
+          "collected_at": "2026-06-19T08:00:24+00:00"
         }
       ]
     }
   ],
   "records": [
+    {
+      "id": "789ff98424cdccc1",
+      "company_id": "lidl",
+      "company": "Lidl",
+      "role_key": "store_manager",
+      "value_type": "salary_huf_month",
+      "salary_min_huf_month": 1000000,
+      "salary_median_huf_month": 1000000,
+      "salary_max_huf_month": 1000000,
+      "raise_pct": null,
+      "source_name": "24.hu",
+      "source_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPTUxzUTVtREFSOEhhUllubW5WcDRBTVhiNVp6UV9ueUlaYnR5ZF85N0FPLVZfR1czdWtEM0VKUEZWSmp3R2FuZFZjTi1HVDJkVVNPTURGWGo5TmxDaDZZTjZzRF8zMnQ4RHNyVVo2R1lZODVqVE9PT0VuTTBsMFRrQV8wcHM?oc=5",
+      "published_or_found_date": "Fri, 23 Jun 2023 07:00:00 GMT",
+      "evidence_text": "Egymilliós fizetéssel csábít üzletvezetőket az Aldi és a Lidl - 24.hu. Egymilliós fizetéssel csábít üzletvezetőket az Aldi és a Lidl 24.hu",
+      "confidence": 80,
+      "collected_at": "2026-06-19T07:57:30+00:00"
+    },
+    {
+      "id": "c374844fa6f5ffc9",
+      "company_id": "lidl",
+      "company": "Lidl",
+      "role_key": "store_manager",
+      "value_type": "salary_huf_month",
+      "salary_min_huf_month": 1000000,
+      "salary_median_huf_month": 1000000,
+      "salary_max_huf_month": 1000000,
+      "raise_pct": null,
+      "source_name": "hvg.hu",
+      "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBkR3J3clNDeDJvZGlZTlpiaHNIY1FXenQ0TTduMG1VNmZmLW14X3RRT0U4V2ZXQUl0WENGekxaYUItZk5hSVJSV2N2ZTMtWEpSUm5jNlcxa3lTWi14cEE?oc=5",
+      "published_or_found_date": "Fri, 23 Jun 2023 07:00:00 GMT",
+      "evidence_text": "Vállalkozás: Egymilliós fizetésért keres üzletvezetőket az Aldi és a Lidl is - | hvg.hu. Vállalkozás: Egymilliós fizetésért keres üzletvezetőket az Aldi és a Lidl is | hvg.hu",
+      "confidence": 80,
+      "collected_at": "2026-06-19T07:57:30+00:00"
+    },
+    {
+      "id": "8c29417e63bd5306",
+      "company_id": "lidl",
+      "company": "Lidl",
+      "role_key": "stocker",
+      "value_type": "salary_huf_month",
+      "salary_min_huf_month": 587000,
+      "salary_median_huf_month": 587000,
+      "salary_max_huf_month": 587000,
+      "raise_pct": null,
+      "source_name": "hvg.hu",
+      "source_url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tRVVkOXVjc3Y4cTlPWkU2N0U1SU1jd0JXckEyTjRZNWFOZ2F0aGNndVZMNnhMejhZeGtjVHdjQUtrZkJONExHX3I0RzREYjFVU012bWNuYUwzTm9OZ1pnYjdjU2s5VTZmV2k0U1BPaVZ3VVZi?oc=5",
+      "published_or_found_date": "Mon, 11 Sep 2023 07:00:00 GMT",
+      "evidence_text": "Vállalkozás: Lidl: bruttó 587 ezer is járhat az áruházi dolgozóknak az újabb béremelés után - | hvg.hu. Vállalkozás: Lidl: bruttó 587 ezer is járhat az áruházi dolgozóknak az újabb béremelés után | hvg.hu",
+      "confidence": 95,
+      "collected_at": "2026-06-19T07:57:30+00:00"
+    },
+    {
+      "id": "9204cd5ed8d1828d",
+      "company_id": "lidl",
+      "company": "Lidl",
+      "role_key": null,
+      "value_type": "salary_huf_month",
+      "salary_min_huf_month": 674000,
+      "salary_median_huf_month": 674000,
+      "salary_max_huf_month": 674000,
+      "raise_pct": null,
+      "source_name": "24.hu",
+      "source_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOal9zdlVZY0w0T1ZSWTBYQjhJNkl1OFRNRzdjRU5xbWpuNkxzU3lmd3JYajZjbGFQT2ZtbE51Qy1aSS02YjliUTgyYzF2WVFzbXhKOWotY0U2ekVkbDZ5S3pFS0V1bTNFQ0lPLWhQd1NLRUt0Y3pPVi01VVhhZUdMaEc3ZVlDdGtYUzJpNEhQWjNXb0NxREc5ZE55a2tzaFN5S1BGRDhIVW9ZNGo0UjBVMVFkcXQ?oc=5",
+      "published_or_found_date": "Tue, 06 Sep 2016 07:00:00 GMT",
+      "evidence_text": "Lidl-vezér a 674 ezres fizetésről: \"nem ez a megszokott munkáltatói hozzáállás\" - 24.hu. Lidl-vezér a 674 ezres fizetésről: \"nem ez a megszokott munkáltatói hozzáállás\" 24.hu",
+      "confidence": 65,
+      "collected_at": "2026-06-19T07:57:30+00:00"
+    },
+    {
+      "id": "95331cbaa963f578",
+      "company_id": "lidl",
+      "company": "Lidl",
+      "role_key": "store_manager",
+      "value_type": "salary_huf_month",
+      "salary_min_huf_month": 1000000,
+      "salary_median_huf_month": 1000000,
+      "salary_max_huf_month": 1000000,
+      "raise_pct": null,
+      "source_name": "portfolio.hu",
+      "source_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQX2U3MTdmNDhlM3h1b0hvY0Ewd2oyVGV3MWk0bzJLYUpQMlFucnBKN0d4TWMwZFlOWERhUGpibWVlTFFmVUdpanZiclFOUEdaSXVBR0otbUF2OTk4VlY4ei1nSjRlVXRXRlVQSjUtYnZGcWNVNVR5NVpyb1c1OVlZclZUWVRGblRWUWpKLWNadTloSjByaGhlbzhFUTBubHB1RU9XTFV6VWwyY3dvQTdybHAzc9IBuAFBVV95cUxNdDVQcGpXaC1LY0tXVjRPVFZMeUdna3ozTTZkVlJXanU2RFN4SmE4eDZpcVJGWFlYbDBMclBYQVZ5d2wycWVWTlgyeDN2ME9lVVdENl9YSm9GRmk3VnFhY2JTdHBrQzRtWGc1U0tjTUlWeTVVNUNObnVhRUVON3BhWmM2UHV1X1ljVDhxa1VLVnlSaXJkLTVSZEZNMklDcjlQOTBYeU40V04zR1V1UHo4RHBLRF9obS1T?oc=5",
+      "published_or_found_date": "Fri, 23 Jun 2023 07:00:00 GMT",
+      "evidence_text": "Millió körüli bruttóval csábít üzletvezetőket az Aldi és a Lidl - Portfolio.hu. Millió körüli bruttóval csábít üzletvezetőket az Aldi és a Lidl Portfolio.hu",
+      "confidence": 90,
+      "collected_at": "2026-06-19T07:57:33+00:00"
+    },
+    {
+      "id": "c743beacd6197c06",
+      "company_id": "aldi",
+      "company": "ALDI",
+      "role_key": null,
+      "value_type": "salary_huf_month",
+      "salary_min_huf_month": 800000,
+      "salary_median_huf_month": 800000,
+      "salary_max_huf_month": 800000,
+      "raise_pct": null,
+      "source_name": "hvg.hu",
+      "source_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBnNWlqbEZndkRoVmhITzctMzh6UGU1UnhiX1l0M2FoZVpOb1g0Skx0UmFyX1M3UjVYV2NvNXdfU29xRGVNeDdJUXBGdVE2YjFwR3ZqWGJDbWVCQQ?oc=5",
+      "published_or_found_date": "Thu, 07 Oct 2021 07:00:00 GMT",
+      "evidence_text": "800 ezer nettó és céges BMW: az országos középérték 3,5-szeresét kapják az Aldi pályakezdő vezetői - | hvg.hu. 800 ezer nettó és céges BMW: az országos középérték 3,5-szeresét kapják az Aldi pályakezdő vezetői | hvg.hu",
+      "confidence": 71,
+      "collected_at": "2026-06-19T07:57:38+00:00"
+    },
     {
       "id": "8004dcd4ae1dafa7",
       "company_id": "aldi",
@@ -153,7 +447,41 @@
       "published_or_found_date": "Mon, 28 Apr 2025 07:00:00 GMT",
       "evidence_text": "Vállalkozás: Bruttó 595 200 forintot is lehet majd keresni nyáron az Aldi balatoni üzleteiben - | hvg.hu. Vállalkozás: Bruttó 595 200 forintot is lehet majd keresni nyáron az Aldi balatoni üzleteiben | hvg.hu",
       "confidence": 75,
-      "collected_at": "2026-06-19T07:32:50+00:00"
+      "collected_at": "2026-06-19T07:58:05+00:00"
+    },
+    {
+      "id": "83ff2e38dad91fd4",
+      "company_id": "aldi",
+      "company": "ALDI",
+      "role_key": null,
+      "value_type": "salary_huf_month",
+      "salary_min_huf_month": 550000,
+      "salary_median_huf_month": 550000,
+      "salary_max_huf_month": 550000,
+      "raise_pct": null,
+      "source_name": "hvg.hu",
+      "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQamg2M09CTm12cFRKOHQ4RGl3Q190RkhUWUpOWEFUOXI4ckVVUDhyZGZpRmtvaEkzSTd3MGRPdlR4QUh3bWFQWGhBMjlCMmRGRnBUUUFmTEdsQjB2NG5oYWVYaVdiUXloNzg2ZXpDSF9qTFVobEZ6TmFXV1llNkZCTklvREhsYWt1SnFqT0wzN3pMXy04SUxSQlZVRQ?oc=5",
+      "published_or_found_date": "Mon, 15 Apr 2024 07:00:00 GMT",
+      "evidence_text": "Vállalkozás: Bruttó 550 ezerért keres dolgozókat a nyárra az Aldi - | hvg.hu. Vállalkozás: Bruttó 550 ezerért keres dolgozókat a nyárra az Aldi | hvg.hu",
+      "confidence": 75,
+      "collected_at": "2026-06-19T07:58:05+00:00"
+    },
+    {
+      "id": "69d2a9375c7f3c36",
+      "company_id": "spar",
+      "company": "SPAR",
+      "role_key": null,
+      "value_type": "salary_huf_month",
+      "salary_min_huf_month": 395000,
+      "salary_median_huf_month": 395000,
+      "salary_max_huf_month": 395000,
+      "raise_pct": null,
+      "source_name": "hvg.hu",
+      "source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQQkcxaTJlMVJlMU1pQVpXczB3RUlnMWh0aXJ2bkh3UzcxSFZSZXowVGZpUDRjRUtxTFQ5RlFzY2M2NGRzUkVNWHBodlVhQjRKWTdWT0diS1RmTUp5ZkRhbDVla1FWVTZ1LXdIby16ejRTVi04M1Bfel8temdsRXF5YTdCVXBmS09DeFQ1eDdZZVRsM0VCLW5r?oc=5",
+      "published_or_found_date": "Thu, 02 Jan 2025 08:00:00 GMT",
+      "evidence_text": "Vállalkozás: Spar: 395 ezer bruttó lesz 2025-ben a dolgozók alapbére - | hvg.hu. Vállalkozás: Spar: 395 ezer bruttó lesz 2025-ben a dolgozók alapbére | hvg.hu",
+      "confidence": 75,
+      "collected_at": "2026-06-19T07:58:39+00:00"
     },
     {
       "id": "188565260f620033",
@@ -170,7 +498,7 @@
       "published_or_found_date": "Fri, 23 Jan 2026 08:00:00 GMT",
       "evidence_text": "7,2 százalékos béremelést kapnak a Tesco dolgozói - Portfolio.hu. 7,2 százalékos béremelést kapnak a Tesco dolgozói Portfolio.hu",
       "confidence": 65,
-      "collected_at": "2026-06-19T07:33:44+00:00"
+      "collected_at": "2026-06-19T07:59:13+00:00"
     },
     {
       "id": "31629ada901b9e33",
@@ -187,7 +515,58 @@
       "published_or_found_date": "Fri, 23 Jan 2026 08:00:00 GMT",
       "evidence_text": "6-8 százalékos béremelés jön a Penny-nél - Portfolio.hu. 6-8 százalékos béremelés jön a Penny-nél Portfolio.hu",
       "confidence": 65,
-      "collected_at": "2026-06-19T07:34:04+00:00"
+      "collected_at": "2026-06-19T07:59:40+00:00"
+    },
+    {
+      "id": "95c99ca697ffc7e8",
+      "company_id": "penny",
+      "company": "PENNY",
+      "role_key": null,
+      "value_type": "salary_huf_month",
+      "salary_min_huf_month": 540000,
+      "salary_median_huf_month": 540000,
+      "salary_max_huf_month": 540000,
+      "raise_pct": null,
+      "source_name": "hvg.hu",
+      "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaTJfejl6VWxrWVktZE51TmVqN284V1I3RmtpeFRHdHpTMVNYQzFYNmtNcTdBNkNNM1ZpcXAtS3gwdUVfZ25PempyR2ZBSnEyREJ5dk9PTDhfSlhpOWk4SEMzbXJXOGRBRVdseXI1QkUxNkRxQUpGNXlDU19LZFR5a3p1T2hPUQ?oc=5",
+      "published_or_found_date": "Tue, 23 Dec 2025 08:00:00 GMT",
+      "evidence_text": "Gazdaság: Bruttó 540 ezerért keres új munkatársakat a Penny, de az összeg felcsúszhat 670 ezerig is - | hvg.hu. Gazdaság: Bruttó 540 ezerért keres új munkatársakat a Penny, de az összeg felcsúszhat 670 ezerig is | hvg.hu",
+      "confidence": 75,
+      "collected_at": "2026-06-19T07:59:47+00:00"
+    },
+    {
+      "id": "d9ba2ce2599599a7",
+      "company_id": "penny",
+      "company": "PENNY",
+      "role_key": null,
+      "value_type": "salary_huf_month",
+      "salary_min_huf_month": 670000,
+      "salary_median_huf_month": 670000,
+      "salary_max_huf_month": 670000,
+      "raise_pct": null,
+      "source_name": "hvg.hu",
+      "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaTJfejl6VWxrWVktZE51TmVqN284V1I3RmtpeFRHdHpTMVNYQzFYNmtNcTdBNkNNM1ZpcXAtS3gwdUVfZ25PempyR2ZBSnEyREJ5dk9PTDhfSlhpOWk4SEMzbXJXOGRBRVdseXI1QkUxNkRxQUpGNXlDU19LZFR5a3p1T2hPUQ?oc=5",
+      "published_or_found_date": "Tue, 23 Dec 2025 08:00:00 GMT",
+      "evidence_text": "Gazdaság: Bruttó 540 ezerért keres új munkatársakat a Penny, de az összeg felcsúszhat 670 ezerig is - | hvg.hu. Gazdaság: Bruttó 540 ezerért keres új munkatársakat a Penny, de az összeg felcsúszhat 670 ezerig is | hvg.hu",
+      "confidence": 75,
+      "collected_at": "2026-06-19T07:59:47+00:00"
+    },
+    {
+      "id": "86c2ba0dbc412ccb",
+      "company_id": "auchan",
+      "company": "Auchan",
+      "role_key": null,
+      "value_type": "salary_huf_month",
+      "salary_min_huf_month": 402000,
+      "salary_median_huf_month": 402000,
+      "salary_max_huf_month": 402000,
+      "raise_pct": null,
+      "source_name": "hvg.hu",
+      "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQX1VoRlhsV3B2SzRDdUVUUE5NYWt1UFNibjF3U3ZCQlRhSnU3RkRWbExMQXhVYnNXbWRuSUwwb3hJVkc0ekRPUWxOTlpNdFljTUZ4M0R6S3poUGdnS2JhRmdOYXZ3ZDYzcG9GbHZFaGw3dzA3WmtmeDZ6Um84VURlOWNtankxSFRhaGVj?oc=5",
+      "published_or_found_date": "Thu, 23 Jan 2025 08:00:00 GMT",
+      "evidence_text": "Vállalkozás: Auchan: Bruttó 402 ezer lesz januártól a fizikai munkát végzők alapbére - | hvg.hu. Vállalkozás: Auchan: Bruttó 402 ezer lesz januártól a fizikai munkát végzők alapbére | hvg.hu",
+      "confidence": 75,
+      "collected_at": "2026-06-19T08:00:24+00:00"
     },
     {
       "id": "018755b1e06aa27c",
@@ -204,7 +583,7 @@
       "published_or_found_date": "Thu, 23 Jan 2025 08:00:00 GMT",
       "evidence_text": "Mutatjuk, kik kereshetnek 715 ezer forintot az Auchanban - Portfolio.hu. Mutatjuk, kik kereshetnek 715 ezer forintot az Auchanban Portfolio.hu",
       "confidence": 65,
-      "collected_at": "2026-06-19T07:34:40+00:00"
+      "collected_at": "2026-06-19T08:00:24+00:00"
     }
   ],
   "raw_results": [
@@ -245,8 +624,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOc1gyWUtWWE5XckVRemQtVnF5ZkFYb05VZTRjV1Rfc0tkMzZWZF9TdkZRMnZubEhYbjhPRUEtLTlIVkxXb3BlczdFUDAzNFZvZWxTTEZhMTFueXBHQzVmX2ZITEJ6ZVNnNWNLTnNPUGRZMDg3MTBBbmZ2RE5GWlRabHR4RGV6REtJSUFjQzNyNkV5U0NJUmg5TjUwQXpTdmRBNEJFdmhMTlhFT2fSAbABQVVfeXFMTmk3VHRqcFktblhCSTdrNGVKSy1aSzhKREsxWWp1eXVZd2xnV1FQeTFqQW1EbVNYejdGUHhqakVxNUM0SmFJWU84b2J3ZHRSUWpBSjJ1UmVXTEtMUEVCTTZraE8wRHBMVlhJbmdFai1vdkhVNVB3ZWhOTHpDRFktMzZvczdvUjAtSkRaMF8xdUhLMlc3ZG00OGFJb2xlcTk1S213ZFNSQWlnRFlqcHdRT0g?oc=5",
-      "text": "Szép csendben egy új fizetést vezet be a Lidl Magyarországon - Portfolio.hu. Szép csendben egy új fizetést vezet be a Lidl Magyarországon Portfolio.hu"
+      "source_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOWnM0d3JlYWRvSDVCZEdrZnc4WkJnYXprSFhveHVlc3psYjdmWjFDSTdMYi1KNGJ5eWJCdDJmbjZvQnA1Q0piVlZPZnp6N2Q3OGNnb0ptMXVRMHFhYkdCdG1CTnktRDJYTHZTZHVDWG1scTZhbXJTMFlJLV9jZllnSWhuRjF4YkNKVG1rT25iTThkTVlzYnpZVXROTElxZnfSAaQBQVVfeXFMUDZENE0xWmZpT2NuYWtoaGdpcXlMNDlERGZPZ3piMjdncXNVcGN1TmJOcUR5RDJRTnl3aWh6Z0V3TURtTDVUR2JMYzJFc240ZFp2cWsxUW1jeWJ0SUJvaGNXNHB3dXVZeklzSXMySU1lUFNuRlZPcTV4LXFCSElNdm9ZN1BZcl9XaS1rOVhON2poeXJoVUtEOVNjZEZocWNWTkFWWjk?oc=5",
+      "text": "Kiderült, mennyit keres egy idénymunkás a Lidlnél - Portfolio.hu. Kiderült, mennyit keres egy idénymunkás a Lidlnél Portfolio.hu"
     },
     {
       "query": "Lidl fizetés",
@@ -271,8 +650,32 @@
     {
       "query": "Lidl fizetés",
       "company_id": "lidl",
-      "role_key": "store_manager",
+      "role_key": null,
       "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOc1gyWUtWWE5XckVRemQtVnF5ZkFYb05VZTRjV1Rfc0tkMzZWZF9TdkZRMnZubEhYbjhPRUEtLTlIVkxXb3BlczdFUDAzNFZvZWxTTEZhMTFueXBHQzVmX2ZITEJ6ZVNnNWNLTnNPUGRZMDg3MTBBbmZ2RE5GWlRabHR4RGV6REtJSUFjQzNyNkV5U0NJUmg5TjUwQXpTdmRBNEJFdmhMTlhFT2fSAbABQVVfeXFMTmk3VHRqcFktblhCSTdrNGVKSy1aSzhKREsxWWp1eXVZd2xnV1FQeTFqQW1EbVNYejdGUHhqakVxNUM0SmFJWU84b2J3ZHRSUWpBSjJ1UmVXTEtMUEVCTTZraE8wRHBMVlhJbmdFai1vdkhVNVB3ZWhOTHpDRFktMzZvczdvUjAtSkRaMF8xdUhLMlc3ZG00OGFJb2xlcTk1S213ZFNSQWlnRFlqcHdRT0g?oc=5",
+      "text": "Szép csendben egy új fizetést vezet be a Lidl Magyarországon - Portfolio.hu. Szép csendben egy új fizetést vezet be a Lidl Magyarországon Portfolio.hu"
+    },
+    {
+      "query": "Lidl fizetés",
+      "company_id": "lidl",
+      "role_key": "store_manager",
+      "salary_values": [
+        1000000
+      ],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPTUxzUTVtREFSOEhhUllubW5WcDRBTVhiNVp6UV9ueUlaYnR5ZF85N0FPLVZfR1czdWtEM0VKUEZWSmp3R2FuZFZjTi1HVDJkVVNPTURGWGo5TmxDaDZZTjZzRF8zMnQ4RHNyVVo2R1lZODVqVE9PT0VuTTBsMFRrQV8wcHM?oc=5",
+      "text": "Egymilliós fizetéssel csábít üzletvezetőket az Aldi és a Lidl - 24.hu. Egymilliós fizetéssel csábít üzletvezetőket az Aldi és a Lidl 24.hu"
+    },
+    {
+      "query": "Lidl fizetés",
+      "company_id": "lidl",
+      "role_key": "store_manager",
+      "salary_values": [
+        1000000
+      ],
       "salary_ranges": [],
       "raise_values": [],
       "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBkR3J3clNDeDJvZGlZTlpiaHNIY1FXenQ0TTduMG1VNmZmLW14X3RRT0U4V2ZXQUl0WENGekxaYUItZk5hSVJSV2N2ZTMtWEpSUm5jNlcxa3lTWi14cEE?oc=5",
@@ -291,8 +694,10 @@
     {
       "query": "Lidl fizetés",
       "company_id": "lidl",
-      "role_key": null,
-      "salary_values": [],
+      "role_key": "stocker",
+      "salary_values": [
+        587000
+      ],
       "salary_ranges": [],
       "raise_values": [],
       "source_url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tRVVkOXVjc3Y4cTlPWkU2N0U1SU1jd0JXckEyTjRZNWFOZ2F0aGNndVZMNnhMejhZeGtjVHdjQUtrZkJONExHX3I0RzREYjFVU012bWNuYUwzTm9OZ1pnYjdjU2s5VTZmV2k0U1BPaVZ3VVZi?oc=5",
@@ -302,7 +707,9 @@
       "query": "Lidl fizetés",
       "company_id": "lidl",
       "role_key": null,
-      "salary_values": [],
+      "salary_values": [
+        674000
+      ],
       "salary_ranges": [],
       "raise_values": [],
       "source_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOal9zdlVZY0w0T1ZSWTBYQjhJNkl1OFRNRzdjRU5xbWpuNkxzU3lmd3JYajZjbGFQT2ZtbE51Qy1aSS02YjliUTgyYzF2WVFzbXhKOWotY0U2ekVkbDZ5S3pFS0V1bTNFQ0lPLWhQd1NLRUt0Y3pPVi01VVhhZUdMaEc3ZVlDdGtYUzJpNEhQWjNXb0NxREc5ZE55a2tzaFN5S1BGRDhIVW9ZNGo0UjBVMVFkcXQ?oc=5",
@@ -372,7 +779,21 @@
       "query": "Lidl bér",
       "company_id": "lidl",
       "role_key": "store_manager",
-      "salary_values": [],
+      "salary_values": [
+        1000000
+      ],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPTUxzUTVtREFSOEhhUllubW5WcDRBTVhiNVp6UV9ueUlaYnR5ZF85N0FPLVZfR1czdWtEM0VKUEZWSmp3R2FuZFZjTi1HVDJkVVNPTURGWGo5TmxDaDZZTjZzRF8zMnQ4RHNyVVo2R1lZODVqVE9PT0VuTTBsMFRrQV8wcHM?oc=5",
+      "text": "Egymilliós fizetéssel csábít üzletvezetőket az Aldi és a Lidl - 24.hu. Egymilliós fizetéssel csábít üzletvezetőket az Aldi és a Lidl 24.hu"
+    },
+    {
+      "query": "Lidl bér",
+      "company_id": "lidl",
+      "role_key": "store_manager",
+      "salary_values": [
+        1000000
+      ],
       "salary_ranges": [],
       "raise_values": [],
       "source_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQX2U3MTdmNDhlM3h1b0hvY0Ewd2oyVGV3MWk0bzJLYUpQMlFucnBKN0d4TWMwZFlOWERhUGpibWVlTFFmVUdpanZiclFOUEdaSXVBR0otbUF2OTk4VlY4ei1nSjRlVXRXRlVQSjUtYnZGcWNVNVR5NVpyb1c1OVlZclZUWVRGblRWUWpKLWNadTloSjByaGhlbzhFUTBubHB1RU9XTFV6VWwyY3dvQTdybHAzc9IBuAFBVV95cUxNdDVQcGpXaC1LY0tXVjRPVFZMeUdna3ozTTZkVlJXanU2RFN4SmE4eDZpcVJGWFlYbDBMclBYQVZ5d2wycWVWTlgyeDN2ME9lVVdENl9YSm9GRmk3VnFhY2JTdHBrQzRtWGc1U0tjTUlWeTVVNUNObnVhRUVON3BhWmM2UHV1X1ljVDhxa1VLVnlSaXJkLTVSZEZNMklDcjlQOTBYeU40V04zR1V1UHo4RHBLRF9obS1T?oc=5",
@@ -382,7 +803,9 @@
       "query": "Lidl bér",
       "company_id": "lidl",
       "role_key": "store_manager",
-      "salary_values": [],
+      "salary_values": [
+        1000000
+      ],
       "salary_ranges": [],
       "raise_values": [],
       "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBkR3J3clNDeDJvZGlZTlpiaHNIY1FXenQ0TTduMG1VNmZmLW14X3RRT0U4V2ZXQUl0WENGekxaYUItZk5hSVJSV2N2ZTMtWEpSUm5jNlcxa3lTWi14cEE?oc=5",
@@ -402,7 +825,9 @@
       "query": "Lidl bér",
       "company_id": "lidl",
       "role_key": null,
-      "salary_values": [],
+      "salary_values": [
+        674000
+      ],
       "salary_ranges": [],
       "raise_values": [],
       "source_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOal9zdlVZY0w0T1ZSWTBYQjhJNkl1OFRNRzdjRU5xbWpuNkxzU3lmd3JYajZjbGFQT2ZtbE51Qy1aSS02YjliUTgyYzF2WVFzbXhKOWotY0U2ekVkbDZ5S3pFS0V1bTNFQ0lPLWhQd1NLRUt0Y3pPVi01VVhhZUdMaEc3ZVlDdGtYUzJpNEhQWjNXb0NxREc5ZE55a2tzaFN5S1BGRDhIVW9ZNGo0UjBVMVFkcXQ?oc=5",
@@ -461,8 +886,10 @@
     {
       "query": "Lidl béremelés",
       "company_id": "lidl",
-      "role_key": null,
-      "salary_values": [],
+      "role_key": "stocker",
+      "salary_values": [
+        587000
+      ],
       "salary_ranges": [],
       "raise_values": [],
       "source_url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tRVVkOXVjc3Y4cTlPWkU2N0U1SU1jd0JXckEyTjRZNWFOZ2F0aGNndVZMNnhMejhZeGtjVHdjQUtrZkJONExHX3I0RzREYjFVU012bWNuYUwzTm9OZ1pnYjdjU2s5VTZmV2k0U1BPaVZ3VVZi?oc=5",
@@ -502,7 +929,9 @@
       "query": "Lidl béremelés",
       "company_id": "lidl",
       "role_key": null,
-      "salary_values": [],
+      "salary_values": [
+        674000
+      ],
       "salary_ranges": [],
       "raise_values": [],
       "source_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOal9zdlVZY0w0T1ZSWTBYQjhJNkl1OFRNRzdjRU5xbWpuNkxzU3lmd3JYajZjbGFQT2ZtbE51Qy1aSS02YjliUTgyYzF2WVFzbXhKOWotY0U2ekVkbDZ5S3pFS0V1bTNFQ0lPLWhQd1NLRUt0Y3pPVi01VVhhZUdMaEc3ZVlDdGtYUzJpNEhQWjNXb0NxREc5ZE55a2tzaFN5S1BGRDhIVW9ZNGo0UjBVMVFkcXQ?oc=5",
@@ -541,8 +970,10 @@
     {
       "query": "Lidl bruttó fizetés",
       "company_id": "lidl",
-      "role_key": null,
-      "salary_values": [],
+      "role_key": "stocker",
+      "salary_values": [
+        587000
+      ],
       "salary_ranges": [],
       "raise_values": [],
       "source_url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tRVVkOXVjc3Y4cTlPWkU2N0U1SU1jd0JXckEyTjRZNWFOZ2F0aGNndVZMNnhMejhZeGtjVHdjQUtrZkJONExHX3I0RzREYjFVU012bWNuYUwzTm9OZ1pnYjdjU2s5VTZmV2k0U1BPaVZ3VVZi?oc=5",
@@ -562,7 +993,9 @@
       "query": "Lidl bruttó fizetés",
       "company_id": "lidl",
       "role_key": "store_manager",
-      "salary_values": [],
+      "salary_values": [
+        1000000
+      ],
       "salary_ranges": [],
       "raise_values": [],
       "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBkR3J3clNDeDJvZGlZTlpiaHNIY1FXenQ0TTduMG1VNmZmLW14X3RRT0U4V2ZXQUl0WENGekxaYUItZk5hSVJSV2N2ZTMtWEpSUm5jNlcxa3lTWi14cEE?oc=5",
@@ -572,7 +1005,21 @@
       "query": "Lidl bruttó fizetés",
       "company_id": "lidl",
       "role_key": "store_manager",
-      "salary_values": [],
+      "salary_values": [
+        1000000
+      ],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPTUxzUTVtREFSOEhhUllubW5WcDRBTVhiNVp6UV9ueUlaYnR5ZF85N0FPLVZfR1czdWtEM0VKUEZWSmp3R2FuZFZjTi1HVDJkVVNPTURGWGo5TmxDaDZZTjZzRF8zMnQ4RHNyVVo2R1lZODVqVE9PT0VuTTBsMFRrQV8wcHM?oc=5",
+      "text": "Egymilliós fizetéssel csábít üzletvezetőket az Aldi és a Lidl - 24.hu. Egymilliós fizetéssel csábít üzletvezetőket az Aldi és a Lidl 24.hu"
+    },
+    {
+      "query": "Lidl bruttó fizetés",
+      "company_id": "lidl",
+      "role_key": "store_manager",
+      "salary_values": [
+        1000000
+      ],
       "salary_ranges": [],
       "raise_values": [],
       "source_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQX2U3MTdmNDhlM3h1b0hvY0Ewd2oyVGV3MWk0bzJLYUpQMlFucnBKN0d4TWMwZFlOWERhUGpibWVlTFFmVUdpanZiclFOUEdaSXVBR0otbUF2OTk4VlY4ei1nSjRlVXRXRlVQSjUtYnZGcWNVNVR5NVpyb1c1OVlZclZUWVRGblRWUWpKLWNadTloSjByaGhlbzhFUTBubHB1RU9XTFV6VWwyY3dvQTdybHAzc9IBuAFBVV95cUxNdDVQcGpXaC1LY0tXVjRPVFZMeUdna3ozTTZkVlJXanU2RFN4SmE4eDZpcVJGWFlYbDBMclBYQVZ5d2wycWVWTlgyeDN2ME9lVVdENl9YSm9GRmk3VnFhY2JTdHBrQzRtWGc1U0tjTUlWeTVVNUNObnVhRUVON3BhWmM2UHV1X1ljVDhxa1VLVnlSaXJkLTVSZEZNMklDcjlQOTBYeU40V04zR1V1UHo4RHBLRF9obS1T?oc=5",
@@ -582,7 +1029,9 @@
       "query": "Lidl bruttó fizetés",
       "company_id": "aldi",
       "role_key": null,
-      "salary_values": [],
+      "salary_values": [
+        800000
+      ],
       "salary_ranges": [],
       "raise_values": [],
       "source_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBnNWlqbEZndkRoVmhITzctMzh6UGU1UnhiX1l0M2FoZVpOb1g0Skx0UmFyX1M3UjVYV2NvNXdfU29xRGVNeDdJUXBGdVE2YjFwR3ZqWGJDbWVCQQ?oc=5",
@@ -592,7 +1041,9 @@
       "query": "Lidl bruttó fizetés",
       "company_id": "lidl",
       "role_key": null,
-      "salary_values": [],
+      "salary_values": [
+        674000
+      ],
       "salary_ranges": [],
       "raise_values": [],
       "source_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOal9zdlVZY0w0T1ZSWTBYQjhJNkl1OFRNRzdjRU5xbWpuNkxzU3lmd3JYajZjbGFQT2ZtbE51Qy1aSS02YjliUTgyYzF2WVFzbXhKOWotY0U2ekVkbDZ5S3pFS0V1bTNFQ0lPLWhQd1NLRUt0Y3pPVi01VVhhZUdMaEc3ZVlDdGtYUzJpNEhQWjNXb0NxREc5ZE55a2tzaFN5S1BGRDhIVW9ZNGo0UjBVMVFkcXQ?oc=5",
@@ -619,6 +1070,48 @@
       "text": "Mennyit kapnak a diákmunkások a Tescóban, Lidlben, Aldiban? - 24.hu. Mennyit kapnak a diákmunkások a Tescóban, Lidlben, Aldiban? 24.hu"
     },
     {
+      "query": "Lidl bruttó bér",
+      "company_id": "lidl",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBJWWhPLUs4S3hwakExc2J3UElUeXJ6R2xXdUdtOFd6S21BT2k0RnMwdEY1b0ZyZ2YzYVM0aTBXZjhmdWRJZHl4aWIyWmdWaFRjSVlwZk9vTVJldTdXYjlsRjB3?oc=5",
+      "text": "Megvan, mennyit kereshetnek a lidlesek az idei bérfejlesztés után - 24.hu. Megvan, mennyit kereshetnek a lidlesek az idei bérfejlesztés után 24.hu"
+    },
+    {
+      "query": "Lidl bruttó bér",
+      "company_id": "lidl",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOWnM0d3JlYWRvSDVCZEdrZnc4WkJnYXprSFhveHVlc3psYjdmWjFDSTdMYi1KNGJ5eWJCdDJmbjZvQnA1Q0piVlZPZnp6N2Q3OGNnb0ptMXVRMHFhYkdCdG1CTnktRDJYTHZTZHVDWG1scTZhbXJTMFlJLV9jZllnSWhuRjF4YkNKVG1rT25iTThkTVlzYnpZVXROTElxZnfSAaQBQVVfeXFMUDZENE0xWmZpT2NuYWtoaGdpcXlMNDlERGZPZ3piMjdncXNVcGN1TmJOcUR5RDJRTnl3aWh6Z0V3TURtTDVUR2JMYzJFc240ZFp2cWsxUW1jeWJ0SUJvaGNXNHB3dXVZeklzSXMySU1lUFNuRlZPcTV4LXFCSElNdm9ZN1BZcl9XaS1rOVhON2poeXJoVUtEOVNjZEZocWNWTkFWWjk?oc=5",
+      "text": "Kiderült, mennyit keres egy idénymunkás a Lidlnél - Portfolio.hu. Kiderült, mennyit keres egy idénymunkás a Lidlnél Portfolio.hu"
+    },
+    {
+      "query": "Lidl bruttó bér",
+      "company_id": "lidl",
+      "role_key": "store_manager",
+      "salary_values": [
+        1000000
+      ],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQX2U3MTdmNDhlM3h1b0hvY0Ewd2oyVGV3MWk0bzJLYUpQMlFucnBKN0d4TWMwZFlOWERhUGpibWVlTFFmVUdpanZiclFOUEdaSXVBR0otbUF2OTk4VlY4ei1nSjRlVXRXRlVQSjUtYnZGcWNVNVR5NVpyb1c1OVlZclZUWVRGblRWUWpKLWNadTloSjByaGhlbzhFUTBubHB1RU9XTFV6VWwyY3dvQTdybHAzc9IBuAFBVV95cUxNdDVQcGpXaC1LY0tXVjRPVFZMeUdna3ozTTZkVlJXanU2RFN4SmE4eDZpcVJGWFlYbDBMclBYQVZ5d2wycWVWTlgyeDN2ME9lVVdENl9YSm9GRmk3VnFhY2JTdHBrQzRtWGc1U0tjTUlWeTVVNUNObnVhRUVON3BhWmM2UHV1X1ljVDhxa1VLVnlSaXJkLTVSZEZNMklDcjlQOTBYeU40V04zR1V1UHo4RHBLRF9obS1T?oc=5",
+      "text": "Millió körüli bruttóval csábít üzletvezetőket az Aldi és a Lidl - Portfolio.hu. Millió körüli bruttóval csábít üzletvezetőket az Aldi és a Lidl Portfolio.hu"
+    },
+    {
+      "query": "Lidl bruttó bér",
+      "company_id": "lidl",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPMUxJMExLZ3o3ai1sTGh3eVVJLTlmSnZvXzZRNzFXUXlibjdZTUxDMkpFUXY5S1V3N1RLcXZKUGdoZlY2MnRkSERHelczZ1pkY2tXSXB5dUhZVmZJRGVKQUJabTR1ZG1pNzczdUVKa0c2QUpvUkNrb0tsSjZZVFdtMnM3ZTMwNXlmUFhSTEJhOFcwSzlvdlloeVBDd0hjMmgxTWFlWGNjdw?oc=5",
+      "text": "Kiterítette lapjait a Lidl: ennyi a fizetés az éves béremelés előtt - 24.hu. Kiterítette lapjait a Lidl: ennyi a fizetés az éves béremelés előtt 24.hu"
+    },
+    {
       "query": "Lidl árufeltöltő fizetés",
       "company_id": "lidl",
       "role_key": null,
@@ -627,6 +1120,70 @@
       "raise_values": [],
       "source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNY1JUZ2pQcWtoTHlvNi1fS0lQdUNFLVBqb1RtWGdvYXM1cGxYZXlwSy1FdXBiNmZibV83U3JyQW9SYmo4ZzVEVXFUNVJGQ0J4Sk9kZzRraHVScGdPYTA4TUxveFMwMU1lUXNlUUJ4TVo4d2lTVjdiSUtPVmNkR2NCQjR5N0JZamdRcWFUY3lZaXFjWU55cDVGYQ?oc=5",
       "text": "Mennyit kapnak a diákmunkások a Tescóban, Lidlben, Aldiban? - 24.hu. Mennyit kapnak a diákmunkások a Tescóban, Lidlben, Aldiban? 24.hu"
+    },
+    {
+      "query": "Lidl áruházi dolgozó fizetés",
+      "company_id": "lidl",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNa25VNlhYMDU2MGVnOHZmYXRCQkhON2ZJb1FOVVhMaFFlckRXdmxyUFozTkUzU1Z3UnNCaEVtZVFNNGxldEFJRjZteUJPam5pRWlTT21jcTdLcXFUTGFQS1hGaG11SHE4RUR5MkY3WDJqTldNUFVGVFJ1STIwalo1MkdIeUtTdWvSAYwBQVVfeXFMTWRoMXFXeFJlRjR1cm1OUEF6N0RqSWoycnlSVDhXTnhMeUdwOFlEYUh6c3QydmpqdGF1REFGSF9rd0VXVFBlWTc0bmpjcjFEaEU0TVFlYjBBUnh3N1VLMzR1U0FfNUkyb1hTOW00SmlxR2hmWkNhMlgxTmhXR0xWUjVCVGlnc2tSMGpIdjA?oc=5",
+      "text": "Új fizetési mód jön a Lidl-ben - Portfolio.hu. Új fizetési mód jön a Lidl-ben Portfolio.hu"
+    },
+    {
+      "query": "Lidl áruházi dolgozó fizetés",
+      "company_id": "aldi",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE11TTIwWGZqUzFtN3Z5WHItZk14cDN2MUNVOVdXSW5oM0F6blBSZU56RmkwUndXYXJKaG84N1F0cWVRcFplRk1KRHYzdWJYVkNTNVVWTW5UbzhGM3BxSlh1Z0lpU2o3SG4wWEltUllKN0lLdURadTNwSDR4OA?oc=5",
+      "text": "Megvan, mennyivel emeli a béreket a Tesco, a Penny, az Auchan és az Aldi - 24.hu. Megvan, mennyivel emeli a béreket a Tesco, a Penny, az Auchan és az Aldi 24.hu"
+    },
+    {
+      "query": "Lidl áruházi dolgozó fizetés",
+      "company_id": "lidl",
+      "role_key": "stocker",
+      "salary_values": [
+        587000
+      ],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tRVVkOXVjc3Y4cTlPWkU2N0U1SU1jd0JXckEyTjRZNWFOZ2F0aGNndVZMNnhMejhZeGtjVHdjQUtrZkJONExHX3I0RzREYjFVU012bWNuYUwzTm9OZ1pnYjdjU2s5VTZmV2k0U1BPaVZ3VVZi?oc=5",
+      "text": "Vállalkozás: Lidl: bruttó 587 ezer is járhat az áruházi dolgozóknak az újabb béremelés után - | hvg.hu. Vállalkozás: Lidl: bruttó 587 ezer is járhat az áruházi dolgozóknak az újabb béremelés után | hvg.hu"
+    },
+    {
+      "query": "Lidl áruházi dolgozó fizetés",
+      "company_id": "lidl",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPMUxJMExLZ3o3ai1sTGh3eVVJLTlmSnZvXzZRNzFXUXlibjdZTUxDMkpFUXY5S1V3N1RLcXZKUGdoZlY2MnRkSERHelczZ1pkY2tXSXB5dUhZVmZJRGVKQUJabTR1ZG1pNzczdUVKa0c2QUpvUkNrb0tsSjZZVFdtMnM3ZTMwNXlmUFhSTEJhOFcwSzlvdlloeVBDd0hjMmgxTWFlWGNjdw?oc=5",
+      "text": "Kiterítette lapjait a Lidl: ennyi a fizetés az éves béremelés előtt - 24.hu. Kiterítette lapjait a Lidl: ennyi a fizetés az éves béremelés előtt 24.hu"
+    },
+    {
+      "query": "Lidl áruházi dolgozó fizetés",
+      "company_id": "lidl",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPX3IyWXR1NDI0LUZvbEpyTUotRDJCYVhjWjJrcFl5cXJUS3ZBNUJ5N1lEVXFhMzhnWUN5cnB2U2R3Sks5ZUV1NUZoNUFQbmt6TzFYNURGSmFNSXZLblFyQkthUjFYeXZSVmtHZzAyWW5hR0VpR0RxNUxyOV9hNkdUeDU1MkpqZ05yUGJaUFZ5WS1fZUduTm1LSzVsZ2J5eXU2eTJXNmVpcFJSZWZwaUZnVVVzOWVWTHc?oc=5",
+      "text": "A Lidl irodájában dolgoznak a magyar beszerzés Top Gunjai: Maverick I., II. és III. - 24.hu. A Lidl irodájában dolgoznak a magyar beszerzés Top Gunjai: Maverick I., II. és III. 24.hu"
+    },
+    {
+      "query": "Lidl áruházi dolgozó fizetés",
+      "company_id": "lidl",
+      "role_key": null,
+      "salary_values": [
+        674000
+      ],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOal9zdlVZY0w0T1ZSWTBYQjhJNkl1OFRNRzdjRU5xbWpuNkxzU3lmd3JYajZjbGFQT2ZtbE51Qy1aSS02YjliUTgyYzF2WVFzbXhKOWotY0U2ekVkbDZ5S3pFS0V1bTNFQ0lPLWhQd1NLRUt0Y3pPVi01VVhhZUdMaEc3ZVlDdGtYUzJpNEhQWjNXb0NxREc5ZE55a2tzaFN5S1BGRDhIVW9ZNGo0UjBVMVFkcXQ?oc=5",
+      "text": "Lidl-vezér a 674 ezres fizetésről: \"nem ez a megszokott munkáltatói hozzáállás\" - 24.hu. Lidl-vezér a 674 ezres fizetésről: \"nem ez a megszokott munkáltatói hozzáállás\" 24.hu"
     },
     {
       "query": "Lidl raktári dolgozó fizetés",
@@ -641,8 +1198,10 @@
     {
       "query": "Lidl raktári dolgozó fizetés",
       "company_id": "lidl",
-      "role_key": null,
-      "salary_values": [],
+      "role_key": "stocker",
+      "salary_values": [
+        587000
+      ],
       "salary_ranges": [],
       "raise_values": [],
       "source_url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tRVVkOXVjc3Y4cTlPWkU2N0U1SU1jd0JXckEyTjRZNWFOZ2F0aGNndVZMNnhMejhZeGtjVHdjQUtrZkJONExHX3I0RzREYjFVU012bWNuYUwzTm9OZ1pnYjdjU2s5VTZmV2k0U1BPaVZ3VVZi?oc=5",
@@ -652,7 +1211,9 @@
       "query": "Lidl üzletvezető fizetés",
       "company_id": "lidl",
       "role_key": "store_manager",
-      "salary_values": [],
+      "salary_values": [
+        1000000
+      ],
       "salary_ranges": [],
       "raise_values": [],
       "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBkR3J3clNDeDJvZGlZTlpiaHNIY1FXenQ0TTduMG1VNmZmLW14X3RRT0U4V2ZXQUl0WENGekxaYUItZk5hSVJSV2N2ZTMtWEpSUm5jNlcxa3lTWi14cEE?oc=5",
@@ -762,7 +1323,9 @@
       "query": "Lidl Portfolio béremelés",
       "company_id": "lidl",
       "role_key": "store_manager",
-      "salary_values": [],
+      "salary_values": [
+        1000000
+      ],
       "salary_ranges": [],
       "raise_values": [],
       "source_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQX2U3MTdmNDhlM3h1b0hvY0Ewd2oyVGV3MWk0bzJLYUpQMlFucnBKN0d4TWMwZFlOWERhUGpibWVlTFFmVUdpanZiclFOUEdaSXVBR0otbUF2OTk4VlY4ei1nSjRlVXRXRlVQSjUtYnZGcWNVNVR5NVpyb1c1OVlZclZUWVRGblRWUWpKLWNadTloSjByaGhlbzhFUTBubHB1RU9XTFV6VWwyY3dvQTdybHAzc9IBuAFBVV95cUxNdDVQcGpXaC1LY0tXVjRPVFZMeUdna3ozTTZkVlJXanU2RFN4SmE4eDZpcVJGWFlYbDBMclBYQVZ5d2wycWVWTlgyeDN2ME9lVVdENl9YSm9GRmk3VnFhY2JTdHBrQzRtWGc1U0tjTUlWeTVVNUNObnVhRUVON3BhWmM2UHV1X1ljVDhxa1VLVnlSaXJkLTVSZEZNMklDcjlQOTBYeU40V04zR1V1UHo4RHBLRF9obS1T?oc=5",
@@ -884,7 +1447,9 @@
       "query": "ALDI fizetés",
       "company_id": "aldi",
       "role_key": null,
-      "salary_values": [],
+      "salary_values": [
+        550000
+      ],
       "salary_ranges": [],
       "raise_values": [],
       "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQamg2M09CTm12cFRKOHQ4RGl3Q190RkhUWUpOWEFUOXI4ckVVUDhyZGZpRmtvaEkzSTd3MGRPdlR4QUh3bWFQWGhBMjlCMmRGRnBUUUFmTEdsQjB2NG5oYWVYaVdiUXloNzg2ZXpDSF9qTFVobEZ6TmFXV1llNkZCTklvREhsYWt1SnFqT0wzN3pMXy04SUxSQlZVRQ?oc=5",
@@ -894,7 +1459,9 @@
       "query": "ALDI fizetés",
       "company_id": "aldi",
       "role_key": null,
-      "salary_values": [],
+      "salary_values": [
+        800000
+      ],
       "salary_ranges": [],
       "raise_values": [],
       "source_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBnNWlqbEZndkRoVmhITzctMzh6UGU1UnhiX1l0M2FoZVpOb1g0Skx0UmFyX1M3UjVYV2NvNXdfU29xRGVNeDdJUXBGdVE2YjFwR3ZqWGJDbWVCQQ?oc=5",
@@ -914,7 +1481,9 @@
       "query": "ALDI fizetés",
       "company_id": "lidl",
       "role_key": "store_manager",
-      "salary_values": [],
+      "salary_values": [
+        1000000
+      ],
       "salary_ranges": [],
       "raise_values": [],
       "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBkR3J3clNDeDJvZGlZTlpiaHNIY1FXenQ0TTduMG1VNmZmLW14X3RRT0U4V2ZXQUl0WENGekxaYUItZk5hSVJSV2N2ZTMtWEpSUm5jNlcxa3lTWi14cEE?oc=5",
@@ -922,13 +1491,15 @@
     },
     {
       "query": "ALDI fizetés",
-      "company_id": "aldi",
-      "role_key": null,
-      "salary_values": [],
+      "company_id": "lidl",
+      "role_key": "store_manager",
+      "salary_values": [
+        1000000
+      ],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQM2szS1dTaWtRbEJYMllfODE0S2dKbERHNkk1V1pIeHBkNXFSend1TDB2M05CTk04N1Y5Ymd1aEgtcTdrN25ETUJCcGg5OWVObmdCcTBhVkJESzhjVXhMb1BOXzF3RDd2Wlhwb0JDSzIySXBQeEdsaS1tUWh4eE1KZGNoS3VEd0pKOGdj?oc=5",
-      "text": "Megnéztük, kik dolgoznak ennyiért az Aldiban - 24.hu. Megnéztük, kik dolgoznak ennyiért az Aldiban 24.hu"
+      "source_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPTUxzUTVtREFSOEhhUllubW5WcDRBTVhiNVp6UV9ueUlaYnR5ZF85N0FPLVZfR1czdWtEM0VKUEZWSmp3R2FuZFZjTi1HVDJkVVNPTURGWGo5TmxDaDZZTjZzRF8zMnQ4RHNyVVo2R1lZODVqVE9PT0VuTTBsMFRrQV8wcHM?oc=5",
+      "text": "Egymilliós fizetéssel csábít üzletvezetőket az Aldi és a Lidl - 24.hu. Egymilliós fizetéssel csábít üzletvezetőket az Aldi és a Lidl 24.hu"
     },
     {
       "query": "ALDI bér",
@@ -1036,7 +1607,9 @@
       "query": "ALDI bér",
       "company_id": "aldi",
       "role_key": null,
-      "salary_values": [],
+      "salary_values": [
+        550000
+      ],
       "salary_ranges": [],
       "raise_values": [],
       "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQamg2M09CTm12cFRKOHQ4RGl3Q190RkhUWUpOWEFUOXI4ckVVUDhyZGZpRmtvaEkzSTd3MGRPdlR4QUh3bWFQWGhBMjlCMmRGRnBUUUFmTEdsQjB2NG5oYWVYaVdiUXloNzg2ZXpDSF9qTFVobEZ6TmFXV1llNkZCTklvREhsYWt1SnFqT0wzN3pMXy04SUxSQlZVRQ?oc=5",
@@ -1046,7 +1619,9 @@
       "query": "ALDI bér",
       "company_id": "aldi",
       "role_key": null,
-      "salary_values": [],
+      "salary_values": [
+        800000
+      ],
       "salary_ranges": [],
       "raise_values": [],
       "source_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBnNWlqbEZndkRoVmhITzctMzh6UGU1UnhiX1l0M2FoZVpOb1g0Skx0UmFyX1M3UjVYV2NvNXdfU29xRGVNeDdJUXBGdVE2YjFwR3ZqWGJDbWVCQQ?oc=5",
@@ -1056,7 +1631,9 @@
       "query": "ALDI bér",
       "company_id": "lidl",
       "role_key": "store_manager",
-      "salary_values": [],
+      "salary_values": [
+        1000000
+      ],
       "salary_ranges": [],
       "raise_values": [],
       "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBkR3J3clNDeDJvZGlZTlpiaHNIY1FXenQ0TTduMG1VNmZmLW14X3RRT0U4V2ZXQUl0WENGekxaYUItZk5hSVJSV2N2ZTMtWEpSUm5jNlcxa3lTWi14cEE?oc=5",
@@ -1213,6 +1790,384 @@
       "raise_values": [],
       "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNNENRdUk3MXdkVUtPcG5EWFhuN2dBU0RrVFdpSEowb0lRWDNna1lpSjZwQmRqWWFwWXZxdlRFYkFPdDM5aVlaRG9XQ09oMzhHSVYxam1PT0lieEc5Zm5uenBfdDFQTmFPUXNmWmNiU05kanNwSXotdVg4d214LUtjbzVNekRpN1VNNkRmdkNKV1QwckJqc3BQWUJzMGFpMXZ5VVo3V1lHY2FDNGxidGdIWno0TnFBYzQ?oc=5",
       "text": "Vállalkozás: Bruttó 595 200 forintot is lehet majd keresni nyáron az Aldi balatoni üzleteiben - | hvg.hu. Vállalkozás: Bruttó 595 200 forintot is lehet majd keresni nyáron az Aldi balatoni üzleteiben | hvg.hu"
+    },
+    {
+      "query": "ALDI bruttó fizetés",
+      "company_id": "aldi",
+      "role_key": null,
+      "salary_values": [
+        550000
+      ],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQamg2M09CTm12cFRKOHQ4RGl3Q190RkhUWUpOWEFUOXI4ckVVUDhyZGZpRmtvaEkzSTd3MGRPdlR4QUh3bWFQWGhBMjlCMmRGRnBUUUFmTEdsQjB2NG5oYWVYaVdiUXloNzg2ZXpDSF9qTFVobEZ6TmFXV1llNkZCTklvREhsYWt1SnFqT0wzN3pMXy04SUxSQlZVRQ?oc=5",
+      "text": "Vállalkozás: Bruttó 550 ezerért keres dolgozókat a nyárra az Aldi - | hvg.hu. Vállalkozás: Bruttó 550 ezerért keres dolgozókat a nyárra az Aldi | hvg.hu"
+    },
+    {
+      "query": "ALDI bruttó fizetés",
+      "company_id": "aldi",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQRXpFT3VvQ2hvaUVDR2tkMEF1eUNSa3lfaWROWkpHZU0wb3I1R3BpQzlQNkI0cGM1aU95dHRHNDlGb0duWHNJUnEzdHNzdzl0LTBoX2dZYVN1ZWtZZkEzRkFKeGp0TmJtSFlxcXNyazI0bXBiYWFvZ1QzQ0JKVWJTdmxEWWZpcXNKWmIzY3B5UlFoRzBXREZFNVpJWTdYY0NYN2ZiT0lsUdIBrAFBVV95cUxPNDVGM0NNY3YzcmhZOUdFSEpKU0RiQVpKSmNzUG01eWctcFlQLUotN2tWdXM0X1k2MlNOWFhlQXZ0STRCbkVRc3VQUlNQVnNkZDM4Ulc4d3llWDJ0dEZvdzIwTEVhZW5paHc3dHNjY204VE41MGFhTE8xTmd4NEdoOVNVaTg4LXFnY0JleDFaSEFxZXZHTW5GRkVacTlwRG5yNHNNV0c3OW9OT0Va?oc=5",
+      "text": "Rendkívüli béremelést jelentett be Magyarországon az Aldi - Portfolio.hu. Rendkívüli béremelést jelentett be Magyarországon az Aldi Portfolio.hu"
+    },
+    {
+      "query": "ALDI bruttó fizetés",
+      "company_id": "aldi",
+      "role_key": null,
+      "salary_values": [
+        800000
+      ],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBnNWlqbEZndkRoVmhITzctMzh6UGU1UnhiX1l0M2FoZVpOb1g0Skx0UmFyX1M3UjVYV2NvNXdfU29xRGVNeDdJUXBGdVE2YjFwR3ZqWGJDbWVCQQ?oc=5",
+      "text": "800 ezer nettó és céges BMW: az országos középérték 3,5-szeresét kapják az Aldi pályakezdő vezetői - | hvg.hu. 800 ezer nettó és céges BMW: az országos középérték 3,5-szeresét kapják az Aldi pályakezdő vezetői | hvg.hu"
+    },
+    {
+      "query": "ALDI bruttó fizetés",
+      "company_id": "lidl",
+      "role_key": "store_manager",
+      "salary_values": [
+        1000000
+      ],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPTUxzUTVtREFSOEhhUllubW5WcDRBTVhiNVp6UV9ueUlaYnR5ZF85N0FPLVZfR1czdWtEM0VKUEZWSmp3R2FuZFZjTi1HVDJkVVNPTURGWGo5TmxDaDZZTjZzRF8zMnQ4RHNyVVo2R1lZODVqVE9PT0VuTTBsMFRrQV8wcHM?oc=5",
+      "text": "Egymilliós fizetéssel csábít üzletvezetőket az Aldi és a Lidl - 24.hu. Egymilliós fizetéssel csábít üzletvezetőket az Aldi és a Lidl 24.hu"
+    },
+    {
+      "query": "ALDI bruttó bér",
+      "company_id": "aldi",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5PcWlDd3dodWE4YlNjb195OXZlaUVCNV8yQlF2YnA1NUFpc3o3VU5mR0lwckpSUGprbEVfc25NM2xES25remRBQ3NJdTI3ZGk0d0RJYmV2cUQwYlpQenZjZElkT1ppTTFxd2VlblZ1cnM1bnpMRXBSZlBGZFl0NjQ?oc=5",
+      "text": "Gazdaság: Béremeléssel indítja az évet az Aldi - | hvg.hu. Gazdaság: Béremeléssel indítja az évet az Aldi | hvg.hu"
+    },
+    {
+      "query": "ALDI bruttó bér",
+      "company_id": "aldi",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE11TTIwWGZqUzFtN3Z5WHItZk14cDN2MUNVOVdXSW5oM0F6blBSZU56RmkwUndXYXJKaG84N1F0cWVRcFplRk1KRHYzdWJYVkNTNVVWTW5UbzhGM3BxSlh1Z0lpU2o3SG4wWEltUllKN0lLdURadTNwSDR4OA?oc=5",
+      "text": "Megvan, mennyivel emeli a béreket a Tesco, a Penny, az Auchan és az Aldi - 24.hu. Megvan, mennyivel emeli a béreket a Tesco, a Penny, az Auchan és az Aldi 24.hu"
+    },
+    {
+      "query": "ALDI bruttó bér",
+      "company_id": "aldi",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOemhPclo4WWRwbVFsNDVqZVh5SGVla1N0dTMyaUxwYU9sTnFsejVPTHktSTlFeTJ0Y19Ra18wZFBPdmFZVWRFTVBNWU1fd1d5c3d0SEU4R0ZYa0V1amJaRlBsNG1LSjlxRnBHOTRCaWFyU19fTjlBZlJySUp1cXdkTHUta0NzUXVZbzhCRXJUMGtIX2ZQTVJj0gGcAUFVX3lxTE4wU05iWURxaURCc0s0Q3Bxc2g4NWtiaGtkd0RFQVlySjVBUnpBbHZsVzhBcFFpNUplaUR5S0tHOG9BT01MdkVyMVFWMXpZTU51U05OX3FBWVRuWmtaVUNhTjBKN3VqSllwb1lNNDhmUl8zX0VTZjZ2dU9EUVc5VFhuWkk4RktONldXS1EyaFVsb2c2WklzMWk5WHgwUA?oc=5",
+      "text": "Kiderült, mennyit keresnek az Aldi-dolgozók - Portfolio.hu. Kiderült, mennyit keresnek az Aldi-dolgozók Portfolio.hu"
+    },
+    {
+      "query": "ALDI bruttó bér",
+      "company_id": "aldi",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNUy1tcHROMXlEbnFLbHdoNlN6U1p1NU4tV3dzSGNzcEctSmN0ZnR5STNPQXlxc3lVWnN5VGxQXzJ6SnQ4TS00MWUzOWE0dGxDV2M3R0lmaWtJeHBrOHpXQUlqMHBaUDRxeHhoLTIzTFItbjkyZC1IbFFCMmg5V3NoRU9KWGpCcHdtUFVqVklHMVRHd200Y3hWaDd6YzhZOXBW?oc=5",
+      "text": "Vállalkozás: Aldi: Nyolcszázalékos lesz a béremelés idén, félmillió felett a kezdő bruttó - | hvg.hu. Vállalkozás: Aldi: Nyolcszázalékos lesz a béremelés idén, félmillió felett a kezdő bruttó | hvg.hu"
+    },
+    {
+      "query": "ALDI bruttó bér",
+      "company_id": "aldi",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNQmJxT0k3eWRXVzJ4T1dFLXY2ZTBETkRLVnZubVZGVkZCTW1kd0VpQTdya2xhWU4xdHd1VWVKYmlXN1pnNGFpNHZRbnpvcW10dFN0VGR5Q2x0d3daRnVuYjBOY0JwOTJoQjY3MzhzcWFvTGtzUkJCUWZxWXhVSFhLYzF4Y05mNjRRZUJXVzBQcl9PMU82aGl2ZVl3Z3Y4V2FsTTZNM0FPYXI2M2ZD0gGyAUFVX3lxTE9JSjFyWFdyS0RXem12dXJCODQ4Nl9ZZmpyb05ja3otYllwX3JxdnJOT3A5dWpYOS1oc0dtMEdwWHFDWE1KYkVHcVYyZkpGVmx5ZzgxOWtYMWFiSDJPMjBXX2o4YXdzaXNNcUFmUHpTUTBleHRqUzFCNWdCQTNKNG1ULXY2YjVYWklnOWhTWXVGNFRYamdsQ0dlQ3B5RU1pM0xBQTBSdTdaRkZRRVMxc2wxcFE?oc=5",
+      "text": "Itt a bejelentés: kiderült, mennyit lehet keresni az Aldiban - Portfolio.hu. Itt a bejelentés: kiderült, mennyit lehet keresni az Aldiban Portfolio.hu"
+    },
+    {
+      "query": "ALDI bruttó bér",
+      "company_id": "aldi",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOVVZ1SklvM3NldGxjLWoybmNuN3piMkwzMTJQWllCY09CV2plRzQwdnRBN21LU1RzdGt3aEtEOGRIU05IUjlwcm93VUNnQVMwbVlKYmdyWE9FTHpYZnFWNGdqRzUyR1IxamRwcFNvcVlKWE9GV3FiVlFOOThMcC1OX1pKaW54dWN1YndiZnR3?oc=5",
+      "text": "Aldisok panaszkodtak, hogy az emelt bér mellett is kevesebbet keresnek, munkaidő-csökkentés miatt - 24.hu. Aldisok panaszkodtak, hogy az emelt bér mellett is kevesebbet keresnek, munkaidő-csökkentés miatt 24.hu"
+    },
+    {
+      "query": "ALDI bruttó bér",
+      "company_id": "aldi",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFB5a0NyN3p3MGpQMkxMQzVBMzJfUFhKNGZFRjBEaGx4b214enIwUEdMRC1XelB1VFNzUEZaRjRWR1loYTlIdENmb01zOVhwUXZoSTZYSmZkbW51dWw4LVlDN2VZRzU3NWhUSUlyRjBQWQ?oc=5",
+      "text": "Emeli a béreket az Aldi és a Spar is - 24.hu. Emeli a béreket az Aldi és a Spar is 24.hu"
+    },
+    {
+      "query": "ALDI bruttó bér",
+      "company_id": "aldi",
+      "role_key": null,
+      "salary_values": [
+        595200
+      ],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNNENRdUk3MXdkVUtPcG5EWFhuN2dBU0RrVFdpSEowb0lRWDNna1lpSjZwQmRqWWFwWXZxdlRFYkFPdDM5aVlaRG9XQ09oMzhHSVYxam1PT0lieEc5Zm5uenBfdDFQTmFPUXNmWmNiU05kanNwSXotdVg4d214LUtjbzVNekRpN1VNNkRmdkNKV1QwckJqc3BQWUJzMGFpMXZ5VVo3V1lHY2FDNGxidGdIWno0TnFBYzQ?oc=5",
+      "text": "Vállalkozás: Bruttó 595 200 forintot is lehet majd keresni nyáron az Aldi balatoni üzleteiben - | hvg.hu. Vállalkozás: Bruttó 595 200 forintot is lehet majd keresni nyáron az Aldi balatoni üzleteiben | hvg.hu"
+    },
+    {
+      "query": "ALDI bruttó bér",
+      "company_id": "aldi",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQRXpFT3VvQ2hvaUVDR2tkMEF1eUNSa3lfaWROWkpHZU0wb3I1R3BpQzlQNkI0cGM1aU95dHRHNDlGb0duWHNJUnEzdHNzdzl0LTBoX2dZYVN1ZWtZZkEzRkFKeGp0TmJtSFlxcXNyazI0bXBiYWFvZ1QzQ0JKVWJTdmxEWWZpcXNKWmIzY3B5UlFoRzBXREZFNVpJWTdYY0NYN2ZiT0lsUdIBrAFBVV95cUxPNDVGM0NNY3YzcmhZOUdFSEpKU0RiQVpKSmNzUG01eWctcFlQLUotN2tWdXM0X1k2MlNOWFhlQXZ0STRCbkVRc3VQUlNQVnNkZDM4Ulc4d3llWDJ0dEZvdzIwTEVhZW5paHc3dHNjY204VE41MGFhTE8xTmd4NEdoOVNVaTg4LXFnY0JleDFaSEFxZXZHTW5GRkVacTlwRG5yNHNNV0c3OW9OT0Va?oc=5",
+      "text": "Rendkívüli béremelést jelentett be Magyarországon az Aldi - Portfolio.hu. Rendkívüli béremelést jelentett be Magyarországon az Aldi Portfolio.hu"
+    },
+    {
+      "query": "ALDI bruttó bér",
+      "company_id": "lidl",
+      "role_key": "store_manager",
+      "salary_values": [
+        1000000
+      ],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQX2U3MTdmNDhlM3h1b0hvY0Ewd2oyVGV3MWk0bzJLYUpQMlFucnBKN0d4TWMwZFlOWERhUGpibWVlTFFmVUdpanZiclFOUEdaSXVBR0otbUF2OTk4VlY4ei1nSjRlVXRXRlVQSjUtYnZGcWNVNVR5NVpyb1c1OVlZclZUWVRGblRWUWpKLWNadTloSjByaGhlbzhFUTBubHB1RU9XTFV6VWwyY3dvQTdybHAzc9IBuAFBVV95cUxNdDVQcGpXaC1LY0tXVjRPVFZMeUdna3ozTTZkVlJXanU2RFN4SmE4eDZpcVJGWFlYbDBMclBYQVZ5d2wycWVWTlgyeDN2ME9lVVdENl9YSm9GRmk3VnFhY2JTdHBrQzRtWGc1U0tjTUlWeTVVNUNObnVhRUVON3BhWmM2UHV1X1ljVDhxa1VLVnlSaXJkLTVSZEZNMklDcjlQOTBYeU40V04zR1V1UHo4RHBLRF9obS1T?oc=5",
+      "text": "Millió körüli bruttóval csábít üzletvezetőket az Aldi és a Lidl - Portfolio.hu. Millió körüli bruttóval csábít üzletvezetőket az Aldi és a Lidl Portfolio.hu"
+    },
+    {
+      "query": "ALDI pénztáros fizetés",
+      "company_id": "aldi",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOemhPclo4WWRwbVFsNDVqZVh5SGVla1N0dTMyaUxwYU9sTnFsejVPTHktSTlFeTJ0Y19Ra18wZFBPdmFZVWRFTVBNWU1fd1d5c3d0SEU4R0ZYa0V1amJaRlBsNG1LSjlxRnBHOTRCaWFyU19fTjlBZlJySUp1cXdkTHUta0NzUXVZbzhCRXJUMGtIX2ZQTVJj0gGcAUFVX3lxTE4wU05iWURxaURCc0s0Q3Bxc2g4NWtiaGtkd0RFQVlySjVBUnpBbHZsVzhBcFFpNUplaUR5S0tHOG9BT01MdkVyMVFWMXpZTU51U05OX3FBWVRuWmtaVUNhTjBKN3VqSllwb1lNNDhmUl8zX0VTZjZ2dU9EUVc5VFhuWkk4RktONldXS1EyaFVsb2c2WklzMWk5WHgwUA?oc=5",
+      "text": "Kiderült, mennyit keresnek az Aldi-dolgozók - Portfolio.hu. Kiderült, mennyit keresnek az Aldi-dolgozók Portfolio.hu"
+    },
+    {
+      "query": "ALDI pénztáros fizetés",
+      "company_id": "aldi",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNUy1tcHROMXlEbnFLbHdoNlN6U1p1NU4tV3dzSGNzcEctSmN0ZnR5STNPQXlxc3lVWnN5VGxQXzJ6SnQ4TS00MWUzOWE0dGxDV2M3R0lmaWtJeHBrOHpXQUlqMHBaUDRxeHhoLTIzTFItbjkyZC1IbFFCMmg5V3NoRU9KWGpCcHdtUFVqVklHMVRHd200Y3hWaDd6YzhZOXBW?oc=5",
+      "text": "Vállalkozás: Aldi: Nyolcszázalékos lesz a béremelés idén, félmillió felett a kezdő bruttó - | hvg.hu. Vállalkozás: Aldi: Nyolcszázalékos lesz a béremelés idén, félmillió felett a kezdő bruttó | hvg.hu"
+    },
+    {
+      "query": "ALDI árufeltöltő fizetés",
+      "company_id": "aldi",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOemhPclo4WWRwbVFsNDVqZVh5SGVla1N0dTMyaUxwYU9sTnFsejVPTHktSTlFeTJ0Y19Ra18wZFBPdmFZVWRFTVBNWU1fd1d5c3d0SEU4R0ZYa0V1amJaRlBsNG1LSjlxRnBHOTRCaWFyU19fTjlBZlJySUp1cXdkTHUta0NzUXVZbzhCRXJUMGtIX2ZQTVJj0gGcAUFVX3lxTE4wU05iWURxaURCc0s0Q3Bxc2g4NWtiaGtkd0RFQVlySjVBUnpBbHZsVzhBcFFpNUplaUR5S0tHOG9BT01MdkVyMVFWMXpZTU51U05OX3FBWVRuWmtaVUNhTjBKN3VqSllwb1lNNDhmUl8zX0VTZjZ2dU9EUVc5VFhuWkk4RktONldXS1EyaFVsb2c2WklzMWk5WHgwUA?oc=5",
+      "text": "Kiderült, mennyit keresnek az Aldi-dolgozók - Portfolio.hu. Kiderült, mennyit keresnek az Aldi-dolgozók Portfolio.hu"
+    },
+    {
+      "query": "ALDI árufeltöltő fizetés",
+      "company_id": "aldi",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNQmJxT0k3eWRXVzJ4T1dFLXY2ZTBETkRLVnZubVZGVkZCTW1kd0VpQTdya2xhWU4xdHd1VWVKYmlXN1pnNGFpNHZRbnpvcW10dFN0VGR5Q2x0d3daRnVuYjBOY0JwOTJoQjY3MzhzcWFvTGtzUkJCUWZxWXhVSFhLYzF4Y05mNjRRZUJXVzBQcl9PMU82aGl2ZVl3Z3Y4V2FsTTZNM0FPYXI2M2ZD0gGyAUFVX3lxTE9JSjFyWFdyS0RXem12dXJCODQ4Nl9ZZmpyb05ja3otYllwX3JxdnJOT3A5dWpYOS1oc0dtMEdwWHFDWE1KYkVHcVYyZkpGVmx5ZzgxOWtYMWFiSDJPMjBXX2o4YXdzaXNNcUFmUHpTUTBleHRqUzFCNWdCQTNKNG1ULXY2YjVYWklnOWhTWXVGNFRYamdsQ0dlQ3B5RU1pM0xBQTBSdTdaRkZRRVMxc2wxcFE?oc=5",
+      "text": "Itt a bejelentés: kiderült, mennyit lehet keresni az Aldiban - Portfolio.hu. Itt a bejelentés: kiderült, mennyit lehet keresni az Aldiban Portfolio.hu"
+    },
+    {
+      "query": "ALDI áruházi dolgozó fizetés",
+      "company_id": "aldi",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5PcWlDd3dodWE4YlNjb195OXZlaUVCNV8yQlF2YnA1NUFpc3o3VU5mR0lwckpSUGprbEVfc25NM2xES25remRBQ3NJdTI3ZGk0d0RJYmV2cUQwYlpQenZjZElkT1ppTTFxd2VlblZ1cnM1bnpMRXBSZlBGZFl0NjQ?oc=5",
+      "text": "Gazdaság: Béremeléssel indítja az évet az Aldi - | hvg.hu. Gazdaság: Béremeléssel indítja az évet az Aldi | hvg.hu"
+    },
+    {
+      "query": "ALDI áruházi dolgozó fizetés",
+      "company_id": "aldi",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNQmJxT0k3eWRXVzJ4T1dFLXY2ZTBETkRLVnZubVZGVkZCTW1kd0VpQTdya2xhWU4xdHd1VWVKYmlXN1pnNGFpNHZRbnpvcW10dFN0VGR5Q2x0d3daRnVuYjBOY0JwOTJoQjY3MzhzcWFvTGtzUkJCUWZxWXhVSFhLYzF4Y05mNjRRZUJXVzBQcl9PMU82aGl2ZVl3Z3Y4V2FsTTZNM0FPYXI2M2ZD0gGyAUFVX3lxTE9JSjFyWFdyS0RXem12dXJCODQ4Nl9ZZmpyb05ja3otYllwX3JxdnJOT3A5dWpYOS1oc0dtMEdwWHFDWE1KYkVHcVYyZkpGVmx5ZzgxOWtYMWFiSDJPMjBXX2o4YXdzaXNNcUFmUHpTUTBleHRqUzFCNWdCQTNKNG1ULXY2YjVYWklnOWhTWXVGNFRYamdsQ0dlQ3B5RU1pM0xBQTBSdTdaRkZRRVMxc2wxcFE?oc=5",
+      "text": "Itt a bejelentés: kiderült, mennyit lehet keresni az Aldiban - Portfolio.hu. Itt a bejelentés: kiderült, mennyit lehet keresni az Aldiban Portfolio.hu"
+    },
+    {
+      "query": "ALDI áruházi dolgozó fizetés",
+      "company_id": "aldi",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE11TTIwWGZqUzFtN3Z5WHItZk14cDN2MUNVOVdXSW5oM0F6blBSZU56RmkwUndXYXJKaG84N1F0cWVRcFplRk1KRHYzdWJYVkNTNVVWTW5UbzhGM3BxSlh1Z0lpU2o3SG4wWEltUllKN0lLdURadTNwSDR4OA?oc=5",
+      "text": "Megvan, mennyivel emeli a béreket a Tesco, a Penny, az Auchan és az Aldi - 24.hu. Megvan, mennyivel emeli a béreket a Tesco, a Penny, az Auchan és az Aldi 24.hu"
+    },
+    {
+      "query": "ALDI áruházi dolgozó fizetés",
+      "company_id": "aldi",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNUy1tcHROMXlEbnFLbHdoNlN6U1p1NU4tV3dzSGNzcEctSmN0ZnR5STNPQXlxc3lVWnN5VGxQXzJ6SnQ4TS00MWUzOWE0dGxDV2M3R0lmaWtJeHBrOHpXQUlqMHBaUDRxeHhoLTIzTFItbjkyZC1IbFFCMmg5V3NoRU9KWGpCcHdtUFVqVklHMVRHd200Y3hWaDd6YzhZOXBW?oc=5",
+      "text": "Vállalkozás: Aldi: Nyolcszázalékos lesz a béremelés idén, félmillió felett a kezdő bruttó - | hvg.hu. Vállalkozás: Aldi: Nyolcszázalékos lesz a béremelés idén, félmillió felett a kezdő bruttó | hvg.hu"
+    },
+    {
+      "query": "ALDI áruházi dolgozó fizetés",
+      "company_id": "aldi",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOemhPclo4WWRwbVFsNDVqZVh5SGVla1N0dTMyaUxwYU9sTnFsejVPTHktSTlFeTJ0Y19Ra18wZFBPdmFZVWRFTVBNWU1fd1d5c3d0SEU4R0ZYa0V1amJaRlBsNG1LSjlxRnBHOTRCaWFyU19fTjlBZlJySUp1cXdkTHUta0NzUXVZbzhCRXJUMGtIX2ZQTVJj0gGcAUFVX3lxTE4wU05iWURxaURCc0s0Q3Bxc2g4NWtiaGtkd0RFQVlySjVBUnpBbHZsVzhBcFFpNUplaUR5S0tHOG9BT01MdkVyMVFWMXpZTU51U05OX3FBWVRuWmtaVUNhTjBKN3VqSllwb1lNNDhmUl8zX0VTZjZ2dU9EUVc5VFhuWkk4RktONldXS1EyaFVsb2c2WklzMWk5WHgwUA?oc=5",
+      "text": "Kiderült, mennyit keresnek az Aldi-dolgozók - Portfolio.hu. Kiderült, mennyit keresnek az Aldi-dolgozók Portfolio.hu"
+    },
+    {
+      "query": "ALDI áruházi dolgozó fizetés",
+      "company_id": "aldi",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQRXpFT3VvQ2hvaUVDR2tkMEF1eUNSa3lfaWROWkpHZU0wb3I1R3BpQzlQNkI0cGM1aU95dHRHNDlGb0duWHNJUnEzdHNzdzl0LTBoX2dZYVN1ZWtZZkEzRkFKeGp0TmJtSFlxcXNyazI0bXBiYWFvZ1QzQ0JKVWJTdmxEWWZpcXNKWmIzY3B5UlFoRzBXREZFNVpJWTdYY0NYN2ZiT0lsUdIBrAFBVV95cUxPNDVGM0NNY3YzcmhZOUdFSEpKU0RiQVpKSmNzUG01eWctcFlQLUotN2tWdXM0X1k2MlNOWFhlQXZ0STRCbkVRc3VQUlNQVnNkZDM4Ulc4d3llWDJ0dEZvdzIwTEVhZW5paHc3dHNjY204VE41MGFhTE8xTmd4NEdoOVNVaTg4LXFnY0JleDFaSEFxZXZHTW5GRkVacTlwRG5yNHNNV0c3OW9OT0Va?oc=5",
+      "text": "Rendkívüli béremelést jelentett be Magyarországon az Aldi - Portfolio.hu. Rendkívüli béremelést jelentett be Magyarországon az Aldi Portfolio.hu"
+    },
+    {
+      "query": "ALDI raktári dolgozó fizetés",
+      "company_id": "aldi",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE11TTIwWGZqUzFtN3Z5WHItZk14cDN2MUNVOVdXSW5oM0F6blBSZU56RmkwUndXYXJKaG84N1F0cWVRcFplRk1KRHYzdWJYVkNTNVVWTW5UbzhGM3BxSlh1Z0lpU2o3SG4wWEltUllKN0lLdURadTNwSDR4OA?oc=5",
+      "text": "Megvan, mennyivel emeli a béreket a Tesco, a Penny, az Auchan és az Aldi - 24.hu. Megvan, mennyivel emeli a béreket a Tesco, a Penny, az Auchan és az Aldi 24.hu"
+    },
+    {
+      "query": "ALDI üzletvezető fizetés",
+      "company_id": "aldi",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNQmJxT0k3eWRXVzJ4T1dFLXY2ZTBETkRLVnZubVZGVkZCTW1kd0VpQTdya2xhWU4xdHd1VWVKYmlXN1pnNGFpNHZRbnpvcW10dFN0VGR5Q2x0d3daRnVuYjBOY0JwOTJoQjY3MzhzcWFvTGtzUkJCUWZxWXhVSFhLYzF4Y05mNjRRZUJXVzBQcl9PMU82aGl2ZVl3Z3Y4V2FsTTZNM0FPYXI2M2ZD0gGyAUFVX3lxTE9JSjFyWFdyS0RXem12dXJCODQ4Nl9ZZmpyb05ja3otYllwX3JxdnJOT3A5dWpYOS1oc0dtMEdwWHFDWE1KYkVHcVYyZkpGVmx5ZzgxOWtYMWFiSDJPMjBXX2o4YXdzaXNNcUFmUHpTUTBleHRqUzFCNWdCQTNKNG1ULXY2YjVYWklnOWhTWXVGNFRYamdsQ0dlQ3B5RU1pM0xBQTBSdTdaRkZRRVMxc2wxcFE?oc=5",
+      "text": "Itt a bejelentés: kiderült, mennyit lehet keresni az Aldiban - Portfolio.hu. Itt a bejelentés: kiderült, mennyit lehet keresni az Aldiban Portfolio.hu"
+    },
+    {
+      "query": "ALDI üzletvezető fizetés",
+      "company_id": "aldi",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOemhPclo4WWRwbVFsNDVqZVh5SGVla1N0dTMyaUxwYU9sTnFsejVPTHktSTlFeTJ0Y19Ra18wZFBPdmFZVWRFTVBNWU1fd1d5c3d0SEU4R0ZYa0V1amJaRlBsNG1LSjlxRnBHOTRCaWFyU19fTjlBZlJySUp1cXdkTHUta0NzUXVZbzhCRXJUMGtIX2ZQTVJj0gGcAUFVX3lxTE4wU05iWURxaURCc0s0Q3Bxc2g4NWtiaGtkd0RFQVlySjVBUnpBbHZsVzhBcFFpNUplaUR5S0tHOG9BT01MdkVyMVFWMXpZTU51U05OX3FBWVRuWmtaVUNhTjBKN3VqSllwb1lNNDhmUl8zX0VTZjZ2dU9EUVc5VFhuWkk4RktONldXS1EyaFVsb2c2WklzMWk5WHgwUA?oc=5",
+      "text": "Kiderült, mennyit keresnek az Aldi-dolgozók - Portfolio.hu. Kiderült, mennyit keresnek az Aldi-dolgozók Portfolio.hu"
+    },
+    {
+      "query": "ALDI üzletvezető fizetés",
+      "company_id": "lidl",
+      "role_key": "store_manager",
+      "salary_values": [
+        1000000
+      ],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBkR3J3clNDeDJvZGlZTlpiaHNIY1FXenQ0TTduMG1VNmZmLW14X3RRT0U4V2ZXQUl0WENGekxaYUItZk5hSVJSV2N2ZTMtWEpSUm5jNlcxa3lTWi14cEE?oc=5",
+      "text": "Vállalkozás: Egymilliós fizetésért keres üzletvezetőket az Aldi és a Lidl is - | hvg.hu. Vállalkozás: Egymilliós fizetésért keres üzletvezetőket az Aldi és a Lidl is | hvg.hu"
+    },
+    {
+      "query": "ALDI üzletvezető fizetés",
+      "company_id": "lidl",
+      "role_key": "store_manager",
+      "salary_values": [
+        1000000
+      ],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPTUxzUTVtREFSOEhhUllubW5WcDRBTVhiNVp6UV9ueUlaYnR5ZF85N0FPLVZfR1czdWtEM0VKUEZWSmp3R2FuZFZjTi1HVDJkVVNPTURGWGo5TmxDaDZZTjZzRF8zMnQ4RHNyVVo2R1lZODVqVE9PT0VuTTBsMFRrQV8wcHM?oc=5",
+      "text": "Egymilliós fizetéssel csábít üzletvezetőket az Aldi és a Lidl - 24.hu. Egymilliós fizetéssel csábít üzletvezetőket az Aldi és a Lidl 24.hu"
+    },
+    {
+      "query": "ALDI üzletvezető fizetés",
+      "company_id": "aldi",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNUy1tcHROMXlEbnFLbHdoNlN6U1p1NU4tV3dzSGNzcEctSmN0ZnR5STNPQXlxc3lVWnN5VGxQXzJ6SnQ4TS00MWUzOWE0dGxDV2M3R0lmaWtJeHBrOHpXQUlqMHBaUDRxeHhoLTIzTFItbjkyZC1IbFFCMmg5V3NoRU9KWGpCcHdtUFVqVklHMVRHd200Y3hWaDd6YzhZOXBW?oc=5",
+      "text": "Vállalkozás: Aldi: Nyolcszázalékos lesz a béremelés idén, félmillió felett a kezdő bruttó - | hvg.hu. Vállalkozás: Aldi: Nyolcszázalékos lesz a béremelés idén, félmillió felett a kezdő bruttó | hvg.hu"
+    },
+    {
+      "query": "ALDI üzletvezető fizetés",
+      "company_id": "aldi",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQRXpFT3VvQ2hvaUVDR2tkMEF1eUNSa3lfaWROWkpHZU0wb3I1R3BpQzlQNkI0cGM1aU95dHRHNDlGb0duWHNJUnEzdHNzdzl0LTBoX2dZYVN1ZWtZZkEzRkFKeGp0TmJtSFlxcXNyazI0bXBiYWFvZ1QzQ0JKVWJTdmxEWWZpcXNKWmIzY3B5UlFoRzBXREZFNVpJWTdYY0NYN2ZiT0lsUdIBrAFBVV95cUxPNDVGM0NNY3YzcmhZOUdFSEpKU0RiQVpKSmNzUG01eWctcFlQLUotN2tWdXM0X1k2MlNOWFhlQXZ0STRCbkVRc3VQUlNQVnNkZDM4Ulc4d3llWDJ0dEZvdzIwTEVhZW5paHc3dHNjY204VE41MGFhTE8xTmd4NEdoOVNVaTg4LXFnY0JleDFaSEFxZXZHTW5GRkVacTlwRG5yNHNNV0c3OW9OT0Va?oc=5",
+      "text": "Rendkívüli béremelést jelentett be Magyarországon az Aldi - Portfolio.hu. Rendkívüli béremelést jelentett be Magyarországon az Aldi Portfolio.hu"
+    },
+    {
+      "query": "ALDI üzletvezető fizetés",
+      "company_id": "aldi",
+      "role_key": null,
+      "salary_values": [
+        800000
+      ],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBnNWlqbEZndkRoVmhITzctMzh6UGU1UnhiX1l0M2FoZVpOb1g0Skx0UmFyX1M3UjVYV2NvNXdfU29xRGVNeDdJUXBGdVE2YjFwR3ZqWGJDbWVCQQ?oc=5",
+      "text": "800 ezer nettó és céges BMW: az országos középérték 3,5-szeresét kapják az Aldi pályakezdő vezetői - | hvg.hu. 800 ezer nettó és céges BMW: az országos középérték 3,5-szeresét kapják az Aldi pályakezdő vezetői | hvg.hu"
+    },
+    {
+      "query": "ALDI üzletvezető fizetés",
+      "company_id": "lidl",
+      "role_key": "store_manager",
+      "salary_values": [
+        1000000
+      ],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQX2U3MTdmNDhlM3h1b0hvY0Ewd2oyVGV3MWk0bzJLYUpQMlFucnBKN0d4TWMwZFlOWERhUGpibWVlTFFmVUdpanZiclFOUEdaSXVBR0otbUF2OTk4VlY4ei1nSjRlVXRXRlVQSjUtYnZGcWNVNVR5NVpyb1c1OVlZclZUWVRGblRWUWpKLWNadTloSjByaGhlbzhFUTBubHB1RU9XTFV6VWwyY3dvQTdybHAzc9IBuAFBVV95cUxNdDVQcGpXaC1LY0tXVjRPVFZMeUdna3ozTTZkVlJXanU2RFN4SmE4eDZpcVJGWFlYbDBMclBYQVZ5d2wycWVWTlgyeDN2ME9lVVdENl9YSm9GRmk3VnFhY2JTdHBrQzRtWGc1U0tjTUlWeTVVNUNObnVhRUVON3BhWmM2UHV1X1ljVDhxa1VLVnlSaXJkLTVSZEZNMklDcjlQOTBYeU40V04zR1V1UHo4RHBLRF9obS1T?oc=5",
+      "text": "Millió körüli bruttóval csábít üzletvezetőket az Aldi és a Lidl - Portfolio.hu. Millió körüli bruttóval csábít üzletvezetőket az Aldi és a Lidl Portfolio.hu"
+    },
+    {
+      "query": "ALDI bolti dolgozó bér",
+      "company_id": "aldi",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOemhPclo4WWRwbVFsNDVqZVh5SGVla1N0dTMyaUxwYU9sTnFsejVPTHktSTlFeTJ0Y19Ra18wZFBPdmFZVWRFTVBNWU1fd1d5c3d0SEU4R0ZYa0V1amJaRlBsNG1LSjlxRnBHOTRCaWFyU19fTjlBZlJySUp1cXdkTHUta0NzUXVZbzhCRXJUMGtIX2ZQTVJj0gGcAUFVX3lxTE4wU05iWURxaURCc0s0Q3Bxc2g4NWtiaGtkd0RFQVlySjVBUnpBbHZsVzhBcFFpNUplaUR5S0tHOG9BT01MdkVyMVFWMXpZTU51U05OX3FBWVRuWmtaVUNhTjBKN3VqSllwb1lNNDhmUl8zX0VTZjZ2dU9EUVc5VFhuWkk4RktONldXS1EyaFVsb2c2WklzMWk5WHgwUA?oc=5",
+      "text": "Kiderült, mennyit keresnek az Aldi-dolgozók - Portfolio.hu. Kiderült, mennyit keresnek az Aldi-dolgozók Portfolio.hu"
+    },
+    {
+      "query": "ALDI bolti dolgozó bér",
+      "company_id": "aldi",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNUy1tcHROMXlEbnFLbHdoNlN6U1p1NU4tV3dzSGNzcEctSmN0ZnR5STNPQXlxc3lVWnN5VGxQXzJ6SnQ4TS00MWUzOWE0dGxDV2M3R0lmaWtJeHBrOHpXQUlqMHBaUDRxeHhoLTIzTFItbjkyZC1IbFFCMmg5V3NoRU9KWGpCcHdtUFVqVklHMVRHd200Y3hWaDd6YzhZOXBW?oc=5",
+      "text": "Vállalkozás: Aldi: Nyolcszázalékos lesz a béremelés idén, félmillió felett a kezdő bruttó - | hvg.hu. Vállalkozás: Aldi: Nyolcszázalékos lesz a béremelés idén, félmillió felett a kezdő bruttó | hvg.hu"
+    },
+    {
+      "query": "ALDI Portfolio béremelés",
+      "company_id": "aldi",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNQmJxT0k3eWRXVzJ4T1dFLXY2ZTBETkRLVnZubVZGVkZCTW1kd0VpQTdya2xhWU4xdHd1VWVKYmlXN1pnNGFpNHZRbnpvcW10dFN0VGR5Q2x0d3daRnVuYjBOY0JwOTJoQjY3MzhzcWFvTGtzUkJCUWZxWXhVSFhLYzF4Y05mNjRRZUJXVzBQcl9PMU82aGl2ZVl3Z3Y4V2FsTTZNM0FPYXI2M2ZD0gGyAUFVX3lxTE9JSjFyWFdyS0RXem12dXJCODQ4Nl9ZZmpyb05ja3otYllwX3JxdnJOT3A5dWpYOS1oc0dtMEdwWHFDWE1KYkVHcVYyZkpGVmx5ZzgxOWtYMWFiSDJPMjBXX2o4YXdzaXNNcUFmUHpTUTBleHRqUzFCNWdCQTNKNG1ULXY2YjVYWklnOWhTWXVGNFRYamdsQ0dlQ3B5RU1pM0xBQTBSdTdaRkZRRVMxc2wxcFE?oc=5",
+      "text": "Itt a bejelentés: kiderült, mennyit lehet keresni az Aldiban - Portfolio.hu. Itt a bejelentés: kiderült, mennyit lehet keresni az Aldiban Portfolio.hu"
     }
   ]
 }
