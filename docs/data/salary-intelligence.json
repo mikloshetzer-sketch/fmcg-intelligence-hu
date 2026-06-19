@@ -1,0 +1,1927 @@
+{
+  "updated_at": "2026-06-19T06:59:37+00:00",
+  "status": "ok",
+  "source_files": [
+    "docs/data/salaries.json",
+    "docs/data/job-postings-current.json"
+  ],
+  "method": "salary_intelligence_v1_static_baseline_posting_media_control",
+  "important_note": "Ez a fájl nem hivatalos bérstatisztika. A salaries.json becsléseit, az álláshirdetésekből kinyerhető béradatokat és a szakmai/üzleti médiában megjelenő bérinformációkat kapcsolja össze. Ahol nincs álláshirdetésből vagy médiából megerősített bérszám, ott az érték baseline becslés.",
+  "companies": [
+    {
+      "company_id": "lidl",
+      "company": "Lidl",
+      "roles": [
+        {
+          "role_key": "cashier_huf_month",
+          "role_label": "Pénztáros",
+          "salary_min_huf_month": 650000,
+          "salary_median_huf_month": 650000,
+          "salary_max_huf_month": 650000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "stocker_huf_month",
+          "role_label": "Árufeltöltő",
+          "salary_min_huf_month": 620000,
+          "salary_median_huf_month": 620000,
+          "salary_max_huf_month": 620000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "bakery_worker_huf_month",
+          "role_label": "Pék / pékáru dolgozó",
+          "salary_min_huf_month": 640000,
+          "salary_median_huf_month": 640000,
+          "salary_max_huf_month": 640000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "shift_leader_huf_month",
+          "role_label": "Műszakvezető",
+          "salary_min_huf_month": 780000,
+          "salary_median_huf_month": 780000,
+          "salary_max_huf_month": 780000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "department_manager_huf_month",
+          "role_label": "Osztályvezető / részlegvezető",
+          "salary_min_huf_month": 950000,
+          "salary_median_huf_month": 950000,
+          "salary_max_huf_month": 950000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "store_manager_huf_month",
+          "role_label": "Áruházvezető / üzletvezető",
+          "salary_min_huf_month": 1600000,
+          "salary_median_huf_month": 1600000,
+          "salary_max_huf_month": 1600000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "warehouse_worker_huf_month",
+          "role_label": "Raktári dolgozó",
+          "salary_min_huf_month": 670000,
+          "salary_median_huf_month": 670000,
+          "salary_max_huf_month": 670000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "office_specialist_huf_month",
+          "role_label": "Központi specialista",
+          "salary_min_huf_month": 850000,
+          "salary_median_huf_month": 850000,
+          "salary_max_huf_month": 850000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "salary_raise_signals": [],
+      "visible_salary_records_count": 0,
+      "total_salary_records_count": 8,
+      "average_confidence": 48,
+      "salary_data_status": "baseline_estimate_only"
+    },
+    {
+      "company_id": "aldi",
+      "company": "ALDI",
+      "roles": [
+        {
+          "role_key": "cashier_huf_month",
+          "role_label": "Pénztáros",
+          "salary_min_huf_month": 630000,
+          "salary_median_huf_month": 630000,
+          "salary_max_huf_month": 630000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "stocker_huf_month",
+          "role_label": "Árufeltöltő",
+          "salary_min_huf_month": 610000,
+          "salary_median_huf_month": 610000,
+          "salary_max_huf_month": 610000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "bakery_worker_huf_month",
+          "role_label": "Pék / pékáru dolgozó",
+          "salary_min_huf_month": 620000,
+          "salary_median_huf_month": 620000,
+          "salary_max_huf_month": 620000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "shift_leader_huf_month",
+          "role_label": "Műszakvezető",
+          "salary_min_huf_month": 760000,
+          "salary_median_huf_month": 760000,
+          "salary_max_huf_month": 760000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "department_manager_huf_month",
+          "role_label": "Osztályvezető / részlegvezető",
+          "salary_min_huf_month": 920000,
+          "salary_median_huf_month": 920000,
+          "salary_max_huf_month": 920000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "store_manager_huf_month",
+          "role_label": "Áruházvezető / üzletvezető",
+          "salary_min_huf_month": 1550000,
+          "salary_median_huf_month": 1550000,
+          "salary_max_huf_month": 1550000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "warehouse_worker_huf_month",
+          "role_label": "Raktári dolgozó",
+          "salary_min_huf_month": 650000,
+          "salary_median_huf_month": 650000,
+          "salary_max_huf_month": 650000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "office_specialist_huf_month",
+          "role_label": "Központi specialista",
+          "salary_min_huf_month": 830000,
+          "salary_median_huf_month": 830000,
+          "salary_max_huf_month": 830000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "salary_raise_signals": [],
+      "visible_salary_records_count": 0,
+      "total_salary_records_count": 8,
+      "average_confidence": 48,
+      "salary_data_status": "baseline_estimate_only"
+    },
+    {
+      "company_id": "spar",
+      "company": "SPAR",
+      "roles": [
+        {
+          "role_key": "cashier_huf_month",
+          "role_label": "Pénztáros",
+          "salary_min_huf_month": 520000,
+          "salary_median_huf_month": 520000,
+          "salary_max_huf_month": 520000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "stocker_huf_month",
+          "role_label": "Árufeltöltő",
+          "salary_min_huf_month": 500000,
+          "salary_median_huf_month": 500000,
+          "salary_max_huf_month": 500000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "bakery_worker_huf_month",
+          "role_label": "Pék / pékáru dolgozó",
+          "salary_min_huf_month": 530000,
+          "salary_median_huf_month": 530000,
+          "salary_max_huf_month": 530000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "shift_leader_huf_month",
+          "role_label": "Műszakvezető",
+          "salary_min_huf_month": 650000,
+          "salary_median_huf_month": 650000,
+          "salary_max_huf_month": 650000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "department_manager_huf_month",
+          "role_label": "Osztályvezető / részlegvezető",
+          "salary_min_huf_month": 780000,
+          "salary_median_huf_month": 780000,
+          "salary_max_huf_month": 780000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "store_manager_huf_month",
+          "role_label": "Áruházvezető / üzletvezető",
+          "salary_min_huf_month": 1250000,
+          "salary_median_huf_month": 1250000,
+          "salary_max_huf_month": 1250000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "warehouse_worker_huf_month",
+          "role_label": "Raktári dolgozó",
+          "salary_min_huf_month": 560000,
+          "salary_median_huf_month": 560000,
+          "salary_max_huf_month": 560000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "office_specialist_huf_month",
+          "role_label": "Központi specialista",
+          "salary_min_huf_month": 720000,
+          "salary_median_huf_month": 720000,
+          "salary_max_huf_month": 720000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "salary_raise_signals": [],
+      "visible_salary_records_count": 0,
+      "total_salary_records_count": 8,
+      "average_confidence": 48,
+      "salary_data_status": "baseline_estimate_only"
+    },
+    {
+      "company_id": "tesco",
+      "company": "Tesco",
+      "roles": [
+        {
+          "role_key": "cashier_huf_month",
+          "role_label": "Pénztáros",
+          "salary_min_huf_month": 510000,
+          "salary_median_huf_month": 510000,
+          "salary_max_huf_month": 510000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "stocker_huf_month",
+          "role_label": "Árufeltöltő",
+          "salary_min_huf_month": 500000,
+          "salary_median_huf_month": 500000,
+          "salary_max_huf_month": 500000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "bakery_worker_huf_month",
+          "role_label": "Pék / pékáru dolgozó",
+          "salary_min_huf_month": 520000,
+          "salary_median_huf_month": 520000,
+          "salary_max_huf_month": 520000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "shift_leader_huf_month",
+          "role_label": "Műszakvezető",
+          "salary_min_huf_month": 640000,
+          "salary_median_huf_month": 640000,
+          "salary_max_huf_month": 640000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "department_manager_huf_month",
+          "role_label": "Osztályvezető / részlegvezető",
+          "salary_min_huf_month": 760000,
+          "salary_median_huf_month": 760000,
+          "salary_max_huf_month": 760000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "store_manager_huf_month",
+          "role_label": "Áruházvezető / üzletvezető",
+          "salary_min_huf_month": 1200000,
+          "salary_median_huf_month": 1200000,
+          "salary_max_huf_month": 1200000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "warehouse_worker_huf_month",
+          "role_label": "Raktári dolgozó",
+          "salary_min_huf_month": 550000,
+          "salary_median_huf_month": 550000,
+          "salary_max_huf_month": 550000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "office_specialist_huf_month",
+          "role_label": "Központi specialista",
+          "salary_min_huf_month": 730000,
+          "salary_median_huf_month": 730000,
+          "salary_max_huf_month": 730000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "salary_raise_signals": [
+        {
+          "id": "5e764c73641ee3fc",
+          "company_id": "tesco",
+          "company": "Tesco",
+          "role_key": null,
+          "role_label": "Általános vállalati bérinformáció",
+          "record_type": "salary_raise_signal",
+          "salary_min_huf_month": null,
+          "salary_median_huf_month": null,
+          "salary_max_huf_month": null,
+          "raise_pct": 7.2,
+          "salary_type": "gross_or_unspecified_media_report",
+          "source_type": "business_media",
+          "source_name": "portfolio.hu",
+          "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPUjB1ejFlSFJmbXBVZVVERVI2eVhrcFhEOUdST3hhenozRTFWSzdJWEV0MVhmMlpPU1FTY19RRFBiS1dfa0hPNUlVc0ZSUHVQQ0lPbVFTVWptOGRRSXl4eXlFc3NZb3ludTFZRGVBTUQ0bWNaNmxheUh5cGlGZ2JmNjZPdkdiZ3N3UWMxWUZxaDdOSGNwWU92eHhMd9IBoAFBVV95cUxQNTRyNXVuLWlwSktEVU1xUHRVS1VVNTQ2Vkk5czBPcHh2RndMaG1xcWs2aV9uRDdKaEc5dXV4VXJyazZtUlZYX2VzMHJWZ0M5YUtUcmxqa3JuRl9TYVFCVk52VUNDNldGUnJwblMtTmRIX21Rd0hCZ3BzNFBHNHM5dWJQR3ZfZUQ5SkRoeHAwTFotU3Jxc2ZiYnBUVktXWmNI?oc=5",
+          "confidence": 55,
+          "evidence_text": "7,2 százalékos béremelést kapnak a Tesco dolgozói - Portfolio.hu. 7,2 százalékos béremelést kapnak a Tesco dolgozói Portfolio.hu",
+          "last_checked": "2026-06-19T06:59:19+00:00"
+        }
+      ],
+      "visible_salary_records_count": 0,
+      "total_salary_records_count": 9,
+      "average_confidence": 48,
+      "salary_data_status": "baseline_estimate_only"
+    },
+    {
+      "company_id": "penny",
+      "company": "PENNY",
+      "roles": [
+        {
+          "role_key": "cashier_huf_month",
+          "role_label": "Pénztáros",
+          "salary_min_huf_month": 560000,
+          "salary_median_huf_month": 560000,
+          "salary_max_huf_month": 560000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "stocker_huf_month",
+          "role_label": "Árufeltöltő",
+          "salary_min_huf_month": 540000,
+          "salary_median_huf_month": 540000,
+          "salary_max_huf_month": 540000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "bakery_worker_huf_month",
+          "role_label": "Pék / pékáru dolgozó",
+          "salary_min_huf_month": 550000,
+          "salary_median_huf_month": 550000,
+          "salary_max_huf_month": 550000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "shift_leader_huf_month",
+          "role_label": "Műszakvezető",
+          "salary_min_huf_month": 690000,
+          "salary_median_huf_month": 690000,
+          "salary_max_huf_month": 690000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "department_manager_huf_month",
+          "role_label": "Osztályvezető / részlegvezető",
+          "salary_min_huf_month": 820000,
+          "salary_median_huf_month": 820000,
+          "salary_max_huf_month": 820000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "store_manager_huf_month",
+          "role_label": "Áruházvezető / üzletvezető",
+          "salary_min_huf_month": 1350000,
+          "salary_median_huf_month": 1350000,
+          "salary_max_huf_month": 1350000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "warehouse_worker_huf_month",
+          "role_label": "Raktári dolgozó",
+          "salary_min_huf_month": 590000,
+          "salary_median_huf_month": 590000,
+          "salary_max_huf_month": 590000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "office_specialist_huf_month",
+          "role_label": "Központi specialista",
+          "salary_min_huf_month": 760000,
+          "salary_median_huf_month": 760000,
+          "salary_max_huf_month": 760000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "salary_raise_signals": [],
+      "visible_salary_records_count": 0,
+      "total_salary_records_count": 8,
+      "average_confidence": 48,
+      "salary_data_status": "baseline_estimate_only"
+    },
+    {
+      "company_id": "auchan",
+      "company": "Auchan",
+      "roles": [
+        {
+          "role_key": "cashier_huf_month",
+          "role_label": "Pénztáros",
+          "salary_min_huf_month": 500000,
+          "salary_median_huf_month": 500000,
+          "salary_max_huf_month": 500000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "stocker_huf_month",
+          "role_label": "Árufeltöltő",
+          "salary_min_huf_month": 490000,
+          "salary_median_huf_month": 490000,
+          "salary_max_huf_month": 490000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "bakery_worker_huf_month",
+          "role_label": "Pék / pékáru dolgozó",
+          "salary_min_huf_month": 520000,
+          "salary_median_huf_month": 520000,
+          "salary_max_huf_month": 520000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "shift_leader_huf_month",
+          "role_label": "Műszakvezető",
+          "salary_min_huf_month": 630000,
+          "salary_median_huf_month": 630000,
+          "salary_max_huf_month": 630000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "department_manager_huf_month",
+          "role_label": "Osztályvezető / részlegvezető",
+          "salary_min_huf_month": 760000,
+          "salary_median_huf_month": 760000,
+          "salary_max_huf_month": 760000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "store_manager_huf_month",
+          "role_label": "Áruházvezető / üzletvezető",
+          "salary_min_huf_month": 1250000,
+          "salary_median_huf_month": 1250000,
+          "salary_max_huf_month": 1250000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "warehouse_worker_huf_month",
+          "role_label": "Raktári dolgozó",
+          "salary_min_huf_month": 540000,
+          "salary_median_huf_month": 540000,
+          "salary_max_huf_month": 540000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "role_key": "office_specialist_huf_month",
+          "role_label": "Központi specialista",
+          "salary_min_huf_month": 720000,
+          "salary_median_huf_month": 720000,
+          "salary_max_huf_month": 720000,
+          "sample_count": 1,
+          "confidence": 48,
+          "source_mix": [
+            {
+              "source_type": "static_salary_json",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "salary_raise_signals": [],
+      "visible_salary_records_count": 0,
+      "total_salary_records_count": 8,
+      "average_confidence": 48,
+      "salary_data_status": "baseline_estimate_only"
+    }
+  ],
+  "records": [
+    {
+      "id": "b570a5f1ec6b7aba",
+      "company_id": "lidl",
+      "company": "Lidl",
+      "role_key": "cashier_huf_month",
+      "role_label": "Pénztáros",
+      "salary_min_huf_month": 650000,
+      "salary_median_huf_month": 650000,
+      "salary_max_huf_month": 650000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "A diszkontláncok között jellemzően erős bérpozícióval számolunk. A pontos munkaköri béreket álláshirdetések alapján később frissíteni kell.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "b497699049499787",
+      "company_id": "lidl",
+      "company": "Lidl",
+      "role_key": "stocker_huf_month",
+      "role_label": "Árufeltöltő",
+      "salary_min_huf_month": 620000,
+      "salary_median_huf_month": 620000,
+      "salary_max_huf_month": 620000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "A diszkontláncok között jellemzően erős bérpozícióval számolunk. A pontos munkaköri béreket álláshirdetések alapján később frissíteni kell.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "bc509bc8584d448a",
+      "company_id": "lidl",
+      "company": "Lidl",
+      "role_key": "bakery_worker_huf_month",
+      "role_label": "Pék / pékáru dolgozó",
+      "salary_min_huf_month": 640000,
+      "salary_median_huf_month": 640000,
+      "salary_max_huf_month": 640000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "A diszkontláncok között jellemzően erős bérpozícióval számolunk. A pontos munkaköri béreket álláshirdetések alapján később frissíteni kell.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "d867fb3bcd7f3f73",
+      "company_id": "lidl",
+      "company": "Lidl",
+      "role_key": "shift_leader_huf_month",
+      "role_label": "Műszakvezető",
+      "salary_min_huf_month": 780000,
+      "salary_median_huf_month": 780000,
+      "salary_max_huf_month": 780000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "A diszkontláncok között jellemzően erős bérpozícióval számolunk. A pontos munkaköri béreket álláshirdetések alapján később frissíteni kell.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "b1f71286873fce56",
+      "company_id": "lidl",
+      "company": "Lidl",
+      "role_key": "department_manager_huf_month",
+      "role_label": "Osztályvezető / részlegvezető",
+      "salary_min_huf_month": 950000,
+      "salary_median_huf_month": 950000,
+      "salary_max_huf_month": 950000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "A diszkontláncok között jellemzően erős bérpozícióval számolunk. A pontos munkaköri béreket álláshirdetések alapján később frissíteni kell.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "042437c8e792b34c",
+      "company_id": "lidl",
+      "company": "Lidl",
+      "role_key": "store_manager_huf_month",
+      "role_label": "Áruházvezető / üzletvezető",
+      "salary_min_huf_month": 1600000,
+      "salary_median_huf_month": 1600000,
+      "salary_max_huf_month": 1600000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "A diszkontláncok között jellemzően erős bérpozícióval számolunk. A pontos munkaköri béreket álláshirdetések alapján később frissíteni kell.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "e2edf4593fa1d28e",
+      "company_id": "lidl",
+      "company": "Lidl",
+      "role_key": "warehouse_worker_huf_month",
+      "role_label": "Raktári dolgozó",
+      "salary_min_huf_month": 670000,
+      "salary_median_huf_month": 670000,
+      "salary_max_huf_month": 670000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "A diszkontláncok között jellemzően erős bérpozícióval számolunk. A pontos munkaköri béreket álláshirdetések alapján később frissíteni kell.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "13df2a3f7dbae3ac",
+      "company_id": "lidl",
+      "company": "Lidl",
+      "role_key": "office_specialist_huf_month",
+      "role_label": "Központi specialista",
+      "salary_min_huf_month": 850000,
+      "salary_median_huf_month": 850000,
+      "salary_max_huf_month": 850000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "A diszkontláncok között jellemzően erős bérpozícióval számolunk. A pontos munkaköri béreket álláshirdetések alapján később frissíteni kell.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "608253765cc6c090",
+      "company_id": "aldi",
+      "company": "ALDI",
+      "role_key": "cashier_huf_month",
+      "role_label": "Pénztáros",
+      "salary_min_huf_month": 630000,
+      "salary_median_huf_month": 630000,
+      "salary_max_huf_month": 630000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "Aldi esetében a bérpozíciót a diszkontmodell alapján magasra becsüljük. A pontos adatok később frissítendők.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "3ec7a56e23458c00",
+      "company_id": "aldi",
+      "company": "ALDI",
+      "role_key": "stocker_huf_month",
+      "role_label": "Árufeltöltő",
+      "salary_min_huf_month": 610000,
+      "salary_median_huf_month": 610000,
+      "salary_max_huf_month": 610000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "Aldi esetében a bérpozíciót a diszkontmodell alapján magasra becsüljük. A pontos adatok később frissítendők.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "5336ac26c5ed27e4",
+      "company_id": "aldi",
+      "company": "ALDI",
+      "role_key": "bakery_worker_huf_month",
+      "role_label": "Pék / pékáru dolgozó",
+      "salary_min_huf_month": 620000,
+      "salary_median_huf_month": 620000,
+      "salary_max_huf_month": 620000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "Aldi esetében a bérpozíciót a diszkontmodell alapján magasra becsüljük. A pontos adatok később frissítendők.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "5fc5440ef8a11fbd",
+      "company_id": "aldi",
+      "company": "ALDI",
+      "role_key": "shift_leader_huf_month",
+      "role_label": "Műszakvezető",
+      "salary_min_huf_month": 760000,
+      "salary_median_huf_month": 760000,
+      "salary_max_huf_month": 760000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "Aldi esetében a bérpozíciót a diszkontmodell alapján magasra becsüljük. A pontos adatok később frissítendők.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "b900229d1f918ad3",
+      "company_id": "aldi",
+      "company": "ALDI",
+      "role_key": "department_manager_huf_month",
+      "role_label": "Osztályvezető / részlegvezető",
+      "salary_min_huf_month": 920000,
+      "salary_median_huf_month": 920000,
+      "salary_max_huf_month": 920000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "Aldi esetében a bérpozíciót a diszkontmodell alapján magasra becsüljük. A pontos adatok később frissítendők.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "57c8bdab066937af",
+      "company_id": "aldi",
+      "company": "ALDI",
+      "role_key": "store_manager_huf_month",
+      "role_label": "Áruházvezető / üzletvezető",
+      "salary_min_huf_month": 1550000,
+      "salary_median_huf_month": 1550000,
+      "salary_max_huf_month": 1550000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "Aldi esetében a bérpozíciót a diszkontmodell alapján magasra becsüljük. A pontos adatok később frissítendők.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "92dfaeb8ffe0b93f",
+      "company_id": "aldi",
+      "company": "ALDI",
+      "role_key": "warehouse_worker_huf_month",
+      "role_label": "Raktári dolgozó",
+      "salary_min_huf_month": 650000,
+      "salary_median_huf_month": 650000,
+      "salary_max_huf_month": 650000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "Aldi esetében a bérpozíciót a diszkontmodell alapján magasra becsüljük. A pontos adatok később frissítendők.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "f73bf74b6e5bc844",
+      "company_id": "aldi",
+      "company": "ALDI",
+      "role_key": "office_specialist_huf_month",
+      "role_label": "Központi specialista",
+      "salary_min_huf_month": 830000,
+      "salary_median_huf_month": 830000,
+      "salary_max_huf_month": 830000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "Aldi esetében a bérpozíciót a diszkontmodell alapján magasra becsüljük. A pontos adatok később frissítendők.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "a7d9721f5459fe57",
+      "company_id": "spar",
+      "company": "SPAR",
+      "role_key": "cashier_huf_month",
+      "role_label": "Pénztáros",
+      "salary_min_huf_month": 520000,
+      "salary_median_huf_month": 520000,
+      "salary_max_huf_month": 520000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "SPAR esetében az üzletformátum és franchise jelenlét miatt a bérszint erősen eltérhet. Külön kell majd kezelni a saját és franchise egységeket.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "e2bd1f46c7709d6c",
+      "company_id": "spar",
+      "company": "SPAR",
+      "role_key": "stocker_huf_month",
+      "role_label": "Árufeltöltő",
+      "salary_min_huf_month": 500000,
+      "salary_median_huf_month": 500000,
+      "salary_max_huf_month": 500000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "SPAR esetében az üzletformátum és franchise jelenlét miatt a bérszint erősen eltérhet. Külön kell majd kezelni a saját és franchise egységeket.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "e71b3e5a9e2f12df",
+      "company_id": "spar",
+      "company": "SPAR",
+      "role_key": "bakery_worker_huf_month",
+      "role_label": "Pék / pékáru dolgozó",
+      "salary_min_huf_month": 530000,
+      "salary_median_huf_month": 530000,
+      "salary_max_huf_month": 530000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "SPAR esetében az üzletformátum és franchise jelenlét miatt a bérszint erősen eltérhet. Külön kell majd kezelni a saját és franchise egységeket.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "da0799e6f4d049c9",
+      "company_id": "spar",
+      "company": "SPAR",
+      "role_key": "shift_leader_huf_month",
+      "role_label": "Műszakvezető",
+      "salary_min_huf_month": 650000,
+      "salary_median_huf_month": 650000,
+      "salary_max_huf_month": 650000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "SPAR esetében az üzletformátum és franchise jelenlét miatt a bérszint erősen eltérhet. Külön kell majd kezelni a saját és franchise egységeket.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "65270769c9ba5761",
+      "company_id": "spar",
+      "company": "SPAR",
+      "role_key": "department_manager_huf_month",
+      "role_label": "Osztályvezető / részlegvezető",
+      "salary_min_huf_month": 780000,
+      "salary_median_huf_month": 780000,
+      "salary_max_huf_month": 780000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "SPAR esetében az üzletformátum és franchise jelenlét miatt a bérszint erősen eltérhet. Külön kell majd kezelni a saját és franchise egységeket.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "afcc43f4a3b5a28b",
+      "company_id": "spar",
+      "company": "SPAR",
+      "role_key": "store_manager_huf_month",
+      "role_label": "Áruházvezető / üzletvezető",
+      "salary_min_huf_month": 1250000,
+      "salary_median_huf_month": 1250000,
+      "salary_max_huf_month": 1250000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "SPAR esetében az üzletformátum és franchise jelenlét miatt a bérszint erősen eltérhet. Külön kell majd kezelni a saját és franchise egységeket.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "8a07961291351741",
+      "company_id": "spar",
+      "company": "SPAR",
+      "role_key": "warehouse_worker_huf_month",
+      "role_label": "Raktári dolgozó",
+      "salary_min_huf_month": 560000,
+      "salary_median_huf_month": 560000,
+      "salary_max_huf_month": 560000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "SPAR esetében az üzletformátum és franchise jelenlét miatt a bérszint erősen eltérhet. Külön kell majd kezelni a saját és franchise egységeket.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "4e7f1fa29bbd958b",
+      "company_id": "spar",
+      "company": "SPAR",
+      "role_key": "office_specialist_huf_month",
+      "role_label": "Központi specialista",
+      "salary_min_huf_month": 720000,
+      "salary_median_huf_month": 720000,
+      "salary_max_huf_month": 720000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "SPAR esetében az üzletformátum és franchise jelenlét miatt a bérszint erősen eltérhet. Külön kell majd kezelni a saját és franchise egységeket.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "1aac75c59c9b8cb6",
+      "company_id": "tesco",
+      "company": "Tesco",
+      "role_key": "cashier_huf_month",
+      "role_label": "Pénztáros",
+      "salary_min_huf_month": 510000,
+      "salary_median_huf_month": 510000,
+      "salary_max_huf_month": 510000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "Tesco esetében a hipermarket, szupermarket és online működés eltérő bérstruktúrát hozhat. Pontosítás álláshirdetésekből szükséges.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "625d4a45c4e7c3cb",
+      "company_id": "tesco",
+      "company": "Tesco",
+      "role_key": "stocker_huf_month",
+      "role_label": "Árufeltöltő",
+      "salary_min_huf_month": 500000,
+      "salary_median_huf_month": 500000,
+      "salary_max_huf_month": 500000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "Tesco esetében a hipermarket, szupermarket és online működés eltérő bérstruktúrát hozhat. Pontosítás álláshirdetésekből szükséges.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "ec2ba2a19b4d492e",
+      "company_id": "tesco",
+      "company": "Tesco",
+      "role_key": "bakery_worker_huf_month",
+      "role_label": "Pék / pékáru dolgozó",
+      "salary_min_huf_month": 520000,
+      "salary_median_huf_month": 520000,
+      "salary_max_huf_month": 520000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "Tesco esetében a hipermarket, szupermarket és online működés eltérő bérstruktúrát hozhat. Pontosítás álláshirdetésekből szükséges.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "fa23fc93c1c84a10",
+      "company_id": "tesco",
+      "company": "Tesco",
+      "role_key": "shift_leader_huf_month",
+      "role_label": "Műszakvezető",
+      "salary_min_huf_month": 640000,
+      "salary_median_huf_month": 640000,
+      "salary_max_huf_month": 640000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "Tesco esetében a hipermarket, szupermarket és online működés eltérő bérstruktúrát hozhat. Pontosítás álláshirdetésekből szükséges.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "9f78832c8f44d626",
+      "company_id": "tesco",
+      "company": "Tesco",
+      "role_key": "department_manager_huf_month",
+      "role_label": "Osztályvezető / részlegvezető",
+      "salary_min_huf_month": 760000,
+      "salary_median_huf_month": 760000,
+      "salary_max_huf_month": 760000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "Tesco esetében a hipermarket, szupermarket és online működés eltérő bérstruktúrát hozhat. Pontosítás álláshirdetésekből szükséges.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "1d63f9314cc0127c",
+      "company_id": "tesco",
+      "company": "Tesco",
+      "role_key": "store_manager_huf_month",
+      "role_label": "Áruházvezető / üzletvezető",
+      "salary_min_huf_month": 1200000,
+      "salary_median_huf_month": 1200000,
+      "salary_max_huf_month": 1200000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "Tesco esetében a hipermarket, szupermarket és online működés eltérő bérstruktúrát hozhat. Pontosítás álláshirdetésekből szükséges.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "283066080af2725e",
+      "company_id": "tesco",
+      "company": "Tesco",
+      "role_key": "warehouse_worker_huf_month",
+      "role_label": "Raktári dolgozó",
+      "salary_min_huf_month": 550000,
+      "salary_median_huf_month": 550000,
+      "salary_max_huf_month": 550000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "Tesco esetében a hipermarket, szupermarket és online működés eltérő bérstruktúrát hozhat. Pontosítás álláshirdetésekből szükséges.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "e8fddd2a89e6e2de",
+      "company_id": "tesco",
+      "company": "Tesco",
+      "role_key": "office_specialist_huf_month",
+      "role_label": "Központi specialista",
+      "salary_min_huf_month": 730000,
+      "salary_median_huf_month": 730000,
+      "salary_max_huf_month": 730000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "Tesco esetében a hipermarket, szupermarket és online működés eltérő bérstruktúrát hozhat. Pontosítás álláshirdetésekből szükséges.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "b1340179fd0f2b43",
+      "company_id": "penny",
+      "company": "PENNY",
+      "role_key": "cashier_huf_month",
+      "role_label": "Pénztáros",
+      "salary_min_huf_month": 560000,
+      "salary_median_huf_month": 560000,
+      "salary_max_huf_month": 560000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "PENNY esetében ismert átlagbéradat már szerepel a companies.json fájlban, a munkaköri bontás becsült.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "ac2b1b31b090d6cb",
+      "company_id": "penny",
+      "company": "PENNY",
+      "role_key": "stocker_huf_month",
+      "role_label": "Árufeltöltő",
+      "salary_min_huf_month": 540000,
+      "salary_median_huf_month": 540000,
+      "salary_max_huf_month": 540000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "PENNY esetében ismert átlagbéradat már szerepel a companies.json fájlban, a munkaköri bontás becsült.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "ec9a04fc6a3b7895",
+      "company_id": "penny",
+      "company": "PENNY",
+      "role_key": "bakery_worker_huf_month",
+      "role_label": "Pék / pékáru dolgozó",
+      "salary_min_huf_month": 550000,
+      "salary_median_huf_month": 550000,
+      "salary_max_huf_month": 550000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "PENNY esetében ismert átlagbéradat már szerepel a companies.json fájlban, a munkaköri bontás becsült.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "d87aaf2a0917f283",
+      "company_id": "penny",
+      "company": "PENNY",
+      "role_key": "shift_leader_huf_month",
+      "role_label": "Műszakvezető",
+      "salary_min_huf_month": 690000,
+      "salary_median_huf_month": 690000,
+      "salary_max_huf_month": 690000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "PENNY esetében ismert átlagbéradat már szerepel a companies.json fájlban, a munkaköri bontás becsült.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "3f162f8743228a85",
+      "company_id": "penny",
+      "company": "PENNY",
+      "role_key": "department_manager_huf_month",
+      "role_label": "Osztályvezető / részlegvezető",
+      "salary_min_huf_month": 820000,
+      "salary_median_huf_month": 820000,
+      "salary_max_huf_month": 820000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "PENNY esetében ismert átlagbéradat már szerepel a companies.json fájlban, a munkaköri bontás becsült.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "6b7a4a7522123d9f",
+      "company_id": "penny",
+      "company": "PENNY",
+      "role_key": "store_manager_huf_month",
+      "role_label": "Áruházvezető / üzletvezető",
+      "salary_min_huf_month": 1350000,
+      "salary_median_huf_month": 1350000,
+      "salary_max_huf_month": 1350000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "PENNY esetében ismert átlagbéradat már szerepel a companies.json fájlban, a munkaköri bontás becsült.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "fe8c48d4623498a8",
+      "company_id": "penny",
+      "company": "PENNY",
+      "role_key": "warehouse_worker_huf_month",
+      "role_label": "Raktári dolgozó",
+      "salary_min_huf_month": 590000,
+      "salary_median_huf_month": 590000,
+      "salary_max_huf_month": 590000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "PENNY esetében ismert átlagbéradat már szerepel a companies.json fájlban, a munkaköri bontás becsült.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "37b64d2aef9d0eff",
+      "company_id": "penny",
+      "company": "PENNY",
+      "role_key": "office_specialist_huf_month",
+      "role_label": "Központi specialista",
+      "salary_min_huf_month": 760000,
+      "salary_median_huf_month": 760000,
+      "salary_max_huf_month": 760000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "PENNY esetében ismert átlagbéradat már szerepel a companies.json fájlban, a munkaköri bontás becsült.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "e4be6689f9937d38",
+      "company_id": "auchan",
+      "company": "Auchan",
+      "role_key": "cashier_huf_month",
+      "role_label": "Pénztáros",
+      "salary_min_huf_month": 500000,
+      "salary_median_huf_month": 500000,
+      "salary_max_huf_month": 500000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "Auchan esetében a hipermarket modell miatt a munkaköri szórás nagyobb lehet. A pontosítás különösen fontos lenne áruházi és központi munkakörök szerint.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "47c6991f3d68cfe9",
+      "company_id": "auchan",
+      "company": "Auchan",
+      "role_key": "stocker_huf_month",
+      "role_label": "Árufeltöltő",
+      "salary_min_huf_month": 490000,
+      "salary_median_huf_month": 490000,
+      "salary_max_huf_month": 490000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "Auchan esetében a hipermarket modell miatt a munkaköri szórás nagyobb lehet. A pontosítás különösen fontos lenne áruházi és központi munkakörök szerint.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "98f27e485602ce84",
+      "company_id": "auchan",
+      "company": "Auchan",
+      "role_key": "bakery_worker_huf_month",
+      "role_label": "Pék / pékáru dolgozó",
+      "salary_min_huf_month": 520000,
+      "salary_median_huf_month": 520000,
+      "salary_max_huf_month": 520000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "Auchan esetében a hipermarket modell miatt a munkaköri szórás nagyobb lehet. A pontosítás különösen fontos lenne áruházi és központi munkakörök szerint.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "a5229bd10d31ccf4",
+      "company_id": "auchan",
+      "company": "Auchan",
+      "role_key": "shift_leader_huf_month",
+      "role_label": "Műszakvezető",
+      "salary_min_huf_month": 630000,
+      "salary_median_huf_month": 630000,
+      "salary_max_huf_month": 630000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "Auchan esetében a hipermarket modell miatt a munkaköri szórás nagyobb lehet. A pontosítás különösen fontos lenne áruházi és központi munkakörök szerint.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "da143ac791b669ee",
+      "company_id": "auchan",
+      "company": "Auchan",
+      "role_key": "department_manager_huf_month",
+      "role_label": "Osztályvezető / részlegvezető",
+      "salary_min_huf_month": 760000,
+      "salary_median_huf_month": 760000,
+      "salary_max_huf_month": 760000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "Auchan esetében a hipermarket modell miatt a munkaköri szórás nagyobb lehet. A pontosítás különösen fontos lenne áruházi és központi munkakörök szerint.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "8bde3103599b46fe",
+      "company_id": "auchan",
+      "company": "Auchan",
+      "role_key": "store_manager_huf_month",
+      "role_label": "Áruházvezető / üzletvezető",
+      "salary_min_huf_month": 1250000,
+      "salary_median_huf_month": 1250000,
+      "salary_max_huf_month": 1250000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "Auchan esetében a hipermarket modell miatt a munkaköri szórás nagyobb lehet. A pontosítás különösen fontos lenne áruházi és központi munkakörök szerint.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "759b0b82f4364265",
+      "company_id": "auchan",
+      "company": "Auchan",
+      "role_key": "warehouse_worker_huf_month",
+      "role_label": "Raktári dolgozó",
+      "salary_min_huf_month": 540000,
+      "salary_median_huf_month": 540000,
+      "salary_max_huf_month": 540000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "Auchan esetében a hipermarket modell miatt a munkaköri szórás nagyobb lehet. A pontosítás különösen fontos lenne áruházi és központi munkakörök szerint.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "ce5230dd9f255f6b",
+      "company_id": "auchan",
+      "company": "Auchan",
+      "role_key": "office_specialist_huf_month",
+      "role_label": "Központi specialista",
+      "salary_min_huf_month": 720000,
+      "salary_median_huf_month": 720000,
+      "salary_max_huf_month": 720000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "Auchan esetében a hipermarket modell miatt a munkaköri szórás nagyobb lehet. A pontosítás különösen fontos lenne áruházi és központi munkakörök szerint.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "3494b8b219ef2ab8",
+      "company_id": "coop",
+      "company": "COOP",
+      "role_key": "cashier_huf_month",
+      "role_label": "Pénztáros",
+      "salary_min_huf_month": 430000,
+      "salary_median_huf_month": 430000,
+      "salary_max_huf_month": 430000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "A COOP franchise jellegű működése miatt az egyes üzletek bérezése erősen eltérhet. Óvatosan összehasonlítható.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "ddc84f5a8ac2811c",
+      "company_id": "coop",
+      "company": "COOP",
+      "role_key": "stocker_huf_month",
+      "role_label": "Árufeltöltő",
+      "salary_min_huf_month": 420000,
+      "salary_median_huf_month": 420000,
+      "salary_max_huf_month": 420000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "A COOP franchise jellegű működése miatt az egyes üzletek bérezése erősen eltérhet. Óvatosan összehasonlítható.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "0d1ac6ed8aac132a",
+      "company_id": "coop",
+      "company": "COOP",
+      "role_key": "bakery_worker_huf_month",
+      "role_label": "Pék / pékáru dolgozó",
+      "salary_min_huf_month": 450000,
+      "salary_median_huf_month": 450000,
+      "salary_max_huf_month": 450000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "A COOP franchise jellegű működése miatt az egyes üzletek bérezése erősen eltérhet. Óvatosan összehasonlítható.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "c7b3dfbff0b6680b",
+      "company_id": "coop",
+      "company": "COOP",
+      "role_key": "shift_leader_huf_month",
+      "role_label": "Műszakvezető",
+      "salary_min_huf_month": 540000,
+      "salary_median_huf_month": 540000,
+      "salary_max_huf_month": 540000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "A COOP franchise jellegű működése miatt az egyes üzletek bérezése erősen eltérhet. Óvatosan összehasonlítható.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "6900c24f092ee7bf",
+      "company_id": "coop",
+      "company": "COOP",
+      "role_key": "department_manager_huf_month",
+      "role_label": "Osztályvezető / részlegvezető",
+      "salary_min_huf_month": 650000,
+      "salary_median_huf_month": 650000,
+      "salary_max_huf_month": 650000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "A COOP franchise jellegű működése miatt az egyes üzletek bérezése erősen eltérhet. Óvatosan összehasonlítható.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "05d285afcce5b265",
+      "company_id": "coop",
+      "company": "COOP",
+      "role_key": "store_manager_huf_month",
+      "role_label": "Áruházvezető / üzletvezető",
+      "salary_min_huf_month": 900000,
+      "salary_median_huf_month": 900000,
+      "salary_max_huf_month": 900000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "A COOP franchise jellegű működése miatt az egyes üzletek bérezése erősen eltérhet. Óvatosan összehasonlítható.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "0c794b50aa1b190c",
+      "company_id": "coop",
+      "company": "COOP",
+      "role_key": "warehouse_worker_huf_month",
+      "role_label": "Raktári dolgozó",
+      "salary_min_huf_month": 470000,
+      "salary_median_huf_month": 470000,
+      "salary_max_huf_month": 470000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "A COOP franchise jellegű működése miatt az egyes üzletek bérezése erősen eltérhet. Óvatosan összehasonlítható.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "327d503240f641db",
+      "company_id": "coop",
+      "company": "COOP",
+      "role_key": "office_specialist_huf_month",
+      "role_label": "Központi specialista",
+      "salary_min_huf_month": 620000,
+      "salary_median_huf_month": 620000,
+      "salary_max_huf_month": 620000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "A COOP franchise jellegű működése miatt az egyes üzletek bérezése erősen eltérhet. Óvatosan összehasonlítható.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "0ebdc6730daebd86",
+      "company_id": "cba",
+      "company": "CBA",
+      "role_key": "cashier_huf_month",
+      "role_label": "Pénztáros",
+      "salary_min_huf_month": 420000,
+      "salary_median_huf_month": 420000,
+      "salary_max_huf_month": 420000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "A CBA franchise jellegű működése miatt a béradatok csak indikátorként kezelhetők.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "34444d6a537e7b70",
+      "company_id": "cba",
+      "company": "CBA",
+      "role_key": "stocker_huf_month",
+      "role_label": "Árufeltöltő",
+      "salary_min_huf_month": 410000,
+      "salary_median_huf_month": 410000,
+      "salary_max_huf_month": 410000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "A CBA franchise jellegű működése miatt a béradatok csak indikátorként kezelhetők.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "f09c0c9e90a64a8c",
+      "company_id": "cba",
+      "company": "CBA",
+      "role_key": "bakery_worker_huf_month",
+      "role_label": "Pék / pékáru dolgozó",
+      "salary_min_huf_month": 440000,
+      "salary_median_huf_month": 440000,
+      "salary_max_huf_month": 440000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "A CBA franchise jellegű működése miatt a béradatok csak indikátorként kezelhetők.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "5fcd2713b9f0368e",
+      "company_id": "cba",
+      "company": "CBA",
+      "role_key": "shift_leader_huf_month",
+      "role_label": "Műszakvezető",
+      "salary_min_huf_month": 530000,
+      "salary_median_huf_month": 530000,
+      "salary_max_huf_month": 530000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "A CBA franchise jellegű működése miatt a béradatok csak indikátorként kezelhetők.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "5ed14f710bc98ea0",
+      "company_id": "cba",
+      "company": "CBA",
+      "role_key": "department_manager_huf_month",
+      "role_label": "Osztályvezető / részlegvezető",
+      "salary_min_huf_month": 630000,
+      "salary_median_huf_month": 630000,
+      "salary_max_huf_month": 630000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "A CBA franchise jellegű működése miatt a béradatok csak indikátorként kezelhetők.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "6a94015113e636c5",
+      "company_id": "cba",
+      "company": "CBA",
+      "role_key": "store_manager_huf_month",
+      "role_label": "Áruházvezető / üzletvezető",
+      "salary_min_huf_month": 880000,
+      "salary_median_huf_month": 880000,
+      "salary_max_huf_month": 880000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "A CBA franchise jellegű működése miatt a béradatok csak indikátorként kezelhetők.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "72292fbb6316e0a3",
+      "company_id": "cba",
+      "company": "CBA",
+      "role_key": "warehouse_worker_huf_month",
+      "role_label": "Raktári dolgozó",
+      "salary_min_huf_month": 460000,
+      "salary_median_huf_month": 460000,
+      "salary_max_huf_month": 460000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "A CBA franchise jellegű működése miatt a béradatok csak indikátorként kezelhetők.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "43ac346d5dfb176d",
+      "company_id": "cba",
+      "company": "CBA",
+      "role_key": "office_specialist_huf_month",
+      "role_label": "Központi specialista",
+      "salary_min_huf_month": 600000,
+      "salary_median_huf_month": 600000,
+      "salary_max_huf_month": 600000,
+      "salary_type": "gross_estimated",
+      "source_type": "static_salary_json",
+      "source_name": "salaries.json",
+      "source_url": null,
+      "confidence": 45,
+      "evidence_text": "A CBA franchise jellegű működése miatt a béradatok csak indikátorként kezelhetők.",
+      "last_checked": "2026-06-19T06:59:10+00:00"
+    },
+    {
+      "id": "5e764c73641ee3fc",
+      "company_id": "tesco",
+      "company": "Tesco",
+      "role_key": null,
+      "role_label": "Általános vállalati bérinformáció",
+      "record_type": "salary_raise_signal",
+      "salary_min_huf_month": null,
+      "salary_median_huf_month": null,
+      "salary_max_huf_month": null,
+      "raise_pct": 7.2,
+      "salary_type": "gross_or_unspecified_media_report",
+      "source_type": "business_media",
+      "source_name": "portfolio.hu",
+      "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPUjB1ejFlSFJmbXBVZVVERVI2eVhrcFhEOUdST3hhenozRTFWSzdJWEV0MVhmMlpPU1FTY19RRFBiS1dfa0hPNUlVc0ZSUHVQQ0lPbVFTVWptOGRRSXl4eXlFc3NZb3ludTFZRGVBTUQ0bWNaNmxheUh5cGlGZ2JmNjZPdkdiZ3N3UWMxWUZxaDdOSGNwWU92eHhMd9IBoAFBVV95cUxQNTRyNXVuLWlwSktEVU1xUHRVS1VVNTQ2Vkk5czBPcHh2RndMaG1xcWs2aV9uRDdKaEc5dXV4VXJyazZtUlZYX2VzMHJWZ0M5YUtUcmxqa3JuRl9TYVFCVk52VUNDNldGUnJwblMtTmRIX21Rd0hCZ3BzNFBHNHM5dWJQR3ZfZUQ5SkRoeHAwTFotU3Jxc2ZiYnBUVktXWmNI?oc=5",
+      "confidence": 55,
+      "evidence_text": "7,2 százalékos béremelést kapnak a Tesco dolgozói - Portfolio.hu. 7,2 százalékos béremelést kapnak a Tesco dolgozói Portfolio.hu",
+      "last_checked": "2026-06-19T06:59:19+00:00"
+    }
+  ]
+}
