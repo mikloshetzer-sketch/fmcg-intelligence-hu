@@ -1,7 +1,6 @@
-name: Salary Intelligence
+name: Salary Raw Data
 
 on:
-
   workflow_dispatch:
 
   schedule:
@@ -11,39 +10,29 @@ permissions:
   contents: write
 
 jobs:
-
-  salary_intelligence:
-
+  salary_raw_data:
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Python setup
         uses: actions/setup-python@v5
-
         with:
           python-version: '3.12'
 
-      - name: Install packages
+      - name: Run salary raw data collector
         run: |
-          pip install requests
+          python scripts/update_salary_raw_data.py
 
-      - name: Generate salary intelligence
+      - name: Commit salary raw data
         run: |
-          python scripts/update_salary_intelligence.py
-
-      - name: Commit changes
-        run: |
-
           git config --global user.name github-actions
-
           git config --global user.email github-actions@github.com
 
-          git add docs/data/salary-intelligence.json
+          git add docs/data/salary-raw-data.json
 
-          git diff --cached --quiet || git commit -m "Update salary intelligence"
+          git diff --cached --quiet || git commit -m "Update salary raw data"
 
           git push
