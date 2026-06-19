@@ -2,21 +2,11 @@
 # -*- coding: utf-8 -*-
 
 """
-FMCG Salary Raw Data Collector v5
+FMCG Salary Intelligence v6
 
-Cél:
-- 6 FMCG szereplő bérinformációinak begyűjtése.
-- Egy scriptben marad.
-- Kimenet:
-  docs/data/salary-raw-data.json
-
-Mit csinál:
-- Google News RSS célzott keresések.
-- 2024 előtti találatok kizárása.
-- Konkrét bérszámok, bérsávok és béremelési százalékok kinyerése.
-- Google News linkek mellett megőrzi a forrásdomain azonosítását.
-- Jobb Lidl / Tesco / Penny / Auchan bércikk-felismerés.
-- Bérsáv összevonás: pl. 540 ezerért ... 670 ezerig.
+Kimenetek:
+- docs/data/salary-raw-data.json
+- docs/data/salary-summary.json
 """
 
 import json
@@ -34,7 +24,9 @@ from html import unescape
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "docs" / "data"
-OUTPUT_FILE = DATA_DIR / "salary-raw-data.json"
+
+RAW_OUTPUT_FILE = DATA_DIR / "salary-raw-data.json"
+SUMMARY_OUTPUT_FILE = DATA_DIR / "salary-summary.json"
 
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -57,39 +49,19 @@ COMPANIES = {
 
 
 ROLE_KEYWORDS = {
-    "cashier": [
-        "pénztáros", "kasszás", "kassza", "eladó-pénztáros",
-        "eladó pénztáros"
-    ],
+    "cashier": ["pénztáros", "kasszás", "kassza", "eladó-pénztáros", "eladó pénztáros"],
     "stocker": [
         "árufeltöltő", "áruházi dolgozó", "áruházi munkatárs",
         "bolti dolgozó", "bolti munkatárs", "fizikai munkát végző",
         "fizikai munkát végzők", "új munkatárs", "dolgozókat",
-        "áruházi munkavállaló", "bolti eladó", "áruházi munkatársak",
-        "bolti munkavállaló"
+        "áruházi munkavállaló", "bolti eladó", "bolti munkavállaló"
     ],
-    "bakery_worker": [
-        "pék", "pékáru", "pékség", "pékáru dolgozó"
-    ],
-    "shift_leader": [
-        "műszakvezető", "műszak vezető", "shift leader"
-    ],
-    "department_manager": [
-        "osztályvezető", "részlegvezető", "csoportvezető",
-        "területi vezető"
-    ],
-    "store_manager": [
-        "üzletvezető", "áruházvezető", "boltvezető", "store manager",
-        "pályakezdő vezető", "vezetői", "vezetőket"
-    ],
-    "warehouse_worker": [
-        "raktári dolgozó", "raktáros", "targoncavezető",
-        "komissiózó", "logisztikai dolgozó", "raktári munkatárs"
-    ],
-    "office_specialist": [
-        "specialista", "asszisztens", "elemző", "irodai",
-        "központi", "beszerzés"
-    ],
+    "bakery_worker": ["pék", "pékáru", "pékség"],
+    "shift_leader": ["műszakvezető", "műszak vezető", "shift leader"],
+    "department_manager": ["osztályvezető", "részlegvezető", "csoportvezető", "területi vezető"],
+    "store_manager": ["üzletvezető", "áruházvezető", "boltvezető", "store manager", "vezetőket"],
+    "warehouse_worker": ["raktári dolgozó", "raktáros", "targoncavezető", "komissiózó", "logisztikai dolgozó"],
+    "office_specialist": ["specialista", "asszisztens", "elemző", "irodai", "központi", "beszerzés"],
 }
 
 
@@ -114,28 +86,26 @@ for company_id, aliases in COMPANIES.items():
     main_name = aliases[0]
 
     SEARCH_QUERIES.extend([
-        f'{main_name} fizetés',
-        f'{main_name} bér',
-        f'{main_name} béremelés',
-        f'{main_name} bruttó fizetés',
+        f'{main_name} dolgozói béremelés',
+        f'{main_name} munkavállalói bér',
         f'{main_name} bruttó bér',
-        f'{main_name} pénztáros fizetés',
-        f'{main_name} árufeltöltő fizetés',
-        f'{main_name} áruházi dolgozó fizetés',
-        f'{main_name} raktári dolgozó fizetés',
-        f'{main_name} üzletvezető fizetés',
-        f'{main_name} bolti dolgozó bér',
+        f'{main_name} bruttó alapbér',
         f'{main_name} alapbér',
         f'{main_name} dolgozók alapbére',
-        f'{main_name} mennyit keresnek',
-        f'{main_name} kereshetnek',
-        f'{main_name} havi bruttó',
-        f'{main_name} bruttó alapbér',
         f'{main_name} dolgozói fizetés',
-        f'{main_name} Trade Magazin béremelés',
+        f'{main_name} mennyit keresnek a dolgozók',
+        f'{main_name} kereshetnek a dolgozók',
+        f'{main_name} áruházi dolgozó bér',
+        f'{main_name} bolti dolgozó bér',
+        f'{main_name} pénztáros bére',
+        f'{main_name} árufeltöltő bére',
+        f'{main_name} raktári dolgozó bére',
+        f'{main_name} üzletvezető bére',
         f'{main_name} Portfolio béremelés',
-        f'{main_name} Pénzcentrum fizetés',
-        f'{main_name} HR Portal béremelés',
+        f'{main_name} HVG bér',
+        f'{main_name} 24.hu béremelés',
+        f'{main_name} Pénzcentrum bér',
+        f'{main_name} Trade Magazin béremelés',
     ])
 
 
@@ -156,14 +126,10 @@ SALARY_PATTERNS = [
 
 SALARY_RANGE_PATTERNS = [
     r"(\d{3,4})\s*[-–]\s*(\d{3,4})\s*ezer\s*(?:forint|ft)?",
-    r"(\d{3,4})\s*[-–]\s*(\d{3,4})\s*ezres",
-    r"(\d+[,.]?\d*)\s*[-–]\s*(\d+[,.]?\d*)\s*millió\s*(?:forint|ft)?",
-    r"(\d+[,.]?\d*)\s*és\s*(\d+[,.]?\d*)\s*millió\s*(?:forint|ft)?",
-    r"bruttó\s+(\d{3,4})\s*[-–]\s*(\d{3,4})\s*ezer",
-    r"(\d{3,4})\s*ezer[^\.]{0,120}?(\d{3,4})\s*ezerig",
-    r"(\d{3,4})\s*ezerért[^\.]{0,120}?(\d{3,4})\s*ezerig",
-    r"bruttó\s+(\d{3,4})\s*ezer[^\.]{0,120}?(\d{3,4})\s*ezerig",
-    r"(\d{3,4})\s*ezer[^\.]{0,120}?felcsúszhat\s+(\d{3,4})\s*ezerig",
+    r"(\d{3,4})\s*ezer[^\.]{0,140}?(\d{3,4})\s*ezerig",
+    r"(\d{3,4})\s*ezerért[^\.]{0,140}?(\d{3,4})\s*ezerig",
+    r"bruttó\s+(\d{3,4})\s*ezer[^\.]{0,140}?(\d{3,4})\s*ezerig",
+    r"(\d{3,4})\s*ezer[^\.]{0,140}?felcsúszhat\s+(\d{3,4})\s*ezerig",
 ]
 
 
@@ -171,25 +137,16 @@ RAISE_PATTERNS = [
     r"(\d{1,2}(?:[,.]\d{1,2})?)\s*százalékos\s+béremelés",
     r"(\d{1,2}(?:[,.]\d{1,2})?)\s*%-os\s+béremelés",
     r"(\d{1,2}(?:[,.]\d{1,2})?)\s*%\s*béremelés",
-    r"béremelés[^\.]{0,120}?(\d{1,2}(?:[,.]\d{1,2})?)\s*százalék",
+    r"béremelés[^\.]{0,140}?(\d{1,2}(?:[,.]\d{1,2})?)\s*százalék",
     r"(\d{1,2}(?:[,.]\d{1,2})?)\s*[-–]\s*(\d{1,2}(?:[,.]\d{1,2})?)\s*százalékos\s+béremelés",
     r"(\d{1,2}(?:[,.]\d{1,2})?)\s*[-–]\s*(\d{1,2}(?:[,.]\d{1,2})?)\s*%\s*béremelés",
 ]
 
 
-BAD_SALARY_CONTEXT = [
-    "milliárd",
-    "milliárdot",
-    "mrd",
-    "árbevétel",
-    "bevétel",
-    "beruházás",
-    "négyzetméter",
-    "áruházat épít",
-    "bírság",
-    "adó",
-    "profit",
-    "nyereség",
+BAD_CONTEXT = [
+    "milliárd", "milliárdot", "mrd", "árbevétel", "bevétel",
+    "beruházás", "négyzetméter", "bírság", "adó", "profit", "nyereség",
+    "fizetési megoldás", "fizetési mód", "bankkártya", "mobilfizetés"
 ]
 
 
@@ -215,19 +172,15 @@ def fetch_url(url):
         "User-Agent": USER_AGENT,
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
         "Accept-Language": "hu-HU,hu;q=0.9,en-US;q=0.8,en;q=0.7",
-        "Cache-Control": "no-cache",
-        "Pragma": "no-cache",
     }
 
     try:
         request = urllib.request.Request(url, headers=headers)
-
         with urllib.request.urlopen(request, timeout=REQUEST_TIMEOUT) as response:
             charset = response.headers.get_content_charset() or "utf-8"
             final_url = response.geturl()
             body = response.read().decode(charset, errors="ignore")
             return body, final_url
-
     except Exception as error:
         print(f"Fetch failed: {url} | {error}")
         return None, url
@@ -261,10 +214,13 @@ def google_news_rss(query):
             if not combined:
                 continue
 
+            if not is_recent_enough(pub_date, combined):
+                continue
+
             if not allowed_source(combined, link):
                 continue
 
-            if not is_recent_enough(pub_date, combined):
+            if is_bad_context(combined):
                 continue
 
             results.append({
@@ -295,11 +251,12 @@ def is_recent_enough(pub_date, text):
         pass
 
     years = [int(y) for y in re.findall(r"\b(20\d{2})\b", text)]
+    return max(years) >= MIN_YEAR if years else True
 
-    if years:
-        return max(years) >= MIN_YEAR
 
-    return True
+def is_bad_context(text):
+    lower = text.lower()
+    return any(item in lower for item in BAD_CONTEXT)
 
 
 def detect_company(text):
@@ -315,22 +272,17 @@ def detect_company(text):
 
 def detect_role(text):
     lower = text.lower()
-    role_scores = {}
+    scores = {}
 
     for role_key, keywords in ROLE_KEYWORDS.items():
-        score = 0
-
-        for keyword in keywords:
-            if keyword in lower:
-                score += 1
-
+        score = sum(1 for keyword in keywords if keyword in lower)
         if score:
-            role_scores[role_key] = score
+            scores[role_key] = score
 
-    if not role_scores:
+    if not scores:
         return None
 
-    return sorted(role_scores.items(), key=lambda item: item[1], reverse=True)[0][0]
+    return sorted(scores.items(), key=lambda item: item[1], reverse=True)[0][0]
 
 
 def normalize_money(value):
@@ -339,9 +291,7 @@ def normalize_money(value):
     if value in ["egymilliós", "millió körüli"]:
         return 1000000
 
-    value = value.replace(" ", "")
-    value = value.replace(".", "")
-    value = value.replace(",", ".")
+    value = value.replace(" ", "").replace(".", "").replace(",", ".")
 
     try:
         number = float(value)
@@ -353,42 +303,31 @@ def normalize_money(value):
     elif 100 <= number <= 3000:
         number *= 1000
 
-    if number < 200000:
-        return None
+    if 200000 <= number <= 3000000:
+        return int(round(number))
 
-    if number > 3000000:
-        return None
-
-    return int(round(number))
+    return None
 
 
-def has_bad_salary_context(text):
+def salary_context_ok(text):
     lower = text.lower()
 
-    if (
-        "fizetés" in lower
-        or "fizetése" in lower
-        or "bér" in lower
-        or "bérek" in lower
-        or "bruttó" in lower
-        or "nettó" in lower
-        or "keres" in lower
-        or "kereshet" in lower
-        or "alapbér" in lower
-        or "juttatás" in lower
-        or "dolgozó" in lower
-    ):
-        return False
+    positive_terms = [
+        "fizetés", "fizetése", "bér", "bérek", "bruttó", "nettó",
+        "keres", "kereshet", "alapbér", "dolgozó", "munkavállaló",
+        "béremelés", "juttatás"
+    ]
 
-    return any(term in lower for term in BAD_SALARY_CONTEXT)
+    return any(term in lower for term in positive_terms) and not is_bad_context(text)
 
 
 def extract_salary_ranges(text):
     text = clean_text(text)
-    ranges = []
 
-    if has_bad_salary_context(text):
+    if not salary_context_ok(text):
         return []
+
+    ranges = []
 
     for pattern in SALARY_RANGE_PATTERNS:
         for match in re.findall(pattern, text.lower(), flags=re.I):
@@ -404,19 +343,29 @@ def extract_salary_ranges(text):
 
                 ranges.append({
                     "salary_min_huf_month": low,
-                    "salary_max_huf_month": high,
                     "salary_median_huf_month": round((low + high) / 2),
+                    "salary_max_huf_month": high,
                 })
 
-    return dedup_ranges(ranges)
+    seen = set()
+    output = []
+
+    for item in ranges:
+        key = (item["salary_min_huf_month"], item["salary_max_huf_month"])
+        if key not in seen:
+            seen.add(key)
+            output.append(item)
+
+    return output
 
 
 def extract_salary_values(text):
     text = clean_text(text)
-    values = []
 
-    if has_bad_salary_context(text):
+    if not salary_context_ok(text):
         return []
+
+    values = []
 
     for pattern in SALARY_PATTERNS:
         if pattern in ["egymilliós", "millió\\s+körüli"]:
@@ -427,7 +376,6 @@ def extract_salary_values(text):
                 continue
 
             value = normalize_money(match)
-
             if value:
                 values.append(value)
 
@@ -449,7 +397,6 @@ def extract_raise_values(text):
         for match in re.findall(pattern, text.lower(), flags=re.I):
             if isinstance(match, tuple):
                 nums = []
-
                 for part in match:
                     try:
                         value = float(str(part).replace(",", "."))
@@ -457,45 +404,22 @@ def extract_raise_values(text):
                             nums.append(value)
                     except ValueError:
                         pass
-
                 if nums:
                     values.append(max(nums))
-
                 continue
 
             try:
                 value = float(str(match).replace(",", "."))
-
                 if 1 <= value <= 50:
                     values.append(value)
-
             except ValueError:
                 pass
 
     return sorted(set(values))
 
 
-def dedup_ranges(ranges):
-    seen = set()
-    result = []
-
-    for item in ranges:
-        key = (
-            item["salary_min_huf_month"],
-            item["salary_max_huf_month"],
-        )
-
-        if key in seen:
-            continue
-
-        seen.add(key)
-        result.append(item)
-
-    return result
-
-
-def detect_source_name(text, link, final_url=None):
-    lower = (text + " " + link + " " + str(final_url or "")).lower()
+def detect_source_name(text, link):
+    lower = (text + " " + link).lower()
 
     for domain in ALLOWED_DOMAINS:
         if domain in lower:
@@ -504,48 +428,15 @@ def detect_source_name(text, link, final_url=None):
     return "unknown"
 
 
-def extract_article_text(url):
-    html, final_url = fetch_url(url)
-    time.sleep(1)
-
-    if not html:
-        return "", final_url
-
-    text = clean_text(html)
-
-    if len(text) > 12000:
-        text = text[:12000]
-
-    return text, final_url
-
-
-def enrich_result_with_article_text(result):
-    rss_text = clean_text(result.get("combined", ""))
-    url = result.get("link", "")
-
-    article_text, final_url = extract_article_text(url)
-
-    if article_text:
-        combined = clean_text(f"{rss_text}. {article_text}")
-    else:
-        combined = rss_text
-
-    result["combined_full"] = combined
-    result["final_url"] = final_url
-    return result
-
-
 def confidence_for_record(record_type, role_key, text, source_count=1):
-    confidence = 50
     lower = text.lower()
+    confidence = 50
 
     if record_type == "salary_range":
         confidence += 20
-
-    if record_type == "salary":
+    elif record_type == "salary":
         confidence += 15
-
-    if record_type == "raise":
+    elif record_type == "raise":
         confidence += 10
 
     if role_key:
@@ -554,19 +445,10 @@ def confidence_for_record(record_type, role_key, text, source_count=1):
     if "bruttó" in lower:
         confidence += 10
 
-    if "nettó" in lower:
-        confidence += 3
-
-    if "havi" in lower or "hó" in lower:
-        confidence += 5
-
-    if "béremelés" in lower:
-        confidence += 5
-
     if "alapbér" in lower:
         confidence += 5
 
-    if "áruházi dolgozó" in lower or "üzletvezető" in lower or "pénztáros" in lower:
+    if "havi" in lower or "hó" in lower:
         confidence += 5
 
     confidence += min(10, max(0, source_count - 1) * 2)
@@ -574,76 +456,45 @@ def confidence_for_record(record_type, role_key, text, source_count=1):
     return min(confidence, 95)
 
 
-def build_salary_record(company_id, role_key, value, result, text):
+def build_record(company_id, role_key, value_type, result, text, salary_range=None, salary_value=None, raise_pct=None):
     company_name = COMPANIES[company_id][0]
+    source_name = detect_source_name(text, result.get("link", ""))
+
+    if salary_range:
+        salary_min = salary_range["salary_min_huf_month"]
+        salary_median = salary_range["salary_median_huf_month"]
+        salary_max = salary_range["salary_max_huf_month"]
+    elif salary_value:
+        salary_min = salary_value
+        salary_median = salary_value
+        salary_max = salary_value
+    else:
+        salary_min = None
+        salary_median = None
+        salary_max = None
 
     return {
-        "id": make_hash(f"{company_id}|{role_key}|salary|{value}|{result.get('link')}"),
+        "id": make_hash(f"{company_id}|{role_key}|{value_type}|{salary_min}|{salary_max}|{raise_pct}|{result.get('link')}"),
         "company_id": company_id,
         "company": company_name,
         "role_key": role_key,
-        "value_type": "salary_huf_month",
-        "salary_min_huf_month": value,
-        "salary_median_huf_month": value,
-        "salary_max_huf_month": value,
-        "raise_pct": None,
-        "source_name": detect_source_name(text, result.get("link", ""), result.get("final_url")),
-        "source_url": result.get("final_url") or result.get("link", ""),
+        "value_type": value_type,
+        "salary_min_huf_month": salary_min,
+        "salary_median_huf_month": salary_median,
+        "salary_max_huf_month": salary_max,
+        "raise_pct": raise_pct,
+        "source_name": source_name,
+        "source_url": result.get("link", ""),
         "google_news_url": result.get("link", ""),
         "published_or_found_date": result.get("pub_date", ""),
         "evidence_text": text[:900],
-        "confidence": confidence_for_record("salary", role_key, text),
-        "collected_at": now_iso(),
-    }
-
-
-def build_salary_range_record(company_id, role_key, salary_range, result, text):
-    company_name = COMPANIES[company_id][0]
-
-    return {
-        "id": make_hash(
-            f"{company_id}|{role_key}|range|"
-            f"{salary_range['salary_min_huf_month']}|"
-            f"{salary_range['salary_max_huf_month']}|"
-            f"{result.get('link')}"
+        "confidence": confidence_for_record(
+            "salary_range" if value_type == "salary_range_huf_month"
+            else "raise" if value_type == "salary_raise_pct"
+            else "salary",
+            role_key,
+            text,
         ),
-        "company_id": company_id,
-        "company": company_name,
-        "role_key": role_key,
-        "value_type": "salary_range_huf_month",
-        "salary_min_huf_month": salary_range["salary_min_huf_month"],
-        "salary_median_huf_month": salary_range["salary_median_huf_month"],
-        "salary_max_huf_month": salary_range["salary_max_huf_month"],
-        "raise_pct": None,
-        "source_name": detect_source_name(text, result.get("link", ""), result.get("final_url")),
-        "source_url": result.get("final_url") or result.get("link", ""),
-        "google_news_url": result.get("link", ""),
-        "published_or_found_date": result.get("pub_date", ""),
-        "evidence_text": text[:900],
-        "confidence": confidence_for_record("salary_range", role_key, text),
-        "collected_at": now_iso(),
-    }
-
-
-def build_raise_record(company_id, value, result, text):
-    company_name = COMPANIES[company_id][0]
-
-    return {
-        "id": make_hash(f"{company_id}|raise|{value}|{result.get('link')}"),
-        "company_id": company_id,
-        "company": company_name,
-        "role_key": None,
-        "value_type": "salary_raise_pct",
-        "salary_min_huf_month": None,
-        "salary_median_huf_month": None,
-        "salary_max_huf_month": None,
-        "raise_pct": value,
-        "source_name": detect_source_name(text, result.get("link", ""), result.get("final_url")),
-        "source_url": result.get("final_url") or result.get("link", ""),
-        "google_news_url": result.get("link", ""),
-        "published_or_found_date": result.get("pub_date", ""),
-        "evidence_text": text[:900],
-        "confidence": confidence_for_record("raise", None, text),
         "collected_at": now_iso(),
     }
 
@@ -663,61 +514,44 @@ def merge_duplicate_records(records):
 
         if key not in grouped:
             record["source_count"] = 1
-            record["source_urls"] = [record.get("source_url")] if record.get("source_url") else []
-            record["source_names"] = [record.get("source_name")] if record.get("source_name") else []
+            record["source_urls"] = [record.get("source_url")]
+            record["source_names"] = [record.get("source_name")]
             grouped[key] = record
             continue
 
         existing = grouped[key]
         existing["source_count"] += 1
 
-        if record.get("source_url") and record.get("source_url") not in existing["source_urls"]:
+        if record.get("source_url") not in existing["source_urls"]:
             existing["source_urls"].append(record.get("source_url"))
 
-        if record.get("source_name") and record.get("source_name") not in existing["source_names"]:
+        if record.get("source_name") not in existing["source_names"]:
             existing["source_names"].append(record.get("source_name"))
 
-        existing["confidence"] = max(existing.get("confidence", 0), record.get("confidence", 0))
+        existing["confidence"] = max(existing["confidence"], record["confidence"])
 
-        if len(record.get("evidence_text", "")) > len(existing.get("evidence_text", "")):
-            existing["evidence_text"] = record.get("evidence_text", "")
+    output = list(grouped.values())
 
-    result = list(grouped.values())
+    for item in output:
+        item["confidence"] = confidence_for_record(
+            "salary_range" if item["value_type"] == "salary_range_huf_month"
+            else "raise" if item["value_type"] == "salary_raise_pct"
+            else "salary",
+            item.get("role_key"),
+            item.get("evidence_text", ""),
+            item.get("source_count", 1),
+        )
 
-    for record in result:
-        if record.get("source_count", 1) > 1:
-            record["confidence"] = confidence_for_record(
-                "salary_range" if record.get("value_type") == "salary_range_huf_month"
-                else "raise" if record.get("value_type") == "salary_raise_pct"
-                else "salary",
-                record.get("role_key"),
-                record.get("evidence_text", ""),
-                record.get("source_count", 1),
-            )
-
-    return result
+    return output
 
 
-def summarize(records):
+def summarize_raw(records):
     companies = []
 
     for company_id, aliases in COMPANIES.items():
-        company_records = [item for item in records if item.get("company_id") == company_id]
-
-        salary_records = [
-            item for item in company_records
-            if item.get("value_type") in ["salary_huf_month", "salary_range_huf_month"]
-        ]
-
-        raise_records = [
-            item for item in company_records
-            if item.get("value_type") == "salary_raise_pct"
-        ]
-
-        roles_found = sorted(set(
-            item.get("role_key") for item in salary_records
-            if item.get("role_key")
-        ))
+        company_records = [r for r in records if r["company_id"] == company_id]
+        salary_records = [r for r in company_records if r["value_type"] in ["salary_huf_month", "salary_range_huf_month"]]
+        raise_records = [r for r in company_records if r["value_type"] == "salary_raise_pct"]
 
         companies.append({
             "company_id": company_id,
@@ -725,14 +559,77 @@ def summarize(records):
             "records_count": len(company_records),
             "salary_records_count": len(salary_records),
             "raise_records_count": len(raise_records),
-            "roles_found": roles_found,
-            "average_confidence": round(
-                sum(item.get("confidence", 0) for item in company_records) / len(company_records)
-            ) if company_records else 0,
+            "roles_found": sorted(set(r["role_key"] for r in salary_records if r.get("role_key"))),
+            "average_confidence": round(sum(r["confidence"] for r in company_records) / len(company_records)) if company_records else 0,
             "sample_records": company_records[:5],
         })
 
     return companies
+
+
+def build_salary_summary(records):
+    companies = []
+
+    for company_id, aliases in COMPANIES.items():
+        company_records = [r for r in records if r["company_id"] == company_id]
+        salary_records = [r for r in company_records if r["value_type"] in ["salary_huf_month", "salary_range_huf_month"]]
+        raise_records = [r for r in company_records if r["value_type"] == "salary_raise_pct"]
+
+        base_candidates = [
+            r for r in salary_records
+            if r.get("role_key") == "stocker"
+            or "alapbér" in r.get("evidence_text", "").lower()
+            or "fizikai munkát végző" in r.get("evidence_text", "").lower()
+            or "dolgozó" in r.get("evidence_text", "").lower()
+        ]
+
+        if base_candidates:
+            base_record = sorted(base_candidates, key=lambda r: r["salary_median_huf_month"])[0]
+        elif salary_records:
+            base_record = sorted(salary_records, key=lambda r: r["salary_median_huf_month"])[0]
+        else:
+            base_record = None
+
+        high_record = (
+            sorted(salary_records, key=lambda r: r["salary_max_huf_month"], reverse=True)[0]
+            if salary_records else None
+        )
+
+        raise_pct = max([r["raise_pct"] for r in raise_records if r.get("raise_pct") is not None], default=None)
+
+        confidence_values = [r["confidence"] for r in company_records]
+        confidence = round(sum(confidence_values) / len(confidence_values)) if confidence_values else 0
+
+        companies.append({
+            "company_id": company_id,
+            "company": aliases[0],
+            "physical_worker_base_salary_huf_month": base_record["salary_median_huf_month"] if base_record else None,
+            "physical_worker_base_salary_min_huf_month": base_record["salary_min_huf_month"] if base_record else None,
+            "physical_worker_base_salary_max_huf_month": base_record["salary_max_huf_month"] if base_record else None,
+            "highest_public_salary_huf_month": high_record["salary_max_huf_month"] if high_record else None,
+            "salary_raise_pct": raise_pct,
+            "salary_record_count": len(salary_records),
+            "raise_record_count": len(raise_records),
+            "confidence": confidence,
+            "base_salary_source": base_record["source_name"] if base_record else None,
+            "highest_salary_source": high_record["source_name"] if high_record else None,
+            "notes": (
+                "Nincs friss konkrét béradat."
+                if not salary_records
+                else "OSINT alapján gyűjtött, nem hivatalos bérinformáció."
+            ),
+        })
+
+    return {
+        "updated_at": now_iso(),
+        "status": "ok",
+        "method": "salary_summary_v1_from_salary_raw_data",
+        "important_note": (
+            "Ez dashboard-kompatibilis összefoglaló a salary-raw-data.json alapján. "
+            "Nem hivatalos bérstatisztika, hanem OSINT alapú indikátor."
+        ),
+        "companies": companies,
+    }
 
 
 def collect_records():
@@ -743,65 +640,46 @@ def collect_records():
     for query in SEARCH_QUERIES:
         print(f"Query: {query}")
 
-        results = google_news_rss(query)
-
-        for result in results:
-            raw_key = make_hash(result.get("combined", "") + result.get("link", ""))
+        for result in google_news_rss(query):
+            raw_key = make_hash(result["combined"] + result["link"])
 
             if raw_key in seen_raw:
                 continue
 
             seen_raw.add(raw_key)
 
-            result = enrich_result_with_article_text(result)
+            text = result["combined"]
 
-            text = result.get("combined_full") or result.get("combined", "")
+            if is_bad_context(text):
+                continue
+
             company_id = detect_company(text)
 
             if not company_id:
                 continue
 
             role_key = detect_role(text)
-
             salary_ranges = extract_salary_ranges(text)
-
-            salary_values = []
-            if not salary_ranges:
-                salary_values = extract_salary_values(text)
-
+            salary_values = [] if salary_ranges else extract_salary_values(text)
             raise_values = extract_raise_values(text)
 
             for salary_range in salary_ranges:
-                records.append(
-                    build_salary_range_record(
-                        company_id=company_id,
-                        role_key=role_key,
-                        salary_range=salary_range,
-                        result=result,
-                        text=text,
-                    )
-                )
+                records.append(build_record(
+                    company_id, role_key, "salary_range_huf_month",
+                    result, text, salary_range=salary_range
+                ))
 
-            for value in salary_values:
-                records.append(
-                    build_salary_record(
-                        company_id=company_id,
-                        role_key=role_key,
-                        value=value,
-                        result=result,
-                        text=text,
-                    )
-                )
+            for salary_value in salary_values:
+                records.append(build_record(
+                    company_id, role_key, "salary_huf_month",
+                    result, text, salary_value=salary_value
+                ))
 
-            for value in raise_values:
-                records.append(
-                    build_raise_record(
-                        company_id=company_id,
-                        value=value,
-                        result=result,
-                        text=text,
-                    )
-                )
+            for raise_value in raise_values:
+                records.append(build_record(
+                    company_id, None, "salary_raise_pct",
+                    result, text, raise_pct=raise_value
+                ))
 
             raw_results.append({
                 "query": query,
@@ -810,9 +688,8 @@ def collect_records():
                 "salary_values": salary_values,
                 "salary_ranges": salary_ranges,
                 "raise_values": raise_values,
-                "source_url": result.get("final_url") or result.get("link", ""),
-                "google_news_url": result.get("link", ""),
-                "published_or_found_date": result.get("pub_date", ""),
+                "source_url": result["link"],
+                "published_or_found_date": result["pub_date"],
                 "text": text[:900],
             })
 
@@ -820,35 +697,15 @@ def collect_records():
 
     records = sorted(
         records,
-        key=lambda item: (
-            item.get("company_id", ""),
-            item.get("role_key") or "",
-            item.get("value_type", ""),
-            -(item.get("confidence", 0)),
+        key=lambda r: (
+            r["company_id"],
+            r.get("role_key") or "",
+            r["value_type"],
+            -(r.get("confidence") or 0),
         )
     )
 
     return records, raw_results
-
-
-def build_output():
-    records, raw_results = collect_records()
-
-    return {
-        "updated_at": now_iso(),
-        "status": "ok" if records else "no_salary_records_found",
-        "method": "salary_raw_data_v5_single_script_rss_article_dedup",
-        "min_year": MIN_YEAR,
-        "important_note": (
-            "Ez nyers OSINT béradat-gyűjtés. Csak konkrét bérszámokat, bérsávokat "
-            "és béremelési százalékokat ment. Nem hivatalos bérstatisztika. "
-            "A rendszer 2024 előtti találatokat kizár, Google News RSS-találatokat használ, "
-            "és ahol lehet, a cikkoldal szövegét is megpróbálja feldolgozni."
-        ),
-        "companies": summarize(records),
-        "records": records,
-        "raw_results": raw_results[:150],
-    }
 
 
 def save_json(path, data):
@@ -859,15 +716,32 @@ def save_json(path, data):
 
 
 def main():
-    print("Salary Raw Data Collector v5 started.")
+    print("Salary Intelligence v6 started.")
 
-    output = build_output()
+    records, raw_results = collect_records()
 
-    save_json(OUTPUT_FILE, output)
+    raw_output = {
+        "updated_at": now_iso(),
+        "status": "ok" if records else "no_salary_records_found",
+        "method": "salary_raw_data_v6_clean_queries_and_summary_output",
+        "min_year": MIN_YEAR,
+        "important_note": (
+            "Ez nyers OSINT béradat-gyűjtés. Csak konkrét bérszámokat, bérsávokat "
+            "és béremelési százalékokat ment. Nem hivatalos bérstatisztika."
+        ),
+        "companies": summarize_raw(records),
+        "records": records,
+        "raw_results": raw_results[:150],
+    }
 
-    print(f"Saved: {OUTPUT_FILE}")
-    print(f"Status: {output['status']}")
-    print(f"Records: {len(output.get('records', []))}")
+    summary_output = build_salary_summary(records)
+
+    save_json(RAW_OUTPUT_FILE, raw_output)
+    save_json(SUMMARY_OUTPUT_FILE, summary_output)
+
+    print(f"Saved: {RAW_OUTPUT_FILE}")
+    print(f"Saved: {SUMMARY_OUTPUT_FILE}")
+    print(f"Records: {len(records)}")
 
 
 if __name__ == "__main__":
