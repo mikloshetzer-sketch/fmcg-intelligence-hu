@@ -2,13 +2,21 @@
 # -*- coding: utf-8 -*-
 
 """
-FMCG Salary Raw Data Collector v1
+FMCG Salary Raw Data Collector v2
 
 Cél:
 - 6 FMCG szereplő bérinformációinak begyűjtése.
 - Csak nyers adatgyűjtés.
 - Nem számol indexet.
 - Nem módosítja a salaries.json fájlt.
+- Javított bérfelismerés:
+  - 587 ezer
+  - 674 ezres
+  - bruttó 595 200 forint
+  - 1 millió
+  - millió körüli
+  - 620-680 ezer
+  - 6-8 százalékos béremelés
 
 Kimenet:
 docs/data/salary-raw-data.json
@@ -51,7 +59,7 @@ COMPANIES = {
 
 ROLE_KEYWORDS = {
     "cashier": ["pénztáros", "kasszás", "eladó-pénztáros", "eladó pénztáros"],
-    "stocker": ["árufeltöltő", "bolti dolgozó", "bolti munkatárs", "eladó"],
+    "stocker": ["árufeltöltő", "bolti dolgozó", "bolti munkatárs", "eladó", "áruházi dolgozó"],
     "bakery_worker": ["pék", "pékáru", "pékség"],
     "shift_leader": ["műszakvezető", "műszak vezető", "shift leader"],
     "department_manager": ["osztályvezető", "részlegvezető", "csoportvezető"],
@@ -59,27 +67,6 @@ ROLE_KEYWORDS = {
     "warehouse_worker": ["raktári dolgozó", "raktáros", "targoncavezető", "komissiózó"],
     "office_specialist": ["specialista", "asszisztens", "elemző", "irodai", "központi"],
 }
-
-
-SEARCH_QUERIES = []
-
-for company_id, aliases in COMPANIES.items():
-    main_name = aliases[0]
-
-    SEARCH_QUERIES.extend([
-        f'{main_name} fizetés',
-        f'{main_name} bér',
-        f'{main_name} béremelés',
-        f'{main_name} bruttó fizetés',
-        f'{main_name} pénztáros fizetés',
-        f'{main_name} árufeltöltő fizetés',
-        f'{main_name} raktári dolgozó fizetés',
-        f'{main_name} üzletvezető fizetés',
-        f'{main_name} Trade Magazin béremelés',
-        f'{main_name} Portfolio béremelés',
-        f'{main_name} Pénzcentrum fizetés',
-        f'{main_name} HR Portal béremelés',
-    ])
 
 
 ALLOWED_DOMAINS = [
@@ -97,19 +84,51 @@ ALLOWED_DOMAINS = [
 ]
 
 
+SEARCH_QUERIES = []
+
+for company_id, aliases in COMPANIES.items():
+    main_name = aliases[0]
+
+    SEARCH_QUERIES.extend([
+        f'{main_name} fizetés',
+        f'{main_name} bér',
+        f'{main_name} béremelés',
+        f'{main_name} bruttó fizetés',
+        f'{main_name} bruttó bér',
+        f'{main_name} pénztáros fizetés',
+        f'{main_name} árufeltöltő fizetés',
+        f'{main_name} áruházi dolgozó fizetés',
+        f'{main_name} raktári dolgozó fizetés',
+        f'{main_name} üzletvezető fizetés',
+        f'{main_name} bolti dolgozó bér',
+        f'{main_name} Trade Magazin béremelés',
+        f'{main_name} Portfolio béremelés',
+        f'{main_name} Pénzcentrum fizetés',
+        f'{main_name} HR Portal béremelés',
+    ])
+
+
 SALARY_PATTERNS = [
-    r"bruttó\s+(\d{1,3}(?:[\s\.]\d{3})+|\d{3,4})\s*(?:forint|ft)",
-    r"bruttó\s+havi\s+(\d{1,3}(?:[\s\.]\d{3})+|\d{3,4})\s*(?:forint|ft)",
-    r"(\d{3,4})\s*ezer\s*(?:forint|ft)",
+    r"bruttó\s+havi\s+(\d{1,3}(?:[\s\.]\d{3})+|\d{3,4})\s*(?:forint|ft)?",
+    r"bruttó\s+(\d{1,3}(?:[\s\.]\d{3})+|\d{3,4})\s*(?:forint|ft)?",
+    r"nettó\s+(\d{1,3}(?:[\s\.]\d{3})+|\d{3,4})\s*(?:forint|ft)?",
     r"(\d{1,3}(?:[\s\.]\d{3})+)\s*(?:forint|ft)",
     r"(\d{3,4})\s*000\s*(?:forint|ft)",
+    r"(\d{3,4})\s*ezer\s*(?:forint|ft)?",
+    r"(\d{3,4})\s*ezres",
+    r"(\d+[,.]?\d*)\s*millió\s*(?:forint|ft)?",
+    r"(\d+[,.]?\d*)\s*milliós",
+    r"egymilliós",
+    r"millió\s+körüli",
 ]
 
 
 SALARY_RANGE_PATTERNS = [
-    r"(\d{3,4})\s*[-–]\s*(\d{3,4})\s*ezer\s*(?:forint|ft)",
-    r"(\d{1,3}(?:[\s\.]\d{3})+)\s*[-–]\s*(\d{1,3}(?:[\s\.]\d{3})+)\s*(?:forint|ft)",
-    r"bruttó\s+(\d{1,3}(?:[\s\.]\d{3})+|\d{3,4})\s*[-–]\s*(\d{1,3}(?:[\s\.]\d{3})+|\d{3,4})\s*(?:forint|ft)",
+    r"(\d{3,4})\s*[-–]\s*(\d{3,4})\s*ezer\s*(?:forint|ft)?",
+    r"(\d{3,4})\s*[-–]\s*(\d{3,4})\s*ezres",
+    r"(\d+[,.]?\d*)\s*[-–]\s*(\d+[,.]?\d*)\s*millió\s*(?:forint|ft)?",
+    r"(\d+[,.]?\d*)\s*és\s*(\d+[,.]?\d*)\s*millió\s*(?:forint|ft)?",
+    r"bruttó\s+(\d{3,4})\s*[-–]\s*(\d{3,4})\s*ezer",
 ]
 
 
@@ -117,7 +136,27 @@ RAISE_PATTERNS = [
     r"(\d{1,2}(?:[,.]\d{1,2})?)\s*százalékos\s+béremelés",
     r"(\d{1,2}(?:[,.]\d{1,2})?)\s*%-os\s+béremelés",
     r"(\d{1,2}(?:[,.]\d{1,2})?)\s*%\s*béremelés",
-    r"béremelés[^\.]{0,90}?(\d{1,2}(?:[,.]\d{1,2})?)\s*százalék",
+    r"béremelés[^\.]{0,120}?(\d{1,2}(?:[,.]\d{1,2})?)\s*százalék",
+    r"(\d{1,2}(?:[,.]\d{1,2})?)\s*[-–]\s*(\d{1,2}(?:[,.]\d{1,2})?)\s*százalékos\s+béremelés",
+    r"(\d{1,2}(?:[,.]\d{1,2})?)\s*[-–]\s*(\d{1,2}(?:[,.]\d{1,2})?)\s*%\s*béremelés",
+]
+
+
+BAD_SALARY_CONTEXT = [
+    "milliárd",
+    "milliárdot",
+    "mrd",
+    "forgalom",
+    "árbevétel",
+    "bevétel",
+    "beruházás",
+    "négyzetméter",
+    "üzlet",
+    "áruházat épít",
+    "bírság",
+    "adó",
+    "profit",
+    "nyereség",
 ]
 
 
@@ -232,37 +271,80 @@ def detect_role(text):
 
 
 def normalize_money(value):
-    value = str(value).replace(" ", "").replace(".", "").replace(",", ".")
+    value = str(value).lower().strip()
+
+    if value in ["egymilliós", "millió körüli"]:
+        return 1000000
+
+    value = value.replace(" ", "")
+    value = value.replace(".", "")
+    value = value.replace(",", ".")
 
     try:
         number = float(value)
     except ValueError:
         return None
 
-    if number < 10000:
-        number = number * 1000
+    if 0.5 <= number <= 3:
+        number *= 1000000
+    elif 100 <= number <= 3000:
+        number *= 1000
 
-    if number < 200000 or number > 2500000:
+    if number < 200000:
+        return None
+
+    if number > 3000000:
         return None
 
     return int(round(number))
 
 
+def has_bad_salary_context(text):
+    lower = text.lower()
+
+    if "fizetés" in lower or "bér" in lower or "bruttó" in lower or "nettó" in lower or "keres" in lower:
+        return False
+
+    return any(term in lower for term in BAD_SALARY_CONTEXT)
+
+
 def extract_salary_values(text):
+    text = clean_text(text)
     values = []
 
+    if has_bad_salary_context(text):
+        return []
+
     for pattern in SALARY_PATTERNS:
+        if pattern in ["egymilliós", "millió\\s+körüli"]:
+            continue
+
         for match in re.findall(pattern, text.lower(), flags=re.I):
+            if isinstance(match, tuple):
+                continue
+
             value = normalize_money(match)
 
             if value:
                 values.append(value)
 
+    lower = text.lower()
+
+    if "egymilliós" in lower:
+        values.append(1000000)
+
+    if "millió körüli" in lower:
+        values.append(1000000)
+
     return sorted(set(values))
 
 
 def extract_salary_ranges(text):
+    text = clean_text(text)
     ranges = []
+
+    if has_bad_salary_context(text):
+        return []
 
     for pattern in SALARY_RANGE_PATTERNS:
         for match in re.findall(pattern, text.lower(), flags=re.I):
@@ -290,6 +372,21 @@ def extract_raise_values(text):
 
     for pattern in RAISE_PATTERNS:
         for match in re.findall(pattern, text.lower(), flags=re.I):
+            if isinstance(match, tuple):
+                nums = []
+                for part in match:
+                    try:
+                        value = float(str(part).replace(",", "."))
+                        if 1 <= value <= 50:
+                            nums.append(value)
+                    except ValueError:
+                        pass
+
+                if nums:
+                    values.append(max(nums))
+
+                continue
+
             try:
                 value = float(str(match).replace(",", "."))
 
@@ -310,6 +407,40 @@ def detect_source_name(text, link):
             return domain
 
     return "unknown"
+
+
+def confidence_for_record(record_type, role_key, text):
+    confidence = 50
+    lower = text.lower()
+
+    if record_type == "salary_range":
+        confidence += 20
+
+    if record_type == "salary":
+        confidence += 15
+
+    if record_type == "raise":
+        confidence += 10
+
+    if role_key:
+        confidence += 10
+
+    if "bruttó" in lower:
+        confidence += 10
+
+    if "nettó" in lower:
+        confidence += 6
+
+    if "havi" in lower or "hó" in lower:
+        confidence += 5
+
+    if "béremelés" in lower:
+        confidence += 5
+
+    if "áruházi dolgozó" in lower or "üzletvezető" in lower or "pénztáros" in lower:
+        confidence += 5
+
+    return min(confidence, 95)
 
 
 def build_salary_record(company_id, role_key, value, result):
@@ -379,35 +510,6 @@ def build_raise_record(company_id, value, result):
         "confidence": confidence_for_record("raise", None, text),
         "collected_at": now_iso(),
     }
-
-
-def confidence_for_record(record_type, role_key, text):
-    confidence = 50
-
-    if record_type == "salary_range":
-        confidence += 20
-
-    if record_type == "salary":
-        confidence += 15
-
-    if record_type == "raise":
-        confidence += 10
-
-    if role_key:
-        confidence += 10
-
-    lower = text.lower()
-
-    if "bruttó" in lower:
-        confidence += 10
-
-    if "havi" in lower or "hó" in lower:
-        confidence += 5
-
-    if "béremelés" in lower:
-        confidence += 5
-
-    return min(confidence, 95)
 
 
 def deduplicate(records):
@@ -538,7 +640,7 @@ def build_output():
     return {
         "updated_at": now_iso(),
         "status": "ok" if records else "no_salary_records_found",
-        "method": "salary_raw_data_v1_google_news_rss_targeted_queries",
+        "method": "salary_raw_data_v2_google_news_rss_targeted_queries_improved_salary_parser",
         "important_note": (
             "Ez nyers OSINT béradat-gyűjtés. Csak konkrét bérszámokat, bérsávokat "
             "és béremelési százalékokat ment. Nem hivatalos bérstatisztika, "
@@ -546,7 +648,7 @@ def build_output():
         ),
         "companies": summarize(records),
         "records": records,
-        "raw_results": raw_results[:100],
+        "raw_results": raw_results[:150],
     }
 
 
@@ -558,7 +660,7 @@ def save_json(path, data):
 
 
 def main():
-    print("Salary Raw Data Collector started.")
+    print("Salary Raw Data Collector v2 started.")
 
     output = build_output()
 
