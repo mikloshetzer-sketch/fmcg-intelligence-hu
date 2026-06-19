@@ -2,19 +2,24 @@
 # -*- coding: utf-8 -*-
 
 """
-FMCG Salary Raw Data Collector v3
+FMCG Salary Raw Data Collector v4
 
 Cél:
 - 6 FMCG szereplő bérinformációinak begyűjtése.
 - Csak nyers adatgyűjtés.
 - Nem számol indexet.
 - Nem módosítja a salaries.json fájlt.
-- Javítások v3:
-  - 2024 előtti találatok kizárása
-  - erősebb szerepkörfelismerés
-  - duplikációk összevonása cégenként / munkakörönként / értékenként
-  - bérsávból egyetlen range rekord készül
-  - ugyanazon forrás többszöri találata nem duplikálódik
+
+Javítások v4:
+- Google News RSS cím + rövid leírás mellett megpróbálja a cikkoldal szövegét is beolvasni.
+- 2024 előtti találatok kizárása.
+- Jobb bérsáv felismerés:
+  - "540 ezerért ... 670 ezerig"
+  - "bruttó 540 ezer ... 670 ezerig"
+  - "540-670 ezer"
+- Jobb szerepkör felismerés.
+- Duplikációk összevonása.
+- Ha a címben nincs konkrét szám, de a cikkben van, azt is menti.
 
 Kimenet:
 docs/data/salary-raw-data.json
@@ -44,6 +49,7 @@ USER_AGENT = (
 
 REQUEST_TIMEOUT = 25
 REQUEST_DELAY_SECONDS = 2
+ARTICLE_FETCH_DELAY_SECONDS = 1
 MIN_YEAR = 2024
 
 
@@ -63,9 +69,10 @@ ROLE_KEYWORDS = {
         "eladó pénztáros"
     ],
     "stocker": [
-        "árufeltöltő", "áruházi dolgozó", "bolti dolgozó",
-        "bolti munkatárs", "fizikai munkát végző", "új munkatárs",
-        "áruházi munkatárs"
+        "árufeltöltő", "áruházi dolgozó", "áruházi munkatárs",
+        "bolti dolgozó", "bolti munkatárs", "fizikai munkát végző",
+        "fizikai munkát végzők", "új munkatárs", "dolgozókat",
+        "áruházi munkavállaló", "bolti eladó"
     ],
     "bakery_worker": [
         "pék", "pékáru", "pékség", "pékáru dolgozó"
@@ -79,7 +86,7 @@ ROLE_KEYWORDS = {
     ],
     "store_manager": [
         "üzletvezető", "áruházvezető", "boltvezető", "store manager",
-        "pályakezdő vezető", "vezetői"
+        "pályakezdő vezető", "vezetői", "vezetőket"
     ],
     "warehouse_worker": [
         "raktári dolgozó", "raktáros", "targoncavezető",
@@ -126,6 +133,8 @@ for company_id, aliases in COMPANIES.items():
         f'{main_name} bolti dolgozó bér',
         f'{main_name} alapbér',
         f'{main_name} dolgozók alapbére',
+        f'{main_name} mennyit keresnek',
+        f'{main_name} kereshetnek',
         f'{main_name} Trade Magazin béremelés',
         f'{main_name} Portfolio béremelés',
         f'{main_name} Pénzcentrum fizetés',
@@ -154,7 +163,9 @@ SALARY_RANGE_PATTERNS = [
     r"(\d+[,.]?\d*)\s*[-–]\s*(\d+[,.]?\d*)\s*millió\s*(?:forint|ft)?",
     r"(\d+[,.]?\d*)\s*és\s*(\d+[,.]?\d*)\s*millió\s*(?:forint|ft)?",
     r"bruttó\s+(\d{3,4})\s*[-–]\s*(\d{3,4})\s*ezer",
-    r"(\d{3,4})\s*ezer[^\.]{0,60}?(\d{3,4})\s*ezerig",
+    r"(\d{3,4})\s*ezer[^\.]{0,90}?(\d{3,4})\s*ezerig",
+    r"(\d{3,4})\s*ezerért[^\.]{0,90}?(\d{3,4})\s*ezerig",
+    r"bruttó\s+(\d{3,4})\s*ezer[^\.]{0,90}?(\d{3,4})\s*ezerig",
 ]
 
 
@@ -358,7 +369,16 @@ def normalize_money(value):
 def has_bad_salary_context(text):
     lower = text.lower()
 
-    if "fizetés" in lower or "bér" in lower or "bruttó" in lower or "nettó" in lower or "keres" in lower:
+    if (
+        "fizetés" in lower
+        or "bér" in lower
+        or "bruttó" in lower
+        or "nettó" in lower
+        or "keres" in lower
+        or "kereshet" in lower
+        or "alapbér" in lower
+        or "juttatás" in lower
+    ):
         return False
 
     return any(term in lower for term in BAD_SALARY_CONTEXT)
@@ -466,6 +486,36 @@ def detect_source_name(text, link):
     return "unknown"
 
 
+def extract_article_text(url):
+    html = fetch_url(url)
+    time.sleep(ARTICLE_FETCH_DELAY_SECONDS)
+
+    if not html:
+        return ""
+
+    text = clean_text(html)
+
+    if len(text) > 6000:
+        text = text[:6000]
+
+    return text
+
+
+def enrich_result_with_article_text(result):
+    rss_text = clean_text(result.get("combined", ""))
+    url = result.get("link", "")
+
+    article_text = extract_article_text(url)
+
+    if article_text:
+        combined = clean_text(f"{rss_text}. {article_text}")
+    else:
+        combined = rss_text
+
+    result["combined_full"] = combined
+    return result
+
+
 def confidence_for_record(record_type, role_key, text):
     confidence = 50
     lower = text.lower()
@@ -503,9 +553,8 @@ def confidence_for_record(record_type, role_key, text):
     return min(confidence, 95)
 
 
-def build_salary_record(company_id, role_key, value, result):
+def build_salary_record(company_id, role_key, value, result, text):
     company_name = COMPANIES[company_id][0]
-    text = clean_text(result.get("combined", ""))
 
     return {
         "id": make_hash(f"{company_id}|{role_key}|salary|{value}|{result.get('link')}"),
@@ -520,15 +569,14 @@ def build_salary_record(company_id, role_key, value, result):
         "source_name": detect_source_name(text, result.get("link", "")),
         "source_url": result.get("link", ""),
         "published_or_found_date": result.get("pub_date", ""),
-        "evidence_text": text[:600],
+        "evidence_text": text[:700],
         "confidence": confidence_for_record("salary", role_key, text),
         "collected_at": now_iso(),
     }
 
 
-def build_salary_range_record(company_id, role_key, salary_range, result):
+def build_salary_range_record(company_id, role_key, salary_range, result, text):
     company_name = COMPANIES[company_id][0]
-    text = clean_text(result.get("combined", ""))
 
     return {
         "id": make_hash(
@@ -548,15 +596,14 @@ def build_salary_range_record(company_id, role_key, salary_range, result):
         "source_name": detect_source_name(text, result.get("link", "")),
         "source_url": result.get("link", ""),
         "published_or_found_date": result.get("pub_date", ""),
-        "evidence_text": text[:600],
+        "evidence_text": text[:700],
         "confidence": confidence_for_record("salary_range", role_key, text),
         "collected_at": now_iso(),
     }
 
 
-def build_raise_record(company_id, value, result):
+def build_raise_record(company_id, value, result, text):
     company_name = COMPANIES[company_id][0]
-    text = clean_text(result.get("combined", ""))
 
     return {
         "id": make_hash(f"{company_id}|raise|{value}|{result.get('link')}"),
@@ -571,7 +618,7 @@ def build_raise_record(company_id, value, result):
         "source_name": detect_source_name(text, result.get("link", "")),
         "source_url": result.get("link", ""),
         "published_or_found_date": result.get("pub_date", ""),
-        "evidence_text": text[:600],
+        "evidence_text": text[:700],
         "confidence": confidence_for_record("raise", None, text),
         "collected_at": now_iso(),
     }
@@ -598,7 +645,6 @@ def merge_duplicate_records(records):
             continue
 
         existing = grouped[key]
-
         existing["source_count"] += 1
 
         if record.get("source_url") and record.get("source_url") not in existing["source_urls"]:
@@ -672,20 +718,23 @@ def collect_records():
         results = google_news_rss(query)
 
         for result in results:
-            text = result.get("combined", "")
-            raw_key = make_hash(text + result.get("link", ""))
+            raw_key = make_hash(result.get("combined", "") + result.get("link", ""))
 
             if raw_key in seen_raw:
                 continue
 
             seen_raw.add(raw_key)
 
+            result = enrich_result_with_article_text(result)
+
+            text = result.get("combined_full") or result.get("combined", "")
             company_id = detect_company(text)
 
             if not company_id:
                 continue
 
             role_key = detect_role(text)
+
             salary_ranges = extract_salary_ranges(text)
 
             salary_values = []
@@ -701,6 +750,7 @@ def collect_records():
                         role_key=role_key,
                         salary_range=salary_range,
                         result=result,
+                        text=text,
                     )
                 )
 
@@ -711,6 +761,7 @@ def collect_records():
                         role_key=role_key,
                         value=value,
                         result=result,
+                        text=text,
                     )
                 )
 
@@ -720,6 +771,7 @@ def collect_records():
                         company_id=company_id,
                         value=value,
                         result=result,
+                        text=text,
                     )
                 )
 
@@ -732,7 +784,7 @@ def collect_records():
                 "raise_values": raise_values,
                 "source_url": result.get("link", ""),
                 "published_or_found_date": result.get("pub_date", ""),
-                "text": text[:600],
+                "text": text[:700],
             })
 
     records = merge_duplicate_records(records)
@@ -756,12 +808,13 @@ def build_output():
     return {
         "updated_at": now_iso(),
         "status": "ok" if records else "no_salary_records_found",
-        "method": "salary_raw_data_v3_recent_filtered_deduplicated",
+        "method": "salary_raw_data_v4_rss_plus_article_text",
         "min_year": MIN_YEAR,
         "important_note": (
             "Ez nyers OSINT béradat-gyűjtés. Csak konkrét bérszámokat, bérsávokat "
             "és béremelési százalékokat ment. Nem hivatalos bérstatisztika, "
-            "nem módosítja a salaries.json fájlt. A 2024 előtti találatok kizárásra kerülnek."
+            "nem módosítja a salaries.json fájlt. A 2024 előtti találatok kizárásra kerülnek. "
+            "A rendszer RSS-találat mellett megpróbálja a cikkoldal szövegéből is kinyerni a béradatot."
         ),
         "companies": summarize(records),
         "records": records,
@@ -777,7 +830,7 @@ def save_json(path, data):
 
 
 def main():
-    print("Salary Raw Data Collector v3 started.")
+    print("Salary Raw Data Collector v4 started.")
 
     output = build_output()
 
