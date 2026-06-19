@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-06-19T10:02:35+00:00",
+  "updated_at": "2026-06-19T12:15:44+00:00",
   "status": "ok",
-  "method": "salary_raw_data_v4_rss_plus_article_text",
+  "method": "salary_raw_data_v5_single_script_rss_article_dedup",
   "min_year": 2024,
-  "important_note": "Ez nyers OSINT béradat-gyűjtés. Csak konkrét bérszámokat, bérsávokat és béremelési százalékokat ment. Nem hivatalos bérstatisztika, nem módosítja a salaries.json fájlt. A 2024 előtti találatok kizárásra kerülnek. A rendszer RSS-találat mellett megpróbálja a cikkoldal szövegéből is kinyerni a béradatot.",
+  "important_note": "Ez nyers OSINT béradat-gyűjtés. Csak konkrét bérszámokat, bérsávokat és béremelési százalékokat ment. Nem hivatalos bérstatisztika. A rendszer 2024 előtti találatokat kizár, Google News RSS-találatokat használ, és ahol lehet, a cikkoldal szövegét is megpróbálja feldolgozni.",
   "companies": [
     {
       "company_id": "lidl",
@@ -37,14 +37,15 @@
           "salary_max_huf_month": 595200,
           "raise_pct": null,
           "source_name": "hvg.hu",
-          "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNNENRdUk3MXdkVUtPcG5EWFhuN2dBU0RrVFdpSEowb0lRWDNna1lpSjZwQmRqWWFwWXZxdlRFYkFPdDM5aVlaRG9XQ09oMzhHSVYxam1PT0lieEc5Zm5uenBfdDFQTmFPUXNmWmNiU05kanNwSXotdVg4d214LUtjbzVNekRpN1VNNkRmdkNKV1QwckJqc3BQWUJzMGFpMXZ5VVo3V1lHY2FDNGxidGdIWno0TnFBYzQ?oc=5",
+          "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNNENRdUk3MXdkVUtPcG5EWFhuN2dBU0RrVFdpSEowb0lRWDNna1lpSjZwQmRqWWFwWXZxdlRFYkFPdDM5aVlaRG9XQ09oMzhHSVYxam1PT0lieEc5Zm5uenBfdDFQTmFPUXNmWmNiU05kanNwSXotdVg4d214LUtjbzVNekRpN1VNNkRmdkNKV1QwckJqc3BQWUJzMGFpMXZ5VVo3V1lHY2FDNGxidGdIWno0TnFBYzQ?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+          "google_news_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNNENRdUk3MXdkVUtPcG5EWFhuN2dBU0RrVFdpSEowb0lRWDNna1lpSjZwQmRqWWFwWXZxdlRFYkFPdDM5aVlaRG9XQ09oMzhHSVYxam1PT0lieEc5Zm5uenBfdDFQTmFPUXNmWmNiU05kanNwSXotdVg4d214LUtjbzVNekRpN1VNNkRmdkNKV1QwckJqc3BQWUJzMGFpMXZ5VVo3V1lHY2FDNGxidGdIWno0TnFBYzQ?oc=5",
           "published_or_found_date": "Mon, 28 Apr 2025 07:00:00 GMT",
           "evidence_text": "Vállalkozás: Bruttó 595 200 forintot is lehet majd keresni nyáron az Aldi balatoni üzleteiben - | hvg.hu. Vállalkozás: Bruttó 595 200 forintot is lehet majd keresni nyáron az Aldi balatoni üzleteiben | hvg.hu. Google Hírek",
           "confidence": 75,
-          "collected_at": "2026-06-19T09:58:03+00:00",
+          "collected_at": "2026-06-19T12:10:49+00:00",
           "source_count": 1,
           "source_urls": [
-            "https://news.google.com/rss/articles/CBMitwFBVV95cUxNNENRdUk3MXdkVUtPcG5EWFhuN2dBU0RrVFdpSEowb0lRWDNna1lpSjZwQmRqWWFwWXZxdlRFYkFPdDM5aVlaRG9XQ09oMzhHSVYxam1PT0lieEc5Zm5uenBfdDFQTmFPUXNmWmNiU05kanNwSXotdVg4d214LUtjbzVNekRpN1VNNkRmdkNKV1QwckJqc3BQWUJzMGFpMXZ5VVo3V1lHY2FDNGxidGdIWno0TnFBYzQ?oc=5"
+            "https://news.google.com/rss/articles/CBMitwFBVV95cUxNNENRdUk3MXdkVUtPcG5EWFhuN2dBU0RrVFdpSEowb0lRWDNna1lpSjZwQmRqWWFwWXZxdlRFYkFPdDM5aVlaRG9XQ09oMzhHSVYxam1PT0lieEc5Zm5uenBfdDFQTmFPUXNmWmNiU05kanNwSXotdVg4d214LUtjbzVNekRpN1VNNkRmdkNKV1QwckJqc3BQWUJzMGFpMXZ5VVo3V1lHY2FDNGxidGdIWno0TnFBYzQ?oc=5&hl=hu&gl=HU&ceid=HU:hu"
           ],
           "source_names": [
             "hvg.hu"
@@ -61,14 +62,15 @@
           "salary_max_huf_month": 550000,
           "raise_pct": null,
           "source_name": "hvg.hu",
-          "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQamg2M09CTm12cFRKOHQ4RGl3Q190RkhUWUpOWEFUOXI4ckVVUDhyZGZpRmtvaEkzSTd3MGRPdlR4QUh3bWFQWGhBMjlCMmRGRnBUUUFmTEdsQjB2NG5oYWVYaVdiUXloNzg2ZXpDSF9qTFVobEZ6TmFXV1llNkZCTklvREhsYWt1SnFqT0wzN3pMXy04SUxSQlZVRQ?oc=5",
+          "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQamg2M09CTm12cFRKOHQ4RGl3Q190RkhUWUpOWEFUOXI4ckVVUDhyZGZpRmtvaEkzSTd3MGRPdlR4QUh3bWFQWGhBMjlCMmRGRnBUUUFmTEdsQjB2NG5oYWVYaVdiUXloNzg2ZXpDSF9qTFVobEZ6TmFXV1llNkZCTklvREhsYWt1SnFqT0wzN3pMXy04SUxSQlZVRQ?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+          "google_news_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQamg2M09CTm12cFRKOHQ4RGl3Q190RkhUWUpOWEFUOXI4ckVVUDhyZGZpRmtvaEkzSTd3MGRPdlR4QUh3bWFQWGhBMjlCMmRGRnBUUUFmTEdsQjB2NG5oYWVYaVdiUXloNzg2ZXpDSF9qTFVobEZ6TmFXV1llNkZCTklvREhsYWt1SnFqT0wzN3pMXy04SUxSQlZVRQ?oc=5",
           "published_or_found_date": "Mon, 15 Apr 2024 07:00:00 GMT",
           "evidence_text": "Vállalkozás: Bruttó 550 ezerért keres dolgozókat a nyárra az Aldi - | hvg.hu. Vállalkozás: Bruttó 550 ezerért keres dolgozókat a nyárra az Aldi | hvg.hu. Google Hírek",
           "confidence": 85,
-          "collected_at": "2026-06-19T09:58:05+00:00",
+          "collected_at": "2026-06-19T12:10:50+00:00",
           "source_count": 1,
           "source_urls": [
-            "https://news.google.com/rss/articles/CBMimwFBVV95cUxQamg2M09CTm12cFRKOHQ4RGl3Q190RkhUWUpOWEFUOXI4ckVVUDhyZGZpRmtvaEkzSTd3MGRPdlR4QUh3bWFQWGhBMjlCMmRGRnBUUUFmTEdsQjB2NG5oYWVYaVdiUXloNzg2ZXpDSF9qTFVobEZ6TmFXV1llNkZCTklvREhsYWt1SnFqT0wzN3pMXy04SUxSQlZVRQ?oc=5"
+            "https://news.google.com/rss/articles/CBMimwFBVV95cUxQamg2M09CTm12cFRKOHQ4RGl3Q190RkhUWUpOWEFUOXI4ckVVUDhyZGZpRmtvaEkzSTd3MGRPdlR4QUh3bWFQWGhBMjlCMmRGRnBUUUFmTEdsQjB2NG5oYWVYaVdiUXloNzg2ZXpDSF9qTFVobEZ6TmFXV1llNkZCTklvREhsYWt1SnFqT0wzN3pMXy04SUxSQlZVRQ?oc=5&hl=hu&gl=HU&ceid=HU:hu"
           ],
           "source_names": [
             "hvg.hu"
@@ -96,14 +98,15 @@
           "salary_max_huf_month": 395000,
           "raise_pct": null,
           "source_name": "hvg.hu",
-          "source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQQkcxaTJlMVJlMU1pQVpXczB3RUlnMWh0aXJ2bkh3UzcxSFZSZXowVGZpUDRjRUtxTFQ5RlFzY2M2NGRzUkVNWHBodlVhQjRKWTdWT0diS1RmTUp5ZkRhbDVla1FWVTZ1LXdIby16ejRTVi04M1Bfel8temdsRXF5YTdCVXBmS09DeFQ1eDdZZVRsM0VCLW5r?oc=5",
+          "source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQQkcxaTJlMVJlMU1pQVpXczB3RUlnMWh0aXJ2bkh3UzcxSFZSZXowVGZpUDRjRUtxTFQ5RlFzY2M2NGRzUkVNWHBodlVhQjRKWTdWT0diS1RmTUp5ZkRhbDVla1FWVTZ1LXdIby16ejRTVi04M1Bfel8temdsRXF5YTdCVXBmS09DeFQ1eDdZZVRsM0VCLW5r?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+          "google_news_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQQkcxaTJlMVJlMU1pQVpXczB3RUlnMWh0aXJ2bkh3UzcxSFZSZXowVGZpUDRjRUtxTFQ5RlFzY2M2NGRzUkVNWHBodlVhQjRKWTdWT0diS1RmTUp5ZkRhbDVla1FWVTZ1LXdIby16ejRTVi04M1Bfel8temdsRXF5YTdCVXBmS09DeFQ1eDdZZVRsM0VCLW5r?oc=5",
           "published_or_found_date": "Thu, 02 Jan 2025 08:00:00 GMT",
           "evidence_text": "Vállalkozás: Spar: 395 ezer bruttó lesz 2025-ben a dolgozók alapbére - | hvg.hu. Vállalkozás: Spar: 395 ezer bruttó lesz 2025-ben a dolgozók alapbére | hvg.hu. Google Hírek",
           "confidence": 80,
-          "collected_at": "2026-06-19T09:59:02+00:00",
+          "collected_at": "2026-06-19T12:11:51+00:00",
           "source_count": 1,
           "source_urls": [
-            "https://news.google.com/rss/articles/CBMilwFBVV95cUxQQkcxaTJlMVJlMU1pQVpXczB3RUlnMWh0aXJ2bkh3UzcxSFZSZXowVGZpUDRjRUtxTFQ5RlFzY2M2NGRzUkVNWHBodlVhQjRKWTdWT0diS1RmTUp5ZkRhbDVla1FWVTZ1LXdIby16ejRTVi04M1Bfel8temdsRXF5YTdCVXBmS09DeFQ1eDdZZVRsM0VCLW5r?oc=5"
+            "https://news.google.com/rss/articles/CBMilwFBVV95cUxQQkcxaTJlMVJlMU1pQVpXczB3RUlnMWh0aXJ2bkh3UzcxSFZSZXowVGZpUDRjRUtxTFQ5RlFzY2M2NGRzUkVNWHBodlVhQjRKWTdWT0diS1RmTUp5ZkRhbDVla1FWVTZ1LXdIby16ejRTVi04M1Bfel8temdsRXF5YTdCVXBmS09DeFQ1eDdZZVRsM0VCLW5r?oc=5&hl=hu&gl=HU&ceid=HU:hu"
           ],
           "source_names": [
             "hvg.hu"
@@ -131,14 +134,15 @@
           "salary_max_huf_month": null,
           "raise_pct": 7.2,
           "source_name": "portfolio.hu",
-          "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPUjB1ejFlSFJmbXBVZVVERVI2eVhrcFhEOUdST3hhenozRTFWSzdJWEV0MVhmMlpPU1FTY19RRFBiS1dfa0hPNUlVc0ZSUHVQQ0lPbVFTVWptOGRRSXl4eXlFc3NZb3ludTFZRGVBTUQ0bWNaNmxheUh5cGlGZ2JmNjZPdkdiZ3N3UWMxWUZxaDdOSGNwWU92eHhMd9IBoAFBVV95cUxQNTRyNXVuLWlwSktEVU1xUHRVS1VVNTQ2Vkk5czBPcHh2RndMaG1xcWs2aV9uRDdKaEc5dXV4VXJyazZtUlZYX2VzMHJWZ0M5YUtUcmxqa3JuRl9TYVFCVk52VUNDNldGUnJwblMtTmRIX21Rd0hCZ3BzNFBHNHM5dWJQR3ZfZUQ5SkRoeHAwTFotU3Jxc2ZiYnBUVktXWmNI?oc=5",
+          "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPUjB1ejFlSFJmbXBVZVVERVI2eVhrcFhEOUdST3hhenozRTFWSzdJWEV0MVhmMlpPU1FTY19RRFBiS1dfa0hPNUlVc0ZSUHVQQ0lPbVFTVWptOGRRSXl4eXlFc3NZb3ludTFZRGVBTUQ0bWNaNmxheUh5cGlGZ2JmNjZPdkdiZ3N3UWMxWUZxaDdOSGNwWU92eHhMd9IBoAFBVV95cUxQNTRyNXVuLWlwSktEVU1xUHRVS1VVNTQ2Vkk5czBPcHh2RndMaG1xcWs2aV9uRDdKaEc5dXV4VXJyazZtUlZYX2VzMHJWZ0M5YUtUcmxqa3JuRl9TYVFCVk52VUNDNldGUnJwblMtTmRIX21Rd0hCZ3BzNFBHNHM5dWJQR3ZfZUQ5SkRoeHAwTFotU3Jxc2ZiYnBUVktXWmNI?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+          "google_news_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPUjB1ejFlSFJmbXBVZVVERVI2eVhrcFhEOUdST3hhenozRTFWSzdJWEV0MVhmMlpPU1FTY19RRFBiS1dfa0hPNUlVc0ZSUHVQQ0lPbVFTVWptOGRRSXl4eXlFc3NZb3ludTFZRGVBTUQ0bWNaNmxheUh5cGlGZ2JmNjZPdkdiZ3N3UWMxWUZxaDdOSGNwWU92eHhMd9IBoAFBVV95cUxQNTRyNXVuLWlwSktEVU1xUHRVS1VVNTQ2Vkk5czBPcHh2RndMaG1xcWs2aV9uRDdKaEc5dXV4VXJyazZtUlZYX2VzMHJWZ0M5YUtUcmxqa3JuRl9TYVFCVk52VUNDNldGUnJwblMtTmRIX21Rd0hCZ3BzNFBHNHM5dWJQR3ZfZUQ5SkRoeHAwTFotU3Jxc2ZiYnBUVktXWmNI?oc=5",
           "published_or_found_date": "Fri, 23 Jan 2026 08:00:00 GMT",
           "evidence_text": "7,2 százalékos béremelést kapnak a Tesco dolgozói - Portfolio.hu. 7,2 százalékos béremelést kapnak a Tesco dolgozói Portfolio.hu. Google Hírek",
           "confidence": 65,
-          "collected_at": "2026-06-19T09:59:52+00:00",
+          "collected_at": "2026-06-19T12:12:48+00:00",
           "source_count": 1,
           "source_urls": [
-            "https://news.google.com/rss/articles/CBMimwFBVV95cUxPUjB1ejFlSFJmbXBVZVVERVI2eVhrcFhEOUdST3hhenozRTFWSzdJWEV0MVhmMlpPU1FTY19RRFBiS1dfa0hPNUlVc0ZSUHVQQ0lPbVFTVWptOGRRSXl4eXlFc3NZb3ludTFZRGVBTUQ0bWNaNmxheUh5cGlGZ2JmNjZPdkdiZ3N3UWMxWUZxaDdOSGNwWU92eHhMd9IBoAFBVV95cUxQNTRyNXVuLWlwSktEVU1xUHRVS1VVNTQ2Vkk5czBPcHh2RndMaG1xcWs2aV9uRDdKaEc5dXV4VXJyazZtUlZYX2VzMHJWZ0M5YUtUcmxqa3JuRl9TYVFCVk52VUNDNldGUnJwblMtTmRIX21Rd0hCZ3BzNFBHNHM5dWJQR3ZfZUQ5SkRoeHAwTFotU3Jxc2ZiYnBUVktXWmNI?oc=5"
+            "https://news.google.com/rss/articles/CBMimwFBVV95cUxPUjB1ejFlSFJmbXBVZVVERVI2eVhrcFhEOUdST3hhenozRTFWSzdJWEV0MVhmMlpPU1FTY19RRFBiS1dfa0hPNUlVc0ZSUHVQQ0lPbVFTVWptOGRRSXl4eXlFc3NZb3ludTFZRGVBTUQ0bWNaNmxheUh5cGlGZ2JmNjZPdkdiZ3N3UWMxWUZxaDdOSGNwWU92eHhMd9IBoAFBVV95cUxQNTRyNXVuLWlwSktEVU1xUHRVS1VVNTQ2Vkk5czBPcHh2RndMaG1xcWs2aV9uRDdKaEc5dXV4VXJyazZtUlZYX2VzMHJWZ0M5YUtUcmxqa3JuRl9TYVFCVk52VUNDNldGUnJwblMtTmRIX21Rd0hCZ3BzNFBHNHM5dWJQR3ZfZUQ5SkRoeHAwTFotU3Jxc2ZiYnBUVktXWmNI?oc=5&hl=hu&gl=HU&ceid=HU:hu"
           ],
           "source_names": [
             "portfolio.hu"
@@ -155,7 +159,7 @@
       "roles_found": [
         "stocker"
       ],
-      "average_confidence": 80,
+      "average_confidence": 78,
       "sample_records": [
         {
           "id": "31629ada901b9e33",
@@ -168,14 +172,15 @@
           "salary_max_huf_month": null,
           "raise_pct": 8.0,
           "source_name": "portfolio.hu",
-          "source_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQd29GcXNoTGZmWDl4RzFDeWFfU2RSRllBZEl1bWY4eUlvQXZaQkVSbzVJUEgwdDdLcW1SeFA1VW83NXJzaUxmV2gwa1RhbUNuQ3VleWdKLWs0LW5iOS1hM3dJYTR3U2JhV2dtQ0FFNnp3VTVRV3B3TlBLdzg5V1RGbUYyd1QtellDWkphSHBCZEHSAZYBQVVfeXFMTlZxTm9ZTHhfSU4wakFkc2xwZmhhYXc1NW80eFlEcE1lWjNGblFJaUFSQ2dMWmI5NXRWQnZoMUxoLU1vZGdOR3JiUExmQUpBSy1RQ0pEZ1ZNY1lXWVdkaHFwRzlKVWtrQ2dNQzlfTFptcFlpVC1VYTI0cGtvVjhQUFFFZ2c3VjBnOGpYMzA1NW9UTVpCTzdB?oc=5",
+          "source_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQd29GcXNoTGZmWDl4RzFDeWFfU2RSRllBZEl1bWY4eUlvQXZaQkVSbzVJUEgwdDdLcW1SeFA1VW83NXJzaUxmV2gwa1RhbUNuQ3VleWdKLWs0LW5iOS1hM3dJYTR3U2JhV2dtQ0FFNnp3VTVRV3B3TlBLdzg5V1RGbUYyd1QtellDWkphSHBCZEHSAZYBQVVfeXFMTlZxTm9ZTHhfSU4wakFkc2xwZmhhYXc1NW80eFlEcE1lWjNGblFJaUFSQ2dMWmI5NXRWQnZoMUxoLU1vZGdOR3JiUExmQUpBSy1RQ0pEZ1ZNY1lXWVdkaHFwRzlKVWtrQ2dNQzlfTFptcFlpVC1VYTI0cGtvVjhQUFFFZ2c3VjBnOGpYMzA1NW9UTVpCTzdB?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+          "google_news_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQd29GcXNoTGZmWDl4RzFDeWFfU2RSRllBZEl1bWY4eUlvQXZaQkVSbzVJUEgwdDdLcW1SeFA1VW83NXJzaUxmV2gwa1RhbUNuQ3VleWdKLWs0LW5iOS1hM3dJYTR3U2JhV2dtQ0FFNnp3VTVRV3B3TlBLdzg5V1RGbUYyd1QtellDWkphSHBCZEHSAZYBQVVfeXFMTlZxTm9ZTHhfSU4wakFkc2xwZmhhYXc1NW80eFlEcE1lWjNGblFJaUFSQ2dMWmI5NXRWQnZoMUxoLU1vZGdOR3JiUExmQUpBSy1RQ0pEZ1ZNY1lXWVdkaHFwRzlKVWtrQ2dNQzlfTFptcFlpVC1VYTI0cGtvVjhQUFFFZ2c3VjBnOGpYMzA1NW9UTVpCTzdB?oc=5",
           "published_or_found_date": "Fri, 23 Jan 2026 08:00:00 GMT",
           "evidence_text": "6-8 százalékos béremelés jön a Penny-nél - Portfolio.hu. 6-8 százalékos béremelés jön a Penny-nél Portfolio.hu. Google Hírek",
           "confidence": 65,
-          "collected_at": "2026-06-19T10:00:36+00:00",
+          "collected_at": "2026-06-19T12:13:37+00:00",
           "source_count": 1,
           "source_urls": [
-            "https://news.google.com/rss/articles/CBMikAFBVV95cUxQd29GcXNoTGZmWDl4RzFDeWFfU2RSRllBZEl1bWY4eUlvQXZaQkVSbzVJUEgwdDdLcW1SeFA1VW83NXJzaUxmV2gwa1RhbUNuQ3VleWdKLWs0LW5iOS1hM3dJYTR3U2JhV2dtQ0FFNnp3VTVRV3B3TlBLdzg5V1RGbUYyd1QtellDWkphSHBCZEHSAZYBQVVfeXFMTlZxTm9ZTHhfSU4wakFkc2xwZmhhYXc1NW80eFlEcE1lWjNGblFJaUFSQ2dMWmI5NXRWQnZoMUxoLU1vZGdOR3JiUExmQUpBSy1RQ0pEZ1ZNY1lXWVdkaHFwRzlKVWtrQ2dNQzlfTFptcFlpVC1VYTI0cGtvVjhQUFFFZ2c3VjBnOGpYMzA1NW9UTVpCTzdB?oc=5"
+            "https://news.google.com/rss/articles/CBMikAFBVV95cUxQd29GcXNoTGZmWDl4RzFDeWFfU2RSRllBZEl1bWY4eUlvQXZaQkVSbzVJUEgwdDdLcW1SeFA1VW83NXJzaUxmV2gwa1RhbUNuQ3VleWdKLWs0LW5iOS1hM3dJYTR3U2JhV2dtQ0FFNnp3VTVRV3B3TlBLdzg5V1RGbUYyd1QtellDWkphSHBCZEHSAZYBQVVfeXFMTlZxTm9ZTHhfSU4wakFkc2xwZmhhYXc1NW80eFlEcE1lWjNGblFJaUFSQ2dMWmI5NXRWQnZoMUxoLU1vZGdOR3JiUExmQUpBSy1RQ0pEZ1ZNY1lXWVdkaHFwRzlKVWtrQ2dNQzlfTFptcFlpVC1VYTI0cGtvVjhQUFFFZ2c3VjBnOGpYMzA1NW9UTVpCTzdB?oc=5&hl=hu&gl=HU&ceid=HU:hu"
           ],
           "source_names": [
             "portfolio.hu"
@@ -192,14 +197,15 @@
           "salary_max_huf_month": 670000,
           "raise_pct": null,
           "source_name": "hvg.hu",
-          "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaTJfejl6VWxrWVktZE51TmVqN284V1I3RmtpeFRHdHpTMVNYQzFYNmtNcTdBNkNNM1ZpcXAtS3gwdUVfZ25PempyR2ZBSnEyREJ5dk9PTDhfSlhpOWk4SEMzbXJXOGRBRVdseXI1QkUxNkRxQUpGNXlDU19LZFR5a3p1T2hPUQ?oc=5",
+          "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaTJfejl6VWxrWVktZE51TmVqN284V1I3RmtpeFRHdHpTMVNYQzFYNmtNcTdBNkNNM1ZpcXAtS3gwdUVfZ25PempyR2ZBSnEyREJ5dk9PTDhfSlhpOWk4SEMzbXJXOGRBRVdseXI1QkUxNkRxQUpGNXlDU19LZFR5a3p1T2hPUQ?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+          "google_news_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaTJfejl6VWxrWVktZE51TmVqN284V1I3RmtpeFRHdHpTMVNYQzFYNmtNcTdBNkNNM1ZpcXAtS3gwdUVfZ25PempyR2ZBSnEyREJ5dk9PTDhfSlhpOWk4SEMzbXJXOGRBRVdseXI1QkUxNkRxQUpGNXlDU19LZFR5a3p1T2hPUQ?oc=5",
           "published_or_found_date": "Tue, 23 Dec 2025 08:00:00 GMT",
           "evidence_text": "Gazdaság: Bruttó 540 ezerért keres új munkatársakat a Penny, de az összeg felcsúszhat 670 ezerig is - | hvg.hu. Gazdaság: Bruttó 540 ezerért keres új munkatársakat a Penny, de az összeg felcsúszhat 670 ezerig is | hvg.hu. Google Hírek",
-          "confidence": 95,
-          "collected_at": "2026-06-19T10:00:46+00:00",
-          "source_count": 6,
+          "confidence": 90,
+          "collected_at": "2026-06-19T12:13:46+00:00",
+          "source_count": 1,
           "source_urls": [
-            "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaTJfejl6VWxrWVktZE51TmVqN284V1I3RmtpeFRHdHpTMVNYQzFYNmtNcTdBNkNNM1ZpcXAtS3gwdUVfZ25PempyR2ZBSnEyREJ5dk9PTDhfSlhpOWk4SEMzbXJXOGRBRVdseXI1QkUxNkRxQUpGNXlDU19LZFR5a3p1T2hPUQ?oc=5"
+            "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaTJfejl6VWxrWVktZE51TmVqN284V1I3RmtpeFRHdHpTMVNYQzFYNmtNcTdBNkNNM1ZpcXAtS3gwdUVfZ25PempyR2ZBSnEyREJ5dk9PTDhfSlhpOWk4SEMzbXJXOGRBRVdseXI1QkUxNkRxQUpGNXlDU19LZFR5a3p1T2hPUQ?oc=5&hl=hu&gl=HU&ceid=HU:hu"
           ],
           "source_names": [
             "hvg.hu"
@@ -229,14 +235,15 @@
           "salary_max_huf_month": 715000,
           "raise_pct": null,
           "source_name": "portfolio.hu",
-          "source_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUmV5WjhzNU9mR1hKZFFKX09VUTl0bWxsVGx6VGRBYWNtdnJ3MDdZNEtVZGFlMEt1WEV2TG02YkctUkliV2VJQjltaDNqMUZUU0lwM2tMcDFmRUk2WnBNOVMtcE54REU5SVRfdVFlSFJ3elNDRjFSQkNEOW1YZmpfdFFmb010SG1oQ2g4NS1IdnhIYTRTZms2VHAwWjZiWERxb2pPcXVzWXHSAa4BQVVfeXFMTm9US21USUlnZEVrQWxkMXZweVo4LVd0TzNIQmF0X1d1Y1hPMm1XclRZdVBUZm16R1R5VnhOSEYzbjBRc0dBV1ZybjNwTmcybjR4Q2VsSDM0NGZWekxhcmc2Wk1kX1NpZDdkOTlQMTZaeXlrQnY2c2RDdTV4Tzc1UmlpeHdKSXFTQ3pRQU9NNGllbkxZcHh1RGxuZ0M4SHUyX0NqcS16ak9mVHp6X0dn?oc=5",
+          "source_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUmV5WjhzNU9mR1hKZFFKX09VUTl0bWxsVGx6VGRBYWNtdnJ3MDdZNEtVZGFlMEt1WEV2TG02YkctUkliV2VJQjltaDNqMUZUU0lwM2tMcDFmRUk2WnBNOVMtcE54REU5SVRfdVFlSFJ3elNDRjFSQkNEOW1YZmpfdFFmb010SG1oQ2g4NS1IdnhIYTRTZms2VHAwWjZiWERxb2pPcXVzWXHSAa4BQVVfeXFMTm9US21USUlnZEVrQWxkMXZweVo4LVd0TzNIQmF0X1d1Y1hPMm1XclRZdVBUZm16R1R5VnhOSEYzbjBRc0dBV1ZybjNwTmcybjR4Q2VsSDM0NGZWekxhcmc2Wk1kX1NpZDdkOTlQMTZaeXlrQnY2c2RDdTV4Tzc1UmlpeHdKSXFTQ3pRQU9NNGllbkxZcHh1RGxuZ0M4SHUyX0NqcS16ak9mVHp6X0dn?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+          "google_news_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUmV5WjhzNU9mR1hKZFFKX09VUTl0bWxsVGx6VGRBYWNtdnJ3MDdZNEtVZGFlMEt1WEV2TG02YkctUkliV2VJQjltaDNqMUZUU0lwM2tMcDFmRUk2WnBNOVMtcE54REU5SVRfdVFlSFJ3elNDRjFSQkNEOW1YZmpfdFFmb010SG1oQ2g4NS1IdnhIYTRTZms2VHAwWjZiWERxb2pPcXVzWXHSAa4BQVVfeXFMTm9US21USUlnZEVrQWxkMXZweVo4LVd0TzNIQmF0X1d1Y1hPMm1XclRZdVBUZm16R1R5VnhOSEYzbjBRc0dBV1ZybjNwTmcybjR4Q2VsSDM0NGZWekxhcmc2Wk1kX1NpZDdkOTlQMTZaeXlrQnY2c2RDdTV4Tzc1UmlpeHdKSXFTQ3pRQU9NNGllbkxZcHh1RGxuZ0M4SHUyX0NqcS16ak9mVHp6X0dn?oc=5",
           "published_or_found_date": "Thu, 23 Jan 2025 08:00:00 GMT",
           "evidence_text": "Mutatjuk, kik kereshetnek 715 ezer forintot az Auchanban - Portfolio.hu. Mutatjuk, kik kereshetnek 715 ezer forintot az Auchanban Portfolio.hu. Google Hírek",
           "confidence": 65,
-          "collected_at": "2026-06-19T10:01:52+00:00",
+          "collected_at": "2026-06-19T12:14:55+00:00",
           "source_count": 1,
           "source_urls": [
-            "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUmV5WjhzNU9mR1hKZFFKX09VUTl0bWxsVGx6VGRBYWNtdnJ3MDdZNEtVZGFlMEt1WEV2TG02YkctUkliV2VJQjltaDNqMUZUU0lwM2tMcDFmRUk2WnBNOVMtcE54REU5SVRfdVFlSFJ3elNDRjFSQkNEOW1YZmpfdFFmb010SG1oQ2g4NS1IdnhIYTRTZms2VHAwWjZiWERxb2pPcXVzWXHSAa4BQVVfeXFMTm9US21USUlnZEVrQWxkMXZweVo4LVd0TzNIQmF0X1d1Y1hPMm1XclRZdVBUZm16R1R5VnhOSEYzbjBRc0dBV1ZybjNwTmcybjR4Q2VsSDM0NGZWekxhcmc2Wk1kX1NpZDdkOTlQMTZaeXlrQnY2c2RDdTV4Tzc1UmlpeHdKSXFTQ3pRQU9NNGllbkxZcHh1RGxuZ0M4SHUyX0NqcS16ak9mVHp6X0dn?oc=5"
+            "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUmV5WjhzNU9mR1hKZFFKX09VUTl0bWxsVGx6VGRBYWNtdnJ3MDdZNEtVZGFlMEt1WEV2TG02YkctUkliV2VJQjltaDNqMUZUU0lwM2tMcDFmRUk2WnBNOVMtcE54REU5SVRfdVFlSFJ3elNDRjFSQkNEOW1YZmpfdFFmb010SG1oQ2g4NS1IdnhIYTRTZms2VHAwWjZiWERxb2pPcXVzWXHSAa4BQVVfeXFMTm9US21USUlnZEVrQWxkMXZweVo4LVd0TzNIQmF0X1d1Y1hPMm1XclRZdVBUZm16R1R5VnhOSEYzbjBRc0dBV1ZybjNwTmcybjR4Q2VsSDM0NGZWekxhcmc2Wk1kX1NpZDdkOTlQMTZaeXlrQnY2c2RDdTV4Tzc1UmlpeHdKSXFTQ3pRQU9NNGllbkxZcHh1RGxuZ0M4SHUyX0NqcS16ak9mVHp6X0dn?oc=5&hl=hu&gl=HU&ceid=HU:hu"
           ],
           "source_names": [
             "portfolio.hu"
@@ -253,14 +260,15 @@
           "salary_max_huf_month": 402000,
           "raise_pct": null,
           "source_name": "hvg.hu",
-          "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQX1VoRlhsV3B2SzRDdUVUUE5NYWt1UFNibjF3U3ZCQlRhSnU3RkRWbExMQXhVYnNXbWRuSUwwb3hJVkc0ekRPUWxOTlpNdFljTUZ4M0R6S3poUGdnS2JhRmdOYXZ3ZDYzcG9GbHZFaGw3dzA3WmtmeDZ6Um84VURlOWNtankxSFRhaGVj?oc=5",
+          "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQX1VoRlhsV3B2SzRDdUVUUE5NYWt1UFNibjF3U3ZCQlRhSnU3RkRWbExMQXhVYnNXbWRuSUwwb3hJVkc0ekRPUWxOTlpNdFljTUZ4M0R6S3poUGdnS2JhRmdOYXZ3ZDYzcG9GbHZFaGw3dzA3WmtmeDZ6Um84VURlOWNtankxSFRhaGVj?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+          "google_news_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQX1VoRlhsV3B2SzRDdUVUUE5NYWt1UFNibjF3U3ZCQlRhSnU3RkRWbExMQXhVYnNXbWRuSUwwb3hJVkc0ekRPUWxOTlpNdFljTUZ4M0R6S3poUGdnS2JhRmdOYXZ3ZDYzcG9GbHZFaGw3dzA3WmtmeDZ6Um84VURlOWNtankxSFRhaGVj?oc=5",
           "published_or_found_date": "Thu, 23 Jan 2025 08:00:00 GMT",
           "evidence_text": "Vállalkozás: Auchan: Bruttó 402 ezer lesz januártól a fizikai munkát végzők alapbére - | hvg.hu. Vállalkozás: Auchan: Bruttó 402 ezer lesz januártól a fizikai munkát végzők alapbére | hvg.hu. Google Hírek",
           "confidence": 90,
-          "collected_at": "2026-06-19T10:01:50+00:00",
+          "collected_at": "2026-06-19T12:14:53+00:00",
           "source_count": 1,
           "source_urls": [
-            "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQX1VoRlhsV3B2SzRDdUVUUE5NYWt1UFNibjF3U3ZCQlRhSnU3RkRWbExMQXhVYnNXbWRuSUwwb3hJVkc0ekRPUWxOTlpNdFljTUZ4M0R6S3poUGdnS2JhRmdOYXZ3ZDYzcG9GbHZFaGw3dzA3WmtmeDZ6Um84VURlOWNtankxSFRhaGVj?oc=5"
+            "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQX1VoRlhsV3B2SzRDdUVUUE5NYWt1UFNibjF3U3ZCQlRhSnU3RkRWbExMQXhVYnNXbWRuSUwwb3hJVkc0ekRPUWxOTlpNdFljTUZ4M0R6S3poUGdnS2JhRmdOYXZ3ZDYzcG9GbHZFaGw3dzA3WmtmeDZ6Um84VURlOWNtankxSFRhaGVj?oc=5&hl=hu&gl=HU&ceid=HU:hu"
           ],
           "source_names": [
             "hvg.hu"
@@ -281,14 +289,15 @@
       "salary_max_huf_month": 595200,
       "raise_pct": null,
       "source_name": "hvg.hu",
-      "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNNENRdUk3MXdkVUtPcG5EWFhuN2dBU0RrVFdpSEowb0lRWDNna1lpSjZwQmRqWWFwWXZxdlRFYkFPdDM5aVlaRG9XQ09oMzhHSVYxam1PT0lieEc5Zm5uenBfdDFQTmFPUXNmWmNiU05kanNwSXotdVg4d214LUtjbzVNekRpN1VNNkRmdkNKV1QwckJqc3BQWUJzMGFpMXZ5VVo3V1lHY2FDNGxidGdIWno0TnFBYzQ?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNNENRdUk3MXdkVUtPcG5EWFhuN2dBU0RrVFdpSEowb0lRWDNna1lpSjZwQmRqWWFwWXZxdlRFYkFPdDM5aVlaRG9XQ09oMzhHSVYxam1PT0lieEc5Zm5uenBfdDFQTmFPUXNmWmNiU05kanNwSXotdVg4d214LUtjbzVNekRpN1VNNkRmdkNKV1QwckJqc3BQWUJzMGFpMXZ5VVo3V1lHY2FDNGxidGdIWno0TnFBYzQ?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNNENRdUk3MXdkVUtPcG5EWFhuN2dBU0RrVFdpSEowb0lRWDNna1lpSjZwQmRqWWFwWXZxdlRFYkFPdDM5aVlaRG9XQ09oMzhHSVYxam1PT0lieEc5Zm5uenBfdDFQTmFPUXNmWmNiU05kanNwSXotdVg4d214LUtjbzVNekRpN1VNNkRmdkNKV1QwckJqc3BQWUJzMGFpMXZ5VVo3V1lHY2FDNGxidGdIWno0TnFBYzQ?oc=5",
       "published_or_found_date": "Mon, 28 Apr 2025 07:00:00 GMT",
       "evidence_text": "Vállalkozás: Bruttó 595 200 forintot is lehet majd keresni nyáron az Aldi balatoni üzleteiben - | hvg.hu. Vállalkozás: Bruttó 595 200 forintot is lehet majd keresni nyáron az Aldi balatoni üzleteiben | hvg.hu. Google Hírek",
       "confidence": 75,
-      "collected_at": "2026-06-19T09:58:03+00:00",
+      "collected_at": "2026-06-19T12:10:49+00:00",
       "source_count": 1,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMitwFBVV95cUxNNENRdUk3MXdkVUtPcG5EWFhuN2dBU0RrVFdpSEowb0lRWDNna1lpSjZwQmRqWWFwWXZxdlRFYkFPdDM5aVlaRG9XQ09oMzhHSVYxam1PT0lieEc5Zm5uenBfdDFQTmFPUXNmWmNiU05kanNwSXotdVg4d214LUtjbzVNekRpN1VNNkRmdkNKV1QwckJqc3BQWUJzMGFpMXZ5VVo3V1lHY2FDNGxidGdIWno0TnFBYzQ?oc=5"
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxNNENRdUk3MXdkVUtPcG5EWFhuN2dBU0RrVFdpSEowb0lRWDNna1lpSjZwQmRqWWFwWXZxdlRFYkFPdDM5aVlaRG9XQ09oMzhHSVYxam1PT0lieEc5Zm5uenBfdDFQTmFPUXNmWmNiU05kanNwSXotdVg4d214LUtjbzVNekRpN1VNNkRmdkNKV1QwckJqc3BQWUJzMGFpMXZ5VVo3V1lHY2FDNGxidGdIWno0TnFBYzQ?oc=5&hl=hu&gl=HU&ceid=HU:hu"
       ],
       "source_names": [
         "hvg.hu"
@@ -305,14 +314,15 @@
       "salary_max_huf_month": 550000,
       "raise_pct": null,
       "source_name": "hvg.hu",
-      "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQamg2M09CTm12cFRKOHQ4RGl3Q190RkhUWUpOWEFUOXI4ckVVUDhyZGZpRmtvaEkzSTd3MGRPdlR4QUh3bWFQWGhBMjlCMmRGRnBUUUFmTEdsQjB2NG5oYWVYaVdiUXloNzg2ZXpDSF9qTFVobEZ6TmFXV1llNkZCTklvREhsYWt1SnFqT0wzN3pMXy04SUxSQlZVRQ?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQamg2M09CTm12cFRKOHQ4RGl3Q190RkhUWUpOWEFUOXI4ckVVUDhyZGZpRmtvaEkzSTd3MGRPdlR4QUh3bWFQWGhBMjlCMmRGRnBUUUFmTEdsQjB2NG5oYWVYaVdiUXloNzg2ZXpDSF9qTFVobEZ6TmFXV1llNkZCTklvREhsYWt1SnFqT0wzN3pMXy04SUxSQlZVRQ?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQamg2M09CTm12cFRKOHQ4RGl3Q190RkhUWUpOWEFUOXI4ckVVUDhyZGZpRmtvaEkzSTd3MGRPdlR4QUh3bWFQWGhBMjlCMmRGRnBUUUFmTEdsQjB2NG5oYWVYaVdiUXloNzg2ZXpDSF9qTFVobEZ6TmFXV1llNkZCTklvREhsYWt1SnFqT0wzN3pMXy04SUxSQlZVRQ?oc=5",
       "published_or_found_date": "Mon, 15 Apr 2024 07:00:00 GMT",
       "evidence_text": "Vállalkozás: Bruttó 550 ezerért keres dolgozókat a nyárra az Aldi - | hvg.hu. Vállalkozás: Bruttó 550 ezerért keres dolgozókat a nyárra az Aldi | hvg.hu. Google Hírek",
       "confidence": 85,
-      "collected_at": "2026-06-19T09:58:05+00:00",
+      "collected_at": "2026-06-19T12:10:50+00:00",
       "source_count": 1,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMimwFBVV95cUxQamg2M09CTm12cFRKOHQ4RGl3Q190RkhUWUpOWEFUOXI4ckVVUDhyZGZpRmtvaEkzSTd3MGRPdlR4QUh3bWFQWGhBMjlCMmRGRnBUUUFmTEdsQjB2NG5oYWVYaVdiUXloNzg2ZXpDSF9qTFVobEZ6TmFXV1llNkZCTklvREhsYWt1SnFqT0wzN3pMXy04SUxSQlZVRQ?oc=5"
+        "https://news.google.com/rss/articles/CBMimwFBVV95cUxQamg2M09CTm12cFRKOHQ4RGl3Q190RkhUWUpOWEFUOXI4ckVVUDhyZGZpRmtvaEkzSTd3MGRPdlR4QUh3bWFQWGhBMjlCMmRGRnBUUUFmTEdsQjB2NG5oYWVYaVdiUXloNzg2ZXpDSF9qTFVobEZ6TmFXV1llNkZCTklvREhsYWt1SnFqT0wzN3pMXy04SUxSQlZVRQ?oc=5&hl=hu&gl=HU&ceid=HU:hu"
       ],
       "source_names": [
         "hvg.hu"
@@ -329,14 +339,15 @@
       "salary_max_huf_month": 715000,
       "raise_pct": null,
       "source_name": "portfolio.hu",
-      "source_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUmV5WjhzNU9mR1hKZFFKX09VUTl0bWxsVGx6VGRBYWNtdnJ3MDdZNEtVZGFlMEt1WEV2TG02YkctUkliV2VJQjltaDNqMUZUU0lwM2tMcDFmRUk2WnBNOVMtcE54REU5SVRfdVFlSFJ3elNDRjFSQkNEOW1YZmpfdFFmb010SG1oQ2g4NS1IdnhIYTRTZms2VHAwWjZiWERxb2pPcXVzWXHSAa4BQVVfeXFMTm9US21USUlnZEVrQWxkMXZweVo4LVd0TzNIQmF0X1d1Y1hPMm1XclRZdVBUZm16R1R5VnhOSEYzbjBRc0dBV1ZybjNwTmcybjR4Q2VsSDM0NGZWekxhcmc2Wk1kX1NpZDdkOTlQMTZaeXlrQnY2c2RDdTV4Tzc1UmlpeHdKSXFTQ3pRQU9NNGllbkxZcHh1RGxuZ0M4SHUyX0NqcS16ak9mVHp6X0dn?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUmV5WjhzNU9mR1hKZFFKX09VUTl0bWxsVGx6VGRBYWNtdnJ3MDdZNEtVZGFlMEt1WEV2TG02YkctUkliV2VJQjltaDNqMUZUU0lwM2tMcDFmRUk2WnBNOVMtcE54REU5SVRfdVFlSFJ3elNDRjFSQkNEOW1YZmpfdFFmb010SG1oQ2g4NS1IdnhIYTRTZms2VHAwWjZiWERxb2pPcXVzWXHSAa4BQVVfeXFMTm9US21USUlnZEVrQWxkMXZweVo4LVd0TzNIQmF0X1d1Y1hPMm1XclRZdVBUZm16R1R5VnhOSEYzbjBRc0dBV1ZybjNwTmcybjR4Q2VsSDM0NGZWekxhcmc2Wk1kX1NpZDdkOTlQMTZaeXlrQnY2c2RDdTV4Tzc1UmlpeHdKSXFTQ3pRQU9NNGllbkxZcHh1RGxuZ0M4SHUyX0NqcS16ak9mVHp6X0dn?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUmV5WjhzNU9mR1hKZFFKX09VUTl0bWxsVGx6VGRBYWNtdnJ3MDdZNEtVZGFlMEt1WEV2TG02YkctUkliV2VJQjltaDNqMUZUU0lwM2tMcDFmRUk2WnBNOVMtcE54REU5SVRfdVFlSFJ3elNDRjFSQkNEOW1YZmpfdFFmb010SG1oQ2g4NS1IdnhIYTRTZms2VHAwWjZiWERxb2pPcXVzWXHSAa4BQVVfeXFMTm9US21USUlnZEVrQWxkMXZweVo4LVd0TzNIQmF0X1d1Y1hPMm1XclRZdVBUZm16R1R5VnhOSEYzbjBRc0dBV1ZybjNwTmcybjR4Q2VsSDM0NGZWekxhcmc2Wk1kX1NpZDdkOTlQMTZaeXlrQnY2c2RDdTV4Tzc1UmlpeHdKSXFTQ3pRQU9NNGllbkxZcHh1RGxuZ0M4SHUyX0NqcS16ak9mVHp6X0dn?oc=5",
       "published_or_found_date": "Thu, 23 Jan 2025 08:00:00 GMT",
       "evidence_text": "Mutatjuk, kik kereshetnek 715 ezer forintot az Auchanban - Portfolio.hu. Mutatjuk, kik kereshetnek 715 ezer forintot az Auchanban Portfolio.hu. Google Hírek",
       "confidence": 65,
-      "collected_at": "2026-06-19T10:01:52+00:00",
+      "collected_at": "2026-06-19T12:14:55+00:00",
       "source_count": 1,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUmV5WjhzNU9mR1hKZFFKX09VUTl0bWxsVGx6VGRBYWNtdnJ3MDdZNEtVZGFlMEt1WEV2TG02YkctUkliV2VJQjltaDNqMUZUU0lwM2tMcDFmRUk2WnBNOVMtcE54REU5SVRfdVFlSFJ3elNDRjFSQkNEOW1YZmpfdFFmb010SG1oQ2g4NS1IdnhIYTRTZms2VHAwWjZiWERxb2pPcXVzWXHSAa4BQVVfeXFMTm9US21USUlnZEVrQWxkMXZweVo4LVd0TzNIQmF0X1d1Y1hPMm1XclRZdVBUZm16R1R5VnhOSEYzbjBRc0dBV1ZybjNwTmcybjR4Q2VsSDM0NGZWekxhcmc2Wk1kX1NpZDdkOTlQMTZaeXlrQnY2c2RDdTV4Tzc1UmlpeHdKSXFTQ3pRQU9NNGllbkxZcHh1RGxuZ0M4SHUyX0NqcS16ak9mVHp6X0dn?oc=5"
+        "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUmV5WjhzNU9mR1hKZFFKX09VUTl0bWxsVGx6VGRBYWNtdnJ3MDdZNEtVZGFlMEt1WEV2TG02YkctUkliV2VJQjltaDNqMUZUU0lwM2tMcDFmRUk2WnBNOVMtcE54REU5SVRfdVFlSFJ3elNDRjFSQkNEOW1YZmpfdFFmb010SG1oQ2g4NS1IdnhIYTRTZms2VHAwWjZiWERxb2pPcXVzWXHSAa4BQVVfeXFMTm9US21USUlnZEVrQWxkMXZweVo4LVd0TzNIQmF0X1d1Y1hPMm1XclRZdVBUZm16R1R5VnhOSEYzbjBRc0dBV1ZybjNwTmcybjR4Q2VsSDM0NGZWekxhcmc2Wk1kX1NpZDdkOTlQMTZaeXlrQnY2c2RDdTV4Tzc1UmlpeHdKSXFTQ3pRQU9NNGllbkxZcHh1RGxuZ0M4SHUyX0NqcS16ak9mVHp6X0dn?oc=5&hl=hu&gl=HU&ceid=HU:hu"
       ],
       "source_names": [
         "portfolio.hu"
@@ -353,14 +364,15 @@
       "salary_max_huf_month": 402000,
       "raise_pct": null,
       "source_name": "hvg.hu",
-      "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQX1VoRlhsV3B2SzRDdUVUUE5NYWt1UFNibjF3U3ZCQlRhSnU3RkRWbExMQXhVYnNXbWRuSUwwb3hJVkc0ekRPUWxOTlpNdFljTUZ4M0R6S3poUGdnS2JhRmdOYXZ3ZDYzcG9GbHZFaGw3dzA3WmtmeDZ6Um84VURlOWNtankxSFRhaGVj?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQX1VoRlhsV3B2SzRDdUVUUE5NYWt1UFNibjF3U3ZCQlRhSnU3RkRWbExMQXhVYnNXbWRuSUwwb3hJVkc0ekRPUWxOTlpNdFljTUZ4M0R6S3poUGdnS2JhRmdOYXZ3ZDYzcG9GbHZFaGw3dzA3WmtmeDZ6Um84VURlOWNtankxSFRhaGVj?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQX1VoRlhsV3B2SzRDdUVUUE5NYWt1UFNibjF3U3ZCQlRhSnU3RkRWbExMQXhVYnNXbWRuSUwwb3hJVkc0ekRPUWxOTlpNdFljTUZ4M0R6S3poUGdnS2JhRmdOYXZ3ZDYzcG9GbHZFaGw3dzA3WmtmeDZ6Um84VURlOWNtankxSFRhaGVj?oc=5",
       "published_or_found_date": "Thu, 23 Jan 2025 08:00:00 GMT",
       "evidence_text": "Vállalkozás: Auchan: Bruttó 402 ezer lesz januártól a fizikai munkát végzők alapbére - | hvg.hu. Vállalkozás: Auchan: Bruttó 402 ezer lesz januártól a fizikai munkát végzők alapbére | hvg.hu. Google Hírek",
       "confidence": 90,
-      "collected_at": "2026-06-19T10:01:50+00:00",
+      "collected_at": "2026-06-19T12:14:53+00:00",
       "source_count": 1,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQX1VoRlhsV3B2SzRDdUVUUE5NYWt1UFNibjF3U3ZCQlRhSnU3RkRWbExMQXhVYnNXbWRuSUwwb3hJVkc0ekRPUWxOTlpNdFljTUZ4M0R6S3poUGdnS2JhRmdOYXZ3ZDYzcG9GbHZFaGw3dzA3WmtmeDZ6Um84VURlOWNtankxSFRhaGVj?oc=5"
+        "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQX1VoRlhsV3B2SzRDdUVUUE5NYWt1UFNibjF3U3ZCQlRhSnU3RkRWbExMQXhVYnNXbWRuSUwwb3hJVkc0ekRPUWxOTlpNdFljTUZ4M0R6S3poUGdnS2JhRmdOYXZ3ZDYzcG9GbHZFaGw3dzA3WmtmeDZ6Um84VURlOWNtankxSFRhaGVj?oc=5&hl=hu&gl=HU&ceid=HU:hu"
       ],
       "source_names": [
         "hvg.hu"
@@ -377,14 +389,15 @@
       "salary_max_huf_month": null,
       "raise_pct": 8.0,
       "source_name": "portfolio.hu",
-      "source_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQd29GcXNoTGZmWDl4RzFDeWFfU2RSRllBZEl1bWY4eUlvQXZaQkVSbzVJUEgwdDdLcW1SeFA1VW83NXJzaUxmV2gwa1RhbUNuQ3VleWdKLWs0LW5iOS1hM3dJYTR3U2JhV2dtQ0FFNnp3VTVRV3B3TlBLdzg5V1RGbUYyd1QtellDWkphSHBCZEHSAZYBQVVfeXFMTlZxTm9ZTHhfSU4wakFkc2xwZmhhYXc1NW80eFlEcE1lWjNGblFJaUFSQ2dMWmI5NXRWQnZoMUxoLU1vZGdOR3JiUExmQUpBSy1RQ0pEZ1ZNY1lXWVdkaHFwRzlKVWtrQ2dNQzlfTFptcFlpVC1VYTI0cGtvVjhQUFFFZ2c3VjBnOGpYMzA1NW9UTVpCTzdB?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQd29GcXNoTGZmWDl4RzFDeWFfU2RSRllBZEl1bWY4eUlvQXZaQkVSbzVJUEgwdDdLcW1SeFA1VW83NXJzaUxmV2gwa1RhbUNuQ3VleWdKLWs0LW5iOS1hM3dJYTR3U2JhV2dtQ0FFNnp3VTVRV3B3TlBLdzg5V1RGbUYyd1QtellDWkphSHBCZEHSAZYBQVVfeXFMTlZxTm9ZTHhfSU4wakFkc2xwZmhhYXc1NW80eFlEcE1lWjNGblFJaUFSQ2dMWmI5NXRWQnZoMUxoLU1vZGdOR3JiUExmQUpBSy1RQ0pEZ1ZNY1lXWVdkaHFwRzlKVWtrQ2dNQzlfTFptcFlpVC1VYTI0cGtvVjhQUFFFZ2c3VjBnOGpYMzA1NW9UTVpCTzdB?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQd29GcXNoTGZmWDl4RzFDeWFfU2RSRllBZEl1bWY4eUlvQXZaQkVSbzVJUEgwdDdLcW1SeFA1VW83NXJzaUxmV2gwa1RhbUNuQ3VleWdKLWs0LW5iOS1hM3dJYTR3U2JhV2dtQ0FFNnp3VTVRV3B3TlBLdzg5V1RGbUYyd1QtellDWkphSHBCZEHSAZYBQVVfeXFMTlZxTm9ZTHhfSU4wakFkc2xwZmhhYXc1NW80eFlEcE1lWjNGblFJaUFSQ2dMWmI5NXRWQnZoMUxoLU1vZGdOR3JiUExmQUpBSy1RQ0pEZ1ZNY1lXWVdkaHFwRzlKVWtrQ2dNQzlfTFptcFlpVC1VYTI0cGtvVjhQUFFFZ2c3VjBnOGpYMzA1NW9UTVpCTzdB?oc=5",
       "published_or_found_date": "Fri, 23 Jan 2026 08:00:00 GMT",
       "evidence_text": "6-8 százalékos béremelés jön a Penny-nél - Portfolio.hu. 6-8 százalékos béremelés jön a Penny-nél Portfolio.hu. Google Hírek",
       "confidence": 65,
-      "collected_at": "2026-06-19T10:00:36+00:00",
+      "collected_at": "2026-06-19T12:13:37+00:00",
       "source_count": 1,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMikAFBVV95cUxQd29GcXNoTGZmWDl4RzFDeWFfU2RSRllBZEl1bWY4eUlvQXZaQkVSbzVJUEgwdDdLcW1SeFA1VW83NXJzaUxmV2gwa1RhbUNuQ3VleWdKLWs0LW5iOS1hM3dJYTR3U2JhV2dtQ0FFNnp3VTVRV3B3TlBLdzg5V1RGbUYyd1QtellDWkphSHBCZEHSAZYBQVVfeXFMTlZxTm9ZTHhfSU4wakFkc2xwZmhhYXc1NW80eFlEcE1lWjNGblFJaUFSQ2dMWmI5NXRWQnZoMUxoLU1vZGdOR3JiUExmQUpBSy1RQ0pEZ1ZNY1lXWVdkaHFwRzlKVWtrQ2dNQzlfTFptcFlpVC1VYTI0cGtvVjhQUFFFZ2c3VjBnOGpYMzA1NW9UTVpCTzdB?oc=5"
+        "https://news.google.com/rss/articles/CBMikAFBVV95cUxQd29GcXNoTGZmWDl4RzFDeWFfU2RSRllBZEl1bWY4eUlvQXZaQkVSbzVJUEgwdDdLcW1SeFA1VW83NXJzaUxmV2gwa1RhbUNuQ3VleWdKLWs0LW5iOS1hM3dJYTR3U2JhV2dtQ0FFNnp3VTVRV3B3TlBLdzg5V1RGbUYyd1QtellDWkphSHBCZEHSAZYBQVVfeXFMTlZxTm9ZTHhfSU4wakFkc2xwZmhhYXc1NW80eFlEcE1lWjNGblFJaUFSQ2dMWmI5NXRWQnZoMUxoLU1vZGdOR3JiUExmQUpBSy1RQ0pEZ1ZNY1lXWVdkaHFwRzlKVWtrQ2dNQzlfTFptcFlpVC1VYTI0cGtvVjhQUFFFZ2c3VjBnOGpYMzA1NW9UTVpCTzdB?oc=5&hl=hu&gl=HU&ceid=HU:hu"
       ],
       "source_names": [
         "portfolio.hu"
@@ -401,14 +414,15 @@
       "salary_max_huf_month": 670000,
       "raise_pct": null,
       "source_name": "hvg.hu",
-      "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaTJfejl6VWxrWVktZE51TmVqN284V1I3RmtpeFRHdHpTMVNYQzFYNmtNcTdBNkNNM1ZpcXAtS3gwdUVfZ25PempyR2ZBSnEyREJ5dk9PTDhfSlhpOWk4SEMzbXJXOGRBRVdseXI1QkUxNkRxQUpGNXlDU19LZFR5a3p1T2hPUQ?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaTJfejl6VWxrWVktZE51TmVqN284V1I3RmtpeFRHdHpTMVNYQzFYNmtNcTdBNkNNM1ZpcXAtS3gwdUVfZ25PempyR2ZBSnEyREJ5dk9PTDhfSlhpOWk4SEMzbXJXOGRBRVdseXI1QkUxNkRxQUpGNXlDU19LZFR5a3p1T2hPUQ?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaTJfejl6VWxrWVktZE51TmVqN284V1I3RmtpeFRHdHpTMVNYQzFYNmtNcTdBNkNNM1ZpcXAtS3gwdUVfZ25PempyR2ZBSnEyREJ5dk9PTDhfSlhpOWk4SEMzbXJXOGRBRVdseXI1QkUxNkRxQUpGNXlDU19LZFR5a3p1T2hPUQ?oc=5",
       "published_or_found_date": "Tue, 23 Dec 2025 08:00:00 GMT",
       "evidence_text": "Gazdaság: Bruttó 540 ezerért keres új munkatársakat a Penny, de az összeg felcsúszhat 670 ezerig is - | hvg.hu. Gazdaság: Bruttó 540 ezerért keres új munkatársakat a Penny, de az összeg felcsúszhat 670 ezerig is | hvg.hu. Google Hírek",
-      "confidence": 95,
-      "collected_at": "2026-06-19T10:00:46+00:00",
-      "source_count": 6,
+      "confidence": 90,
+      "collected_at": "2026-06-19T12:13:46+00:00",
+      "source_count": 1,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaTJfejl6VWxrWVktZE51TmVqN284V1I3RmtpeFRHdHpTMVNYQzFYNmtNcTdBNkNNM1ZpcXAtS3gwdUVfZ25PempyR2ZBSnEyREJ5dk9PTDhfSlhpOWk4SEMzbXJXOGRBRVdseXI1QkUxNkRxQUpGNXlDU19LZFR5a3p1T2hPUQ?oc=5"
+        "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaTJfejl6VWxrWVktZE51TmVqN284V1I3RmtpeFRHdHpTMVNYQzFYNmtNcTdBNkNNM1ZpcXAtS3gwdUVfZ25PempyR2ZBSnEyREJ5dk9PTDhfSlhpOWk4SEMzbXJXOGRBRVdseXI1QkUxNkRxQUpGNXlDU19LZFR5a3p1T2hPUQ?oc=5&hl=hu&gl=HU&ceid=HU:hu"
       ],
       "source_names": [
         "hvg.hu"
@@ -425,14 +439,15 @@
       "salary_max_huf_month": 395000,
       "raise_pct": null,
       "source_name": "hvg.hu",
-      "source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQQkcxaTJlMVJlMU1pQVpXczB3RUlnMWh0aXJ2bkh3UzcxSFZSZXowVGZpUDRjRUtxTFQ5RlFzY2M2NGRzUkVNWHBodlVhQjRKWTdWT0diS1RmTUp5ZkRhbDVla1FWVTZ1LXdIby16ejRTVi04M1Bfel8temdsRXF5YTdCVXBmS09DeFQ1eDdZZVRsM0VCLW5r?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQQkcxaTJlMVJlMU1pQVpXczB3RUlnMWh0aXJ2bkh3UzcxSFZSZXowVGZpUDRjRUtxTFQ5RlFzY2M2NGRzUkVNWHBodlVhQjRKWTdWT0diS1RmTUp5ZkRhbDVla1FWVTZ1LXdIby16ejRTVi04M1Bfel8temdsRXF5YTdCVXBmS09DeFQ1eDdZZVRsM0VCLW5r?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQQkcxaTJlMVJlMU1pQVpXczB3RUlnMWh0aXJ2bkh3UzcxSFZSZXowVGZpUDRjRUtxTFQ5RlFzY2M2NGRzUkVNWHBodlVhQjRKWTdWT0diS1RmTUp5ZkRhbDVla1FWVTZ1LXdIby16ejRTVi04M1Bfel8temdsRXF5YTdCVXBmS09DeFQ1eDdZZVRsM0VCLW5r?oc=5",
       "published_or_found_date": "Thu, 02 Jan 2025 08:00:00 GMT",
       "evidence_text": "Vállalkozás: Spar: 395 ezer bruttó lesz 2025-ben a dolgozók alapbére - | hvg.hu. Vállalkozás: Spar: 395 ezer bruttó lesz 2025-ben a dolgozók alapbére | hvg.hu. Google Hírek",
       "confidence": 80,
-      "collected_at": "2026-06-19T09:59:02+00:00",
+      "collected_at": "2026-06-19T12:11:51+00:00",
       "source_count": 1,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMilwFBVV95cUxQQkcxaTJlMVJlMU1pQVpXczB3RUlnMWh0aXJ2bkh3UzcxSFZSZXowVGZpUDRjRUtxTFQ5RlFzY2M2NGRzUkVNWHBodlVhQjRKWTdWT0diS1RmTUp5ZkRhbDVla1FWVTZ1LXdIby16ejRTVi04M1Bfel8temdsRXF5YTdCVXBmS09DeFQ1eDdZZVRsM0VCLW5r?oc=5"
+        "https://news.google.com/rss/articles/CBMilwFBVV95cUxQQkcxaTJlMVJlMU1pQVpXczB3RUlnMWh0aXJ2bkh3UzcxSFZSZXowVGZpUDRjRUtxTFQ5RlFzY2M2NGRzUkVNWHBodlVhQjRKWTdWT0diS1RmTUp5ZkRhbDVla1FWVTZ1LXdIby16ejRTVi04M1Bfel8temdsRXF5YTdCVXBmS09DeFQ1eDdZZVRsM0VCLW5r?oc=5&hl=hu&gl=HU&ceid=HU:hu"
       ],
       "source_names": [
         "hvg.hu"
@@ -449,14 +464,15 @@
       "salary_max_huf_month": null,
       "raise_pct": 7.2,
       "source_name": "portfolio.hu",
-      "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPUjB1ejFlSFJmbXBVZVVERVI2eVhrcFhEOUdST3hhenozRTFWSzdJWEV0MVhmMlpPU1FTY19RRFBiS1dfa0hPNUlVc0ZSUHVQQ0lPbVFTVWptOGRRSXl4eXlFc3NZb3ludTFZRGVBTUQ0bWNaNmxheUh5cGlGZ2JmNjZPdkdiZ3N3UWMxWUZxaDdOSGNwWU92eHhMd9IBoAFBVV95cUxQNTRyNXVuLWlwSktEVU1xUHRVS1VVNTQ2Vkk5czBPcHh2RndMaG1xcWs2aV9uRDdKaEc5dXV4VXJyazZtUlZYX2VzMHJWZ0M5YUtUcmxqa3JuRl9TYVFCVk52VUNDNldGUnJwblMtTmRIX21Rd0hCZ3BzNFBHNHM5dWJQR3ZfZUQ5SkRoeHAwTFotU3Jxc2ZiYnBUVktXWmNI?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPUjB1ejFlSFJmbXBVZVVERVI2eVhrcFhEOUdST3hhenozRTFWSzdJWEV0MVhmMlpPU1FTY19RRFBiS1dfa0hPNUlVc0ZSUHVQQ0lPbVFTVWptOGRRSXl4eXlFc3NZb3ludTFZRGVBTUQ0bWNaNmxheUh5cGlGZ2JmNjZPdkdiZ3N3UWMxWUZxaDdOSGNwWU92eHhMd9IBoAFBVV95cUxQNTRyNXVuLWlwSktEVU1xUHRVS1VVNTQ2Vkk5czBPcHh2RndMaG1xcWs2aV9uRDdKaEc5dXV4VXJyazZtUlZYX2VzMHJWZ0M5YUtUcmxqa3JuRl9TYVFCVk52VUNDNldGUnJwblMtTmRIX21Rd0hCZ3BzNFBHNHM5dWJQR3ZfZUQ5SkRoeHAwTFotU3Jxc2ZiYnBUVktXWmNI?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPUjB1ejFlSFJmbXBVZVVERVI2eVhrcFhEOUdST3hhenozRTFWSzdJWEV0MVhmMlpPU1FTY19RRFBiS1dfa0hPNUlVc0ZSUHVQQ0lPbVFTVWptOGRRSXl4eXlFc3NZb3ludTFZRGVBTUQ0bWNaNmxheUh5cGlGZ2JmNjZPdkdiZ3N3UWMxWUZxaDdOSGNwWU92eHhMd9IBoAFBVV95cUxQNTRyNXVuLWlwSktEVU1xUHRVS1VVNTQ2Vkk5czBPcHh2RndMaG1xcWs2aV9uRDdKaEc5dXV4VXJyazZtUlZYX2VzMHJWZ0M5YUtUcmxqa3JuRl9TYVFCVk52VUNDNldGUnJwblMtTmRIX21Rd0hCZ3BzNFBHNHM5dWJQR3ZfZUQ5SkRoeHAwTFotU3Jxc2ZiYnBUVktXWmNI?oc=5",
       "published_or_found_date": "Fri, 23 Jan 2026 08:00:00 GMT",
       "evidence_text": "7,2 százalékos béremelést kapnak a Tesco dolgozói - Portfolio.hu. 7,2 százalékos béremelést kapnak a Tesco dolgozói Portfolio.hu. Google Hírek",
       "confidence": 65,
-      "collected_at": "2026-06-19T09:59:52+00:00",
+      "collected_at": "2026-06-19T12:12:48+00:00",
       "source_count": 1,
       "source_urls": [
-        "https://news.google.com/rss/articles/CBMimwFBVV95cUxPUjB1ejFlSFJmbXBVZVVERVI2eVhrcFhEOUdST3hhenozRTFWSzdJWEV0MVhmMlpPU1FTY19RRFBiS1dfa0hPNUlVc0ZSUHVQQ0lPbVFTVWptOGRRSXl4eXlFc3NZb3ludTFZRGVBTUQ0bWNaNmxheUh5cGlGZ2JmNjZPdkdiZ3N3UWMxWUZxaDdOSGNwWU92eHhMd9IBoAFBVV95cUxQNTRyNXVuLWlwSktEVU1xUHRVS1VVNTQ2Vkk5czBPcHh2RndMaG1xcWs2aV9uRDdKaEc5dXV4VXJyazZtUlZYX2VzMHJWZ0M5YUtUcmxqa3JuRl9TYVFCVk52VUNDNldGUnJwblMtTmRIX21Rd0hCZ3BzNFBHNHM5dWJQR3ZfZUQ5SkRoeHAwTFotU3Jxc2ZiYnBUVktXWmNI?oc=5"
+        "https://news.google.com/rss/articles/CBMimwFBVV95cUxPUjB1ejFlSFJmbXBVZVVERVI2eVhrcFhEOUdST3hhenozRTFWSzdJWEV0MVhmMlpPU1FTY19RRFBiS1dfa0hPNUlVc0ZSUHVQQ0lPbVFTVWptOGRRSXl4eXlFc3NZb3ludTFZRGVBTUQ0bWNaNmxheUh5cGlGZ2JmNjZPdkdiZ3N3UWMxWUZxaDdOSGNwWU92eHhMd9IBoAFBVV95cUxQNTRyNXVuLWlwSktEVU1xUHRVS1VVNTQ2Vkk5czBPcHh2RndMaG1xcWs2aV9uRDdKaEc5dXV4VXJyazZtUlZYX2VzMHJWZ0M5YUtUcmxqa3JuRl9TYVFCVk52VUNDNldGUnJwblMtTmRIX21Rd0hCZ3BzNFBHNHM5dWJQR3ZfZUQ5SkRoeHAwTFotU3Jxc2ZiYnBUVktXWmNI?oc=5&hl=hu&gl=HU&ceid=HU:hu"
       ],
       "source_names": [
         "portfolio.hu"
@@ -471,7 +487,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOX2lRWkgyQy1GSVlWX1FoZG1pd0lhT3RRdl92Q1pKX0VZNGk2RC1YVnFhcktGdHlmRlN0RURBYmtqNkpfUHhRQ0NpTjBheGktdjIxZHV4TGJKcEhWU2piUDhmVmh6Y3RiR2F2cHB3RUtSMG1SX2RYUVFaNVlGNGZBb0hB?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOX2lRWkgyQy1GSVlWX1FoZG1pd0lhT3RRdl92Q1pKX0VZNGk2RC1YVnFhcktGdHlmRlN0RURBYmtqNkpfUHhRQ0NpTjBheGktdjIxZHV4TGJKcEhWU2piUDhmVmh6Y3RiR2F2cHB3RUtSMG1SX2RYUVFaNVlGNGZBb0hB?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOX2lRWkgyQy1GSVlWX1FoZG1pd0lhT3RRdl92Q1pKX0VZNGk2RC1YVnFhcktGdHlmRlN0RURBYmtqNkpfUHhRQ0NpTjBheGktdjIxZHV4TGJKcEhWU2piUDhmVmh6Y3RiR2F2cHB3RUtSMG1SX2RYUVFaNVlGNGZBb0hB?oc=5",
       "published_or_found_date": "Fri, 05 Jun 2026 07:00:00 GMT",
       "text": "Új fizetési megoldás érkezik a Lidl-üzletekben - 24.hu. Új fizetési megoldás érkezik a Lidl-üzletekben 24.hu. Google Hírek"
     },
@@ -482,7 +499,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQb3RSWElzZW9jRWFuOW42cDVhWGczWnZESkd5OTRDdzBNQWh2eEQzVlg2dUk2SGtCM0tsSkpDUTR1R04yR1RIRWV4Y1ZuMDEyTHIxUVZkT09NSXRza1FjNUpPdzdMV2xmejVRLWFhVUVrQ2IzN2dsTkZEQ0E3bUNtc29SREctMmlBRzBLUDdBS1FnbWdZUk5ZVWpBcU13NmRWam5SR1c2T3BBeEtRcS1v0gG0AUFVX3lxTE9rdzdJb2FSYkctUVY0VGgzR0pxeUNLZVRRWWh3b1c1WFlscG91emJSS0VzRFlMTVJfNE9OaW9wRHk5UFB1QTdEcF95UWZTM08wN2dxWEI4QkQ4SHNNY2JBWlNPMEl6ZDVfUGpsZ3ZRY1ZvZXNNVXhRYjNrSWRQdXR1TklRbF82ZmlPWktWTmx6Z3ZudWtBdkxmUkVhNEdIVENLU0ZIamYwX0o2cFMxeTNIN2t2dw?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQb3RSWElzZW9jRWFuOW42cDVhWGczWnZESkd5OTRDdzBNQWh2eEQzVlg2dUk2SGtCM0tsSkpDUTR1R04yR1RIRWV4Y1ZuMDEyTHIxUVZkT09NSXRza1FjNUpPdzdMV2xmejVRLWFhVUVrQ2IzN2dsTkZEQ0E3bUNtc29SREctMmlBRzBLUDdBS1FnbWdZUk5ZVWpBcU13NmRWam5SR1c2T3BBeEtRcS1v0gG0AUFVX3lxTE9rdzdJb2FSYkctUVY0VGgzR0pxeUNLZVRRWWh3b1c1WFlscG91emJSS0VzRFlMTVJfNE9OaW9wRHk5UFB1QTdEcF95UWZTM08wN2dxWEI4QkQ4SHNNY2JBWlNPMEl6ZDVfUGpsZ3ZRY1ZvZXNNVXhRYjNrSWRQdXR1TklRbF82ZmlPWktWTmx6Z3ZudWtBdkxmUkVhNEdIVENLU0ZIamYwX0o2cFMxeTNIN2t2dw?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQb3RSWElzZW9jRWFuOW42cDVhWGczWnZESkd5OTRDdzBNQWh2eEQzVlg2dUk2SGtCM0tsSkpDUTR1R04yR1RIRWV4Y1ZuMDEyTHIxUVZkT09NSXRza1FjNUpPdzdMV2xmejVRLWFhVUVrQ2IzN2dsTkZEQ0E3bUNtc29SREctMmlBRzBLUDdBS1FnbWdZUk5ZVWpBcU13NmRWam5SR1c2T3BBeEtRcS1v0gG0AUFVX3lxTE9rdzdJb2FSYkctUVY0VGgzR0pxeUNLZVRRWWh3b1c1WFlscG91emJSS0VzRFlMTVJfNE9OaW9wRHk5UFB1QTdEcF95UWZTM08wN2dxWEI4QkQ4SHNNY2JBWlNPMEl6ZDVfUGpsZ3ZRY1ZvZXNNVXhRYjNrSWRQdXR1TklRbF82ZmlPWktWTmx6Z3ZudWtBdkxmUkVhNEdIVENLU0ZIamYwX0o2cFMxeTNIN2t2dw?oc=5",
       "published_or_found_date": "Mon, 20 Apr 2026 07:00:00 GMT",
       "text": "Megugrottak a Lidl fizetései – ennyit vihetnek haza a dolgozók - Portfolio.hu. Megugrottak a Lidl fizetései – ennyit vihetnek haza a dolgozók Portfolio.hu. Google Hírek"
     },
@@ -493,7 +511,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBJWWhPLUs4S3hwakExc2J3UElUeXJ6R2xXdUdtOFd6S21BT2k0RnMwdEY1b0ZyZ2YzYVM0aTBXZjhmdWRJZHl4aWIyWmdWaFRjSVlwZk9vTVJldTdXYjlsRjB3?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBJWWhPLUs4S3hwakExc2J3UElUeXJ6R2xXdUdtOFd6S21BT2k0RnMwdEY1b0ZyZ2YzYVM0aTBXZjhmdWRJZHl4aWIyWmdWaFRjSVlwZk9vTVJldTdXYjlsRjB3?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBJWWhPLUs4S3hwakExc2J3UElUeXJ6R2xXdUdtOFd6S21BT2k0RnMwdEY1b0ZyZ2YzYVM0aTBXZjhmdWRJZHl4aWIyWmdWaFRjSVlwZk9vTVJldTdXYjlsRjB3?oc=5",
       "published_or_found_date": "Mon, 20 Apr 2026 07:00:00 GMT",
       "text": "Megvan, mennyit kereshetnek a lidlesek az idei bérfejlesztés után - 24.hu. Megvan, mennyit kereshetnek a lidlesek az idei bérfejlesztés után 24.hu. Google Hírek"
     },
@@ -504,7 +523,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPX3IyWXR1NDI0LUZvbEpyTUotRDJCYVhjWjJrcFl5cXJUS3ZBNUJ5N1lEVXFhMzhnWUN5cnB2U2R3Sks5ZUV1NUZoNUFQbmt6TzFYNURGSmFNSXZLblFyQkthUjFYeXZSVmtHZzAyWW5hR0VpR0RxNUxyOV9hNkdUeDU1MkpqZ05yUGJaUFZ5WS1fZUduTm1LSzVsZ2J5eXU2eTJXNmVpcFJSZWZwaUZnVVVzOWVWTHc?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPX3IyWXR1NDI0LUZvbEpyTUotRDJCYVhjWjJrcFl5cXJUS3ZBNUJ5N1lEVXFhMzhnWUN5cnB2U2R3Sks5ZUV1NUZoNUFQbmt6TzFYNURGSmFNSXZLblFyQkthUjFYeXZSVmtHZzAyWW5hR0VpR0RxNUxyOV9hNkdUeDU1MkpqZ05yUGJaUFZ5WS1fZUduTm1LSzVsZ2J5eXU2eTJXNmVpcFJSZWZwaUZnVVVzOWVWTHc?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPX3IyWXR1NDI0LUZvbEpyTUotRDJCYVhjWjJrcFl5cXJUS3ZBNUJ5N1lEVXFhMzhnWUN5cnB2U2R3Sks5ZUV1NUZoNUFQbmt6TzFYNURGSmFNSXZLblFyQkthUjFYeXZSVmtHZzAyWW5hR0VpR0RxNUxyOV9hNkdUeDU1MkpqZ05yUGJaUFZ5WS1fZUduTm1LSzVsZ2J5eXU2eTJXNmVpcFJSZWZwaUZnVVVzOWVWTHc?oc=5",
       "published_or_found_date": "Fri, 28 Feb 2025 08:00:00 GMT",
       "text": "A Lidl irodájában dolgoznak a magyar beszerzés Top Gunjai: Maverick I., II. és III. - 24.hu. A Lidl irodájában dolgoznak a magyar beszerzés Top Gunjai: Maverick I., II. és III. 24.hu. Google Hírek"
     },
@@ -515,7 +535,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPQTVwa1hGY21UTDBHWXR4eHBzdnJ0S1BFSzdFanRFdDd2SVRybGdyZHVUeEl6VVNHbEt0OVlQM1FxR3pJMk01bXR2bndUOU5xaUJuX3o5UXVocVk4dERZT1BuVXBBQzFjZlFwc3RoaGUtTF9WOFdQSVNLS1Z3Tlhyb3dtbklKckZtZXN6TU51Q21VOW82eWdUQlBPWk5wMG44RHZKVFhOdXFYQWd6TTNaRWcxbE8?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPQTVwa1hGY21UTDBHWXR4eHBzdnJ0S1BFSzdFanRFdDd2SVRybGdyZHVUeEl6VVNHbEt0OVlQM1FxR3pJMk01bXR2bndUOU5xaUJuX3o5UXVocVk4dERZT1BuVXBBQzFjZlFwc3RoaGUtTF9WOFdQSVNLS1Z3Tlhyb3dtbklKckZtZXN6TU51Q21VOW82eWdUQlBPWk5wMG44RHZKVFhOdXFYQWd6TTNaRWcxbE8?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPQTVwa1hGY21UTDBHWXR4eHBzdnJ0S1BFSzdFanRFdDd2SVRybGdyZHVUeEl6VVNHbEt0OVlQM1FxR3pJMk01bXR2bndUOU5xaUJuX3o5UXVocVk4dERZT1BuVXBBQzFjZlFwc3RoaGUtTF9WOFdQSVNLS1Z3Tlhyb3dtbklKckZtZXN6TU51Q21VOW82eWdUQlBPWk5wMG44RHZKVFhOdXFYQWd6TTNaRWcxbE8?oc=5",
       "published_or_found_date": "Tue, 03 Dec 2024 08:00:00 GMT",
       "text": "Impozáns juttatási csomagot kapnak a Lidl dolgozói - 24.hu. Impozáns juttatási csomagot kapnak a Lidl dolgozói 24.hu. Google Hírek"
     },
@@ -526,7 +547,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5YNWFtZk1qa1ZlN3NJaEtXUUh5XzRHdl9xMGxyazdfME5EYXVFckFSb0lEdjVNZXBMUXBoNE4tV3hNb2FlTTNBXzBWMXFDVGVBSGJzcWZEWEFxR0txaVY3eFRIRzhuOEVoSVhwdC15QkMxUQ?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5YNWFtZk1qa1ZlN3NJaEtXUUh5XzRHdl9xMGxyazdfME5EYXVFckFSb0lEdjVNZXBMUXBoNE4tV3hNb2FlTTNBXzBWMXFDVGVBSGJzcWZEWEFxR0txaVY3eFRIRzhuOEVoSVhwdC15QkMxUQ?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5YNWFtZk1qa1ZlN3NJaEtXUUh5XzRHdl9xMGxyazdfME5EYXVFckFSb0lEdjVNZXBMUXBoNE4tV3hNb2FlTTNBXzBWMXFDVGVBSGJzcWZEWEFxR0txaVY3eFRIRzhuOEVoSVhwdC15QkMxUQ?oc=5",
       "published_or_found_date": "Mon, 20 Apr 2026 07:00:00 GMT",
       "text": "Vállalkozás: 103 milliárdot fizet ki idén bérekre a Lidl - | hvg.hu. Vállalkozás: 103 milliárdot fizet ki idén bérekre a Lidl | hvg.hu. Google Hírek"
     },
@@ -537,7 +559,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOWnM0d3JlYWRvSDVCZEdrZnc4WkJnYXprSFhveHVlc3psYjdmWjFDSTdMYi1KNGJ5eWJCdDJmbjZvQnA1Q0piVlZPZnp6N2Q3OGNnb0ptMXVRMHFhYkdCdG1CTnktRDJYTHZTZHVDWG1scTZhbXJTMFlJLV9jZllnSWhuRjF4YkNKVG1rT25iTThkTVlzYnpZVXROTElxZnfSAaQBQVVfeXFMUDZENE0xWmZpT2NuYWtoaGdpcXlMNDlERGZPZ3piMjdncXNVcGN1TmJOcUR5RDJRTnl3aWh6Z0V3TURtTDVUR2JMYzJFc240ZFp2cWsxUW1jeWJ0SUJvaGNXNHB3dXVZeklzSXMySU1lUFNuRlZPcTV4LXFCSElNdm9ZN1BZcl9XaS1rOVhON2poeXJoVUtEOVNjZEZocWNWTkFWWjk?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOWnM0d3JlYWRvSDVCZEdrZnc4WkJnYXprSFhveHVlc3psYjdmWjFDSTdMYi1KNGJ5eWJCdDJmbjZvQnA1Q0piVlZPZnp6N2Q3OGNnb0ptMXVRMHFhYkdCdG1CTnktRDJYTHZTZHVDWG1scTZhbXJTMFlJLV9jZllnSWhuRjF4YkNKVG1rT25iTThkTVlzYnpZVXROTElxZnfSAaQBQVVfeXFMUDZENE0xWmZpT2NuYWtoaGdpcXlMNDlERGZPZ3piMjdncXNVcGN1TmJOcUR5RDJRTnl3aWh6Z0V3TURtTDVUR2JMYzJFc240ZFp2cWsxUW1jeWJ0SUJvaGNXNHB3dXVZeklzSXMySU1lUFNuRlZPcTV4LXFCSElNdm9ZN1BZcl9XaS1rOVhON2poeXJoVUtEOVNjZEZocWNWTkFWWjk?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOWnM0d3JlYWRvSDVCZEdrZnc4WkJnYXprSFhveHVlc3psYjdmWjFDSTdMYi1KNGJ5eWJCdDJmbjZvQnA1Q0piVlZPZnp6N2Q3OGNnb0ptMXVRMHFhYkdCdG1CTnktRDJYTHZTZHVDWG1scTZhbXJTMFlJLV9jZllnSWhuRjF4YkNKVG1rT25iTThkTVlzYnpZVXROTElxZnfSAaQBQVVfeXFMUDZENE0xWmZpT2NuYWtoaGdpcXlMNDlERGZPZ3piMjdncXNVcGN1TmJOcUR5RDJRTnl3aWh6Z0V3TURtTDVUR2JMYzJFc240ZFp2cWsxUW1jeWJ0SUJvaGNXNHB3dXVZeklzSXMySU1lUFNuRlZPcTV4LXFCSElNdm9ZN1BZcl9XaS1rOVhON2poeXJoVUtEOVNjZEZocWNWTkFWWjk?oc=5",
       "published_or_found_date": "Thu, 22 Aug 2024 07:00:00 GMT",
       "text": "Kiderült, mennyit keres egy idénymunkás a Lidlnél - Portfolio.hu. Kiderült, mennyit keres egy idénymunkás a Lidlnél Portfolio.hu. Google Hírek"
     },
@@ -548,7 +571,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE11TTIwWGZqUzFtN3Z5WHItZk14cDN2MUNVOVdXSW5oM0F6blBSZU56RmkwUndXYXJKaG84N1F0cWVRcFplRk1KRHYzdWJYVkNTNVVWTW5UbzhGM3BxSlh1Z0lpU2o3SG4wWEltUllKN0lLdURadTNwSDR4OA?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE11TTIwWGZqUzFtN3Z5WHItZk14cDN2MUNVOVdXSW5oM0F6blBSZU56RmkwUndXYXJKaG84N1F0cWVRcFplRk1KRHYzdWJYVkNTNVVWTW5UbzhGM3BxSlh1Z0lpU2o3SG4wWEltUllKN0lLdURadTNwSDR4OA?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE11TTIwWGZqUzFtN3Z5WHItZk14cDN2MUNVOVdXSW5oM0F6blBSZU56RmkwUndXYXJKaG84N1F0cWVRcFplRk1KRHYzdWJYVkNTNVVWTW5UbzhGM3BxSlh1Z0lpU2o3SG4wWEltUllKN0lLdURadTNwSDR4OA?oc=5",
       "published_or_found_date": "Mon, 05 Jan 2026 08:00:00 GMT",
       "text": "Megvan, mennyivel emeli a béreket a Tesco, a Penny, az Auchan és az Aldi - 24.hu. Megvan, mennyivel emeli a béreket a Tesco, a Penny, az Auchan és az Aldi 24.hu. Google Hírek"
     },
@@ -559,7 +583,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPX0Y1ZEhzMDlhQ1RQOE5KVTRNYl9Jb2R2NnFETU5MNVprRVlsaklEOGJVbmIwMTlnOWdGZXlDYUQ1NlZ4VkRfSVNmRnpHdW9mY0I1d2lXTml1T2pVdGxQcGdxTi1JSVhEeXhMUHdJUVhWcU1wYmNUUHVZLXpRck0xUlp2Vk5jYnVyOVhRUlc3d0xoQmtXM1E5UlVWQmt1U1RBdTM0WE94NDlJZ9IBrwFBVV95cUxQRDdWOUxkLVI1UmtZQWlZSmN5SHBrcU5SRnJvYmowMFRBU05vTE5aeHNiSFZuUW9GeUhkRHYxM2JqOGlNZTc3X0VkRS1GcWZDSVZ3WFk2aFp3UkJXdmZQZ3FQcEF2bHhBY3o4ejN0MVJLV1NERjF0Q1lTb0hKemEyaUlubE1ZMWVnZE96S3lkUkp0amJTVno5TDBhbnFPb29LLWdwMkxxSXFvcEQ5YmZZ?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPX0Y1ZEhzMDlhQ1RQOE5KVTRNYl9Jb2R2NnFETU5MNVprRVlsaklEOGJVbmIwMTlnOWdGZXlDYUQ1NlZ4VkRfSVNmRnpHdW9mY0I1d2lXTml1T2pVdGxQcGdxTi1JSVhEeXhMUHdJUVhWcU1wYmNUUHVZLXpRck0xUlp2Vk5jYnVyOVhRUlc3d0xoQmtXM1E5UlVWQmt1U1RBdTM0WE94NDlJZ9IBrwFBVV95cUxQRDdWOUxkLVI1UmtZQWlZSmN5SHBrcU5SRnJvYmowMFRBU05vTE5aeHNiSFZuUW9GeUhkRHYxM2JqOGlNZTc3X0VkRS1GcWZDSVZ3WFk2aFp3UkJXdmZQZ3FQcEF2bHhBY3o4ejN0MVJLV1NERjF0Q1lTb0hKemEyaUlubE1ZMWVnZE96S3lkUkp0amJTVno5TDBhbnFPb29LLWdwMkxxSXFvcEQ5YmZZ?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPX0Y1ZEhzMDlhQ1RQOE5KVTRNYl9Jb2R2NnFETU5MNVprRVlsaklEOGJVbmIwMTlnOWdGZXlDYUQ1NlZ4VkRfSVNmRnpHdW9mY0I1d2lXTml1T2pVdGxQcGdxTi1JSVhEeXhMUHdJUVhWcU1wYmNUUHVZLXpRck0xUlp2Vk5jYnVyOVhRUlc3d0xoQmtXM1E5UlVWQmt1U1RBdTM0WE94NDlJZ9IBrwFBVV95cUxQRDdWOUxkLVI1UmtZQWlZSmN5SHBrcU5SRnJvYmowMFRBU05vTE5aeHNiSFZuUW9GeUhkRHYxM2JqOGlNZTc3X0VkRS1GcWZDSVZ3WFk2aFp3UkJXdmZQZ3FQcEF2bHhBY3o4ejN0MVJLV1NERjF0Q1lTb0hKemEyaUlubE1ZMWVnZE96S3lkUkp0amJTVno5TDBhbnFPb29LLWdwMkxxSXFvcEQ5YmZZ?oc=5",
       "published_or_found_date": "Tue, 20 Feb 2024 08:00:00 GMT",
       "text": "Kiszivárgott, milyen béremelésre készül a Lidl (frissített) - Portfolio.hu. Kiszivárgott, milyen béremelésre készül a Lidl (frissített) Portfolio.hu. Google Hírek"
     },
@@ -570,7 +595,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNa25VNlhYMDU2MGVnOHZmYXRCQkhON2ZJb1FOVVhMaFFlckRXdmxyUFozTkUzU1Z3UnNCaEVtZVFNNGxldEFJRjZteUJPam5pRWlTT21jcTdLcXFUTGFQS1hGaG11SHE4RUR5MkY3WDJqTldNUFVGVFJ1STIwalo1MkdIeUtTdWvSAYwBQVVfeXFMTWRoMXFXeFJlRjR1cm1OUEF6N0RqSWoycnlSVDhXTnhMeUdwOFlEYUh6c3QydmpqdGF1REFGSF9rd0VXVFBlWTc0bmpjcjFEaEU0TVFlYjBBUnh3N1VLMzR1U0FfNUkyb1hTOW00SmlxR2hmWkNhMlgxTmhXR0xWUjVCVGlnc2tSMGpIdjA?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNa25VNlhYMDU2MGVnOHZmYXRCQkhON2ZJb1FOVVhMaFFlckRXdmxyUFozTkUzU1Z3UnNCaEVtZVFNNGxldEFJRjZteUJPam5pRWlTT21jcTdLcXFUTGFQS1hGaG11SHE4RUR5MkY3WDJqTldNUFVGVFJ1STIwalo1MkdIeUtTdWvSAYwBQVVfeXFMTWRoMXFXeFJlRjR1cm1OUEF6N0RqSWoycnlSVDhXTnhMeUdwOFlEYUh6c3QydmpqdGF1REFGSF9rd0VXVFBlWTc0bmpjcjFEaEU0TVFlYjBBUnh3N1VLMzR1U0FfNUkyb1hTOW00SmlxR2hmWkNhMlgxTmhXR0xWUjVCVGlnc2tSMGpIdjA?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNa25VNlhYMDU2MGVnOHZmYXRCQkhON2ZJb1FOVVhMaFFlckRXdmxyUFozTkUzU1Z3UnNCaEVtZVFNNGxldEFJRjZteUJPam5pRWlTT21jcTdLcXFUTGFQS1hGaG11SHE4RUR5MkY3WDJqTldNUFVGVFJ1STIwalo1MkdIeUtTdWvSAYwBQVVfeXFMTWRoMXFXeFJlRjR1cm1OUEF6N0RqSWoycnlSVDhXTnhMeUdwOFlEYUh6c3QydmpqdGF1REFGSF9rd0VXVFBlWTc0bmpjcjFEaEU0TVFlYjBBUnh3N1VLMzR1U0FfNUkyb1hTOW00SmlxR2hmWkNhMlgxTmhXR0xWUjVCVGlnc2tSMGpIdjA?oc=5",
       "published_or_found_date": "Thu, 04 Jun 2026 07:00:00 GMT",
       "text": "Új fizetési mód jön a Lidl-ben - Portfolio.hu. Új fizetési mód jön a Lidl-ben Portfolio.hu. Google Hírek"
     },
@@ -581,9 +607,34 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQalRhT2JFYTIyaktTOElUa2xJQjRVMldqa0lLNURTRy1HY1RqY0VuRWlQN3lWOTRvNzM3WldzYkhIaEdqMWJqYkVZemRFbC05aERwU2E2cTh4WHRZdUVKZnplNkl3SVJnMjQ0Q0dpS0VyNzZpTkdMTDdCZlkyZUVQSUZSODBDN004MWhwY1IwckNxVGxmVU530gGcAUFVX3lxTE44MVVWYWNick1aTi1Ec3hRMlVVUERPaWZCWlhVeTYwVm9PLVM0SlVCVGVaWndQWWVrNURWTzdlUUlHRmEwV0k5cUZEd2czOUt0RHY0cDFkR1kxQUk4N3luRHNPeHpTT290aHdPVU5tUk5BRkRBaGd3OUM2Z0VleC1TUExUbzQ2RS1KMTFCaEFNOHlHMDNXaUc2clo1MA?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQalRhT2JFYTIyaktTOElUa2xJQjRVMldqa0lLNURTRy1HY1RqY0VuRWlQN3lWOTRvNzM3WldzYkhIaEdqMWJqYkVZemRFbC05aERwU2E2cTh4WHRZdUVKZnplNkl3SVJnMjQ0Q0dpS0VyNzZpTkdMTDdCZlkyZUVQSUZSODBDN004MWhwY1IwckNxVGxmVU530gGcAUFVX3lxTE44MVVWYWNick1aTi1Ec3hRMlVVUERPaWZCWlhVeTYwVm9PLVM0SlVCVGVaWndQWWVrNURWTzdlUUlHRmEwV0k5cUZEd2czOUt0RHY0cDFkR1kxQUk4N3luRHNPeHpTT290aHdPVU5tUk5BRkRBaGd3OUM2Z0VleC1TUExUbzQ2RS1KMTFCaEFNOHlHMDNXaUc2clo1MA?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQalRhT2JFYTIyaktTOElUa2xJQjRVMldqa0lLNURTRy1HY1RqY0VuRWlQN3lWOTRvNzM3WldzYkhIaEdqMWJqYkVZemRFbC05aERwU2E2cTh4WHRZdUVKZnplNkl3SVJnMjQ0Q0dpS0VyNzZpTkdMTDdCZlkyZUVQSUZSODBDN004MWhwY1IwckNxVGxmVU530gGcAUFVX3lxTE44MVVWYWNick1aTi1Ec3hRMlVVUERPaWZCWlhVeTYwVm9PLVM0SlVCVGVaWndQWWVrNURWTzdlUUlHRmEwV0k5cUZEd2czOUt0RHY0cDFkR1kxQUk4N3luRHNPeHpTT290aHdPVU5tUk5BRkRBaGd3OUM2Z0VleC1TUExUbzQ2RS1KMTFCaEFNOHlHMDNXaUc2clo1MA?oc=5",
       "published_or_found_date": "Tue, 04 Feb 2025 08:00:00 GMT",
       "text": "Kiderült, mennyit keresnek a Tesco-dolgozók - Portfolio.hu. Kiderült, mennyit keresnek a Tesco-dolgozók Portfolio.hu. Google Hírek"
+    },
+    {
+      "query": "Lidl havi bruttó",
+      "company_id": "lidl",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNQ3ZnZkNHWUp4UTRMbEFEcDFQSVhfRWs0ME52MDBqd0ZnLU9kMzJlVWpLdFpCM2xyZy1BNlB1ZFMxMldBa0hqeTZrVUxmR3dJNGRuOUNndHJFNS1SQTVyU2ktOUttWGlZQXhKaTQxd0hVSFRXSno4VmhmT3BYQnJPTFFzTmduTW40OUNwa3ZsRXcyZWQyMDk1Vw?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNQ3ZnZkNHWUp4UTRMbEFEcDFQSVhfRWs0ME52MDBqd0ZnLU9kMzJlVWpLdFpCM2xyZy1BNlB1ZFMxMldBa0hqeTZrVUxmR3dJNGRuOUNndHJFNS1SQTVyU2ktOUttWGlZQXhKaTQxd0hVSFRXSno4VmhmT3BYQnJPTFFzTmduTW40OUNwa3ZsRXcyZWQyMDk1Vw?oc=5",
+      "published_or_found_date": "Mon, 15 Apr 2024 07:00:00 GMT",
+      "text": "Komoly bért ígér az Aldi és a Lidl a nyári idénymunkára - 24.hu. Komoly bért ígér az Aldi és a Lidl a nyári idénymunkára 24.hu. Google Hírek"
+    },
+    {
+      "query": "Lidl havi bruttó",
+      "company_id": "lidl",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFB6SUxsVlpIRENMNFRfVE5QdlpwalVacnJXa2ZSWENzWGF2LXVtM0V0RjhsbUpwN3h4RmFrWnB4dzlxMjRMdlZfRUIxX0pyS2xseTItWmtMbGh0X2hMdTJkNkdxd2RtcmxscGd1dDVtR25CNDBrU192ZnN3?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFB6SUxsVlpIRENMNFRfVE5QdlpwalVacnJXa2ZSWENzWGF2LXVtM0V0RjhsbUpwN3h4RmFrWnB4dzlxMjRMdlZfRUIxX0pyS2xseTItWmtMbGh0X2hMdTJkNkdxd2RtcmxscGd1dDVtR25CNDBrU192ZnN3?oc=5",
+      "published_or_found_date": "Mon, 01 Jun 2026 07:00:00 GMT",
+      "text": "Vállalkozás: A Lidl utcahosszal vezeti a magyar kiskermezőnyt, a Penny már az Aldi előtt - | hvg.hu. Vállalkozás: A Lidl utcahosszal vezeti a magyar kiskermezőnyt, a Penny már az Aldi előtt | hvg.hu. Google Hírek"
     },
     {
       "query": "Lidl Portfolio béremelés",
@@ -592,7 +643,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOU21sSW5fMkkwMDJqNjdMcVJnMktMVmlZSmdZNHItWWxDNGQtdU1QUXhBbE4tcGJLVmIxaHhwYkdvQmxtWE1raVlXVWMxNVN1dFNWNHNEMlFMZ3UxazNTOUhWa3FuRktwSWRlcDRVN243UlhwcUJEMXhseE1NSU13M0JIOFlZYkHSAYwBQVVfeXFMUFNLMS1nbFUtYjNOS1hIQ1FSMFJXbDJEUDFORXczRWlCU3dTZXJoejRMLUdDYmlyV05BWFZlMUNXRjdKTlR6TUJwSmt5OFhuOU9YOEJxNzJXVTBwTERrWGxKSjZpdW9aZWRMcm80MGJPdE9ITGVQX3FENk9DSndpWHY1UlBKZm5LODhSVUg?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOU21sSW5fMkkwMDJqNjdMcVJnMktMVmlZSmdZNHItWWxDNGQtdU1QUXhBbE4tcGJLVmIxaHhwYkdvQmxtWE1raVlXVWMxNVN1dFNWNHNEMlFMZ3UxazNTOUhWa3FuRktwSWRlcDRVN243UlhwcUJEMXhseE1NSU13M0JIOFlZYkHSAYwBQVVfeXFMUFNLMS1nbFUtYjNOS1hIQ1FSMFJXbDJEUDFORXczRWlCU3dTZXJoejRMLUdDYmlyV05BWFZlMUNXRjdKTlR6TUJwSmt5OFhuOU9YOEJxNzJXVTBwTERrWGxKSjZpdW9aZWRMcm80MGJPdE9ITGVQX3FENk9DSndpWHY1UlBKZm5LODhSVUg?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOU21sSW5fMkkwMDJqNjdMcVJnMktMVmlZSmdZNHItWWxDNGQtdU1QUXhBbE4tcGJLVmIxaHhwYkdvQmxtWE1raVlXVWMxNVN1dFNWNHNEMlFMZ3UxazNTOUhWa3FuRktwSWRlcDRVN243UlhwcUJEMXhseE1NSU13M0JIOFlZYkHSAYwBQVVfeXFMUFNLMS1nbFUtYjNOS1hIQ1FSMFJXbDJEUDFORXczRWlCU3dTZXJoejRMLUdDYmlyV05BWFZlMUNXRjdKTlR6TUJwSmt5OFhuOU9YOEJxNzJXVTBwTERrWGxKSjZpdW9aZWRMcm80MGJPdE9ITGVQX3FENk9DSndpWHY1UlBKZm5LODhSVUg?oc=5",
       "published_or_found_date": "Fri, 02 Jan 2026 08:00:00 GMT",
       "text": "Óriási bejelentést tett a Lidl - Portfolio.hu. Óriási bejelentést tett a Lidl Portfolio.hu. Google Hírek"
     },
@@ -603,7 +655,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNQmJxT0k3eWRXVzJ4T1dFLXY2ZTBETkRLVnZubVZGVkZCTW1kd0VpQTdya2xhWU4xdHd1VWVKYmlXN1pnNGFpNHZRbnpvcW10dFN0VGR5Q2x0d3daRnVuYjBOY0JwOTJoQjY3MzhzcWFvTGtzUkJCUWZxWXhVSFhLYzF4Y05mNjRRZUJXVzBQcl9PMU82aGl2ZVl3Z3Y4V2FsTTZNM0FPYXI2M2ZD0gGyAUFVX3lxTE9JSjFyWFdyS0RXem12dXJCODQ4Nl9ZZmpyb05ja3otYllwX3JxdnJOT3A5dWpYOS1oc0dtMEdwWHFDWE1KYkVHcVYyZkpGVmx5ZzgxOWtYMWFiSDJPMjBXX2o4YXdzaXNNcUFmUHpTUTBleHRqUzFCNWdCQTNKNG1ULXY2YjVYWklnOWhTWXVGNFRYamdsQ0dlQ3B5RU1pM0xBQTBSdTdaRkZRRVMxc2wxcFE?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNQmJxT0k3eWRXVzJ4T1dFLXY2ZTBETkRLVnZubVZGVkZCTW1kd0VpQTdya2xhWU4xdHd1VWVKYmlXN1pnNGFpNHZRbnpvcW10dFN0VGR5Q2x0d3daRnVuYjBOY0JwOTJoQjY3MzhzcWFvTGtzUkJCUWZxWXhVSFhLYzF4Y05mNjRRZUJXVzBQcl9PMU82aGl2ZVl3Z3Y4V2FsTTZNM0FPYXI2M2ZD0gGyAUFVX3lxTE9JSjFyWFdyS0RXem12dXJCODQ4Nl9ZZmpyb05ja3otYllwX3JxdnJOT3A5dWpYOS1oc0dtMEdwWHFDWE1KYkVHcVYyZkpGVmx5ZzgxOWtYMWFiSDJPMjBXX2o4YXdzaXNNcUFmUHpTUTBleHRqUzFCNWdCQTNKNG1ULXY2YjVYWklnOWhTWXVGNFRYamdsQ0dlQ3B5RU1pM0xBQTBSdTdaRkZRRVMxc2wxcFE?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNQmJxT0k3eWRXVzJ4T1dFLXY2ZTBETkRLVnZubVZGVkZCTW1kd0VpQTdya2xhWU4xdHd1VWVKYmlXN1pnNGFpNHZRbnpvcW10dFN0VGR5Q2x0d3daRnVuYjBOY0JwOTJoQjY3MzhzcWFvTGtzUkJCUWZxWXhVSFhLYzF4Y05mNjRRZUJXVzBQcl9PMU82aGl2ZVl3Z3Y4V2FsTTZNM0FPYXI2M2ZD0gGyAUFVX3lxTE9JSjFyWFdyS0RXem12dXJCODQ4Nl9ZZmpyb05ja3otYllwX3JxdnJOT3A5dWpYOS1oc0dtMEdwWHFDWE1KYkVHcVYyZkpGVmx5ZzgxOWtYMWFiSDJPMjBXX2o4YXdzaXNNcUFmUHpTUTBleHRqUzFCNWdCQTNKNG1ULXY2YjVYWklnOWhTWXVGNFRYamdsQ0dlQ3B5RU1pM0xBQTBSdTdaRkZRRVMxc2wxcFE?oc=5",
       "published_or_found_date": "Mon, 05 Jan 2026 08:00:00 GMT",
       "text": "Itt a bejelentés: kiderült, mennyit lehet keresni az Aldiban - Portfolio.hu. Itt a bejelentés: kiderült, mennyit lehet keresni az Aldiban Portfolio.hu. Google Hírek"
     },
@@ -614,7 +667,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5PcWlDd3dodWE4YlNjb195OXZlaUVCNV8yQlF2YnA1NUFpc3o3VU5mR0lwckpSUGprbEVfc25NM2xES25remRBQ3NJdTI3ZGk0d0RJYmV2cUQwYlpQenZjZElkT1ppTTFxd2VlblZ1cnM1bnpMRXBSZlBGZFl0NjQ?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5PcWlDd3dodWE4YlNjb195OXZlaUVCNV8yQlF2YnA1NUFpc3o3VU5mR0lwckpSUGprbEVfc25NM2xES25remRBQ3NJdTI3ZGk0d0RJYmV2cUQwYlpQenZjZElkT1ppTTFxd2VlblZ1cnM1bnpMRXBSZlBGZFl0NjQ?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5PcWlDd3dodWE4YlNjb195OXZlaUVCNV8yQlF2YnA1NUFpc3o3VU5mR0lwckpSUGprbEVfc25NM2xES25remRBQ3NJdTI3ZGk0d0RJYmV2cUQwYlpQenZjZElkT1ppTTFxd2VlblZ1cnM1bnpMRXBSZlBGZFl0NjQ?oc=5",
       "published_or_found_date": "Mon, 05 Jan 2026 08:00:00 GMT",
       "text": "Gazdaság: Béremeléssel indítja az évet az Aldi - | hvg.hu. Gazdaság: Béremeléssel indítja az évet az Aldi | hvg.hu. Google Hírek"
     },
@@ -625,7 +679,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOemhPclo4WWRwbVFsNDVqZVh5SGVla1N0dTMyaUxwYU9sTnFsejVPTHktSTlFeTJ0Y19Ra18wZFBPdmFZVWRFTVBNWU1fd1d5c3d0SEU4R0ZYa0V1amJaRlBsNG1LSjlxRnBHOTRCaWFyU19fTjlBZlJySUp1cXdkTHUta0NzUXVZbzhCRXJUMGtIX2ZQTVJj0gGcAUFVX3lxTE4wU05iWURxaURCc0s0Q3Bxc2g4NWtiaGtkd0RFQVlySjVBUnpBbHZsVzhBcFFpNUplaUR5S0tHOG9BT01MdkVyMVFWMXpZTU51U05OX3FBWVRuWmtaVUNhTjBKN3VqSllwb1lNNDhmUl8zX0VTZjZ2dU9EUVc5VFhuWkk4RktONldXS1EyaFVsb2c2WklzMWk5WHgwUA?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOemhPclo4WWRwbVFsNDVqZVh5SGVla1N0dTMyaUxwYU9sTnFsejVPTHktSTlFeTJ0Y19Ra18wZFBPdmFZVWRFTVBNWU1fd1d5c3d0SEU4R0ZYa0V1amJaRlBsNG1LSjlxRnBHOTRCaWFyU19fTjlBZlJySUp1cXdkTHUta0NzUXVZbzhCRXJUMGtIX2ZQTVJj0gGcAUFVX3lxTE4wU05iWURxaURCc0s0Q3Bxc2g4NWtiaGtkd0RFQVlySjVBUnpBbHZsVzhBcFFpNUplaUR5S0tHOG9BT01MdkVyMVFWMXpZTU51U05OX3FBWVRuWmtaVUNhTjBKN3VqSllwb1lNNDhmUl8zX0VTZjZ2dU9EUVc5VFhuWkk4RktONldXS1EyaFVsb2c2WklzMWk5WHgwUA?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOemhPclo4WWRwbVFsNDVqZVh5SGVla1N0dTMyaUxwYU9sTnFsejVPTHktSTlFeTJ0Y19Ra18wZFBPdmFZVWRFTVBNWU1fd1d5c3d0SEU4R0ZYa0V1amJaRlBsNG1LSjlxRnBHOTRCaWFyU19fTjlBZlJySUp1cXdkTHUta0NzUXVZbzhCRXJUMGtIX2ZQTVJj0gGcAUFVX3lxTE4wU05iWURxaURCc0s0Q3Bxc2g4NWtiaGtkd0RFQVlySjVBUnpBbHZsVzhBcFFpNUplaUR5S0tHOG9BT01MdkVyMVFWMXpZTU51U05OX3FBWVRuWmtaVUNhTjBKN3VqSllwb1lNNDhmUl8zX0VTZjZ2dU9EUVc5VFhuWkk4RktONldXS1EyaFVsb2c2WklzMWk5WHgwUA?oc=5",
       "published_or_found_date": "Thu, 02 Jan 2025 08:00:00 GMT",
       "text": "Kiderült, mennyit keresnek az Aldi-dolgozók - Portfolio.hu. Kiderült, mennyit keresnek az Aldi-dolgozók Portfolio.hu. Google Hírek"
     },
@@ -636,7 +691,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNUy1tcHROMXlEbnFLbHdoNlN6U1p1NU4tV3dzSGNzcEctSmN0ZnR5STNPQXlxc3lVWnN5VGxQXzJ6SnQ4TS00MWUzOWE0dGxDV2M3R0lmaWtJeHBrOHpXQUlqMHBaUDRxeHhoLTIzTFItbjkyZC1IbFFCMmg5V3NoRU9KWGpCcHdtUFVqVklHMVRHd200Y3hWaDd6YzhZOXBW?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNUy1tcHROMXlEbnFLbHdoNlN6U1p1NU4tV3dzSGNzcEctSmN0ZnR5STNPQXlxc3lVWnN5VGxQXzJ6SnQ4TS00MWUzOWE0dGxDV2M3R0lmaWtJeHBrOHpXQUlqMHBaUDRxeHhoLTIzTFItbjkyZC1IbFFCMmg5V3NoRU9KWGpCcHdtUFVqVklHMVRHd200Y3hWaDd6YzhZOXBW?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNUy1tcHROMXlEbnFLbHdoNlN6U1p1NU4tV3dzSGNzcEctSmN0ZnR5STNPQXlxc3lVWnN5VGxQXzJ6SnQ4TS00MWUzOWE0dGxDV2M3R0lmaWtJeHBrOHpXQUlqMHBaUDRxeHhoLTIzTFItbjkyZC1IbFFCMmg5V3NoRU9KWGpCcHdtUFVqVklHMVRHd200Y3hWaDd6YzhZOXBW?oc=5",
       "published_or_found_date": "Thu, 02 Jan 2025 08:00:00 GMT",
       "text": "Vállalkozás: Aldi: Nyolcszázalékos lesz a béremelés idén, félmillió felett a kezdő bruttó - | hvg.hu. Vállalkozás: Aldi: Nyolcszázalékos lesz a béremelés idén, félmillió felett a kezdő bruttó | hvg.hu. Google Hírek"
     },
@@ -649,7 +705,8 @@
       ],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNNENRdUk3MXdkVUtPcG5EWFhuN2dBU0RrVFdpSEowb0lRWDNna1lpSjZwQmRqWWFwWXZxdlRFYkFPdDM5aVlaRG9XQ09oMzhHSVYxam1PT0lieEc5Zm5uenBfdDFQTmFPUXNmWmNiU05kanNwSXotdVg4d214LUtjbzVNekRpN1VNNkRmdkNKV1QwckJqc3BQWUJzMGFpMXZ5VVo3V1lHY2FDNGxidGdIWno0TnFBYzQ?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNNENRdUk3MXdkVUtPcG5EWFhuN2dBU0RrVFdpSEowb0lRWDNna1lpSjZwQmRqWWFwWXZxdlRFYkFPdDM5aVlaRG9XQ09oMzhHSVYxam1PT0lieEc5Zm5uenBfdDFQTmFPUXNmWmNiU05kanNwSXotdVg4d214LUtjbzVNekRpN1VNNkRmdkNKV1QwckJqc3BQWUJzMGFpMXZ5VVo3V1lHY2FDNGxidGdIWno0TnFBYzQ?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNNENRdUk3MXdkVUtPcG5EWFhuN2dBU0RrVFdpSEowb0lRWDNna1lpSjZwQmRqWWFwWXZxdlRFYkFPdDM5aVlaRG9XQ09oMzhHSVYxam1PT0lieEc5Zm5uenBfdDFQTmFPUXNmWmNiU05kanNwSXotdVg4d214LUtjbzVNekRpN1VNNkRmdkNKV1QwckJqc3BQWUJzMGFpMXZ5VVo3V1lHY2FDNGxidGdIWno0TnFBYzQ?oc=5",
       "published_or_found_date": "Mon, 28 Apr 2025 07:00:00 GMT",
       "text": "Vállalkozás: Bruttó 595 200 forintot is lehet majd keresni nyáron az Aldi balatoni üzleteiben - | hvg.hu. Vállalkozás: Bruttó 595 200 forintot is lehet majd keresni nyáron az Aldi balatoni üzleteiben | hvg.hu. Google Hírek"
     },
@@ -662,7 +719,8 @@
       ],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQamg2M09CTm12cFRKOHQ4RGl3Q190RkhUWUpOWEFUOXI4ckVVUDhyZGZpRmtvaEkzSTd3MGRPdlR4QUh3bWFQWGhBMjlCMmRGRnBUUUFmTEdsQjB2NG5oYWVYaVdiUXloNzg2ZXpDSF9qTFVobEZ6TmFXV1llNkZCTklvREhsYWt1SnFqT0wzN3pMXy04SUxSQlZVRQ?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQamg2M09CTm12cFRKOHQ4RGl3Q190RkhUWUpOWEFUOXI4ckVVUDhyZGZpRmtvaEkzSTd3MGRPdlR4QUh3bWFQWGhBMjlCMmRGRnBUUUFmTEdsQjB2NG5oYWVYaVdiUXloNzg2ZXpDSF9qTFVobEZ6TmFXV1llNkZCTklvREhsYWt1SnFqT0wzN3pMXy04SUxSQlZVRQ?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQamg2M09CTm12cFRKOHQ4RGl3Q190RkhUWUpOWEFUOXI4ckVVUDhyZGZpRmtvaEkzSTd3MGRPdlR4QUh3bWFQWGhBMjlCMmRGRnBUUUFmTEdsQjB2NG5oYWVYaVdiUXloNzg2ZXpDSF9qTFVobEZ6TmFXV1llNkZCTklvREhsYWt1SnFqT0wzN3pMXy04SUxSQlZVRQ?oc=5",
       "published_or_found_date": "Mon, 15 Apr 2024 07:00:00 GMT",
       "text": "Vállalkozás: Bruttó 550 ezerért keres dolgozókat a nyárra az Aldi - | hvg.hu. Vállalkozás: Bruttó 550 ezerért keres dolgozókat a nyárra az Aldi | hvg.hu. Google Hírek"
     },
@@ -673,7 +731,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNTmhuVjVHajZQQ1pxNXZSV2F0TDFVTE9NTFVRRGRGRmpGOGcwempUYzk3dERLSmlZTVRldXpVXzhBZHZhSU5KLTM2YTVDa05tb1RtVy14OC1YZVNIeWc5UHNFa2xRbTdLb0NOSjh1T3MxTEVYalJSVmxoVEJydmlDYlg2TmJmRTZVX1FtV1JSVTBOVGdFb2I2Yi1Vc1lHdmszNldBLUlxaWptd05LbFBjdEllOXpIMGVueFlyZXU4cmtyQi0yYjlCNlBuSFJCdw?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNTmhuVjVHajZQQ1pxNXZSV2F0TDFVTE9NTFVRRGRGRmpGOGcwempUYzk3dERLSmlZTVRldXpVXzhBZHZhSU5KLTM2YTVDa05tb1RtVy14OC1YZVNIeWc5UHNFa2xRbTdLb0NOSjh1T3MxTEVYalJSVmxoVEJydmlDYlg2TmJmRTZVX1FtV1JSVTBOVGdFb2I2Yi1Vc1lHdmszNldBLUlxaWptd05LbFBjdEllOXpIMGVueFlyZXU4cmtyQi0yYjlCNlBuSFJCdw?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNTmhuVjVHajZQQ1pxNXZSV2F0TDFVTE9NTFVRRGRGRmpGOGcwempUYzk3dERLSmlZTVRldXpVXzhBZHZhSU5KLTM2YTVDa05tb1RtVy14OC1YZVNIeWc5UHNFa2xRbTdLb0NOSjh1T3MxTEVYalJSVmxoVEJydmlDYlg2TmJmRTZVX1FtV1JSVTBOVGdFb2I2Yi1Vc1lHdmszNldBLUlxaWptd05LbFBjdEllOXpIMGVueFlyZXU4cmtyQi0yYjlCNlBuSFJCdw?oc=5",
       "published_or_found_date": "Mon, 08 Sep 2025 07:00:00 GMT",
       "text": "Nyugdíjasok utalványa: megjött a Tesco válaszcsapása - 24.hu. Nyugdíjasok utalványa: megjött a Tesco válaszcsapása 24.hu. Google Hírek"
     },
@@ -684,7 +743,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOVVZ1SklvM3NldGxjLWoybmNuN3piMkwzMTJQWllCY09CV2plRzQwdnRBN21LU1RzdGt3aEtEOGRIU05IUjlwcm93VUNnQVMwbVlKYmdyWE9FTHpYZnFWNGdqRzUyR1IxamRwcFNvcVlKWE9GV3FiVlFOOThMcC1OX1pKaW54dWN1YndiZnR3?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOVVZ1SklvM3NldGxjLWoybmNuN3piMkwzMTJQWllCY09CV2plRzQwdnRBN21LU1RzdGt3aEtEOGRIU05IUjlwcm93VUNnQVMwbVlKYmdyWE9FTHpYZnFWNGdqRzUyR1IxamRwcFNvcVlKWE9GV3FiVlFOOThMcC1OX1pKaW54dWN1YndiZnR3?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOVVZ1SklvM3NldGxjLWoybmNuN3piMkwzMTJQWllCY09CV2plRzQwdnRBN21LU1RzdGt3aEtEOGRIU05IUjlwcm93VUNnQVMwbVlKYmdyWE9FTHpYZnFWNGdqRzUyR1IxamRwcFNvcVlKWE9GV3FiVlFOOThMcC1OX1pKaW54dWN1YndiZnR3?oc=5",
       "published_or_found_date": "Sat, 23 May 2026 07:00:00 GMT",
       "text": "Aldisok panaszkodtak, hogy az emelt bér mellett is kevesebbet keresnek, munkaidő-csökkentés miatt - 24.hu. Aldisok panaszkodtak, hogy az emelt bér mellett is kevesebbet keresnek, munkaidő-csökkentés miatt 24.hu. Google Hírek"
     },
@@ -695,7 +755,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQelhCUEdwQjdxTFVuTWl6YXhQclNJeFNZZk5kbU9rdUJHYWpWRnBkMTRFb29oU05mMzdZcmZSaE1Ga0tKZG5tcHVNY0oyM2dmbXVGUENIdXl4OWtFT3c4eHF2Ykx4SWg5T3daN0xTcWhxbnZ2WFZFV1BheExYNmV2X2hYZzhNd1Y1Uko3VDJJTWfSAZYBQVVfeXFMT1hNOTk4c3hWcm15aDhpREsyYjdLXzJ1RXVueHpCTkV4MmxsY252dy15UTlFSm54eDUyenBUT1JTdHViTUZlY0tZdE9sMTFGLUg5YllsYmdQVnI2cnpaT2xuOW5STjRLSFgzeGtuSUhGTXV5U3Q1cUtCd3RhVHk5X2tuOFhuSElDMlVHX2lscUF0UEJYdktR?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQelhCUEdwQjdxTFVuTWl6YXhQclNJeFNZZk5kbU9rdUJHYWpWRnBkMTRFb29oU05mMzdZcmZSaE1Ga0tKZG5tcHVNY0oyM2dmbXVGUENIdXl4OWtFT3c4eHF2Ykx4SWg5T3daN0xTcWhxbnZ2WFZFV1BheExYNmV2X2hYZzhNd1Y1Uko3VDJJTWfSAZYBQVVfeXFMT1hNOTk4c3hWcm15aDhpREsyYjdLXzJ1RXVueHpCTkV4MmxsY252dy15UTlFSm54eDUyenBUT1JTdHViTUZlY0tZdE9sMTFGLUg5YllsYmdQVnI2cnpaT2xuOW5STjRLSFgzeGtuSUhGTXV5U3Q1cUtCd3RhVHk5X2tuOFhuSElDMlVHX2lscUF0UEJYdktR?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQelhCUEdwQjdxTFVuTWl6YXhQclNJeFNZZk5kbU9rdUJHYWpWRnBkMTRFb29oU05mMzdZcmZSaE1Ga0tKZG5tcHVNY0oyM2dmbXVGUENIdXl4OWtFT3c4eHF2Ykx4SWg5T3daN0xTcWhxbnZ2WFZFV1BheExYNmV2X2hYZzhNd1Y1Uko3VDJJTWfSAZYBQVVfeXFMT1hNOTk4c3hWcm15aDhpREsyYjdLXzJ1RXVueHpCTkV4MmxsY252dy15UTlFSm54eDUyenBUT1JTdHViTUZlY0tZdE9sMTFGLUg5YllsYmdQVnI2cnpaT2xuOW5STjRLSFgzeGtuSUhGTXV5U3Q1cUtCd3RhVHk5X2tuOFhuSElDMlVHX2lscUF0UEJYdktR?oc=5",
       "published_or_found_date": "Tue, 02 Jan 2024 08:00:00 GMT",
       "text": "Újabb béremelést jelentett be az Aldi - Portfolio.hu. Újabb béremelést jelentett be az Aldi Portfolio.hu. Google Hírek"
     },
@@ -706,7 +767,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFB5a0NyN3p3MGpQMkxMQzVBMzJfUFhKNGZFRjBEaGx4b214enIwUEdMRC1XelB1VFNzUEZaRjRWR1loYTlIdENmb01zOVhwUXZoSTZYSmZkbW51dWw4LVlDN2VZRzU3NWhUSUlyRjBQWQ?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFB5a0NyN3p3MGpQMkxMQzVBMzJfUFhKNGZFRjBEaGx4b214enIwUEdMRC1XelB1VFNzUEZaRjRWR1loYTlIdENmb01zOVhwUXZoSTZYSmZkbW51dWw4LVlDN2VZRzU3NWhUSUlyRjBQWQ?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFB5a0NyN3p3MGpQMkxMQzVBMzJfUFhKNGZFRjBEaGx4b214enIwUEdMRC1XelB1VFNzUEZaRjRWR1loYTlIdENmb01zOVhwUXZoSTZYSmZkbW51dWw4LVlDN2VZRzU3NWhUSUlyRjBQWQ?oc=5",
       "published_or_found_date": "Tue, 02 Jan 2024 08:00:00 GMT",
       "text": "Emeli a béreket az Aldi és a Spar is - 24.hu. Emeli a béreket az Aldi és a Spar is 24.hu. Google Hírek"
     },
@@ -717,7 +779,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOemxpY3JRQTF4RHNPSWVVcGMyOGpSc3RJMDlSMmRqdWRwQk9DV3ZZc1BkWTRHcGpQV3pmVGw1YXRybTVMeHI0QzB1LTY2U0I2MUJFODY5djJKM0VBdWR5UjlkOWp1WGJlRE5KQ0lZNy1icG9hNHdYTjV1YXdmandrMFNsVktGeUpXblhBZnlqZ0lDMXhsbWwwZE5Ha2lHdDhENjdvYkduZVDSAa4BQVVfeXFMTXF3aEJabFdndFdmQV80U3RQdWg2WGxsQ3NFSm4tUHlINl9uVkx4RmlQNzlsYlJrMjlDSE9WRGhBcG12RTl3S2pZVVRkaS1IZjZpVGdkWE95LXpzRnMtdHAzNUJTMHpVeGpWNVhhay1GRmRXc0ZudktJMWs5Ty1ITE9WR3lYb2lSZUJqb0g1bHViNE5Vcm41MHgwNHZmeVVGUGdnZzYxS24ycHZwQWxn?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOemxpY3JRQTF4RHNPSWVVcGMyOGpSc3RJMDlSMmRqdWRwQk9DV3ZZc1BkWTRHcGpQV3pmVGw1YXRybTVMeHI0QzB1LTY2U0I2MUJFODY5djJKM0VBdWR5UjlkOWp1WGJlRE5KQ0lZNy1icG9hNHdYTjV1YXdmandrMFNsVktGeUpXblhBZnlqZ0lDMXhsbWwwZE5Ha2lHdDhENjdvYkduZVDSAa4BQVVfeXFMTXF3aEJabFdndFdmQV80U3RQdWg2WGxsQ3NFSm4tUHlINl9uVkx4RmlQNzlsYlJrMjlDSE9WRGhBcG12RTl3S2pZVVRkaS1IZjZpVGdkWE95LXpzRnMtdHAzNUJTMHpVeGpWNVhhay1GRmRXc0ZudktJMWs5Ty1ITE9WR3lYb2lSZUJqb0g1bHViNE5Vcm41MHgwNHZmeVVGUGdnZzYxS24ycHZwQWxn?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOemxpY3JRQTF4RHNPSWVVcGMyOGpSc3RJMDlSMmRqdWRwQk9DV3ZZc1BkWTRHcGpQV3pmVGw1YXRybTVMeHI0QzB1LTY2U0I2MUJFODY5djJKM0VBdWR5UjlkOWp1WGJlRE5KQ0lZNy1icG9hNHdYTjV1YXdmandrMFNsVktGeUpXblhBZnlqZ0lDMXhsbWwwZE5Ha2lHdDhENjdvYkduZVDSAa4BQVVfeXFMTXF3aEJabFdndFdmQV80U3RQdWg2WGxsQ3NFSm4tUHlINl9uVkx4RmlQNzlsYlJrMjlDSE9WRGhBcG12RTl3S2pZVVRkaS1IZjZpVGdkWE95LXpzRnMtdHAzNUJTMHpVeGpWNVhhay1GRmRXc0ZudktJMWs5Ty1ITE9WR3lYb2lSZUJqb0g1bHViNE5Vcm41MHgwNHZmeVVGUGdnZzYxS24ycHZwQWxn?oc=5",
       "published_or_found_date": "Tue, 29 Jul 2025 07:00:00 GMT",
       "text": "Kiderült, mennyit keresnek óránként a brit Aldi-dolgozók - Portfolio.hu. Kiderült, mennyit keresnek óránként a brit Aldi-dolgozók Portfolio.hu. Google Hírek"
     },
@@ -728,7 +791,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPRnRaN3VfYk5qSkNNM0IyOU85ZXNnTENheWlsR2NuRkNIS2J5Y2RMZFRsS0hfMkVsWFZPaGdGTGtqX2Z0X29ZTm1CSlVvWVpYSXUyeWhMZkxwUGRreExxU1hBOWZxMm4yZjFEcUlDLVpSbEJKWV8yTmQzWEtLdE9BQzNrWDYtWnVMSDNLQlhOZ2p6QVNUTzlDR3VfelVMTlVTWUloZ3g1UHRRNDB4RTlrZ25fVC3SAboBQVVfeXFMTnZWbEJXV1Y1MEdRV0tqLUVYREFOd2huTVBFUnQzWVM1TUs3aXBrWUJMcG1LQzRwcERGRHkyOGR0QTF3X0JhTFZMTWZ4N3ZyZ2xlLTZjbmNJTlhxdUdIWnFrTXVxQVExV1pxN2xZTXFkTGFkaTRHWFgzbUZVVEdFVzRmYkhPNlNxV2dyd29TeXpyR29kYXZoM3NHNEhwT1FJc0pyZFJnaFFkSWZnc1o1QVlJeFplb183bTJn?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPRnRaN3VfYk5qSkNNM0IyOU85ZXNnTENheWlsR2NuRkNIS2J5Y2RMZFRsS0hfMkVsWFZPaGdGTGtqX2Z0X29ZTm1CSlVvWVpYSXUyeWhMZkxwUGRreExxU1hBOWZxMm4yZjFEcUlDLVpSbEJKWV8yTmQzWEtLdE9BQzNrWDYtWnVMSDNLQlhOZ2p6QVNUTzlDR3VfelVMTlVTWUloZ3g1UHRRNDB4RTlrZ25fVC3SAboBQVVfeXFMTnZWbEJXV1Y1MEdRV0tqLUVYREFOd2huTVBFUnQzWVM1TUs3aXBrWUJMcG1LQzRwcERGRHkyOGR0QTF3X0JhTFZMTWZ4N3ZyZ2xlLTZjbmNJTlhxdUdIWnFrTXVxQVExV1pxN2xZTXFkTGFkaTRHWFgzbUZVVEdFVzRmYkhPNlNxV2dyd29TeXpyR29kYXZoM3NHNEhwT1FJc0pyZFJnaFFkSWZnc1o1QVlJeFplb183bTJn?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPRnRaN3VfYk5qSkNNM0IyOU85ZXNnTENheWlsR2NuRkNIS2J5Y2RMZFRsS0hfMkVsWFZPaGdGTGtqX2Z0X29ZTm1CSlVvWVpYSXUyeWhMZkxwUGRreExxU1hBOWZxMm4yZjFEcUlDLVpSbEJKWV8yTmQzWEtLdE9BQzNrWDYtWnVMSDNLQlhOZ2p6QVNUTzlDR3VfelVMTlVTWUloZ3g1UHRRNDB4RTlrZ25fVC3SAboBQVVfeXFMTnZWbEJXV1Y1MEdRV0tqLUVYREFOd2huTVBFUnQzWVM1TUs3aXBrWUJMcG1LQzRwcERGRHkyOGR0QTF3X0JhTFZMTWZ4N3ZyZ2xlLTZjbmNJTlhxdUdIWnFrTXVxQVExV1pxN2xZTXFkTGFkaTRHWFgzbUZVVEdFVzRmYkhPNlNxV2dyd29TeXpyR29kYXZoM3NHNEhwT1FJc0pyZFJnaFFkSWZnc1o1QVlJeFplb183bTJn?oc=5",
       "published_or_found_date": "Thu, 15 Jan 2026 08:00:00 GMT",
       "text": "Váratlan döntést hozott az anyacég a magyar Aldival kapcsolatban - Portfolio.hu. Váratlan döntést hozott az anyacég a magyar Aldival kapcsolatban Portfolio.hu. Google Hírek"
     },
@@ -739,9 +803,22 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPallLYVdLWmllbm9TNFNaaEZtN0dPU25LWnQ4c19nSzFLa0NNRUlwdG5uX2NyX2gwRjNxQjZxVjd4MmtFYWk1bnR4dG1DTkNXbmc2OHVGcmcxS1dCQ3BWVVgybVRDdmd6WnhscDg3M1JoZ2RRdmFobG1fS0lUYU54YjNRWkFIa1JBcFVlUTRfY9IBlAFBVV95cUxNcHNaLUs4dHdqcEE2Y21tRHIzcFg2bTFzNU51N1kwUHV1dXRfZ3FwYk4tZEdJbkxiX3B4OEo2a2lGMWxCZEU4elRZOFc5N042QzM1d2s5T2ZMTnJ3WGxDUkJROTNUaHdQZ0lnQVU2bkg3Sk50T0d4NUp4aWxhZUJOM2RSWEJzWVJ6QnEzS3lIX0NsWDdM?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPallLYVdLWmllbm9TNFNaaEZtN0dPU25LWnQ4c19nSzFLa0NNRUlwdG5uX2NyX2gwRjNxQjZxVjd4MmtFYWk1bnR4dG1DTkNXbmc2OHVGcmcxS1dCQ3BWVVgybVRDdmd6WnhscDg3M1JoZ2RRdmFobG1fS0lUYU54YjNRWkFIa1JBcFVlUTRfY9IBlAFBVV95cUxNcHNaLUs4dHdqcEE2Y21tRHIzcFg2bTFzNU51N1kwUHV1dXRfZ3FwYk4tZEdJbkxiX3B4OEo2a2lGMWxCZEU4elRZOFc5N042QzM1d2s5T2ZMTnJ3WGxDUkJROTNUaHdQZ0lnQVU2bkg3Sk50T0d4NUp4aWxhZUJOM2RSWEJzWVJ6QnEzS3lIX0NsWDdM?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPallLYVdLWmllbm9TNFNaaEZtN0dPU25LWnQ4c19nSzFLa0NNRUlwdG5uX2NyX2gwRjNxQjZxVjd4MmtFYWk1bnR4dG1DTkNXbmc2OHVGcmcxS1dCQ3BWVVgybVRDdmd6WnhscDg3M1JoZ2RRdmFobG1fS0lUYU54YjNRWkFIa1JBcFVlUTRfY9IBlAFBVV95cUxNcHNaLUs4dHdqcEE2Y21tRHIzcFg2bTFzNU51N1kwUHV1dXRfZ3FwYk4tZEdJbkxiX3B4OEo2a2lGMWxCZEU4elRZOFc5N042QzM1d2s5T2ZMTnJ3WGxDUkJROTNUaHdQZ0lnQVU2bkg3Sk50T0d4NUp4aWxhZUJOM2RSWEJzWVJ6QnEzS3lIX0NsWDdM?oc=5",
       "published_or_found_date": "Thu, 27 Feb 2025 08:00:00 GMT",
       "text": "A brit Aldi 350 fős leépítést tervez - Portfolio.hu. A brit Aldi 350 fős leépítést tervez Portfolio.hu. Google Hírek"
+    },
+    {
+      "query": "ALDI Pénzcentrum fizetés",
+      "company_id": "aldi",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNMExLRHZncndqS0V4X3FTazFYVFoyeC1lQTlzbVJoU0xsdmJ3ajBFUlFBZWdDelB6UUJkc3IwcE50MGpTOFU0bVRtdVlIdDdjbFJjY29RUWZXQzU4NTZrdVpjdkJXd0lPX1haaFk4VUVSc1BaOWpNZERBckNianZVbnJUQdIBiAFBVV95cUxOMWY1MDlWQ1JIeUl3UGQzSF8ySHBCLXVLcDltaTJZbGFoam5XODVHUjJCNnQ4Y2s4aV8xSUVfMTZ1TDl4dmdWMDJvRmFpbkNUVFZYZHNjQ3RXcm5PSTM5QW5fWjFlRHBlekxjUGdSN043STI2amJjQmJRbHplRHhFY2dxMF9rWUJp?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNMExLRHZncndqS0V4X3FTazFYVFoyeC1lQTlzbVJoU0xsdmJ3ajBFUlFBZWdDelB6UUJkc3IwcE50MGpTOFU0bVRtdVlIdDdjbFJjY29RUWZXQzU4NTZrdVpjdkJXd0lPX1haaFk4VUVSc1BaOWpNZERBckNianZVbnJUQdIBiAFBVV95cUxOMWY1MDlWQ1JIeUl3UGQzSF8ySHBCLXVLcDltaTJZbGFoam5XODVHUjJCNnQ4Y2s4aV8xSUVfMTZ1TDl4dmdWMDJvRmFpbkNUVFZYZHNjQ3RXcm5PSTM5QW5fWjFlRHBlekxjUGdSN043STI2amJjQmJRbHplRHhFY2dxMF9rWUJp?oc=5",
+      "published_or_found_date": "Wed, 06 May 2026 07:00:00 GMT",
+      "text": "Nagy dobásra készül az Aldi - Portfolio.hu. Nagy dobásra készül az Aldi Portfolio.hu. Google Hírek"
     },
     {
       "query": "SPAR fizetés",
@@ -752,7 +829,8 @@
       ],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQQkcxaTJlMVJlMU1pQVpXczB3RUlnMWh0aXJ2bkh3UzcxSFZSZXowVGZpUDRjRUtxTFQ5RlFzY2M2NGRzUkVNWHBodlVhQjRKWTdWT0diS1RmTUp5ZkRhbDVla1FWVTZ1LXdIby16ejRTVi04M1Bfel8temdsRXF5YTdCVXBmS09DeFQ1eDdZZVRsM0VCLW5r?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQQkcxaTJlMVJlMU1pQVpXczB3RUlnMWh0aXJ2bkh3UzcxSFZSZXowVGZpUDRjRUtxTFQ5RlFzY2M2NGRzUkVNWHBodlVhQjRKWTdWT0diS1RmTUp5ZkRhbDVla1FWVTZ1LXdIby16ejRTVi04M1Bfel8temdsRXF5YTdCVXBmS09DeFQ1eDdZZVRsM0VCLW5r?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQQkcxaTJlMVJlMU1pQVpXczB3RUlnMWh0aXJ2bkh3UzcxSFZSZXowVGZpUDRjRUtxTFQ5RlFzY2M2NGRzUkVNWHBodlVhQjRKWTdWT0diS1RmTUp5ZkRhbDVla1FWVTZ1LXdIby16ejRTVi04M1Bfel8temdsRXF5YTdCVXBmS09DeFQ1eDdZZVRsM0VCLW5r?oc=5",
       "published_or_found_date": "Thu, 02 Jan 2025 08:00:00 GMT",
       "text": "Vállalkozás: Spar: 395 ezer bruttó lesz 2025-ben a dolgozók alapbére - | hvg.hu. Vállalkozás: Spar: 395 ezer bruttó lesz 2025-ben a dolgozók alapbére | hvg.hu. Google Hírek"
     },
@@ -763,9 +841,34 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNYlMwc0JaVHY1RFI3c2hzTG9FRU5LQjlhT2RqOWJhcklLeWJlbWNDaGxvZHdpYU9DWjg3RnV1dHRRX0E3bkZjMWNaRk1tMFFEQ1NDaHFTTEsxSElxc3dFQ0JWMl9wNmZ4ejZCaVhNem11dDZYUHdLVnhDUHZYWHZVbHQtWFdnLVIwQzRqOV9LSdIBlAFBVV95cUxOLS1WalMwNWRiSVJGQzd5ZWQtSUZjSnVTQ1BXaEhTeXN0UXJhT2pkNkNqLTNoZEl5b0l6ZzRzS210U1JJenpYWGdEemxMVVYyWFpmbk9CS0U2cHBRQXdNVVBnM194ZllDQ19jaGdWTDc1SHJfcEN5Q0hCS3kwc210dUdBUUFZR2QzN0dNQmVvQV9MSXdo?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNYlMwc0JaVHY1RFI3c2hzTG9FRU5LQjlhT2RqOWJhcklLeWJlbWNDaGxvZHdpYU9DWjg3RnV1dHRRX0E3bkZjMWNaRk1tMFFEQ1NDaHFTTEsxSElxc3dFQ0JWMl9wNmZ4ejZCaVhNem11dDZYUHdLVnhDUHZYWHZVbHQtWFdnLVIwQzRqOV9LSdIBlAFBVV95cUxOLS1WalMwNWRiSVJGQzd5ZWQtSUZjSnVTQ1BXaEhTeXN0UXJhT2pkNkNqLTNoZEl5b0l6ZzRzS210U1JJenpYWGdEemxMVVYyWFpmbk9CS0U2cHBRQXdNVVBnM194ZllDQ19jaGdWTDc1SHJfcEN5Q0hCS3kwc210dUdBUUFZR2QzN0dNQmVvQV9MSXdo?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNYlMwc0JaVHY1RFI3c2hzTG9FRU5LQjlhT2RqOWJhcklLeWJlbWNDaGxvZHdpYU9DWjg3RnV1dHRRX0E3bkZjMWNaRk1tMFFEQ1NDaHFTTEsxSElxc3dFQ0JWMl9wNmZ4ejZCaVhNem11dDZYUHdLVnhDUHZYWHZVbHQtWFdnLVIwQzRqOV9LSdIBlAFBVV95cUxOLS1WalMwNWRiSVJGQzd5ZWQtSUZjSnVTQ1BXaEhTeXN0UXJhT2pkNkNqLTNoZEl5b0l6ZzRzS210U1JJenpYWGdEemxMVVYyWFpmbk9CS0U2cHBRQXdNVVBnM194ZllDQ19jaGdWTDc1SHJfcEN5Q0hCS3kwc210dUdBUUFZR2QzN0dNQmVvQV9MSXdo?oc=5",
       "published_or_found_date": "Tue, 02 Jan 2024 08:00:00 GMT",
       "text": "Bejelentették a béremelést a Sparnál - Portfolio.hu. Bejelentették a béremelést a Sparnál Portfolio.hu. Google Hírek"
+    },
+    {
+      "query": "SPAR fizetés",
+      "company_id": "spar",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNdDB3VjNGUE1nS3dyVEVvcXFZSTYwZTV5Q0ZrdHVUYTktbE05eGFYVkhWSW5ubnVhTjlaTE83djBIelpJakJDaGQwaFdGQTVZYlJuTDFwdGJZUHpEZW9uMHFkejRZMk1jcmlES2ZEQ1F4MlM0YWx1eWxpeDRWY2dpUHV0TGlQR3BuUFl1QmRaYUFHUdIBlwFBVV95cUxNTmV4UjQ0dFB4TkJ4YTUzd0lLQ3NJUVo1M2VxSWsxR2RMYVpQWGR2RW5aY3RYZl8xTkpJcWZPeF8yYkc1THVCZGplSkxRRDFDNGF3TnlMdlN5UF9yaE9VRVkyNkNJVG13Rnp6cmdKZUhqTjRHY1ZXT1FDSm5xS2kzT0lDUDRBMlhVdF9GYWxiX0JZR0owZGdB?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNdDB3VjNGUE1nS3dyVEVvcXFZSTYwZTV5Q0ZrdHVUYTktbE05eGFYVkhWSW5ubnVhTjlaTE83djBIelpJakJDaGQwaFdGQTVZYlJuTDFwdGJZUHpEZW9uMHFkejRZMk1jcmlES2ZEQ1F4MlM0YWx1eWxpeDRWY2dpUHV0TGlQR3BuUFl1QmRaYUFHUdIBlwFBVV95cUxNTmV4UjQ0dFB4TkJ4YTUzd0lLQ3NJUVo1M2VxSWsxR2RMYVpQWGR2RW5aY3RYZl8xTkpJcWZPeF8yYkc1THVCZGplSkxRRDFDNGF3TnlMdlN5UF9yaE9VRVkyNkNJVG13Rnp6cmdKZUhqTjRHY1ZXT1FDSm5xS2kzT0lDUDRBMlhVdF9GYWxiX0JZR0owZGdB?oc=5",
+      "published_or_found_date": "Fri, 31 May 2024 07:00:00 GMT",
+      "text": "Kiderült, mennyi volt a Spar vesztesége - Portfolio.hu. Kiderült, mennyi volt a Spar vesztesége Portfolio.hu. Google Hírek"
+    },
+    {
+      "query": "SPAR Pénzcentrum fizetés",
+      "company_id": "spar",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNdXlDRkFqZ1NwcExsNXd4NHdtYVB2WDAydkVOaVFzRGoyZXA5bElZQ3FRNjYzdGJOSzdsYUljU0taX1YtalZueHJ2eHUxSmxvSjFZUzY5RElIRzk3OF9SSXlMeVFQa1AtemMxQVNobksxY1JMek4xSVljd25PWEJYOG4tMmlHdDJZd0JrbHlYa0bSAZYBQVVfeXFMUG1SM0RTU1JkWkRVSzk0ZGRwdmMybHVFLUY2T2k0QmdWNWFITlNrM3loX1I0bDVONkdDbWE4YW9ZNUF4bFNRMFNBU3RTcUNRaTFiMGlHZ01CVWd3djRpTVJmWlFNeUxpODI2eGRMekp1LXI0bXJRWUNVVGFGTkZNbThVek9qTThmZmFUSHpWaXphdDBEeVl3?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNdXlDRkFqZ1NwcExsNXd4NHdtYVB2WDAydkVOaVFzRGoyZXA5bElZQ3FRNjYzdGJOSzdsYUljU0taX1YtalZueHJ2eHUxSmxvSjFZUzY5RElIRzk3OF9SSXlMeVFQa1AtemMxQVNobksxY1JMek4xSVljd25PWEJYOG4tMmlHdDJZd0JrbHlYa0bSAZYBQVVfeXFMUG1SM0RTU1JkWkRVSzk0ZGRwdmMybHVFLUY2T2k0QmdWNWFITlNrM3loX1I0bDVONkdDbWE4YW9ZNUF4bFNRMFNBU3RTcUNRaTFiMGlHZ01CVWd3djRpTVJmWlFNeUxpODI2eGRMekp1LXI0bXJRWUNVVGFGTkZNbThVek9qTThmZmFUSHpWaXphdDBEeVl3?oc=5",
+      "published_or_found_date": "Mon, 30 Mar 2026 07:00:00 GMT",
+      "text": "Jó hírt kapott a magyar Spar anyacége - Portfolio.hu. Jó hírt kapott a magyar Spar anyacége Portfolio.hu. Google Hírek"
     },
     {
       "query": "Tesco fizetés",
@@ -776,7 +879,8 @@
       "raise_values": [
         7.2
       ],
-      "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPUjB1ejFlSFJmbXBVZVVERVI2eVhrcFhEOUdST3hhenozRTFWSzdJWEV0MVhmMlpPU1FTY19RRFBiS1dfa0hPNUlVc0ZSUHVQQ0lPbVFTVWptOGRRSXl4eXlFc3NZb3ludTFZRGVBTUQ0bWNaNmxheUh5cGlGZ2JmNjZPdkdiZ3N3UWMxWUZxaDdOSGNwWU92eHhMd9IBoAFBVV95cUxQNTRyNXVuLWlwSktEVU1xUHRVS1VVNTQ2Vkk5czBPcHh2RndMaG1xcWs2aV9uRDdKaEc5dXV4VXJyazZtUlZYX2VzMHJWZ0M5YUtUcmxqa3JuRl9TYVFCVk52VUNDNldGUnJwblMtTmRIX21Rd0hCZ3BzNFBHNHM5dWJQR3ZfZUQ5SkRoeHAwTFotU3Jxc2ZiYnBUVktXWmNI?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPUjB1ejFlSFJmbXBVZVVERVI2eVhrcFhEOUdST3hhenozRTFWSzdJWEV0MVhmMlpPU1FTY19RRFBiS1dfa0hPNUlVc0ZSUHVQQ0lPbVFTVWptOGRRSXl4eXlFc3NZb3ludTFZRGVBTUQ0bWNaNmxheUh5cGlGZ2JmNjZPdkdiZ3N3UWMxWUZxaDdOSGNwWU92eHhMd9IBoAFBVV95cUxQNTRyNXVuLWlwSktEVU1xUHRVS1VVNTQ2Vkk5czBPcHh2RndMaG1xcWs2aV9uRDdKaEc5dXV4VXJyazZtUlZYX2VzMHJWZ0M5YUtUcmxqa3JuRl9TYVFCVk52VUNDNldGUnJwblMtTmRIX21Rd0hCZ3BzNFBHNHM5dWJQR3ZfZUQ5SkRoeHAwTFotU3Jxc2ZiYnBUVktXWmNI?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPUjB1ejFlSFJmbXBVZVVERVI2eVhrcFhEOUdST3hhenozRTFWSzdJWEV0MVhmMlpPU1FTY19RRFBiS1dfa0hPNUlVc0ZSUHVQQ0lPbVFTVWptOGRRSXl4eXlFc3NZb3ludTFZRGVBTUQ0bWNaNmxheUh5cGlGZ2JmNjZPdkdiZ3N3UWMxWUZxaDdOSGNwWU92eHhMd9IBoAFBVV95cUxQNTRyNXVuLWlwSktEVU1xUHRVS1VVNTQ2Vkk5czBPcHh2RndMaG1xcWs2aV9uRDdKaEc5dXV4VXJyazZtUlZYX2VzMHJWZ0M5YUtUcmxqa3JuRl9TYVFCVk52VUNDNldGUnJwblMtTmRIX21Rd0hCZ3BzNFBHNHM5dWJQR3ZfZUQ5SkRoeHAwTFotU3Jxc2ZiYnBUVktXWmNI?oc=5",
       "published_or_found_date": "Fri, 23 Jan 2026 08:00:00 GMT",
       "text": "7,2 százalékos béremelést kapnak a Tesco dolgozói - Portfolio.hu. 7,2 százalékos béremelést kapnak a Tesco dolgozói Portfolio.hu. Google Hírek"
     },
@@ -787,7 +891,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQMGlpMkNiQTVYblRaTG9ldHJpMkFhNWdQUWtCaXlEWVlPNmN6Sk9wcldMdklqSnJtVGZpV2hNSGxPcDkzNGE4Z0M3RmNvbFRnelpQN2swVTNmNUx3cktfVU1keHlDX0gyRHp2NlgxSTdtNTgxSnQ5M0YtSTl6c284T0w4eDIxMnd4aTBpbDBnMFJYWWJldmx4OFh1RW80MGxjVWxmak5LeDlpbEdUSU9tT19fSl8tWDg?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQMGlpMkNiQTVYblRaTG9ldHJpMkFhNWdQUWtCaXlEWVlPNmN6Sk9wcldMdklqSnJtVGZpV2hNSGxPcDkzNGE4Z0M3RmNvbFRnelpQN2swVTNmNUx3cktfVU1keHlDX0gyRHp2NlgxSTdtNTgxSnQ5M0YtSTl6c284T0w4eDIxMnd4aTBpbDBnMFJYWWJldmx4OFh1RW80MGxjVWxmak5LeDlpbEdUSU9tT19fSl8tWDg?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQMGlpMkNiQTVYblRaTG9ldHJpMkFhNWdQUWtCaXlEWVlPNmN6Sk9wcldMdklqSnJtVGZpV2hNSGxPcDkzNGE4Z0M3RmNvbFRnelpQN2swVTNmNUx3cktfVU1keHlDX0gyRHp2NlgxSTdtNTgxSnQ5M0YtSTl6c284T0w4eDIxMnd4aTBpbDBnMFJYWWJldmx4OFh1RW80MGxjVWxmak5LeDlpbEdUSU9tT19fSl8tWDg?oc=5",
       "published_or_found_date": "Mon, 05 Feb 2024 08:00:00 GMT",
       "text": "Megjött a Tesco válaszcsapása: ennyivel nő a bér és a cafeteria - 24.hu. Megjött a Tesco válaszcsapása: ennyivel nő a bér és a cafeteria 24.hu. Google Hírek"
     },
@@ -798,20 +903,10 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNZ01RRU4wZDZmYXFXamFNQWlwVWduVnJ0ZllkUWNJNjNvYWZfcUFMdEp3S2FJQ1RXYzhJWjJENVRDc3RLVnVKUXpMQ0Z1cUZOd0tBQkpCXzFDLTRGenoyWHl1eU1OWGRLczRvNmZOMzd2cW4zOVoxRW8waEZyVm04ZVN3WjdDa214YjZQMFpTMFlWa0YwS3pvVWNWQnI2TFVsdVMwLUNEa29FVWJKbVHSAbMBQVVfeXFMUG9CNmdJN0gtdFBhZ2diMi1nb25NWlZmbWYtMFpaVVdYMnk0YlZlY2JpelVaQzVLT0xRNEo1ZEJLdEJ5R0Y4b284elBseUFQVGNuam96a0FZdnVMRW5INkN3TlJfNDZ0T1E3Y1lsX3pXZkV3MDZrMWZwZmFpbENPamZGR1ljMXExdFNjeGR4c1ptTVRnOXJiT0duTEFnSFZOckVpLVNoYVh6MUpBVUo5UTBnaGM?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNZ01RRU4wZDZmYXFXamFNQWlwVWduVnJ0ZllkUWNJNjNvYWZfcUFMdEp3S2FJQ1RXYzhJWjJENVRDc3RLVnVKUXpMQ0Z1cUZOd0tBQkpCXzFDLTRGenoyWHl1eU1OWGRLczRvNmZOMzd2cW4zOVoxRW8waEZyVm04ZVN3WjdDa214YjZQMFpTMFlWa0YwS3pvVWNWQnI2TFVsdVMwLUNEa29FVWJKbVHSAbMBQVVfeXFMUG9CNmdJN0gtdFBhZ2diMi1nb25NWlZmbWYtMFpaVVdYMnk0YlZlY2JpelVaQzVLT0xRNEo1ZEJLdEJ5R0Y4b284elBseUFQVGNuam96a0FZdnVMRW5INkN3TlJfNDZ0T1E3Y1lsX3pXZkV3MDZrMWZwZmFpbENPamZGR1ljMXExdFNjeGR4c1ptTVRnOXJiT0duTEFnSFZOckVpLVNoYVh6MUpBVUo5UTBnaGM?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNZ01RRU4wZDZmYXFXamFNQWlwVWduVnJ0ZllkUWNJNjNvYWZfcUFMdEp3S2FJQ1RXYzhJWjJENVRDc3RLVnVKUXpMQ0Z1cUZOd0tBQkpCXzFDLTRGenoyWHl1eU1OWGRLczRvNmZOMzd2cW4zOVoxRW8waEZyVm04ZVN3WjdDa214YjZQMFpTMFlWa0YwS3pvVWNWQnI2TFVsdVMwLUNEa29FVWJKbVHSAbMBQVVfeXFMUG9CNmdJN0gtdFBhZ2diMi1nb25NWlZmbWYtMFpaVVdYMnk0YlZlY2JpelVaQzVLT0xRNEo1ZEJLdEJ5R0Y4b284elBseUFQVGNuam96a0FZdnVMRW5INkN3TlJfNDZ0T1E3Y1lsX3pXZkV3MDZrMWZwZmFpbENPamZGR1ljMXExdFNjeGR4c1ptTVRnOXJiT0duTEFnSFZOckVpLVNoYVh6MUpBVUo5UTBnaGM?oc=5",
       "published_or_found_date": "Fri, 05 Dec 2025 08:00:00 GMT",
       "text": "Kiderült, mennyit keresnek jövőre a Tesco írországi dolgozói - Portfolio.hu. Kiderült, mennyit keresnek jövőre a Tesco írországi dolgozói Portfolio.hu. Google Hírek"
-    },
-    {
-      "query": "Tesco bér",
-      "company_id": "tesco",
-      "role_key": null,
-      "salary_values": [],
-      "salary_ranges": [],
-      "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQX3o4dVRoV0l1ZGEyM05ydXRTMEFXYWlXYVl1eEl2MEY0Z3BCUF80ekVaV292a3lGenhUc2c5TjZiYUYwTzJzSUVPUm9CM2tfWVE3VG5lMlhJZDFWbmZCNW9TUnZyNTd6NzJ1NGVOVktOcVZJM2oxa0JPcW5kTElaTjZhZTFaTVZETlgzaGh0SEU4cl9sWWxGaFFYWldhNDFMSmdJTFNSM0ZXdF9VMU9sN0psSndWUTVzbVNuM01zN012OExHMnBFSll3TVAyUzNZVEU3Xzhxekd1Vy1ENkxpQ1R6MzBHV3FNTU1kSXFB0gHzAUFVX3lxTE9idGhhUXF6cUtfalQ3eGQ0dUo2T0lMOS1FdTFNa2pCQWdsdkZSY2d3WjluQ2VSTVJRTDNJOTRDem9mTmotZEtZamVkZ2FxaDdQTW9MM3NoTFNEY0dYZlFGUEo0bGpMRXVhWE8tX0hjUFJMay1XVV93eXNfQm1mWGpTZGR3T21MMEdRa0JTakZIM1h2cTQyaUVkTkxhWlFiRWQ0emZORzBKeENDQ2UwVnJzc1NidlM1UFpEZXRHSEpna1RzQ1h6VkxURmtPVjh3Y0djN2x3bWREYVVlajJpYTJyM05CajBfOTAzRFZlb1JtdWhyMA?oc=5",
-      "published_or_found_date": "Fri, 14 Jun 2024 07:00:00 GMT",
-      "text": "Kiakadtak a részvényesek: a Tesco dolgozói alig keresnek, miközben a vezérigazgató milliárdos fizetést zsebel be - Portfolio.hu. Kiakadtak a részvényesek: a Tesco dolgozói alig keresnek, miközben a vezérigazgató milliárdos fizetést zsebel be Portfolio.hu. Google Hírek"
     },
     {
       "query": "Tesco mennyit keresnek",
@@ -820,9 +915,34 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNZ2JBMWdKYzNYbzdfMjBfZHNJd3NlUHdPU0hvQkp6X0lDTEp1NmZ6Z2NQckt2NmFXSG5aZF96NVN3VDBxTThzVmFiZ053c25ld3FqQkRCT2hjQWtJRUtUR3VmWDhja0lPVnNDc054bllqSzZlS2QtSjZnZndFUC1WLThmb0hHZDdTYVlUM2UzbWtTZ9IBlwFBVV95cUxOWk1mVUFBem81Z2JnSzNseXp5eGpwcS11SllYR2Y0TDBaU0tXMjRfdFM2b1VRR05ZNzBVSzNKeHRmSlRhQkRfczVBenlOTDZ0NDVnQXN6UnBOVy1COTZyMV9vRE9yRXg5M0k3X093NHZqUXZYMTM1dVZwd2pJYjdROG9MSENJUVFlSTAtdXNpMGM4VDVSTVgw?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNZ2JBMWdKYzNYbzdfMjBfZHNJd3NlUHdPU0hvQkp6X0lDTEp1NmZ6Z2NQckt2NmFXSG5aZF96NVN3VDBxTThzVmFiZ053c25ld3FqQkRCT2hjQWtJRUtUR3VmWDhja0lPVnNDc054bllqSzZlS2QtSjZnZndFUC1WLThmb0hHZDdTYVlUM2UzbWtTZ9IBlwFBVV95cUxOWk1mVUFBem81Z2JnSzNseXp5eGpwcS11SllYR2Y0TDBaU0tXMjRfdFM2b1VRR05ZNzBVSzNKeHRmSlRhQkRfczVBenlOTDZ0NDVnQXN6UnBOVy1COTZyMV9vRE9yRXg5M0k3X093NHZqUXZYMTM1dVZwd2pJYjdROG9MSENJUVFlSTAtdXNpMGM4VDVSTVgw?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNZ2JBMWdKYzNYbzdfMjBfZHNJd3NlUHdPU0hvQkp6X0lDTEp1NmZ6Z2NQckt2NmFXSG5aZF96NVN3VDBxTThzVmFiZ053c25ld3FqQkRCT2hjQWtJRUtUR3VmWDhja0lPVnNDc054bllqSzZlS2QtSjZnZndFUC1WLThmb0hHZDdTYVlUM2UzbWtTZ9IBlwFBVV95cUxOWk1mVUFBem81Z2JnSzNseXp5eGpwcS11SllYR2Y0TDBaU0tXMjRfdFM2b1VRR05ZNzBVSzNKeHRmSlRhQkRfczVBenlOTDZ0NDVnQXN6UnBOVy1COTZyMV9vRE9yRXg5M0k3X093NHZqUXZYMTM1dVZwd2pJYjdROG9MSENJUVFlSTAtdXNpMGM4VDVSTVgw?oc=5",
       "published_or_found_date": "Fri, 30 Jan 2026 08:00:00 GMT",
       "text": "Nehéz döntésre kényszerül a brit Tesco - Portfolio.hu. Nehéz döntésre kényszerül a brit Tesco Portfolio.hu. Google Hírek"
+    },
+    {
+      "query": "Tesco mennyit keresnek",
+      "company_id": "tesco",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQX3o4dVRoV0l1ZGEyM05ydXRTMEFXYWlXYVl1eEl2MEY0Z3BCUF80ekVaV292a3lGenhUc2c5TjZiYUYwTzJzSUVPUm9CM2tfWVE3VG5lMlhJZDFWbmZCNW9TUnZyNTd6NzJ1NGVOVktOcVZJM2oxa0JPcW5kTElaTjZhZTFaTVZETlgzaGh0SEU4cl9sWWxGaFFYWldhNDFMSmdJTFNSM0ZXdF9VMU9sN0psSndWUTVzbVNuM01zN012OExHMnBFSll3TVAyUzNZVEU3Xzhxekd1Vy1ENkxpQ1R6MzBHV3FNTU1kSXFB0gHzAUFVX3lxTE9idGhhUXF6cUtfalQ3eGQ0dUo2T0lMOS1FdTFNa2pCQWdsdkZSY2d3WjluQ2VSTVJRTDNJOTRDem9mTmotZEtZamVkZ2FxaDdQTW9MM3NoTFNEY0dYZlFGUEo0bGpMRXVhWE8tX0hjUFJMay1XVV93eXNfQm1mWGpTZGR3T21MMEdRa0JTakZIM1h2cTQyaUVkTkxhWlFiRWQ0emZORzBKeENDQ2UwVnJzc1NidlM1UFpEZXRHSEpna1RzQ1h6VkxURmtPVjh3Y0djN2x3bWREYVVlajJpYTJyM05CajBfOTAzRFZlb1JtdWhyMA?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQX3o4dVRoV0l1ZGEyM05ydXRTMEFXYWlXYVl1eEl2MEY0Z3BCUF80ekVaV292a3lGenhUc2c5TjZiYUYwTzJzSUVPUm9CM2tfWVE3VG5lMlhJZDFWbmZCNW9TUnZyNTd6NzJ1NGVOVktOcVZJM2oxa0JPcW5kTElaTjZhZTFaTVZETlgzaGh0SEU4cl9sWWxGaFFYWldhNDFMSmdJTFNSM0ZXdF9VMU9sN0psSndWUTVzbVNuM01zN012OExHMnBFSll3TVAyUzNZVEU3Xzhxekd1Vy1ENkxpQ1R6MzBHV3FNTU1kSXFB0gHzAUFVX3lxTE9idGhhUXF6cUtfalQ3eGQ0dUo2T0lMOS1FdTFNa2pCQWdsdkZSY2d3WjluQ2VSTVJRTDNJOTRDem9mTmotZEtZamVkZ2FxaDdQTW9MM3NoTFNEY0dYZlFGUEo0bGpMRXVhWE8tX0hjUFJMay1XVV93eXNfQm1mWGpTZGR3T21MMEdRa0JTakZIM1h2cTQyaUVkTkxhWlFiRWQ0emZORzBKeENDQ2UwVnJzc1NidlM1UFpEZXRHSEpna1RzQ1h6VkxURmtPVjh3Y0djN2x3bWREYVVlajJpYTJyM05CajBfOTAzRFZlb1JtdWhyMA?oc=5",
+      "published_or_found_date": "Fri, 14 Jun 2024 07:00:00 GMT",
+      "text": "Kiakadtak a részvényesek: a Tesco dolgozói alig keresnek, miközben a vezérigazgató milliárdos fizetést zsebel be - Portfolio.hu. Kiakadtak a részvényesek: a Tesco dolgozói alig keresnek, miközben a vezérigazgató milliárdos fizetést zsebel be Portfolio.hu. Google Hírek"
+    },
+    {
+      "query": "Tesco havi bruttó",
+      "company_id": "tesco",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQRU5Qb2VxQm5wSm84RUZEcDdxdFJZYS1RSUNfcm9kRzVXeXhsN3B1RTlTX0g4bGtpX1BpYzRNRjJSaEhmTWtrWXkxcEhiaHd4SUd3TVJucVhLdVFDNm9qNGZMaVFVVXZXTEh6enhsd2EzUFRTXzF5UUtsSk5INlV3SVAzaExlVmFKUWdaZUQ0TU5oNGh4WXVZX09leHpLbl9QUmhJTmtBNk9wTWVURmx3MlA2enktOXQzSGg3MUVn0gHDAUFVX3lxTE8tQVZidHJQaVJ2M3FfbncyZFBYel9KSy1GV1NUT0QtMnpUVHZTNkZsQld3TDU3QTAwcnZEbDVIUzJuU3lMbmpCVTVNaWh6dWNwWkt3NnhvSzd5VWtweUZCWWVIeDdkel9uQk4yODNzeU1FdTZEZG1tRC1rb0VlcjNKNXVjNV9WUjhFWG9JbHJBdDMzSTN0RnR5amJWVWNtODlSbkJuTUtNWU1QZXFNckN6SkdNWkJlRzUwLVd4ckJHMHZYdw?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQRU5Qb2VxQm5wSm84RUZEcDdxdFJZYS1RSUNfcm9kRzVXeXhsN3B1RTlTX0g4bGtpX1BpYzRNRjJSaEhmTWtrWXkxcEhiaHd4SUd3TVJucVhLdVFDNm9qNGZMaVFVVXZXTEh6enhsd2EzUFRTXzF5UUtsSk5INlV3SVAzaExlVmFKUWdaZUQ0TU5oNGh4WXVZX09leHpLbl9QUmhJTmtBNk9wTWVURmx3MlA2enktOXQzSGg3MUVn0gHDAUFVX3lxTE8tQVZidHJQaVJ2M3FfbncyZFBYel9KSy1GV1NUT0QtMnpUVHZTNkZsQld3TDU3QTAwcnZEbDVIUzJuU3lMbmpCVTVNaWh6dWNwWkt3NnhvSzd5VWtweUZCWWVIeDdkel9uQk4yODNzeU1FdTZEZG1tRC1rb0VlcjNKNXVjNV9WUjhFWG9JbHJBdDMzSTN0RnR5amJWVWNtODlSbkJuTUtNWU1QZXFNckN6SkdNWkJlRzUwLVd4ckJHMHZYdw?oc=5",
+      "published_or_found_date": "Mon, 03 Jun 2024 07:00:00 GMT",
+      "text": "Helycsere történt a magyar kiskereskedelemben – Csökkent a Tesco forgalma - Portfolio.hu. Helycsere történt a magyar kiskereskedelemben – Csökkent a Tesco forgalma Portfolio.hu. Google Hírek"
     },
     {
       "query": "Tesco Portfolio béremelés",
@@ -833,7 +953,8 @@
       "raise_values": [
         8.0
       ],
-      "source_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQd29GcXNoTGZmWDl4RzFDeWFfU2RSRllBZEl1bWY4eUlvQXZaQkVSbzVJUEgwdDdLcW1SeFA1VW83NXJzaUxmV2gwa1RhbUNuQ3VleWdKLWs0LW5iOS1hM3dJYTR3U2JhV2dtQ0FFNnp3VTVRV3B3TlBLdzg5V1RGbUYyd1QtellDWkphSHBCZEHSAZYBQVVfeXFMTlZxTm9ZTHhfSU4wakFkc2xwZmhhYXc1NW80eFlEcE1lWjNGblFJaUFSQ2dMWmI5NXRWQnZoMUxoLU1vZGdOR3JiUExmQUpBSy1RQ0pEZ1ZNY1lXWVdkaHFwRzlKVWtrQ2dNQzlfTFptcFlpVC1VYTI0cGtvVjhQUFFFZ2c3VjBnOGpYMzA1NW9UTVpCTzdB?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQd29GcXNoTGZmWDl4RzFDeWFfU2RSRllBZEl1bWY4eUlvQXZaQkVSbzVJUEgwdDdLcW1SeFA1VW83NXJzaUxmV2gwa1RhbUNuQ3VleWdKLWs0LW5iOS1hM3dJYTR3U2JhV2dtQ0FFNnp3VTVRV3B3TlBLdzg5V1RGbUYyd1QtellDWkphSHBCZEHSAZYBQVVfeXFMTlZxTm9ZTHhfSU4wakFkc2xwZmhhYXc1NW80eFlEcE1lWjNGblFJaUFSQ2dMWmI5NXRWQnZoMUxoLU1vZGdOR3JiUExmQUpBSy1RQ0pEZ1ZNY1lXWVdkaHFwRzlKVWtrQ2dNQzlfTFptcFlpVC1VYTI0cGtvVjhQUFFFZ2c3VjBnOGpYMzA1NW9UTVpCTzdB?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQd29GcXNoTGZmWDl4RzFDeWFfU2RSRllBZEl1bWY4eUlvQXZaQkVSbzVJUEgwdDdLcW1SeFA1VW83NXJzaUxmV2gwa1RhbUNuQ3VleWdKLWs0LW5iOS1hM3dJYTR3U2JhV2dtQ0FFNnp3VTVRV3B3TlBLdzg5V1RGbUYyd1QtellDWkphSHBCZEHSAZYBQVVfeXFMTlZxTm9ZTHhfSU4wakFkc2xwZmhhYXc1NW80eFlEcE1lWjNGblFJaUFSQ2dMWmI5NXRWQnZoMUxoLU1vZGdOR3JiUExmQUpBSy1RQ0pEZ1ZNY1lXWVdkaHFwRzlKVWtrQ2dNQzlfTFptcFlpVC1VYTI0cGtvVjhQUFFFZ2c3VjBnOGpYMzA1NW9UTVpCTzdB?oc=5",
       "published_or_found_date": "Fri, 23 Jan 2026 08:00:00 GMT",
       "text": "6-8 százalékos béremelés jön a Penny-nél - Portfolio.hu. 6-8 százalékos béremelés jön a Penny-nél Portfolio.hu. Google Hírek"
     },
@@ -847,35 +968,11 @@
           "salary_min_huf_month": 540000,
           "salary_max_huf_month": 670000,
           "salary_median_huf_month": 605000
-        },
-        {
-          "salary_min_huf_month": 540000,
-          "salary_max_huf_month": 670000,
-          "salary_median_huf_month": 605000
-        },
-        {
-          "salary_min_huf_month": 540000,
-          "salary_max_huf_month": 670000,
-          "salary_median_huf_month": 605000
-        },
-        {
-          "salary_min_huf_month": 540000,
-          "salary_max_huf_month": 670000,
-          "salary_median_huf_month": 605000
-        },
-        {
-          "salary_min_huf_month": 540000,
-          "salary_max_huf_month": 670000,
-          "salary_median_huf_month": 605000
-        },
-        {
-          "salary_min_huf_month": 540000,
-          "salary_max_huf_month": 670000,
-          "salary_median_huf_month": 605000
         }
       ],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaTJfejl6VWxrWVktZE51TmVqN284V1I3RmtpeFRHdHpTMVNYQzFYNmtNcTdBNkNNM1ZpcXAtS3gwdUVfZ25PempyR2ZBSnEyREJ5dk9PTDhfSlhpOWk4SEMzbXJXOGRBRVdseXI1QkUxNkRxQUpGNXlDU19LZFR5a3p1T2hPUQ?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaTJfejl6VWxrWVktZE51TmVqN284V1I3RmtpeFRHdHpTMVNYQzFYNmtNcTdBNkNNM1ZpcXAtS3gwdUVfZ25PempyR2ZBSnEyREJ5dk9PTDhfSlhpOWk4SEMzbXJXOGRBRVdseXI1QkUxNkRxQUpGNXlDU19LZFR5a3p1T2hPUQ?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaTJfejl6VWxrWVktZE51TmVqN284V1I3RmtpeFRHdHpTMVNYQzFYNmtNcTdBNkNNM1ZpcXAtS3gwdUVfZ25PempyR2ZBSnEyREJ5dk9PTDhfSlhpOWk4SEMzbXJXOGRBRVdseXI1QkUxNkRxQUpGNXlDU19LZFR5a3p1T2hPUQ?oc=5",
       "published_or_found_date": "Tue, 23 Dec 2025 08:00:00 GMT",
       "text": "Gazdaság: Bruttó 540 ezerért keres új munkatársakat a Penny, de az összeg felcsúszhat 670 ezerig is - | hvg.hu. Gazdaság: Bruttó 540 ezerért keres új munkatársakat a Penny, de az összeg felcsúszhat 670 ezerig is | hvg.hu. Google Hírek"
     },
@@ -886,7 +983,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNX3ZRWG5qNkZISnhjSDdZaWVwQ1dWMW9VMENXQmowc0FpNTcxM0VEU01MVUVDNURJZG56YWVZWkgzWUFsajdGWlNsVU50N25XLU50NVlnSHp4S1YxUjI0b0o4VURUcG5mLVljcFlXRTVqMjJDMnh4Q2ZmWUtSZHNtelBpb3FBY00wejEtZExnWHpteXdBU1d2RFBISjJQTjhKVkJZZw?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNX3ZRWG5qNkZISnhjSDdZaWVwQ1dWMW9VMENXQmowc0FpNTcxM0VEU01MVUVDNURJZG56YWVZWkgzWUFsajdGWlNsVU50N25XLU50NVlnSHp4S1YxUjI0b0o4VURUcG5mLVljcFlXRTVqMjJDMnh4Q2ZmWUtSZHNtelBpb3FBY00wejEtZExnWHpteXdBU1d2RFBISjJQTjhKVkJZZw?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNX3ZRWG5qNkZISnhjSDdZaWVwQ1dWMW9VMENXQmowc0FpNTcxM0VEU01MVUVDNURJZG56YWVZWkgzWUFsajdGWlNsVU50N25XLU50NVlnSHp4S1YxUjI0b0o4VURUcG5mLVljcFlXRTVqMjJDMnh4Q2ZmWUtSZHNtelBpb3FBY00wejEtZExnWHpteXdBU1d2RFBISjJQTjhKVkJZZw?oc=5",
       "published_or_found_date": "Fri, 07 Mar 2025 08:00:00 GMT",
       "text": "Vállalkozás: Közel nyolc százalékkal emeli dolgozói bérét a Penny - | hvg.hu. Vállalkozás: Közel nyolc százalékkal emeli dolgozói bérét a Penny | hvg.hu. Google Hírek"
     },
@@ -897,7 +995,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQVTYxSVhCanNpcThRZEQ4b3loV1lWWUdQSTZsOXBrM05tV0FaU3hQWlVMSXYxd2Z2d1NpM0EyUUl4eWc5X2lIVWVTTjZtRWY4a1ZKUEVwYUxuNFZEODRQcXdwSWZQTGpZYmt1V1BuemZWM0JxdkhzWlJqVlp5VWRnbw?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQVTYxSVhCanNpcThRZEQ4b3loV1lWWUdQSTZsOXBrM05tV0FaU3hQWlVMSXYxd2Z2d1NpM0EyUUl4eWc5X2lIVWVTTjZtRWY4a1ZKUEVwYUxuNFZEODRQcXdwSWZQTGpZYmt1V1BuemZWM0JxdkhzWlJqVlp5VWRnbw?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQVTYxSVhCanNpcThRZEQ4b3loV1lWWUdQSTZsOXBrM05tV0FaU3hQWlVMSXYxd2Z2d1NpM0EyUUl4eWc5X2lIVWVTTjZtRWY4a1ZKUEVwYUxuNFZEODRQcXdwSWZQTGpZYmt1V1BuemZWM0JxdkhzWlJqVlp5VWRnbw?oc=5",
       "published_or_found_date": "Thu, 23 Apr 2026 07:00:00 GMT",
       "text": "Gazdaság: A tescós megoldást teszteli a Penny tulaja - | hvg.hu. Gazdaság: A tescós megoldást teszteli a Penny tulaja | hvg.hu. Google Hírek"
     },
@@ -908,7 +1007,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNVTlhb0xwdGZLSnVqcGlvM09PZ1ZZWi00SnoxQ2IzTjFKelJVWGk0Q3V3bG9XVWZKaXBWMjB1a0RaOWRtbmRPVWx5bWo0MG13dlRYcE41Rm5ENW00WHBnSnhjOW1HSTk5VE5mRGN3dWxTUXplLWdxUFpLdHkxdUhZYw?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNVTlhb0xwdGZLSnVqcGlvM09PZ1ZZWi00SnoxQ2IzTjFKelJVWGk0Q3V3bG9XVWZKaXBWMjB1a0RaOWRtbmRPVWx5bWo0MG13dlRYcE41Rm5ENW00WHBnSnhjOW1HSTk5VE5mRGN3dWxTUXplLWdxUFpLdHkxdUhZYw?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNVTlhb0xwdGZLSnVqcGlvM09PZ1ZZWi00SnoxQ2IzTjFKelJVWGk0Q3V3bG9XVWZKaXBWMjB1a0RaOWRtbmRPVWx5bWo0MG13dlRYcE41Rm5ENW00WHBnSnhjOW1HSTk5VE5mRGN3dWxTUXplLWdxUFpLdHkxdUhZYw?oc=5",
       "published_or_found_date": "Fri, 23 Feb 2024 08:00:00 GMT",
       "text": "Videón, ahogy egy férfi kirohan a vécépapírral és kajákkal megtömött kosarával az Aldiból - 24.hu. Videón, ahogy egy férfi kirohan a vécépapírral és kajákkal megtömött kosarával az Aldiból 24.hu. Google Hírek"
     },
@@ -919,7 +1019,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNVkRVajY0U2NiSnNNelFVempKQktiOHdNd3dUUkVZal9JOUc2QXlVVXF0dk1fWVBnM1Vrbm8yUDllQ2NKVDVkZW03MkhJakxtQUJHaDNGN3NKajYxREEwc2F1OTlsdXZFTEViY0RGWE5Ib0tySHRPN2c2OGtMSFRtSnp5dUwtTWktTXhsdE81ZC1ZVjhnOWhEZ3ZhUDhiYmFlUjhHVVF1aFM2UjJ5bjFF0gG0AUFVX3lxTE1iMnFDZTBTS29RUDdWa3M2SHk3Vld2dWY2SFNfbi1JamtETjVjU01PV3UwTTZWUDdMZHVYQzhOMk5oazFjMWFQbWlvdGVtZFAyVDY0U1ZBcTQ2dTRqN29MV21SY2hzNkhWSVdRTTVadnRTcjBXMEpza1NQSlMwSS14WTgteERJQTVRcUxmcUg0bnFKZ1pqeDIxcVVnX1ZNUmlrNERSVnlHOTFNV1BVcGtVWklHRw?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNVkRVajY0U2NiSnNNelFVempKQktiOHdNd3dUUkVZal9JOUc2QXlVVXF0dk1fWVBnM1Vrbm8yUDllQ2NKVDVkZW03MkhJakxtQUJHaDNGN3NKajYxREEwc2F1OTlsdXZFTEViY0RGWE5Ib0tySHRPN2c2OGtMSFRtSnp5dUwtTWktTXhsdE81ZC1ZVjhnOWhEZ3ZhUDhiYmFlUjhHVVF1aFM2UjJ5bjFF0gG0AUFVX3lxTE1iMnFDZTBTS29RUDdWa3M2SHk3Vld2dWY2SFNfbi1JamtETjVjU01PV3UwTTZWUDdMZHVYQzhOMk5oazFjMWFQbWlvdGVtZFAyVDY0U1ZBcTQ2dTRqN29MV21SY2hzNkhWSVdRTTVadnRTcjBXMEpza1NQSlMwSS14WTgteERJQTVRcUxmcUg0bnFKZ1pqeDIxcVVnX1ZNUmlrNERSVnlHOTFNV1BVcGtVWklHRw?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNVkRVajY0U2NiSnNNelFVempKQktiOHdNd3dUUkVZal9JOUc2QXlVVXF0dk1fWVBnM1Vrbm8yUDllQ2NKVDVkZW03MkhJakxtQUJHaDNGN3NKajYxREEwc2F1OTlsdXZFTEViY0RGWE5Ib0tySHRPN2c2OGtMSFRtSnp5dUwtTWktTXhsdE81ZC1ZVjhnOWhEZ3ZhUDhiYmFlUjhHVVF1aFM2UjJ5bjFF0gG0AUFVX3lxTE1iMnFDZTBTS29RUDdWa3M2SHk3Vld2dWY2SFNfbi1JamtETjVjU01PV3UwTTZWUDdMZHVYQzhOMk5oazFjMWFQbWlvdGVtZFAyVDY0U1ZBcTQ2dTRqN29MV21SY2hzNkhWSVdRTTVadnRTcjBXMEpza1NQSlMwSS14WTgteERJQTVRcUxmcUg0bnFKZ1pqeDIxcVVnX1ZNUmlrNERSVnlHOTFNV1BVcGtVWklHRw?oc=5",
       "published_or_found_date": "Sun, 31 May 2026 07:00:00 GMT",
       "text": "Az elmúlt időszak legnagyobb veszteségét hozta össze a Penny - Portfolio.hu. Az elmúlt időszak legnagyobb veszteségét hozta össze a Penny Portfolio.hu. Google Hírek"
     },
@@ -930,9 +1031,22 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNUUw0YzZQNXN6N3JGM1NkcXh5QlFmaUxhbmdzR0dtemRHVXVPNl95VmU3eHRrODFWOWxhS0pma0Z3SU1UMzE4cWw4d05BZFVYTGVvcHBKZWdVTWZqRy1DYkttS01STkpMODZRODFYY0hCekxTOEJvTU5kRE4xb0dPNG5XaFJRWURGTE9NRngzOVRkUdIBlwFBVV95cUxQSGxXMzlfdVBiRnhyclV6S3NvMEdmYUFRSnBiRjFiYjZqNzd0VV80WkRXTXlCTmxqQjBnZnJ3QlJydXJoNVBscVdHSExlU1NrUGZfdXZIYXV4M1lUZ1YwcEpZT2tROUVJNXpBVTdWN0tuMUR4NXUwVUVSNVoyZjJfZWN6eTE3UWktTndxTHd0dEdkeXZaM3Q0?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNUUw0YzZQNXN6N3JGM1NkcXh5QlFmaUxhbmdzR0dtemRHVXVPNl95VmU3eHRrODFWOWxhS0pma0Z3SU1UMzE4cWw4d05BZFVYTGVvcHBKZWdVTWZqRy1DYkttS01STkpMODZRODFYY0hCekxTOEJvTU5kRE4xb0dPNG5XaFJRWURGTE9NRngzOVRkUdIBlwFBVV95cUxQSGxXMzlfdVBiRnhyclV6S3NvMEdmYUFRSnBiRjFiYjZqNzd0VV80WkRXTXlCTmxqQjBnZnJ3QlJydXJoNVBscVdHSExlU1NrUGZfdXZIYXV4M1lUZ1YwcEpZT2tROUVJNXpBVTdWN0tuMUR4NXUwVUVSNVoyZjJfZWN6eTE3UWktTndxTHd0dEdkeXZaM3Q0?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNUUw0YzZQNXN6N3JGM1NkcXh5QlFmaUxhbmdzR0dtemRHVXVPNl95VmU3eHRrODFWOWxhS0pma0Z3SU1UMzE4cWw4d05BZFVYTGVvcHBKZWdVTWZqRy1DYkttS01STkpMODZRODFYY0hCekxTOEJvTU5kRE4xb0dPNG5XaFJRWURGTE9NRngzOVRkUdIBlwFBVV95cUxQSGxXMzlfdVBiRnhyclV6S3NvMEdmYUFRSnBiRjFiYjZqNzd0VV80WkRXTXlCTmxqQjBnZnJ3QlJydXJoNVBscVdHSExlU1NrUGZfdXZIYXV4M1lUZ1YwcEpZT2tROUVJNXpBVTdWN0tuMUR4NXUwVUVSNVoyZjJfZWN6eTE3UWktTndxTHd0dEdkeXZaM3Q0?oc=5",
       "published_or_found_date": "Fri, 02 Feb 2024 08:00:00 GMT",
       "text": "Kiderült, mekkora béremelést ad a Penny - Portfolio.hu. Kiderült, mekkora béremelést ad a Penny Portfolio.hu. Google Hírek"
+    },
+    {
+      "query": "PENNY havi bruttó",
+      "company_id": "lidl",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNaURHcWFzTXdreXZvd3BJRFdUVkhWN3ZmVDdSeFJVNGJVbDZzaXhEekhzRGxXQUc5M2xocVhZa1Ixa25yY2M2YVYtZXJQMUlYdGQxNVJXZGdRMlhvN2NrMFZNakp1RHNmV3phVVVyZ3NtcVZnT0x5Y1cyVEJaazhhUkNpR0pFb2N4TjJnQWVXbW0?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNaURHcWFzTXdreXZvd3BJRFdUVkhWN3ZmVDdSeFJVNGJVbDZzaXhEekhzRGxXQUc5M2xocVhZa1Ixa25yY2M2YVYtZXJQMUlYdGQxNVJXZGdRMlhvN2NrMFZNakp1RHNmV3phVVVyZ3NtcVZnT0x5Y1cyVEJaazhhUkNpR0pFb2N4TjJnQWVXbW0?oc=5",
+      "published_or_found_date": "Fri, 05 Jun 2026 07:00:00 GMT",
+      "text": "Gazdaság: A Lidltől a Tescóig: választottak a magyarok, szétszóródtak a boltláncok - | hvg.hu. Gazdaság: A Lidltől a Tescóig: választottak a magyarok, szétszóródtak a boltláncok | hvg.hu. Google Hírek"
     },
     {
       "query": "PENNY Pénzcentrum fizetés",
@@ -941,7 +1055,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQVk9NU0U3Vjk4Q0szdzBwelN2RFQ1SjUxX2xKT0pkYVhaekFuWWl1cGluaTVhbml5Yk9JeFA0LUpIV3JKMkxCS3c1dUN5dmcyeGxRTGdERzFSSWxMZFBWV1VfdTRRc0E0Q0FUaHlLQVB3Z1l5REl3bFJDWUJCR1ljbzlTMGlxankyRjE5RnVnV0tMYmtGbjAtNTVHODhNajlSVlgtbDUwOVdmQ3dncThPdzVSVVNpcHp3ZWliam9RZWtFdUxjSXfSAcsBQVVfeXFMTm1IYXozNThJWmdtOXlkUkY0MVJDalVZdGg3LUs5TmRfenpHZkRiS1BIdV9IVVJfQUY2WmJxY0RJeXNHMEF4cFlQNy1sb1lKa0tyeDc0dnh4aE9uM3IxMWgyNy1yazh1cVAxMXV4QmJRMC1NYW9wVjM2TjhISFdOU0hLc2ZOUWhmR2JxVWV4QmZwdlZnN1JaZkI2ZUNpRVRldEZQZ1NwTmUzREhYUzZoNU8xOXJPWmlSV3M2X3BpV2NiZGZtTGJfNDJINGc?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQVk9NU0U3Vjk4Q0szdzBwelN2RFQ1SjUxX2xKT0pkYVhaekFuWWl1cGluaTVhbml5Yk9JeFA0LUpIV3JKMkxCS3c1dUN5dmcyeGxRTGdERzFSSWxMZFBWV1VfdTRRc0E0Q0FUaHlLQVB3Z1l5REl3bFJDWUJCR1ljbzlTMGlxankyRjE5RnVnV0tMYmtGbjAtNTVHODhNajlSVlgtbDUwOVdmQ3dncThPdzVSVVNpcHp3ZWliam9RZWtFdUxjSXfSAcsBQVVfeXFMTm1IYXozNThJWmdtOXlkUkY0MVJDalVZdGg3LUs5TmRfenpHZkRiS1BIdV9IVVJfQUY2WmJxY0RJeXNHMEF4cFlQNy1sb1lKa0tyeDc0dnh4aE9uM3IxMWgyNy1yazh1cVAxMXV4QmJRMC1NYW9wVjM2TjhISFdOU0hLc2ZOUWhmR2JxVWV4QmZwdlZnN1JaZkI2ZUNpRVRldEZQZ1NwTmUzREhYUzZoNU8xOXJPWmlSV3M2X3BpV2NiZGZtTGJfNDJINGc?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQVk9NU0U3Vjk4Q0szdzBwelN2RFQ1SjUxX2xKT0pkYVhaekFuWWl1cGluaTVhbml5Yk9JeFA0LUpIV3JKMkxCS3c1dUN5dmcyeGxRTGdERzFSSWxMZFBWV1VfdTRRc0E0Q0FUaHlLQVB3Z1l5REl3bFJDWUJCR1ljbzlTMGlxankyRjE5RnVnV0tMYmtGbjAtNTVHODhNajlSVlgtbDUwOVdmQ3dncThPdzVSVVNpcHp3ZWliam9RZWtFdUxjSXfSAcsBQVVfeXFMTm1IYXozNThJWmdtOXlkUkY0MVJDalVZdGg3LUs5TmRfenpHZkRiS1BIdV9IVVJfQUY2WmJxY0RJeXNHMEF4cFlQNy1sb1lKa0tyeDc0dnh4aE9uM3IxMWgyNy1yazh1cVAxMXV4QmJRMC1NYW9wVjM2TjhISFdOU0hLc2ZOUWhmR2JxVWV4QmZwdlZnN1JaZkI2ZUNpRVRldEZQZ1NwTmUzREhYUzZoNU8xOXJPWmlSV3M2X3BpV2NiZGZtTGJfNDJINGc?oc=5",
       "published_or_found_date": "Mon, 10 Mar 2025 07:00:00 GMT",
       "text": "Penny: kiszámíthatóbb piaci környezet, alacsony infláció hozhatja vissza a vevőket - Portfolio.hu. Penny: kiszámíthatóbb piaci környezet, alacsony infláció hozhatja vissza a vevőket Portfolio.hu. Google Hírek"
     },
@@ -952,7 +1067,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNYXJKMDlIcGZ3bEVnTzRvSFRjQ0gtMzItOHNQamdsWWt2amJNeld4OUVXTXRHdm1ZOWVyTFBzWUFObzFWM0NaMndQVDlZeEFTZS0tUE51ckIxQm9iMnpyQldKSmpMc0xCMW9KU1FfdDBRSWlUM3FzZENNM1N3Y0F6SXlGbEJEVWxnNzlNci1fT2p4VkMzTzFjd3VkekwzaE5XVWRucG9R0gGrAUFVX3lxTE5NSUNQbzBZMTdSY1M5TDVRZi0wUXFpR3RFUzdHVnAyVnFXckIyb2djM095cGFOdlZoRlJUTHFXVHVmQWhzNUlPUDdxZ1Jna2JyRExtZ3U5SFJTTlM1em1sc2piQVFsQjRpVG04NlZkSTBNQUhkYTM0QUFQZThycEJFMk5HeFJ3cG9ONmhqVGFyYjBKOTE4dUVBU0YxX3Q1bE1pd1RzZ18zMzZBMA?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNYXJKMDlIcGZ3bEVnTzRvSFRjQ0gtMzItOHNQamdsWWt2amJNeld4OUVXTXRHdm1ZOWVyTFBzWUFObzFWM0NaMndQVDlZeEFTZS0tUE51ckIxQm9iMnpyQldKSmpMc0xCMW9KU1FfdDBRSWlUM3FzZENNM1N3Y0F6SXlGbEJEVWxnNzlNci1fT2p4VkMzTzFjd3VkekwzaE5XVWRucG9R0gGrAUFVX3lxTE5NSUNQbzBZMTdSY1M5TDVRZi0wUXFpR3RFUzdHVnAyVnFXckIyb2djM095cGFOdlZoRlJUTHFXVHVmQWhzNUlPUDdxZ1Jna2JyRExtZ3U5SFJTTlM1em1sc2piQVFsQjRpVG04NlZkSTBNQUhkYTM0QUFQZThycEJFMk5HeFJ3cG9ONmhqVGFyYjBKOTE4dUVBU0YxX3Q1bE1pd1RzZ18zMzZBMA?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNYXJKMDlIcGZ3bEVnTzRvSFRjQ0gtMzItOHNQamdsWWt2amJNeld4OUVXTXRHdm1ZOWVyTFBzWUFObzFWM0NaMndQVDlZeEFTZS0tUE51ckIxQm9iMnpyQldKSmpMc0xCMW9KU1FfdDBRSWlUM3FzZENNM1N3Y0F6SXlGbEJEVWxnNzlNci1fT2p4VkMzTzFjd3VkekwzaE5XVWRucG9R0gGrAUFVX3lxTE5NSUNQbzBZMTdSY1M5TDVRZi0wUXFpR3RFUzdHVnAyVnFXckIyb2djM095cGFOdlZoRlJUTHFXVHVmQWhzNUlPUDdxZ1Jna2JyRExtZ3U5SFJTTlM1em1sc2piQVFsQjRpVG04NlZkSTBNQUhkYTM0QUFQZThycEJFMk5HeFJ3cG9ONmhqVGFyYjBKOTE4dUVBU0YxX3Q1bE1pd1RzZ18zMzZBMA?oc=5",
       "published_or_found_date": "Fri, 31 May 2024 07:00:00 GMT",
       "text": "Rávert az inflációra a Penny – Össze is jött a nyereség - Portfolio.hu. Rávert az inflációra a Penny – Össze is jött a nyereség Portfolio.hu. Google Hírek"
     },
@@ -963,7 +1079,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9XdnZhcnpGem9vSnFDVVp2WlF3Ql9ieTR3M2toQzVLa192VkVaU01NMHFrTXJhOE02SGthdFJwNEtXVTJqNWNvSjcwOUx0Q1RrQ3JMMHZKS2NBZGxudThVN1N5bkh2ZmpBd3c?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9XdnZhcnpGem9vSnFDVVp2WlF3Ql9ieTR3M2toQzVLa192VkVaU01NMHFrTXJhOE02SGthdFJwNEtXVTJqNWNvSjcwOUx0Q1RrQ3JMMHZKS2NBZGxudThVN1N5bkh2ZmpBd3c?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9XdnZhcnpGem9vSnFDVVp2WlF3Ql9ieTR3M2toQzVLa192VkVaU01NMHFrTXJhOE02SGthdFJwNEtXVTJqNWNvSjcwOUx0Q1RrQ3JMMHZKS2NBZGxudThVN1N5bkh2ZmpBd3c?oc=5",
       "published_or_found_date": "Mon, 26 Jan 2026 08:00:00 GMT",
       "text": "Gazdaság: Emel a fizetéseken az Auchan, 440 ezret mindenki meg fog keresni - | hvg.hu. Gazdaság: Emel a fizetéseken az Auchan, 440 ezret mindenki meg fog keresni | hvg.hu. Google Hírek"
     },
@@ -974,7 +1091,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNMWIzSVM0aHBIdjFXWVhRNUkwandhdmxOQThPUVZGcWNTQV9BTENsbVh1QVRPY0V0Y29qOUVzbEhjaXRHU094OVpobTNjeUVaV0tLOXRZLUk2emdQcjZWeDNCQXh3V0M0LWxsNXRRdHlrb2IzSDd3MVB1UUpLUENaa1luaU0zRndxcVdydU9XWlhLSm1oLWlEcGJqcGFMWWZ6bGFIX2pvTXBRbVl3X0Nj?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNMWIzSVM0aHBIdjFXWVhRNUkwandhdmxOQThPUVZGcWNTQV9BTENsbVh1QVRPY0V0Y29qOUVzbEhjaXRHU094OVpobTNjeUVaV0tLOXRZLUk2emdQcjZWeDNCQXh3V0M0LWxsNXRRdHlrb2IzSDd3MVB1UUpLUENaa1luaU0zRndxcVdydU9XWlhLSm1oLWlEcGJqcGFMWWZ6bGFIX2pvTXBRbVl3X0Nj?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNMWIzSVM0aHBIdjFXWVhRNUkwandhdmxOQThPUVZGcWNTQV9BTENsbVh1QVRPY0V0Y29qOUVzbEhjaXRHU094OVpobTNjeUVaV0tLOXRZLUk2emdQcjZWeDNCQXh3V0M0LWxsNXRRdHlrb2IzSDd3MVB1UUpLUENaa1luaU0zRndxcVdydU9XWlhLSm1oLWlEcGJqcGFMWWZ6bGFIX2pvTXBRbVl3X0Nj?oc=5",
       "published_or_found_date": "Thu, 23 Jan 2025 08:00:00 GMT",
       "text": "Béremelés az Auchannál, ez messze van a tavalyihoz képest - 24.hu. Béremelés az Auchannál, ez messze van a tavalyihoz képest 24.hu. Google Hírek"
     },
@@ -985,7 +1103,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5PX1EwZDhZMi1PSUM4S0Q4b1RaSjRqWVpVR2Z6ZHd4U3I3Zjk2ZkJuXzk5bnp1dkpMT0dCbzg5MXJObkhwUHlLNm5Ed1ViTExPMURYYlFXN3l6ZHJKZFp6Rl85bWdhQWE1c2NpTzBWUnp2YWVRV3NZQlZSNTM?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5PX1EwZDhZMi1PSUM4S0Q4b1RaSjRqWVpVR2Z6ZHd4U3I3Zjk2ZkJuXzk5bnp1dkpMT0dCbzg5MXJObkhwUHlLNm5Ed1ViTExPMURYYlFXN3l6ZHJKZFp6Rl85bWdhQWE1c2NpTzBWUnp2YWVRV3NZQlZSNTM?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5PX1EwZDhZMi1PSUM4S0Q4b1RaSjRqWVpVR2Z6ZHd4U3I3Zjk2ZkJuXzk5bnp1dkpMT0dCbzg5MXJObkhwUHlLNm5Ed1ViTExPMURYYlFXN3l6ZHJKZFp6Rl85bWdhQWE1c2NpTzBWUnp2YWVRV3NZQlZSNTM?oc=5",
       "published_or_found_date": "Fri, 11 Apr 2025 07:00:00 GMT",
       "text": "Személyzet nélküli Auchan nyílt Budapesten - 24.hu. Személyzet nélküli Auchan nyílt Budapesten 24.hu. Google Hírek"
     },
@@ -996,7 +1115,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNaFFyMTR2LWxFWXNUTmpyanZFSm1yb1hGR0FjdG92YWhOV1daZWpuUHUxcEhwT3oxWjdhWGhrS3V1WDdfd01GOUlYTS16ck4zdmJNTHBuYVhxbk9SSmZkWi1qYlhLdmJoRURoSmdLeW1FNHFEZzRlZTNJZ1FnejVxblJFaw?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNaFFyMTR2LWxFWXNUTmpyanZFSm1yb1hGR0FjdG92YWhOV1daZWpuUHUxcEhwT3oxWjdhWGhrS3V1WDdfd01GOUlYTS16ck4zdmJNTHBuYVhxbk9SSmZkWi1qYlhLdmJoRURoSmdLeW1FNHFEZzRlZTNJZ1FnejVxblJFaw?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNaFFyMTR2LWxFWXNUTmpyanZFSm1yb1hGR0FjdG92YWhOV1daZWpuUHUxcEhwT3oxWjdhWGhrS3V1WDdfd01GOUlYTS16ck4zdmJNTHBuYVhxbk9SSmZkWi1qYlhLdmJoRURoSmdLeW1FNHFEZzRlZTNJZ1FnejVxblJFaw?oc=5",
       "published_or_found_date": "Thu, 02 May 2024 07:00:00 GMT",
       "text": "Szokatlan akcióval rukkol elő az Auchan - 24.hu. Szokatlan akcióval rukkol elő az Auchan 24.hu. Google Hírek"
     },
@@ -1009,7 +1129,8 @@
       ],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQX1VoRlhsV3B2SzRDdUVUUE5NYWt1UFNibjF3U3ZCQlRhSnU3RkRWbExMQXhVYnNXbWRuSUwwb3hJVkc0ekRPUWxOTlpNdFljTUZ4M0R6S3poUGdnS2JhRmdOYXZ3ZDYzcG9GbHZFaGw3dzA3WmtmeDZ6Um84VURlOWNtankxSFRhaGVj?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQX1VoRlhsV3B2SzRDdUVUUE5NYWt1UFNibjF3U3ZCQlRhSnU3RkRWbExMQXhVYnNXbWRuSUwwb3hJVkc0ekRPUWxOTlpNdFljTUZ4M0R6S3poUGdnS2JhRmdOYXZ3ZDYzcG9GbHZFaGw3dzA3WmtmeDZ6Um84VURlOWNtankxSFRhaGVj?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQX1VoRlhsV3B2SzRDdUVUUE5NYWt1UFNibjF3U3ZCQlRhSnU3RkRWbExMQXhVYnNXbWRuSUwwb3hJVkc0ekRPUWxOTlpNdFljTUZ4M0R6S3poUGdnS2JhRmdOYXZ3ZDYzcG9GbHZFaGw3dzA3WmtmeDZ6Um84VURlOWNtankxSFRhaGVj?oc=5",
       "published_or_found_date": "Thu, 23 Jan 2025 08:00:00 GMT",
       "text": "Vállalkozás: Auchan: Bruttó 402 ezer lesz januártól a fizikai munkát végzők alapbére - | hvg.hu. Vállalkozás: Auchan: Bruttó 402 ezer lesz januártól a fizikai munkát végzők alapbére | hvg.hu. Google Hírek"
     },
@@ -1022,7 +1143,8 @@
       ],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUmV5WjhzNU9mR1hKZFFKX09VUTl0bWxsVGx6VGRBYWNtdnJ3MDdZNEtVZGFlMEt1WEV2TG02YkctUkliV2VJQjltaDNqMUZUU0lwM2tMcDFmRUk2WnBNOVMtcE54REU5SVRfdVFlSFJ3elNDRjFSQkNEOW1YZmpfdFFmb010SG1oQ2g4NS1IdnhIYTRTZms2VHAwWjZiWERxb2pPcXVzWXHSAa4BQVVfeXFMTm9US21USUlnZEVrQWxkMXZweVo4LVd0TzNIQmF0X1d1Y1hPMm1XclRZdVBUZm16R1R5VnhOSEYzbjBRc0dBV1ZybjNwTmcybjR4Q2VsSDM0NGZWekxhcmc2Wk1kX1NpZDdkOTlQMTZaeXlrQnY2c2RDdTV4Tzc1UmlpeHdKSXFTQ3pRQU9NNGllbkxZcHh1RGxuZ0M4SHUyX0NqcS16ak9mVHp6X0dn?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUmV5WjhzNU9mR1hKZFFKX09VUTl0bWxsVGx6VGRBYWNtdnJ3MDdZNEtVZGFlMEt1WEV2TG02YkctUkliV2VJQjltaDNqMUZUU0lwM2tMcDFmRUk2WnBNOVMtcE54REU5SVRfdVFlSFJ3elNDRjFSQkNEOW1YZmpfdFFmb010SG1oQ2g4NS1IdnhIYTRTZms2VHAwWjZiWERxb2pPcXVzWXHSAa4BQVVfeXFMTm9US21USUlnZEVrQWxkMXZweVo4LVd0TzNIQmF0X1d1Y1hPMm1XclRZdVBUZm16R1R5VnhOSEYzbjBRc0dBV1ZybjNwTmcybjR4Q2VsSDM0NGZWekxhcmc2Wk1kX1NpZDdkOTlQMTZaeXlrQnY2c2RDdTV4Tzc1UmlpeHdKSXFTQ3pRQU9NNGllbkxZcHh1RGxuZ0M4SHUyX0NqcS16ak9mVHp6X0dn?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUmV5WjhzNU9mR1hKZFFKX09VUTl0bWxsVGx6VGRBYWNtdnJ3MDdZNEtVZGFlMEt1WEV2TG02YkctUkliV2VJQjltaDNqMUZUU0lwM2tMcDFmRUk2WnBNOVMtcE54REU5SVRfdVFlSFJ3elNDRjFSQkNEOW1YZmpfdFFmb010SG1oQ2g4NS1IdnhIYTRTZms2VHAwWjZiWERxb2pPcXVzWXHSAa4BQVVfeXFMTm9US21USUlnZEVrQWxkMXZweVo4LVd0TzNIQmF0X1d1Y1hPMm1XclRZdVBUZm16R1R5VnhOSEYzbjBRc0dBV1ZybjNwTmcybjR4Q2VsSDM0NGZWekxhcmc2Wk1kX1NpZDdkOTlQMTZaeXlrQnY2c2RDdTV4Tzc1UmlpeHdKSXFTQ3pRQU9NNGllbkxZcHh1RGxuZ0M4SHUyX0NqcS16ak9mVHp6X0dn?oc=5",
       "published_or_found_date": "Thu, 23 Jan 2025 08:00:00 GMT",
       "text": "Mutatjuk, kik kereshetnek 715 ezer forintot az Auchanban - Portfolio.hu. Mutatjuk, kik kereshetnek 715 ezer forintot az Auchanban Portfolio.hu. Google Hírek"
     },
@@ -1033,7 +1155,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE83bUxYVE9UNk5GZ2NkazZmTENHMGY2MkJuVDF4NG5yeFYwVTczOGVBLUlzME9OaHBja01tTEI2dGttbFQ1UkFfeUl1RzFPRjB1YmpPa2ltQVRVZmZMY3F6UFJKU1ZlZVM3UmJ2YWxseng?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE83bUxYVE9UNk5GZ2NkazZmTENHMGY2MkJuVDF4NG5yeFYwVTczOGVBLUlzME9OaHBja01tTEI2dGttbFQ1UkFfeUl1RzFPRjB1YmpPa2ltQVRVZmZMY3F6UFJKU1ZlZVM3UmJ2YWxseng?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE83bUxYVE9UNk5GZ2NkazZmTENHMGY2MkJuVDF4NG5yeFYwVTczOGVBLUlzME9OaHBja01tTEI2dGttbFQ1UkFfeUl1RzFPRjB1YmpPa2ltQVRVZmZMY3F6UFJKU1ZlZVM3UmJ2YWxseng?oc=5",
       "published_or_found_date": "Wed, 29 Jan 2025 08:00:00 GMT",
       "text": "Közelében sincs az Auchan béremelése a dolgozók elvárásának, a szakszervezet szerint sokan távozhatnak - | hvg.hu. Közelében sincs az Auchan béremelése a dolgozók elvárásának, a szakszervezet szerint sokan távozhatnak | hvg.hu. Google Hírek"
     },
@@ -1044,9 +1167,22 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOSnYxVEJYbmNIczFVejFJc25CaExuZllYUEJGTzlNa3pSUmFNZXRGSDNOd2pkN1A2UV9xMUZvT2docXloTVlobzdwQzA0ZUdPNEtMa1ZpOHNWbllXa2FFQmpVSTRTVGpjenc3TDN5SjRreDJNX3RiRVlvTm9manJzcFpzeXF4UQ?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOSnYxVEJYbmNIczFVejFJc25CaExuZllYUEJGTzlNa3pSUmFNZXRGSDNOd2pkN1A2UV9xMUZvT2docXloTVlobzdwQzA0ZUdPNEtMa1ZpOHNWbllXa2FFQmpVSTRTVGpjenc3TDN5SjRreDJNX3RiRVlvTm9manJzcFpzeXF4UQ?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOSnYxVEJYbmNIczFVejFJc25CaExuZllYUEJGTzlNa3pSUmFNZXRGSDNOd2pkN1A2UV9xMUZvT2docXloTVlobzdwQzA0ZUdPNEtMa1ZpOHNWbllXa2FFQmpVSTRTVGpjenc3TDN5SjRreDJNX3RiRVlvTm9manJzcFpzeXF4UQ?oc=5",
       "published_or_found_date": "Fri, 30 May 2025 07:00:00 GMT",
       "text": "Gazdaság: Hiába nőttek az árak, kevesebb pénzt hagytak a vásárlók az Auchan kasszáinál tavaly - | hvg.hu. Gazdaság: Hiába nőttek az árak, kevesebb pénzt hagytak a vásárlók az Auchan kasszáinál tavaly | hvg.hu. Google Hírek"
+    },
+    {
+      "query": "Auchan havi bruttó",
+      "company_id": "auchan",
+      "role_key": null,
+      "salary_values": [],
+      "salary_ranges": [],
+      "raise_values": [],
+      "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOaHV4UVBiQTVTWHdZMEZkYlF1YVBaTkZrYVN4S09lV1hPZXVORktkLWtCZ2lLLUlVR0V6cGo5R2Y1Yy1kUklPSkIxVUNPSjJOcFhPT2ppU3Z2UHE2VldkeEtSVm1IVWdmOGhCdW1wdFJSa05WMm9PU19HZVFoSG1OaU5lbVFZTzN4OHZWV2Z2eEhLUjl6ZDlmUUFpMWMwQdIBowFBVV95cUxOZzJOdGVPSDJ2SG9sUGRQeF81TmllaGhxV2JsMmdOQ0tHRFZWVHJFdC1uVFc0ZUFEakZtWGxyU3FSWHdQWmI2VzlpYmxnejA2b21ydjZfVXNqTU9iUXM2bFRRZlVLUFZIWmZzMlBBVW9tWWFJMWdqejBTMjI5UjBycGF6eV96MUZBVzlpbW5pSEFKb3NJMnVfeU0wM2k1UWFBeFFr?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOaHV4UVBiQTVTWHdZMEZkYlF1YVBaTkZrYVN4S09lV1hPZXVORktkLWtCZ2lLLUlVR0V6cGo5R2Y1Yy1kUklPSkIxVUNPSjJOcFhPT2ppU3Z2UHE2VldkeEtSVm1IVWdmOGhCdW1wdFJSa05WMm9PU19HZVFoSG1OaU5lbVFZTzN4OHZWV2Z2eEhLUjl6ZDlmUUFpMWMwQdIBowFBVV95cUxOZzJOdGVPSDJ2SG9sUGRQeF81TmllaGhxV2JsMmdOQ0tHRFZWVHJFdC1uVFc0ZUFEakZtWGxyU3FSWHdQWmI2VzlpYmxnejA2b21ydjZfVXNqTU9iUXM2bFRRZlVLUFZIWmZzMlBBVW9tWWFJMWdqejBTMjI5UjBycGF6eV96MUZBVzlpbW5pSEFKb3NJMnVfeU0wM2k1UWFBeFFr?oc=5",
+      "published_or_found_date": "Mon, 01 Jun 2026 07:00:00 GMT",
+      "text": "Nőtt az Auchan bevétele, de a nyeresége csökkent - Portfolio.hu. Nőtt az Auchan bevétele, de a nyeresége csökkent Portfolio.hu. Google Hírek"
     },
     {
       "query": "Auchan Portfolio béremelés",
@@ -1055,7 +1191,8 @@
       "salary_values": [],
       "salary_ranges": [],
       "raise_values": [],
-      "source_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPT0MzYm1pXzdCeWRKbmRNV3VPakVKM1c4ZjdoY1QxR1FHbWxJR0NwcFhvTGdKOTFsczNCYlhVSzVkQUI5bHVfcnd3Smlfb2RSdlRVSnVEdjN2M3ZXQ202YTlqSjlIeWlWaEd3b2R4QmFyMnFqZ1BGajNCUG9MOTFodm03NENDcjFLcVBmZkJLSHBES3pKOEJuWW51R2k0anBiSF9jRVZrdzBBclnSAbABQVVfeXFMTW53UWtURXR4SjdxaXRmYjVXZ1RoUUVlZXFQcDhTR1dVWXhzLWlfdUUyekxScXBLbVFHU3pTbXVVQWw4eUVtR1lpOEVaaGR1RXJjY0NQSFVWR1locTl4VkxlVUVMWGtlRE5MbWZsMVpMY3k0MF9LMHNKNDk5aXVITFhNRU1GYURNekNWNi0yNFA0YzN0REc4SmNFNXhFN2VZSUM2Z2VBWjF4MWZRdmhocFA?oc=5",
+      "source_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPT0MzYm1pXzdCeWRKbmRNV3VPakVKM1c4ZjdoY1QxR1FHbWxJR0NwcFhvTGdKOTFsczNCYlhVSzVkQUI5bHVfcnd3Smlfb2RSdlRVSnVEdjN2M3ZXQ202YTlqSjlIeWlWaEd3b2R4QmFyMnFqZ1BGajNCUG9MOTFodm03NENDcjFLcVBmZkJLSHBES3pKOEJuWW51R2k0anBiSF9jRVZrdzBBclnSAbABQVVfeXFMTW53UWtURXR4SjdxaXRmYjVXZ1RoUUVlZXFQcDhTR1dVWXhzLWlfdUUyekxScXBLbVFHU3pTbXVVQWw4eUVtR1lpOEVaaGR1RXJjY0NQSFVWR1locTl4VkxlVUVMWGtlRE5MbWZsMVpMY3k0MF9LMHNKNDk5aXVITFhNRU1GYURNekNWNi0yNFA0YzN0REc4SmNFNXhFN2VZSUM2Z2VBWjF4MWZRdmhocFA?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "google_news_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPT0MzYm1pXzdCeWRKbmRNV3VPakVKM1c4ZjdoY1QxR1FHbWxJR0NwcFhvTGdKOTFsczNCYlhVSzVkQUI5bHVfcnd3Smlfb2RSdlRVSnVEdjN2M3ZXQ202YTlqSjlIeWlWaEd3b2R4QmFyMnFqZ1BGajNCUG9MOTFodm03NENDcjFLcVBmZkJLSHBES3pKOEJuWW51R2k0anBiSF9jRVZrdzBBclnSAbABQVVfeXFMTW53UWtURXR4SjdxaXRmYjVXZ1RoUUVlZXFQcDhTR1dVWXhzLWlfdUUyekxScXBLbVFHU3pTbXVVQWw4eUVtR1lpOEVaaGR1RXJjY0NQSFVWR1locTl4VkxlVUVMWGtlRE5MbWZsMVpMY3k0MF9LMHNKNDk5aXVITFhNRU1GYURNekNWNi0yNFA0YzN0REc4SmNFNXhFN2VZSUM2Z2VBWjF4MWZRdmhocFA?oc=5",
       "published_or_found_date": "Thu, 11 Sep 2025 07:00:00 GMT",
       "text": "Az Auchan is bejelentette a nyugdíjas-utalványos akcióját - Portfolio.hu. Az Auchan is bejelentette a nyugdíjas-utalványos akcióját Portfolio.hu. Google Hírek"
     }
