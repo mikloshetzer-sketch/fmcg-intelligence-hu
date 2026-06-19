@@ -2,18 +2,16 @@
 # -*- coding: utf-8 -*-
 
 """
-FMCG Salary Intelligence v1
+FMCG Salary Raw Data Collector v1
 
 Cél:
-- FMCG szereplők fizetési információinak kiegészítő ellenőrzése.
-- Nem váltja ki a salaries.json fájlt, hanem mellé készít kontroll-adatbázist.
-- Forráslogika:
-  1. meglévő salaries.json
-  2. meglévő job-postings-current.json
-  3. szakmai/üzleti média RSS és publikus oldalak:
-     Trade Magazin, Portfolio, Pénzcentrum, HR Portal, 24.hu, HVG
-- Kimenet:
-  docs/data/salary-intelligence.json
+- 6 FMCG szereplő bérinformációinak begyűjtése.
+- Csak nyers adatgyűjtés.
+- Nem számol indexet.
+- Nem módosítja a salaries.json fájlt.
+
+Kimenet:
+docs/data/salary-raw-data.json
 """
 
 import json
@@ -30,10 +28,7 @@ from html import unescape
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "docs" / "data"
-
-SALARIES_FILE = DATA_DIR / "salaries.json"
-POSTINGS_FILE = DATA_DIR / "job-postings-current.json"
-OUTPUT_FILE = DATA_DIR / "salary-intelligence.json"
+OUTPUT_FILE = DATA_DIR / "salary-raw-data.json"
 
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -43,66 +38,51 @@ USER_AGENT = (
 REQUEST_TIMEOUT = 25
 REQUEST_DELAY_SECONDS = 2
 
+
 COMPANIES = {
-    "lidl": "Lidl",
-    "aldi": "ALDI",
-    "spar": "SPAR",
-    "tesco": "Tesco",
-    "penny": "PENNY",
-    "auchan": "Auchan",
+    "lidl": ["Lidl", "Lidl Magyarország"],
+    "aldi": ["ALDI", "Aldi", "ALDI Magyarország"],
+    "spar": ["SPAR", "Spar", "SPAR Magyarország"],
+    "tesco": ["Tesco", "Tesco Magyarország"],
+    "penny": ["PENNY", "Penny", "Penny Market"],
+    "auchan": ["Auchan", "Auchan Magyarország"],
 }
 
-ROLE_MAP = {
-    "cashier_huf_month": {
-        "label": "Pénztáros",
-        "keywords": ["pénztáros", "kasszás", "eladó-pénztáros", "eladó pénztáros"],
-    },
-    "stocker_huf_month": {
-        "label": "Árufeltöltő",
-        "keywords": ["árufeltöltő", "bolti dolgozó", "bolti munkatárs", "eladó"],
-    },
-    "bakery_worker_huf_month": {
-        "label": "Pék / pékáru dolgozó",
-        "keywords": ["pék", "pékáru", "pékség", "bakery"],
-    },
-    "shift_leader_huf_month": {
-        "label": "Műszakvezető",
-        "keywords": ["műszakvezető", "műszak vezető", "shift leader"],
-    },
-    "department_manager_huf_month": {
-        "label": "Osztályvezető / részlegvezető",
-        "keywords": ["osztályvezető", "részlegvezető", "csoportvezető"],
-    },
-    "store_manager_huf_month": {
-        "label": "Áruházvezető / üzletvezető",
-        "keywords": ["áruházvezető", "üzletvezető", "boltvezető", "store manager"],
-    },
-    "warehouse_worker_huf_month": {
-        "label": "Raktári dolgozó",
-        "keywords": ["raktári dolgozó", "raktáros", "targoncavezető", "komissiózó"],
-    },
-    "office_specialist_huf_month": {
-        "label": "Központi specialista",
-        "keywords": ["specialista", "asszisztens", "elemző", "irodai", "központi"],
-    },
+
+ROLE_KEYWORDS = {
+    "cashier": ["pénztáros", "kasszás", "eladó-pénztáros", "eladó pénztáros"],
+    "stocker": ["árufeltöltő", "bolti dolgozó", "bolti munkatárs", "eladó"],
+    "bakery_worker": ["pék", "pékáru", "pékség"],
+    "shift_leader": ["műszakvezető", "műszak vezető", "shift leader"],
+    "department_manager": ["osztályvezető", "részlegvezető", "csoportvezető"],
+    "store_manager": ["üzletvezető", "áruházvezető", "boltvezető", "store manager"],
+    "warehouse_worker": ["raktári dolgozó", "raktáros", "targoncavezető", "komissiózó"],
+    "office_specialist": ["specialista", "asszisztens", "elemző", "irodai", "központi"],
 }
 
-MEDIA_QUERIES = [
-    "Lidl béremelés fizetés kiskereskedelem",
-    "ALDI béremelés fizetés kiskereskedelem",
-    "SPAR béremelés fizetés kiskereskedelem",
-    "Tesco béremelés fizetés kiskereskedelem",
-    "PENNY béremelés fizetés kiskereskedelem",
-    "Auchan béremelés fizetés kiskereskedelem",
-    "Trade Magazin Lidl béremelés",
-    "Trade Magazin Aldi béremelés",
-    "Trade Magazin Tesco béremelés",
-    "Trade Magazin Penny béremelés",
-    "Trade Magazin Auchan béremelés",
-    "Trade Magazin SPAR béremelés",
-]
 
-ALLOWED_MEDIA_DOMAINS = [
+SEARCH_QUERIES = []
+
+for company_id, aliases in COMPANIES.items():
+    main_name = aliases[0]
+
+    SEARCH_QUERIES.extend([
+        f'{main_name} fizetés',
+        f'{main_name} bér',
+        f'{main_name} béremelés',
+        f'{main_name} bruttó fizetés',
+        f'{main_name} pénztáros fizetés',
+        f'{main_name} árufeltöltő fizetés',
+        f'{main_name} raktári dolgozó fizetés',
+        f'{main_name} üzletvezető fizetés',
+        f'{main_name} Trade Magazin béremelés',
+        f'{main_name} Portfolio béremelés',
+        f'{main_name} Pénzcentrum fizetés',
+        f'{main_name} HR Portal béremelés',
+    ])
+
+
+ALLOWED_DOMAINS = [
     "trademagazin.hu",
     "portfolio.hu",
     "penzcentrum.hu",
@@ -110,43 +90,39 @@ ALLOWED_MEDIA_DOMAINS = [
     "24.hu",
     "hvg.hu",
     "vg.hu",
+    "profession.hu",
+    "jobinfo.hu",
+    "indeed.com",
+    "hu.indeed.com",
 ]
 
+
 SALARY_PATTERNS = [
-    r"bruttó\s+(\d{3,})\s*(?:ezer|000)?\s*(?:forint|ft)",
-    r"(\d{3,})\s*ezer\s*(?:forint|ft)",
-    r"(\d{3,})\s*000\s*(?:forint|ft)",
+    r"bruttó\s+(\d{1,3}(?:[\s\.]\d{3})+|\d{3,4})\s*(?:forint|ft)",
+    r"bruttó\s+havi\s+(\d{1,3}(?:[\s\.]\d{3})+|\d{3,4})\s*(?:forint|ft)",
+    r"(\d{3,4})\s*ezer\s*(?:forint|ft)",
     r"(\d{1,3}(?:[\s\.]\d{3})+)\s*(?:forint|ft)",
+    r"(\d{3,4})\s*000\s*(?:forint|ft)",
 ]
+
+
+SALARY_RANGE_PATTERNS = [
+    r"(\d{3,4})\s*[-–]\s*(\d{3,4})\s*ezer\s*(?:forint|ft)",
+    r"(\d{1,3}(?:[\s\.]\d{3})+)\s*[-–]\s*(\d{1,3}(?:[\s\.]\d{3})+)\s*(?:forint|ft)",
+    r"bruttó\s+(\d{1,3}(?:[\s\.]\d{3})+|\d{3,4})\s*[-–]\s*(\d{1,3}(?:[\s\.]\d{3})+|\d{3,4})\s*(?:forint|ft)",
+]
+
 
 RAISE_PATTERNS = [
     r"(\d{1,2}(?:[,.]\d{1,2})?)\s*százalékos\s+béremelés",
-    r"béremelés[^\.]{0,80}?(\d{1,2}(?:[,.]\d{1,2})?)\s*százalék",
     r"(\d{1,2}(?:[,.]\d{1,2})?)\s*%-os\s+béremelés",
     r"(\d{1,2}(?:[,.]\d{1,2})?)\s*%\s*béremelés",
+    r"béremelés[^\.]{0,90}?(\d{1,2}(?:[,.]\d{1,2})?)\s*százalék",
 ]
 
 
 def now_iso():
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
-
-
-def load_json(path, default):
-    if not path.exists():
-        return default
-
-    try:
-        with open(path, "r", encoding="utf-8") as file:
-            return json.load(file)
-    except Exception:
-        return default
-
-
-def save_json(path, data):
-    path.parent.mkdir(parents=True, exist_ok=True)
-
-    with open(path, "w", encoding="utf-8") as file:
-        json.dump(data, file, ensure_ascii=False, indent=2)
 
 
 def clean_text(text):
@@ -206,12 +182,12 @@ def google_news_rss(query):
             description = clean_text(item.findtext("description", default=""))
             pub_date = clean_text(item.findtext("pubDate", default=""))
 
-            if not title and not description:
-                continue
-
             combined = clean_text(f"{title}. {description}")
 
-            if not is_allowed_media_text(combined, link):
+            if not combined:
+                continue
+
+            if not allowed_source(combined, link):
                 continue
 
             results.append({
@@ -228,18 +204,18 @@ def google_news_rss(query):
     return results
 
 
-def is_allowed_media_text(text, link):
+def allowed_source(text, link):
     lower = (text + " " + link).lower()
-
-    return any(domain in lower for domain in ALLOWED_MEDIA_DOMAINS)
+    return any(domain in lower for domain in ALLOWED_DOMAINS)
 
 
 def detect_company(text):
     lower = text.lower()
 
-    for company_id, company_name in COMPANIES.items():
-        if company_id in lower or company_name.lower() in lower:
-            return company_id
+    for company_id, aliases in COMPANIES.items():
+        for alias in aliases:
+            if alias.lower() in lower:
+                return company_id
 
     return None
 
@@ -247,22 +223,23 @@ def detect_company(text):
 def detect_role(text):
     lower = text.lower()
 
-    for role_key, config in ROLE_MAP.items():
-        if any(keyword in lower for keyword in config["keywords"]):
-            return role_key
+    for role_key, keywords in ROLE_KEYWORDS.items():
+        for keyword in keywords:
+            if keyword in lower:
+                return role_key
 
     return None
 
 
-def normalize_salary_value(raw):
-    value = str(raw).replace(" ", "").replace(".", "").replace(",", ".")
+def normalize_money(value):
+    value = str(value).replace(" ", "").replace(".", "").replace(",", ".")
 
     try:
         number = float(value)
     except ValueError:
         return None
 
-    if number < 1000:
+    if number < 10000:
         number = number * 1000
 
     if number < 200000 or number > 2500000:
@@ -276,12 +253,36 @@ def extract_salary_values(text):
 
     for pattern in SALARY_PATTERNS:
         for match in re.findall(pattern, text.lower(), flags=re.I):
-            value = normalize_salary_value(match)
+            value = normalize_money(match)
 
             if value:
                 values.append(value)
 
     return sorted(set(values))
+
+
+def extract_salary_ranges(text):
+    ranges = []
+
+    for pattern in SALARY_RANGE_PATTERNS:
+        for match in re.findall(pattern, text.lower(), flags=re.I):
+            if not isinstance(match, tuple) or len(match) != 2:
+                continue
+
+            low = normalize_money(match[0])
+            high = normalize_money(match[1])
+
+            if low and high:
+                if low > high:
+                    low, high = high, low
+
+                ranges.append({
+                    "salary_min_huf_month": low,
+                    "salary_max_huf_month": high,
+                    "salary_median_huf_month": round((low + high) / 2),
+                })
+
+    return ranges
 
 
 def extract_raise_values(text):
@@ -291,374 +292,280 @@ def extract_raise_values(text):
         for match in re.findall(pattern, text.lower(), flags=re.I):
             try:
                 value = float(str(match).replace(",", "."))
-                if 1 <= value <= 40:
+
+                if 1 <= value <= 50:
                     values.append(value)
+
             except ValueError:
                 pass
 
     return sorted(set(values))
 
 
-def extract_salary_from_posting(posting):
-    text = clean_text(" ".join([
-        str(posting.get("title", "")),
-        str(posting.get("company", "")),
-        str(posting.get("location", "")),
-        str(posting.get("url", "")),
-    ]))
+def detect_source_name(text, link):
+    lower = (text + " " + link).lower()
 
-    salary_min = posting.get("salary_min_huf")
-    salary_max = posting.get("salary_max_huf")
+    for domain in ALLOWED_DOMAINS:
+        if domain in lower:
+            return domain
 
-    values = []
-
-    if isinstance(salary_min, int):
-        values.append(salary_min)
-
-    if isinstance(salary_max, int):
-        values.append(salary_max)
-
-    values.extend(extract_salary_values(text))
-
-    return sorted(set(values))
+    return "unknown"
 
 
-def source_confidence(source_type, sample_count, has_media_confirmation):
-    base = 35
+def build_salary_record(company_id, role_key, value, result):
+    company_name = COMPANIES[company_id][0]
+    text = clean_text(result.get("combined", ""))
 
-    if source_type == "static_salary_json":
-        base = 45
+    return {
+        "id": make_hash(f"{company_id}|{role_key}|salary|{value}|{result.get('link')}"),
+        "company_id": company_id,
+        "company": company_name,
+        "role_key": role_key,
+        "value_type": "salary_huf_month",
+        "salary_min_huf_month": value,
+        "salary_median_huf_month": value,
+        "salary_max_huf_month": value,
+        "raise_pct": None,
+        "source_name": detect_source_name(text, result.get("link", "")),
+        "source_url": result.get("link", ""),
+        "published_or_found_date": result.get("pub_date", ""),
+        "evidence_text": text[:600],
+        "confidence": confidence_for_record("salary", role_key, text),
+        "collected_at": now_iso(),
+    }
 
-    if source_type == "job_posting":
-        base = 70
 
-    if source_type == "business_media":
-        base = 60
+def build_salary_range_record(company_id, role_key, salary_range, result):
+    company_name = COMPANIES[company_id][0]
+    text = clean_text(result.get("combined", ""))
 
-    base += min(sample_count, 10) * 3
+    return {
+        "id": make_hash(f"{company_id}|{role_key}|range|{salary_range}|{result.get('link')}"),
+        "company_id": company_id,
+        "company": company_name,
+        "role_key": role_key,
+        "value_type": "salary_range_huf_month",
+        "salary_min_huf_month": salary_range["salary_min_huf_month"],
+        "salary_median_huf_month": salary_range["salary_median_huf_month"],
+        "salary_max_huf_month": salary_range["salary_max_huf_month"],
+        "raise_pct": None,
+        "source_name": detect_source_name(text, result.get("link", "")),
+        "source_url": result.get("link", ""),
+        "published_or_found_date": result.get("pub_date", ""),
+        "evidence_text": text[:600],
+        "confidence": confidence_for_record("salary_range", role_key, text),
+        "collected_at": now_iso(),
+    }
 
-    if has_media_confirmation:
-        base += 10
 
-    return max(0, min(95, base))
+def build_raise_record(company_id, value, result):
+    company_name = COMPANIES[company_id][0]
+    text = clean_text(result.get("combined", ""))
+
+    return {
+        "id": make_hash(f"{company_id}|raise|{value}|{result.get('link')}"),
+        "company_id": company_id,
+        "company": company_name,
+        "role_key": None,
+        "value_type": "salary_raise_pct",
+        "salary_min_huf_month": None,
+        "salary_median_huf_month": None,
+        "salary_max_huf_month": None,
+        "raise_pct": value,
+        "source_name": detect_source_name(text, result.get("link", "")),
+        "source_url": result.get("link", ""),
+        "published_or_found_date": result.get("pub_date", ""),
+        "evidence_text": text[:600],
+        "confidence": confidence_for_record("raise", None, text),
+        "collected_at": now_iso(),
+    }
 
 
-def build_baseline_records(salaries):
-    records = []
+def confidence_for_record(record_type, role_key, text):
+    confidence = 50
 
-    for row in salaries:
-        company_id = row.get("id")
-        company = row.get("company")
+    if record_type == "salary_range":
+        confidence += 20
 
-        if not company_id or not company:
+    if record_type == "salary":
+        confidence += 15
+
+    if record_type == "raise":
+        confidence += 10
+
+    if role_key:
+        confidence += 10
+
+    lower = text.lower()
+
+    if "bruttó" in lower:
+        confidence += 10
+
+    if "havi" in lower or "hó" in lower:
+        confidence += 5
+
+    if "béremelés" in lower:
+        confidence += 5
+
+    return min(confidence, 95)
+
+
+def deduplicate(records):
+    seen = set()
+    result = []
+
+    for record in records:
+        key = record.get("id")
+
+        if key in seen:
             continue
 
-        for role_key, config in ROLE_MAP.items():
-            value = row.get(role_key)
+        seen.add(key)
+        result.append(record)
 
-            if not isinstance(value, int):
-                continue
-
-            records.append({
-                "id": make_hash(f"{company_id}|{role_key}|baseline|{value}"),
-                "company_id": company_id,
-                "company": company,
-                "role_key": role_key,
-                "role_label": config["label"],
-                "salary_min_huf_month": value,
-                "salary_median_huf_month": value,
-                "salary_max_huf_month": value,
-                "salary_type": "gross_estimated",
-                "source_type": "static_salary_json",
-                "source_name": "salaries.json",
-                "source_url": None,
-                "confidence": 45,
-                "evidence_text": row.get("notes", ""),
-                "last_checked": now_iso(),
-            })
-
-    return records
+    return result
 
 
-def build_posting_records(postings):
-    records = []
+def summarize(records):
+    companies = []
 
-    for posting in postings:
-        company_id = posting.get("company_id")
-        company = posting.get("company")
+    for company_id, aliases in COMPANIES.items():
+        company_records = [
+            item for item in records
+            if item.get("company_id") == company_id
+        ]
 
-        if company_id not in COMPANIES:
-            continue
+        salary_records = [
+            item for item in company_records
+            if item.get("value_type") in ["salary_huf_month", "salary_range_huf_month"]
+        ]
 
-        role_key = detect_role(posting.get("title", ""))
+        raise_records = [
+            item for item in company_records
+            if item.get("value_type") == "salary_raise_pct"
+        ]
 
-        if not role_key:
-            continue
+        roles_found = sorted(set(
+            item.get("role_key") for item in salary_records
+            if item.get("role_key")
+        ))
 
-        values = extract_salary_from_posting(posting)
-
-        if not values:
-            continue
-
-        min_value = min(values)
-        max_value = max(values)
-        median_value = round((min_value + max_value) / 2)
-
-        records.append({
-            "id": make_hash(f"{company_id}|{role_key}|posting|{posting.get('posting_id')}"),
+        companies.append({
             "company_id": company_id,
-            "company": company,
-            "role_key": role_key,
-            "role_label": ROLE_MAP[role_key]["label"],
-            "salary_min_huf_month": min_value,
-            "salary_median_huf_month": median_value,
-            "salary_max_huf_month": max_value,
-            "salary_type": "gross_visible_or_parsed",
-            "source_type": "job_posting",
-            "source_name": posting.get("source", "job_posting"),
-            "source_url": posting.get("url"),
-            "confidence": 75,
-            "evidence_text": posting.get("title", ""),
-            "last_checked": now_iso(),
+            "company": aliases[0],
+            "records_count": len(company_records),
+            "salary_records_count": len(salary_records),
+            "raise_records_count": len(raise_records),
+            "roles_found": roles_found,
+            "average_confidence": round(
+                sum(item.get("confidence", 0) for item in company_records) / len(company_records)
+            ) if company_records else 0,
+            "sample_records": company_records[:5],
         })
 
-    return records
+    return companies
 
 
-def build_media_records():
+def collect_records():
     records = []
+    raw_results = []
 
-    seen = set()
+    for query in SEARCH_QUERIES:
+        print(f"Query: {query}")
 
-    for query in MEDIA_QUERIES:
-        print(f"Media query: {query}")
+        results = google_news_rss(query)
 
-        for result in google_news_rss(query):
-            text = clean_text(result.get("combined", ""))
-            link = result.get("link", "")
-
-            key = make_hash(text + link)
-
-            if key in seen:
-                continue
-
-            seen.add(key)
-
+        for result in results:
+            text = result.get("combined", "")
             company_id = detect_company(text)
 
             if not company_id:
                 continue
 
+            role_key = detect_role(text)
             salary_values = extract_salary_values(text)
+            salary_ranges = extract_salary_ranges(text)
             raise_values = extract_raise_values(text)
 
-            if not salary_values and not raise_values:
-                continue
+            for salary_range in salary_ranges:
+                records.append(
+                    build_salary_range_record(
+                        company_id=company_id,
+                        role_key=role_key,
+                        salary_range=salary_range,
+                        result=result,
+                    )
+                )
 
-            role_key = detect_role(text)
+            for value in salary_values:
+                records.append(
+                    build_salary_record(
+                        company_id=company_id,
+                        role_key=role_key,
+                        value=value,
+                        result=result,
+                    )
+                )
 
-            record_type = "salary_level" if salary_values else "salary_raise_signal"
+            for value in raise_values:
+                records.append(
+                    build_raise_record(
+                        company_id=company_id,
+                        value=value,
+                        result=result,
+                    )
+                )
 
-            records.append({
-                "id": make_hash(f"{company_id}|media|{link}|{text}"),
+            raw_results.append({
+                "query": query,
                 "company_id": company_id,
-                "company": COMPANIES[company_id],
                 "role_key": role_key,
-                "role_label": ROLE_MAP[role_key]["label"] if role_key else "Általános vállalati bérinformáció",
-                "record_type": record_type,
-                "salary_min_huf_month": min(salary_values) if salary_values else None,
-                "salary_median_huf_month": round(sum(salary_values) / len(salary_values)) if salary_values else None,
-                "salary_max_huf_month": max(salary_values) if salary_values else None,
-                "raise_pct": max(raise_values) if raise_values else None,
-                "salary_type": "gross_or_unspecified_media_report",
-                "source_type": "business_media",
-                "source_name": detect_media_source(text, link),
-                "source_url": link,
-                "confidence": 60 if salary_values else 55,
-                "evidence_text": text[:500],
-                "last_checked": now_iso(),
+                "salary_values": salary_values,
+                "salary_ranges": salary_ranges,
+                "raise_values": raise_values,
+                "source_url": result.get("link", ""),
+                "text": text[:600],
             })
 
-    return records
+    records = deduplicate(records)
 
-
-def detect_media_source(text, link):
-    lower = (text + " " + link).lower()
-
-    for domain in ALLOWED_MEDIA_DOMAINS:
-        if domain in lower:
-            return domain
-
-    return "business_media"
-
-
-def median(values):
-    values = sorted(values)
-
-    if not values:
-        return None
-
-    mid = len(values) // 2
-
-    if len(values) % 2 == 1:
-        return values[mid]
-
-    return round((values[mid - 1] + values[mid]) / 2)
-
-
-def aggregate_role(company_id, company, role_key, records):
-    relevant = [
-        r for r in records
-        if r.get("company_id") == company_id
-        and r.get("role_key") == role_key
-        and isinstance(r.get("salary_median_huf_month"), int)
-    ]
-
-    baseline = [
-        r for r in relevant
-        if r.get("source_type") == "static_salary_json"
-    ]
-
-    non_baseline = [
-        r for r in relevant
-        if r.get("source_type") != "static_salary_json"
-    ]
-
-    preferred = non_baseline if non_baseline else baseline
-
-    values = [
-        r["salary_median_huf_month"]
-        for r in preferred
-    ]
-
-    if not values:
-        return None
-
-    samples = len(preferred)
-    media_confirmation = any(r.get("source_type") == "business_media" for r in relevant)
-
-    confidence = source_confidence(
-        "job_posting" if non_baseline else "static_salary_json",
-        samples,
-        media_confirmation,
-    )
-
-    return {
-        "role_key": role_key,
-        "role_label": ROLE_MAP[role_key]["label"],
-        "salary_min_huf_month": min(values),
-        "salary_median_huf_month": median(values),
-        "salary_max_huf_month": max(values),
-        "sample_count": samples,
-        "confidence": confidence,
-        "source_mix": summarize_source_mix(preferred),
-    }
-
-
-def summarize_source_mix(records):
-    counts = {}
-
-    for record in records:
-        source = record.get("source_type", "unknown")
-        counts[source] = counts.get(source, 0) + 1
-
-    return [
-        {
-            "source_type": source,
-            "count": count,
-        }
-        for source, count in sorted(counts.items(), key=lambda item: item[1], reverse=True)
-    ]
-
-
-def aggregate_company(company_id, records):
-    company = COMPANIES[company_id]
-    roles = []
-
-    for role_key in ROLE_MAP.keys():
-        item = aggregate_role(company_id, company, role_key, records)
-        if item:
-            roles.append(item)
-
-    company_records = [
-        r for r in records
-        if r.get("company_id") == company_id
-    ]
-
-    raise_signals = [
-        r for r in company_records
-        if r.get("record_type") == "salary_raise_signal"
-    ]
-
-    visible_salary_records = [
-        r for r in company_records
-        if r.get("source_type") in ["job_posting", "business_media"]
-        and isinstance(r.get("salary_median_huf_month"), int)
-    ]
-
-    avg_confidence = (
-        round(sum(role["confidence"] for role in roles) / len(roles))
-        if roles else 0
-    )
-
-    return {
-        "company_id": company_id,
-        "company": company,
-        "roles": roles,
-        "salary_raise_signals": raise_signals[:5],
-        "visible_salary_records_count": len(visible_salary_records),
-        "total_salary_records_count": len(company_records),
-        "average_confidence": avg_confidence,
-        "salary_data_status": (
-            "partly_validated"
-            if visible_salary_records
-            else "baseline_estimate_only"
-        ),
-    }
+    return records, raw_results
 
 
 def build_output():
-    salaries = load_json(SALARIES_FILE, [])
-    postings = load_json(POSTINGS_FILE, [])
-
-    baseline_records = build_baseline_records(salaries)
-    posting_records = build_posting_records(postings)
-    media_records = build_media_records()
-
-    all_records = baseline_records + posting_records + media_records
-
-    companies = [
-        aggregate_company(company_id, all_records)
-        for company_id in COMPANIES.keys()
-    ]
+    records, raw_results = collect_records()
 
     return {
         "updated_at": now_iso(),
-        "status": "ok",
-        "source_files": [
-            "docs/data/salaries.json",
-            "docs/data/job-postings-current.json",
-        ],
-        "method": "salary_intelligence_v1_static_baseline_posting_media_control",
+        "status": "ok" if records else "no_salary_records_found",
+        "method": "salary_raw_data_v1_google_news_rss_targeted_queries",
         "important_note": (
-            "Ez a fájl nem hivatalos bérstatisztika. "
-            "A salaries.json becsléseit, az álláshirdetésekből kinyerhető béradatokat "
-            "és a szakmai/üzleti médiában megjelenő bérinformációkat kapcsolja össze. "
-            "Ahol nincs álláshirdetésből vagy médiából megerősített bérszám, ott az érték baseline becslés."
+            "Ez nyers OSINT béradat-gyűjtés. Csak konkrét bérszámokat, bérsávokat "
+            "és béremelési százalékokat ment. Nem hivatalos bérstatisztika, "
+            "nem módosítja a salaries.json fájlt."
         ),
-        "companies": companies,
-        "records": all_records,
+        "companies": summarize(records),
+        "records": records,
+        "raw_results": raw_results[:100],
     }
 
 
+def save_json(path, data):
+    path.parent.mkdir(parents=True, exist_ok=True)
+
+    with open(path, "w", encoding="utf-8") as file:
+        json.dump(data, file, ensure_ascii=False, indent=2)
+
+
 def main():
-    print("Salary Intelligence updater started.")
+    print("Salary Raw Data Collector started.")
 
     output = build_output()
 
     save_json(OUTPUT_FILE, output)
 
     print(f"Saved: {OUTPUT_FILE}")
+    print(f"Status: {output['status']}")
     print(f"Records: {len(output.get('records', []))}")
 
 
