@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-06-19T11:04:07.904211+00:00",
+  "updated_at": "2026-06-19T15:48:04.367549+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-06-19T11:04:07.904211+00:00",
+    "updated_at": "2026-06-19T15:48:04.367549+00:00",
     "leader_social": "Penny",
     "leader_social_index": 29,
     "dominant_social_topic": "árak és akciók",
@@ -14,10 +14,10 @@
     {
       "company": "Lidl",
       "social_mentions": 1,
-      "raw_social_mentions": 2,
+      "raw_social_mentions": 1,
       "dashboard_mentions": 1,
       "background_mentions": 0,
-      "discarded_mentions": 1,
+      "discarded_mentions": 0,
       "weighted_social_mentions": 1.0,
       "hu_relevant_mentions": 1,
       "social_index": 16,
@@ -29,7 +29,7 @@
       "raw_social_sources": {
         "reddit": 0,
         "youtube": 1,
-        "mastodon": 1
+        "mastodon": 0
       },
       "dominant_social_topic": "bolti élmény",
       "top_social_topics": [
@@ -78,7 +78,7 @@
       "quality_summary": {
         "dashboard_items": 1,
         "background_items": 0,
-        "discarded_items": 1,
+        "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
       },
