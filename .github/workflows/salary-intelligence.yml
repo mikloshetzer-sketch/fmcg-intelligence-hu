@@ -24,7 +24,7 @@ jobs:
 
       - name: Run salary raw data collector
         run: |
-          python scripts/update_salary_raw_data.py
+          python scripts/update_salary_intelligence.py
 
       - name: Commit salary raw data
         run: |
