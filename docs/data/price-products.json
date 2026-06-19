@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-18T08:28:41Z",
+  "updated_at": "2026-06-19T08:56:36Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -88,8 +88,8 @@
       "expected_unit": "l",
       "prices": {
         "SPAR": 269.0,
+        "Auchan": 279.0,
         "Tesco": 296.0,
-        "Auchan": 295.0,
         "ALDI": 295.0,
         "Lidl": 295.0,
         "Penny": 295.0
@@ -105,21 +105,21 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Tesco": {
-          "source_product_id": "5999561314051",
-          "source_product_name": "Kunsági ESL tej 2.8% 1 L QQ",
-          "amount": 296.0,
-          "unit_amount": 296.0,
+        "Auchan": {
+          "source_product_id": "5997534107570",
+          "source_product_name": "Abaúj dobozos tej 2,8% 1 l",
+          "amount": 279.0,
+          "unit_amount": 279.0,
           "unit": "l",
           "unit_title": "db",
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Auchan": {
-          "source_product_id": "5999086458261",
-          "source_product_name": "Auchan Kedvenc pasztőrözött tej 2,8% 1 l",
-          "amount": 295.0,
-          "unit_amount": 295.0,
+        "Tesco": {
+          "source_product_id": "5999561314051",
+          "source_product_name": "Kunsági ESL tej 2.8% 1 L QQ",
+          "amount": 296.0,
+          "unit_amount": 296.0,
           "unit": "l",
           "unit_title": "db",
           "packaging": "1",
@@ -782,7 +782,7 @@
       "prices": {
         "ALDI": 329.0,
         "Lidl": 329.0,
-        "Auchan": 398.0,
+        "Auchan": 385.0,
         "SPAR": 431.5,
         "Tesco": 441.0,
         "Penny": 599.0
@@ -811,8 +811,8 @@
         "Auchan": {
           "source_product_id": "2158990000000",
           "source_product_name": "Kalodás piros alma Ft/kg",
-          "amount": 398.0,
-          "unit_amount": 398.0,
+          "amount": 385.0,
+          "unit_amount": 385.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -934,7 +934,7 @@
       "category": "Gyümölcs",
       "expected_unit": "kg",
       "prices": {
-        "Auchan": 1065.0,
+        "Auchan": 999.0,
         "SPAR": 1065.33,
         "Lidl": 1065.33,
         "Tesco": 1190.0,
@@ -945,8 +945,8 @@
         "Auchan": {
           "source_product_id": "2188440000007",
           "source_product_name": "Citrom Ft/kg",
-          "amount": 1065.0,
-          "unit_amount": 1065.0,
+          "amount": 999.0,
+          "unit_amount": 999.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1012,11 +1012,11 @@
       "expected_unit": "kg",
       "prices": {
         "Lidl": 419.0,
+        "Penny": 549.0,
         "Tesco": 437.0,
         "Auchan": 447.0,
         "ALDI": 475.0,
-        "SPAR": 483.0,
-        "Penny": 550.0
+        "SPAR": 483.0
       },
       "selected_products": {
         "Lidl": {
@@ -1024,6 +1024,16 @@
           "source_product_name": "Paradicsom 1kg",
           "amount": 419.0,
           "unit_amount": 419.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Penny": {
+          "source_product_id": "penny-298",
+          "source_product_name": "Magyar fürtös paradicsom lé kg",
+          "amount": 549.0,
+          "unit_amount": 549.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1064,16 +1074,6 @@
           "source_product_name": "Fürtös paradicsom lédig",
           "amount": 483.0,
           "unit_amount": 483.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-298",
-          "source_product_name": "Magyar fürtös paradicsom lé kg",
-          "amount": 550.0,
-          "unit_amount": 550.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1244,8 +1244,7 @@
       "prices": {
         "Auchan": 181.0,
         "Tesco": 197.5,
-        "Lidl": 215.0,
-        "Penny": 232.0
+        "Lidl": 215.0
       },
       "selected_products": {
         "Auchan": {
@@ -1277,19 +1276,9 @@
           "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-204",
-          "source_product_name": "Fr. burgonya lédig sárga kg",
-          "amount": 232.0,
-          "unit_amount": 232.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
         }
       },
-      "coverage": 4
+      "coverage": 3
     },
     {
       "id": "50",
