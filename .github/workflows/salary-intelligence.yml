@@ -1,6 +1,8 @@
-name: Salary Intelligence
+
+name: FMCG Salary Intelligence
 
 on:
+
   workflow_dispatch:
 
   schedule:
@@ -10,33 +12,55 @@ permissions:
   contents: write
 
 jobs:
+
   salary_intelligence:
+
     runs-on: ubuntu-latest
 
+    timeout-minutes: 20
+
     steps:
-      - name: Checkout
+
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Python setup
+      - name: Setup Python
         uses: actions/setup-python@v5
+
         with:
           python-version: '3.12'
 
-      - name: Generate salary raw data
+      - name: Display Python version
+        run: python --version
+
+      - name: Create docs/data directory
+        run: mkdir -p docs/data
+
+      - name: Run salary intelligence collector
         run: |
           python scripts/update_salary_intelligence.py
 
-      - name: Generate salary summary
+      - name: Run salary summary builder
         run: |
           python scripts/update_salary_summary.py
 
-      - name: Commit salary data
+      - name: Verify generated files
         run: |
-          git config --global user.name github-actions
-          git config --global user.email github-actions@github.com
+          ls -la docs/data
 
-          git add docs/data/salary-raw-data.json docs/data/salary-summary.json
+      - name: Commit updated files
+        run: |
 
-          git diff --cached --quiet || git commit -m "Update salary intelligence data"
+          git config --global user.name "github-actions[bot]"
+
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add docs/data/salary-raw-data.json
+
+          git add docs/data/salary-summary.json
+
+          git add docs/data/salary-role-summary.json
+
+          git diff --cached --quiet || git commit -m "Update FMCG salary intelligence"
 
           git push
