@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-19T08:56:36Z",
+  "updated_at": "2026-06-20T07:40:31Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -473,7 +473,7 @@
       "expected_unit": "kg",
       "prices": {
         "Auchan": 1315.0,
-        "Tesco": 1343.0,
+        "Tesco": 1330.0,
         "Lidl": 1465.0,
         "ALDI": 1465.0,
         "Penny": 1465.0,
@@ -493,8 +493,8 @@
         "Tesco": {
           "source_product_id": "2870240000000",
           "source_product_name": "16. SERTES COMB pultos QQ",
-          "amount": 1343.0,
-          "unit_amount": 1343.0,
+          "amount": 1330.0,
+          "unit_amount": 1330.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -550,7 +550,7 @@
       "expected_unit": "kg",
       "prices": {
         "ALDI": 1399.0,
-        "Lidl": 1749.0,
+        "Lidl": 1598.0,
         "Penny": 1749.0,
         "Auchan": 1739.0,
         "Tesco": 1748.75,
@@ -568,13 +568,13 @@
           "price_type": "NORMAL"
         },
         "Lidl": {
-          "source_product_id": "lidl-0005545",
-          "source_product_name": "Húsfarm XXL Sertés darálthús 30%,  1000g",
-          "amount": 1749.0,
-          "unit_amount": 1749.0,
+          "source_product_id": "lidl-0001694",
+          "source_product_name": "Húsfarm Sertés darálthús 30%,  500g",
+          "amount": 799.0,
+          "unit_amount": 1598.0,
           "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
+          "unit_title": "csomag",
+          "packaging": "0.5",
           "price_type": "NORMAL"
         },
         "Penny": {
@@ -626,14 +626,24 @@
       "category": "Húsáru",
       "expected_unit": "kg",
       "prices": {
+        "Penny": 1979.0,
         "SPAR": 1811.0,
         "Lidl": 1859.0,
         "Auchan": 1939.0,
         "ALDI": 1979.0,
-        "Penny": 1979.0,
         "Tesco": 1990.0
       },
       "selected_products": {
+        "Penny": {
+          "source_product_id": "penny-10248",
+          "source_product_name": "Friss csirkemellfilé kg",
+          "amount": 1979.0,
+          "unit_amount": 1979.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "SPAR": {
           "source_product_id": "5999550782526",
           "source_product_name": "S-Budget friss csirkemellfilé",
@@ -667,16 +677,6 @@
         "ALDI": {
           "source_product_id": "aldi-35875",
           "source_product_name": "Húsmester csirkemellfilé kg vákuumcsomagolt",
-          "amount": 1979.0,
-          "unit_amount": 1979.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-10248",
-          "source_product_name": "Friss csirkemellfilé kg",
           "amount": 1979.0,
           "unit_amount": 1979.0,
           "unit": "kg",
@@ -934,14 +934,24 @@
       "category": "Gyümölcs",
       "expected_unit": "kg",
       "prices": {
+        "Lidl": 998.67,
         "Auchan": 999.0,
         "SPAR": 1065.33,
-        "Lidl": 1065.33,
         "Tesco": 1190.0,
         "ALDI": 1199.0,
         "Penny": 1199.0
       },
       "selected_products": {
+        "Lidl": {
+          "source_product_id": "lidl-0080171",
+          "source_product_name": "Citrom 750g",
+          "amount": 749.0,
+          "unit_amount": 998.67,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "0.75",
+          "price_type": "NORMAL"
+        },
         "Auchan": {
           "source_product_id": "2188440000007",
           "source_product_name": "Citrom Ft/kg",
@@ -955,16 +965,6 @@
         "SPAR": {
           "source_product_id": "5999139405563",
           "source_product_name": "S-budget xxl citrom 750g",
-          "amount": 799.0,
-          "unit_amount": 1065.33,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "0.75",
-          "price_type": "NORMAL"
-        },
-        "Lidl": {
-          "source_product_id": "lidl-0080171",
-          "source_product_name": "Citrom 750g",
           "amount": 799.0,
           "unit_amount": 1065.33,
           "unit": "kg",
@@ -1166,7 +1166,7 @@
       "expected_unit": "kg",
       "prices": {
         "Auchan": 149.0,
-        "Lidl": 186.5,
+        "Lidl": 189.0,
         "Tesco": 199.0,
         "ALDI": 205.0,
         "Penny": 209.0,
@@ -1186,8 +1186,8 @@
         "Lidl": {
           "source_product_id": "lidl-0083333",
           "source_product_name": "Vöröshagyma 2kg",
-          "amount": 373.0,
-          "unit_amount": 186.5,
+          "amount": 378.0,
+          "unit_amount": 189.0,
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "2",
