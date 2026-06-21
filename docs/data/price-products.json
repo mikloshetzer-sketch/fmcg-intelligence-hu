@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-20T07:40:31Z",
+  "updated_at": "2026-06-21T08:19:01Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -434,7 +434,7 @@
           "price_type": "NORMAL"
         },
         "SPAR": {
-          "source_product_id": "5999139401725",
+          "source_product_id": "5999139401671",
           "source_product_name": "SPAR mélyalmos friss tojás S 10 db",
           "amount": 612.0,
           "unit_amount": 61.2,
@@ -1011,14 +1011,24 @@
       "category": "Zöldség",
       "expected_unit": "kg",
       "prices": {
+        "Tesco": 385.0,
         "Lidl": 419.0,
         "Penny": 549.0,
-        "Tesco": 437.0,
         "Auchan": 447.0,
         "ALDI": 475.0,
         "SPAR": 483.0
       },
       "selected_products": {
+        "Tesco": {
+          "source_product_id": "2809140000000",
+          "source_product_name": "FÜRTÖS PARADICSOM LÉDIG QQ",
+          "amount": 385.0,
+          "unit_amount": 385.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "Lidl": {
           "source_product_id": "lidl-0082488",
           "source_product_name": "Paradicsom 1kg",
@@ -1034,16 +1044,6 @@
           "source_product_name": "Magyar fürtös paradicsom lé kg",
           "amount": 549.0,
           "unit_amount": 549.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Tesco": {
-          "source_product_id": "2809140000000",
-          "source_product_name": "FÜRTÖS PARADICSOM LÉDIG QQ",
-          "amount": 437.0,
-          "unit_amount": 437.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1091,9 +1091,9 @@
         "SPAR": 959.0,
         "Penny": 999.0,
         "Tesco": 862.0,
+        "Lidl": 879.0,
         "ALDI": 949.0,
-        "Auchan": 908.0,
-        "Lidl": 949.0
+        "Auchan": 908.0
       },
       "selected_products": {
         "SPAR": {
@@ -1126,6 +1126,16 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
+        "Lidl": {
+          "source_product_id": "lidl-0082535",
+          "source_product_name": "Hazai TV paprika kg",
+          "amount": 879.0,
+          "unit_amount": 879.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "ALDI": {
           "source_product_id": "aldi-730700",
           "source_product_name": "Paprika tv lédig",
@@ -1141,16 +1151,6 @@
           "source_product_name": "Étkezési paprika Ft/kg",
           "amount": 908.0,
           "unit_amount": 908.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Lidl": {
-          "source_product_id": "lidl-0082535",
-          "source_product_name": "Hazai TV paprika kg",
-          "amount": 949.0,
-          "unit_amount": 949.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
