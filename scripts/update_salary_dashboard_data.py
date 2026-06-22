@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-FMCG Salary Dashboard Data Builder v2
+FMCG Salary Dashboard Data Builder v3
 
 Input:
 - docs/data/retail-salary-benchmark.json
@@ -11,6 +11,11 @@ Input:
 
 Output:
 - docs/data/salary-dashboard-data.json
+
+Cél:
+- 2026-os Salary Intelligence blokk előállítása.
+- A dashboard ne csak bérszámot mutasson, hanem azt is, milyen információt sikerült beszerezni.
+- Hivatalos vállalati források elsőbbsége.
 """
 
 import json
@@ -36,6 +41,7 @@ def now_iso():
 def load_json(path, default):
     if not path.exists():
         return default
+
     try:
         with open(path, "r", encoding="utf-8") as file:
             return json.load(file)
@@ -45,6 +51,7 @@ def load_json(path, default):
 
 def save_json(path, data):
     path.parent.mkdir(parents=True, exist_ok=True)
+
     with open(path, "w", encoding="utf-8") as file:
         json.dump(data, file, ensure_ascii=False, indent=2)
 
@@ -56,159 +63,27 @@ def is_number(value):
 def format_salary(value):
     if not is_number(value):
         return NA
+
     return f"{int(value):,}".replace(",", " ") + " Ft"
 
 
 def format_salary_range(min_value, mid_value, max_value):
     if not is_number(min_value) and not is_number(max_value):
         return NA
+
     if is_number(min_value) and is_number(max_value) and min_value != max_value:
         return f"{format_salary(min_value)} - {format_salary(max_value)}"
+
     if is_number(mid_value):
         return format_salary(mid_value)
+
     if is_number(min_value):
         return format_salary(min_value)
+
     if is_number(max_value):
         return format_salary(max_value)
+
     return NA
-
-
-def coverage_score(row):
-    score = 0
-
-    if row.get("year_status") == "current_2026_salary":
-        score += 60
-    elif row.get("year_status") == "current_2026_raise_only":
-        score += 35
-    elif row.get("year_status") in ["older_salary_reference", "dated_reference"]:
-        score += 20
-
-    if row.get("sources"):
-        score += 25
-
-    if is_number(row.get("confidence")):
-        score += min(15, round(row.get("confidence") / 10))
-
-    return min(score, 100)
-
-
-def coverage_label(score):
-    if score >= 75:
-        return "magas"
-    if score >= 50:
-        return "közepes"
-    if score > 0:
-        return "alacsony"
-    return "nincs adat"
-
-
-def build_company_cards(verified):
-    rows = verified.get("rows", [])
-    cards = []
-
-    for row in rows:
-        score = coverage_score(row)
-
-        cards.append({
-            "company_id": row.get("company_id"),
-            "company": row.get("company"),
-            "status": row.get("verified_status", "unknown"),
-            "year_status": row.get("year_status", "no_data"),
-            "data_year": row.get("data_year", NA),
-
-            "base_salary_display": row.get("salary_display", NA),
-            "base_salary_huf_month": (
-                row.get("salary_median_huf_month")
-                if is_number(row.get("salary_median_huf_month"))
-                else NA
-            ),
-
-            "highest_salary_display": format_salary(row.get("salary_max_huf_month")),
-            "highest_salary_huf_month": (
-                row.get("salary_max_huf_month")
-                if is_number(row.get("salary_max_huf_month"))
-                else NA
-            ),
-
-            "salary_raise_pct": row.get("salary_raise_pct", NA),
-            "salary_record_count": 1 if row.get("year_status") == "current_2026_salary" else 0,
-            "raise_record_count": 1 if row.get("year_status") == "current_2026_raise_only" else 0,
-            "total_record_count": 1 if row.get("year_status") != "no_data" else 0,
-
-            "coverage_score": score,
-            "coverage_label": coverage_label(score),
-            "confidence": row.get("confidence", 0),
-
-            "primary_source_name": row.get("primary_source_name", NA),
-            "primary_source_url": row.get("primary_source_url", NA),
-            "notes": row.get("notes", ""),
-        })
-
-    return cards
-
-
-def build_role_matrix(verified, role_summary):
-    matrix = []
-
-    verified_rows = {
-        row.get("company_id"): row
-        for row in verified.get("rows", [])
-    }
-
-    role_rows = role_summary.get("rows", [])
-
-    for row in role_rows:
-        company_id = row.get("company_id")
-        verified_row = verified_rows.get(company_id)
-
-        if verified_row and verified_row.get("company_id") == "aldi":
-            for detail in verified_row.get("role_details", []):
-                matrix.append({
-                    "company_id": "aldi",
-                    "company": "ALDI",
-                    "role_key": detail.get("role_key"),
-                    "role_label": detail.get("role_label"),
-                    "salary_display": format_salary_range(
-                        detail.get("salary_min_huf_month"),
-                        detail.get("salary_after_1_year_huf_month"),
-                        detail.get("salary_max_huf_month"),
-                    ),
-                    "salary_min_huf_month": detail.get("salary_min_huf_month", NA),
-                    "salary_median_huf_month": detail.get("salary_after_1_year_huf_month", NA),
-                    "salary_max_huf_month": detail.get("salary_max_huf_month", NA),
-                    "record_count": 1,
-                    "confidence": verified_row.get("confidence", 95),
-                    "source_name": verified_row.get("primary_source_name", NA),
-                    "source_url": verified_row.get("primary_source_url", NA),
-                    "evidence_text": "Ellenőrzött 2026-os ALDI béradat.",
-                    "data_year": 2026,
-                    "notes": verified_row.get("notes", ""),
-                })
-            continue
-
-        min_value = row.get("salary_min_huf_month")
-        mid_value = row.get("salary_median_huf_month")
-        max_value = row.get("salary_max_huf_month")
-
-        matrix.append({
-            "company_id": company_id,
-            "company": row.get("company"),
-            "role_key": row.get("role_key"),
-            "role_label": row.get("role_label"),
-            "salary_display": format_salary_range(min_value, mid_value, max_value),
-            "salary_min_huf_month": min_value,
-            "salary_median_huf_month": mid_value,
-            "salary_max_huf_month": max_value,
-            "record_count": row.get("record_count", 0),
-            "confidence": row.get("confidence", 0),
-            "source_name": row.get("source_name", NA),
-            "source_url": row.get("source_url", NA),
-            "evidence_text": row.get("evidence_text", NA),
-            "data_year": verified_row.get("data_year", NA) if verified_row else NA,
-            "notes": row.get("notes", ""),
-        })
-
-    return matrix
 
 
 def build_benchmark_table(benchmark):
@@ -231,53 +106,287 @@ def build_benchmark_table(benchmark):
     return rows
 
 
-def build_evidence_table(verified):
+def official_salary_intelligence_cards():
+    return [
+        {
+            "company_id": "aldi",
+            "company": "ALDI",
+            "headline": "541 900 - 750 600 Ft",
+            "subheadline": "Részletes 2026-os bérstruktúra.",
+            "information_depth": "detailed_structure",
+            "information_depth_label": "Részletes bérstruktúra",
+            "information_items": [
+                "áruházi dolgozó kezdő bér",
+                "1 év utáni bér",
+                "maximális áruházi bér",
+                "logisztikai béradatok"
+            ],
+            "source_quality": "official_company",
+            "source_label": "Hivatalos vállalati közlés",
+            "source_priority": 100,
+            "source_name": "ALDI sajtóközlemény",
+            "source_url": "https://www.aldi.hu/az-aldirol/sajtoszoba/sajtokozlemenyek/koezlemenyek-2026/beremeles-az-aldi-nal--minden-pozicioban-noevekedes",
+            "confidence": 100,
+            "data_year": 2026
+        },
+        {
+            "company_id": "lidl",
+            "company": "Lidl",
+            "headline": "599 000 - 700 000+ Ft",
+            "subheadline": "Több munkakörre vonatkozó 2026-os bérinformáció.",
+            "information_depth": "detailed_structure",
+            "information_depth_label": "Részletes bérstruktúra",
+            "information_items": [
+                "bolti dolgozó bére",
+                "üzletvezetői bérek",
+                "logisztikai bérek",
+                "maximális jövedelmi szintek"
+            ],
+            "source_quality": "official_company",
+            "source_label": "Hivatalos vállalati közlés",
+            "source_priority": 100,
+            "source_name": "Lidl sajtóközlemény",
+            "source_url": "https://vallalat.lidl.hu/sajtoszoba/sajtokoezlemenyek/20260420_berfejlesztes",
+            "confidence": 100,
+            "data_year": 2026
+        },
+        {
+            "company_id": "auchan",
+            "company": "Auchan",
+            "headline": "9,2%-os éves béremelés",
+            "subheadline": "Fizikai munkaköröket érintő 2026-os bérinformáció.",
+            "information_depth": "partial_information",
+            "information_depth_label": "Részleges bérinformáció",
+            "information_items": [
+                "kétlépcsős béremelés",
+                "pék munkakör",
+                "hentes munkakör",
+                "cukrász és logisztikai munkakörök"
+            ],
+            "source_quality": "official_company",
+            "source_label": "Hivatalos vállalati közlés",
+            "source_priority": 100,
+            "source_name": "Auchan sajtóközlemény",
+            "source_url": "https://auchan.hu/sajtokozlemenyek/2026-beremeles",
+            "confidence": 100,
+            "data_year": 2026
+        },
+        {
+            "company_id": "tesco",
+            "company": "Tesco",
+            "headline": "+7,2% béremelés",
+            "subheadline": "2026-os béremelési és alapbér-információ.",
+            "information_depth": "partial_information",
+            "information_depth_label": "Részleges bérinformáció",
+            "information_items": [
+                "átlagos béremelés",
+                "áruházi alapbér",
+                "maximális elérhető jövedelem",
+                "juttatási elemek"
+            ],
+            "source_quality": "official_company",
+            "source_label": "Hivatalos vállalati közlés",
+            "source_priority": 100,
+            "source_name": "Tesco vállalati közlés",
+            "source_url": "https://corporate.tesco.hu/beremeles-2026",
+            "confidence": 100,
+            "data_year": 2026
+        },
+        {
+            "company_id": "penny",
+            "company": "PENNY",
+            "headline": "+8% béremelés",
+            "subheadline": "Értékesítési és logisztikai területet érintő 2026-os béremelés.",
+            "information_depth": "partial_information",
+            "information_depth_label": "Részleges bérinformáció",
+            "information_items": [
+                "értékesítési béremelés",
+                "logisztikai béremelés",
+                "központi béremelés",
+                "rugalmas juttatási rendszer"
+            ],
+            "source_quality": "official_company",
+            "source_label": "Hivatalos vállalati közlés",
+            "source_priority": 100,
+            "source_name": "PENNY vállalati közlés",
+            "source_url": "https://www.penny.hu/tovabbi-3-4-milliard-forintot-fordit-berfejlesztesre-a-penny",
+            "confidence": 100,
+            "data_year": 2026
+        },
+        {
+            "company_id": "spar",
+            "company": "SPAR",
+            "headline": "Nincs hivatalos 2026-os bérközlés",
+            "subheadline": "Csak referencia szintű információ áll rendelkezésre.",
+            "information_depth": "reference_only",
+            "information_depth_label": "Referencia szintű információ",
+            "information_items": [
+                "általános piaci bérinformáció",
+                "dolgozói önbevallásos referencia",
+                "hivatalos 2026-os közlés nem azonosítható"
+            ],
+            "source_quality": "secondary_reference",
+            "source_label": "Másodlagos referenciaforrás",
+            "source_priority": 70,
+            "source_name": "WhereWeWork referencia",
+            "source_url": "https://www.wherewework.hu/hu/fizetesek-spar-magyarorszag-minden-a-munkakornyezetrol-ertekeles-fizetes-allasinterjuk-juttatasok-234",
+            "confidence": 70,
+            "data_year": 2026
+        }
+    ]
+
+
+def build_salary_intelligence_summary(cards):
+    detailed = sum(1 for c in cards if c.get("information_depth") == "detailed_structure")
+    partial = sum(1 for c in cards if c.get("information_depth") == "partial_information")
+    reference = sum(1 for c in cards if c.get("information_depth") == "reference_only")
+    official = sum(1 for c in cards if c.get("source_quality") == "official_company")
+
+    return {
+        "detailed_structure": detailed,
+        "partial_information": partial,
+        "reference_only": reference,
+        "official_sources": official,
+        "companies_total": len(cards)
+    }
+
+
+def build_company_cards_from_intelligence(cards):
+    dashboard_cards = []
+
+    for card in cards:
+        if card.get("information_depth") == "detailed_structure":
+            status = "current_2026_salary"
+            coverage_score = 100
+            coverage_label = "magas"
+        elif card.get("information_depth") == "partial_information":
+            status = "current_2026_partial"
+            coverage_score = 75
+            coverage_label = "közepes"
+        elif card.get("information_depth") == "reference_only":
+            status = "reference_only"
+            coverage_score = 40
+            coverage_label = "referencia"
+        else:
+            status = "no_data"
+            coverage_score = 0
+            coverage_label = "nincs adat"
+
+        dashboard_cards.append({
+            "company_id": card.get("company_id"),
+            "company": card.get("company"),
+            "status": status,
+            "year_status": card.get("information_depth"),
+            "data_year": card.get("data_year", 2026),
+
+            "base_salary_display": card.get("headline", NA),
+            "base_salary_huf_month": NA,
+            "highest_salary_display": card.get("headline", NA),
+            "highest_salary_huf_month": NA,
+            "salary_raise_pct": NA,
+
+            "salary_record_count": 1 if card.get("information_depth") == "detailed_structure" else 0,
+            "raise_record_count": 1 if card.get("information_depth") == "partial_information" else 0,
+            "total_record_count": 1,
+
+            "coverage_score": coverage_score,
+            "coverage_label": coverage_label,
+            "confidence": card.get("confidence", 0),
+
+            "primary_source_name": card.get("source_name", NA),
+            "primary_source_url": card.get("source_url", NA),
+            "source_quality": card.get("source_quality", NA),
+            "source_label": card.get("source_label", NA),
+            "source_priority": card.get("source_priority", 0),
+
+            "information_depth": card.get("information_depth"),
+            "information_depth_label": card.get("information_depth_label"),
+            "information_items": card.get("information_items", []),
+            "subheadline": card.get("subheadline", ""),
+            "notes": "2026 Salary Intelligence kártya. A rendszer azt is mutatja, milyen mélységű információt sikerült beszerezni."
+        })
+
+    return dashboard_cards
+
+
+def build_role_matrix(role_summary):
+    rows = role_summary.get("rows", [])
+    matrix = []
+
+    for row in rows:
+        min_value = row.get("salary_min_huf_month")
+        mid_value = row.get("salary_median_huf_month")
+        max_value = row.get("salary_max_huf_month")
+
+        matrix.append({
+            "company_id": row.get("company_id"),
+            "company": row.get("company"),
+            "role_key": row.get("role_key"),
+            "role_label": row.get("role_label"),
+            "salary_display": format_salary_range(min_value, mid_value, max_value),
+            "salary_min_huf_month": min_value,
+            "salary_median_huf_month": mid_value,
+            "salary_max_huf_month": max_value,
+            "record_count": row.get("record_count", 0),
+            "confidence": row.get("confidence", 0),
+            "source_name": row.get("source_name", NA),
+            "source_url": row.get("source_url", NA),
+            "evidence_text": row.get("evidence_text", NA),
+            "notes": row.get("notes", ""),
+        })
+
+    return matrix
+
+
+def build_evidence_table(cards):
     rows = []
 
-    for row in verified.get("rows", []):
-        for source in row.get("sources", []):
-            if source.get("data_year") != 2026:
-                continue
-
-            rows.append({
-                "company_id": row.get("company_id"),
-                "company": row.get("company"),
-                "value_type": source.get("value_type", NA),
-                "source_name": source.get("source_name", NA),
-                "source_url": source.get("source_url", NA),
-                "published_or_found_date": source.get("published_or_found_date", NA),
-                "data_year": source.get("data_year", NA),
-                "confidence": source.get("confidence", 0),
-                "evidence_text": source.get("evidence_text", NA),
-            })
+    for card in cards:
+        rows.append({
+            "company_id": card.get("company_id"),
+            "company": card.get("company"),
+            "value_type": card.get("information_depth"),
+            "source_name": card.get("source_name", NA),
+            "source_url": card.get("source_url", NA),
+            "published_or_found_date": "2026",
+            "data_year": 2026,
+            "confidence": card.get("confidence", 0),
+            "source_quality": card.get("source_quality", NA),
+            "source_label": card.get("source_label", NA),
+            "evidence_text": "; ".join(card.get("information_items", [])),
+        })
 
     return rows
 
 
 def build_output():
     benchmark = load_json(BENCHMARK_FILE, {})
-    verified = load_json(SALARY_VERIFIED_FILE, {})
     role_summary = load_json(SALARY_ROLE_SUMMARY_FILE, {})
+    verified = load_json(SALARY_VERIFIED_FILE, {})
 
-    company_cards = build_company_cards(verified)
-    role_matrix = build_role_matrix(verified, role_summary)
     benchmark_table = build_benchmark_table(benchmark)
-    evidence_table = build_evidence_table(verified)
+
+    salary_intelligence_cards = official_salary_intelligence_cards()
+    salary_intelligence_summary = build_salary_intelligence_summary(salary_intelligence_cards)
+
+    company_cards = build_company_cards_from_intelligence(salary_intelligence_cards)
+    role_matrix = build_role_matrix(role_summary)
+    evidence_table = build_evidence_table(salary_intelligence_cards)
 
     return {
         "updated_at": now_iso(),
         "status": "ok",
-        "method": "salary_dashboard_data_v2_from_verified_salary_data",
+        "method": "salary_dashboard_data_v3_2026_salary_intelligence",
         "input_files": [
             "docs/data/retail-salary-benchmark.json",
             "docs/data/salary-verified-data.json",
-            "docs/data/salary-role-summary.json",
+            "docs/data/salary-role-summary.json"
         ],
         "important_note": (
-            "Ez a dashboardhoz előkészített béradat. "
-            "A vállalati OSINT blokkban elsődlegesen 2026-os, ellenőrzött adatok jelennek meg. "
-            "A 2025-ös vagy régebbi adatok csak háttér-referenciák, és nem keverendők a 2026-os bérinformációkkal. "
-            "A hiányzó adat nem jelent alacsonyabb bérezést."
+            "Ez a dashboardhoz előkészített 2026 Salary Intelligence adat. "
+            "A rendszer nem csak a bér nagyságát mutatja, hanem azt is, milyen mélységű információt sikerült beszerezni. "
+            "Elsődleges forrásként hivatalos vállalati közléseket használunk. "
+            "A SPAR esetében jelenleg csak másodlagos referenciaforrás áll rendelkezésre."
         ),
         "benchmark": {
             "source": benchmark.get("source", NA),
@@ -288,14 +397,12 @@ def build_output():
             "data_year": 2026,
             "rows": benchmark_table,
         },
+        "salary_intelligence_cards": salary_intelligence_cards,
+        "salary_intelligence_summary": salary_intelligence_summary,
         "company_cards": company_cards,
         "role_matrix": role_matrix,
         "evidence_table": evidence_table,
-        "verified_salary_summary": {
-            "current_2026_records": len(verified.get("current_2026", [])),
-            "older_reference_records": len(verified.get("older_reference", [])),
-            "no_data_records": len(verified.get("no_data", [])),
-        },
+        "verified_salary_summary": verified.get("summary", {}),
     }
 
 
@@ -303,11 +410,12 @@ def main():
     print("Salary Dashboard Data Builder started.")
 
     output = build_output()
+
     save_json(OUTPUT_FILE, output)
 
     print(f"Saved: {OUTPUT_FILE}")
-    print(f"Company cards: {len(output.get('company_cards', []))}")
-    print(f"Role matrix rows: {len(output.get('role_matrix', []))}")
+    print(f"Method: {output.get('method')}")
+    print(f"Salary intelligence cards: {len(output.get('salary_intelligence_cards', []))}")
     print(f"Evidence rows: {len(output.get('evidence_table', []))}")
 
 
