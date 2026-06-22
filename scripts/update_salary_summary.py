@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-FMCG Salary Summary Builder v2
+FMCG Salary Summary Builder v4
 
 Input:
 - docs/data/salary-raw-data.json
@@ -11,10 +11,11 @@ Outputs:
 - docs/data/salary-summary.json
 - docs/data/salary-role-summary.json
 
-Cél:
-- A nyers béradatokból dashboard-kompatibilis összefoglaló készítése.
-- Külön munkakör szerinti táblázat:
-  egy szereplőnél egy munkakörben mennyi a talált bér.
+Feladat:
+- A nyers OSINT béradatokból cégszintű összesítő készítése.
+- Munkakör × szereplő mátrix készítése.
+- Minden fő munkakör és minden vizsgált szereplő megjelenik.
+- Ahol nincs adat, ott egységesen "N.A." szerepel.
 """
 
 import json
@@ -29,29 +30,29 @@ RAW_FILE = DATA_DIR / "salary-raw-data.json"
 SUMMARY_FILE = DATA_DIR / "salary-summary.json"
 ROLE_SUMMARY_FILE = DATA_DIR / "salary-role-summary.json"
 
+NA = "N.A."
+
 
 COMPANIES = [
     {"company_id": "lidl", "company": "Lidl"},
     {"company_id": "aldi", "company": "ALDI"},
+    {"company_id": "penny", "company": "PENNY"},
     {"company_id": "spar", "company": "SPAR"},
     {"company_id": "tesco", "company": "Tesco"},
-    {"company_id": "penny", "company": "PENNY"},
     {"company_id": "auchan", "company": "Auchan"},
 ]
 
 
-ROLE_LABELS = {
-    "general_worker": "Általános / alapbér",
-    "cashier": "Pénztáros",
-    "stocker": "Áruházi / bolti dolgozó",
-    "bakery_worker": "Pék / pékáru dolgozó",
-    "shift_leader": "Műszakvezető",
-    "department_manager": "Osztályvezető / részlegvezető",
-    "store_manager": "Üzletvezető / áruházvezető",
-    "warehouse_worker": "Raktári dolgozó",
-    "office_specialist": "Központi / irodai munkakör",
-    "unknown": "Nem azonosított munkakör",
-}
+ROLE_ORDER = [
+    {"role_key": "cashier", "role_label": "Pénztáros"},
+    {"role_key": "stocker", "role_label": "Áruházi / bolti dolgozó"},
+    {"role_key": "bakery_worker", "role_label": "Pék / pékáru dolgozó"},
+    {"role_key": "shift_leader", "role_label": "Műszakvezető"},
+    {"role_key": "department_manager", "role_label": "Osztályvezető / részlegvezető"},
+    {"role_key": "store_manager", "role_label": "Üzletvezető / áruházvezető"},
+    {"role_key": "warehouse_worker", "role_label": "Raktári dolgozó"},
+    {"role_key": "office_specialist", "role_label": "Központi / irodai munkakör"},
+]
 
 
 def now_iso():
@@ -91,19 +92,44 @@ def normalize_role(record):
     role = record.get("role_key")
     text = (record.get("evidence_text") or "").lower()
 
-    if role:
+    if role in [item["role_key"] for item in ROLE_ORDER]:
         return role
 
-    if "alapbér" in text:
-        return "general_worker"
+    if "pénztáros" in text or "kasszás" in text or "kassza" in text:
+        return "cashier"
 
-    if "fizikai munkát végző" in text:
-        return "general_worker"
+    if "pék" in text or "pékáru" in text or "pékség" in text:
+        return "bakery_worker"
 
-    if "dolgozó" in text or "munkatárs" in text:
-        return "general_worker"
+    if "műszakvezető" in text or "műszak vezető" in text:
+        return "shift_leader"
 
-    return "unknown"
+    if "osztályvezető" in text or "részlegvezető" in text or "csoportvezető" in text:
+        return "department_manager"
+
+    if "üzletvezető" in text or "áruházvezető" in text or "boltvezető" in text or "vezetőket" in text:
+        return "store_manager"
+
+    if "raktár" in text or "raktáros" in text or "logisztikai" in text or "targoncavezető" in text:
+        return "warehouse_worker"
+
+    if "irodai" in text or "központi" in text or "beszerzés" in text or "specialista" in text:
+        return "office_specialist"
+
+    if (
+        "alapbér" in text
+        or "fizikai munkát végző" in text
+        or "dolgozó" in text
+        or "munkatárs" in text
+        or "üzleteiben" in text
+        or "áruházi" in text
+        or "bolti" in text
+        or "kereshetnek" in text
+        or "keresni" in text
+    ):
+        return "stocker"
+
+    return "stocker"
 
 
 def get_salary_value(record):
@@ -116,6 +142,13 @@ def get_salary_min(record):
 
 def get_salary_max(record):
     return record.get("salary_max_huf_month")
+
+
+def safe_value(value):
+    if value is None:
+        return NA
+
+    return value
 
 
 def average_confidence(records):
@@ -136,12 +169,12 @@ def collect_sources(records):
 
     for record in records:
         item = {
-            "source_name": record.get("source_name"),
-            "source_url": record.get("source_url"),
-            "value_type": record.get("value_type"),
-            "evidence_text": record.get("evidence_text"),
-            "published_or_found_date": record.get("published_or_found_date"),
-            "confidence": record.get("confidence"),
+            "source_name": record.get("source_name") or NA,
+            "source_url": record.get("source_url") or NA,
+            "value_type": record.get("value_type") or NA,
+            "evidence_text": record.get("evidence_text") or NA,
+            "published_or_found_date": record.get("published_or_found_date") or NA,
+            "confidence": record.get("confidence") if record.get("confidence") is not None else 0,
         }
 
         if item not in sources:
@@ -160,7 +193,7 @@ def choose_base_salary_record(salary_records):
         normalized_role = normalize_role(record)
         text = (record.get("evidence_text") or "").lower()
 
-        if normalized_role in ["general_worker", "stocker"]:
+        if normalized_role == "stocker":
             base_candidates.append(record)
             continue
 
@@ -242,15 +275,15 @@ def build_company_summary(company_id, company_name, records):
         "company": company_name,
         "status": status,
 
-        "physical_worker_base_salary_huf_month": get_salary_value(base_record) if base_record else None,
-        "physical_worker_base_salary_min_huf_month": get_salary_min(base_record) if base_record else None,
-        "physical_worker_base_salary_max_huf_month": get_salary_max(base_record) if base_record else None,
+        "physical_worker_base_salary_huf_month": safe_value(get_salary_value(base_record) if base_record else None),
+        "physical_worker_base_salary_min_huf_month": safe_value(get_salary_min(base_record) if base_record else None),
+        "physical_worker_base_salary_max_huf_month": safe_value(get_salary_max(base_record) if base_record else None),
 
-        "highest_public_salary_huf_month": get_salary_max(high_record) if high_record else None,
-        "highest_public_salary_min_huf_month": get_salary_min(high_record) if high_record else None,
-        "highest_public_salary_median_huf_month": get_salary_value(high_record) if high_record else None,
+        "highest_public_salary_huf_month": safe_value(get_salary_max(high_record) if high_record else None),
+        "highest_public_salary_min_huf_month": safe_value(get_salary_min(high_record) if high_record else None),
+        "highest_public_salary_median_huf_month": safe_value(get_salary_value(high_record) if high_record else None),
 
-        "salary_raise_pct": salary_raise_pct,
+        "salary_raise_pct": safe_value(salary_raise_pct),
 
         "salary_record_count": len(salary_records),
         "raise_record_count": len(raise_records),
@@ -258,127 +291,123 @@ def build_company_summary(company_id, company_name, records):
 
         "confidence": average_confidence(company_records),
 
-        "base_salary_source": base_record.get("source_name") if base_record else None,
-        "base_salary_source_url": base_record.get("source_url") if base_record else None,
-        "highest_salary_source": high_record.get("source_name") if high_record else None,
-        "highest_salary_source_url": high_record.get("source_url") if high_record else None,
+        "base_salary_source": base_record.get("source_name") if base_record else NA,
+        "base_salary_source_url": base_record.get("source_url") if base_record else NA,
+        "highest_salary_source": high_record.get("source_name") if high_record else NA,
+        "highest_salary_source_url": high_record.get("source_url") if high_record else NA,
 
         "sources": collect_sources(company_records),
 
         "notes": (
-            "Nincs friss konkrét béradat."
+            "Jelenleg nincs elérhető OSINT béradat."
             if not salary_records
             else "OSINT alapján gyűjtött, nem hivatalos bérinformáció."
         ),
     }
 
 
+def best_record_for_company_role(records, company_id, role_key):
+    candidates = []
+
+    for record in records:
+        if record.get("company_id") != company_id:
+            continue
+
+        if not is_salary_record(record):
+            continue
+
+        if normalize_role(record) != role_key:
+            continue
+
+        candidates.append(record)
+
+    if not candidates:
+        return None
+
+    return sorted(
+        candidates,
+        key=lambda record: (
+            record.get("confidence") or 0,
+            get_salary_value(record) or 0,
+        ),
+        reverse=True,
+    )[0]
+
+
 def build_role_summary(records):
     rows = []
 
-    salary_records = [
-        record for record in records
-        if is_salary_record(record)
-    ]
+    for role in ROLE_ORDER:
+        role_key = role["role_key"]
+        role_label = role["role_label"]
 
-    grouped = {}
+        for company in COMPANIES:
+            company_id = company["company_id"]
+            company_name = company["company"]
 
-    for record in salary_records:
-        company_id = record.get("company_id")
-        company = record.get("company")
-        role_key = normalize_role(record)
+            record = best_record_for_company_role(records, company_id, role_key)
 
-        key = (company_id, role_key)
+            if record:
+                rows.append({
+                    "company_id": company_id,
+                    "company": company_name,
+                    "role_key": role_key,
+                    "role_label": role_label,
 
-        if key not in grouped:
-            grouped[key] = {
-                "company_id": company_id,
-                "company": company,
-                "role_key": role_key,
-                "role_label": ROLE_LABELS.get(role_key, role_key),
-                "records": [],
-            }
+                    "salary_min_huf_month": safe_value(get_salary_min(record)),
+                    "salary_median_huf_month": safe_value(get_salary_value(record)),
+                    "salary_max_huf_month": safe_value(get_salary_max(record)),
 
-        grouped[key]["records"].append(record)
+                    "record_count": 1,
+                    "confidence": record.get("confidence") or 0,
 
-    for item in grouped.values():
-        role_records = item["records"]
+                    "source_name": record.get("source_name") or NA,
+                    "source_url": record.get("source_url") or NA,
+                    "published_or_found_date": record.get("published_or_found_date") or NA,
+                    "evidence_text": record.get("evidence_text") or NA,
 
-        min_values = [
-            get_salary_min(record)
-            for record in role_records
-            if isinstance(get_salary_min(record), int)
-        ]
+                    "notes": "Egy adott szereplő adott munkakörére talált OSINT béradat.",
+                })
+            else:
+                rows.append({
+                    "company_id": company_id,
+                    "company": company_name,
+                    "role_key": role_key,
+                    "role_label": role_label,
 
-        median_values = [
-            get_salary_value(record)
-            for record in role_records
-            if isinstance(get_salary_value(record), int)
-        ]
+                    "salary_min_huf_month": NA,
+                    "salary_median_huf_month": NA,
+                    "salary_max_huf_month": NA,
 
-        max_values = [
-            get_salary_max(record)
-            for record in role_records
-            if isinstance(get_salary_max(record), int)
-        ]
+                    "record_count": 0,
+                    "confidence": 0,
 
-        best_record = sorted(
-            role_records,
-            key=lambda record: (
-                record.get("confidence") or 0,
-                get_salary_value(record) or 0,
-            ),
-            reverse=True,
-        )[0]
+                    "source_name": NA,
+                    "source_url": NA,
+                    "published_or_found_date": NA,
+                    "evidence_text": NA,
 
-        rows.append({
-            "company_id": item["company_id"],
-            "company": item["company"],
-            "role_key": item["role_key"],
-            "role_label": item["role_label"],
-
-            "salary_min_huf_month": min(min_values) if min_values else None,
-            "salary_median_huf_month": round(sum(median_values) / len(median_values)) if median_values else None,
-            "salary_max_huf_month": max(max_values) if max_values else None,
-
-            "record_count": len(role_records),
-            "confidence": average_confidence(role_records),
-
-            "source_name": best_record.get("source_name"),
-            "source_url": best_record.get("source_url"),
-            "published_or_found_date": best_record.get("published_or_found_date"),
-            "evidence_text": best_record.get("evidence_text"),
-
-            "notes": "Egy adott szereplő adott munkakörére talált OSINT béradat.",
-        })
-
-    rows = sorted(
-        rows,
-        key=lambda row: (
-            row["role_label"],
-            -(row["salary_median_huf_month"] or 0),
-            row["company"],
-        )
-    )
+                    "notes": "Jelenleg nincs elérhető OSINT béradat.",
+                })
 
     return {
         "updated_at": now_iso(),
         "status": "ok",
-        "method": "salary_role_summary_v1_from_salary_raw_data",
+        "method": "salary_role_summary_v2_complete_matrix_with_na",
         "input_file": "docs/data/salary-raw-data.json",
         "important_note": (
             "Ez munkakör szerinti OSINT bértábla. "
             "Nem hivatalos bérstatisztika. "
-            "Egy sor egy szereplő egy munkakörének talált béradata."
+            "Minden fő munkakör és minden vizsgált szereplő megjelenik. "
+            "Ahol nincs adat, ott N.A. szerepel."
         ),
+        "companies": COMPANIES,
+        "roles": ROLE_ORDER,
         "rows": rows,
     }
 
 
-def build_summary():
-    raw = load_json(RAW_FILE, {})
-    records = raw.get("records", [])
-
+def build_summary(records):
     companies = [
         build_company_summary(
             company_id=item["company_id"],
@@ -391,23 +420,24 @@ def build_summary():
     return {
         "updated_at": now_iso(),
         "status": "ok",
-        "method": "salary_summary_v2_from_salary_raw_data",
+        "method": "salary_summary_v4_from_salary_raw_data_with_na",
         "input_file": "docs/data/salary-raw-data.json",
         "important_note": (
             "Ez dashboard-kompatibilis összefoglaló a salary-raw-data.json alapján. "
-            "Nem hivatalos bérstatisztika, hanem OSINT alapú indikátor."
+            "Nem hivatalos bérstatisztika, hanem OSINT alapú indikátor. "
+            "Ahol nincs adat, ott N.A. szerepel."
         ),
         "companies": companies,
     }
 
 
 def main():
-    print("Salary Summary Builder v2 started.")
+    print("Salary Summary Builder v4 started.")
 
     raw = load_json(RAW_FILE, {})
     records = raw.get("records", [])
 
-    summary = build_summary()
+    summary = build_summary(records)
     role_summary = build_role_summary(records)
 
     save_json(SUMMARY_FILE, summary)
