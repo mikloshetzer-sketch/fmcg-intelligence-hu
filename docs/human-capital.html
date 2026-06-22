@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FMCG Intelligence Hungary – Human Capital V3.3</title>
+  <title>FMCG Intelligence Hungary – Human Capital V3.4</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="./css/style.css" />
   <style>
@@ -109,7 +109,7 @@
   <div class="header-inner">
     <div class="brand">
       <div class="brand-title">FMCG Intelligence Hungary</div>
-      <div class="brand-subtitle">Human Capital Dashboard V3 – recruitment mix, benefit matrix, adatminőség és heti insight</div>
+      <div class="brand-subtitle">Human Capital Dashboard V3.4 – recruitment mix, benefit matrix, adatminőség és heti insight</div>
     </div>
     <nav class="nav">
       <a href="./index.html">Dashboard</a>
@@ -123,7 +123,7 @@
 
 <section class="hero">
   <div class="hero-box">
-    <div class="hero-kicker">Human Capital Intelligence V3.3</div>
+    <div class="hero-kicker">Human Capital Intelligence V3.4</div>
     <h1>Munkaerő, reputáció, juttatások és toborzási nyomás az FMCG szereplőknél</h1>
     <p>
       A V3 nézet a meglévő HR, pénzügyi és álláshirdetési adatokból vezetői dashboardot készít:
@@ -253,28 +253,31 @@
     </div>
 
     <div class="card span12 card-soft">
-      <div class="section-title"><h2>Bérezési összehasonlítás munkakör szerint</h2><span>salaries.json</span></div>
+      <div class="section-title">
+        <h2>Retail Salary Intelligence</h2>
+        <span>salary-dashboard-data.json – általános benchmark + OSINT vállalati bérbizonyítékok</span>
+      </div>
       <div class="dashboard-grid">
-        <div class="span4">
-          <div class="kpi-label">Munkakör kiválasztása</div>
-          <select id="salaryRoleSelect">
-            <option value="cashier_huf_month">Pénztáros</option>
-            <option value="stocker_huf_month">Árufeltöltő</option>
-            <option value="bakery_worker_huf_month">Pék / pékáru dolgozó</option>
-            <option value="shift_leader_huf_month">Műszakvezető</option>
-            <option value="department_manager_huf_month">Osztályvezető / részlegvezető</option>
-            <option value="store_manager_huf_month">Áruházvezető</option>
-            <option value="warehouse_worker_huf_month">Raktári dolgozó</option>
-            <option value="office_specialist_huf_month">Központi specialista</option>
-          </select>
-          <div style="margin-top:14px">
-            <div class="metric-row"><span class="metric-name">Legmagasabb érték</span><span class="metric-value" id="salaryTopCompany">–</span></div>
-            <div class="metric-row"><span class="metric-name">Legmagasabb bér</span><span class="metric-value" id="salaryTopValue">–</span></div>
-            <div class="metric-row"><span class="metric-name">Mezőny átlaga</span><span class="metric-value" id="salaryAverage">–</span></div>
-            <div class="metric-row"><span class="metric-name">Bérkülönbség</span><span class="metric-value" id="salaryGap">–</span></div>
-          </div>
+        <div class="span6">
+          <h3 style="margin-top:0;color:var(--hc-navy)">Általános kiskereskedelmi bérbenchmark</h3>
+          <div id="retailSalaryBenchmarkTable" class="matrix-wrap">Adatok betöltése...</div>
         </div>
-        <div class="span8"><div class="chartbox small"><canvas id="salaryChart"></canvas></div><div class="chart-insight" id="salaryInsight">Adatok betöltése...</div></div>
+        <div class="span6">
+          <h3 style="margin-top:0;color:var(--hc-navy)">Bérinformációs lefedettségi index</h3>
+          <div id="salaryCoverageCards" class="employee-rep-grid">Adatok betöltése...</div>
+        </div>
+        <div class="span12">
+          <h3 style="margin-bottom:8px;color:var(--hc-navy)">OSINT bizonyított vállalati béradatok</h3>
+          <div id="salaryEvidenceTable" class="matrix-wrap">Adatok betöltése...</div>
+        </div>
+        <div class="span12">
+          <h3 style="margin-bottom:8px;color:var(--hc-navy)">Munkakör × szereplő bértábla</h3>
+          <div id="salaryRoleMatrixTable" class="matrix-wrap">Adatok betöltése...</div>
+        </div>
+        <div class="span12">
+          <div class="chart-insight" id="salaryDashboardInsight">Adatok betöltése...</div>
+          <div class="formula-box" id="salaryDashboardSourceNote">Adatok betöltése...</div>
+        </div>
       </div>
     </div>
 
@@ -309,7 +312,7 @@
   </div>
 </main>
 
-<footer class="footer">FMCG Intelligence Hungary – Human Capital V3.3 modul.</footer>
+<footer class="footer">FMCG Intelligence Hungary – Human Capital V3.4 modul.</footer>
 
 <script>
 const companiesUrl = './data/companies.json';
@@ -322,10 +325,11 @@ const employerReviewsUrl = './data/employer-reviews.json';
 const benefitsUrl = './data/benefits.json';
 const employeeReputationUrl = './data/employee-reputation-index.json';
 const employeeVoiceUrl = './data/employer-review-texts.json';
+const salaryDashboardUrl = './data/salary-dashboard-data.json';
 const BENEFIT_MAX_CATEGORIES = 12;
 
 let charts = {};
-let state = {companies:[], salaries:[], workforce:[], stores:[], jobs:[], financials:[], employerReviews:[], benefits:[], employeeReputation:null, employeeVoice:null, history:null};
+let state = {companies:[], salaries:[], workforce:[], stores:[], jobs:[], financials:[], employerReviews:[], benefits:[], employeeReputation:null, employeeVoice:null, history:null, salaryDashboard:null};
 let employeeRadarFilter = 'all';
 
 function n(v){return v === null || v === undefined || v === '' ? 'n.a.' : v;}
@@ -384,7 +388,7 @@ function dataQualityBreakdown(c){
 
 async function loadData(){
   try{
-    const [companies, salaries, workforce, stores, jobs, financials, employerReviews, benefits, employeeReputation, employeeVoice, history] = await Promise.all([
+    const [companies, salaries, workforce, stores, jobs, financials, employerReviews, benefits, employeeReputation, employeeVoice, history, salaryDashboard] = await Promise.all([
       fetchJson(companiesUrl),
       fetchJson(salariesUrl),
       fetchJson(workforceUrl),
@@ -395,7 +399,8 @@ async function loadData(){
       fetchJson(benefitsUrl),
       fetchJson(employeeReputationUrl, true),
       fetchJson(employeeVoiceUrl, true),
-      fetchJson(currentHistoryUrl(), true)
+      fetchJson(currentHistoryUrl(), true),
+      fetchJson(salaryDashboardUrl, true)
     ]);
 
     const salaryById = new Map(salaries.map(s => [s.id, s]));
@@ -475,7 +480,7 @@ async function loadData(){
       c.data_quality_parts = dataQualityBreakdown(c);
     });
 
-    state = {companies, salaries, workforce, stores, jobs, financials, employerReviews, benefits, employeeReputation, employeeVoice, history};
+    state = {companies, salaries, workforce, stores, jobs, financials, employerReviews, benefits, employeeReputation, employeeVoice, history, salaryDashboard};
     renderPage(companies);
   }catch(error){
     showError('<b>Adatbetöltési hiba.</b><br>'+error.message+'<br><br>Ellenőrizd, hogy minden JSON elérhető-e a docs/data mappában.');
@@ -520,14 +525,11 @@ function renderPage(companies){
   renderCharts(companies, byEmployer);
   renderBenefitMatrix(companies);
   renderDataQualityBreakdown(companies);
-  renderSalaryModule();
+  renderRetailSalaryIntelligence();
   renderChartInsights(companies, byEmployer, byRating, byRecruit, byEmployees, byEfficiency, byPressure, byRevenuePerEmployee, byProfitPerEmployee, byBenefit, avgDataQuality);
   renderDataAudit(companies, byDataQuality, avgDataQuality);
   renderTrendBox(companies);
   renderTables(companies);
-
-  const salarySelect = document.getElementById('salaryRoleSelect');
-  if(salarySelect && !salarySelect.dataset.bound){salarySelect.addEventListener('change', renderSalaryModule); salarySelect.dataset.bound='1';}
 }
 function setText(id, value){const el=document.getElementById(id); if(el) el.textContent=value;}
 
@@ -796,13 +798,150 @@ function renderDataQualityBreakdown(companies){
   document.getElementById('dataQualityBreakdown').innerHTML = `<div class="quality-bars">${items.map(([key,label])=>{const v=avg(key);return `<div class="quality-row"><b>${label}</b><div class="qbar"><div class="qfill" style="width:${v}%"></div></div><span>${v}%</span></div>`}).join('')}</div><div class="chart-insight">Az adatbizalom nem minőségi ítélet, hanem adatfedettségi mutató. Ahol létszám, rating vagy recruitment adat hiányzik, ott a hatékonysági mutatók óvatosabban értelmezendők.</div>`;
 }
 
-function renderSalaryModule(){
-  const role = document.getElementById('salaryRoleSelect').value;
-  const salaries = state.salaries.map(s=>({...s, selected_salary:num(s[role],0)})).filter(s=>s.selected_salary>0).sort((a,b)=>b.selected_salary-a.selected_salary);
-  if(!salaries.length){setText('salaryTopCompany','n.a.');setText('salaryTopValue','n.a.');setText('salaryAverage','n.a.');setText('salaryGap','n.a.');return;}
-  const top=salaries[0], min=salaries[salaries.length-1]; const values=salaries.map(s=>s.selected_salary); const avg=values.reduce((a,b)=>a+b,0)/values.length; const gap=top.selected_salary-min.selected_salary;
-  setText('salaryTopCompany', top.company); setText('salaryTopValue', fmtHuf(top.selected_salary)); setText('salaryAverage', fmtHuf(Math.round(avg))); setText('salaryGap', fmtHuf(gap));
-  makeChart('salaryChart','bar',salaries.map(s=>s.company),[{label:'Bruttó havi bér', data:salaries.map(s=>s.selected_salary)}]);
+function salaryDisplay(v){
+  if(v === null || v === undefined || v === '' || v === 'N.A.') return 'N.A.';
+  if(typeof v === 'number') return fmtHuf(v);
+  return v;
+}
+
+function renderRetailSalaryIntelligence(){
+  const data = state.salaryDashboard;
+
+  const benchmarkBox = document.getElementById('retailSalaryBenchmarkTable');
+  const coverageBox = document.getElementById('salaryCoverageCards');
+  const evidenceBox = document.getElementById('salaryEvidenceTable');
+  const roleBox = document.getElementById('salaryRoleMatrixTable');
+  const insightBox = document.getElementById('salaryDashboardInsight');
+  const sourceBox = document.getElementById('salaryDashboardSourceNote');
+
+  if(!benchmarkBox || !coverageBox || !evidenceBox || !roleBox) return;
+
+  if(!data || data.status !== 'ok'){
+    benchmarkBox.innerHTML = 'Nincs elérhető salary-dashboard-data.json adat.';
+    coverageBox.innerHTML = 'Nincs elérhető adat.';
+    evidenceBox.innerHTML = 'Nincs elérhető adat.';
+    roleBox.innerHTML = 'Nincs elérhető adat.';
+    if(insightBox) insightBox.innerHTML = 'A bérmodul akkor jelenik meg, ha a salary-dashboard-data.json fájl létrejött.';
+    if(sourceBox) sourceBox.innerHTML = '<b>Forrás:</b> docs/data/salary-dashboard-data.json';
+    return;
+  }
+
+  const benchmarkRows = data.benchmark?.rows || [];
+  benchmarkBox.innerHTML = `<table class="matrix-table">
+    <thead>
+      <tr>
+        <th>Munkakör</th>
+        <th>Benchmark sáv</th>
+        <th>Minimum</th>
+        <th>Középérték</th>
+        <th>Maximum</th>
+      </tr>
+    </thead>
+    <tbody>
+      ${benchmarkRows.map(r=>`
+        <tr>
+          <td>${n(r.role_label)}</td>
+          <td><b>${n(r.benchmark_salary_display)}</b></td>
+          <td>${salaryDisplay(r.salary_min_huf_month)}</td>
+          <td>${salaryDisplay(r.salary_mid_huf_month)}</td>
+          <td>${salaryDisplay(r.salary_max_huf_month)}</td>
+        </tr>
+      `).join('')}
+    </tbody>
+  </table>`;
+
+  const cards = data.company_cards || [];
+  const orderedCards = [...cards].sort((a,b)=>num(b.coverage_score,0)-num(a.coverage_score,0));
+
+  coverageBox.innerHTML = orderedCards.map(c=>{
+    const score = num(c.coverage_score,0);
+    const cls = score >= 75 ? 'green' : score >= 50 ? 'orange' : score > 0 ? 'gray' : 'red';
+    const raise = c.salary_raise_pct === 'N.A.' || c.salary_raise_pct === undefined || c.salary_raise_pct === null ? 'N.A.' : `${c.salary_raise_pct}%`;
+    return `<div class="employee-rep-card">
+      <div class="company">${c.company}</div>
+      <div class="index">${score}</div>
+      <div class="small">bérinformációs lefedettség</div>
+      <div class="meta">
+        <span class="pill ${cls}">${n(c.coverage_label)}</span>
+        <span class="pill gray">${num(c.total_record_count,0)} találat</span>
+      </div>
+      <div class="small" style="margin-top:8px">
+        Alapbér: <b>${n(c.base_salary_display)}</b><br>
+        Béremelés: <b>${raise}</b>
+      </div>
+    </div>`;
+  }).join('');
+
+  const evidenceRows = data.evidence_table || [];
+  evidenceBox.innerHTML = `<table class="matrix-table">
+    <thead>
+      <tr>
+        <th>Szereplő</th>
+        <th>Adattípus</th>
+        <th>Forrás</th>
+        <th>Bizalom</th>
+        <th>Bizonyító szöveg</th>
+      </tr>
+    </thead>
+    <tbody>
+      ${evidenceRows.length ? evidenceRows.map(r=>`
+        <tr>
+          <td>${n(r.company)}</td>
+          <td>${n(r.value_type)}</td>
+          <td>${r.source_url && r.source_url !== 'N.A.' ? `<a href="${r.source_url}" target="_blank" rel="noopener">${n(r.source_name)}</a>` : n(r.source_name)}</td>
+          <td>${num(r.confidence,0)}/100</td>
+          <td style="text-align:left;white-space:normal;max-width:520px">${n(r.evidence_text)}</td>
+        </tr>
+      `).join('') : `<tr><td colspan="5">Nincs konkrét OSINT bérbizonyíték.</td></tr>`}
+    </tbody>
+  </table>`;
+
+  const roleRows = data.role_matrix || [];
+  roleBox.innerHTML = `<table class="matrix-table">
+    <thead>
+      <tr>
+        <th>Munkakör</th>
+        <th>Szereplő</th>
+        <th>Talált bér</th>
+        <th>Forrás</th>
+        <th>Bizalom</th>
+      </tr>
+    </thead>
+    <tbody>
+      ${roleRows.map(r=>`
+        <tr>
+          <td>${n(r.role_label)}</td>
+          <td>${n(r.company)}</td>
+          <td><b>${n(r.salary_display)}</b></td>
+          <td>${r.source_url && r.source_url !== 'N.A.' ? `<a href="${r.source_url}" target="_blank" rel="noopener">${n(r.source_name)}</a>` : n(r.source_name)}</td>
+          <td>${num(r.confidence,0)}/100</td>
+        </tr>
+      `).join('')}
+    </tbody>
+  </table>`;
+
+  const bestCoverage = orderedCards[0];
+  const concreteSalaryCompanies = cards.filter(c=>num(c.salary_record_count,0)>0).map(c=>c.company);
+  const raiseCompanies = cards.filter(c=>num(c.raise_record_count,0)>0).map(c=>c.company);
+
+  if(insightBox){
+    insightBox.innerHTML = `
+      <b>Mit látunk?</b> Az általános benchmark a magyar kiskereskedelmi bérpiac tájékozódási sávját mutatja.
+      Ehhez képest az OSINT bizonyítékok azt jelzik, hogy mely szereplőknél sikerült konkrét, nyilvános vállalati béradatot találni.
+      Jelenleg konkrét béradat ezeknél a szereplőknél érhető el: <b>${concreteSalaryCompanies.length ? concreteSalaryCompanies.join(', ') : 'nincs ilyen adat'}</b>.
+      Béremelési adat ezeknél jelent meg: <b>${raiseCompanies.length ? raiseCompanies.join(', ') : 'nincs ilyen adat'}</b>.
+      A legjobb lefedettségi értéket jelenleg <b>${bestCoverage ? bestCoverage.company : 'n.a.'}</b> mutatja.
+    `;
+  }
+
+  if(sourceBox){
+    sourceBox.innerHTML = `
+      <b>Forrás és módszertan:</b> a blokk a <b>salary-dashboard-data.json</b> fájlból dolgozik.
+      Ez három réteget fésül össze: általános magyar kiskereskedelmi bérbenchmark,
+      nyilvánosan elérhető OSINT vállalati béradatok, valamint munkakör szerinti bértábla.
+      A hiányzó adat <b>N.A.</b> jelölést kap. Ez nem jelent alacsonyabb bérezést, csak azt, hogy az adott szereplőnél nem sikerült megbízható nyilvános béradatot azonosítani.
+    `;
+  }
 }
 
 function renderChartInsights(companies, byEmployer, byRating, byRecruit, byEmployees, byEfficiency, byPressure, byRevenuePerEmployee, byProfitPerEmployee, byBenefit, avgDataQuality){
@@ -819,7 +958,10 @@ function renderChartInsights(companies, byEmployer, byRating, byRecruit, byEmplo
   document.getElementById('revenuePerEmployeeInsight').innerHTML = byRevenuePerEmployee[0] ? `<b>${byRevenuePerEmployee[0].company}</b> vezeti az árbevétel / fő mutatót. Ez a hatékonyságot és az üzleti modellt egyszerre tükrözi, de nem azonos a dolgozói termelékenység teljes képével. A mutató létszámadat nélkül nem értelmezhető, ezért a hiányzó cégek kimaradnak.` : `Az árbevétel / fő összehasonlításhoz nem áll rendelkezésre elég adat.`;
   document.getElementById('profitPerEmployeeInsight').innerHTML = byProfitPerEmployee[0] ? `<b>${byProfitPerEmployee[0].company}</b> mutatja a legjobb profit / fő értéket. A profit / fő különösen érzékeny az egyszeri pénzügyi hatásokra, veszteséges évre vagy beruházási ciklusra. Ezért ezt a mutatót az árbevétel / fő és a munkaóra-hatékonyság mellett érdemes értelmezni.` : `A profit / fő összehasonlításhoz nem áll rendelkezésre elég adat.`;
   document.getElementById('employerCompareInsight').innerHTML = byEmployer[0] ? `Az Employer Score élén <b>${byEmployer[0].company}</b> áll. A diagram külön mutatja az összesített indexet, a Profession ratingből számolt reputációs értéket és a benefit kategóriákból becsült juttatási intenzitást. A mutató nem hivatalos minősítés, hanem összehasonlító vezetői indikátor. A hiányzó rating vagy benefit adat csökkentheti az összehasonlítás pontosságát.` : `Az Employer Score nem számítható stabilan.`;
-  document.getElementById('salaryInsight').innerHTML = `A bérdiagram munkakörönként hasonlítja össze a bruttó havi bérszinteket. A legmagasabb érték és a mezőny átlaga segít látni a bérpozíciót. A bérkülönbség azt jelzi, mekkora a távolság a legerősebb és a legalacsonyabb megfigyelt érték között. Ezek összehasonlító adatok, nem minden esetben hivatalos bérsávok.`;
+  const oldSalaryInsight = document.getElementById('salaryInsight');
+  if(oldSalaryInsight){
+    oldSalaryInsight.innerHTML = `A bérdiagram munkakörönként hasonlítja össze a bruttó havi bérszinteket. A legmagasabb érték és a mezőny átlaga segít látni a bérpozíciót. A bérkülönbség azt jelzi, mekkora a távolság a legerősebb és a legalacsonyabb megfigyelt érték között. Ezek összehasonlító adatok, nem minden esetben hivatalos bérsávok.`;
+  }
 }
 
 function renderDataAudit(companies, byDataQuality, avgDataQuality){
