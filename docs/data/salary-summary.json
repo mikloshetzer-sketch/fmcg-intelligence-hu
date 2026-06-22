@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-06-22T07:25:40+00:00",
+  "updated_at": "2026-06-22T07:39:11+00:00",
   "status": "ok",
-  "method": "salary_summary_v4_from_salary_raw_data_with_na",
+  "method": "salary_summary_v5_from_salary_raw_data_with_na",
   "input_file": "docs/data/salary-raw-data.json",
-  "important_note": "Ez dashboard-kompatibilis összefoglaló a salary-raw-data.json alapján. Nem hivatalos bérstatisztika, hanem OSINT alapú indikátor. Ahol nincs adat, ott N.A. szerepel.",
+  "important_note": "Ez dashboard-kompatibilis összefoglaló a salary-raw-data.json alapján. Nem hivatalos bérstatisztika. Ahol nincs adat, ott N.A. szerepel.",
   "companies": [
     {
       "company_id": "lidl",
