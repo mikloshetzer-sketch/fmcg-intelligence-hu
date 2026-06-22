@@ -2,21 +2,16 @@
 # -*- coding: utf-8 -*-
 
 """
-FMCG Salary Raw Data Collector v5
+FMCG Salary Raw Data Collector v6 - Expanded Sources
 
-Cél:
-- 6 FMCG szereplő bérinformációinak begyűjtése.
-- Egy scriptben marad.
-- Kimenet:
-  docs/data/salary-raw-data.json
+Kimenet:
+- docs/data/salary-raw-data.json
 
-Mit csinál:
-- Google News RSS célzott keresések.
-- 2024 előtti találatok kizárása.
-- Konkrét bérszámok, bérsávok és béremelési százalékok kinyerése.
-- Google News linkek mellett megőrzi a forrásdomain azonosítását.
-- Jobb Lidl / Tesco / Penny / Auchan bércikk-felismerés.
-- Bérsáv összevonás: pl. 540 ezerért ... 670 ezerig.
+Feladat:
+- Nyers OSINT béradatok gyűjtése.
+- Google News RSS megtartása.
+- Forrásoldal bővítése célzott site: keresésekkel.
+- Nem írja felül a salary-summary.json és salary-role-summary.json fájlokat.
 """
 
 import json
@@ -43,6 +38,7 @@ USER_AGENT = (
 
 REQUEST_TIMEOUT = 25
 REQUEST_DELAY_SECONDS = 2
+ARTICLE_DELAY_SECONDS = 1
 MIN_YEAR = 2024
 
 
@@ -57,86 +53,97 @@ COMPANIES = {
 
 
 ROLE_KEYWORDS = {
-    "cashier": [
-        "pénztáros", "kasszás", "kassza", "eladó-pénztáros",
-        "eladó pénztáros"
-    ],
+    "cashier": ["pénztáros", "kasszás", "kassza", "eladó-pénztáros", "eladó pénztáros"],
     "stocker": [
         "árufeltöltő", "áruházi dolgozó", "áruházi munkatárs",
         "bolti dolgozó", "bolti munkatárs", "fizikai munkát végző",
         "fizikai munkát végzők", "új munkatárs", "dolgozókat",
         "áruházi munkavállaló", "bolti eladó", "áruházi munkatársak",
-        "bolti munkavállaló"
-    ],
-    "bakery_worker": [
-        "pék", "pékáru", "pékség", "pékáru dolgozó"
-    ],
-    "shift_leader": [
-        "műszakvezető", "műszak vezető", "shift leader"
-    ],
-    "department_manager": [
-        "osztályvezető", "részlegvezető", "csoportvezető",
-        "területi vezető"
+        "bolti munkavállaló", "dolgozók alapbére"
     ],
     "store_manager": [
         "üzletvezető", "áruházvezető", "boltvezető", "store manager",
-        "pályakezdő vezető", "vezetői", "vezetőket"
+        "pályakezdő vezető", "vezetői", "vezetőket", "vezető"
     ],
     "warehouse_worker": [
         "raktári dolgozó", "raktáros", "targoncavezető",
         "komissiózó", "logisztikai dolgozó", "raktári munkatárs"
     ],
-    "office_specialist": [
-        "specialista", "asszisztens", "elemző", "irodai",
-        "központi", "beszerzés"
-    ],
+    "bakery_worker": ["pék", "pékáru", "pékség", "pékáru dolgozó"],
+    "shift_leader": ["műszakvezető", "műszak vezető", "shift leader"],
+    "department_manager": ["osztályvezető", "részlegvezető", "csoportvezető"],
+    "office_specialist": ["specialista", "asszisztens", "elemző", "irodai", "központi", "beszerzés"],
 }
 
 
-ALLOWED_DOMAINS = [
-    "trademagazin.hu",
-    "portfolio.hu",
-    "penzcentrum.hu",
-    "hrportal.hu",
-    "24.hu",
+SOURCE_DOMAINS = [
     "hvg.hu",
+    "portfolio.hu",
+    "24.hu",
+    "penzcentrum.hu",
+    "trademagazin.hu",
+    "hrportal.hu",
     "vg.hu",
     "profession.hu",
     "jobinfo.hu",
-    "indeed.com",
     "hu.indeed.com",
+    "indeed.com",
 ]
 
 
-SEARCH_QUERIES = []
+BASE_QUERY_TERMS = [
+    "fizetés",
+    "bér",
+    "béremelés",
+    "bruttó bér",
+    "bruttó fizetés",
+    "bruttó alapbér",
+    "alapbér",
+    "dolgozók alapbére",
+    "dolgozói fizetés",
+    "munkavállalói bér",
+    "mennyit keresnek",
+    "kereshetnek",
+    "áruházi dolgozó fizetés",
+    "bolti dolgozó bér",
+    "pénztáros fizetés",
+    "árufeltöltő fizetés",
+    "raktári dolgozó fizetés",
+    "üzletvezető fizetés",
+]
 
-for company_id, aliases in COMPANIES.items():
-    main_name = aliases[0]
 
-    SEARCH_QUERIES.extend([
-        f'{main_name} fizetés',
-        f'{main_name} bér',
-        f'{main_name} béremelés',
-        f'{main_name} bruttó fizetés',
-        f'{main_name} bruttó bér',
-        f'{main_name} pénztáros fizetés',
-        f'{main_name} árufeltöltő fizetés',
-        f'{main_name} áruházi dolgozó fizetés',
-        f'{main_name} raktári dolgozó fizetés',
-        f'{main_name} üzletvezető fizetés',
-        f'{main_name} bolti dolgozó bér',
-        f'{main_name} alapbér',
-        f'{main_name} dolgozók alapbére',
-        f'{main_name} mennyit keresnek',
-        f'{main_name} kereshetnek',
-        f'{main_name} havi bruttó',
-        f'{main_name} bruttó alapbér',
-        f'{main_name} dolgozói fizetés',
-        f'{main_name} Trade Magazin béremelés',
-        f'{main_name} Portfolio béremelés',
-        f'{main_name} Pénzcentrum fizetés',
-        f'{main_name} HR Portal béremelés',
-    ])
+def build_search_queries():
+    queries = []
+
+    for company_id, aliases in COMPANIES.items():
+        main_name = aliases[0]
+
+        for term in BASE_QUERY_TERMS:
+            queries.append(f"{main_name} {term}")
+
+        for domain in SOURCE_DOMAINS:
+            queries.extend([
+                f"site:{domain} {main_name} fizetés",
+                f"site:{domain} {main_name} bér",
+                f"site:{domain} {main_name} béremelés",
+                f"site:{domain} {main_name} bruttó",
+                f"site:{domain} {main_name} alapbér",
+                f"site:{domain} {main_name} kereshetnek",
+            ])
+
+    seen = set()
+    output = []
+
+    for query in queries:
+        if query not in seen:
+            seen.add(query)
+            output.append(query)
+
+    return output
+
+
+SEARCH_QUERIES = build_search_queries()
 
 
 SALARY_PATTERNS = [
@@ -160,10 +167,10 @@ SALARY_RANGE_PATTERNS = [
     r"(\d+[,.]?\d*)\s*[-–]\s*(\d+[,.]?\d*)\s*millió\s*(?:forint|ft)?",
     r"(\d+[,.]?\d*)\s*és\s*(\d+[,.]?\d*)\s*millió\s*(?:forint|ft)?",
     r"bruttó\s+(\d{3,4})\s*[-–]\s*(\d{3,4})\s*ezer",
-    r"(\d{3,4})\s*ezer[^\.]{0,120}?(\d{3,4})\s*ezerig",
-    r"(\d{3,4})\s*ezerért[^\.]{0,120}?(\d{3,4})\s*ezerig",
-    r"bruttó\s+(\d{3,4})\s*ezer[^\.]{0,120}?(\d{3,4})\s*ezerig",
-    r"(\d{3,4})\s*ezer[^\.]{0,120}?felcsúszhat\s+(\d{3,4})\s*ezerig",
+    r"(\d{3,4})\s*ezer[^\.]{0,160}?(\d{3,4})\s*ezerig",
+    r"(\d{3,4})\s*ezerért[^\.]{0,160}?(\d{3,4})\s*ezerig",
+    r"bruttó\s+(\d{3,4})\s*ezer[^\.]{0,160}?(\d{3,4})\s*ezerig",
+    r"(\d{3,4})\s*ezer[^\.]{0,160}?felcsúszhat\s+(\d{3,4})\s*ezerig",
 ]
 
 
@@ -171,7 +178,7 @@ RAISE_PATTERNS = [
     r"(\d{1,2}(?:[,.]\d{1,2})?)\s*százalékos\s+béremelés",
     r"(\d{1,2}(?:[,.]\d{1,2})?)\s*%-os\s+béremelés",
     r"(\d{1,2}(?:[,.]\d{1,2})?)\s*%\s*béremelés",
-    r"béremelés[^\.]{0,120}?(\d{1,2}(?:[,.]\d{1,2})?)\s*százalék",
+    r"béremelés[^\.]{0,160}?(\d{1,2}(?:[,.]\d{1,2})?)\s*százalék",
     r"(\d{1,2}(?:[,.]\d{1,2})?)\s*[-–]\s*(\d{1,2}(?:[,.]\d{1,2})?)\s*százalékos\s+béremelés",
     r"(\d{1,2}(?:[,.]\d{1,2})?)\s*[-–]\s*(\d{1,2}(?:[,.]\d{1,2})?)\s*%\s*béremelés",
 ]
@@ -273,6 +280,7 @@ def google_news_rss(query):
                 "link": link,
                 "pub_date": pub_date,
                 "combined": combined,
+                "query": query,
             })
 
     except Exception as error:
@@ -283,7 +291,14 @@ def google_news_rss(query):
 
 def allowed_source(text, link):
     lower = (text + " " + link).lower()
-    return any(domain in lower for domain in ALLOWED_DOMAINS)
+
+    if any(domain in lower for domain in SOURCE_DOMAINS):
+        return True
+
+    if "news.google.com" in lower:
+        return True
+
+    return False
 
 
 def is_recent_enough(pub_date, text):
@@ -377,6 +392,7 @@ def has_bad_salary_context(text):
         or "alapbér" in lower
         or "juttatás" in lower
         or "dolgozó" in lower
+        or "munkavállaló" in lower
     ):
         return False
 
@@ -497,7 +513,7 @@ def dedup_ranges(ranges):
 def detect_source_name(text, link, final_url=None):
     lower = (text + " " + link + " " + str(final_url or "")).lower()
 
-    for domain in ALLOWED_DOMAINS:
+    for domain in SOURCE_DOMAINS:
         if domain in lower:
             return domain
 
@@ -506,7 +522,7 @@ def detect_source_name(text, link, final_url=None):
 
 def extract_article_text(url):
     html, final_url = fetch_url(url)
-    time.sleep(1)
+    time.sleep(ARTICLE_DELAY_SECONDS)
 
     if not html:
         return "", final_url
@@ -837,17 +853,16 @@ def build_output():
     return {
         "updated_at": now_iso(),
         "status": "ok" if records else "no_salary_records_found",
-        "method": "salary_raw_data_v5_single_script_rss_article_dedup",
+        "method": "salary_raw_data_v6_expanded_sources",
         "min_year": MIN_YEAR,
         "important_note": (
             "Ez nyers OSINT béradat-gyűjtés. Csak konkrét bérszámokat, bérsávokat "
             "és béremelési százalékokat ment. Nem hivatalos bérstatisztika. "
-            "A rendszer 2024 előtti találatokat kizár, Google News RSS-találatokat használ, "
-            "és ahol lehet, a cikkoldal szövegét is megpróbálja feldolgozni."
+            "A rendszer Google News RSS és célzott site: kereséseket használ."
         ),
         "companies": summarize(records),
         "records": records,
-        "raw_results": raw_results[:150],
+        "raw_results": raw_results[:200],
     }
 
 
@@ -859,7 +874,7 @@ def save_json(path, data):
 
 
 def main():
-    print("Salary Raw Data Collector v5 started.")
+    print("Salary Raw Data Collector v6 expanded sources started.")
 
     output = build_output()
 
