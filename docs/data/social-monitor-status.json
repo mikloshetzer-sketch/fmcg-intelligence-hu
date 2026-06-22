@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-21T20:11:54.478332+00:00",
+  "updated_at": "2026-06-22T05:40:58.585237+00:00",
   "status": "ok",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "companies": [
@@ -29,26 +29,26 @@
     },
     {
       "company": "SPAR",
-      "mentions": 1,
-      "raw_mentions": 1,
-      "dashboard_mentions": 1,
+      "mentions": 0,
+      "raw_mentions": 0,
+      "dashboard_mentions": 0,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_mentions": 1.0,
-      "hu_relevant_mentions": 1,
-      "index": 16,
+      "weighted_mentions": 0,
+      "hu_relevant_mentions": 0,
+      "index": 0,
       "sources": {
-        "reddit": 1,
+        "reddit": 0,
         "youtube": 0,
         "mastodon": 0
       },
       "raw_sources": {
-        "reddit": 1,
+        "reddit": 0,
         "youtube": 0,
         "mastodon": 0
       },
       "sentiment": "neutral",
-      "topic": "árak és akciók",
+      "topic": "általános vállalati említés",
       "errors": []
     },
     {
@@ -149,22 +149,22 @@
     },
     {
       "company": "CBA",
-      "mentions": 1,
-      "raw_mentions": 1,
-      "dashboard_mentions": 1,
+      "mentions": 2,
+      "raw_mentions": 2,
+      "dashboard_mentions": 2,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_mentions": 1.0,
-      "hu_relevant_mentions": 1,
+      "weighted_mentions": 2.0,
+      "hu_relevant_mentions": 2,
       "index": 16,
       "sources": {
         "reddit": 0,
-        "youtube": 1,
+        "youtube": 2,
         "mastodon": 0
       },
       "raw_sources": {
         "reddit": 0,
-        "youtube": 1,
+        "youtube": 2,
         "mastodon": 0
       },
       "sentiment": "neutral",
