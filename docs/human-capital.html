@@ -103,11 +103,17 @@
     .salary-compact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;align-items:start;}
     .salary-panel{border:1px solid #dceaf5;border-radius:22px;background:linear-gradient(145deg,#fff,#f8fbff);padding:16px;}
     .salary-panel h3{margin:0 0 12px;color:var(--hc-navy);font-size:17px;}
-    .salary-benchmark-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}
-    .salary-benchmark-card{border:1px solid #e1edf7;border-radius:16px;background:#fff;padding:13px 14px;min-height:96px;}
-    .salary-benchmark-card .role{font-weight:950;color:var(--hc-navy);font-size:14px;line-height:1.25;}
-    .salary-benchmark-card .range{font-size:20px;font-weight:950;color:var(--hc-navy);margin-top:8px;line-height:1.15;}
-    .salary-benchmark-card .mid{font-size:12px;color:var(--hc-muted);margin-top:5px;}
+    .salary-benchmark-table-wrap{overflow:visible;border:1px solid #e1edf7;border-radius:16px;background:#fff;}
+    .salary-benchmark-table{width:100%;border-collapse:collapse;font-size:12px;}
+    .salary-benchmark-table th{padding:10px 9px;border-bottom:1px solid #dbe7f2;text-align:left;color:var(--hc-navy);font-size:11px;text-transform:uppercase;letter-spacing:.04em;background:#f8fbff;white-space:nowrap;}
+    .salary-benchmark-table td{padding:10px 9px;border-bottom:1px solid #e6eef6;color:#0f2745;vertical-align:middle;}
+    .salary-benchmark-table tr:last-child td{border-bottom:none;}
+    .salary-benchmark-table td:first-child{font-weight:950;color:var(--hc-navy);}
+    .salary-benchmark-table .market-point{font-weight:950;color:var(--hc-navy);}
+    .salary-source-brand{display:flex;align-items:center;gap:10px;margin-top:10px;font-size:12px;color:var(--hc-muted);line-height:1.5;}
+    .salary-source-logo{display:inline-flex;align-items:center;gap:6px;font-weight:950;color:#0f2745;border:1px solid #dbe7f2;border-radius:999px;background:#fff;padding:5px 10px;white-space:nowrap;}
+    .salary-source-logo .flag{display:inline-block;width:18px;height:12px;border-radius:2px;background:linear-gradient(to bottom,#ce2939 0 33%,#fff 33% 66%,#477050 66% 100%);box-shadow:0 0 0 1px rgba(0,0,0,.08) inset;}
+    .salary-source-logo .dotcom{color:#2563eb;}
     .salary-coverage-list{display:grid;gap:9px;}
     .salary-coverage-row{display:grid;grid-template-columns:82px 1fr 48px;gap:10px;align-items:center;font-size:13px;}
     .salary-coverage-row b{color:var(--hc-navy);}
@@ -124,7 +130,7 @@
     .salary-source-line{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:10px;}
     .salary-mini-note{font-size:12px;color:var(--hc-muted);line-height:1.55;margin-top:10px;}
     @media(max-width:1100px){.salary-compact-grid{grid-template-columns:1fr}.salary-evidence-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
-    @media(max-width:700px){.salary-benchmark-cards,.salary-evidence-grid{grid-template-columns:1fr}.salary-coverage-row{grid-template-columns:76px 1fr 42px}}
+    @media(max-width:700px){.salary-evidence-grid{grid-template-columns:1fr}.salary-coverage-row{grid-template-columns:76px 1fr 42px}.salary-benchmark-table{font-size:11px}.salary-benchmark-table th,.salary-benchmark-table td{padding:8px 6px}}
 
     @media(max-width:1200px){.employee-rep-grid{grid-template-columns:repeat(3,1fr)}.risk-grid{grid-template-columns:1fr}}
     @media(max-width:700px){.employee-rep-grid{grid-template-columns:1fr}}
@@ -288,8 +294,11 @@
       <div class="salary-compact-grid">
         <div class="salary-panel">
           <h3>Általános kiskereskedelmi bérbenchmark</h3>
-          <div id="retailSalaryBenchmarkCards" class="salary-benchmark-cards">Adatok betöltése...</div>
-          <div class="salary-mini-note">A benchmark általános piaci tájékozódási pont. Nem vállalatspecifikus adat.</div>
+          <div id="retailSalaryBenchmarkCards" class="salary-benchmark-table-wrap">Adatok betöltése...</div>
+          <div class="salary-source-brand">
+            <span class="salary-source-logo"><span class="flag"></span>Fizetesek<span class="dotcom">.com</span></span>
+            <span>Forrás: Fizetesek.com – Fizetések Magyarországon 2026. Általános piaci benchmark, nem vállalatspecifikus adat.</span>
+          </div>
         </div>
 
         <div class="salary-panel">
@@ -879,15 +888,28 @@ function renderRetailSalaryIntelligence(){
     return;
   }
 
-  const wantedBenchmarkRoles = ['sales_assistant','deputy_store_manager','department_manager','store_manager'];
-  const benchmarkRows = (data.benchmark?.rows || []).filter(r=>wantedBenchmarkRoles.includes(r.role_key));
-  benchmarkBox.innerHTML = benchmarkRows.map(r=>`
-    <div class="salary-benchmark-card">
-      <div class="role">${n(r.role_label)}</div>
-      <div class="range">${compactSalary(r.salary_min_huf_month)} – ${compactSalary(r.salary_max_huf_month)}</div>
-      <div class="mid">piaci középérték: <b>${compactSalary(r.salary_mid_huf_month)}</b></div>
-    </div>
-  `).join('');
+  const benchmarkRows = data.benchmark?.rows || [];
+  benchmarkBox.innerHTML = `<table class="salary-benchmark-table">
+    <thead>
+      <tr>
+        <th>Pozíció</th>
+        <th>Bruttó sáv / hó</th>
+        <th>Jellemző piaci pont</th>
+        <th>Nettó kb.</th>
+      </tr>
+    </thead>
+    <tbody>
+      ${benchmarkRows.map(r=>{
+        const netApprox = typeof r.salary_mid_huf_month === 'number' ? Math.round(r.salary_mid_huf_month * 0.665) : null;
+        return `<tr>
+          <td>${n(r.role_label)}</td>
+          <td>${salaryDisplay(r.salary_min_huf_month)} - ${salaryDisplay(r.salary_max_huf_month)}</td>
+          <td class="market-point">${salaryDisplay(r.salary_mid_huf_month)}</td>
+          <td class="market-point">${salaryDisplay(netApprox)}</td>
+        </tr>`;
+      }).join('')}
+    </tbody>
+  </table>`;
 
   const cards = data.company_cards || [];
   const orderedCards = [...cards].sort((a,b)=>num(b.coverage_score,0)-num(a.coverage_score,0));
@@ -938,7 +960,7 @@ function renderRetailSalaryIntelligence(){
   }
 
   if(sourceBox){
-    sourceBox.innerHTML = `<b>Forrás és módszertan:</b> a blokk a <b>salary-dashboard-data.json</b> fájlból dolgozik. Ez az általános magyar kiskereskedelmi benchmarkot és a nyilvánosan elérhető OSINT vállalati bérbizonyítékokat fésüli össze. A <b>N.A.</b> nem alacsonyabb bérezést jelent, hanem azt, hogy az adott szereplőnél nem sikerült megbízható nyilvános béradatot azonosítani.`;
+    sourceBox.innerHTML = `<b>Forrás és módszertan:</b> a blokk a <b>salary-dashboard-data.json</b> fájlból dolgozik. Az általános bérbenchmark forrása: <b>Fizetesek.com – Fizetések Magyarországon 2026</b>. A blokk ezt fésüli össze a nyilvánosan elérhető OSINT vállalati bérbizonyítékokkal. A <b>N.A.</b> nem alacsonyabb bérezést jelent, hanem azt, hogy az adott szereplőnél nem sikerült megbízható nyilvános béradatot azonosítani.`;
   }
 }
 
