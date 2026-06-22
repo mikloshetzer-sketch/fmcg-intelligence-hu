@@ -92,6 +92,20 @@
     .voice-quote{font-size:13px;margin-top:6px;}
     .topic-chip{display:inline-flex;align-items:center;border-radius:999px;padding:3px 8px;font-size:11px;font-weight:850;background:#e0f2fe;color:#075985;margin-right:5px;margin-top:5px;}
     .trend-placeholder{border:1px dashed #bfd8ec;background:#f8fbff;border-radius:18px;padding:16px;line-height:1.65;color:#334155;}
+    .employee-trend-wrapper{display:grid;grid-template-columns:2fr 1fr;gap:20px;align-items:start;}
+    .employee-trend-stats{display:grid;gap:12px;}
+    .employee-trend-stat{border:1px solid #e2edf6;border-radius:18px;background:#fbfdff;padding:14px;}
+    .employee-trend-stat-title{font-size:12px;font-weight:800;color:var(--hc-muted);}
+    .employee-trend-stat-value{font-size:28px;font-weight:950;color:var(--hc-navy);margin-top:6px;}
+    .employee-trend-stat-sub{font-size:12px;color:var(--hc-muted);line-height:1.45;margin-top:4px;}
+    .employee-trend-source{margin-top:16px;padding:14px;border-radius:16px;background:#f8fbff;border:1px solid #dceaf5;font-size:13px;line-height:1.7;color:#334155;}
+    .employee-trend-snapshot{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:12px;}
+    .employee-trend-snapshot-card{border:1px solid #e2edf6;border-radius:16px;background:#fff;padding:12px;}
+    .employee-trend-snapshot-card .company{font-weight:950;color:var(--hc-navy);font-size:14px;}
+    .employee-trend-snapshot-card .value{font-size:24px;font-weight:950;color:var(--hc-navy);margin:6px 0 4px;}
+    @media(max-width:1100px){.employee-trend-snapshot{grid-template-columns:repeat(3,1fr);}}
+    @media(max-width:900px){.employee-trend-wrapper{grid-template-columns:1fr;}}
+    @media(max-width:700px){.employee-trend-snapshot{grid-template-columns:1fr;}}
     .radar-controls{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px;}
     .radar-btn{border:1px solid #cfe0ee;background:#fff;border-radius:999px;padding:7px 11px;font-size:12px;font-weight:900;color:var(--hc-navy);cursor:pointer;}
     .radar-btn.active{background:linear-gradient(90deg,#0ea5e9,#22c55e);color:#fff;border-color:transparent;}
@@ -212,8 +226,8 @@
     </div>
 
     <div class="card span12">
-      <div class="section-title"><h2>Employee Reputation Trend</h2><span>előkészített idősoros modul</span></div>
-      <div id="employeeReputationTrend" class="trend-placeholder">Adatok betöltése...</div>
+      <div class="section-title"><h2>Employee Reputation Trend</h2><span>employee-reputation-history.json</span></div>
+      <div id="employeeReputationTrend">Adatok betöltése...</div>
     </div>
 
     <div class="card span7">
@@ -362,12 +376,13 @@ const financialsUrl = './data/financials.json';
 const employerReviewsUrl = './data/employer-reviews.json';
 const benefitsUrl = './data/benefits.json';
 const employeeReputationUrl = './data/employee-reputation-index.json';
+const employeeReputationHistoryUrl = './data/employee-reputation-history.json';
 const employeeVoiceUrl = './data/employer-review-texts.json';
 const salaryDashboardUrl = './data/salary-dashboard-data.json';
 const BENEFIT_MAX_CATEGORIES = 12;
 
 let charts = {};
-let state = {companies:[], salaries:[], workforce:[], stores:[], jobs:[], financials:[], employerReviews:[], benefits:[], employeeReputation:null, employeeVoice:null, history:null, salaryDashboard:null};
+let state = {companies:[], salaries:[], workforce:[], stores:[], jobs:[], financials:[], employerReviews:[], benefits:[], employeeReputation:null, employeeReputationHistory:null, employeeVoice:null, history:null, salaryDashboard:null};
 let employeeRadarFilter = 'all';
 
 function n(v){return v === null || v === undefined || v === '' ? 'n.a.' : v;}
@@ -426,7 +441,7 @@ function dataQualityBreakdown(c){
 
 async function loadData(){
   try{
-    const [companies, salaries, workforce, stores, jobs, financials, employerReviews, benefits, employeeReputation, employeeVoice, history, salaryDashboard] = await Promise.all([
+    const [companies, salaries, workforce, stores, jobs, financials, employerReviews, benefits, employeeReputation, employeeReputationHistory, employeeVoice, history, salaryDashboard] = await Promise.all([
       fetchJson(companiesUrl),
       fetchJson(salariesUrl),
       fetchJson(workforceUrl),
@@ -436,6 +451,7 @@ async function loadData(){
       fetchJson(employerReviewsUrl),
       fetchJson(benefitsUrl),
       fetchJson(employeeReputationUrl, true),
+      fetchJson(employeeReputationHistoryUrl, true),
       fetchJson(employeeVoiceUrl, true),
       fetchJson(currentHistoryUrl(), true),
       fetchJson(salaryDashboardUrl, true)
@@ -518,7 +534,7 @@ async function loadData(){
       c.data_quality_parts = dataQualityBreakdown(c);
     });
 
-    state = {companies, salaries, workforce, stores, jobs, financials, employerReviews, benefits, employeeReputation, employeeVoice, history, salaryDashboard};
+    state = {companies, salaries, workforce, stores, jobs, financials, employerReviews, benefits, employeeReputation, employeeReputationHistory, employeeVoice, history, salaryDashboard};
     renderPage(companies);
   }catch(error){
     showError('<b>Adatbetöltési hiba.</b><br>'+error.message+'<br><br>Ellenőrizd, hogy minden JSON elérhető-e a docs/data mappában.');
@@ -752,12 +768,138 @@ function renderEmployeeVoice(voiceItems){
 function renderEmployeeReputationTrend(repCompanies){
   const box = document.getElementById('employeeReputationTrend');
   if(!box) return;
-  if(!repCompanies.length){
-    box.innerHTML = 'Nincs még reputációs index adat. A trend akkor aktiválható, ha több időpontban is mentésre kerül az employee-reputation-index.json.';
+
+  const history = state.employeeReputationHistory;
+  const rows = history && Array.isArray(history.rows) ? history.rows : [];
+  const snapshotUpdated = state.employeeReputation?.updated_at || 'n.a.';
+
+  const snapshotCompanies = [...(repCompanies || [])]
+    .sort((a,b)=>num(b.employee_reputation_index,0)-num(a.employee_reputation_index,0));
+
+  if(!rows.length){
+    if(!snapshotCompanies.length){
+      box.innerHTML = `<div class="chart-insight">Nincs még elérhető reputációs index vagy idősoros adat. A modul akkor aktiválódik, ha létrejön az employee-reputation-index.json és az employee-reputation-history.json.</div>`;
+      return;
+    }
+
+    const best = snapshotCompanies[0];
+    const totalReviews = snapshotCompanies.reduce((a,c)=>a+num(c.review_count,0),0);
+
+    box.innerHTML = `
+      <div class="employee-trend-wrapper">
+        <div>
+          <div class="chart-insight">
+            <b>Trendrendszer elindítva.</b> Jelenleg még nincs külön idősoros fájl betöltve, ezért a modul pillanatképet mutat az aktuális Employee Reputation Index alapján.
+            A valódi trend 2-3 heti futás után válik értelmezhetővé.
+          </div>
+          <div class="employee-trend-snapshot">
+            ${snapshotCompanies.map(c=>`
+              <div class="employee-trend-snapshot-card">
+                <div class="company">${n(c.company)}</div>
+                <div class="value">${num(c.employee_reputation_index,0)}</div>
+                <span class="pill ${indexPillClass(n(c.index_level))}">${n(c.index_level)}</span>
+                <div class="small" style="margin-top:7px">${fmtNum(c.review_count)} vélemény</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+        <div class="employee-trend-stats">
+          <div class="employee-trend-stat"><div class="employee-trend-stat-title">Jelenlegi vezető</div><div class="employee-trend-stat-value">${best?.company || 'n.a.'}</div><div class="employee-trend-stat-sub">${best ? best.employee_reputation_index + '/100 index' : 'n.a.'}</div></div>
+          <div class="employee-trend-stat"><div class="employee-trend-stat-title">Mért szereplők</div><div class="employee-trend-stat-value">${snapshotCompanies.length}</div><div class="employee-trend-stat-sub">aktuális pillanatkép</div></div>
+          <div class="employee-trend-stat"><div class="employee-trend-stat-title">Vélemények száma</div><div class="employee-trend-stat-value">${fmtNum(totalReviews)}</div><div class="employee-trend-stat-sub">publikus OSINT minta</div></div>
+        </div>
+      </div>
+      <div class="employee-trend-source">
+        <b>Mit látunk?</b><br>
+        Ez a blokk a dolgozói reputáció időbeli változását fogja követni. Egy mérésnél még nem trendet, hanem induló állapotot látunk.
+        <br><br>
+        <b>Forrás és módszertan:</b> employee-reputation-index.json, employee-reputation-history.json, employer-review-texts.json. Az index publikus OSINT jellegű dolgozói véleményekből készül, nem reprezentatív kutatás.
+      </div>`;
     return;
   }
-  const updated = state.employeeReputation?.updated_at || 'n.a.';
-  box.innerHTML = `<b>Trend előkészítve.</b> Jelenleg egy aktuális reputációs mentés látszik: <b>${updated}</b>. Következő javasolt fejlesztés: a workflow mentse heti bontásban az indexet a <b>docs/data/employee-reputation-history/</b> mappába. Így 4-5 futás után már momentum, javuló/romló dolgozói percepció és toborzási nyomással való összevetés is számítható.`;
+
+  const validRows = rows
+    .filter(r=>r && r.date && (r.company || r.company_id) && r.employee_reputation_index !== null && r.employee_reputation_index !== undefined)
+    .map(r=>({
+      date:String(r.date),
+      company:String(r.company || r.company_id),
+      company_id:r.company_id || r.company,
+      employee_reputation_index:num(r.employee_reputation_index,0),
+      review_count:num(r.review_count,0),
+      positive_pct:num(r.positive_pct,0),
+      negative_pct:num(r.negative_pct,0),
+      index_level:n(r.index_level)
+    }));
+
+  if(!validRows.length){
+    box.innerHTML = `<div class="chart-insight">Az employee-reputation-history.json elérhető, de nem tartalmaz megjeleníthető reputációs sort.</div>`;
+    return;
+  }
+
+  const dates = [...new Set(validRows.map(r=>r.date))].sort();
+  const latestDate = dates[dates.length-1];
+  const previousDate = dates.length > 1 ? dates[dates.length-2] : null;
+  const latestRows = validRows.filter(r=>r.date===latestDate).sort((a,b)=>b.employee_reputation_index-a.employee_reputation_index);
+  const previousRows = previousDate ? validRows.filter(r=>r.date===previousDate) : [];
+  const previousByCompany = new Map(previousRows.map(r=>[r.company, r]));
+  const companies = [...new Set(validRows.map(r=>r.company))].sort();
+  const best = latestRows[0];
+  const weakest = latestRows[latestRows.length-1];
+  const totalReviews = latestRows.reduce((a,r)=>a+num(r.review_count,0),0);
+
+  let bestMomentum = null;
+  if(previousDate){
+    const changes = latestRows
+      .map(r=>({company:r.company, value:r.employee_reputation_index - num(previousByCompany.get(r.company)?.employee_reputation_index, r.employee_reputation_index)}))
+      .sort((a,b)=>b.value-a.value);
+    bestMomentum = changes[0] || null;
+  }
+
+  box.innerHTML = `
+    <div class="employee-trend-wrapper">
+      <div>
+        <div class="chartbox">
+          <canvas id="employeeTrendChart"></canvas>
+        </div>
+      </div>
+      <div class="employee-trend-stats">
+        <div class="employee-trend-stat"><div class="employee-trend-stat-title">Utolsó mérés</div><div class="employee-trend-stat-value">${latestDate}</div><div class="employee-trend-stat-sub">history fájl alapján</div></div>
+        <div class="employee-trend-stat"><div class="employee-trend-stat-title">Mérések száma</div><div class="employee-trend-stat-value">${dates.length}</div><div class="employee-trend-stat-sub">eltérő dátum</div></div>
+        <div class="employee-trend-stat"><div class="employee-trend-stat-title">Aktuális vezető</div><div class="employee-trend-stat-value">${best?.company || 'n.a.'}</div><div class="employee-trend-stat-sub">${best ? best.employee_reputation_index + '/100 index' : 'n.a.'}</div></div>
+        <div class="employee-trend-stat"><div class="employee-trend-stat-title">Momentum</div><div class="employee-trend-stat-value">${bestMomentum ? (bestMomentum.value>0 ? '+' : '') + bestMomentum.value : 'n.a.'}</div><div class="employee-trend-stat-sub">${bestMomentum ? bestMomentum.company + ' az előző méréshez képest' : 'több mérés után számítható'}</div></div>
+      </div>
+    </div>
+    <div class="employee-trend-source">
+      <b>Mit látunk?</b><br>
+      A diagram az Employee Reputation Index időbeli változását mutatja cégenként. Egyetlen dátum esetén pillanatkép, több heti futás után valódi reputációs trend.
+      Jelenleg a legerősebb index <b>${best?.company || 'n.a.'}</b> esetében látszik, a legalacsonyabb pedig <b>${weakest?.company || 'n.a.'}</b> oldalán. Az utolsó mérésben összesen <b>${fmtNum(totalReviews)}</b> véleményminta szerepel.
+      <br><br>
+      <b>Forrás és módszertan:</b> employee-reputation-history.json, employee-reputation-index.json és employer-review-texts.json. Az index publikus OSINT dolgozói véleményekből képzett irányjelző mutató, nem reprezentatív dolgozói kutatás.
+    </div>`;
+
+  const datasets = companies.map(company=>{
+    const companyRows = validRows.filter(r=>r.company===company);
+    const byDate = new Map(companyRows.map(r=>[r.date, r.employee_reputation_index]));
+    return {
+      label:company,
+      data:dates.map(date=>byDate.has(date) ? byDate.get(date) : null),
+      borderWidth:2,
+      tension:.25,
+      pointRadius:4,
+      spanGaps:true
+    };
+  });
+
+  makeChart('employeeTrendChart','line',dates,datasets,{
+    plugins:{
+      legend:{display:true,labels:{color:'#16324f'}},
+      tooltip:{callbacks:{label:(ctx)=>`${ctx.dataset.label}: ${ctx.raw ?? 'n.a.'}/100`}}
+    },
+    scales:{
+      x:{ticks:{color:'#64748b'},grid:{color:'#eef3f7'}},
+      y:{min:0,max:100,ticks:{color:'#64748b'},grid:{color:'#eef3f7'}}
+    }
+  });
 }
 
 function renderEmployerRanking(companies){
