@@ -2,11 +2,15 @@
 # -*- coding: utf-8 -*-
 
 """
-FMCG Salary Intelligence v6
+FMCG Salary Intelligence v6 - RAW DATA COLLECTOR
 
-Kimenetek:
+Kimenet:
 - docs/data/salary-raw-data.json
-- docs/data/salary-summary.json
+
+Fontos:
+- Ez a script CSAK nyers béradatot gyűjt.
+- A salary-summary.json és salary-role-summary.json fájlokat
+  külön script készíti: scripts/update_salary_summary.py
 """
 
 import json
@@ -26,7 +30,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "docs" / "data"
 
 RAW_OUTPUT_FILE = DATA_DIR / "salary-raw-data.json"
-SUMMARY_OUTPUT_FILE = DATA_DIR / "salary-summary.json"
 
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -567,71 +570,6 @@ def summarize_raw(records):
     return companies
 
 
-def build_salary_summary(records):
-    companies = []
-
-    for company_id, aliases in COMPANIES.items():
-        company_records = [r for r in records if r["company_id"] == company_id]
-        salary_records = [r for r in company_records if r["value_type"] in ["salary_huf_month", "salary_range_huf_month"]]
-        raise_records = [r for r in company_records if r["value_type"] == "salary_raise_pct"]
-
-        base_candidates = [
-            r for r in salary_records
-            if r.get("role_key") == "stocker"
-            or "alapbér" in r.get("evidence_text", "").lower()
-            or "fizikai munkát végző" in r.get("evidence_text", "").lower()
-            or "dolgozó" in r.get("evidence_text", "").lower()
-        ]
-
-        if base_candidates:
-            base_record = sorted(base_candidates, key=lambda r: r["salary_median_huf_month"])[0]
-        elif salary_records:
-            base_record = sorted(salary_records, key=lambda r: r["salary_median_huf_month"])[0]
-        else:
-            base_record = None
-
-        high_record = (
-            sorted(salary_records, key=lambda r: r["salary_max_huf_month"], reverse=True)[0]
-            if salary_records else None
-        )
-
-        raise_pct = max([r["raise_pct"] for r in raise_records if r.get("raise_pct") is not None], default=None)
-
-        confidence_values = [r["confidence"] for r in company_records]
-        confidence = round(sum(confidence_values) / len(confidence_values)) if confidence_values else 0
-
-        companies.append({
-            "company_id": company_id,
-            "company": aliases[0],
-            "physical_worker_base_salary_huf_month": base_record["salary_median_huf_month"] if base_record else None,
-            "physical_worker_base_salary_min_huf_month": base_record["salary_min_huf_month"] if base_record else None,
-            "physical_worker_base_salary_max_huf_month": base_record["salary_max_huf_month"] if base_record else None,
-            "highest_public_salary_huf_month": high_record["salary_max_huf_month"] if high_record else None,
-            "salary_raise_pct": raise_pct,
-            "salary_record_count": len(salary_records),
-            "raise_record_count": len(raise_records),
-            "confidence": confidence,
-            "base_salary_source": base_record["source_name"] if base_record else None,
-            "highest_salary_source": high_record["source_name"] if high_record else None,
-            "notes": (
-                "Nincs friss konkrét béradat."
-                if not salary_records
-                else "OSINT alapján gyűjtött, nem hivatalos bérinformáció."
-            ),
-        })
-
-    return {
-        "updated_at": now_iso(),
-        "status": "ok",
-        "method": "salary_summary_v1_from_salary_raw_data",
-        "important_note": (
-            "Ez dashboard-kompatibilis összefoglaló a salary-raw-data.json alapján. "
-            "Nem hivatalos bérstatisztika, hanem OSINT alapú indikátor."
-        ),
-        "companies": companies,
-    }
-
-
 def collect_records():
     records = []
     raw_results = []
@@ -723,24 +661,23 @@ def main():
     raw_output = {
         "updated_at": now_iso(),
         "status": "ok" if records else "no_salary_records_found",
-        "method": "salary_raw_data_v6_clean_queries_and_summary_output",
+        "method": "salary_raw_data_v6_clean_queries",
         "min_year": MIN_YEAR,
         "important_note": (
-            "Ez nyers OSINT béradat-gyűjtés. Csak konkrét bérszámokat, bérsávokat "
-            "és béremelési százalékokat ment. Nem hivatalos bérstatisztika."
+            "Ez nyers OSINT béradat-gyűjtés. "
+            "Csak konkrét bérszámokat, bérsávokat "
+            "és béremelési százalékokat ment. "
+            "A salary-summary.json és salary-role-summary.json fájlokat "
+            "külön script készíti."
         ),
         "companies": summarize_raw(records),
         "records": records,
         "raw_results": raw_results[:150],
     }
 
-    summary_output = build_salary_summary(records)
-
     save_json(RAW_OUTPUT_FILE, raw_output)
-    save_json(SUMMARY_OUTPUT_FILE, summary_output)
 
     print(f"Saved: {RAW_OUTPUT_FILE}")
-    print(f"Saved: {SUMMARY_OUTPUT_FILE}")
     print(f"Records: {len(records)}")
 
 
