@@ -1,59 +1,189 @@
 {
   "updated_at": "2026-06-22T09:57:26+00:00",
   "status": "ok",
-  "method": "salary_role_summary_v3_compact_matrix_with_na",
-  "input_file": "docs/data/salary-raw-data.json",
-  "important_note": "Ez munkakör szerinti OSINT bértábla. Nem hivatalos bérstatisztika. Ahol nincs adat, ott N.A. szerepel.",
-  "companies": [
+  "method": "salary_dashboard_data_v1",
+  "input_files": [
+    "docs/data/retail-salary-benchmark.json",
+    "docs/data/salary-summary.json",
+    "docs/data/salary-role-summary.json"
+  ],
+  "important_note": "Ez a dashboardhoz előkészített béradat. Az általános bérbenchmark nem vállalatspecifikus adat. Az OSINT vállalati adatok csak nyilvánosan elérhető forrásokon alapulnak. A hiányzó adat nem jelent alacsonyabb bérezést.",
+  "benchmark": {
+    "source": "Fizetesek.com és általános HR piaci benchmark alapján kézzel rögzített referenciaadat",
+    "source_type": "general_retail_salary_benchmark",
+    "currency": "HUF",
+    "period": "month",
+    "salary_type": "gross",
+    "rows": [
+      {
+        "role_key": "sales_assistant",
+        "role_label": "Eladó",
+        "benchmark_salary_display": "400 000 Ft - 520 000 Ft",
+        "salary_min_huf_month": 400000,
+        "salary_mid_huf_month": 450000,
+        "salary_max_huf_month": 520000
+      },
+      {
+        "role_key": "deputy_store_manager",
+        "role_label": "Üzletvezető-helyettes",
+        "benchmark_salary_display": "490 000 Ft - 710 000 Ft",
+        "salary_min_huf_month": 490000,
+        "salary_mid_huf_month": 630000,
+        "salary_max_huf_month": 710000
+      },
+      {
+        "role_key": "department_manager",
+        "role_label": "Osztályvezető / áruházi vezető",
+        "benchmark_salary_display": "500 000 Ft - 740 000 Ft",
+        "salary_min_huf_month": 500000,
+        "salary_mid_huf_month": 620000,
+        "salary_max_huf_month": 740000
+      },
+      {
+        "role_key": "store_manager",
+        "role_label": "Üzletvezető / boltvezető",
+        "benchmark_salary_display": "650 000 Ft - 800 000 Ft",
+        "salary_min_huf_month": 650000,
+        "salary_mid_huf_month": 720000,
+        "salary_max_huf_month": 800000
+      },
+      {
+        "role_key": "district_manager",
+        "role_label": "Körzeti vezető",
+        "benchmark_salary_display": "850 000 Ft - 1 400 000 Ft",
+        "salary_min_huf_month": 850000,
+        "salary_mid_huf_month": 1150000,
+        "salary_max_huf_month": 1400000
+      },
+      {
+        "role_key": "regional_manager",
+        "role_label": "Területi vezető",
+        "benchmark_salary_display": "1 100 000 Ft - 1 950 000 Ft",
+        "salary_min_huf_month": 1100000,
+        "salary_mid_huf_month": 1600000,
+        "salary_max_huf_month": 1950000
+      },
+      {
+        "role_key": "national_manager",
+        "role_label": "Országos vezető",
+        "benchmark_salary_display": "1 400 000 Ft - 2 200 000 Ft",
+        "salary_min_huf_month": 1400000,
+        "salary_mid_huf_month": 1600000,
+        "salary_max_huf_month": 2200000
+      }
+    ]
+  },
+  "company_cards": [
     {
       "company_id": "lidl",
-      "company": "Lidl"
+      "company": "Lidl",
+      "status": "no_recent_salary_data",
+      "base_salary_display": "N.A.",
+      "base_salary_huf_month": "N.A.",
+      "highest_salary_display": "N.A.",
+      "highest_salary_huf_month": "N.A.",
+      "salary_raise_pct": "N.A.",
+      "salary_record_count": 0,
+      "raise_record_count": 0,
+      "total_record_count": 0,
+      "coverage_score": 0,
+      "coverage_label": "nincs adat",
+      "confidence": 0,
+      "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
     {
       "company_id": "aldi",
-      "company": "ALDI"
+      "company": "ALDI",
+      "status": "no_recent_salary_data",
+      "base_salary_display": "N.A.",
+      "base_salary_huf_month": "N.A.",
+      "highest_salary_display": "N.A.",
+      "highest_salary_huf_month": "N.A.",
+      "salary_raise_pct": "N.A.",
+      "salary_record_count": 0,
+      "raise_record_count": 0,
+      "total_record_count": 0,
+      "coverage_score": 0,
+      "coverage_label": "nincs adat",
+      "confidence": 0,
+      "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
     {
       "company_id": "penny",
-      "company": "PENNY"
+      "company": "PENNY",
+      "status": "salary_and_raise_found",
+      "base_salary_display": "540 000 Ft - 670 000 Ft",
+      "base_salary_huf_month": 605000,
+      "highest_salary_display": "670 000 Ft",
+      "highest_salary_huf_month": 670000,
+      "salary_raise_pct": 8.0,
+      "salary_record_count": 1,
+      "raise_record_count": 1,
+      "total_record_count": 2,
+      "coverage_score": 100,
+      "coverage_label": "magas",
+      "confidence": 78,
+      "notes": "OSINT alapján gyűjtött, nem hivatalos bérinformáció."
     },
     {
       "company_id": "spar",
-      "company": "SPAR"
+      "company": "SPAR",
+      "status": "salary_found",
+      "base_salary_display": "395 000 Ft",
+      "base_salary_huf_month": 395000,
+      "highest_salary_display": "395 000 Ft",
+      "highest_salary_huf_month": 395000,
+      "salary_raise_pct": "N.A.",
+      "salary_record_count": 1,
+      "raise_record_count": 0,
+      "total_record_count": 1,
+      "coverage_score": 75,
+      "coverage_label": "magas",
+      "confidence": 80,
+      "notes": "OSINT alapján gyűjtött, nem hivatalos bérinformáció."
     },
     {
       "company_id": "tesco",
-      "company": "Tesco"
+      "company": "Tesco",
+      "status": "raise_only",
+      "base_salary_display": "N.A.",
+      "base_salary_huf_month": "N.A.",
+      "highest_salary_display": "N.A.",
+      "highest_salary_huf_month": "N.A.",
+      "salary_raise_pct": 7.2,
+      "salary_record_count": 0,
+      "raise_record_count": 1,
+      "total_record_count": 1,
+      "coverage_score": 50,
+      "coverage_label": "közepes",
+      "confidence": 65,
+      "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
     {
       "company_id": "auchan",
-      "company": "Auchan"
+      "company": "Auchan",
+      "status": "salary_found",
+      "base_salary_display": "402 000 Ft",
+      "base_salary_huf_month": 402000,
+      "highest_salary_display": "402 000 Ft",
+      "highest_salary_huf_month": 402000,
+      "salary_raise_pct": "N.A.",
+      "salary_record_count": 1,
+      "raise_record_count": 0,
+      "total_record_count": 1,
+      "coverage_score": 75,
+      "coverage_label": "magas",
+      "confidence": 90,
+      "notes": "OSINT alapján gyűjtött, nem hivatalos bérinformáció."
     }
   ],
-  "roles": [
-    {
-      "role_key": "stocker",
-      "role_label": "Áruházi / bolti dolgozó"
-    },
-    {
-      "role_key": "store_manager",
-      "role_label": "Üzletvezető / vezetői munkakör"
-    },
-    {
-      "role_key": "warehouse_worker",
-      "role_label": "Raktári dolgozó"
-    },
-    {
-      "role_key": "cashier",
-      "role_label": "Pénztáros"
-    }
-  ],
-  "rows": [
+  "role_matrix": [
     {
       "company_id": "lidl",
       "company": "Lidl",
       "role_key": "stocker",
       "role_label": "Áruházi / bolti dolgozó",
+      "salary_display": "N.A.",
       "salary_min_huf_month": "N.A.",
       "salary_median_huf_month": "N.A.",
       "salary_max_huf_month": "N.A.",
@@ -61,7 +191,6 @@
       "confidence": 0,
       "source_name": "N.A.",
       "source_url": "N.A.",
-      "published_or_found_date": "N.A.",
       "evidence_text": "N.A.",
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
@@ -70,6 +199,7 @@
       "company": "ALDI",
       "role_key": "stocker",
       "role_label": "Áruházi / bolti dolgozó",
+      "salary_display": "N.A.",
       "salary_min_huf_month": "N.A.",
       "salary_median_huf_month": "N.A.",
       "salary_max_huf_month": "N.A.",
@@ -77,7 +207,6 @@
       "confidence": 0,
       "source_name": "N.A.",
       "source_url": "N.A.",
-      "published_or_found_date": "N.A.",
       "evidence_text": "N.A.",
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
@@ -86,6 +215,7 @@
       "company": "PENNY",
       "role_key": "stocker",
       "role_label": "Áruházi / bolti dolgozó",
+      "salary_display": "540 000 Ft - 670 000 Ft",
       "salary_min_huf_month": 540000,
       "salary_median_huf_month": 605000,
       "salary_max_huf_month": 670000,
@@ -93,7 +223,6 @@
       "confidence": 90,
       "source_name": "hvg.hu",
       "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaTJfejl6VWxrWVktZE51TmVqN284V1I3RmtpeFRHdHpTMVNYQzFYNmtNcTdBNkNNM1ZpcXAtS3gwdUVfZ25PempyR2ZBSnEyREJ5dk9PTDhfSlhpOWk4SEMzbXJXOGRBRVdseXI1QkUxNkRxQUpGNXlDU19LZFR5a3p1T2hPUQ?oc=5&hl=hu&gl=HU&ceid=HU:hu",
-      "published_or_found_date": "Tue, 23 Dec 2025 08:00:00 GMT",
       "evidence_text": "Gazdaság: Bruttó 540 ezerért keres új munkatársakat a Penny, de az összeg felcsúszhat 670 ezerig is - | hvg.hu. Gazdaság: Bruttó 540 ezerért keres új munkatársakat a Penny, de az összeg felcsúszhat 670 ezerig is | hvg.hu. Google Hírek",
       "notes": "Egy adott szereplő adott munkakörére talált OSINT béradat."
     },
@@ -102,6 +231,7 @@
       "company": "SPAR",
       "role_key": "stocker",
       "role_label": "Áruházi / bolti dolgozó",
+      "salary_display": "395 000 Ft",
       "salary_min_huf_month": 395000,
       "salary_median_huf_month": 395000,
       "salary_max_huf_month": 395000,
@@ -109,7 +239,6 @@
       "confidence": 80,
       "source_name": "hvg.hu",
       "source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQQkcxaTJlMVJlMU1pQVpXczB3RUlnMWh0aXJ2bkh3UzcxSFZSZXowVGZpUDRjRUtxTFQ5RlFzY2M2NGRzUkVNWHBodlVhQjRKWTdWT0diS1RmTUp5ZkRhbDVla1FWVTZ1LXdIby16ejRTVi04M1Bfel8temdsRXF5YTdCVXBmS09DeFQ1eDdZZVRsM0VCLW5r?oc=5&hl=hu&gl=HU&ceid=HU:hu",
-      "published_or_found_date": "Thu, 02 Jan 2025 08:00:00 GMT",
       "evidence_text": "Vállalkozás: Spar: 395 ezer bruttó lesz 2025-ben a dolgozók alapbére - | hvg.hu. Vállalkozás: Spar: 395 ezer bruttó lesz 2025-ben a dolgozók alapbére | hvg.hu. Google Hírek",
       "notes": "Egy adott szereplő adott munkakörére talált OSINT béradat."
     },
@@ -118,6 +247,7 @@
       "company": "Tesco",
       "role_key": "stocker",
       "role_label": "Áruházi / bolti dolgozó",
+      "salary_display": "N.A.",
       "salary_min_huf_month": "N.A.",
       "salary_median_huf_month": "N.A.",
       "salary_max_huf_month": "N.A.",
@@ -125,7 +255,6 @@
       "confidence": 0,
       "source_name": "N.A.",
       "source_url": "N.A.",
-      "published_or_found_date": "N.A.",
       "evidence_text": "N.A.",
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
@@ -134,6 +263,7 @@
       "company": "Auchan",
       "role_key": "stocker",
       "role_label": "Áruházi / bolti dolgozó",
+      "salary_display": "402 000 Ft",
       "salary_min_huf_month": 402000,
       "salary_median_huf_month": 402000,
       "salary_max_huf_month": 402000,
@@ -141,7 +271,6 @@
       "confidence": 90,
       "source_name": "hvg.hu",
       "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQX1VoRlhsV3B2SzRDdUVUUE5NYWt1UFNibjF3U3ZCQlRhSnU3RkRWbExMQXhVYnNXbWRuSUwwb3hJVkc0ekRPUWxOTlpNdFljTUZ4M0R6S3poUGdnS2JhRmdOYXZ3ZDYzcG9GbHZFaGw3dzA3WmtmeDZ6Um84VURlOWNtankxSFRhaGVj?oc=5&hl=hu&gl=HU&ceid=HU:hu",
-      "published_or_found_date": "Thu, 23 Jan 2025 08:00:00 GMT",
       "evidence_text": "Vállalkozás: Auchan: Bruttó 402 ezer lesz januártól a fizikai munkát végzők alapbére - | hvg.hu. Vállalkozás: Auchan: Bruttó 402 ezer lesz januártól a fizikai munkát végzők alapbére | hvg.hu. Google Hírek",
       "notes": "Egy adott szereplő adott munkakörére talált OSINT béradat."
     },
@@ -150,6 +279,7 @@
       "company": "Lidl",
       "role_key": "store_manager",
       "role_label": "Üzletvezető / vezetői munkakör",
+      "salary_display": "N.A.",
       "salary_min_huf_month": "N.A.",
       "salary_median_huf_month": "N.A.",
       "salary_max_huf_month": "N.A.",
@@ -157,7 +287,6 @@
       "confidence": 0,
       "source_name": "N.A.",
       "source_url": "N.A.",
-      "published_or_found_date": "N.A.",
       "evidence_text": "N.A.",
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
@@ -166,6 +295,7 @@
       "company": "ALDI",
       "role_key": "store_manager",
       "role_label": "Üzletvezető / vezetői munkakör",
+      "salary_display": "N.A.",
       "salary_min_huf_month": "N.A.",
       "salary_median_huf_month": "N.A.",
       "salary_max_huf_month": "N.A.",
@@ -173,7 +303,6 @@
       "confidence": 0,
       "source_name": "N.A.",
       "source_url": "N.A.",
-      "published_or_found_date": "N.A.",
       "evidence_text": "N.A.",
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
@@ -182,6 +311,7 @@
       "company": "PENNY",
       "role_key": "store_manager",
       "role_label": "Üzletvezető / vezetői munkakör",
+      "salary_display": "N.A.",
       "salary_min_huf_month": "N.A.",
       "salary_median_huf_month": "N.A.",
       "salary_max_huf_month": "N.A.",
@@ -189,7 +319,6 @@
       "confidence": 0,
       "source_name": "N.A.",
       "source_url": "N.A.",
-      "published_or_found_date": "N.A.",
       "evidence_text": "N.A.",
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
@@ -198,6 +327,7 @@
       "company": "SPAR",
       "role_key": "store_manager",
       "role_label": "Üzletvezető / vezetői munkakör",
+      "salary_display": "N.A.",
       "salary_min_huf_month": "N.A.",
       "salary_median_huf_month": "N.A.",
       "salary_max_huf_month": "N.A.",
@@ -205,7 +335,6 @@
       "confidence": 0,
       "source_name": "N.A.",
       "source_url": "N.A.",
-      "published_or_found_date": "N.A.",
       "evidence_text": "N.A.",
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
@@ -214,6 +343,7 @@
       "company": "Tesco",
       "role_key": "store_manager",
       "role_label": "Üzletvezető / vezetői munkakör",
+      "salary_display": "N.A.",
       "salary_min_huf_month": "N.A.",
       "salary_median_huf_month": "N.A.",
       "salary_max_huf_month": "N.A.",
@@ -221,7 +351,6 @@
       "confidence": 0,
       "source_name": "N.A.",
       "source_url": "N.A.",
-      "published_or_found_date": "N.A.",
       "evidence_text": "N.A.",
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
@@ -230,6 +359,7 @@
       "company": "Auchan",
       "role_key": "store_manager",
       "role_label": "Üzletvezető / vezetői munkakör",
+      "salary_display": "N.A.",
       "salary_min_huf_month": "N.A.",
       "salary_median_huf_month": "N.A.",
       "salary_max_huf_month": "N.A.",
@@ -237,7 +367,6 @@
       "confidence": 0,
       "source_name": "N.A.",
       "source_url": "N.A.",
-      "published_or_found_date": "N.A.",
       "evidence_text": "N.A.",
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
@@ -246,6 +375,7 @@
       "company": "Lidl",
       "role_key": "warehouse_worker",
       "role_label": "Raktári dolgozó",
+      "salary_display": "N.A.",
       "salary_min_huf_month": "N.A.",
       "salary_median_huf_month": "N.A.",
       "salary_max_huf_month": "N.A.",
@@ -253,7 +383,6 @@
       "confidence": 0,
       "source_name": "N.A.",
       "source_url": "N.A.",
-      "published_or_found_date": "N.A.",
       "evidence_text": "N.A.",
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
@@ -262,6 +391,7 @@
       "company": "ALDI",
       "role_key": "warehouse_worker",
       "role_label": "Raktári dolgozó",
+      "salary_display": "N.A.",
       "salary_min_huf_month": "N.A.",
       "salary_median_huf_month": "N.A.",
       "salary_max_huf_month": "N.A.",
@@ -269,7 +399,6 @@
       "confidence": 0,
       "source_name": "N.A.",
       "source_url": "N.A.",
-      "published_or_found_date": "N.A.",
       "evidence_text": "N.A.",
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
@@ -278,6 +407,7 @@
       "company": "PENNY",
       "role_key": "warehouse_worker",
       "role_label": "Raktári dolgozó",
+      "salary_display": "N.A.",
       "salary_min_huf_month": "N.A.",
       "salary_median_huf_month": "N.A.",
       "salary_max_huf_month": "N.A.",
@@ -285,7 +415,6 @@
       "confidence": 0,
       "source_name": "N.A.",
       "source_url": "N.A.",
-      "published_or_found_date": "N.A.",
       "evidence_text": "N.A.",
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
@@ -294,6 +423,7 @@
       "company": "SPAR",
       "role_key": "warehouse_worker",
       "role_label": "Raktári dolgozó",
+      "salary_display": "N.A.",
       "salary_min_huf_month": "N.A.",
       "salary_median_huf_month": "N.A.",
       "salary_max_huf_month": "N.A.",
@@ -301,7 +431,6 @@
       "confidence": 0,
       "source_name": "N.A.",
       "source_url": "N.A.",
-      "published_or_found_date": "N.A.",
       "evidence_text": "N.A.",
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
@@ -310,6 +439,7 @@
       "company": "Tesco",
       "role_key": "warehouse_worker",
       "role_label": "Raktári dolgozó",
+      "salary_display": "N.A.",
       "salary_min_huf_month": "N.A.",
       "salary_median_huf_month": "N.A.",
       "salary_max_huf_month": "N.A.",
@@ -317,7 +447,6 @@
       "confidence": 0,
       "source_name": "N.A.",
       "source_url": "N.A.",
-      "published_or_found_date": "N.A.",
       "evidence_text": "N.A.",
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
@@ -326,6 +455,7 @@
       "company": "Auchan",
       "role_key": "warehouse_worker",
       "role_label": "Raktári dolgozó",
+      "salary_display": "N.A.",
       "salary_min_huf_month": "N.A.",
       "salary_median_huf_month": "N.A.",
       "salary_max_huf_month": "N.A.",
@@ -333,7 +463,6 @@
       "confidence": 0,
       "source_name": "N.A.",
       "source_url": "N.A.",
-      "published_or_found_date": "N.A.",
       "evidence_text": "N.A.",
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
@@ -342,6 +471,7 @@
       "company": "Lidl",
       "role_key": "cashier",
       "role_label": "Pénztáros",
+      "salary_display": "N.A.",
       "salary_min_huf_month": "N.A.",
       "salary_median_huf_month": "N.A.",
       "salary_max_huf_month": "N.A.",
@@ -349,7 +479,6 @@
       "confidence": 0,
       "source_name": "N.A.",
       "source_url": "N.A.",
-      "published_or_found_date": "N.A.",
       "evidence_text": "N.A.",
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
@@ -358,6 +487,7 @@
       "company": "ALDI",
       "role_key": "cashier",
       "role_label": "Pénztáros",
+      "salary_display": "N.A.",
       "salary_min_huf_month": "N.A.",
       "salary_median_huf_month": "N.A.",
       "salary_max_huf_month": "N.A.",
@@ -365,7 +495,6 @@
       "confidence": 0,
       "source_name": "N.A.",
       "source_url": "N.A.",
-      "published_or_found_date": "N.A.",
       "evidence_text": "N.A.",
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
@@ -374,6 +503,7 @@
       "company": "PENNY",
       "role_key": "cashier",
       "role_label": "Pénztáros",
+      "salary_display": "N.A.",
       "salary_min_huf_month": "N.A.",
       "salary_median_huf_month": "N.A.",
       "salary_max_huf_month": "N.A.",
@@ -381,7 +511,6 @@
       "confidence": 0,
       "source_name": "N.A.",
       "source_url": "N.A.",
-      "published_or_found_date": "N.A.",
       "evidence_text": "N.A.",
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
@@ -390,6 +519,7 @@
       "company": "SPAR",
       "role_key": "cashier",
       "role_label": "Pénztáros",
+      "salary_display": "N.A.",
       "salary_min_huf_month": "N.A.",
       "salary_median_huf_month": "N.A.",
       "salary_max_huf_month": "N.A.",
@@ -397,7 +527,6 @@
       "confidence": 0,
       "source_name": "N.A.",
       "source_url": "N.A.",
-      "published_or_found_date": "N.A.",
       "evidence_text": "N.A.",
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
@@ -406,6 +535,7 @@
       "company": "Tesco",
       "role_key": "cashier",
       "role_label": "Pénztáros",
+      "salary_display": "N.A.",
       "salary_min_huf_month": "N.A.",
       "salary_median_huf_month": "N.A.",
       "salary_max_huf_month": "N.A.",
@@ -413,7 +543,6 @@
       "confidence": 0,
       "source_name": "N.A.",
       "source_url": "N.A.",
-      "published_or_found_date": "N.A.",
       "evidence_text": "N.A.",
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
@@ -422,6 +551,7 @@
       "company": "Auchan",
       "role_key": "cashier",
       "role_label": "Pénztáros",
+      "salary_display": "N.A.",
       "salary_min_huf_month": "N.A.",
       "salary_median_huf_month": "N.A.",
       "salary_max_huf_month": "N.A.",
@@ -429,9 +559,60 @@
       "confidence": 0,
       "source_name": "N.A.",
       "source_url": "N.A.",
-      "published_or_found_date": "N.A.",
       "evidence_text": "N.A.",
       "notes": "Jelenleg nincs elérhető OSINT béradat."
+    }
+  ],
+  "evidence_table": [
+    {
+      "company_id": "penny",
+      "company": "PENNY",
+      "value_type": "salary_raise_pct",
+      "source_name": "portfolio.hu",
+      "source_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQd29GcXNoTGZmWDl4RzFDeWFfU2RSRllBZEl1bWY4eUlvQXZaQkVSbzVJUEgwdDdLcW1SeFA1VW83NXJzaUxmV2gwa1RhbUNuQ3VleWdKLWs0LW5iOS1hM3dJYTR3U2JhV2dtQ0FFNnp3VTVRV3B3TlBLdzg5V1RGbUYyd1QtellDWkphSHBCZEHSAZYBQVVfeXFMTlZxTm9ZTHhfSU4wakFkc2xwZmhhYXc1NW80eFlEcE1lWjNGblFJaUFSQ2dMWmI5NXRWQnZoMUxoLU1vZGdOR3JiUExmQUpBSy1RQ0pEZ1ZNY1lXWVdkaHFwRzlKVWtrQ2dNQzlfTFptcFlpVC1VYTI0cGtvVjhQUFFFZ2c3VjBnOGpYMzA1NW9UTVpCTzdB?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "published_or_found_date": "Fri, 23 Jan 2026 08:00:00 GMT",
+      "confidence": 65,
+      "evidence_text": "6-8 százalékos béremelés jön a Penny-nél - Portfolio.hu. 6-8 százalékos béremelés jön a Penny-nél Portfolio.hu. Google Hírek"
+    },
+    {
+      "company_id": "penny",
+      "company": "PENNY",
+      "value_type": "salary_range_huf_month",
+      "source_name": "hvg.hu",
+      "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaTJfejl6VWxrWVktZE51TmVqN284V1I3RmtpeFRHdHpTMVNYQzFYNmtNcTdBNkNNM1ZpcXAtS3gwdUVfZ25PempyR2ZBSnEyREJ5dk9PTDhfSlhpOWk4SEMzbXJXOGRBRVdseXI1QkUxNkRxQUpGNXlDU19LZFR5a3p1T2hPUQ?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "published_or_found_date": "Tue, 23 Dec 2025 08:00:00 GMT",
+      "confidence": 90,
+      "evidence_text": "Gazdaság: Bruttó 540 ezerért keres új munkatársakat a Penny, de az összeg felcsúszhat 670 ezerig is - | hvg.hu. Gazdaság: Bruttó 540 ezerért keres új munkatársakat a Penny, de az összeg felcsúszhat 670 ezerig is | hvg.hu. Google Hírek"
+    },
+    {
+      "company_id": "spar",
+      "company": "SPAR",
+      "value_type": "salary_huf_month",
+      "source_name": "hvg.hu",
+      "source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQQkcxaTJlMVJlMU1pQVpXczB3RUlnMWh0aXJ2bkh3UzcxSFZSZXowVGZpUDRjRUtxTFQ5RlFzY2M2NGRzUkVNWHBodlVhQjRKWTdWT0diS1RmTUp5ZkRhbDVla1FWVTZ1LXdIby16ejRTVi04M1Bfel8temdsRXF5YTdCVXBmS09DeFQ1eDdZZVRsM0VCLW5r?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "published_or_found_date": "Thu, 02 Jan 2025 08:00:00 GMT",
+      "confidence": 80,
+      "evidence_text": "Vállalkozás: Spar: 395 ezer bruttó lesz 2025-ben a dolgozók alapbére - | hvg.hu. Vállalkozás: Spar: 395 ezer bruttó lesz 2025-ben a dolgozók alapbére | hvg.hu. Google Hírek"
+    },
+    {
+      "company_id": "tesco",
+      "company": "Tesco",
+      "value_type": "salary_raise_pct",
+      "source_name": "portfolio.hu",
+      "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPUjB1ejFlSFJmbXBVZVVERVI2eVhrcFhEOUdST3hhenozRTFWSzdJWEV0MVhmMlpPU1FTY19RRFBiS1dfa0hPNUlVc0ZSUHVQQ0lPbVFTVWptOGRRSXl4eXlFc3NZb3ludTFZRGVBTUQ0bWNaNmxheUh5cGlGZ2JmNjZPdkdiZ3N3UWMxWUZxaDdOSGNwWU92eHhMd9IBoAFBVV95cUxQNTRyNXVuLWlwSktEVU1xUHRVS1VVNTQ2Vkk5czBPcHh2RndMaG1xcWs2aV9uRDdKaEc5dXV4VXJyazZtUlZYX2VzMHJWZ0M5YUtUcmxqa3JuRl9TYVFCVk52VUNDNldGUnJwblMtTmRIX21Rd0hCZ3BzNFBHNHM5dWJQR3ZfZUQ5SkRoeHAwTFotU3Jxc2ZiYnBUVktXWmNI?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "published_or_found_date": "Fri, 23 Jan 2026 08:00:00 GMT",
+      "confidence": 65,
+      "evidence_text": "7,2 százalékos béremelést kapnak a Tesco dolgozói - Portfolio.hu. 7,2 százalékos béremelést kapnak a Tesco dolgozói Portfolio.hu. Google Hírek"
+    },
+    {
+      "company_id": "auchan",
+      "company": "Auchan",
+      "value_type": "salary_huf_month",
+      "source_name": "hvg.hu",
+      "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQX1VoRlhsV3B2SzRDdUVUUE5NYWt1UFNibjF3U3ZCQlRhSnU3RkRWbExMQXhVYnNXbWRuSUwwb3hJVkc0ekRPUWxOTlpNdFljTUZ4M0R6S3poUGdnS2JhRmdOYXZ3ZDYzcG9GbHZFaGw3dzA3WmtmeDZ6Um84VURlOWNtankxSFRhaGVj?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "published_or_found_date": "Thu, 23 Jan 2025 08:00:00 GMT",
+      "confidence": 90,
+      "evidence_text": "Vállalkozás: Auchan: Bruttó 402 ezer lesz januártól a fizikai munkát végzők alapbére - | hvg.hu. Vállalkozás: Auchan: Bruttó 402 ezer lesz januártól a fizikai munkát végzők alapbére | hvg.hu. Google Hírek"
     }
   ]
 }
