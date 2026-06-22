@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-21T08:19:01Z",
+  "updated_at": "2026-06-22T09:36:16Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -243,8 +243,8 @@
       "prices": {
         "Penny": 2390.0,
         "SPAR": 1990.0,
-        "ALDI": 1990.0,
         "Auchan": 2045.0,
+        "ALDI": 2390.0,
         "Lidl": 2390.0,
         "Tesco": 2590.0
       },
@@ -269,21 +269,21 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "ALDI": {
-          "source_product_id": "aldi-731889",
-          "source_product_name": "Kokárdás trappista sajt kg",
-          "amount": 1990.0,
-          "unit_amount": 1990.0,
-          "unit": "kg",
-          "unit_title": "db",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
         "Auchan": {
           "source_product_id": "2199180000004",
           "source_product_name": "Riska félzsíros félkemény sajt Ft/kg",
           "amount": 2045.0,
           "unit_amount": 2045.0,
+          "unit": "kg",
+          "unit_title": "db",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "ALDI": {
+          "source_product_id": "aldi-731889",
+          "source_product_name": "Kokárdás trappista sajt kg",
+          "amount": 2390.0,
+          "unit_amount": 2390.0,
           "unit": "kg",
           "unit_title": "db",
           "packaging": "1",
@@ -549,32 +549,22 @@
       "category": "Húsáru",
       "expected_unit": "kg",
       "prices": {
-        "ALDI": 1399.0,
-        "Lidl": 1598.0,
+        "Lidl": 1399.0,
         "Penny": 1749.0,
         "Auchan": 1739.0,
         "Tesco": 1748.75,
+        "ALDI": 1749.0,
         "SPAR": 1954.44
       },
       "selected_products": {
-        "ALDI": {
-          "source_product_id": "aldi-719455",
-          "source_product_name": "Darált sertéshús 30 % 1kg",
+        "Lidl": {
+          "source_product_id": "lidl-0005545",
+          "source_product_name": "Húsfarm XXL Sertés darálthús 30%,  1000g",
           "amount": 1399.0,
           "unit_amount": 1399.0,
           "unit": "kg",
-          "unit_title": "csomag",
+          "unit_title": "kg",
           "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Lidl": {
-          "source_product_id": "lidl-0001694",
-          "source_product_name": "Húsfarm Sertés darálthús 30%,  500g",
-          "amount": 799.0,
-          "unit_amount": 1598.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "0.5",
           "price_type": "NORMAL"
         },
         "Penny": {
@@ -607,6 +597,16 @@
           "packaging": "0.8",
           "price_type": "NORMAL"
         },
+        "ALDI": {
+          "source_product_id": "aldi-719455",
+          "source_product_name": "Darált sertéshús 30 % 1kg",
+          "amount": 1749.0,
+          "unit_amount": 1749.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "SPAR": {
           "source_product_id": "5999033810241",
           "source_product_name": "S-Budget sertés darálthús 900 g",
@@ -626,24 +626,14 @@
       "category": "Húsáru",
       "expected_unit": "kg",
       "prices": {
-        "Penny": 1979.0,
         "SPAR": 1811.0,
         "Lidl": 1859.0,
         "Auchan": 1939.0,
         "ALDI": 1979.0,
+        "Penny": 1979.0,
         "Tesco": 1990.0
       },
       "selected_products": {
-        "Penny": {
-          "source_product_id": "penny-10248",
-          "source_product_name": "Friss csirkemellfilé kg",
-          "amount": 1979.0,
-          "unit_amount": 1979.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
         "SPAR": {
           "source_product_id": "5999550782526",
           "source_product_name": "S-Budget friss csirkemellfilé",
@@ -684,6 +674,16 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
+        "Penny": {
+          "source_product_id": "penny-10248",
+          "source_product_name": "Friss csirkemellfilé kg",
+          "amount": 1979.0,
+          "unit_amount": 1979.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "Tesco": {
           "source_product_id": "2856060000000",
           "source_product_name": "CSIRKE BELSŐ MELLFILÉ VÁKUMCS Ft/kg",
@@ -703,14 +703,24 @@
       "category": "Húsáru",
       "expected_unit": "kg",
       "prices": {
+        "Lidl": 2869.0,
         "Tesco": 2953.33,
-        "Lidl": 2999.0,
         "ALDI": 2999.0,
         "Penny": 2999.0,
         "Auchan": 3109.0,
         "SPAR": 3117.78
       },
       "selected_products": {
+        "Lidl": {
+          "source_product_id": "lidl-0006908",
+          "source_product_name": "Húsfarm Friss pulykamellfilé csont és bőr nélkül , kg ",
+          "amount": 2869.0,
+          "unit_amount": 2869.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "Tesco": {
           "source_product_id": "5995885820407",
           "source_product_name": "TESCO FRISS PULYAKMELLFILÉ 450 g QQ",
@@ -719,16 +729,6 @@
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "0.45",
-          "price_type": "NORMAL"
-        },
-        "Lidl": {
-          "source_product_id": "2884940000000",
-          "source_product_name": "Pulykamell  kg",
-          "amount": 2999.0,
-          "unit_amount": 2999.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
           "price_type": "NORMAL"
         },
         "ALDI": {
@@ -1012,11 +1012,11 @@
       "expected_unit": "kg",
       "prices": {
         "Tesco": 385.0,
-        "Lidl": 419.0,
-        "Penny": 549.0,
+        "Lidl": 395.0,
         "Auchan": 447.0,
         "ALDI": 475.0,
-        "SPAR": 483.0
+        "SPAR": 483.0,
+        "Penny": 489.0
       },
       "selected_products": {
         "Tesco": {
@@ -1032,18 +1032,8 @@
         "Lidl": {
           "source_product_id": "lidl-0082488",
           "source_product_name": "Paradicsom 1kg",
-          "amount": 419.0,
-          "unit_amount": 419.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-298",
-          "source_product_name": "Magyar fürtös paradicsom lé kg",
-          "amount": 549.0,
-          "unit_amount": 549.0,
+          "amount": 395.0,
+          "unit_amount": 395.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1078,6 +1068,16 @@
           "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
+        },
+        "Penny": {
+          "source_product_id": "penny-298",
+          "source_product_name": "Magyar fürtös paradicsom lé kg",
+          "amount": 489.0,
+          "unit_amount": 489.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
         }
       },
       "coverage": 6
@@ -1092,8 +1092,8 @@
         "Penny": 999.0,
         "Tesco": 862.0,
         "Lidl": 879.0,
-        "ALDI": 949.0,
-        "Auchan": 908.0
+        "Auchan": 908.0,
+        "ALDI": 949.0
       },
       "selected_products": {
         "SPAR": {
@@ -1136,21 +1136,21 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "ALDI": {
-          "source_product_id": "aldi-730700",
-          "source_product_name": "Paprika tv lédig",
-          "amount": 949.0,
-          "unit_amount": 949.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
         "Auchan": {
           "source_product_id": "2182050000006",
           "source_product_name": "Étkezési paprika Ft/kg",
           "amount": 908.0,
           "unit_amount": 908.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "ALDI": {
+          "source_product_id": "aldi-730700",
+          "source_product_name": "Paprika tv lédig",
+          "amount": 949.0,
+          "unit_amount": 949.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1517,29 +1517,29 @@
       "category": "Alapélelmiszer",
       "expected_unit": "kg",
       "prices": {
-        "Lidl": 269.0,
         "Auchan": 293.0,
+        "Lidl": 295.0,
         "Penny": 295.0,
         "SPAR": 300.0,
         "ALDI": 295.0,
         "Tesco": 304.0
       },
       "selected_products": {
-        "Lidl": {
-          "source_product_id": "3859893641008",
-          "source_product_name": "Viro kristálycukor, 1kg",
-          "amount": 269.0,
-          "unit_amount": 269.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
         "Auchan": {
           "source_product_id": "4008671013004",
           "source_product_name": "Sweet Family kristálycukor 1 kg",
           "amount": 293.0,
           "unit_amount": 293.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Lidl": {
+          "source_product_id": "5906340630622",
+          "source_product_name": "Kristálycukor , 1kg",
+          "amount": 295.0,
+          "unit_amount": 295.0,
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "1",
@@ -1803,24 +1803,14 @@
       "category": "Háztartás",
       "expected_unit": "l",
       "prices": {
-        "ALDI": 330.71,
         "Auchan": 336.0,
         "SPAR": 565.67,
         "Tesco": 476.333,
         "Penny": 624.75,
-        "Lidl": 463.18
+        "Lidl": 463.18,
+        "ALDI": 497.38
       },
       "selected_products": {
-        "ALDI": {
-          "source_product_id": "aldi-738509",
-          "source_product_name": "Folyékony mosószer Color 4,2l",
-          "amount": 1389.0,
-          "unit_amount": 330.71,
-          "unit": "l",
-          "unit_title": "db",
-          "packaging": "4.2",
-          "price_type": "NORMAL"
-        },
         "Auchan": {
           "source_product_id": "5900308777688",
           "source_product_name": "Dr. Prakti Express Universal univerzális mosógél fehér és színes ruhákhoz 109 mosás 3,27 l",
@@ -1869,6 +1859,16 @@
           "unit": "l",
           "unit_title": "db",
           "packaging": "2.2",
+          "price_type": "NORMAL"
+        },
+        "ALDI": {
+          "source_product_id": "aldi-738509",
+          "source_product_name": "Folyékony mosószer Color 4,2l",
+          "amount": 2089.0,
+          "unit_amount": 497.38,
+          "unit": "l",
+          "unit_title": "db",
+          "packaging": "4.2",
           "price_type": "NORMAL"
         }
       },
