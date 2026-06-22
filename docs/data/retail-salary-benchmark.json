@@ -1,0 +1,61 @@
+{
+  "updated_at": "2026-06-22",
+  "status": "ok",
+  "source_type": "general_retail_salary_benchmark",
+  "source": "Fizetesek.com és általános HR piaci benchmark alapján kézzel rögzített referenciaadat",
+  "important_note": "Ez általános magyarországi kiskereskedelmi bérbenchmark. Nem vállalatspecifikus adat. A konkrét vállalati OSINT találatokkal külön kell összevetni.",
+  "currency": "HUF",
+  "period": "month",
+  "salary_type": "gross",
+  "roles": [
+    {
+      "role_key": "sales_assistant",
+      "role_label": "Eladó",
+      "salary_min_huf_month": 400000,
+      "salary_mid_huf_month": 450000,
+      "salary_max_huf_month": 520000
+    },
+    {
+      "role_key": "deputy_store_manager",
+      "role_label": "Üzletvezető-helyettes",
+      "salary_min_huf_month": 490000,
+      "salary_mid_huf_month": 630000,
+      "salary_max_huf_month": 710000
+    },
+    {
+      "role_key": "department_manager",
+      "role_label": "Osztályvezető / áruházi vezető",
+      "salary_min_huf_month": 500000,
+      "salary_mid_huf_month": 620000,
+      "salary_max_huf_month": 740000
+    },
+    {
+      "role_key": "store_manager",
+      "role_label": "Üzletvezető / boltvezető",
+      "salary_min_huf_month": 650000,
+      "salary_mid_huf_month": 720000,
+      "salary_max_huf_month": 800000
+    },
+    {
+      "role_key": "district_manager",
+      "role_label": "Körzeti vezető",
+      "salary_min_huf_month": 850000,
+      "salary_mid_huf_month": 1150000,
+      "salary_max_huf_month": 1400000
+    },
+    {
+      "role_key": "regional_manager",
+      "role_label": "Területi vezető",
+      "salary_min_huf_month": 1100000,
+      "salary_mid_huf_month": 1600000,
+      "salary_max_huf_month": 1950000
+    },
+    {
+      "role_key": "national_manager",
+      "role_label": "Országos vezető",
+      "salary_min_huf_month": 1400000,
+      "salary_mid_huf_month": 1600000,
+      "salary_max_huf_month": 2200000
+    }
+  ]
+}
