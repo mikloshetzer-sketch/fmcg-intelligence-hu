@@ -1,3 +1,24 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+FMCG Jobs Intelligence v3
+
+Kimenetek változatlanul:
+- docs/data/jobs.json
+- docs/data/job-postings-current.json
+- docs/data/employer-reviews.json
+- docs/data/benefits.json
+- docs/data/jobs-history/YYYY-MM.json
+- docs/data/jobs-raw/YYYY-MM.json
+- docs/data/jobs-monitor-status.json
+
+Javítás:
+- Ha a Profession / karrieroldal nem tölthető le, nem nullázza ki a Recruitment Mixet.
+- Fallbackként megtartja az utolsó jó kategóriabontást.
+- Kulcsszavas kategorizálást is használ, nem csak fix munkakörlistát.
+"""
+
 import json
 import re
 import time
@@ -31,7 +52,7 @@ USER_AGENT = (
 )
 
 REQUEST_TIMEOUT = 25
-REQUEST_DELAY_SECONDS = 3
+REQUEST_DELAY_SECONDS = 2
 
 
 PROFESSION_COMPANY_URLS = {
@@ -40,7 +61,7 @@ PROFESSION_COMPANY_URLS = {
     "spar": "https://www.profession.hu/allasok/1,0,0,0,0,0,0,0,0,0,4719_112707",
     "tesco": "https://www.profession.hu/allasok/tesco-global-zrt/1,0,0,0,0,0,0,0,0,0,3710",
     "penny": "https://www.profession.hu/allasok/1,0,0,penny%401%401?keywordsearch",
-    "auchan": "https://www.profession.hu/allasok/auchan-retail-magyarorszag/1,0,0,0,0,0,0,0,0,0,7267"
+    "auchan": "https://www.profession.hu/allasok/auchan-retail-magyarorszag/1,0,0,0,0,0,0,0,0,0,7267",
 }
 
 
@@ -55,7 +76,7 @@ KNOWN_JOBS = {
         ("Targoncavezető", "warehouse"),
         ("Áruösszekészítő", "warehouse"),
         ("Raktári csoportvezető", "warehouse"),
-        ("Raktári csoportvezető-helyettes", "warehouse")
+        ("Raktári csoportvezető-helyettes", "warehouse"),
     ],
     "aldi": [
         ("Bolti eladó", "store"),
@@ -66,7 +87,7 @@ KNOWN_JOBS = {
         ("Üzletvezető", "management"),
         ("Üzletvezető-helyettes", "management"),
         ("Manager", "management"),
-        ("Asszisztens", "office")
+        ("Asszisztens", "office"),
     ],
     "spar": [
         ("Eladó-pénztáros", "store"),
@@ -80,7 +101,7 @@ KNOWN_JOBS = {
         ("Boltvezető", "management"),
         ("Boltvezető-helyettes", "management"),
         ("Műszak részlegvezető", "management"),
-        ("Műszak-részlegvezető", "management")
+        ("Műszak-részlegvezető", "management"),
     ],
     "tesco": [
         ("Eladó", "store"),
@@ -92,7 +113,7 @@ KNOWN_JOBS = {
         ("Manager", "management"),
         ("Buying Manager", "management"),
         ("Bér-TB szenior specialista", "office"),
-        ("Specialista", "office")
+        ("Specialista", "office"),
     ],
     "penny": [
         ("Eladó-pénztáros", "store"),
@@ -104,7 +125,7 @@ KNOWN_JOBS = {
         ("Targoncavezető", "warehouse"),
         ("Raktári dolgozó", "warehouse"),
         ("Asszisztens", "office"),
-        ("Elemző", "office")
+        ("Elemző", "office"),
     ],
     "auchan": [
         ("Eladó", "store"),
@@ -115,8 +136,33 @@ KNOWN_JOBS = {
         ("Kamion leszedő munkatárs", "warehouse"),
         ("Kereskedelmi manager", "management"),
         ("Üzletvezető-helyettes", "management"),
-        ("Manager", "management")
-    ]
+        ("Manager", "management"),
+    ],
+}
+
+
+JOB_PATTERNS = {
+    "store": [
+        "eladó", "pénztáros", "kasszás", "kassza", "árufeltöltő",
+        "bolti", "áruházi", "pék", "pékáru", "hentes", "csemege",
+        "csemegepult", "pultos", "higiéniai munkatárs", "online bevásárlás",
+        "összekészítő", "shop eladó", "élelmiszer-eladó",
+    ],
+    "warehouse": [
+        "raktár", "raktári", "raktáros", "targoncavezető",
+        "komissiózó", "áruösszekészítő", "logisztikai",
+        "áruátvevő", "kamion", "rakodó",
+    ],
+    "management": [
+        "vezető", "manager", "boltvezető", "üzletvezető",
+        "áruházvezető", "osztályvezető", "részlegvezető",
+        "csoportvezető", "területi", "műszakvezető",
+    ],
+    "office": [
+        "asszisztens", "elemző", "specialista", "koordinátor",
+        "hr", "beszerző", "beszerzés", "irodai", "központi",
+        "marketing", "pénzügy", "kontroller", "controller",
+    ],
 }
 
 
@@ -129,28 +175,20 @@ BENEFIT_KEYWORDS = {
     "life_insurance": ["életbiztosítás", "balesetbiztosítás"],
     "training": ["képzés", "betanulás", "fejlődési lehetőség", "tréning"],
     "language_support": ["nyelvtanulás", "nyelvi képzés", "nyelvoktatás"],
-    "employee_discount": ["dolgozói kedvezmény", "munkavállalói kedvezmény"]
+    "employee_discount": ["dolgozói kedvezmény", "munkavállalói kedvezmény"],
 }
 
 
 BAD_TEXT_PARTS = [
-    "áttekintés",
-    "karrier",
-    "értékesítés",
-    "raktár / logisztika",
-    "raktár/logisztika",
-    "központi irodaház",
-    "vállalati kommunikáció",
-    "beszerzés marketing",
-    "munkatársaik",
-    "életkörülményeiről",
     "adatvédelem",
     "cookie",
     "süti",
     "impresszum",
     "kapcsolat",
     "rendezvényeink",
-    "történetünk"
+    "történetünk",
+    "életkörülményeiről",
+    "munkatársaik",
 ]
 
 
@@ -158,18 +196,19 @@ def load_json(path, default):
     if not path.exists():
         return default
     try:
-        with open(path, "r", encoding="utf-8") as f:
-            return json.load(f)
+        with open(path, "r", encoding="utf-8") as file:
+            return json.load(file)
     except Exception:
         return default
 
 
 def save_json(path, data):
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+    with open(path, "w", encoding="utf-8") as file:
+        json.dump(data, file, ensure_ascii=False, indent=2)
 
 
 def clean_text(text):
+    text = text or ""
     text = re.sub(r"<script.*?</script>", " ", text, flags=re.I | re.S)
     text = re.sub(r"<style.*?</style>", " ", text, flags=re.I | re.S)
     text = re.sub(r"<[^>]+>", " ", text)
@@ -184,7 +223,7 @@ def fetch_url(url):
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
         "Accept-Language": "hu-HU,hu;q=0.9,en-US;q=0.8,en;q=0.7",
         "Cache-Control": "no-cache",
-        "Pragma": "no-cache"
+        "Pragma": "no-cache",
     }
 
     for attempt in range(3):
@@ -193,10 +232,8 @@ def fetch_url(url):
             with urllib.request.urlopen(request, timeout=REQUEST_TIMEOUT) as response:
                 charset = response.headers.get_content_charset() or "utf-8"
                 html = response.read().decode(charset, errors="ignore")
-
                 if len(html) > 500:
                     return html
-
         except Exception:
             time.sleep(2 + attempt)
 
@@ -222,7 +259,7 @@ def make_search_url(source_type, company, company_id=None):
 
 
 def normalize_title(title):
-    title = unescape(title)
+    title = unescape(title or "")
     title = re.sub(r"\s+", " ", title)
     title = re.sub(r"^\d{4}\s+", "", title)
     title = re.sub(r"^\d{1,2}\s+", "", title)
@@ -233,15 +270,12 @@ def normalize_title(title):
 
 
 def is_bad_fragment(text):
-    lower = text.lower()
+    lower = (text or "").lower()
 
     if any(bad in lower for bad in BAD_TEXT_PARTS):
         return True
 
-    if len(text.split()) > 8:
-        return True
-
-    if text[:1].islower() and not text.lower().startswith(("áru", "eladó", "pék", "hentes")):
+    if len(text.split()) > 12:
         return True
 
     return False
@@ -266,7 +300,7 @@ def extract_location_from_title(title):
     bad_location_terms = [
         "franchise", "feladva", "magyarország", "élelmisz",
         "rossmann", "sinsay", "tesco-bst", "kft", "zrt", "bt",
-        "aldi", "auchan", "spar", "tesco", "penny", "lidl"
+        "aldi", "auchan", "spar", "tesco", "penny", "lidl",
     ]
 
     if len(location) > 35:
@@ -276,6 +310,49 @@ def extract_location_from_title(title):
         return None
 
     return location
+
+
+def detect_category_from_text(text):
+    lower = (text or "").lower()
+
+    if "toborzónap" in lower or "toborzó nap" in lower:
+        return "recruitment_event"
+
+    scores = {}
+
+    for category, keywords in JOB_PATTERNS.items():
+        score = 0
+        for keyword in keywords:
+            if keyword in lower:
+                score += 1
+        if score:
+            scores[category] = score
+
+    if not scores:
+        return "unknown"
+
+    return sorted(scores.items(), key=lambda item: item[1], reverse=True)[0][0]
+
+
+def make_posting(company_id, company_name, source_name, source_type, title, category, url, location=None):
+    return {
+        "posting_id": posting_id(company_id, source_name, title, location),
+        "company_id": company_id,
+        "company": company_name,
+        "source": source_name,
+        "source_type": source_type,
+        "title": title,
+        "category": category,
+        "location": location,
+        "salary_min_huf": None,
+        "salary_max_huf": None,
+        "salary_visible": False,
+        "benefits_visible": None,
+        "commuting_support_visible": None,
+        "full_time_visible": None,
+        "part_time_visible": None,
+        "url": url,
+    }
 
 
 def extract_known_jobs_from_text(company_id, company_name, source_name, source_type, url, html):
@@ -289,9 +366,12 @@ def extract_known_jobs_from_text(company_id, company_name, source_name, source_t
         matches = list(re.finditer(pattern, text, flags=re.I))
 
         for match in matches:
-            start = max(0, match.start() - 45)
-            end = min(len(text), match.end() + 55)
+            start = max(0, match.start() - 60)
+            end = min(len(text), match.end() + 70)
             window = normalize_title(text[start:end])
+
+            if is_bad_fragment(window) and "toborzónap" not in window.lower():
+                continue
 
             location = extract_location_from_title(window)
             title = job_name
@@ -301,28 +381,13 @@ def extract_known_jobs_from_text(company_id, company_name, source_name, source_t
                 title = f"{job_name} toborzónap"
                 item_category = "recruitment_event"
 
-            if is_bad_fragment(window) and source_type == "career_site":
-                if "toborzónap" not in window.lower():
-                    continue
+            results.append(
+                make_posting(company_id, company_name, source_name, source_type, title, item_category, url, location)
+            )
 
-            results.append({
-                "posting_id": posting_id(company_id, source_name, title, location),
-                "company_id": company_id,
-                "company": company_name,
-                "source": source_name,
-                "source_type": source_type,
-                "title": title,
-                "category": item_category,
-                "location": location,
-                "salary_min_huf": None,
-                "salary_max_huf": None,
-                "salary_visible": False,
-                "benefits_visible": None,
-                "commuting_support_visible": None,
-                "full_time_visible": None,
-                "part_time_visible": None,
-                "url": url
-            })
+    results.extend(
+        extract_pattern_jobs_from_text(company_id, company_name, source_name, source_type, url, text)
+    )
 
     unique = {}
     for item in results:
@@ -331,13 +396,50 @@ def extract_known_jobs_from_text(company_id, company_name, source_name, source_t
     return list(unique.values())
 
 
+def extract_pattern_jobs_from_text(company_id, company_name, source_name, source_type, url, text):
+    results = []
+    lower = text.lower()
+
+    for category, keywords in JOB_PATTERNS.items():
+        for keyword in keywords:
+            for match in re.finditer(re.escape(keyword), lower, flags=re.I):
+                start = max(0, match.start() - 28)
+                end = min(len(text), match.end() + 42)
+                window = normalize_title(text[start:end])
+
+                if not window:
+                    continue
+
+                if is_bad_fragment(window):
+                    continue
+
+                detected_category = detect_category_from_text(window)
+                if detected_category == "unknown":
+                    detected_category = category
+
+                title = keyword.capitalize()
+                if "toborzónap" in window.lower():
+                    title = f"{keyword.capitalize()} toborzónap"
+                    detected_category = "recruitment_event"
+
+                results.append(
+                    make_posting(company_id, company_name, source_name, source_type, title, detected_category, url, extract_location_from_title(window))
+                )
+
+    unique = {}
+    for item in results:
+        unique[item["posting_id"]] = item
+
+    return list(unique.values())[:40]
+
+
 def extract_count_hint(html):
     text = clean_text(html).lower()
     current_year = datetime.now(timezone.utc).year
 
     patterns = [
         r"(\d{1,4})\s+(?:állás|találat|hirdetés)",
-        r"(?:állás|találat|hirdetés)[^\d]{0,25}(\d{1,4})"
+        r"(?:állás|találat|hirdetés)[^\d]{0,25}(\d{1,4})",
     ]
 
     numbers = []
@@ -398,7 +500,7 @@ def extract_employer_review_data(html, company_id, company_name, source_url):
         "review_count": review_count,
         "opinion_count": opinion_count,
         "source_status": "parsed" if any(v is not None for v in [rating, review_count, opinion_count]) else "not_found",
-        "notes": "Profession cégoldalról automatikusan kinyert munkáltatói értékelési adat."
+        "notes": "Profession cégoldalról automatikusan kinyert munkáltatói értékelési adat.",
     }
 
 
@@ -435,13 +537,40 @@ def last_good_jobs():
                 if not company_id:
                     continue
 
-                has_good_profession = (
+                has_useful_data = (
                     isinstance(row.get("profession_active_ads"), int)
                     or isinstance(row.get("external_count_hint"), int)
+                    or row.get("store_jobs", 0) > 0
+                    or row.get("warehouse_jobs", 0) > 0
+                    or row.get("office_jobs", 0) > 0
+                    or row.get("management_jobs", 0) > 0
+                    or row.get("recruitment_events", 0) > 0
                 )
 
-                if has_good_profession:
+                if has_useful_data:
                     previous[company_id] = row
+
+    return previous
+
+
+def last_good_postings():
+    previous = {}
+
+    current = load_json(CURRENT_POSTINGS_FILE, [])
+    if isinstance(current, list):
+        for posting in current:
+            company_id = posting.get("company_id")
+            if company_id:
+                previous.setdefault(company_id, []).append(posting)
+
+    for path in sorted(HISTORY_DIR.glob("*.json"), reverse=True):
+        data = load_json(path, {})
+        postings = data.get("postings", [])
+        if isinstance(postings, list):
+            for posting in postings:
+                company_id = posting.get("company_id")
+                if company_id:
+                    previous.setdefault(company_id, []).append(posting)
 
     return previous
 
@@ -503,7 +632,7 @@ def collect_from_source(company_id, company_name, source):
         "postings": [],
         "employer_review": None,
         "benefits": None,
-        "error": None
+        "error": None,
     }
 
     if not enabled:
@@ -545,23 +674,46 @@ def collect_from_source(company_id, company_name, source):
             "source": "Profession",
             "source_url": url,
             **extract_benefits_from_text(clean_text(html)),
-            "notes": "Profession HTML alapján előzetesen érzékelt juttatási kulcsszavak."
+            "notes": "Profession HTML alapján előzetesen érzékelt juttatási kulcsszavak.",
         }
 
-    result["postings"] = extract_known_jobs_from_text(
-        company_id=company_id,
-        company_name=company_name,
-        source_name=source_name,
-        source_type=source_type,
-        url=url,
-        html=html
-    )
+    result["postings"] = extract_known_jobs_from_text(company_id, company_name, source_name, source_type, url, html)
 
     time.sleep(REQUEST_DELAY_SECONDS)
     return result
 
 
-def summarize_company(company, source_results, collected_at, fallback_jobs, fallback_reviews, fallback_benefits):
+def category_counts_from_postings(postings):
+    category_counts = {
+        "store": 0,
+        "warehouse": 0,
+        "office": 0,
+        "management": 0,
+        "recruitment_event": 0,
+        "unknown": 0,
+    }
+
+    for posting in postings:
+        category = posting.get("category", "unknown")
+        if category not in category_counts:
+            category = "unknown"
+        category_counts[category] += 1
+
+    return category_counts
+
+
+def fallback_category_counts(previous_job):
+    return {
+        "store": int(previous_job.get("store_jobs", 0) or 0),
+        "warehouse": int(previous_job.get("warehouse_jobs", 0) or 0),
+        "office": int(previous_job.get("office_jobs", 0) or 0),
+        "management": int(previous_job.get("management_jobs", 0) or 0),
+        "recruitment_event": int(previous_job.get("recruitment_events", 0) or 0),
+        "unknown": int(previous_job.get("unknown_jobs", 0) or 0),
+    }
+
+
+def summarize_company(company, source_results, collected_at, fallback_jobs, fallback_postings, fallback_reviews, fallback_benefits):
     company_id = company["id"]
     company_name = company["company"]
 
@@ -569,7 +721,6 @@ def summarize_company(company, source_results, collected_at, fallback_jobs, fall
     source_statuses = []
     employer_review = None
     benefits = None
-
     profession_fetched = False
 
     for result in source_results:
@@ -580,7 +731,7 @@ def summarize_company(company, source_results, collected_at, fallback_jobs, fall
             "source_type": result.get("source_type"),
             "status": result.get("status"),
             "count_hint": result.get("count_hint"),
-            "error": result.get("error")
+            "error": result.get("error"),
         })
 
         if result.get("source_type") == "job_portal" and result.get("status") == "fetched":
@@ -598,20 +749,29 @@ def summarize_company(company, source_results, collected_at, fallback_jobs, fall
 
     postings = list(unique_postings.values())
 
-    category_counts = {
-        "store": 0,
-        "warehouse": 0,
-        "office": 0,
-        "management": 0,
-        "recruitment_event": 0,
-        "unknown": 0
-    }
+    previous_job = fallback_jobs.get(company_id, {})
+    previous_postings = fallback_postings.get(company_id, [])
 
-    for posting in postings:
-        category = posting.get("category", "unknown")
-        if category not in category_counts:
-            category = "unknown"
-        category_counts[category] += 1
+    parsed_postings_count = len(postings)
+
+    if parsed_postings_count == 0 and previous_postings:
+        postings = previous_postings
+        parsed_postings_count = len(postings)
+        used_posting_fallback = True
+    else:
+        used_posting_fallback = False
+
+    category_counts = category_counts_from_postings(postings)
+
+    if (
+        category_counts["store"] == 0
+        and category_counts["warehouse"] == 0
+        and category_counts["office"] == 0
+        and category_counts["management"] == 0
+        and category_counts["recruitment_event"] == 0
+        and previous_job
+    ):
+        category_counts = fallback_category_counts(previous_job)
 
     count_hints = [
         result.get("count_hint")
@@ -619,11 +779,8 @@ def summarize_company(company, source_results, collected_at, fallback_jobs, fall
         if isinstance(result.get("count_hint"), int)
     ]
 
-    parsed_postings_count = len(postings)
     external_count_hint = max(count_hints) if count_hints else None
     profession_active_ads = external_count_hint
-
-    previous_job = fallback_jobs.get(company_id, {})
 
     if profession_active_ads is None:
         profession_active_ads = previous_job.get("profession_active_ads")
@@ -639,7 +796,7 @@ def summarize_company(company, source_results, collected_at, fallback_jobs, fall
         else parsed_postings_count
     )
 
-    salary_visible_ads = sum(1 for p in postings if p.get("salary_visible") is True)
+    salary_visible_ads = sum(1 for posting in postings if posting.get("salary_visible") is True)
 
     if employer_review is None:
         employer_review = fallback_reviews.get(company_id)
@@ -654,7 +811,7 @@ def summarize_company(company, source_results, collected_at, fallback_jobs, fall
             "review_count": None,
             "opinion_count": None,
             "source_status": "not_found",
-            "notes": "Nem sikerült stabilan kinyerni értékelési adatot."
+            "notes": "Nem sikerült stabilan kinyerni értékelési adatot.",
         }
 
     if benefits is None:
@@ -668,48 +825,45 @@ def summarize_company(company, source_results, collected_at, fallback_jobs, fall
             "source_url": PROFESSION_COMPANY_URLS.get(company_id),
             **{key: False for key in BENEFIT_KEYWORDS.keys()},
             "benefits_detected_count": 0,
-            "notes": "Nem sikerült stabilan kinyerni juttatási adatot."
+            "notes": "Nem sikerült stabilan kinyerni juttatási adatot.",
         }
 
-    if not profession_fetched and isinstance(profession_active_ads, int):
+    if used_posting_fallback:
         source_confidence = "medium-stale"
-        notes = "Profession aktuálisan nem volt letölthető, ezért az utolsó jó hirdetésszámot tartotta meg a rendszer."
+        notes = "A mai részletes álláslista hiányos volt, ezért a rendszer az utolsó jó kategóriabontást és postinglistát tartotta meg."
+    elif not profession_fetched and isinstance(profession_active_ads, int):
+        source_confidence = "medium-stale"
+        notes = "Profession aktuálisan nem volt letölthető, ezért az utolsó jó hirdetésszámot és kategóriabontást tartotta meg a rendszer."
     else:
         source_confidence = "medium" if active_ads_for_dashboard > 0 else "low"
-        notes = "Automatikusan gyűjtött előzetes adat. A Profession cégprofilokat és cégspecifikus karrieroldal-parserrel szűrt munkaköröket használ."
+        notes = "Automatikusan gyűjtött előzetes adat. A rendszer karrieroldalakat, Profession adatokat és fallback kategóriabontást használ."
 
     return {
         "id": company_id,
         "company": company_name,
         "snapshot_date": collected_at,
-
         "total_verified_ads": active_ads_for_dashboard,
         "parsed_postings_count": parsed_postings_count,
         "external_count_hint": external_count_hint,
-
         "store_jobs": category_counts["store"],
         "warehouse_jobs": category_counts["warehouse"],
         "office_jobs": category_counts["office"],
         "management_jobs": category_counts["management"],
         "recruitment_events": category_counts["recruitment_event"],
         "unknown_jobs": category_counts["unknown"],
-
         "salary_visible_ads": salary_visible_ads,
         "benefits_visible_ads": None,
         "travel_support_ads": None,
         "bonus_ads": None,
         "cafeteria_ads": None,
-
         "career_site_present": any(s.get("type") == "career_site" for s in company.get("sources", [])),
         "profession_present": any(s.get("type") == "job_portal" for s in company.get("sources", [])),
         "linkedin_jobs_present": any(s.get("type") == "linkedin" for s in company.get("sources", [])),
         "indeed_present": any(s.get("type") == "indeed" for s in company.get("sources", [])),
-
         "career_site_active_ads": None,
         "profession_active_ads": profession_active_ads,
         "linkedin_active_ads": None,
         "indeed_active_ads": None,
-
         "salary_visible_in_examples": salary_visible_ads > 0,
         "benefits_visible_in_examples": benefits.get("benefits_detected_count", 0) > 0,
         "commuting_support_visible": benefits.get("commuting_support"),
@@ -718,11 +872,10 @@ def summarize_company(company, source_results, collected_at, fallback_jobs, fall
         "training_visible": benefits.get("training"),
         "full_time_visible": None,
         "part_time_visible": None,
-
         "source_confidence": source_confidence,
         "labor_pressure_status": "automatikus gyűjtés előzetes, fallback védelemmel",
         "source_statuses": source_statuses,
-        "notes": notes
+        "notes": notes,
     }, postings, employer_review, benefits
 
 
@@ -735,6 +888,7 @@ def main():
         raise RuntimeError("Hiányzik vagy üres a docs/data/job-sources.json fájl.")
 
     fallback_jobs = last_good_jobs()
+    fallback_postings = last_good_postings()
     fallback_reviews = last_good_reviews()
     fallback_benefits = last_good_benefits()
 
@@ -755,12 +909,13 @@ def main():
             source_results.append(result)
 
         summary, postings, employer_review, benefits = summarize_company(
-            company,
-            source_results,
-            collected_at,
-            fallback_jobs,
-            fallback_reviews,
-            fallback_benefits
+            company=company,
+            source_results=source_results,
+            collected_at=collected_at,
+            fallback_jobs=fallback_jobs,
+            fallback_postings=fallback_postings,
+            fallback_reviews=fallback_reviews,
+            fallback_benefits=fallback_benefits,
         )
 
         all_summaries.append(summary)
@@ -771,7 +926,7 @@ def main():
         raw_results.append({
             "id": company_id,
             "company": company_name,
-            "sources": source_results
+            "sources": source_results,
         })
 
     save_json(JOBS_FILE, all_summaries)
@@ -784,12 +939,12 @@ def main():
         "companies": all_summaries,
         "postings": all_postings,
         "employer_reviews": all_reviews,
-        "benefits": all_benefits
+        "benefits": all_benefits,
     })
 
     save_json(RAW_DIR / f"{month_name}.json", {
         "snapshot_date": collected_at,
-        "raw_results": raw_results
+        "raw_results": raw_results,
     })
 
     status = {
@@ -801,7 +956,7 @@ def main():
         "benefits_written": len(all_benefits),
         "history_file": f"{month_name}.json",
         "raw_file": f"{month_name}.json",
-        "mode": "profession_retry_with_last_good_fallback_v2"
+        "mode": "jobs_intelligence_v3_pattern_and_category_fallback",
     }
 
     save_json(STATUS_FILE, status)
