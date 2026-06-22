@@ -143,6 +143,20 @@
     .salary-evidence-card.na .salary{color:#64748b;}
     .salary-source-line{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:10px;}
     .salary-mini-note{font-size:12px;color:var(--hc-muted);line-height:1.55;margin-top:10px;}
+
+    .salary-year-badge{display:inline-flex;align-items:center;border-radius:999px;padding:4px 9px;font-size:11px;font-weight:900;background:#e0f2fe;color:#075985;white-space:nowrap;}
+    .salary-year-badge.current{background:#dcfce7;color:#166534;}
+    .salary-year-badge.raise{background:#ffedd5;color:#9a3412;}
+    .salary-year-badge.old{background:#f1f5f9;color:#475569;}
+    .salary-year-badge.none{background:#fee2e2;color:#991b1b;}
+    .salary-card-meta{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:9px;}
+    .salary-coverage-caption{font-size:11px;color:var(--hc-muted);line-height:1.35;margin-top:3px;}
+    .salary-summary-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px;}
+    .salary-summary-tile{border:1px solid #e1edf7;border-radius:16px;background:#fff;padding:12px;}
+    .salary-summary-tile .label{font-size:11px;font-weight:900;color:var(--hc-muted);text-transform:uppercase;letter-spacing:.04em;}
+    .salary-summary-tile .value{font-size:24px;font-weight:950;color:var(--hc-navy);margin-top:5px;}
+    @media(max-width:900px){.salary-summary-grid{grid-template-columns:repeat(2,1fr);}}
+    @media(max-width:600px){.salary-summary-grid{grid-template-columns:1fr;}}
     @media(max-width:1100px){.salary-compact-grid{grid-template-columns:1fr}.salary-evidence-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
     @media(max-width:700px){.salary-evidence-grid{grid-template-columns:1fr}.salary-coverage-row{grid-template-columns:76px 1fr 42px}.salary-benchmark-table{font-size:11px}.salary-benchmark-table th,.salary-benchmark-table td{padding:8px 6px}}
 
@@ -301,8 +315,8 @@
 
     <div class="card span12 card-soft">
       <div class="section-title">
-        <h2>Retail Salary Intelligence – bérpiaci benchmark és OSINT bizonyítékok</h2>
-        <span>salary-dashboard-data.json – kompakt vezetői nézet</span>
+        <h2>2026 Salary Intelligence – bérpiaci benchmark és ellenőrzött OSINT adatok</h2>
+        <span>salary-dashboard-data.json – 2026 elsőbbségű, tisztított béradat-réteg</span>
       </div>
 
       <div class="salary-compact-grid">
@@ -316,14 +330,14 @@
         </div>
 
         <div class="salary-panel">
-          <h3>Bérinformációs lefedettség</h3>
+          <h3>2026 béradat-lefedettség</h3>
           <div id="salaryCoverageList" class="salary-coverage-list">Adatok betöltése...</div>
-          <div class="salary-mini-note">A mutató azt jelzi, hogy sikerült-e konkrét béradatot, béremelési adatot és forrásbizonyítékot azonosítani.</div>
+          <div class="salary-mini-note">A mutató a 2026-os bizonyítékokat részesíti előnyben. A 2025-ös adatok csak referencia státuszt kapnak.</div>
         </div>
       </div>
 
       <div style="margin-top:18px">
-        <h3 style="margin:0 0 10px;color:var(--hc-navy)">OSINT bizonyított vállalati béradatok</h3>
+        <h3 style="margin:0 0 10px;color:var(--hc-navy)">2026-os vállalati bérinformációk és régebbi referenciák</h3>
         <div id="salaryEvidenceCards" class="salary-evidence-grid">Adatok betöltése...</div>
       </div>
 
@@ -1010,6 +1024,45 @@ function sourceLink(sourceName, sourceUrl){
   if(sourceUrl && sourceUrl !== 'N.A.') return `<a href="${sourceUrl}" target="_blank" rel="noopener">${n(sourceName)}</a>`;
   return n(sourceName);
 }
+
+function salaryYearLabel(card){
+  const status = card?.year_status || 'no_data';
+  const year = card?.data_year || 'N.A.';
+  if(status === 'current_2026_salary') return {text:'2026 béradat', cls:'current'};
+  if(status === 'current_2026_raise_only') return {text:'2026 béremelés', cls:'raise'};
+  if(status === 'older_salary_reference' || status === 'dated_reference') return {text:`${year} referencia`, cls:'old'};
+  return {text:'nincs adat', cls:'none'};
+}
+function salaryMainDisplay(card){
+  if(!card) return 'N.A.';
+  if(card.year_status === 'current_2026_raise_only'){
+    return card.salary_raise_pct && card.salary_raise_pct !== 'N.A.' ? `+${card.salary_raise_pct}%` : '2026 béremelés';
+  }
+  if(card.base_salary_display && card.base_salary_display !== 'N.A.') return card.base_salary_display;
+  if(card.salary_raise_pct && card.salary_raise_pct !== 'N.A.') return `+${card.salary_raise_pct}%`;
+  return 'N.A.';
+}
+function salaryStatusText(card){
+  if(!card) return 'Nincs adat.';
+  if(card.year_status === 'current_2026_salary') return 'Ellenőrzött 2026-os bruttó havi béradat.';
+  if(card.year_status === 'current_2026_raise_only') return '2026-os béremelési adat, konkrét havi bérsáv nélkül.';
+  if(card.year_status === 'older_salary_reference' || card.year_status === 'dated_reference') return 'Régebbi, nem 2026-os bérreferencia.';
+  return 'Nem sikerült megbízható nyilvános 2026-os béradatot azonosítani.';
+}
+function salarySourceHtml(card){
+  const name = card?.primary_source_name;
+  const url = card?.primary_source_url;
+  if(name && name !== 'N.A.' && url && url !== 'N.A.') return sourceLink(name, url);
+  return 'nincs forrás';
+}
+function salaryDataSortValue(card){
+  const status = card?.year_status || 'no_data';
+  if(status === 'current_2026_salary') return 4;
+  if(status === 'current_2026_raise_only') return 3;
+  if(status === 'older_salary_reference' || status === 'dated_reference') return 2;
+  return 1;
+}
+
 function renderRetailSalaryIntelligence(){
   const data = state.salaryDashboard;
 
@@ -1054,55 +1107,74 @@ function renderRetailSalaryIntelligence(){
   </table>`;
 
   const cards = data.company_cards || [];
-  const orderedCards = [...cards].sort((a,b)=>num(b.coverage_score,0)-num(a.coverage_score,0));
-  coverageBox.innerHTML = orderedCards.map(c=>{
-    const score = num(c.coverage_score,0);
-    return `<div class="salary-coverage-row">
-      <b>${c.company}</b>
-      <div class="salary-bar"><div class="salary-bar-fill ${score===0?'low':''}" style="width:${score}%"></div></div>
-      <span><b>${score}</b></span>
-    </div>`;
-  }).join('');
-
-  const evidenceRows = data.evidence_table || [];
-  const evidenceByCompany = new Map();
-  evidenceRows.forEach(row=>{
-    const key = row.company || row.company_id;
-    if(!evidenceByCompany.has(key)) evidenceByCompany.set(key, []);
-    evidenceByCompany.get(key).push(row);
+  const orderedCards = [...cards].sort((a,b)=>{
+    const byStatus = salaryDataSortValue(b) - salaryDataSortValue(a);
+    if(byStatus !== 0) return byStatus;
+    return num(b.coverage_score,0)-num(a.coverage_score,0);
   });
 
-  evidenceBox.innerHTML = orderedCards.map(c=>{
-    const rows = evidenceByCompany.get(c.company) || [];
-    const salaryRow = rows.find(r=>r.value_type === 'salary_range_huf_month' || r.value_type === 'salary_huf_month');
-    const raiseRow = rows.find(r=>r.value_type === 'salary_raise_pct');
-    const mainRow = salaryRow || raiseRow;
-    const raise = c.salary_raise_pct === 'N.A.' || c.salary_raise_pct === undefined || c.salary_raise_pct === null ? null : `${c.salary_raise_pct}% béremelés`;
-    const hasData = !!mainRow;
-    const salaryText = salaryRow ? n(c.base_salary_display) : (raise || 'N.A.');
-    const cardClass = hasData ? 'salary-evidence-card' : 'salary-evidence-card na';
-    return `<div class="${cardClass}">
-      <div class="company">${c.company}</div>
-      <div class="salary">${salaryText}</div>
-      <div class="desc">${hasData ? shortEvidenceText(mainRow.evidence_text) : 'Nem sikerült megbízható nyilvános béradatot azonosítani.'}</div>
-      <div class="salary-source-line">
-        <span class="pill ${hasData?'green':'red'}">${hasData ? evidenceTypeLabel(mainRow.value_type) : 'N.A.'}</span>
-        <span class="pill gray">${hasData ? sourceLink(mainRow.source_name, mainRow.source_url) : 'nincs forrás'}</span>
-        ${raise && salaryRow ? `<span class="pill orange">${raise}</span>` : ''}
+  coverageBox.innerHTML = orderedCards.map(c=>{
+    const score = num(c.coverage_score,0);
+    const badge = salaryYearLabel(c);
+    return `<div>
+      <div class="salary-coverage-row">
+        <b>${c.company}</b>
+        <div class="salary-bar"><div class="salary-bar-fill ${score===0?'low':''}" style="width:${score}%"></div></div>
+        <span><b>${score}</b></span>
+      </div>
+      <div class="salary-coverage-caption">
+        <span class="salary-year-badge ${badge.cls}">${badge.text}</span>
+        <span>bizalom: ${num(c.confidence,0)}/100</span>
       </div>
     </div>`;
   }).join('');
 
-  const bestCoverage = orderedCards[0];
-  const concreteSalaryCompanies = cards.filter(c=>num(c.salary_record_count,0)>0).map(c=>c.company);
-  const raiseCompanies = cards.filter(c=>num(c.raise_record_count,0)>0).map(c=>c.company);
+  const summary = data.verified_salary_summary || {};
+  const current2026Salary = cards.filter(c=>c.year_status === 'current_2026_salary').length;
+  const current2026Raise = cards.filter(c=>c.year_status === 'current_2026_raise_only').length;
+  const olderRef = cards.filter(c=>c.year_status === 'older_salary_reference' || c.year_status === 'dated_reference').length;
+  const noData = cards.filter(c=>c.year_status === 'no_data').length;
+
+  evidenceBox.innerHTML = `
+    ${orderedCards.map(c=>{
+      const badge = salaryYearLabel(c);
+      const mainDisplay = salaryMainDisplay(c);
+      const hasData = c.year_status && c.year_status !== 'no_data';
+      const cardClass = hasData ? 'salary-evidence-card' : 'salary-evidence-card na';
+      const sourceHtml = salarySourceHtml(c);
+      const raise = c.salary_raise_pct && c.salary_raise_pct !== 'N.A.' ? `+${c.salary_raise_pct}% béremelés` : null;
+
+      return `<div class="${cardClass}">
+        <div class="company">${c.company}</div>
+        <div class="salary">${mainDisplay}</div>
+        <div class="desc">${salaryStatusText(c)}</div>
+        <div class="salary-card-meta">
+          <span class="salary-year-badge ${badge.cls}">${badge.text}</span>
+          <span class="pill gray">${sourceHtml}</span>
+          ${raise && c.year_status !== 'current_2026_raise_only' ? `<span class="pill orange">${raise}</span>` : ''}
+          <span class="pill gray">${num(c.confidence,0)}/100</span>
+        </div>
+      </div>`;
+    }).join('')}
+    <div class="salary-summary-grid" style="grid-column:1/-1">
+      <div class="salary-summary-tile"><div class="label">2026 béradat</div><div class="value">${current2026Salary}</div></div>
+      <div class="salary-summary-tile"><div class="label">2026 béremelés</div><div class="value">${current2026Raise}</div></div>
+      <div class="salary-summary-tile"><div class="label">Régebbi referencia</div><div class="value">${olderRef}</div></div>
+      <div class="salary-summary-tile"><div class="label">Nincs adat</div><div class="value">${noData}</div></div>
+    </div>
+  `;
+
+  const currentSalaryCompanies = cards.filter(c=>c.year_status === 'current_2026_salary').map(c=>c.company);
+  const currentRaiseCompanies = cards.filter(c=>c.year_status === 'current_2026_raise_only').map(c=>c.company);
+  const olderCompanies = cards.filter(c=>c.year_status === 'older_salary_reference' || c.year_status === 'dated_reference').map(c=>c.company);
+  const noDataCompanies = cards.filter(c=>c.year_status === 'no_data').map(c=>c.company);
 
   if(insightBox){
-    insightBox.innerHTML = `<b>Mit látunk?</b> A benchmark a magyar kiskereskedelmi bérpiac általános sávját mutatja. Az OSINT kártyák csak ott jelenítenek meg vállalati adatot, ahol nyilvános forrásból konkrét bér vagy béremelés azonosítható. Jelenleg konkrét béradat ezeknél érhető el: <b>${concreteSalaryCompanies.length ? concreteSalaryCompanies.join(', ') : 'nincs ilyen adat'}</b>. Béremelési adat ezeknél jelent meg: <b>${raiseCompanies.length ? raiseCompanies.join(', ') : 'nincs ilyen adat'}</b>. A legjobb lefedettségi érték: <b>${bestCoverage ? bestCoverage.company : 'n.a.'}</b>.`;
+    insightBox.innerHTML = `<b>Mit látunk?</b> A bérmodul most már 2026 elsőbbségű logikával működik. Ellenőrzött 2026-os havi béradat jelenleg ezeknél a szereplőknél van: <b>${currentSalaryCompanies.length ? currentSalaryCompanies.join(', ') : 'nincs ilyen adat'}</b>. Csak 2026-os béremelési adat látszik: <b>${currentRaiseCompanies.length ? currentRaiseCompanies.join(', ') : 'nincs ilyen adat'}</b>. Régebbi, 2025-ös referencia maradt: <b>${olderCompanies.length ? olderCompanies.join(', ') : 'nincs ilyen adat'}</b>. Nincs ellenőrzött adat: <b>${noDataCompanies.length ? noDataCompanies.join(', ') : 'nincs ilyen adat'}</b>.`;
   }
 
   if(sourceBox){
-    sourceBox.innerHTML = `<b>Forrás és módszertan:</b> a blokk a <b>salary-dashboard-data.json</b> fájlból dolgozik. Az általános bérbenchmark forrása: <b>Fizetesek.com – Fizetések Magyarországon 2026</b>. A blokk ezt fésüli össze a nyilvánosan elérhető OSINT vállalati bérbizonyítékokkal. A <b>N.A.</b> nem alacsonyabb bérezést jelent, hanem azt, hogy az adott szereplőnél nem sikerült megbízható nyilvános béradatot azonosítani.`;
+    sourceBox.innerHTML = `<b>Forrás és módszertan:</b> a blokk a <b>salary-dashboard-data.json</b> fájlból dolgozik, amelyet a tisztított <b>salary-verified-data.json</b> réteg készít elő. A vállalati kártyákban a 2026-os adatok elsőbbséget kapnak. A 2025-ös vagy régebbi adatok külön referencia státuszt kapnak, ezért nem keverednek a 2026-os bérinformációkkal. Az általános benchmark forrása: <b>Fizetesek.com – Fizetések Magyarországon 2026</b>. A <b>N.A.</b> nem alacsonyabb bérezést jelent, hanem azt, hogy nincs megbízható nyilvános adat.`;
   }
 }
 
