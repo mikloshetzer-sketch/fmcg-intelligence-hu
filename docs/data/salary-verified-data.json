@@ -1,0 +1,418 @@
+{
+  "updated_at": "2026-06-22T14:20:30+00:00",
+  "status": "ok",
+  "method": "salary_verified_data_v1_cleaned_2026_priority",
+  "input_file": "docs/data/salary-summary.json",
+  "output_file": "docs/data/salary-verified-data.json",
+  "important_note": "Ez tisztított béradat-réteg. A 2026-os adatok elsőbbséget kapnak. A 2025-ös vagy korábbi adatok háttér-referenciaként maradnak meg. Ahol nincs ellenőrzött adat, ott N.A. szerepel.",
+  "summary": {
+    "companies_total": 6,
+    "current_2026_records": 3,
+    "older_reference_records": 2,
+    "no_data_records": 1
+  },
+  "current_2026": [
+    {
+      "company_id": "aldi",
+      "company": "ALDI",
+      "verified_status": "salary_found",
+      "year_status": "current_2026_salary",
+      "data_year": 2026,
+      "salary_type": "gross_monthly",
+      "salary_min_huf_month": 541900,
+      "salary_median_huf_month": 562600,
+      "salary_max_huf_month": 750600,
+      "salary_display": "541 900 - 750 600 Ft",
+      "salary_raise_pct": "N.A.",
+      "confidence": 95,
+      "primary_source_name": "hvg.hu / ALDI közlés",
+      "primary_source_url": "https://hvg.hu/gazdasag/20260105_aldi-fizetes-beremeles-mennyi-2026-januar",
+      "sources": [
+        {
+          "source_name": "hvg.hu",
+          "source_url": "https://hvg.hu/gazdasag/20260105_aldi-fizetes-beremeles-mennyi-2026-januar",
+          "value_type": "salary_range_huf_month",
+          "published_or_found_date": "2026-01-05",
+          "data_year": 2026,
+          "confidence": 95,
+          "evidence_text": "2026. január 1-jétől az újonnan belépő áruházi dolgozók kezdő bére 541 900 Ft, egy év után 562 600 Ft, a maximum 750 600 Ft."
+        },
+        {
+          "source_name": "HR Portál",
+          "source_url": "https://www.hrportal.hu/c/beremelesek-az-aldinal-vannak-akik-mar-egymillio-forint-felett-keresnek-majd-20260106.html",
+          "value_type": "salary_range_huf_month",
+          "published_or_found_date": "2026-01-06",
+          "data_year": 2026,
+          "confidence": 90,
+          "evidence_text": "Az ALDI 2026-os béremelése áruházi és logisztikai munkakörökre is konkrét bruttó havi béradatokat közölt."
+        }
+      ],
+      "role_details": [
+        {
+          "role_key": "store_worker",
+          "role_label": "Áruházi dolgozó",
+          "salary_min_huf_month": 541900,
+          "salary_after_1_year_huf_month": 562600,
+          "salary_max_huf_month": 750600
+        },
+        {
+          "role_key": "logistics_worker",
+          "role_label": "Logisztikai dolgozó",
+          "salary_min_huf_month": 600100,
+          "salary_after_1_year_huf_month": 623100,
+          "salary_max_huf_month": 795200
+        },
+        {
+          "role_key": "store_manager",
+          "role_label": "Áruházvezető",
+          "salary_min_huf_month": 1003500,
+          "salary_max_huf_month": 1549500
+        }
+      ],
+      "notes": "Ellenőrzött 2026-os ALDI béradat. Ez felülírja a salary-summary.json N.A. értékét."
+    },
+    {
+      "company_id": "penny",
+      "company": "PENNY",
+      "verified_status": "salary_and_raise_found",
+      "year_status": "current_2026_salary",
+      "data_year": 2026,
+      "salary_type": "gross_monthly",
+      "salary_min_huf_month": 540000,
+      "salary_median_huf_month": 605000,
+      "salary_max_huf_month": 670000,
+      "salary_display": "540 000 - 670 000 Ft",
+      "salary_raise_pct": 8.0,
+      "confidence": 78,
+      "primary_source_name": "hvg.hu",
+      "primary_source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaTJfejl6VWxrWVktZE51TmVqN284V1I3RmtpeFRHdHpTMVNYQzFYNmtNcTdBNkNNM1ZpcXAtS3gwdUVfZ25PempyR2ZBSnEyREJ5dk9PTDhfSlhpOWk4SEMzbXJXOGRBRVdseXI1QkUxNkRxQUpGNXlDU19LZFR5a3p1T2hPUQ?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "sources": [
+        {
+          "source_name": "portfolio.hu",
+          "source_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQd29GcXNoTGZmWDl4RzFDeWFfU2RSRllBZEl1bWY4eUlvQXZaQkVSbzVJUEgwdDdLcW1SeFA1VW83NXJzaUxmV2gwa1RhbUNuQ3VleWdKLWs0LW5iOS1hM3dJYTR3U2JhV2dtQ0FFNnp3VTVRV3B3TlBLdzg5V1RGbUYyd1QtellDWkphSHBCZEHSAZYBQVVfeXFMTlZxTm9ZTHhfSU4wakFkc2xwZmhhYXc1NW80eFlEcE1lWjNGblFJaUFSQ2dMWmI5NXRWQnZoMUxoLU1vZGdOR3JiUExmQUpBSy1RQ0pEZ1ZNY1lXWVdkaHFwRzlKVWtrQ2dNQzlfTFptcFlpVC1VYTI0cGtvVjhQUFFFZ2c3VjBnOGpYMzA1NW9UTVpCTzdB?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+          "value_type": "salary_raise_pct",
+          "published_or_found_date": "Fri, 23 Jan 2026 08:00:00 GMT",
+          "data_year": 2026,
+          "confidence": 65,
+          "evidence_text": "6-8 százalékos béremelés jön a Penny-nél - Portfolio.hu. 6-8 százalékos béremelés jön a Penny-nél Portfolio.hu. Google Hírek"
+        },
+        {
+          "source_name": "hvg.hu",
+          "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaTJfejl6VWxrWVktZE51TmVqN284V1I3RmtpeFRHdHpTMVNYQzFYNmtNcTdBNkNNM1ZpcXAtS3gwdUVfZ25PempyR2ZBSnEyREJ5dk9PTDhfSlhpOWk4SEMzbXJXOGRBRVdseXI1QkUxNkRxQUpGNXlDU19LZFR5a3p1T2hPUQ?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+          "value_type": "salary_range_huf_month",
+          "published_or_found_date": "Tue, 23 Dec 2025 08:00:00 GMT",
+          "data_year": 2025,
+          "confidence": 90,
+          "evidence_text": "Gazdaság: Bruttó 540 ezerért keres új munkatársakat a Penny, de az összeg felcsúszhat 670 ezerig is - | hvg.hu. Gazdaság: Bruttó 540 ezerért keres új munkatársakat a Penny, de az összeg felcsúszhat 670 ezerig is | hvg.hu. Google Hírek"
+        }
+      ],
+      "notes": "2026-os adatként csak akkor kezelhető, ha a forrás dátuma 2026-os. Régebbi béradat esetén a sor csak háttér-referencia."
+    },
+    {
+      "company_id": "tesco",
+      "company": "Tesco",
+      "verified_status": "raise_only",
+      "year_status": "current_2026_raise_only",
+      "data_year": 2026,
+      "salary_type": "gross_monthly",
+      "salary_min_huf_month": "N.A.",
+      "salary_median_huf_month": "N.A.",
+      "salary_max_huf_month": "N.A.",
+      "salary_display": "N.A.",
+      "salary_raise_pct": 7.2,
+      "confidence": 65,
+      "primary_source_name": "N.A.",
+      "primary_source_url": "N.A.",
+      "sources": [
+        {
+          "source_name": "portfolio.hu",
+          "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPUjB1ejFlSFJmbXBVZVVERVI2eVhrcFhEOUdST3hhenozRTFWSzdJWEV0MVhmMlpPU1FTY19RRFBiS1dfa0hPNUlVc0ZSUHVQQ0lPbVFTVWptOGRRSXl4eXlFc3NZb3ludTFZRGVBTUQ0bWNaNmxheUh5cGlGZ2JmNjZPdkdiZ3N3UWMxWUZxaDdOSGNwWU92eHhMd9IBoAFBVV95cUxQNTRyNXVuLWlwSktEVU1xUHRVS1VVNTQ2Vkk5czBPcHh2RndMaG1xcWs2aV9uRDdKaEc5dXV4VXJyazZtUlZYX2VzMHJWZ0M5YUtUcmxqa3JuRl9TYVFCVk52VUNDNldGUnJwblMtTmRIX21Rd0hCZ3BzNFBHNHM5dWJQR3ZfZUQ5SkRoeHAwTFotU3Jxc2ZiYnBUVktXWmNI?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+          "value_type": "salary_raise_pct",
+          "published_or_found_date": "Fri, 23 Jan 2026 08:00:00 GMT",
+          "data_year": 2026,
+          "confidence": 65,
+          "evidence_text": "7,2 százalékos béremelést kapnak a Tesco dolgozói - Portfolio.hu. 7,2 százalékos béremelést kapnak a Tesco dolgozói Portfolio.hu. Google Hírek"
+        }
+      ],
+      "notes": "2026-os adatként csak akkor kezelhető, ha a forrás dátuma 2026-os. Régebbi béradat esetén a sor csak háttér-referencia."
+    }
+  ],
+  "older_reference": [
+    {
+      "company_id": "spar",
+      "company": "SPAR",
+      "verified_status": "salary_found",
+      "year_status": "older_salary_reference",
+      "data_year": 2025,
+      "salary_type": "gross_monthly",
+      "salary_min_huf_month": 395000,
+      "salary_median_huf_month": 395000,
+      "salary_max_huf_month": 395000,
+      "salary_display": "395 000 Ft",
+      "salary_raise_pct": "N.A.",
+      "confidence": 80,
+      "primary_source_name": "hvg.hu",
+      "primary_source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQQkcxaTJlMVJlMU1pQVpXczB3RUlnMWh0aXJ2bkh3UzcxSFZSZXowVGZpUDRjRUtxTFQ5RlFzY2M2NGRzUkVNWHBodlVhQjRKWTdWT0diS1RmTUp5ZkRhbDVla1FWVTZ1LXdIby16ejRTVi04M1Bfel8temdsRXF5YTdCVXBmS09DeFQ1eDdZZVRsM0VCLW5r?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "sources": [
+        {
+          "source_name": "hvg.hu",
+          "source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQQkcxaTJlMVJlMU1pQVpXczB3RUlnMWh0aXJ2bkh3UzcxSFZSZXowVGZpUDRjRUtxTFQ5RlFzY2M2NGRzUkVNWHBodlVhQjRKWTdWT0diS1RmTUp5ZkRhbDVla1FWVTZ1LXdIby16ejRTVi04M1Bfel8temdsRXF5YTdCVXBmS09DeFQ1eDdZZVRsM0VCLW5r?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+          "value_type": "salary_huf_month",
+          "published_or_found_date": "Thu, 02 Jan 2025 08:00:00 GMT",
+          "data_year": 2025,
+          "confidence": 80,
+          "evidence_text": "Vállalkozás: Spar: 395 ezer bruttó lesz 2025-ben a dolgozók alapbére - | hvg.hu. Vállalkozás: Spar: 395 ezer bruttó lesz 2025-ben a dolgozók alapbére | hvg.hu. Google Hírek"
+        }
+      ],
+      "notes": "2026-os adatként csak akkor kezelhető, ha a forrás dátuma 2026-os. Régebbi béradat esetén a sor csak háttér-referencia."
+    },
+    {
+      "company_id": "auchan",
+      "company": "Auchan",
+      "verified_status": "salary_found",
+      "year_status": "older_salary_reference",
+      "data_year": 2025,
+      "salary_type": "gross_monthly",
+      "salary_min_huf_month": 402000,
+      "salary_median_huf_month": 402000,
+      "salary_max_huf_month": 402000,
+      "salary_display": "402 000 Ft",
+      "salary_raise_pct": "N.A.",
+      "confidence": 90,
+      "primary_source_name": "hvg.hu",
+      "primary_source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQX1VoRlhsV3B2SzRDdUVUUE5NYWt1UFNibjF3U3ZCQlRhSnU3RkRWbExMQXhVYnNXbWRuSUwwb3hJVkc0ekRPUWxOTlpNdFljTUZ4M0R6S3poUGdnS2JhRmdOYXZ3ZDYzcG9GbHZFaGw3dzA3WmtmeDZ6Um84VURlOWNtankxSFRhaGVj?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "sources": [
+        {
+          "source_name": "hvg.hu",
+          "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQX1VoRlhsV3B2SzRDdUVUUE5NYWt1UFNibjF3U3ZCQlRhSnU3RkRWbExMQXhVYnNXbWRuSUwwb3hJVkc0ekRPUWxOTlpNdFljTUZ4M0R6S3poUGdnS2JhRmdOYXZ3ZDYzcG9GbHZFaGw3dzA3WmtmeDZ6Um84VURlOWNtankxSFRhaGVj?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+          "value_type": "salary_huf_month",
+          "published_or_found_date": "Thu, 23 Jan 2025 08:00:00 GMT",
+          "data_year": 2025,
+          "confidence": 90,
+          "evidence_text": "Vállalkozás: Auchan: Bruttó 402 ezer lesz januártól a fizikai munkát végzők alapbére - | hvg.hu. Vállalkozás: Auchan: Bruttó 402 ezer lesz januártól a fizikai munkát végzők alapbére | hvg.hu. Google Hírek"
+        }
+      ],
+      "notes": "2026-os adatként csak akkor kezelhető, ha a forrás dátuma 2026-os. Régebbi béradat esetén a sor csak háttér-referencia."
+    }
+  ],
+  "no_data": [
+    {
+      "company_id": "lidl",
+      "company": "Lidl",
+      "verified_status": "no_verified_salary_data",
+      "year_status": "no_data",
+      "data_year": "N.A.",
+      "salary_type": "gross_monthly",
+      "salary_min_huf_month": "N.A.",
+      "salary_median_huf_month": "N.A.",
+      "salary_max_huf_month": "N.A.",
+      "salary_display": "N.A.",
+      "salary_raise_pct": "N.A.",
+      "confidence": 0,
+      "primary_source_name": "N.A.",
+      "primary_source_url": "N.A.",
+      "sources": [],
+      "notes": "2026-os adatként csak akkor kezelhető, ha a forrás dátuma 2026-os. Régebbi béradat esetén a sor csak háttér-referencia."
+    }
+  ],
+  "rows": [
+    {
+      "company_id": "lidl",
+      "company": "Lidl",
+      "verified_status": "no_verified_salary_data",
+      "year_status": "no_data",
+      "data_year": "N.A.",
+      "salary_type": "gross_monthly",
+      "salary_min_huf_month": "N.A.",
+      "salary_median_huf_month": "N.A.",
+      "salary_max_huf_month": "N.A.",
+      "salary_display": "N.A.",
+      "salary_raise_pct": "N.A.",
+      "confidence": 0,
+      "primary_source_name": "N.A.",
+      "primary_source_url": "N.A.",
+      "sources": [],
+      "notes": "2026-os adatként csak akkor kezelhető, ha a forrás dátuma 2026-os. Régebbi béradat esetén a sor csak háttér-referencia."
+    },
+    {
+      "company_id": "aldi",
+      "company": "ALDI",
+      "verified_status": "salary_found",
+      "year_status": "current_2026_salary",
+      "data_year": 2026,
+      "salary_type": "gross_monthly",
+      "salary_min_huf_month": 541900,
+      "salary_median_huf_month": 562600,
+      "salary_max_huf_month": 750600,
+      "salary_display": "541 900 - 750 600 Ft",
+      "salary_raise_pct": "N.A.",
+      "confidence": 95,
+      "primary_source_name": "hvg.hu / ALDI közlés",
+      "primary_source_url": "https://hvg.hu/gazdasag/20260105_aldi-fizetes-beremeles-mennyi-2026-januar",
+      "sources": [
+        {
+          "source_name": "hvg.hu",
+          "source_url": "https://hvg.hu/gazdasag/20260105_aldi-fizetes-beremeles-mennyi-2026-januar",
+          "value_type": "salary_range_huf_month",
+          "published_or_found_date": "2026-01-05",
+          "data_year": 2026,
+          "confidence": 95,
+          "evidence_text": "2026. január 1-jétől az újonnan belépő áruházi dolgozók kezdő bére 541 900 Ft, egy év után 562 600 Ft, a maximum 750 600 Ft."
+        },
+        {
+          "source_name": "HR Portál",
+          "source_url": "https://www.hrportal.hu/c/beremelesek-az-aldinal-vannak-akik-mar-egymillio-forint-felett-keresnek-majd-20260106.html",
+          "value_type": "salary_range_huf_month",
+          "published_or_found_date": "2026-01-06",
+          "data_year": 2026,
+          "confidence": 90,
+          "evidence_text": "Az ALDI 2026-os béremelése áruházi és logisztikai munkakörökre is konkrét bruttó havi béradatokat közölt."
+        }
+      ],
+      "role_details": [
+        {
+          "role_key": "store_worker",
+          "role_label": "Áruházi dolgozó",
+          "salary_min_huf_month": 541900,
+          "salary_after_1_year_huf_month": 562600,
+          "salary_max_huf_month": 750600
+        },
+        {
+          "role_key": "logistics_worker",
+          "role_label": "Logisztikai dolgozó",
+          "salary_min_huf_month": 600100,
+          "salary_after_1_year_huf_month": 623100,
+          "salary_max_huf_month": 795200
+        },
+        {
+          "role_key": "store_manager",
+          "role_label": "Áruházvezető",
+          "salary_min_huf_month": 1003500,
+          "salary_max_huf_month": 1549500
+        }
+      ],
+      "notes": "Ellenőrzött 2026-os ALDI béradat. Ez felülírja a salary-summary.json N.A. értékét."
+    },
+    {
+      "company_id": "penny",
+      "company": "PENNY",
+      "verified_status": "salary_and_raise_found",
+      "year_status": "current_2026_salary",
+      "data_year": 2026,
+      "salary_type": "gross_monthly",
+      "salary_min_huf_month": 540000,
+      "salary_median_huf_month": 605000,
+      "salary_max_huf_month": 670000,
+      "salary_display": "540 000 - 670 000 Ft",
+      "salary_raise_pct": 8.0,
+      "confidence": 78,
+      "primary_source_name": "hvg.hu",
+      "primary_source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaTJfejl6VWxrWVktZE51TmVqN284V1I3RmtpeFRHdHpTMVNYQzFYNmtNcTdBNkNNM1ZpcXAtS3gwdUVfZ25PempyR2ZBSnEyREJ5dk9PTDhfSlhpOWk4SEMzbXJXOGRBRVdseXI1QkUxNkRxQUpGNXlDU19LZFR5a3p1T2hPUQ?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "sources": [
+        {
+          "source_name": "portfolio.hu",
+          "source_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQd29GcXNoTGZmWDl4RzFDeWFfU2RSRllBZEl1bWY4eUlvQXZaQkVSbzVJUEgwdDdLcW1SeFA1VW83NXJzaUxmV2gwa1RhbUNuQ3VleWdKLWs0LW5iOS1hM3dJYTR3U2JhV2dtQ0FFNnp3VTVRV3B3TlBLdzg5V1RGbUYyd1QtellDWkphSHBCZEHSAZYBQVVfeXFMTlZxTm9ZTHhfSU4wakFkc2xwZmhhYXc1NW80eFlEcE1lWjNGblFJaUFSQ2dMWmI5NXRWQnZoMUxoLU1vZGdOR3JiUExmQUpBSy1RQ0pEZ1ZNY1lXWVdkaHFwRzlKVWtrQ2dNQzlfTFptcFlpVC1VYTI0cGtvVjhQUFFFZ2c3VjBnOGpYMzA1NW9UTVpCTzdB?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+          "value_type": "salary_raise_pct",
+          "published_or_found_date": "Fri, 23 Jan 2026 08:00:00 GMT",
+          "data_year": 2026,
+          "confidence": 65,
+          "evidence_text": "6-8 százalékos béremelés jön a Penny-nél - Portfolio.hu. 6-8 százalékos béremelés jön a Penny-nél Portfolio.hu. Google Hírek"
+        },
+        {
+          "source_name": "hvg.hu",
+          "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaTJfejl6VWxrWVktZE51TmVqN284V1I3RmtpeFRHdHpTMVNYQzFYNmtNcTdBNkNNM1ZpcXAtS3gwdUVfZ25PempyR2ZBSnEyREJ5dk9PTDhfSlhpOWk4SEMzbXJXOGRBRVdseXI1QkUxNkRxQUpGNXlDU19LZFR5a3p1T2hPUQ?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+          "value_type": "salary_range_huf_month",
+          "published_or_found_date": "Tue, 23 Dec 2025 08:00:00 GMT",
+          "data_year": 2025,
+          "confidence": 90,
+          "evidence_text": "Gazdaság: Bruttó 540 ezerért keres új munkatársakat a Penny, de az összeg felcsúszhat 670 ezerig is - | hvg.hu. Gazdaság: Bruttó 540 ezerért keres új munkatársakat a Penny, de az összeg felcsúszhat 670 ezerig is | hvg.hu. Google Hírek"
+        }
+      ],
+      "notes": "2026-os adatként csak akkor kezelhető, ha a forrás dátuma 2026-os. Régebbi béradat esetén a sor csak háttér-referencia."
+    },
+    {
+      "company_id": "spar",
+      "company": "SPAR",
+      "verified_status": "salary_found",
+      "year_status": "older_salary_reference",
+      "data_year": 2025,
+      "salary_type": "gross_monthly",
+      "salary_min_huf_month": 395000,
+      "salary_median_huf_month": 395000,
+      "salary_max_huf_month": 395000,
+      "salary_display": "395 000 Ft",
+      "salary_raise_pct": "N.A.",
+      "confidence": 80,
+      "primary_source_name": "hvg.hu",
+      "primary_source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQQkcxaTJlMVJlMU1pQVpXczB3RUlnMWh0aXJ2bkh3UzcxSFZSZXowVGZpUDRjRUtxTFQ5RlFzY2M2NGRzUkVNWHBodlVhQjRKWTdWT0diS1RmTUp5ZkRhbDVla1FWVTZ1LXdIby16ejRTVi04M1Bfel8temdsRXF5YTdCVXBmS09DeFQ1eDdZZVRsM0VCLW5r?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "sources": [
+        {
+          "source_name": "hvg.hu",
+          "source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQQkcxaTJlMVJlMU1pQVpXczB3RUlnMWh0aXJ2bkh3UzcxSFZSZXowVGZpUDRjRUtxTFQ5RlFzY2M2NGRzUkVNWHBodlVhQjRKWTdWT0diS1RmTUp5ZkRhbDVla1FWVTZ1LXdIby16ejRTVi04M1Bfel8temdsRXF5YTdCVXBmS09DeFQ1eDdZZVRsM0VCLW5r?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+          "value_type": "salary_huf_month",
+          "published_or_found_date": "Thu, 02 Jan 2025 08:00:00 GMT",
+          "data_year": 2025,
+          "confidence": 80,
+          "evidence_text": "Vállalkozás: Spar: 395 ezer bruttó lesz 2025-ben a dolgozók alapbére - | hvg.hu. Vállalkozás: Spar: 395 ezer bruttó lesz 2025-ben a dolgozók alapbére | hvg.hu. Google Hírek"
+        }
+      ],
+      "notes": "2026-os adatként csak akkor kezelhető, ha a forrás dátuma 2026-os. Régebbi béradat esetén a sor csak háttér-referencia."
+    },
+    {
+      "company_id": "tesco",
+      "company": "Tesco",
+      "verified_status": "raise_only",
+      "year_status": "current_2026_raise_only",
+      "data_year": 2026,
+      "salary_type": "gross_monthly",
+      "salary_min_huf_month": "N.A.",
+      "salary_median_huf_month": "N.A.",
+      "salary_max_huf_month": "N.A.",
+      "salary_display": "N.A.",
+      "salary_raise_pct": 7.2,
+      "confidence": 65,
+      "primary_source_name": "N.A.",
+      "primary_source_url": "N.A.",
+      "sources": [
+        {
+          "source_name": "portfolio.hu",
+          "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPUjB1ejFlSFJmbXBVZVVERVI2eVhrcFhEOUdST3hhenozRTFWSzdJWEV0MVhmMlpPU1FTY19RRFBiS1dfa0hPNUlVc0ZSUHVQQ0lPbVFTVWptOGRRSXl4eXlFc3NZb3ludTFZRGVBTUQ0bWNaNmxheUh5cGlGZ2JmNjZPdkdiZ3N3UWMxWUZxaDdOSGNwWU92eHhMd9IBoAFBVV95cUxQNTRyNXVuLWlwSktEVU1xUHRVS1VVNTQ2Vkk5czBPcHh2RndMaG1xcWs2aV9uRDdKaEc5dXV4VXJyazZtUlZYX2VzMHJWZ0M5YUtUcmxqa3JuRl9TYVFCVk52VUNDNldGUnJwblMtTmRIX21Rd0hCZ3BzNFBHNHM5dWJQR3ZfZUQ5SkRoeHAwTFotU3Jxc2ZiYnBUVktXWmNI?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+          "value_type": "salary_raise_pct",
+          "published_or_found_date": "Fri, 23 Jan 2026 08:00:00 GMT",
+          "data_year": 2026,
+          "confidence": 65,
+          "evidence_text": "7,2 százalékos béremelést kapnak a Tesco dolgozói - Portfolio.hu. 7,2 százalékos béremelést kapnak a Tesco dolgozói Portfolio.hu. Google Hírek"
+        }
+      ],
+      "notes": "2026-os adatként csak akkor kezelhető, ha a forrás dátuma 2026-os. Régebbi béradat esetén a sor csak háttér-referencia."
+    },
+    {
+      "company_id": "auchan",
+      "company": "Auchan",
+      "verified_status": "salary_found",
+      "year_status": "older_salary_reference",
+      "data_year": 2025,
+      "salary_type": "gross_monthly",
+      "salary_min_huf_month": 402000,
+      "salary_median_huf_month": 402000,
+      "salary_max_huf_month": 402000,
+      "salary_display": "402 000 Ft",
+      "salary_raise_pct": "N.A.",
+      "confidence": 90,
+      "primary_source_name": "hvg.hu",
+      "primary_source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQX1VoRlhsV3B2SzRDdUVUUE5NYWt1UFNibjF3U3ZCQlRhSnU3RkRWbExMQXhVYnNXbWRuSUwwb3hJVkc0ekRPUWxOTlpNdFljTUZ4M0R6S3poUGdnS2JhRmdOYXZ3ZDYzcG9GbHZFaGw3dzA3WmtmeDZ6Um84VURlOWNtankxSFRhaGVj?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "sources": [
+        {
+          "source_name": "hvg.hu",
+          "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQX1VoRlhsV3B2SzRDdUVUUE5NYWt1UFNibjF3U3ZCQlRhSnU3RkRWbExMQXhVYnNXbWRuSUwwb3hJVkc0ekRPUWxOTlpNdFljTUZ4M0R6S3poUGdnS2JhRmdOYXZ3ZDYzcG9GbHZFaGw3dzA3WmtmeDZ6Um84VURlOWNtankxSFRhaGVj?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+          "value_type": "salary_huf_month",
+          "published_or_found_date": "Thu, 23 Jan 2025 08:00:00 GMT",
+          "data_year": 2025,
+          "confidence": 90,
+          "evidence_text": "Vállalkozás: Auchan: Bruttó 402 ezer lesz januártól a fizikai munkát végzők alapbére - | hvg.hu. Vállalkozás: Auchan: Bruttó 402 ezer lesz januártól a fizikai munkát végzők alapbére | hvg.hu. Google Hírek"
+        }
+      ],
+      "notes": "2026-os adatként csak akkor kezelhető, ha a forrás dátuma 2026-os. Régebbi béradat esetén a sor csak háttér-referencia."
+    }
+  ]
+}

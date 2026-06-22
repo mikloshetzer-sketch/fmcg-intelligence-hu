@@ -1,19 +1,20 @@
 {
-  "updated_at": "2026-06-22T09:57:26+00:00",
+  "updated_at": "2026-06-22T14:20:30+00:00",
   "status": "ok",
-  "method": "salary_dashboard_data_v1",
+  "method": "salary_dashboard_data_v2_from_verified_salary_data",
   "input_files": [
     "docs/data/retail-salary-benchmark.json",
-    "docs/data/salary-summary.json",
+    "docs/data/salary-verified-data.json",
     "docs/data/salary-role-summary.json"
   ],
-  "important_note": "Ez a dashboardhoz előkészített béradat. Az általános bérbenchmark nem vállalatspecifikus adat. Az OSINT vállalati adatok csak nyilvánosan elérhető forrásokon alapulnak. A hiányzó adat nem jelent alacsonyabb bérezést.",
+  "important_note": "Ez a dashboardhoz előkészített béradat. A vállalati OSINT blokkban elsődlegesen 2026-os, ellenőrzött adatok jelennek meg. A 2025-ös vagy régebbi adatok csak háttér-referenciák, és nem keverendők a 2026-os bérinformációkkal. A hiányzó adat nem jelent alacsonyabb bérezést.",
   "benchmark": {
     "source": "Fizetesek.com és általános HR piaci benchmark alapján kézzel rögzített referenciaadat",
     "source_type": "general_retail_salary_benchmark",
     "currency": "HUF",
     "period": "month",
     "salary_type": "gross",
+    "data_year": 2026,
     "rows": [
       {
         "role_key": "sales_assistant",
@@ -77,7 +78,9 @@
     {
       "company_id": "lidl",
       "company": "Lidl",
-      "status": "no_recent_salary_data",
+      "status": "no_verified_salary_data",
+      "year_status": "no_data",
+      "data_year": "N.A.",
       "base_salary_display": "N.A.",
       "base_salary_huf_month": "N.A.",
       "highest_salary_display": "N.A.",
@@ -89,63 +92,79 @@
       "coverage_score": 0,
       "coverage_label": "nincs adat",
       "confidence": 0,
-      "notes": "Jelenleg nincs elérhető OSINT béradat."
+      "primary_source_name": "N.A.",
+      "primary_source_url": "N.A.",
+      "notes": "2026-os adatként csak akkor kezelhető, ha a forrás dátuma 2026-os. Régebbi béradat esetén a sor csak háttér-referencia."
     },
     {
       "company_id": "aldi",
       "company": "ALDI",
-      "status": "no_recent_salary_data",
-      "base_salary_display": "N.A.",
-      "base_salary_huf_month": "N.A.",
-      "highest_salary_display": "N.A.",
-      "highest_salary_huf_month": "N.A.",
+      "status": "salary_found",
+      "year_status": "current_2026_salary",
+      "data_year": 2026,
+      "base_salary_display": "541 900 - 750 600 Ft",
+      "base_salary_huf_month": 562600,
+      "highest_salary_display": "750 600 Ft",
+      "highest_salary_huf_month": 750600,
       "salary_raise_pct": "N.A.",
-      "salary_record_count": 0,
+      "salary_record_count": 1,
       "raise_record_count": 0,
-      "total_record_count": 0,
-      "coverage_score": 0,
-      "coverage_label": "nincs adat",
-      "confidence": 0,
-      "notes": "Jelenleg nincs elérhető OSINT béradat."
+      "total_record_count": 1,
+      "coverage_score": 95,
+      "coverage_label": "magas",
+      "confidence": 95,
+      "primary_source_name": "hvg.hu / ALDI közlés",
+      "primary_source_url": "https://hvg.hu/gazdasag/20260105_aldi-fizetes-beremeles-mennyi-2026-januar",
+      "notes": "Ellenőrzött 2026-os ALDI béradat. Ez felülírja a salary-summary.json N.A. értékét."
     },
     {
       "company_id": "penny",
       "company": "PENNY",
       "status": "salary_and_raise_found",
-      "base_salary_display": "540 000 Ft - 670 000 Ft",
+      "year_status": "current_2026_salary",
+      "data_year": 2026,
+      "base_salary_display": "540 000 - 670 000 Ft",
       "base_salary_huf_month": 605000,
       "highest_salary_display": "670 000 Ft",
       "highest_salary_huf_month": 670000,
       "salary_raise_pct": 8.0,
       "salary_record_count": 1,
-      "raise_record_count": 1,
-      "total_record_count": 2,
-      "coverage_score": 100,
+      "raise_record_count": 0,
+      "total_record_count": 1,
+      "coverage_score": 93,
       "coverage_label": "magas",
       "confidence": 78,
-      "notes": "OSINT alapján gyűjtött, nem hivatalos bérinformáció."
+      "primary_source_name": "hvg.hu",
+      "primary_source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaTJfejl6VWxrWVktZE51TmVqN284V1I3RmtpeFRHdHpTMVNYQzFYNmtNcTdBNkNNM1ZpcXAtS3gwdUVfZ25PempyR2ZBSnEyREJ5dk9PTDhfSlhpOWk4SEMzbXJXOGRBRVdseXI1QkUxNkRxQUpGNXlDU19LZFR5a3p1T2hPUQ?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "notes": "2026-os adatként csak akkor kezelhető, ha a forrás dátuma 2026-os. Régebbi béradat esetén a sor csak háttér-referencia."
     },
     {
       "company_id": "spar",
       "company": "SPAR",
       "status": "salary_found",
+      "year_status": "older_salary_reference",
+      "data_year": 2025,
       "base_salary_display": "395 000 Ft",
       "base_salary_huf_month": 395000,
       "highest_salary_display": "395 000 Ft",
       "highest_salary_huf_month": 395000,
       "salary_raise_pct": "N.A.",
-      "salary_record_count": 1,
+      "salary_record_count": 0,
       "raise_record_count": 0,
       "total_record_count": 1,
-      "coverage_score": 75,
-      "coverage_label": "magas",
+      "coverage_score": 53,
+      "coverage_label": "közepes",
       "confidence": 80,
-      "notes": "OSINT alapján gyűjtött, nem hivatalos bérinformáció."
+      "primary_source_name": "hvg.hu",
+      "primary_source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQQkcxaTJlMVJlMU1pQVpXczB3RUlnMWh0aXJ2bkh3UzcxSFZSZXowVGZpUDRjRUtxTFQ5RlFzY2M2NGRzUkVNWHBodlVhQjRKWTdWT0diS1RmTUp5ZkRhbDVla1FWVTZ1LXdIby16ejRTVi04M1Bfel8temdsRXF5YTdCVXBmS09DeFQ1eDdZZVRsM0VCLW5r?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "notes": "2026-os adatként csak akkor kezelhető, ha a forrás dátuma 2026-os. Régebbi béradat esetén a sor csak háttér-referencia."
     },
     {
       "company_id": "tesco",
       "company": "Tesco",
       "status": "raise_only",
+      "year_status": "current_2026_raise_only",
+      "data_year": 2026,
       "base_salary_display": "N.A.",
       "base_salary_huf_month": "N.A.",
       "highest_salary_display": "N.A.",
@@ -154,27 +173,33 @@
       "salary_record_count": 0,
       "raise_record_count": 1,
       "total_record_count": 1,
-      "coverage_score": 50,
+      "coverage_score": 66,
       "coverage_label": "közepes",
       "confidence": 65,
-      "notes": "Jelenleg nincs elérhető OSINT béradat."
+      "primary_source_name": "N.A.",
+      "primary_source_url": "N.A.",
+      "notes": "2026-os adatként csak akkor kezelhető, ha a forrás dátuma 2026-os. Régebbi béradat esetén a sor csak háttér-referencia."
     },
     {
       "company_id": "auchan",
       "company": "Auchan",
       "status": "salary_found",
+      "year_status": "older_salary_reference",
+      "data_year": 2025,
       "base_salary_display": "402 000 Ft",
       "base_salary_huf_month": 402000,
       "highest_salary_display": "402 000 Ft",
       "highest_salary_huf_month": 402000,
       "salary_raise_pct": "N.A.",
-      "salary_record_count": 1,
+      "salary_record_count": 0,
       "raise_record_count": 0,
       "total_record_count": 1,
-      "coverage_score": 75,
-      "coverage_label": "magas",
+      "coverage_score": 54,
+      "coverage_label": "közepes",
       "confidence": 90,
-      "notes": "OSINT alapján gyűjtött, nem hivatalos bérinformáció."
+      "primary_source_name": "hvg.hu",
+      "primary_source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQX1VoRlhsV3B2SzRDdUVUUE5NYWt1UFNibjF3U3ZCQlRhSnU3RkRWbExMQXhVYnNXbWRuSUwwb3hJVkc0ekRPUWxOTlpNdFljTUZ4M0R6S3poUGdnS2JhRmdOYXZ3ZDYzcG9GbHZFaGw3dzA3WmtmeDZ6Um84VURlOWNtankxSFRhaGVj?oc=5&hl=hu&gl=HU&ceid=HU:hu",
+      "notes": "2026-os adatként csak akkor kezelhető, ha a forrás dátuma 2026-os. Régebbi béradat esetén a sor csak háttér-referencia."
     }
   ],
   "role_matrix": [
@@ -192,23 +217,59 @@
       "source_name": "N.A.",
       "source_url": "N.A.",
       "evidence_text": "N.A.",
+      "data_year": "N.A.",
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
     {
       "company_id": "aldi",
       "company": "ALDI",
-      "role_key": "stocker",
-      "role_label": "Áruházi / bolti dolgozó",
-      "salary_display": "N.A.",
-      "salary_min_huf_month": "N.A.",
+      "role_key": "store_worker",
+      "role_label": "Áruházi dolgozó",
+      "salary_display": "541 900 Ft - 750 600 Ft",
+      "salary_min_huf_month": 541900,
+      "salary_median_huf_month": 562600,
+      "salary_max_huf_month": 750600,
+      "record_count": 1,
+      "confidence": 95,
+      "source_name": "hvg.hu / ALDI közlés",
+      "source_url": "https://hvg.hu/gazdasag/20260105_aldi-fizetes-beremeles-mennyi-2026-januar",
+      "evidence_text": "Ellenőrzött 2026-os ALDI béradat.",
+      "data_year": 2026,
+      "notes": "Ellenőrzött 2026-os ALDI béradat. Ez felülírja a salary-summary.json N.A. értékét."
+    },
+    {
+      "company_id": "aldi",
+      "company": "ALDI",
+      "role_key": "logistics_worker",
+      "role_label": "Logisztikai dolgozó",
+      "salary_display": "600 100 Ft - 795 200 Ft",
+      "salary_min_huf_month": 600100,
+      "salary_median_huf_month": 623100,
+      "salary_max_huf_month": 795200,
+      "record_count": 1,
+      "confidence": 95,
+      "source_name": "hvg.hu / ALDI közlés",
+      "source_url": "https://hvg.hu/gazdasag/20260105_aldi-fizetes-beremeles-mennyi-2026-januar",
+      "evidence_text": "Ellenőrzött 2026-os ALDI béradat.",
+      "data_year": 2026,
+      "notes": "Ellenőrzött 2026-os ALDI béradat. Ez felülírja a salary-summary.json N.A. értékét."
+    },
+    {
+      "company_id": "aldi",
+      "company": "ALDI",
+      "role_key": "store_manager",
+      "role_label": "Áruházvezető",
+      "salary_display": "1 003 500 Ft - 1 549 500 Ft",
+      "salary_min_huf_month": 1003500,
       "salary_median_huf_month": "N.A.",
-      "salary_max_huf_month": "N.A.",
-      "record_count": 0,
-      "confidence": 0,
-      "source_name": "N.A.",
-      "source_url": "N.A.",
-      "evidence_text": "N.A.",
-      "notes": "Jelenleg nincs elérhető OSINT béradat."
+      "salary_max_huf_month": 1549500,
+      "record_count": 1,
+      "confidence": 95,
+      "source_name": "hvg.hu / ALDI közlés",
+      "source_url": "https://hvg.hu/gazdasag/20260105_aldi-fizetes-beremeles-mennyi-2026-januar",
+      "evidence_text": "Ellenőrzött 2026-os ALDI béradat.",
+      "data_year": 2026,
+      "notes": "Ellenőrzött 2026-os ALDI béradat. Ez felülírja a salary-summary.json N.A. értékét."
     },
     {
       "company_id": "penny",
@@ -224,6 +285,7 @@
       "source_name": "hvg.hu",
       "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaTJfejl6VWxrWVktZE51TmVqN284V1I3RmtpeFRHdHpTMVNYQzFYNmtNcTdBNkNNM1ZpcXAtS3gwdUVfZ25PempyR2ZBSnEyREJ5dk9PTDhfSlhpOWk4SEMzbXJXOGRBRVdseXI1QkUxNkRxQUpGNXlDU19LZFR5a3p1T2hPUQ?oc=5&hl=hu&gl=HU&ceid=HU:hu",
       "evidence_text": "Gazdaság: Bruttó 540 ezerért keres új munkatársakat a Penny, de az összeg felcsúszhat 670 ezerig is - | hvg.hu. Gazdaság: Bruttó 540 ezerért keres új munkatársakat a Penny, de az összeg felcsúszhat 670 ezerig is | hvg.hu. Google Hírek",
+      "data_year": 2026,
       "notes": "Egy adott szereplő adott munkakörére talált OSINT béradat."
     },
     {
@@ -240,6 +302,7 @@
       "source_name": "hvg.hu",
       "source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQQkcxaTJlMVJlMU1pQVpXczB3RUlnMWh0aXJ2bkh3UzcxSFZSZXowVGZpUDRjRUtxTFQ5RlFzY2M2NGRzUkVNWHBodlVhQjRKWTdWT0diS1RmTUp5ZkRhbDVla1FWVTZ1LXdIby16ejRTVi04M1Bfel8temdsRXF5YTdCVXBmS09DeFQ1eDdZZVRsM0VCLW5r?oc=5&hl=hu&gl=HU&ceid=HU:hu",
       "evidence_text": "Vállalkozás: Spar: 395 ezer bruttó lesz 2025-ben a dolgozók alapbére - | hvg.hu. Vállalkozás: Spar: 395 ezer bruttó lesz 2025-ben a dolgozók alapbére | hvg.hu. Google Hírek",
+      "data_year": 2025,
       "notes": "Egy adott szereplő adott munkakörére talált OSINT béradat."
     },
     {
@@ -256,6 +319,7 @@
       "source_name": "N.A.",
       "source_url": "N.A.",
       "evidence_text": "N.A.",
+      "data_year": 2026,
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
     {
@@ -272,6 +336,7 @@
       "source_name": "hvg.hu",
       "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQX1VoRlhsV3B2SzRDdUVUUE5NYWt1UFNibjF3U3ZCQlRhSnU3RkRWbExMQXhVYnNXbWRuSUwwb3hJVkc0ekRPUWxOTlpNdFljTUZ4M0R6S3poUGdnS2JhRmdOYXZ3ZDYzcG9GbHZFaGw3dzA3WmtmeDZ6Um84VURlOWNtankxSFRhaGVj?oc=5&hl=hu&gl=HU&ceid=HU:hu",
       "evidence_text": "Vállalkozás: Auchan: Bruttó 402 ezer lesz januártól a fizikai munkát végzők alapbére - | hvg.hu. Vállalkozás: Auchan: Bruttó 402 ezer lesz januártól a fizikai munkát végzők alapbére | hvg.hu. Google Hírek",
+      "data_year": 2025,
       "notes": "Egy adott szereplő adott munkakörére talált OSINT béradat."
     },
     {
@@ -288,23 +353,59 @@
       "source_name": "N.A.",
       "source_url": "N.A.",
       "evidence_text": "N.A.",
+      "data_year": "N.A.",
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
     {
       "company_id": "aldi",
       "company": "ALDI",
+      "role_key": "store_worker",
+      "role_label": "Áruházi dolgozó",
+      "salary_display": "541 900 Ft - 750 600 Ft",
+      "salary_min_huf_month": 541900,
+      "salary_median_huf_month": 562600,
+      "salary_max_huf_month": 750600,
+      "record_count": 1,
+      "confidence": 95,
+      "source_name": "hvg.hu / ALDI közlés",
+      "source_url": "https://hvg.hu/gazdasag/20260105_aldi-fizetes-beremeles-mennyi-2026-januar",
+      "evidence_text": "Ellenőrzött 2026-os ALDI béradat.",
+      "data_year": 2026,
+      "notes": "Ellenőrzött 2026-os ALDI béradat. Ez felülírja a salary-summary.json N.A. értékét."
+    },
+    {
+      "company_id": "aldi",
+      "company": "ALDI",
+      "role_key": "logistics_worker",
+      "role_label": "Logisztikai dolgozó",
+      "salary_display": "600 100 Ft - 795 200 Ft",
+      "salary_min_huf_month": 600100,
+      "salary_median_huf_month": 623100,
+      "salary_max_huf_month": 795200,
+      "record_count": 1,
+      "confidence": 95,
+      "source_name": "hvg.hu / ALDI közlés",
+      "source_url": "https://hvg.hu/gazdasag/20260105_aldi-fizetes-beremeles-mennyi-2026-januar",
+      "evidence_text": "Ellenőrzött 2026-os ALDI béradat.",
+      "data_year": 2026,
+      "notes": "Ellenőrzött 2026-os ALDI béradat. Ez felülírja a salary-summary.json N.A. értékét."
+    },
+    {
+      "company_id": "aldi",
+      "company": "ALDI",
       "role_key": "store_manager",
-      "role_label": "Üzletvezető / vezetői munkakör",
-      "salary_display": "N.A.",
-      "salary_min_huf_month": "N.A.",
+      "role_label": "Áruházvezető",
+      "salary_display": "1 003 500 Ft - 1 549 500 Ft",
+      "salary_min_huf_month": 1003500,
       "salary_median_huf_month": "N.A.",
-      "salary_max_huf_month": "N.A.",
-      "record_count": 0,
-      "confidence": 0,
-      "source_name": "N.A.",
-      "source_url": "N.A.",
-      "evidence_text": "N.A.",
-      "notes": "Jelenleg nincs elérhető OSINT béradat."
+      "salary_max_huf_month": 1549500,
+      "record_count": 1,
+      "confidence": 95,
+      "source_name": "hvg.hu / ALDI közlés",
+      "source_url": "https://hvg.hu/gazdasag/20260105_aldi-fizetes-beremeles-mennyi-2026-januar",
+      "evidence_text": "Ellenőrzött 2026-os ALDI béradat.",
+      "data_year": 2026,
+      "notes": "Ellenőrzött 2026-os ALDI béradat. Ez felülírja a salary-summary.json N.A. értékét."
     },
     {
       "company_id": "penny",
@@ -320,6 +421,7 @@
       "source_name": "N.A.",
       "source_url": "N.A.",
       "evidence_text": "N.A.",
+      "data_year": 2026,
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
     {
@@ -336,6 +438,7 @@
       "source_name": "N.A.",
       "source_url": "N.A.",
       "evidence_text": "N.A.",
+      "data_year": 2025,
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
     {
@@ -352,6 +455,7 @@
       "source_name": "N.A.",
       "source_url": "N.A.",
       "evidence_text": "N.A.",
+      "data_year": 2026,
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
     {
@@ -368,6 +472,7 @@
       "source_name": "N.A.",
       "source_url": "N.A.",
       "evidence_text": "N.A.",
+      "data_year": 2025,
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
     {
@@ -384,23 +489,59 @@
       "source_name": "N.A.",
       "source_url": "N.A.",
       "evidence_text": "N.A.",
+      "data_year": "N.A.",
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
     {
       "company_id": "aldi",
       "company": "ALDI",
-      "role_key": "warehouse_worker",
-      "role_label": "Raktári dolgozó",
-      "salary_display": "N.A.",
-      "salary_min_huf_month": "N.A.",
+      "role_key": "store_worker",
+      "role_label": "Áruházi dolgozó",
+      "salary_display": "541 900 Ft - 750 600 Ft",
+      "salary_min_huf_month": 541900,
+      "salary_median_huf_month": 562600,
+      "salary_max_huf_month": 750600,
+      "record_count": 1,
+      "confidence": 95,
+      "source_name": "hvg.hu / ALDI közlés",
+      "source_url": "https://hvg.hu/gazdasag/20260105_aldi-fizetes-beremeles-mennyi-2026-januar",
+      "evidence_text": "Ellenőrzött 2026-os ALDI béradat.",
+      "data_year": 2026,
+      "notes": "Ellenőrzött 2026-os ALDI béradat. Ez felülírja a salary-summary.json N.A. értékét."
+    },
+    {
+      "company_id": "aldi",
+      "company": "ALDI",
+      "role_key": "logistics_worker",
+      "role_label": "Logisztikai dolgozó",
+      "salary_display": "600 100 Ft - 795 200 Ft",
+      "salary_min_huf_month": 600100,
+      "salary_median_huf_month": 623100,
+      "salary_max_huf_month": 795200,
+      "record_count": 1,
+      "confidence": 95,
+      "source_name": "hvg.hu / ALDI közlés",
+      "source_url": "https://hvg.hu/gazdasag/20260105_aldi-fizetes-beremeles-mennyi-2026-januar",
+      "evidence_text": "Ellenőrzött 2026-os ALDI béradat.",
+      "data_year": 2026,
+      "notes": "Ellenőrzött 2026-os ALDI béradat. Ez felülírja a salary-summary.json N.A. értékét."
+    },
+    {
+      "company_id": "aldi",
+      "company": "ALDI",
+      "role_key": "store_manager",
+      "role_label": "Áruházvezető",
+      "salary_display": "1 003 500 Ft - 1 549 500 Ft",
+      "salary_min_huf_month": 1003500,
       "salary_median_huf_month": "N.A.",
-      "salary_max_huf_month": "N.A.",
-      "record_count": 0,
-      "confidence": 0,
-      "source_name": "N.A.",
-      "source_url": "N.A.",
-      "evidence_text": "N.A.",
-      "notes": "Jelenleg nincs elérhető OSINT béradat."
+      "salary_max_huf_month": 1549500,
+      "record_count": 1,
+      "confidence": 95,
+      "source_name": "hvg.hu / ALDI közlés",
+      "source_url": "https://hvg.hu/gazdasag/20260105_aldi-fizetes-beremeles-mennyi-2026-januar",
+      "evidence_text": "Ellenőrzött 2026-os ALDI béradat.",
+      "data_year": 2026,
+      "notes": "Ellenőrzött 2026-os ALDI béradat. Ez felülírja a salary-summary.json N.A. értékét."
     },
     {
       "company_id": "penny",
@@ -416,6 +557,7 @@
       "source_name": "N.A.",
       "source_url": "N.A.",
       "evidence_text": "N.A.",
+      "data_year": 2026,
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
     {
@@ -432,6 +574,7 @@
       "source_name": "N.A.",
       "source_url": "N.A.",
       "evidence_text": "N.A.",
+      "data_year": 2025,
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
     {
@@ -448,6 +591,7 @@
       "source_name": "N.A.",
       "source_url": "N.A.",
       "evidence_text": "N.A.",
+      "data_year": 2026,
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
     {
@@ -464,6 +608,7 @@
       "source_name": "N.A.",
       "source_url": "N.A.",
       "evidence_text": "N.A.",
+      "data_year": 2025,
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
     {
@@ -480,23 +625,59 @@
       "source_name": "N.A.",
       "source_url": "N.A.",
       "evidence_text": "N.A.",
+      "data_year": "N.A.",
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
     {
       "company_id": "aldi",
       "company": "ALDI",
-      "role_key": "cashier",
-      "role_label": "Pénztáros",
-      "salary_display": "N.A.",
-      "salary_min_huf_month": "N.A.",
+      "role_key": "store_worker",
+      "role_label": "Áruházi dolgozó",
+      "salary_display": "541 900 Ft - 750 600 Ft",
+      "salary_min_huf_month": 541900,
+      "salary_median_huf_month": 562600,
+      "salary_max_huf_month": 750600,
+      "record_count": 1,
+      "confidence": 95,
+      "source_name": "hvg.hu / ALDI közlés",
+      "source_url": "https://hvg.hu/gazdasag/20260105_aldi-fizetes-beremeles-mennyi-2026-januar",
+      "evidence_text": "Ellenőrzött 2026-os ALDI béradat.",
+      "data_year": 2026,
+      "notes": "Ellenőrzött 2026-os ALDI béradat. Ez felülírja a salary-summary.json N.A. értékét."
+    },
+    {
+      "company_id": "aldi",
+      "company": "ALDI",
+      "role_key": "logistics_worker",
+      "role_label": "Logisztikai dolgozó",
+      "salary_display": "600 100 Ft - 795 200 Ft",
+      "salary_min_huf_month": 600100,
+      "salary_median_huf_month": 623100,
+      "salary_max_huf_month": 795200,
+      "record_count": 1,
+      "confidence": 95,
+      "source_name": "hvg.hu / ALDI közlés",
+      "source_url": "https://hvg.hu/gazdasag/20260105_aldi-fizetes-beremeles-mennyi-2026-januar",
+      "evidence_text": "Ellenőrzött 2026-os ALDI béradat.",
+      "data_year": 2026,
+      "notes": "Ellenőrzött 2026-os ALDI béradat. Ez felülírja a salary-summary.json N.A. értékét."
+    },
+    {
+      "company_id": "aldi",
+      "company": "ALDI",
+      "role_key": "store_manager",
+      "role_label": "Áruházvezető",
+      "salary_display": "1 003 500 Ft - 1 549 500 Ft",
+      "salary_min_huf_month": 1003500,
       "salary_median_huf_month": "N.A.",
-      "salary_max_huf_month": "N.A.",
-      "record_count": 0,
-      "confidence": 0,
-      "source_name": "N.A.",
-      "source_url": "N.A.",
-      "evidence_text": "N.A.",
-      "notes": "Jelenleg nincs elérhető OSINT béradat."
+      "salary_max_huf_month": 1549500,
+      "record_count": 1,
+      "confidence": 95,
+      "source_name": "hvg.hu / ALDI közlés",
+      "source_url": "https://hvg.hu/gazdasag/20260105_aldi-fizetes-beremeles-mennyi-2026-januar",
+      "evidence_text": "Ellenőrzött 2026-os ALDI béradat.",
+      "data_year": 2026,
+      "notes": "Ellenőrzött 2026-os ALDI béradat. Ez felülírja a salary-summary.json N.A. értékét."
     },
     {
       "company_id": "penny",
@@ -512,6 +693,7 @@
       "source_name": "N.A.",
       "source_url": "N.A.",
       "evidence_text": "N.A.",
+      "data_year": 2026,
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
     {
@@ -528,6 +710,7 @@
       "source_name": "N.A.",
       "source_url": "N.A.",
       "evidence_text": "N.A.",
+      "data_year": 2025,
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
     {
@@ -544,6 +727,7 @@
       "source_name": "N.A.",
       "source_url": "N.A.",
       "evidence_text": "N.A.",
+      "data_year": 2026,
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     },
     {
@@ -560,10 +744,33 @@
       "source_name": "N.A.",
       "source_url": "N.A.",
       "evidence_text": "N.A.",
+      "data_year": 2025,
       "notes": "Jelenleg nincs elérhető OSINT béradat."
     }
   ],
   "evidence_table": [
+    {
+      "company_id": "aldi",
+      "company": "ALDI",
+      "value_type": "salary_range_huf_month",
+      "source_name": "hvg.hu",
+      "source_url": "https://hvg.hu/gazdasag/20260105_aldi-fizetes-beremeles-mennyi-2026-januar",
+      "published_or_found_date": "2026-01-05",
+      "data_year": 2026,
+      "confidence": 95,
+      "evidence_text": "2026. január 1-jétől az újonnan belépő áruházi dolgozók kezdő bére 541 900 Ft, egy év után 562 600 Ft, a maximum 750 600 Ft."
+    },
+    {
+      "company_id": "aldi",
+      "company": "ALDI",
+      "value_type": "salary_range_huf_month",
+      "source_name": "HR Portál",
+      "source_url": "https://www.hrportal.hu/c/beremelesek-az-aldinal-vannak-akik-mar-egymillio-forint-felett-keresnek-majd-20260106.html",
+      "published_or_found_date": "2026-01-06",
+      "data_year": 2026,
+      "confidence": 90,
+      "evidence_text": "Az ALDI 2026-os béremelése áruházi és logisztikai munkakörökre is konkrét bruttó havi béradatokat közölt."
+    },
     {
       "company_id": "penny",
       "company": "PENNY",
@@ -571,28 +778,9 @@
       "source_name": "portfolio.hu",
       "source_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQd29GcXNoTGZmWDl4RzFDeWFfU2RSRllBZEl1bWY4eUlvQXZaQkVSbzVJUEgwdDdLcW1SeFA1VW83NXJzaUxmV2gwa1RhbUNuQ3VleWdKLWs0LW5iOS1hM3dJYTR3U2JhV2dtQ0FFNnp3VTVRV3B3TlBLdzg5V1RGbUYyd1QtellDWkphSHBCZEHSAZYBQVVfeXFMTlZxTm9ZTHhfSU4wakFkc2xwZmhhYXc1NW80eFlEcE1lWjNGblFJaUFSQ2dMWmI5NXRWQnZoMUxoLU1vZGdOR3JiUExmQUpBSy1RQ0pEZ1ZNY1lXWVdkaHFwRzlKVWtrQ2dNQzlfTFptcFlpVC1VYTI0cGtvVjhQUFFFZ2c3VjBnOGpYMzA1NW9UTVpCTzdB?oc=5&hl=hu&gl=HU&ceid=HU:hu",
       "published_or_found_date": "Fri, 23 Jan 2026 08:00:00 GMT",
+      "data_year": 2026,
       "confidence": 65,
       "evidence_text": "6-8 százalékos béremelés jön a Penny-nél - Portfolio.hu. 6-8 százalékos béremelés jön a Penny-nél Portfolio.hu. Google Hírek"
-    },
-    {
-      "company_id": "penny",
-      "company": "PENNY",
-      "value_type": "salary_range_huf_month",
-      "source_name": "hvg.hu",
-      "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaTJfejl6VWxrWVktZE51TmVqN284V1I3RmtpeFRHdHpTMVNYQzFYNmtNcTdBNkNNM1ZpcXAtS3gwdUVfZ25PempyR2ZBSnEyREJ5dk9PTDhfSlhpOWk4SEMzbXJXOGRBRVdseXI1QkUxNkRxQUpGNXlDU19LZFR5a3p1T2hPUQ?oc=5&hl=hu&gl=HU&ceid=HU:hu",
-      "published_or_found_date": "Tue, 23 Dec 2025 08:00:00 GMT",
-      "confidence": 90,
-      "evidence_text": "Gazdaság: Bruttó 540 ezerért keres új munkatársakat a Penny, de az összeg felcsúszhat 670 ezerig is - | hvg.hu. Gazdaság: Bruttó 540 ezerért keres új munkatársakat a Penny, de az összeg felcsúszhat 670 ezerig is | hvg.hu. Google Hírek"
-    },
-    {
-      "company_id": "spar",
-      "company": "SPAR",
-      "value_type": "salary_huf_month",
-      "source_name": "hvg.hu",
-      "source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQQkcxaTJlMVJlMU1pQVpXczB3RUlnMWh0aXJ2bkh3UzcxSFZSZXowVGZpUDRjRUtxTFQ5RlFzY2M2NGRzUkVNWHBodlVhQjRKWTdWT0diS1RmTUp5ZkRhbDVla1FWVTZ1LXdIby16ejRTVi04M1Bfel8temdsRXF5YTdCVXBmS09DeFQ1eDdZZVRsM0VCLW5r?oc=5&hl=hu&gl=HU&ceid=HU:hu",
-      "published_or_found_date": "Thu, 02 Jan 2025 08:00:00 GMT",
-      "confidence": 80,
-      "evidence_text": "Vállalkozás: Spar: 395 ezer bruttó lesz 2025-ben a dolgozók alapbére - | hvg.hu. Vállalkozás: Spar: 395 ezer bruttó lesz 2025-ben a dolgozók alapbére | hvg.hu. Google Hírek"
     },
     {
       "company_id": "tesco",
@@ -601,18 +789,14 @@
       "source_name": "portfolio.hu",
       "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPUjB1ejFlSFJmbXBVZVVERVI2eVhrcFhEOUdST3hhenozRTFWSzdJWEV0MVhmMlpPU1FTY19RRFBiS1dfa0hPNUlVc0ZSUHVQQ0lPbVFTVWptOGRRSXl4eXlFc3NZb3ludTFZRGVBTUQ0bWNaNmxheUh5cGlGZ2JmNjZPdkdiZ3N3UWMxWUZxaDdOSGNwWU92eHhMd9IBoAFBVV95cUxQNTRyNXVuLWlwSktEVU1xUHRVS1VVNTQ2Vkk5czBPcHh2RndMaG1xcWs2aV9uRDdKaEc5dXV4VXJyazZtUlZYX2VzMHJWZ0M5YUtUcmxqa3JuRl9TYVFCVk52VUNDNldGUnJwblMtTmRIX21Rd0hCZ3BzNFBHNHM5dWJQR3ZfZUQ5SkRoeHAwTFotU3Jxc2ZiYnBUVktXWmNI?oc=5&hl=hu&gl=HU&ceid=HU:hu",
       "published_or_found_date": "Fri, 23 Jan 2026 08:00:00 GMT",
+      "data_year": 2026,
       "confidence": 65,
       "evidence_text": "7,2 százalékos béremelést kapnak a Tesco dolgozói - Portfolio.hu. 7,2 százalékos béremelést kapnak a Tesco dolgozói Portfolio.hu. Google Hírek"
-    },
-    {
-      "company_id": "auchan",
-      "company": "Auchan",
-      "value_type": "salary_huf_month",
-      "source_name": "hvg.hu",
-      "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQX1VoRlhsV3B2SzRDdUVUUE5NYWt1UFNibjF3U3ZCQlRhSnU3RkRWbExMQXhVYnNXbWRuSUwwb3hJVkc0ekRPUWxOTlpNdFljTUZ4M0R6S3poUGdnS2JhRmdOYXZ3ZDYzcG9GbHZFaGw3dzA3WmtmeDZ6Um84VURlOWNtankxSFRhaGVj?oc=5&hl=hu&gl=HU&ceid=HU:hu",
-      "published_or_found_date": "Thu, 23 Jan 2025 08:00:00 GMT",
-      "confidence": 90,
-      "evidence_text": "Vállalkozás: Auchan: Bruttó 402 ezer lesz januártól a fizikai munkát végzők alapbére - | hvg.hu. Vállalkozás: Auchan: Bruttó 402 ezer lesz januártól a fizikai munkát végzők alapbére | hvg.hu. Google Hírek"
     }
-  ]
+  ],
+  "verified_salary_summary": {
+    "current_2026_records": 3,
+    "older_reference_records": 2,
+    "no_data_records": 1
+  }
 }
