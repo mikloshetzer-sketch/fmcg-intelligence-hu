@@ -10,10 +10,13 @@ permissions:
   contents: write
 
 jobs:
+
   employer_review_monitor:
+
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -35,14 +38,25 @@ jobs:
         run: |
           python scripts/update_employee_reputation_index.py
 
+      - name: Build employee reputation history
+        run: |
+          python scripts/update_employee_reputation_history.py
+
       - name: Commit changes
         run: |
+
           git config --global user.name github-actions
+
           git config --global user.email github-actions@github.com
 
           git add docs/data/employer-review-texts.json
+
           git add docs/data/employee-reputation-index.json
 
-          git diff --cached --quiet || git commit -m "Update employee review data and reputation index"
+          git add docs/data/employee-reputation-history.json
+
+          git add docs/data/employee-reputation-history/
+
+          git diff --cached --quiet || git commit -m "Update employee reputation intelligence"
 
           git push
