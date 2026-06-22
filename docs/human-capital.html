@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FMCG Intelligence Hungary – Human Capital V3.4</title>
+  <title>FMCG Intelligence Hungary – Human Capital V3.5</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="./css/style.css" />
   <style>
@@ -157,6 +157,16 @@
     .salary-summary-tile .value{font-size:24px;font-weight:950;color:var(--hc-navy);margin-top:5px;}
     @media(max-width:900px){.salary-summary-grid{grid-template-columns:repeat(2,1fr);}}
     @media(max-width:600px){.salary-summary-grid{grid-template-columns:1fr;}}
+
+    .salary-source-quality-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin-top:10px;}
+    .salary-source-quality-card{border:1px solid #e1edf7;border-radius:16px;background:#fff;padding:12px;min-height:118px;}
+    .salary-source-quality-card .company{font-weight:950;color:var(--hc-navy);font-size:14px;}
+    .salary-source-quality-card .quality{font-size:13px;font-weight:900;margin-top:7px;color:#166534;}
+    .salary-source-quality-card.secondary .quality{color:#9a3412;}
+    .salary-source-quality-card .stars{font-size:16px;margin-top:6px;letter-spacing:1px;color:#f59e0b;}
+    .salary-source-quality-card .source{font-size:11px;color:var(--hc-muted);line-height:1.35;margin-top:7px;}
+    .salary-info-list{margin:9px 0 0;padding-left:18px;color:#334155;font-size:12px;line-height:1.45;}
+    .salary-info-list li{margin:3px 0;}
     @media(max-width:1100px){.salary-compact-grid{grid-template-columns:1fr}.salary-evidence-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
     @media(max-width:700px){.salary-evidence-grid{grid-template-columns:1fr}.salary-coverage-row{grid-template-columns:76px 1fr 42px}.salary-benchmark-table{font-size:11px}.salary-benchmark-table th,.salary-benchmark-table td{padding:8px 6px}}
 
@@ -170,7 +180,7 @@
   <div class="header-inner">
     <div class="brand">
       <div class="brand-title">FMCG Intelligence Hungary</div>
-      <div class="brand-subtitle">Human Capital Dashboard V3.4 – recruitment mix, benefit matrix, adatminőség és heti insight</div>
+      <div class="brand-subtitle">Human Capital Dashboard V3.5 – recruitment mix, benefit matrix, salary intelligence és adatminőség</div>
     </div>
     <nav class="nav">
       <a href="./index.html">Dashboard</a>
@@ -184,7 +194,7 @@
 
 <section class="hero">
   <div class="hero-box">
-    <div class="hero-kicker">Human Capital Intelligence V3.4</div>
+    <div class="hero-kicker">Human Capital Intelligence V3.5</div>
     <h1>Munkaerő, reputáció, juttatások és toborzási nyomás az FMCG szereplőknél</h1>
     <p>
       A V3 nézet a meglévő HR, pénzügyi és álláshirdetési adatokból vezetői dashboardot készít:
@@ -315,8 +325,8 @@
 
     <div class="card span12 card-soft">
       <div class="section-title">
-        <h2>2026 Salary Intelligence – bérpiaci benchmark és ellenőrzött OSINT adatok</h2>
-        <span>salary-dashboard-data.json – 2026 elsőbbségű, tisztított béradat-réteg</span>
+        <h2>2026 Salary Intelligence – hitelesített vállalati bérinformációk</h2>
+        <span>salary-dashboard-data.json – hivatalos vállalati közlések elsőbbségével</span>
       </div>
 
       <div class="salary-compact-grid">
@@ -337,8 +347,13 @@
       </div>
 
       <div style="margin-top:18px">
-        <h3 style="margin:0 0 10px;color:var(--hc-navy)">2026-os vállalati bérinformációk és régebbi referenciák</h3>
+        <h3 style="margin:0 0 10px;color:var(--hc-navy)">Beszerzett információk vállalatonként</h3>
         <div id="salaryEvidenceCards" class="salary-evidence-grid">Adatok betöltése...</div>
+      </div>
+
+      <div style="margin-top:18px">
+        <h3 style="margin:0 0 10px;color:var(--hc-navy)">Források hitelessége</h3>
+        <div id="salarySourceQualityCards" class="salary-source-quality-grid">Adatok betöltése...</div>
       </div>
 
       <div style="margin-top:18px">
@@ -378,7 +393,7 @@
   </div>
 </main>
 
-<footer class="footer">FMCG Intelligence Hungary – Human Capital V3.4 modul.</footer>
+<footer class="footer">FMCG Intelligence Hungary – Human Capital V3.5 modul.</footer>
 
 <script>
 const companiesUrl = './data/companies.json';
@@ -1026,41 +1041,50 @@ function sourceLink(sourceName, sourceUrl){
 }
 
 function salaryYearLabel(card){
-  const status = card?.year_status || 'no_data';
-  const year = card?.data_year || 'N.A.';
-  if(status === 'current_2026_salary') return {text:'2026 béradat', cls:'current'};
-  if(status === 'current_2026_raise_only') return {text:'2026 béremelés', cls:'raise'};
-  if(status === 'older_salary_reference' || status === 'dated_reference') return {text:`${year} referencia`, cls:'old'};
+  const depth = card?.information_depth || card?.year_status || 'no_data';
+  if(depth === 'detailed_structure' || depth === 'current_2026_salary') return {text:'részletes bérstruktúra', cls:'current'};
+  if(depth === 'partial_information' || depth === 'current_2026_partial' || depth === 'current_2026_raise_only') return {text:'részleges bérinformáció', cls:'raise'};
+  if(depth === 'reference_only' || depth === 'older_salary_reference' || depth === 'dated_reference') return {text:'referencia szintű információ', cls:'old'};
   return {text:'nincs adat', cls:'none'};
 }
 function salaryMainDisplay(card){
   if(!card) return 'N.A.';
-  if(card.year_status === 'current_2026_raise_only'){
-    return card.salary_raise_pct && card.salary_raise_pct !== 'N.A.' ? `+${card.salary_raise_pct}%` : '2026 béremelés';
-  }
+  if(card.headline && card.headline !== 'N.A.') return card.headline;
   if(card.base_salary_display && card.base_salary_display !== 'N.A.') return card.base_salary_display;
   if(card.salary_raise_pct && card.salary_raise_pct !== 'N.A.') return `+${card.salary_raise_pct}%`;
   return 'N.A.';
 }
 function salaryStatusText(card){
   if(!card) return 'Nincs adat.';
-  if(card.year_status === 'current_2026_salary') return 'Ellenőrzött 2026-os bruttó havi béradat.';
-  if(card.year_status === 'current_2026_raise_only') return '2026-os béremelési adat, konkrét havi bérsáv nélkül.';
-  if(card.year_status === 'older_salary_reference' || card.year_status === 'dated_reference') return 'Régebbi, nem 2026-os bérreferencia.';
+  const depth = card.information_depth || card.year_status;
+  if(depth === 'detailed_structure' || depth === 'current_2026_salary') return 'Részletes, 2026-os vállalati bérstruktúra azonosítva.';
+  if(depth === 'partial_information' || depth === 'current_2026_partial' || depth === 'current_2026_raise_only') return '2026-os bérinformáció azonosítva, de nem minden esetben teljes havi bérsáv.';
+  if(depth === 'reference_only' || depth === 'older_salary_reference' || depth === 'dated_reference') return 'Referencia szintű információ; hivatalos 2026-os vállalati bérközlés nem azonosítható.';
   return 'Nem sikerült megbízható nyilvános 2026-os béradatot azonosítani.';
 }
 function salarySourceHtml(card){
-  const name = card?.primary_source_name;
-  const url = card?.primary_source_url;
+  const name = card?.source_name || card?.primary_source_name;
+  const url = card?.source_url || card?.primary_source_url;
   if(name && name !== 'N.A.' && url && url !== 'N.A.') return sourceLink(name, url);
   return 'nincs forrás';
 }
 function salaryDataSortValue(card){
-  const status = card?.year_status || 'no_data';
-  if(status === 'current_2026_salary') return 4;
-  if(status === 'current_2026_raise_only') return 3;
-  if(status === 'older_salary_reference' || status === 'dated_reference') return 2;
+  const depth = card?.information_depth || card?.year_status || 'no_data';
+  if(depth === 'detailed_structure' || depth === 'current_2026_salary') return 4;
+  if(depth === 'partial_information' || depth === 'current_2026_partial' || depth === 'current_2026_raise_only') return 3;
+  if(depth === 'reference_only' || depth === 'older_salary_reference' || depth === 'dated_reference') return 2;
   return 1;
+}
+function salarySourceQualityLabel(card){
+  const q = card?.source_quality;
+  if(q === 'official_company') return {text:'Hivatalos vállalati közlés', cls:'green', stars:'★★★★★'};
+  if(q === 'secondary_reference') return {text:'Másodlagos referenciaforrás', cls:'orange', stars:'★★★'};
+  return {text:'Forrás nem besorolt', cls:'gray', stars:'★★'};
+}
+function salaryItemsHtml(card){
+  const items = Array.isArray(card?.information_items) ? card.information_items : [];
+  if(!items.length) return '';
+  return `<ul class="salary-info-list">${items.map(item=>`<li>${item}</li>`).join('')}</ul>`;
 }
 
 function renderRetailSalaryIntelligence(){
@@ -1069,6 +1093,7 @@ function renderRetailSalaryIntelligence(){
   const benchmarkBox = document.getElementById('retailSalaryBenchmarkCards');
   const coverageBox = document.getElementById('salaryCoverageList');
   const evidenceBox = document.getElementById('salaryEvidenceCards');
+  const sourceQualityBox = document.getElementById('salarySourceQualityCards');
   const insightBox = document.getElementById('salaryDashboardInsight');
   const sourceBox = document.getElementById('salaryDashboardSourceNote');
 
@@ -1078,6 +1103,7 @@ function renderRetailSalaryIntelligence(){
     benchmarkBox.innerHTML = 'Nincs elérhető salary-dashboard-data.json adat.';
     coverageBox.innerHTML = 'Nincs elérhető adat.';
     evidenceBox.innerHTML = 'Nincs elérhető adat.';
+    if(sourceQualityBox) sourceQualityBox.innerHTML = 'Nincs elérhető adat.';
     if(insightBox) insightBox.innerHTML = 'A bérmodul akkor jelenik meg, ha a salary-dashboard-data.json fájl létrejött.';
     if(sourceBox) sourceBox.innerHTML = '<b>Forrás:</b> docs/data/salary-dashboard-data.json';
     return;
@@ -1106,16 +1132,18 @@ function renderRetailSalaryIntelligence(){
     </tbody>
   </table>`;
 
-  const cards = data.company_cards || [];
+  const cards = (data.salary_intelligence_cards && data.salary_intelligence_cards.length) ? data.salary_intelligence_cards : (data.company_cards || []);
   const orderedCards = [...cards].sort((a,b)=>{
     const byStatus = salaryDataSortValue(b) - salaryDataSortValue(a);
     if(byStatus !== 0) return byStatus;
-    return num(b.coverage_score,0)-num(a.coverage_score,0);
+    return num(b.confidence || b.coverage_score,0)-num(a.confidence || a.coverage_score,0);
   });
 
   coverageBox.innerHTML = orderedCards.map(c=>{
-    const score = num(c.coverage_score,0);
+    const depth = c.information_depth || c.year_status;
+    const score = depth === 'detailed_structure' ? 100 : depth === 'partial_information' ? 75 : depth === 'reference_only' ? 40 : num(c.coverage_score,0);
     const badge = salaryYearLabel(c);
+    const quality = salarySourceQualityLabel(c);
     return `<div>
       <div class="salary-coverage-row">
         <b>${c.company}</b>
@@ -1124,57 +1152,70 @@ function renderRetailSalaryIntelligence(){
       </div>
       <div class="salary-coverage-caption">
         <span class="salary-year-badge ${badge.cls}">${badge.text}</span>
+        <span class="pill ${quality.cls}">${quality.text}</span>
         <span>bizalom: ${num(c.confidence,0)}/100</span>
       </div>
     </div>`;
   }).join('');
 
-  const summary = data.verified_salary_summary || {};
-  const current2026Salary = cards.filter(c=>c.year_status === 'current_2026_salary').length;
-  const current2026Raise = cards.filter(c=>c.year_status === 'current_2026_raise_only').length;
-  const olderRef = cards.filter(c=>c.year_status === 'older_salary_reference' || c.year_status === 'dated_reference').length;
-  const noData = cards.filter(c=>c.year_status === 'no_data').length;
+  const summary = data.salary_intelligence_summary || {};
+  const detailed = summary.detailed_structure ?? orderedCards.filter(c=>(c.information_depth || c.year_status) === 'detailed_structure').length;
+  const partial = summary.partial_information ?? orderedCards.filter(c=>(c.information_depth || c.year_status) === 'partial_information').length;
+  const reference = summary.reference_only ?? orderedCards.filter(c=>(c.information_depth || c.year_status) === 'reference_only').length;
+  const official = summary.official_sources ?? orderedCards.filter(c=>c.source_quality === 'official_company').length;
 
   evidenceBox.innerHTML = `
     ${orderedCards.map(c=>{
       const badge = salaryYearLabel(c);
       const mainDisplay = salaryMainDisplay(c);
-      const hasData = c.year_status && c.year_status !== 'no_data';
-      const cardClass = hasData ? 'salary-evidence-card' : 'salary-evidence-card na';
+      const quality = salarySourceQualityLabel(c);
+      const cardClass = (c.information_depth || c.year_status) === 'reference_only' ? 'salary-evidence-card na' : 'salary-evidence-card';
       const sourceHtml = salarySourceHtml(c);
-      const raise = c.salary_raise_pct && c.salary_raise_pct !== 'N.A.' ? `+${c.salary_raise_pct}% béremelés` : null;
 
       return `<div class="${cardClass}">
         <div class="company">${c.company}</div>
         <div class="salary">${mainDisplay}</div>
         <div class="desc">${salaryStatusText(c)}</div>
+        ${salaryItemsHtml(c)}
         <div class="salary-card-meta">
           <span class="salary-year-badge ${badge.cls}">${badge.text}</span>
-          <span class="pill gray">${sourceHtml}</span>
-          ${raise && c.year_status !== 'current_2026_raise_only' ? `<span class="pill orange">${raise}</span>` : ''}
+          <span class="pill ${quality.cls}">${quality.text}</span>
           <span class="pill gray">${num(c.confidence,0)}/100</span>
         </div>
+        <div class="salary-mini-note">Forrás: ${sourceHtml}</div>
       </div>`;
     }).join('')}
     <div class="salary-summary-grid" style="grid-column:1/-1">
-      <div class="salary-summary-tile"><div class="label">2026 béradat</div><div class="value">${current2026Salary}</div></div>
-      <div class="salary-summary-tile"><div class="label">2026 béremelés</div><div class="value">${current2026Raise}</div></div>
-      <div class="salary-summary-tile"><div class="label">Régebbi referencia</div><div class="value">${olderRef}</div></div>
-      <div class="salary-summary-tile"><div class="label">Nincs adat</div><div class="value">${noData}</div></div>
+      <div class="salary-summary-tile"><div class="label">Részletes bérstruktúra</div><div class="value">${detailed}</div></div>
+      <div class="salary-summary-tile"><div class="label">Részleges bérinformáció</div><div class="value">${partial}</div></div>
+      <div class="salary-summary-tile"><div class="label">Referencia szintű információ</div><div class="value">${reference}</div></div>
+      <div class="salary-summary-tile"><div class="label">Hivatalos vállalati forrás</div><div class="value">${official}</div></div>
     </div>
   `;
 
-  const currentSalaryCompanies = cards.filter(c=>c.year_status === 'current_2026_salary').map(c=>c.company);
-  const currentRaiseCompanies = cards.filter(c=>c.year_status === 'current_2026_raise_only').map(c=>c.company);
-  const olderCompanies = cards.filter(c=>c.year_status === 'older_salary_reference' || c.year_status === 'dated_reference').map(c=>c.company);
-  const noDataCompanies = cards.filter(c=>c.year_status === 'no_data').map(c=>c.company);
+  if(sourceQualityBox){
+    sourceQualityBox.innerHTML = orderedCards.map(c=>{
+      const quality = salarySourceQualityLabel(c);
+      return `<div class="salary-source-quality-card ${c.source_quality === 'secondary_reference' ? 'secondary' : ''}">
+        <div class="company">${c.company}</div>
+        <div class="quality">${quality.text}</div>
+        <div class="stars">${quality.stars}</div>
+        <div class="source">${salarySourceHtml(c)}</div>
+      </div>`;
+    }).join('');
+  }
+
+  const detailedCompanies = orderedCards.filter(c=>c.information_depth === 'detailed_structure').map(c=>c.company);
+  const partialCompanies = orderedCards.filter(c=>c.information_depth === 'partial_information').map(c=>c.company);
+  const referenceCompanies = orderedCards.filter(c=>c.information_depth === 'reference_only').map(c=>c.company);
+  const officialCompanies = orderedCards.filter(c=>c.source_quality === 'official_company').map(c=>c.company);
 
   if(insightBox){
-    insightBox.innerHTML = `<b>Mit látunk?</b> A bérmodul most már 2026 elsőbbségű logikával működik. Ellenőrzött 2026-os havi béradat jelenleg ezeknél a szereplőknél van: <b>${currentSalaryCompanies.length ? currentSalaryCompanies.join(', ') : 'nincs ilyen adat'}</b>. Csak 2026-os béremelési adat látszik: <b>${currentRaiseCompanies.length ? currentRaiseCompanies.join(', ') : 'nincs ilyen adat'}</b>. Régebbi, 2025-ös referencia maradt: <b>${olderCompanies.length ? olderCompanies.join(', ') : 'nincs ilyen adat'}</b>. Nincs ellenőrzött adat: <b>${noDataCompanies.length ? noDataCompanies.join(', ') : 'nincs ilyen adat'}</b>.`;
+    insightBox.innerHTML = `<b>Mit látunk?</b> A rendszer már nem csak a bér nagyságát mutatja, hanem azt is, hogy milyen mélységű információt sikerült beszerezni. Részletes 2026-os bérstruktúra áll rendelkezésre: <b>${detailedCompanies.join(', ') || 'nincs'}</b>. Részleges bérinformáció látszik: <b>${partialCompanies.join(', ') || 'nincs'}</b>. Referencia szintű információ maradt: <b>${referenceCompanies.join(', ') || 'nincs'}</b>. Hivatalos vállalati forrásból dolgozik a modul: <b>${officialCompanies.join(', ') || 'nincs'}</b>.`;
   }
 
   if(sourceBox){
-    sourceBox.innerHTML = `<b>Forrás és módszertan:</b> a blokk a <b>salary-dashboard-data.json</b> fájlból dolgozik, amelyet a tisztított <b>salary-verified-data.json</b> réteg készít elő. A vállalati kártyákban a 2026-os adatok elsőbbséget kapnak. A 2025-ös vagy régebbi adatok külön referencia státuszt kapnak, ezért nem keverednek a 2026-os bérinformációkkal. Az általános benchmark forrása: <b>Fizetesek.com – Fizetések Magyarországon 2026</b>. A <b>N.A.</b> nem alacsonyabb bérezést jelent, hanem azt, hogy nincs megbízható nyilvános adat.`;
+    sourceBox.innerHTML = `<b>Forrás és módszertan:</b> a blokk a <b>salary-dashboard-data.json</b> fájlból dolgozik. A 2026-os Salary Intelligence logika elsődlegesen hivatalos vállalati közléseket használ. Másodlagos forrás csak akkor jelenik meg, ha az adott vállalatnál nem azonosítható hivatalos 2026-os bérközlés. Az <b>N.A.</b> nem alacsonyabb bérezést jelent, hanem azt, hogy az adott mezőhöz nincs nyilvánosan ellenőrizhető számszerű adat.`;
   }
 }
 
