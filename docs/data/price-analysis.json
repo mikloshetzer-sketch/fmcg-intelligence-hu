@@ -1,28 +1,28 @@
 {
-  "updated_at": "2026-06-25T07:31:17Z",
+  "updated_at": "2026-06-26T07:40:30Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "method": "product-level price leadership and spread analysis",
   "cheapest_count": [
     {
       "company": "Auchan",
-      "count": 6
+      "count": 7
+    },
+    {
+      "company": "Lidl",
+      "count": 7
     },
     {
       "company": "SPAR",
       "count": 6
     },
     {
-      "company": "Lidl",
-      "count": 5
-    },
-    {
       "company": "ALDI",
-      "count": 4
+      "count": 3
     },
     {
       "company": "Tesco",
-      "count": 3
+      "count": 2
     },
     {
       "company": "Penny",
@@ -47,11 +47,11 @@
       "count": 4
     },
     {
-      "company": "ALDI",
-      "count": 0
+      "company": "Lidl",
+      "count": 1
     },
     {
-      "company": "Lidl",
+      "company": "ALDI",
       "count": 0
     }
   ],
@@ -60,13 +60,13 @@
       "company": "Lidl",
       "price_index": 96,
       "value_score": 104,
-      "index_coverage": 23
+      "index_coverage": 24
     },
     {
       "company": "Auchan",
       "price_index": 97,
       "value_score": 103,
-      "index_coverage": 24
+      "index_coverage": 25
     },
     {
       "company": "ALDI",
@@ -84,7 +84,7 @@
       "company": "Tesco",
       "price_index": 103,
       "value_score": 97,
-      "index_coverage": 24
+      "index_coverage": 25
     },
     {
       "company": "Penny",
@@ -171,26 +171,26 @@
     {
       "category": "Gyümölcs",
       "leader": "Lidl",
-      "leader_index": 85,
+      "leader_index": 89,
       "ranking": [
         {
           "company": "Lidl",
-          "category_index": 85,
+          "category_index": 89,
           "coverage": 3
         },
         {
           "company": "ALDI",
-          "category_index": 96,
+          "category_index": 95,
           "coverage": 3
         },
         {
           "company": "Auchan",
-          "category_index": 99,
+          "category_index": 98,
           "coverage": 3
         },
         {
           "company": "SPAR",
-          "category_index": 99,
+          "category_index": 98,
           "coverage": 3
         },
         {
@@ -200,7 +200,7 @@
         },
         {
           "company": "Penny",
-          "category_index": 117,
+          "category_index": 116,
           "coverage": 3
         }
       ]
@@ -245,11 +245,11 @@
     {
       "category": "Húsáru",
       "leader": "Auchan",
-      "leader_index": 93,
+      "leader_index": 94,
       "ranking": [
         {
           "company": "Auchan",
-          "category_index": 93,
+          "category_index": 94,
           "coverage": 4
         },
         {
@@ -258,18 +258,18 @@
           "coverage": 4
         },
         {
+          "company": "Lidl",
+          "category_index": 99,
+          "coverage": 4
+        },
+        {
           "company": "Tesco",
           "category_index": 100,
           "coverage": 4
         },
         {
-          "company": "Lidl",
-          "category_index": 101,
-          "coverage": 4
-        },
-        {
           "company": "Penny",
-          "category_index": 102,
+          "category_index": 103,
           "coverage": 4
         },
         {
@@ -356,36 +356,36 @@
     {
       "category": "Zöldség",
       "leader": "Tesco",
-      "leader_index": 91,
+      "leader_index": 94,
       "ranking": [
         {
           "company": "Tesco",
-          "category_index": 91,
-          "coverage": 3
+          "category_index": 94,
+          "coverage": 4
         },
         {
           "company": "Lidl",
           "category_index": 95,
-          "coverage": 3
+          "coverage": 4
         },
         {
           "company": "Auchan",
-          "category_index": 100,
-          "coverage": 3
+          "category_index": 98,
+          "coverage": 4
         },
         {
           "company": "Penny",
-          "category_index": 103,
-          "coverage": 3
-        },
-        {
-          "company": "ALDI",
           "category_index": 104,
           "coverage": 3
         },
         {
+          "company": "ALDI",
+          "category_index": 105,
+          "coverage": 3
+        },
+        {
           "company": "SPAR",
-          "category_index": 107,
+          "category_index": 108,
           "coverage": 3
         }
       ]
@@ -441,6 +441,18 @@
       "coverage": 6
     },
     {
+      "product": "Vöröshagyma",
+      "category": "Zöldség",
+      "cheapest_company": "Lidl",
+      "cheapest_price": 174.5,
+      "most_expensive_company": "Auchan",
+      "most_expensive_price": 250.0,
+      "average_price": 207.25,
+      "spread_pct": 43.27,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 6
+    },
+    {
       "product": "Ásványvíz",
       "category": "Ital",
       "cheapest_company": "Tesco",
@@ -459,20 +471,20 @@
       "cheapest_price": 1399.0,
       "most_expensive_company": "SPAR",
       "most_expensive_price": 1954.44,
-      "average_price": 1724.87,
+      "average_price": 1699.87,
       "spread_pct": 39.7,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
     {
-      "product": "Vöröshagyma",
+      "product": "Paradicsom",
       "category": "Zöldség",
-      "cheapest_company": "Tesco",
-      "cheapest_price": 179.0,
-      "most_expensive_company": "Auchan",
-      "most_expensive_price": 250.0,
-      "average_price": 209.67,
-      "spread_pct": 39.66,
+      "cheapest_company": "Lidl",
+      "cheapest_price": 359.0,
+      "most_expensive_company": "SPAR",
+      "most_expensive_price": 483.0,
+      "average_price": 428.33,
+      "spread_pct": 34.54,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
@@ -495,32 +507,8 @@
       "cheapest_price": 699.0,
       "most_expensive_company": "Penny",
       "most_expensive_price": 899.0,
-      "average_price": 841.17,
+      "average_price": 837.33,
       "spread_pct": 28.61,
-      "competition_intensity": "nagy árszórás",
-      "coverage": 6
-    },
-    {
-      "product": "Paradicsom",
-      "category": "Zöldség",
-      "cheapest_company": "Tesco",
-      "cheapest_price": 385.0,
-      "most_expensive_company": "SPAR",
-      "most_expensive_price": 483.0,
-      "average_price": 432.67,
-      "spread_pct": 25.45,
-      "competition_intensity": "nagy árszórás",
-      "coverage": 6
-    },
-    {
-      "product": "Banán",
-      "category": "Gyümölcs",
-      "cheapest_company": "Lidl",
-      "cheapest_price": 599.0,
-      "most_expensive_company": "Auchan",
-      "most_expensive_price": 749.0,
-      "average_price": 690.67,
-      "spread_pct": 25.04,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
@@ -535,6 +523,18 @@
       "spread_pct": 20.06,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
+    },
+    {
+      "product": "Étkezési burgonya",
+      "category": "Zöldség",
+      "cheapest_company": "Auchan",
+      "cheapest_price": 181.0,
+      "most_expensive_company": "Lidl",
+      "most_expensive_price": 213.11,
+      "average_price": 197.2,
+      "spread_pct": 17.74,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 3
     },
     {
       "product": "Sertéscomb",
@@ -621,13 +621,25 @@
       "coverage": 5
     },
     {
+      "product": "Banán",
+      "category": "Gyümölcs",
+      "cheapest_company": "Tesco",
+      "cheapest_price": 699.0,
+      "most_expensive_company": "Auchan",
+      "most_expensive_price": 749.0,
+      "average_price": 707.33,
+      "spread_pct": 7.15,
+      "competition_intensity": "közepes árverseny",
+      "coverage": 6
+    },
+    {
       "product": "Kristálycukor",
       "category": "Alapélelmiszer",
-      "cheapest_company": "ALDI",
+      "cheapest_company": "Lidl",
       "cheapest_price": 290.0,
       "most_expensive_company": "Tesco",
       "most_expensive_price": 304.0,
-      "average_price": 295.33,
+      "average_price": 294.5,
       "spread_pct": 4.83,
       "competition_intensity": "erős árverseny",
       "coverage": 6
@@ -651,7 +663,7 @@
       "cheapest_price": 183.0,
       "most_expensive_company": "Auchan",
       "most_expensive_price": 187.0,
-      "average_price": 184.33,
+      "average_price": 184.17,
       "spread_pct": 2.19,
       "competition_intensity": "erős árverseny",
       "coverage": 6
@@ -711,6 +723,13 @@
       "coverage": 6
     },
     {
+      "product": "Vöröshagyma",
+      "category": "Zöldség",
+      "spread_pct": 43.27,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 6
+    },
+    {
       "product": "Ásványvíz",
       "category": "Ital",
       "spread_pct": 40.91,
@@ -725,9 +744,9 @@
       "coverage": 6
     },
     {
-      "product": "Vöröshagyma",
+      "product": "Paradicsom",
       "category": "Zöldség",
-      "spread_pct": 39.66,
+      "spread_pct": 34.54,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
@@ -746,25 +765,18 @@
       "coverage": 6
     },
     {
-      "product": "Paradicsom",
-      "category": "Zöldség",
-      "spread_pct": 25.45,
-      "competition_intensity": "nagy árszórás",
-      "coverage": 6
-    },
-    {
-      "product": "Banán",
-      "category": "Gyümölcs",
-      "spread_pct": 25.04,
-      "competition_intensity": "nagy árszórás",
-      "coverage": 6
-    },
-    {
       "product": "Citrom",
       "category": "Gyümölcs",
       "spread_pct": 20.06,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
+    },
+    {
+      "product": "Étkezési burgonya",
+      "category": "Zöldség",
+      "spread_pct": 17.74,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 3
     },
     {
       "product": "Sertéscomb",
@@ -814,6 +826,13 @@
       "spread_pct": 9.11,
       "competition_intensity": "közepes árverseny",
       "coverage": 5
+    },
+    {
+      "product": "Banán",
+      "category": "Gyümölcs",
+      "spread_pct": 7.15,
+      "competition_intensity": "közepes árverseny",
+      "coverage": 6
     },
     {
       "product": "Kristálycukor",
