@@ -1,27 +1,27 @@
 {
-  "updated_at": "2026-06-26T07:40:30Z",
+  "updated_at": "2026-06-27T06:45:11Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "method": "product-level price leadership and spread analysis",
   "cheapest_count": [
     {
-      "company": "Auchan",
-      "count": 7
-    },
-    {
       "company": "Lidl",
-      "count": 7
+      "count": 9
     },
     {
       "company": "SPAR",
       "count": 6
     },
     {
-      "company": "ALDI",
-      "count": 3
+      "company": "Auchan",
+      "count": 5
     },
     {
       "company": "Tesco",
+      "count": 3
+    },
+    {
+      "company": "ALDI",
       "count": 2
     },
     {
@@ -31,12 +31,12 @@
   ],
   "most_expensive_count": [
     {
-      "company": "Tesco",
-      "count": 8
+      "company": "Auchan",
+      "count": 7
     },
     {
-      "company": "Auchan",
-      "count": 6
+      "company": "Tesco",
+      "count": 7
     },
     {
       "company": "SPAR",
@@ -58,8 +58,8 @@
   "value_scores": [
     {
       "company": "Lidl",
-      "price_index": 96,
-      "value_score": 104,
+      "price_index": 95,
+      "value_score": 105,
       "index_coverage": 24
     },
     {
@@ -253,18 +253,18 @@
           "coverage": 4
         },
         {
-          "company": "ALDI",
-          "category_index": 97,
+          "company": "Lidl",
+          "category_index": 96,
           "coverage": 4
         },
         {
-          "company": "Lidl",
-          "category_index": 99,
+          "company": "ALDI",
+          "category_index": 98,
           "coverage": 4
         },
         {
           "company": "Tesco",
-          "category_index": 100,
+          "category_index": 101,
           "coverage": 4
         },
         {
@@ -274,7 +274,7 @@
         },
         {
           "company": "SPAR",
-          "category_index": 107,
+          "category_index": 108,
           "coverage": 4
         }
       ]
@@ -337,55 +337,55 @@
           "coverage": 5
         },
         {
-          "company": "ALDI",
-          "category_index": 100,
-          "coverage": 5
-        },
-        {
           "company": "Penny",
           "category_index": 100,
           "coverage": 5
         },
         {
+          "company": "ALDI",
+          "category_index": 101,
+          "coverage": 5
+        },
+        {
           "company": "Tesco",
-          "category_index": 112,
+          "category_index": 110,
           "coverage": 5
         }
       ]
     },
     {
       "category": "Zöldség",
-      "leader": "Tesco",
-      "leader_index": 94,
+      "leader": "Lidl",
+      "leader_index": 90,
       "ranking": [
         {
-          "company": "Tesco",
-          "category_index": 94,
+          "company": "Lidl",
+          "category_index": 90,
           "coverage": 4
         },
         {
-          "company": "Lidl",
+          "company": "Tesco",
           "category_index": 95,
           "coverage": 4
         },
         {
           "company": "Auchan",
-          "category_index": 98,
+          "category_index": 99,
           "coverage": 4
         },
         {
-          "company": "Penny",
-          "category_index": 104,
+          "company": "ALDI",
+          "category_index": 106,
           "coverage": 3
         },
         {
-          "company": "ALDI",
-          "category_index": 105,
+          "company": "Penny",
+          "category_index": 106,
           "coverage": 3
         },
         {
           "company": "SPAR",
-          "category_index": 108,
+          "category_index": 109,
           "coverage": 3
         }
       ]
@@ -471,8 +471,20 @@
       "cheapest_price": 1399.0,
       "most_expensive_company": "SPAR",
       "most_expensive_price": 1954.44,
-      "average_price": 1699.87,
+      "average_price": 1683.2,
       "spread_pct": 39.7,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 6
+    },
+    {
+      "product": "Zöldpaprika",
+      "category": "Zöldség",
+      "cheapest_company": "Lidl",
+      "cheapest_price": 666.0,
+      "most_expensive_company": "Penny",
+      "most_expensive_price": 899.0,
+      "average_price": 805.67,
+      "spread_pct": 34.98,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
@@ -497,18 +509,6 @@
       "most_expensive_price": 2590.0,
       "average_price": 2290.0,
       "spread_pct": 30.15,
-      "competition_intensity": "nagy árszórás",
-      "coverage": 6
-    },
-    {
-      "product": "Zöldpaprika",
-      "category": "Zöldség",
-      "cheapest_company": "Auchan",
-      "cheapest_price": 699.0,
-      "most_expensive_company": "Penny",
-      "most_expensive_price": 899.0,
-      "average_price": 837.33,
-      "spread_pct": 28.61,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
@@ -543,7 +543,7 @@
       "cheapest_price": 1299.0,
       "most_expensive_company": "SPAR",
       "most_expensive_price": 1505.0,
-      "average_price": 1396.5,
+      "average_price": 1393.33,
       "spread_pct": 15.86,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
@@ -561,6 +561,18 @@
       "coverage": 6
     },
     {
+      "product": "Csirkemellfilé",
+      "category": "Húsáru",
+      "cheapest_company": "Lidl",
+      "cheapest_price": 1729.0,
+      "most_expensive_company": "Tesco",
+      "most_expensive_price": 1990.0,
+      "average_price": 1882.0,
+      "spread_pct": 15.1,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 6
+    },
+    {
       "product": "Száraztészta",
       "category": "Alapélelmiszer",
       "cheapest_company": "SPAR",
@@ -569,18 +581,6 @@
       "most_expensive_price": 710.0,
       "average_price": 649.5,
       "spread_pct": 12.88,
-      "competition_intensity": "közepes árverseny",
-      "coverage": 6
-    },
-    {
-      "product": "Csirkemellfilé",
-      "category": "Húsáru",
-      "cheapest_company": "ALDI",
-      "cheapest_price": 1775.0,
-      "most_expensive_company": "Tesco",
-      "most_expensive_price": 1990.0,
-      "average_price": 1903.67,
-      "spread_pct": 12.11,
       "competition_intensity": "közepes árverseny",
       "coverage": 6
     },
@@ -633,6 +633,18 @@
       "coverage": 6
     },
     {
+      "product": "ESL tej 1,5%",
+      "category": "Tejtermék",
+      "cheapest_company": "Tesco",
+      "cheapest_price": 261.0,
+      "most_expensive_company": "Auchan",
+      "most_expensive_price": 279.0,
+      "average_price": 276.0,
+      "spread_pct": 6.9,
+      "competition_intensity": "közepes árverseny",
+      "coverage": 6
+    },
+    {
       "product": "Kristálycukor",
       "category": "Alapélelmiszer",
       "cheapest_company": "Lidl",
@@ -677,18 +689,6 @@
       "most_expensive_price": 759.0,
       "average_price": 749.33,
       "spread_pct": 1.88,
-      "competition_intensity": "erős árverseny",
-      "coverage": 6
-    },
-    {
-      "product": "ESL tej 1,5%",
-      "category": "Tejtermék",
-      "cheapest_company": "Auchan",
-      "cheapest_price": 279.0,
-      "most_expensive_company": "Tesco",
-      "most_expensive_price": 280.0,
-      "average_price": 279.17,
-      "spread_pct": 0.36,
       "competition_intensity": "erős árverseny",
       "coverage": 6
     }
@@ -744,6 +744,13 @@
       "coverage": 6
     },
     {
+      "product": "Zöldpaprika",
+      "category": "Zöldség",
+      "spread_pct": 34.98,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 6
+    },
+    {
       "product": "Paradicsom",
       "category": "Zöldség",
       "spread_pct": 34.54,
@@ -754,13 +761,6 @@
       "product": "Trappista sajt",
       "category": "Tejtermék",
       "spread_pct": 30.15,
-      "competition_intensity": "nagy árszórás",
-      "coverage": 6
-    },
-    {
-      "product": "Zöldpaprika",
-      "category": "Zöldség",
-      "spread_pct": 28.61,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
@@ -793,16 +793,16 @@
       "coverage": 6
     },
     {
-      "product": "Száraztészta",
-      "category": "Alapélelmiszer",
-      "spread_pct": 12.88,
-      "competition_intensity": "közepes árverseny",
+      "product": "Csirkemellfilé",
+      "category": "Húsáru",
+      "spread_pct": 15.1,
+      "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
     {
-      "product": "Csirkemellfilé",
-      "category": "Húsáru",
-      "spread_pct": 12.11,
+      "product": "Száraztészta",
+      "category": "Alapélelmiszer",
+      "spread_pct": 12.88,
       "competition_intensity": "közepes árverseny",
       "coverage": 6
     },
@@ -835,6 +835,13 @@
       "coverage": 6
     },
     {
+      "product": "ESL tej 1,5%",
+      "category": "Tejtermék",
+      "spread_pct": 6.9,
+      "competition_intensity": "közepes árverseny",
+      "coverage": 6
+    },
+    {
       "product": "Kristálycukor",
       "category": "Alapélelmiszer",
       "spread_pct": 4.83,
@@ -859,13 +866,6 @@
       "product": "Étolaj",
       "category": "Alapélelmiszer",
       "spread_pct": 1.88,
-      "competition_intensity": "erős árverseny",
-      "coverage": 6
-    },
-    {
-      "product": "ESL tej 1,5%",
-      "category": "Tejtermék",
-      "spread_pct": 0.36,
       "competition_intensity": "erős árverseny",
       "coverage": 6
     }
