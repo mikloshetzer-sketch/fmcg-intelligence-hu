@@ -1,248 +1,46 @@
 {
-  "updated_at": "2026-06-27T19:51:58.131362+00:00",
+  "updated_at": "2026-06-28T04:59:14.651491+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-06-27T19:51:58.131362+00:00",
-    "leader_social": "Lidl",
-    "leader_social_index": 32,
-    "dominant_social_topic": "árak és akciók",
+    "updated_at": "2026-06-28T04:59:14.651491+00:00",
+    "leader_social": "Penny",
+    "leader_social_index": 29,
+    "dominant_social_topic": "digitalizáció és önkiszolgálás",
     "overall_social_sentiment": "neutral"
   },
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 11,
-      "raw_social_mentions": 14,
-      "dashboard_mentions": 5,
-      "background_mentions": 6,
-      "discarded_mentions": 3,
-      "weighted_social_mentions": 8.0,
-      "hu_relevant_mentions": 5,
-      "social_index": 32,
+      "social_mentions": 0,
+      "raw_social_mentions": 0,
+      "dashboard_mentions": 0,
+      "background_mentions": 0,
+      "discarded_mentions": 0,
+      "weighted_social_mentions": 0,
+      "hu_relevant_mentions": 0,
+      "social_index": 0,
       "social_sources": {
-        "reddit": 11,
+        "reddit": 0,
         "youtube": 0,
         "mastodon": 0
       },
       "raw_social_sources": {
-        "reddit": 14,
+        "reddit": 0,
         "youtube": 0,
         "mastodon": 0
       },
-      "dominant_social_topic": "árak és akciók",
-      "top_social_topics": [
-        {
-          "topic": "árak és akciók",
-          "score": 8.5
-        },
-        {
-          "topic": "digitalizáció és önkiszolgálás",
-          "score": 5.5
-        },
-        {
-          "topic": "termék és minőség",
-          "score": 3.0
-        },
-        {
-          "topic": "bolti élmény",
-          "score": 2.0
-        },
-        {
-          "topic": "munkaerő és foglalkoztatás",
-          "score": 1.0
-        }
-      ],
-      "topic_sentiment": {
-        "árak és akciók": {
-          "positive": 1.0,
-          "neutral": 5.0,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
-        },
-        "digitalizáció és önkiszolgálás": {
-          "positive": 0.0,
-          "neutral": 4.5,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
-        },
-        "termék és minőség": {
-          "positive": 1.0,
-          "neutral": 1.0,
-          "negative": 1.0,
-          "mixed": 0.0,
-          "dominant": "positive"
-        },
-        "bolti élmény": {
-          "positive": 1.0,
-          "neutral": 1.0,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "positive"
-        },
-        "munkaerő és foglalkoztatás": {
-          "positive": 0.0,
-          "neutral": 1.0,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
-        }
-      },
-      "social_sentiment": "mixed",
-      "latest_items": [
-        {
-          "id": "e09dc13ff0480ff9",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "LIDL Plus: Doppelte Punkte auf den gesamten Einkauf, alle Filialen, bis 28. Juni @ Lidl",
-          "summary": "➡️ Zum Deal bei Lidl ⏰ Gültig bis: So, 28.06.2026 21:59 Uhr Wer ein Lidl Plus Konto hat, erhält diese Woche doppelte Punkte auf den gesamten Einkauf in allen Lidl-Filialen. Dazu einfach beim Kassiervorgang die Lidl Plus App scannen. Die Aktion gilt bis 28. Juni. Ausgenommen sind Rettertüten, Tabakwaren, Zeitschriften, Bücher, Pfand, Säuglingsnahrung sowie Gutschein- und Geschenkkarten. Normalerweise gibt es 1 Punkt pro 1€ Einkaufswert, in dieser Aktionswoche also 2 Punkte pro Euro. submitted by ",
-          "url": "https://www.reddit.com/r/deals_de/comments/1ucj2i3/lidl_plus_doppelte_punkte_auf_den_gesamten/",
-          "published": "2026-06-22T12:21:47+00:00",
-          "query": "Lidl Plus",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "9906abc5759c1270",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Is £100 a Week for Two People Just Normal Now? Food Inflation Has Slowed. The Damage Is Still There.",
-          "summary": "A live AskUK thread is doing what official inflation charts cannot: showing what people are actually paying at the till. For a couple, the rough range coming up again and again is £80 to £120 a week, often including household basics like washing tablets, loo roll, toiletries, cleaning spray and the occasional “how is that £4 now?” item. The striking thing is not that everyone spends the same. They do not. A vegetarian couple cooking from scratch will look very different from a family buying meat",
-          "url": "https://www.reddit.com/r/hellobill/comments/1ub71uy/is_100_a_week_for_two_people_just_normal_now_food/",
-          "published": "2026-06-20T20:45:22+00:00",
-          "query": "Lidl Plus",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "negative"
-        },
-        {
-          "id": "7ba38af57e16db11",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "After exclusively shopping at Lidl (UK) for 5 years, maxing out my Lidl Plus Spend, I'm quite enjoying doing big shops at other supermarkets again. Look at the quality of this mince! So much better than the vacuum sealed mush from Lidl. Same price too!",
-          "summary": "submitted by /u/Jimi-K-101 to r/lidl [link] [comments]",
-          "url": "https://www.reddit.com/r/lidl/comments/1uaqxqz/after_exclusively_shopping_at_lidl_uk_for_5_years/",
-          "published": "2026-06-20T08:08:12+00:00",
-          "query": "Lidl Plus",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "positive"
-        },
-        {
-          "id": "b8e776e31fa50f4f",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Grote update: PrijsProfeet in een nieuw jasje. De \"Profeet voorspelt\" wanneer een product weer in de aanbieding komt",
-          "summary": "Hoi allemaal! Het was hier even stil, maar achter de schermen is er flink doorgewerkt. PrijsProfeet (de gratis tool om supermarktaanbiedingen te vergelijken) heeft een grote update gekregen: Nieuw design + logo - rustiger en sneller. Profeet voorspelt 🔭 - op basis van de prijsgeschiedenis schatten we in wanneer een product wéér in de aanbieding komt, zodat je niet te vroeg (of te duur) inslaat. 10 supermarkten - Albert Heijn, Jumbo, Aldi, Lidl, PLUS, Hoogvliet, DekaMarkt, Vomar, Ekoplaza en Dirk",
-          "url": "https://www.reddit.com/r/PrijsProfeet/comments/1u69pn2/grote_update_prijsprofeet_in_een_nieuw_jasje_de/",
-          "published": "2026-06-15T07:33:09+00:00",
-          "query": "Lidl Plus",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "59e34a5e1f0ea48b",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "[25,94€ statt 109€ | -76%] Lidl Zwischensaison-Angebote mit bis zu 72% Rabatt auf Outdoor-Artikel, Zelte, Pools, Mode, Spielzeug und mehr | beispielsweise 2-Personen-Schlauchboot YPP-2 @ Lidl",
-          "summary": "➡️ Zum Deal bei Lidl Preis: 109€ → 25,94€ (76% Ersparnis) ⏰ Gültig bis: Sa, 27.06.2026 21:59 Uhr Preis: 19,99€ statt 109€ bei Lidl (82% Rabatt). Versandkosten: 5,95€, oder versandkostenfrei ab 79€ mit Lidl Plus App Coupon. Angebot läuft vom 14.06. bis 04.07. Das 2-Personen-Schlauchboot hat eine maximale Belastbarkeit von 265kg und 3 Luftkammern. Im Lieferumfang enthalten sind 2 Paddel, Luftpumpe, 2 Sitzkissen, Tragetasche, Reparatur-Kit, Trockenboje, Handyschutzhülle und 2 Angelhalterungen. subm",
-          "url": "https://www.reddit.com/r/deals_de/comments/1u5jo70/2594_statt_109_76_lidl_zwischensaisonangebote_mit/",
-          "published": "2026-06-14T12:18:18+00:00",
-          "query": "Lidl Plus",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        }
-      ],
-      "background_items": [
-        {
-          "id": "20022fe9d1f1a81c",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Hat Fler Lidl plus?",
-          "summary": "Frage siehe Titel submitted by /u/AppropriateAd7326 to r/Fler_Reloaded [link] [comments]",
-          "url": "https://www.reddit.com/r/Fler_Reloaded/comments/1ug6w9r/hat_fler_lidl_plus/",
-          "published": "2026-06-26T13:29:06+00:00",
-          "query": "Lidl Plus",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "c13b20a5a54b9c9a",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Slovakia Loyalty Cards - the solution is here",
-          "summary": "If you're visiting Slovakia, many supermarkets and drugstores offer lower prices only through their loyalty programs. You can try registering through the following official websites/apps: * Tesco Clubcard – https://tesco.sk/clubcard * Lidl Plus – https://www.lidl.sk/c/lidl-plus/s10024829 * Kaufland Card – https://www.kaufland.sk/kaufland-card.html * BILLA Bonus – https://www.billa.sk/registracia * dm active beauty – https://www.activebeauty.sk Please note that some programs may require a Slovak ",
-          "url": "https://www.reddit.com/r/SlovakiaLoyaltyCards/comments/1ufkl7i/slovakia_loyalty_cards_the_solution_is_here/",
-          "published": "2026-06-25T19:51:29+00:00",
-          "query": "Lidl Plus",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "8e02e7f3bb0ba55b",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Lidl Plus Coupon: Versandkostenfreie Lieferung ohne Mindestbestellwert (23.6. – 26.6.) @ Lidl",
-          "summary": "➡️ Zum Deal bei Lidl ⏰ Gültig bis: Fr, 26.06.2026 21:59 Uhr Lidl Plus Mitglieder erhalten vom 23. bis 26. Juni kostenlosen Versand ohne Mindestbestellwert im Lidl-Onlineshop. Normalerweise gilt kostenloser Versand erst ab einem Bestellwert von 79 €. Die Aktion ist laut Autor ohne Gewähr, da das Kleingedruckte unklare Formulierungen enthält. submitted by /u/ethereor to r/deals_de [link] [comments]",
-          "url": "https://www.reddit.com/r/deals_de/comments/1ucx883/lidl_plus_coupon_versandkostenfreie_lieferung/",
-          "published": "2026-06-22T21:14:06+00:00",
-          "query": "Lidl Plus",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "890f75312fed3cfc",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Reducere de 70% la Art Safari (București) pt 2 bilete - 75 lei total",
-          "summary": "Bilet dublu la 75 de lei cu codul safari70 din App Lidl plus. submitted by /u/Glittering-Boss-911 to r/roFrugal [link] [comments]",
-          "url": "https://www.reddit.com/r/roFrugal/comments/1ubtp8r/reducere_de_70_la_art_safari_bucurești_pt_2/",
-          "published": "2026-06-21T16:01:17+00:00",
-          "query": "Lidl Plus",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "99ca09c6407d1ad9",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Dotaz ohledne Mobilní klimatizace Tronic SMK 7000 C2 z Lidlu",
-          "summary": "https://preview.redd.it/22bp0xkurh8h1.png?width=1351&format=png&auto=webp&s=aa152f6006ae29cdc5c9fffc5513f689ad6b3c87 Ahoj, mate nekdo zkusenosti s touto mobilni klimoskou z Lidlu ? S kartickou lidl plus by me to stalo jen 3500,- coz je krasna cena za takovy maly stroj. Nezvladam uz ty vedra, je to na chcipnuti, ani pes nezere. submitted by /u/Aware-Eggplant5041 to r/czech [link] [comments]",
-          "url": "https://www.reddit.com/r/czech/comments/1ub5qi0/dotaz_ohledne_mobilní_klimatizace_tronic_smk_7000/",
-          "published": "2026-06-20T19:49:21+00:00",
-          "query": "Lidl Plus",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "b84ac3489023b1f5",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "LidlPlus_NL",
-          "summary": "Lidl plus aanbiedingen om te delen [link]",
-          "url": "https://www.reddit.com/r/LidlPlus_NL/",
-          "published": "",
-          "query": "Lidl Plus",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "neutral"
-        }
-      ],
+      "dominant_social_topic": "általános vállalati említés",
+      "top_social_topics": [],
+      "topic_sentiment": {},
+      "social_sentiment": "neutral",
+      "latest_items": [],
+      "background_items": [],
       "quality_summary": {
-        "dashboard_items": 5,
-        "background_items": 6,
-        "discarded_items": 3,
+        "dashboard_items": 0,
+        "background_items": 0,
+        "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
       },
@@ -287,70 +85,32 @@
     },
     {
       "company": "Tesco",
-      "social_mentions": 1,
-      "raw_social_mentions": 1,
-      "dashboard_mentions": 1,
+      "social_mentions": 0,
+      "raw_social_mentions": 0,
+      "dashboard_mentions": 0,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 1.0,
-      "hu_relevant_mentions": 1,
-      "social_index": 16,
+      "weighted_social_mentions": 0,
+      "hu_relevant_mentions": 0,
+      "social_index": 0,
       "social_sources": {
         "reddit": 0,
-        "youtube": 1,
+        "youtube": 0,
         "mastodon": 0
       },
       "raw_social_sources": {
         "reddit": 0,
-        "youtube": 1,
+        "youtube": 0,
         "mastodon": 0
       },
-      "dominant_social_topic": "árak és akciók",
-      "top_social_topics": [
-        {
-          "topic": "árak és akciók",
-          "score": 1.0
-        },
-        {
-          "topic": "bolti élmény",
-          "score": 1.0
-        }
-      ],
-      "topic_sentiment": {
-        "árak és akciók": {
-          "positive": 0.0,
-          "neutral": 1.0,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
-        },
-        "bolti élmény": {
-          "positive": 0.0,
-          "neutral": 1.0,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
-        }
-      },
+      "dominant_social_topic": "általános vállalati említés",
+      "top_social_topics": [],
+      "topic_sentiment": {},
       "social_sentiment": "neutral",
-      "latest_items": [
-        {
-          "id": "d6cf6dfa6a42e627",
-          "source": "youtube",
-          "company": "Tesco",
-          "title": "A LÁTHATATLAN BOROS MEGINT LECSAPOTT?! 😱 Hóvégi bevásárlás - ALDI ÉS TESCO 😁🥬🍎🥑🥐🧅🧀 - YouTube",
-          "summary": "A LÁTHATATLAN BOROS MEGINT LECSAPOTT?! 😱 Hóvégi bevásárlás - ALDI ÉS TESCO 😁🥬🍎🥑🥐🧅🧀 YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE4xODREeng0akltT2xrajVFb3Z0d0VTSVlucGxvdGwwc0FrXzJEN3Z5N0xxYWtFRUtscThlaWphejlmODZ0ZUlyWmw1d1JOSDJkSXRnY1J3?oc=5",
-          "published": "Mon, 20 Apr 2026 14:05:06 GMT",
-          "query": "site:youtube.com \"Tesco Hungary\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        }
-      ],
+      "latest_items": [],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 1,
+        "dashboard_items": 0,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
