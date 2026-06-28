@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-06-27T06:45:11Z",
+  "updated_at": "2026-06-28T07:41:57Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "method": "product-level price leadership and spread analysis",
   "cheapest_count": [
     {
       "company": "Lidl",
-      "count": 9
+      "count": 8
+    },
+    {
+      "company": "Auchan",
+      "count": 6
     },
     {
       "company": "SPAR",
       "count": 6
-    },
-    {
-      "company": "Auchan",
-      "count": 5
     },
     {
       "company": "Tesco",
@@ -365,7 +365,7 @@
         },
         {
           "company": "Tesco",
-          "category_index": 95,
+          "category_index": 96,
           "coverage": 4
         },
         {
@@ -483,7 +483,7 @@
       "cheapest_price": 666.0,
       "most_expensive_company": "Penny",
       "most_expensive_price": 899.0,
-      "average_price": 805.67,
+      "average_price": 796.5,
       "spread_pct": 34.98,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
@@ -495,7 +495,7 @@
       "cheapest_price": 359.0,
       "most_expensive_company": "SPAR",
       "most_expensive_price": 483.0,
-      "average_price": 428.33,
+      "average_price": 435.0,
       "spread_pct": 34.54,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
@@ -515,12 +515,12 @@
     {
       "product": "Citrom",
       "category": "Gyümölcs",
-      "cheapest_company": "Lidl",
-      "cheapest_price": 998.67,
+      "cheapest_company": "Auchan",
+      "cheapest_price": 999.0,
       "most_expensive_company": "Penny",
       "most_expensive_price": 1199.0,
-      "average_price": 1108.5,
-      "spread_pct": 20.06,
+      "average_price": 1108.56,
+      "spread_pct": 20.02,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
@@ -767,7 +767,7 @@
     {
       "product": "Citrom",
       "category": "Gyümölcs",
-      "spread_pct": 20.06,
+      "spread_pct": 20.02,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },

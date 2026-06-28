@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-27T06:45:11Z",
+  "updated_at": "2026-06-28T07:41:57Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -935,8 +935,8 @@
       "expected_unit": "kg",
       "prices": {
         "Penny": 1199.0,
-        "Lidl": 998.67,
         "Auchan": 999.0,
+        "Lidl": 999.0,
         "SPAR": 1065.33,
         "Tesco": 1190.0,
         "ALDI": 1199.0
@@ -952,19 +952,19 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Lidl": {
-          "source_product_id": "lidl-0080171",
-          "source_product_name": "Citrom 750g",
-          "amount": 749.0,
-          "unit_amount": 998.67,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "0.75",
-          "price_type": "NORMAL"
-        },
         "Auchan": {
           "source_product_id": "2188440000007",
           "source_product_name": "Citrom Ft/kg",
+          "amount": 999.0,
+          "unit_amount": 999.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Lidl": {
+          "source_product_id": "lidl-0080160",
+          "source_product_name": "Citrom lédig",
           "amount": 999.0,
           "unit_amount": 999.0,
           "unit": "kg",
@@ -1014,9 +1014,9 @@
         "SPAR": 483.0,
         "Penny": 449.0,
         "Lidl": 359.0,
-        "Tesco": 385.0,
         "ALDI": 475.0,
-        "Auchan": 419.0
+        "Auchan": 419.0,
+        "Tesco": 425.0
       },
       "selected_products": {
         "SPAR": {
@@ -1049,16 +1049,6 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Tesco": {
-          "source_product_id": "2809140000000",
-          "source_product_name": "FÜRTÖS PARADICSOM LÉDIG QQ",
-          "amount": 385.0,
-          "unit_amount": 385.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
         "ALDI": {
           "source_product_id": "aldi-56455",
           "source_product_name": "Paradicsom fürtös lédig",
@@ -1078,6 +1068,16 @@
           "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
+        },
+        "Tesco": {
+          "source_product_id": "2809140000000",
+          "source_product_name": "FÜRTÖS PARADICSOM LÉDIG QQ",
+          "amount": 425.0,
+          "unit_amount": 425.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
         }
       },
       "coverage": 6
@@ -1091,7 +1091,7 @@
         "Lidl": 666.0,
         "Auchan": 699.0,
         "Penny": 899.0,
-        "Tesco": 835.0,
+        "Tesco": 780.0,
         "SPAR": 856.0,
         "ALDI": 879.0
       },
@@ -1129,8 +1129,8 @@
         "Tesco": {
           "source_product_id": "2896050000000",
           "source_product_name": "PAPRIKA LÉDIG QQ",
-          "amount": 835.0,
-          "unit_amount": 835.0,
+          "amount": 780.0,
+          "unit_amount": 780.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1537,7 +1537,7 @@
         },
         "Penny": {
           "source_product_id": "5998571525020",
-          "source_product_name": "Diamant kristálycukor",
+          "source_product_name": "Diamant Kristálycukor 1kg",
           "amount": 295.0,
           "unit_amount": 295.0,
           "unit": "kg",
