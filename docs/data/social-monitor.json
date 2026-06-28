@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-06-28T14:21:53.999471+00:00",
+  "updated_at": "2026-06-28T19:53:22.560273+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-06-28T14:21:53.999471+00:00",
+    "updated_at": "2026-06-28T19:53:22.560273+00:00",
     "leader_social": "Penny",
     "leader_social_index": 29,
-    "dominant_social_topic": "árak és akciók",
+    "dominant_social_topic": "digitalizáció és önkiszolgálás",
     "overall_social_sentiment": "neutral"
   },
   "items": [
@@ -49,70 +49,32 @@
     },
     {
       "company": "SPAR",
-      "social_mentions": 1,
-      "raw_social_mentions": 1,
-      "dashboard_mentions": 1,
+      "social_mentions": 0,
+      "raw_social_mentions": 0,
+      "dashboard_mentions": 0,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 1.0,
-      "hu_relevant_mentions": 1,
-      "social_index": 16,
+      "weighted_social_mentions": 0,
+      "hu_relevant_mentions": 0,
+      "social_index": 0,
       "social_sources": {
-        "reddit": 1,
+        "reddit": 0,
         "youtube": 0,
         "mastodon": 0
       },
       "raw_social_sources": {
-        "reddit": 1,
+        "reddit": 0,
         "youtube": 0,
         "mastodon": 0
       },
-      "dominant_social_topic": "árak és akciók",
-      "top_social_topics": [
-        {
-          "topic": "árak és akciók",
-          "score": 1.0
-        },
-        {
-          "topic": "bolti élmény",
-          "score": 1.0
-        }
-      ],
-      "topic_sentiment": {
-        "árak és akciók": {
-          "positive": 0.0,
-          "neutral": 1.0,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
-        },
-        "bolti élmény": {
-          "positive": 0.0,
-          "neutral": 1.0,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
-        }
-      },
+      "dominant_social_topic": "általános vállalati említés",
+      "top_social_topics": [],
+      "topic_sentiment": {},
       "social_sentiment": "neutral",
-      "latest_items": [
-        {
-          "id": "e36369e6ee891bf6",
-          "source": "reddit",
-          "company": "SPAR",
-          "title": "Járt valaki a Billában?",
-          "summary": "1999 és 2002-ig müködött Magyarországon ameddig a Spar Magyarország meg nem vásárolta őket. Akinek van róla emléke, fotója vagy sztorija, írja le kommentben! Kíváncsi vagyok, ki hogyan emlékszik ezekre a régi BILLA-üzletekre. 📷 Kép forrása: https://kunyho.hu/billa-aruhaz/ submitted by /u/kecskezombi1 to r/magyarretro [link] [comments]",
-          "url": "https://www.reddit.com/r/magyarretro/comments/1u42j37/járt_valaki_a_billában/",
-          "published": "2026-06-12T17:52:21+00:00",
-          "query": "SPAR Magyarország",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        }
-      ],
+      "latest_items": [],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 1,
+        "dashboard_items": 0,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
