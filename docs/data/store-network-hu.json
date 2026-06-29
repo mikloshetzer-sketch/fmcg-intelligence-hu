@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-22T09:21:34.768663+00:00",
+  "updated_at": "2026-06-29T08:24:54.113584+00:00",
   "version": "store-network-hu-v2.0-non-lidl-osm",
   "scope": "Hungarian FMCG store network from OSM + optional overrides",
   "method_note": "Ez a verzió Lidl nélkül építi a bolthálózatot. ALDI, SPAR, Tesco, Auchan és Penny OSM/Overpass alapján frissül. Ha egy láncra 0 találat jön, a script megtartja a korábbi store-network-hu.json adott láncra vonatkozó adatait. Lidl külön, saját üzletlista alapján kerül majd be.",
@@ -1860,8 +1860,8 @@
       "area": "Gyula",
       "region": "Dél-Alföld",
       "address": "5700 Gyula, Kossuth Lajos tér 34",
-      "lat": 46.642813,
-      "lon": 21.270709,
+      "lat": 46.642807,
+      "lon": 21.270671,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 487641629,
@@ -4037,6 +4037,27 @@
       ]
     },
     {
+      "store_id": "auchan_budapest_auchan_784173710",
+      "company": "Auchan",
+      "name": "Auchan",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1117 Budapest, Hunyadi János út 19",
+      "lat": 47.434732,
+      "lon": 19.041149,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 784173710,
+      "brand": "Auchan",
+      "operator": "",
+      "keywords": [
+        "Auchan",
+        "Auchan Budapest",
+        "1117 Budapest, Hunyadi János út 19"
+      ]
+    },
+    {
       "store_id": "auchan_budaors_auchan_87562707",
       "company": "Auchan",
       "name": "Auchan",
@@ -4085,7 +4106,7 @@
       "city": "Debrecen",
       "area": "Debrecen",
       "region": "Észak-Alföld",
-      "address": "4031 Debrecen, Kishatár utca 7",
+      "address": "4031 Debrecen, Kishatár utca 1",
       "lat": 47.540308,
       "lon": 21.583821,
       "source": "openstreetmap_overpass",
@@ -4096,7 +4117,7 @@
       "keywords": [
         "Auchan",
         "Auchan Debrecen",
-        "4031 Debrecen, Kishatár utca 7"
+        "4031 Debrecen, Kishatár utca 1"
       ]
     },
     {
@@ -4148,7 +4169,7 @@
       "city": "Győr",
       "area": "Győr",
       "region": "Nyugat-Dunántúl",
-      "address": "9024 Győr, Vasvári Pál utca 1a",
+      "address": "9024 Győr, Vasvári Pál utca 1/a",
       "lat": 47.668458,
       "lon": 17.651468,
       "source": "openstreetmap_overpass",
@@ -4159,7 +4180,7 @@
       "keywords": [
         "Auchan",
         "Auchan Győr",
-        "9024 Győr, Vasvári Pál utca 1a"
+        "9024 Győr, Vasvári Pál utca 1/a"
       ]
     },
     {
@@ -4184,13 +4205,55 @@
       ]
     },
     {
+      "store_id": "auchan_maglod_auchan_1415312688",
+      "company": "Auchan",
+      "name": "Auchan",
+      "city": "Maglód",
+      "area": "Maglód",
+      "region": "Közép-Magyarország",
+      "address": "2234 Maglód, Eszterházy János utca 1",
+      "lat": 47.460215,
+      "lon": 19.332208,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 1415312688,
+      "brand": "Auchan",
+      "operator": "",
+      "keywords": [
+        "Auchan",
+        "Auchan Maglód",
+        "2234 Maglód, Eszterházy János utca 1"
+      ]
+    },
+    {
+      "store_id": "auchan_miskolc_auchan_13299091871",
+      "company": "Auchan",
+      "name": "Auchan",
+      "city": "Miskolc",
+      "area": "Miskolc",
+      "region": "Észak-Magyarország",
+      "address": "3516 Miskolc, Pesti út 9",
+      "lat": 48.058746,
+      "lon": 20.801137,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 13299091871,
+      "brand": "Auchan",
+      "operator": "",
+      "keywords": [
+        "Auchan",
+        "Auchan Miskolc",
+        "3516 Miskolc, Pesti út 9"
+      ]
+    },
+    {
       "store_id": "auchan_miskolc_auchan_13299096976",
       "company": "Auchan",
       "name": "Auchan",
       "city": "Miskolc",
       "area": "Miskolc",
       "region": "Észak-Magyarország",
-      "address": "3527 Miskolc, József Attila út 87",
+      "address": "3527 Miskolc, Sajószög utca 9",
       "lat": 48.109398,
       "lon": 20.836001,
       "source": "openstreetmap_overpass",
@@ -4201,7 +4264,7 @@
       "keywords": [
         "Auchan",
         "Auchan Miskolc",
-        "3527 Miskolc, József Attila út 87"
+        "3527 Miskolc, Sajószög utca 9"
       ]
     },
     {
@@ -4232,7 +4295,7 @@
       "city": "Sopron",
       "area": "Sopron",
       "region": "Nyugat-Dunántúl",
-      "address": "9400 Sopron, Lackner Kristóf utca 35",
+      "address": "9400 Sopron, Lackner Kristóf utca 31",
       "lat": 47.697674,
       "lon": 16.578815,
       "source": "openstreetmap_overpass",
@@ -4243,7 +4306,7 @@
       "keywords": [
         "Auchan",
         "Auchan Sopron",
-        "9400 Sopron, Lackner Kristóf utca 35"
+        "9400 Sopron, Lackner Kristóf utca 31"
       ]
     },
     {
@@ -4358,7 +4421,7 @@
       "city": "Törökbálint",
       "area": "Törökbálint",
       "region": "n.a.",
-      "address": "2045 Törökbálint, Dulácska utca 1",
+      "address": "2045 Törökbálint, Torbágy utca 1",
       "lat": 47.440541,
       "lon": 18.887535,
       "source": "openstreetmap_overpass",
@@ -4369,70 +4432,28 @@
       "keywords": [
         "Auchan",
         "Auchan Törökbálint",
-        "2045 Törökbálint, Dulácska utca 1"
+        "2045 Törökbálint, Torbágy utca 1"
       ]
     },
     {
-      "store_id": "auchan_na_auchan_1415312688",
+      "store_id": "auchan_zalaegerszeg_auchan_784175487",
       "company": "Auchan",
       "name": "Auchan",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.460215,
-      "lon": 19.332208,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 1415312688,
-      "brand": "Auchan",
-      "operator": "",
-      "keywords": [
-        "Auchan",
-        "Auchan n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "auchan_na_auchan_13299091871",
-      "company": "Auchan",
-      "name": "Auchan",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 48.058746,
-      "lon": 20.801137,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 13299091871,
-      "brand": "Auchan",
-      "operator": "",
-      "keywords": [
-        "Auchan",
-        "Auchan n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "auchan_na_auchan_784173710",
-      "company": "Auchan",
-      "name": "Auchan",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.434732,
-      "lon": 19.041149,
+      "city": "Zalaegerszeg",
+      "area": "Zalaegerszeg",
+      "region": "Nyugat-Dunántúl",
+      "address": "8900 Zalaegerszeg, Stadion utca 5",
+      "lat": 46.847611,
+      "lon": 16.851502,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
-      "osm_id": 784173710,
+      "osm_id": 784175487,
       "brand": "Auchan",
       "operator": "",
       "keywords": [
         "Auchan",
-        "Auchan n.a.",
-        "n.a."
+        "Auchan Zalaegerszeg",
+        "8900 Zalaegerszeg, Stadion utca 5"
       ]
     },
     {
@@ -7208,7 +7229,7 @@
       ]
     },
     {
-      "store_id": "penny_tab_penny_1471711829",
+      "store_id": "penny_tab_penny_21034979",
       "company": "Penny",
       "name": "Penny",
       "city": "Tab",
@@ -7218,8 +7239,8 @@
       "lat": 46.735904,
       "lon": 18.036093,
       "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 1471711829,
+      "osm_type": "relation",
+      "osm_id": 21034979,
       "brand": "Penny",
       "operator": "",
       "keywords": [
@@ -16721,27 +16742,6 @@
       ]
     },
     {
-      "store_id": "spar_na_spar_1843021451",
-      "company": "SPAR",
-      "name": "Spar",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 48.106513,
-      "lon": 19.809715,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 1843021451,
-      "brand": "Spar",
-      "operator": "",
-      "keywords": [
-        "Spar",
-        "SPAR n.a.",
-        "n.a."
-      ]
-    },
-    {
       "store_id": "spar_na_spar_1866025012",
       "company": "SPAR",
       "name": "Spar",
@@ -17279,27 +17279,6 @@
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 3468009940,
-      "brand": "Spar",
-      "operator": "",
-      "keywords": [
-        "Spar",
-        "SPAR n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "spar_na_spar_3470101953",
-      "company": "SPAR",
-      "name": "Spar",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 46.697142,
-      "lon": 19.031772,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 3470101953,
       "brand": "Spar",
       "operator": "",
       "keywords": [
