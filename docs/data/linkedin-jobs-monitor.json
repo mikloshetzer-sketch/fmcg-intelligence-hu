@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-22T11:12:02Z",
+  "updated_at": "2026-06-29T10:06:21Z",
   "status": "ok",
   "source": "linkedin_public_jobs_search",
   "method": "non_login_public_search_best_effort",
@@ -10,13 +10,13 @@
       "company": "Auchan",
       "linkedin_active_ads_hint": null,
       "category_scores": {
-        "store": 0,
-        "warehouse": 0,
-        "management": 1,
-        "office": 2,
+        "store": 2,
+        "warehouse": 3,
+        "management": 4,
+        "office": 4,
         "expansion": 0
       },
-      "dominant_signal": "weak_signal",
+      "dominant_signal": "logistics_recruitment_signal",
       "source_confidence": "low",
       "source_note": "Publikus LinkedIn Jobs keresési oldal alapján. Nem belépett scraping, nem hivatalos API. Blokkolás esetén a jel alacsony megbízhatóságú.",
       "queries": [
@@ -26,10 +26,10 @@
           "status": "fetched",
           "count_hint": null,
           "category_scores": {
-            "store": 0,
-            "warehouse": 0,
-            "management": 0,
-            "office": 1,
+            "store": 2,
+            "warehouse": 2,
+            "management": 3,
+            "office": 3,
             "expansion": 0
           }
         },
@@ -40,7 +40,7 @@
           "count_hint": null,
           "category_scores": {
             "store": 0,
-            "warehouse": 0,
+            "warehouse": 1,
             "management": 1,
             "office": 1,
             "expansion": 0
@@ -51,15 +51,15 @@
     {
       "id": "lidl",
       "company": "Lidl",
-      "linkedin_active_ads_hint": 14,
+      "linkedin_active_ads_hint": 9,
       "category_scores": {
-        "store": 0,
-        "warehouse": 0,
-        "management": 1,
-        "office": 4,
+        "store": 1,
+        "warehouse": 2,
+        "management": 3,
+        "office": 5,
         "expansion": 0
       },
-      "dominant_signal": "weak_signal",
+      "dominant_signal": "logistics_recruitment_signal",
       "source_confidence": "medium",
       "source_note": "Publikus LinkedIn Jobs keresési oldal alapján. Nem belépett scraping, nem hivatalos API. Blokkolás esetén a jel alacsony megbízhatóságú.",
       "queries": [
@@ -69,10 +69,10 @@
           "status": "fetched",
           "count_hint": null,
           "category_scores": {
-            "store": 0,
-            "warehouse": 0,
-            "management": 1,
-            "office": 2,
+            "store": 1,
+            "warehouse": 2,
+            "management": 3,
+            "office": 3,
             "expansion": 0
           }
         },
@@ -80,7 +80,7 @@
           "query": "Lidl Hungary",
           "url": "https://www.linkedin.com/jobs/search/?keywords=Lidl+Hungary&location=Hungary",
           "status": "fetched",
-          "count_hint": 14,
+          "count_hint": 9,
           "category_scores": {
             "store": 0,
             "warehouse": 0,
@@ -94,26 +94,26 @@
     {
       "id": "aldi",
       "company": "ALDI",
-      "linkedin_active_ads_hint": 1,
+      "linkedin_active_ads_hint": null,
       "category_scores": {
         "store": 0,
-        "warehouse": 1,
+        "warehouse": 0,
         "management": 1,
         "office": 3,
         "expansion": 0
       },
       "dominant_signal": "weak_signal",
-      "source_confidence": "medium",
+      "source_confidence": "low",
       "source_note": "Publikus LinkedIn Jobs keresési oldal alapján. Nem belépett scraping, nem hivatalos API. Blokkolás esetén a jel alacsony megbízhatóságú.",
       "queries": [
         {
           "query": "ALDI Magyarország",
           "url": "https://www.linkedin.com/jobs/search/?keywords=ALDI+Magyarorsz%C3%A1g&location=Hungary",
           "status": "fetched",
-          "count_hint": 1,
+          "count_hint": null,
           "category_scores": {
             "store": 0,
-            "warehouse": 1,
+            "warehouse": 0,
             "management": 1,
             "office": 2,
             "expansion": 0
@@ -137,11 +137,11 @@
     {
       "id": "spar",
       "company": "SPAR",
-      "linkedin_active_ads_hint": 10,
+      "linkedin_active_ads_hint": 4,
       "category_scores": {
         "store": 0,
         "warehouse": 0,
-        "management": 1,
+        "management": 0,
         "office": 2,
         "expansion": 0
       },
@@ -157,7 +157,7 @@
           "category_scores": {
             "store": 0,
             "warehouse": 0,
-            "management": 1,
+            "management": 0,
             "office": 1,
             "expansion": 0
           }
@@ -166,7 +166,7 @@
           "query": "SPAR Hungary",
           "url": "https://www.linkedin.com/jobs/search/?keywords=SPAR+Hungary&location=Hungary",
           "status": "fetched",
-          "count_hint": 10,
+          "count_hint": 4,
           "category_scores": {
             "store": 0,
             "warehouse": 0,
@@ -180,15 +180,15 @@
     {
       "id": "tesco",
       "company": "Tesco",
-      "linkedin_active_ads_hint": 26,
+      "linkedin_active_ads_hint": 21,
       "category_scores": {
-        "store": 0,
-        "warehouse": 1,
-        "management": 2,
-        "office": 5,
+        "store": 1,
+        "warehouse": 3,
+        "management": 4,
+        "office": 6,
         "expansion": 0
       },
-      "dominant_signal": "management_recruitment_signal",
+      "dominant_signal": "logistics_recruitment_signal",
       "source_confidence": "medium",
       "source_note": "Publikus LinkedIn Jobs keresési oldal alapján. Nem belépett scraping, nem hivatalos API. Blokkolás esetén a jel alacsony megbízhatóságú.",
       "queries": [
@@ -196,12 +196,12 @@
           "query": "Tesco Magyarország",
           "url": "https://www.linkedin.com/jobs/search/?keywords=Tesco+Magyarorsz%C3%A1g&location=Hungary",
           "status": "fetched",
-          "count_hint": 26,
+          "count_hint": 21,
           "category_scores": {
             "store": 0,
             "warehouse": 1,
             "management": 2,
-            "office": 2,
+            "office": 3,
             "expansion": 0
           }
         },
@@ -209,11 +209,11 @@
           "query": "Tesco Hungary",
           "url": "https://www.linkedin.com/jobs/search/?keywords=Tesco+Hungary&location=Hungary",
           "status": "fetched",
-          "count_hint": 23,
+          "count_hint": null,
           "category_scores": {
-            "store": 0,
-            "warehouse": 0,
-            "management": 0,
+            "store": 1,
+            "warehouse": 2,
+            "management": 2,
             "office": 3,
             "expansion": 0
           }
@@ -223,16 +223,16 @@
     {
       "id": "penny",
       "company": "Penny",
-      "linkedin_active_ads_hint": null,
+      "linkedin_active_ads_hint": 4,
       "category_scores": {
-        "store": 1,
+        "store": 0,
         "warehouse": 0,
-        "management": 5,
-        "office": 4,
-        "expansion": 1
+        "management": 2,
+        "office": 2,
+        "expansion": 0
       },
-      "dominant_signal": "possible_expansion_signal",
-      "source_confidence": "low",
+      "dominant_signal": "management_recruitment_signal",
+      "source_confidence": "medium",
       "source_note": "Publikus LinkedIn Jobs keresési oldal alapján. Nem belépett scraping, nem hivatalos API. Blokkolás esetén a jel alacsony megbízhatóságú.",
       "queries": [
         {
@@ -241,18 +241,18 @@
           "status": "fetched",
           "count_hint": null,
           "category_scores": {
-            "store": 1,
+            "store": 0,
             "warehouse": 0,
-            "management": 3,
-            "office": 3,
-            "expansion": 1
+            "management": 0,
+            "office": 1,
+            "expansion": 0
           }
         },
         {
           "query": "Penny Market Hungary",
           "url": "https://www.linkedin.com/jobs/search/?keywords=Penny+Market+Hungary&location=Hungary",
           "status": "fetched",
-          "count_hint": null,
+          "count_hint": 4,
           "category_scores": {
             "store": 0,
             "warehouse": 0,
