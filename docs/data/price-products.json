@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-29T08:46:56Z",
+  "updated_at": "2026-06-30T07:40:32Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -472,29 +472,29 @@
       "category": "Húsáru",
       "expected_unit": "kg",
       "prices": {
+        "Auchan": 1255.0,
         "Tesco": 1311.0,
-        "Auchan": 1315.0,
         "Lidl": 1465.0,
         "ALDI": 1465.0,
         "Penny": 1465.0,
         "SPAR": 1505.0
       },
       "selected_products": {
-        "Tesco": {
-          "source_product_id": "2870240000000",
-          "source_product_name": "16. SERTES COMB pultos QQ",
-          "amount": 1311.0,
-          "unit_amount": 1311.0,
+        "Auchan": {
+          "source_product_id": "2165400000000",
+          "source_product_name": "Auchan Kedvenc Friss Sertés Comb csont nélkül Húspultban kapható Ft/kg",
+          "amount": 1255.0,
+          "unit_amount": 1255.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Auchan": {
-          "source_product_id": "2165400000000",
-          "source_product_name": "Auchan Kedvenc Friss Sertés Comb csont nélkül Húspultban kapható Ft/kg",
-          "amount": 1315.0,
-          "unit_amount": 1315.0,
+        "Tesco": {
+          "source_product_id": "2870240000000",
+          "source_product_name": "16. SERTES COMB pultos QQ",
+          "amount": 1311.0,
+          "unit_amount": 1311.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -550,10 +550,10 @@
       "expected_unit": "kg",
       "prices": {
         "Auchan": 1399.0,
+        "Lidl": 1578.0,
         "SPAR": 1954.44,
         "Tesco": 1748.75,
         "ALDI": 1749.0,
-        "Lidl": 1749.0,
         "Penny": 1749.0
       },
       "selected_products": {
@@ -565,6 +565,16 @@
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Lidl": {
+          "source_product_id": "lidl-0001694",
+          "source_product_name": "Húsfarm Sertés darálthús 30%,  500g",
+          "amount": 789.0,
+          "unit_amount": 1578.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "0.5",
           "price_type": "NORMAL"
         },
         "SPAR": {
@@ -594,16 +604,6 @@
           "unit_amount": 1749.0,
           "unit": "kg",
           "unit_title": "csomag",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Lidl": {
-          "source_product_id": "lidl-0005545",
-          "source_product_name": "Húsfarm XXL Sertés darálthús 30%,  1000g",
-          "amount": 1749.0,
-          "unit_amount": 1749.0,
-          "unit": "kg",
-          "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
         },
@@ -857,14 +857,24 @@
       "category": "Gyümölcs",
       "expected_unit": "kg",
       "prices": {
+        "Penny": 699.0,
         "Tesco": 699.0,
         "SPAR": 699.0,
         "ALDI": 699.0,
         "Lidl": 699.0,
-        "Penny": 699.0,
         "Auchan": 749.0
       },
       "selected_products": {
+        "Penny": {
+          "source_product_id": "penny-302",
+          "source_product_name": "Banán lédig kg",
+          "amount": 699.0,
+          "unit_amount": 699.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "Tesco": {
           "source_product_id": "2870100000000",
           "source_product_name": "Banán lédig    ",
@@ -905,16 +915,6 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Penny": {
-          "source_product_id": "penny-302",
-          "source_product_name": "Banán lédig kg",
-          "amount": 699.0,
-          "unit_amount": 699.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
         "Auchan": {
           "source_product_id": "2188370000009",
           "source_product_name": "Banán Ft/kg",
@@ -935,11 +935,11 @@
       "expected_unit": "kg",
       "prices": {
         "Auchan": 999.0,
+        "Tesco": 999.0,
         "Lidl": 999.0,
-        "SPAR": 1065.33,
-        "Tesco": 1190.0,
         "ALDI": 1199.0,
-        "Penny": 1199.0
+        "Penny": 1199.0,
+        "SPAR": 1332.0
       },
       "selected_products": {
         "Auchan": {
@@ -952,9 +952,9 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Lidl": {
-          "source_product_id": "lidl-0080160",
-          "source_product_name": "Citrom lédig",
+        "Tesco": {
+          "source_product_id": "2850160000000",
+          "source_product_name": "Citrom lédig    ",
           "amount": 999.0,
           "unit_amount": 999.0,
           "unit": "kg",
@@ -962,21 +962,11 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "SPAR": {
-          "source_product_id": "5999139405563",
-          "source_product_name": "S-budget xxl citrom 750g",
-          "amount": 799.0,
-          "unit_amount": 1065.33,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "0.75",
-          "price_type": "NORMAL"
-        },
-        "Tesco": {
-          "source_product_id": "2850160000000",
-          "source_product_name": "Citrom lédig    ",
-          "amount": 1190.0,
-          "unit_amount": 1190.0,
+        "Lidl": {
+          "source_product_id": "lidl-0080160",
+          "source_product_name": "Citrom lédig",
+          "amount": 999.0,
+          "unit_amount": 999.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1000,6 +990,16 @@
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "SPAR": {
+          "source_product_id": "5999139405563",
+          "source_product_name": "S-budget xxl citrom 750g",
+          "amount": 999.0,
+          "unit_amount": 1332.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "0.75",
           "price_type": "NORMAL"
         }
       },
@@ -1242,21 +1242,11 @@
       "category": "Zöldség",
       "expected_unit": "kg",
       "prices": {
-        "Auchan": 181.0,
         "Tesco": 197.5,
-        "Lidl": 213.11
+        "Lidl": 213.11,
+        "Auchan": 229.0
       },
       "selected_products": {
-        "Auchan": {
-          "source_product_id": "5997658753158",
-          "source_product_name": "Piros burgonya 1,5 kg",
-          "amount": 272.0,
-          "unit_amount": 181.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "1.5",
-          "price_type": "NORMAL"
-        },
         "Tesco": {
           "source_product_id": "5999881895124",
           "source_product_name": "ÉTKEZÉSI BURGONYA PIROS 10 kg",
@@ -1275,6 +1265,16 @@
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "4.5",
+          "price_type": "NORMAL"
+        },
+        "Auchan": {
+          "source_product_id": "2156440000006",
+          "source_product_name": "Sárga burgonya Ft/kg",
+          "amount": 229.0,
+          "unit_amount": 229.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
           "price_type": "NORMAL"
         }
       },
@@ -1737,30 +1737,30 @@
       "category": "Háztartás",
       "expected_unit": "db",
       "prices": {
-        "SPAR": 122.38,
-        "Tesco": 136.219,
+        "SPAR": 118.69,
+        "Tesco": 123.063,
         "Auchan": 60.0,
         "ALDI": 124.9
       },
       "selected_products": {
         "SPAR": {
-          "source_product_id": "5944570021711",
-          "source_product_name": "Pufina WC-papír érzékeny bőrre 3 rétegű 8 tekercs",
-          "amount": 979.0,
-          "unit_amount": 122.38,
+          "source_product_id": "8004260013154",
+          "source_product_name": "Regina Delicate Refreshing Aloe toalettpapír 3 rétegű 16 tekercs",
+          "amount": 1899.0,
+          "unit_amount": 118.69,
           "unit": "db",
           "unit_title": "csomag",
-          "packaging": "8",
+          "packaging": "16",
           "price_type": "NORMAL"
         },
         "Tesco": {
-          "source_product_id": "5998648704341",
-          "source_product_name": "OOOPS WC PAP.32T EK.3R ",
-          "amount": 4359.0,
-          "unit_amount": 136.219,
+          "source_product_id": "8004260013017",
+          "source_product_name": "Regina Delicate Calming Chamomile toalettpapír 3 rétegű 16 tekercs",
+          "amount": 1969.0,
+          "unit_amount": 123.063,
           "unit": "db",
           "unit_title": "csomag",
-          "packaging": "32",
+          "packaging": "16",
           "price_type": "NORMAL"
         },
         "Auchan": {
