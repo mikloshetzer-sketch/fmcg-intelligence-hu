@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-02T06:57:58Z",
+  "updated_at": "2026-07-03T06:52:42Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -396,7 +396,7 @@
       "expected_unit": "db",
       "prices": {
         "Penny": 49.5,
-        "Lidl": 52.5,
+        "Lidl": 49.9,
         "Tesco": 56.0,
         "ALDI": 61.83,
         "Auchan": 62.0,
@@ -416,8 +416,8 @@
         "Lidl": {
           "source_product_id": "4056489667599",
           "source_product_name": "Friss Tojás 10 db, S-es ",
-          "amount": 525.0,
-          "unit_amount": 52.5,
+          "amount": 499.0,
+          "unit_amount": 49.9,
           "unit": "db",
           "unit_title": "doboz",
           "packaging": "10",
@@ -549,24 +549,14 @@
       "category": "Húsáru",
       "expected_unit": "kg",
       "prices": {
-        "Lidl": 1579.0,
         "SPAR": 1954.44,
         "Auchan": 1739.0,
         "Tesco": 1748.75,
         "ALDI": 1749.0,
+        "Lidl": 1749.0,
         "Penny": 1749.0
       },
       "selected_products": {
-        "Lidl": {
-          "source_product_id": "lidl-0005545",
-          "source_product_name": "Húsfarm XXL Sertés darálthús 30%,  1000g",
-          "amount": 1579.0,
-          "unit_amount": 1579.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
         "SPAR": {
           "source_product_id": "5999033810241",
           "source_product_name": "S-Budget sertés darálthús 900 g",
@@ -604,6 +594,16 @@
           "unit_amount": 1749.0,
           "unit": "kg",
           "unit_title": "csomag",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Lidl": {
+          "source_product_id": "lidl-0005545",
+          "source_product_name": "Húsfarm XXL Sertés darálthús 30%,  1000g",
+          "amount": 1749.0,
+          "unit_amount": 1749.0,
+          "unit": "kg",
+          "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
         },
@@ -1012,10 +1012,10 @@
       "expected_unit": "kg",
       "prices": {
         "Lidl": 385.0,
+        "SPAR": 459.0,
         "Auchan": 399.0,
         "ALDI": 399.0,
         "Penny": 449.0,
-        "SPAR": 459.0,
         "Tesco": 425.0
       },
       "selected_products": {
@@ -1024,6 +1024,16 @@
           "source_product_name": "Paradicsom 1kg",
           "amount": 385.0,
           "unit_amount": 385.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "SPAR": {
+          "source_product_id": "5999559680007",
+          "source_product_name": "Fürtös paradicsom lédig",
+          "amount": 459.0,
+          "unit_amount": 459.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1054,16 +1064,6 @@
           "source_product_name": "Magyar fürtös paradicsom lé kg",
           "amount": 449.0,
           "unit_amount": 449.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "SPAR": {
-          "source_product_id": "5999559680007",
-          "source_product_name": "Fürtös paradicsom lédig",
-          "amount": 459.0,
-          "unit_amount": 459.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1243,7 +1243,6 @@
       "expected_unit": "kg",
       "prices": {
         "Tesco": 197.5,
-        "Lidl": 213.11,
         "Auchan": 229.0
       },
       "selected_products": {
@@ -1257,16 +1256,6 @@
           "packaging": "10",
           "price_type": "NORMAL"
         },
-        "Lidl": {
-          "source_product_id": "lidl-0083254",
-          "source_product_name": "Burgonya piros 4,5kg",
-          "amount": 959.0,
-          "unit_amount": 213.11,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "4.5",
-          "price_type": "NORMAL"
-        },
         "Auchan": {
           "source_product_id": "2156440000006",
           "source_product_name": "Sárga burgonya Ft/kg",
@@ -1278,7 +1267,7 @@
           "price_type": "NORMAL"
         }
       },
-      "coverage": 3
+      "coverage": 2
     },
     {
       "id": "50",
@@ -1738,7 +1727,7 @@
       "expected_unit": "db",
       "prices": {
         "SPAR": 118.69,
-        "Tesco": 123.063,
+        "Tesco": 118.688,
         "Auchan": 60.0,
         "ALDI": 124.9
       },
@@ -1756,8 +1745,8 @@
         "Tesco": {
           "source_product_id": "8004260013017",
           "source_product_name": "Regina Delicate Calming Chamomile toalettpapír 3 rétegű 16 tekercs",
-          "amount": 1969.0,
-          "unit_amount": 123.063,
+          "amount": 1899.0,
+          "unit_amount": 118.688,
           "unit": "db",
           "unit_title": "csomag",
           "packaging": "16",
