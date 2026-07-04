@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-04T04:23:43.562884+00:00",
+  "updated_at": "2026-07-04T14:13:12.866248+00:00",
   "version": "store-reputation-layer-v1.1-fast",
   "scope": "Hungarian FMCG store-level reputation signal",
   "method_note": "Áruházi reputációs jelzőréteg. Nyílt Google News RSS keresések alapján dolgozik. Nem Google Reviews scraping és nem teljes vásárlói értékelési adatbázis.",
@@ -14,16 +14,16 @@
       "dominant_store_topic": "nincs elég adat"
     },
     {
-      "company": "Tesco",
+      "company": "Lidl",
       "stores": 5,
-      "store_mentions": 0,
-      "review_signal_index": 0.0,
+      "store_mentions": 1,
+      "review_signal_index": 3.0,
       "negative_stores": 0,
       "positive_stores": 0,
-      "dominant_store_topic": "nincs elég adat"
+      "dominant_store_topic": "árak és akciók"
     },
     {
-      "company": "Lidl",
+      "company": "Tesco",
       "stores": 5,
       "store_mentions": 0,
       "review_signal_index": 0.0,
@@ -276,12 +276,30 @@
       "area": "Csepel",
       "lat": 47.4307,
       "lon": 19.0701,
-      "store_mentions": 0,
-      "review_signal_index": 0,
+      "store_mentions": 1,
+      "review_signal_index": 15,
       "review_sentiment": "neutral",
-      "dominant_store_topic": "nincs elég adat",
-      "top_store_topics": [],
-      "latest_items": [],
+      "dominant_store_topic": "árak és akciók",
+      "top_store_topics": [
+        {
+          "topic": "árak és akciók",
+          "score": 1
+        }
+      ],
+      "latest_items": [
+        {
+          "id": "4f1f22fa29e00ebb",
+          "source": "google_news_rss",
+          "store_id": "lidl_csepel",
+          "company": "Lidl",
+          "store_name": "Lidl Csepel",
+          "title": "Új Lidl áruház épül Csepel–Királyerdőn, időkapszulát is elhelyeztek - Blikk",
+          "summary": "Új Lidl áruház épül Csepel–Királyerdőn, időkapszulát is elhelyeztek Blikk",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNMk14a1o0N1F5QV9wa2Zxb1NnR19SNFpUQ2hRQk5jdWU0ZngyZXZfNmdvSkhsV0VOQkxKa3d1OWdGb2l4NnJIOWpLemlubU5mODBiOEp3aHdPYlhGOHVyS25hTm9XdmRSdUxxbi13aGRxSmFNU0ZDR1dwTW9VdEdzR1hEdVZmem5fbVk3VkhwRnNhc0kycWQ0?oc=5",
+          "published": "Wed, 18 Mar 2026 07:00:00 GMT",
+          "query": "\"Lidl Csepel\" vélemény"
+        }
+      ],
       "method_note": "Áruházi reputációs jelzőréteg nyílt Google News RSS keresésekből. Nem Google Reviews scraping, nem teljes vásárlói review-adatbázis.",
       "errors": []
     },
