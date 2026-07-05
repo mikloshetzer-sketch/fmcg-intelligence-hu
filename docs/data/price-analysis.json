@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-04T06:38:07Z",
+  "updated_at": "2026-07-05T06:58:16Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "method": "product-level price leadership and spread analysis",
@@ -10,7 +10,7 @@
     },
     {
       "company": "Lidl",
-      "count": 6
+      "count": 5
     },
     {
       "company": "SPAR",
@@ -18,7 +18,7 @@
     },
     {
       "company": "Tesco",
-      "count": 4
+      "count": 5
     },
     {
       "company": "Penny",
@@ -69,19 +69,19 @@
       "index_coverage": 24
     },
     {
-      "company": "ALDI",
+      "company": "Tesco",
       "price_index": 100,
       "value_score": 100,
+      "index_coverage": 24
+    },
+    {
+      "company": "ALDI",
+      "price_index": 101,
+      "value_score": 99,
       "index_coverage": 23
     },
     {
       "company": "SPAR",
-      "price_index": 101,
-      "value_score": 99,
-      "index_coverage": 24
-    },
-    {
-      "company": "Tesco",
       "price_index": 101,
       "value_score": 99,
       "index_coverage": 24
@@ -356,36 +356,36 @@
     {
       "category": "Zöldség",
       "leader": "Lidl",
-      "leader_index": 88,
+      "leader_index": 90,
       "ranking": [
         {
           "company": "Lidl",
-          "category_index": 88,
+          "category_index": 90,
           "coverage": 3
         },
         {
           "company": "Tesco",
-          "category_index": 98,
+          "category_index": 91,
           "coverage": 3
         },
         {
           "company": "ALDI",
-          "category_index": 102,
+          "category_index": 103,
           "coverage": 3
         },
         {
           "company": "Auchan",
-          "category_index": 102,
+          "category_index": 104,
           "coverage": 3
         },
         {
           "company": "Penny",
-          "category_index": 105,
+          "category_index": 106,
           "coverage": 3
         },
         {
           "company": "SPAR",
-          "category_index": 105,
+          "category_index": 106,
           "coverage": 3
         }
       ]
@@ -429,6 +429,18 @@
       "coverage": 6
     },
     {
+      "product": "Vöröshagyma",
+      "category": "Zöldség",
+      "cheapest_company": "Tesco",
+      "cheapest_price": 143.0,
+      "most_expensive_company": "Auchan",
+      "most_expensive_price": 250.0,
+      "average_price": 201.33,
+      "spread_pct": 74.83,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 6
+    },
+    {
       "product": "Vaj",
       "category": "Tejtermék",
       "cheapest_company": "Lidl",
@@ -459,20 +471,8 @@
       "cheapest_price": 655.0,
       "most_expensive_company": "ALDI",
       "most_expensive_price": 879.0,
-      "average_price": 782.67,
+      "average_price": 775.33,
       "spread_pct": 34.2,
-      "competition_intensity": "nagy árszórás",
-      "coverage": 6
-    },
-    {
-      "product": "Vöröshagyma",
-      "category": "Zöldség",
-      "cheapest_company": "Lidl",
-      "cheapest_price": 189.0,
-      "most_expensive_company": "Auchan",
-      "most_expensive_price": 250.0,
-      "average_price": 210.67,
-      "spread_pct": 32.28,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
@@ -531,7 +531,7 @@
       "cheapest_price": 385.0,
       "most_expensive_company": "SPAR",
       "most_expensive_price": 459.0,
-      "average_price": 419.33,
+      "average_price": 423.17,
       "spread_pct": 19.22,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
@@ -704,6 +704,13 @@
       "coverage": 6
     },
     {
+      "product": "Vöröshagyma",
+      "category": "Zöldség",
+      "spread_pct": 74.83,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 6
+    },
+    {
       "product": "Vaj",
       "category": "Tejtermék",
       "spread_pct": 42.65,
@@ -721,13 +728,6 @@
       "product": "Zöldpaprika",
       "category": "Zöldség",
       "spread_pct": 34.2,
-      "competition_intensity": "nagy árszórás",
-      "coverage": 6
-    },
-    {
-      "product": "Vöröshagyma",
-      "category": "Zöldség",
-      "spread_pct": 32.28,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },

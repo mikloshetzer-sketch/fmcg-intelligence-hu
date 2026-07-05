@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-04T06:38:07Z",
+  "updated_at": "2026-07-05T06:58:16Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -819,7 +819,7 @@
           "price_type": "NORMAL"
         },
         "SPAR": {
-          "source_product_id": "5999033881913",
+          "source_product_id": "5999139408281",
           "source_product_name": "S-Budget piros alma 2 kg",
           "amount": 863.0,
           "unit_amount": 431.5,
@@ -1016,7 +1016,7 @@
         "Auchan": 399.0,
         "ALDI": 399.0,
         "Penny": 449.0,
-        "Tesco": 425.0
+        "Tesco": 448.0
       },
       "selected_products": {
         "Lidl": {
@@ -1072,8 +1072,8 @@
         "Tesco": {
           "source_product_id": "2809140000000",
           "source_product_name": "FÜRTÖS PARADICSOM LÉDIG QQ",
-          "amount": 425.0,
-          "unit_amount": 425.0,
+          "amount": 448.0,
+          "unit_amount": 448.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1091,7 +1091,7 @@
         "ALDI": 879.0,
         "Lidl": 655.0,
         "Auchan": 726.0,
-        "Tesco": 780.0,
+        "Tesco": 736.0,
         "SPAR": 811.0,
         "Penny": 845.0
       },
@@ -1129,8 +1129,8 @@
         "Tesco": {
           "source_product_id": "2896050000000",
           "source_product_name": "PAPRIKA LÉDIG QQ",
-          "amount": 780.0,
-          "unit_amount": 780.0,
+          "amount": 736.0,
+          "unit_amount": 736.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1165,14 +1165,24 @@
       "category": "Zöldség",
       "expected_unit": "kg",
       "prices": {
+        "Tesco": 143.0,
         "Lidl": 189.0,
-        "Tesco": 199.0,
         "ALDI": 205.0,
         "Penny": 209.0,
         "SPAR": 212.0,
         "Auchan": 250.0
       },
       "selected_products": {
+        "Tesco": {
+          "source_product_id": "2860520000000",
+          "source_product_name": "VÖRÖSHAGYMA LÉDIG QQ",
+          "amount": 143.0,
+          "unit_amount": 143.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "Lidl": {
           "source_product_id": "lidl-0083333",
           "source_product_name": "Vöröshagyma 2kg",
@@ -1181,16 +1191,6 @@
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "2",
-          "price_type": "NORMAL"
-        },
-        "Tesco": {
-          "source_product_id": "5995034200661",
-          "source_product_name": "GH VÖRÖSHAGYMA  1 KG QQ",
-          "amount": 199.0,
-          "unit_amount": 199.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
           "price_type": "NORMAL"
         },
         "ALDI": {
