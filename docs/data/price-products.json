@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-05T06:58:16Z",
+  "updated_at": "2026-07-06T08:07:45Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -87,14 +87,34 @@
       "category": "Tejtermék",
       "expected_unit": "l",
       "prices": {
+        "Auchan": 253.0,
+        "ALDI": 259.0,
         "SPAR": 265.0,
         "Tesco": 296.0,
-        "Auchan": 290.0,
-        "ALDI": 295.0,
         "Lidl": 295.0,
         "Penny": 295.0
       },
       "selected_products": {
+        "Auchan": {
+          "source_product_id": "5999086458261",
+          "source_product_name": "Auchan Kedvenc pasztőrözött tej 2,8% 1 l",
+          "amount": 253.0,
+          "unit_amount": 253.0,
+          "unit": "l",
+          "unit_title": "db",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "ALDI": {
+          "source_product_id": "aldi-755944",
+          "source_product_name": "ESL tej 2,8% 1L",
+          "amount": 259.0,
+          "unit_amount": 259.0,
+          "unit": "l",
+          "unit_title": "db",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "SPAR": {
           "source_product_id": "5998200485633",
           "source_product_name": "HAZAI TEJ 2.8% 1 L ",
@@ -110,26 +130,6 @@
           "source_product_name": "Kunsági ESL tej 2.8% 1 L QQ",
           "amount": 296.0,
           "unit_amount": 296.0,
-          "unit": "l",
-          "unit_title": "db",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Auchan": {
-          "source_product_id": "5999086458261",
-          "source_product_name": "Auchan Kedvenc pasztőrözött tej 2,8% 1 l",
-          "amount": 290.0,
-          "unit_amount": 290.0,
-          "unit": "l",
-          "unit_title": "db",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "ALDI": {
-          "source_product_id": "aldi-755944",
-          "source_product_name": "ESL tej 2,8% 1L",
-          "amount": 295.0,
-          "unit_amount": 295.0,
           "unit": "l",
           "unit_title": "db",
           "packaging": "1",
@@ -397,8 +397,8 @@
       "prices": {
         "Penny": 49.5,
         "Lidl": 49.9,
+        "ALDI": 52.63,
         "Tesco": 56.0,
-        "ALDI": 61.83,
         "Auchan": 62.0,
         "SPAR": 64.8
       },
@@ -423,21 +423,21 @@
           "packaging": "10",
           "price_type": "NORMAL"
         },
-        "Tesco": {
-          "source_product_id": "5998244700044",
-          "source_product_name": "MU 30DB TOJÁS 1290G S MÉRET QQ",
-          "amount": 1680.0,
-          "unit_amount": 56.0,
+        "ALDI": {
+          "source_product_id": "5997877310415",
+          "source_product_name": "Ketreces tojás 30 db S",
+          "amount": 1579.0,
+          "unit_amount": 52.63,
           "unit": "db",
           "unit_title": "doboz",
           "packaging": "30",
           "price_type": "NORMAL"
         },
-        "ALDI": {
-          "source_product_id": "5997877310415",
-          "source_product_name": "Ketreces tojás 30 db S",
-          "amount": 1855.0,
-          "unit_amount": 61.83,
+        "Tesco": {
+          "source_product_id": "5998244700044",
+          "source_product_name": "MU 30DB TOJÁS 1290G S MÉRET QQ",
+          "amount": 1680.0,
+          "unit_amount": 56.0,
           "unit": "db",
           "unit_title": "doboz",
           "packaging": "30",
@@ -472,24 +472,14 @@
       "category": "Húsáru",
       "expected_unit": "kg",
       "prices": {
-        "Lidl": 1465.0,
         "Auchan": 1255.0,
         "Tesco": 1305.0,
+        "Lidl": 1465.0,
         "ALDI": 1465.0,
         "Penny": 1465.0,
         "SPAR": 1505.0
       },
       "selected_products": {
-        "Lidl": {
-          "source_product_id": "2823780000000",
-          "source_product_name": "Friss darabolt sertéscomb  csont nélkül, ca. 1,2kg ",
-          "amount": 1465.0,
-          "unit_amount": 1465.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
         "Auchan": {
           "source_product_id": "2165400000000",
           "source_product_name": "Auchan Kedvenc Friss Sertés Comb csont nélkül Húspultban kapható Ft/kg",
@@ -505,6 +495,16 @@
           "source_product_name": "16. SERTES COMB pultos QQ",
           "amount": 1305.0,
           "unit_amount": 1305.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Lidl": {
+          "source_product_id": "2823780000000",
+          "source_product_name": "Friss darabolt sertéscomb  csont nélkül, ca. 1,2kg ",
+          "amount": 1465.0,
+          "unit_amount": 1465.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -550,11 +550,11 @@
       "expected_unit": "kg",
       "prices": {
         "SPAR": 1954.44,
+        "Penny": 1749.0,
         "Auchan": 1739.0,
         "Tesco": 1748.75,
         "ALDI": 1749.0,
-        "Lidl": 1749.0,
-        "Penny": 1749.0
+        "Lidl": 1749.0
       },
       "selected_products": {
         "SPAR": {
@@ -565,6 +565,16 @@
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "0.9",
+          "price_type": "NORMAL"
+        },
+        "Penny": {
+          "source_product_id": "penny-10995",
+          "source_product_name": "Sertés darálthús 30% zsírtart.",
+          "amount": 1749.0,
+          "unit_amount": 1749.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "1",
           "price_type": "NORMAL"
         },
         "Auchan": {
@@ -606,16 +616,6 @@
           "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-10995",
-          "source_product_name": "Sertés darálthús 30% zsírtart.",
-          "amount": 1749.0,
-          "unit_amount": 1749.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "1",
-          "price_type": "NORMAL"
         }
       },
       "coverage": 6
@@ -626,7 +626,7 @@
       "category": "Húsáru",
       "expected_unit": "kg",
       "prices": {
-        "Lidl": 1859.0,
+        "Lidl": 1775.0,
         "Auchan": 1831.0,
         "ALDI": 1979.0,
         "Penny": 1979.0,
@@ -635,10 +635,10 @@
       },
       "selected_products": {
         "Lidl": {
-          "source_product_id": "2895800000000",
-          "source_product_name": "Csirkemell tokány, kg ",
-          "amount": 1859.0,
-          "unit_amount": 1859.0,
+          "source_product_id": "lidl-0009810",
+          "source_product_name": "Húsfarm Csirkemellfilé , kg",
+          "amount": 1775.0,
+          "unit_amount": 1775.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -703,24 +703,14 @@
       "category": "Húsáru",
       "expected_unit": "kg",
       "prices": {
-        "Penny": 2999.0,
         "Auchan": 2998.0,
         "Lidl": 2999.0,
         "ALDI": 2999.0,
+        "Penny": 2999.0,
         "Tesco": 3000.0,
         "SPAR": 3117.78
       },
       "selected_products": {
-        "Penny": {
-          "source_product_id": "penny-122",
-          "source_product_name": "Kedvenc Hentese friss pulykamellfilé kg",
-          "amount": 2999.0,
-          "unit_amount": 2999.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
         "Auchan": {
           "source_product_id": "2000007457379",
           "source_product_name": "Pulykamellfilé 450 g",
@@ -744,6 +734,16 @@
         "ALDI": {
           "source_product_id": "aldi-726314",
           "source_product_name": "Húsmester pulykamellfilé kg vákuumcsomagolt",
+          "amount": 2999.0,
+          "unit_amount": 2999.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Penny": {
+          "source_product_id": "penny-122",
+          "source_product_name": "Kedvenc Hentese friss pulykamellfilé kg",
           "amount": 2999.0,
           "unit_amount": 2999.0,
           "unit": "kg",
@@ -935,8 +935,8 @@
       "expected_unit": "kg",
       "prices": {
         "Tesco": 999.0,
-        "Lidl": 999.0,
         "Auchan": 1099.0,
+        "Lidl": 1198.67,
         "SPAR": 1199.0,
         "ALDI": 1199.0,
         "Penny": 1199.0
@@ -952,16 +952,6 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Lidl": {
-          "source_product_id": "lidl-0080160",
-          "source_product_name": "Citrom lédig",
-          "amount": 999.0,
-          "unit_amount": 999.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
         "Auchan": {
           "source_product_id": "2188440000007",
           "source_product_name": "Citrom Ft/kg",
@@ -970,6 +960,16 @@
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Lidl": {
+          "source_product_id": "lidl-0080171",
+          "source_product_name": "Citrom 750g",
+          "amount": 899.0,
+          "unit_amount": 1198.67,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "0.75",
           "price_type": "NORMAL"
         },
         "SPAR": {
@@ -1012,10 +1012,10 @@
       "expected_unit": "kg",
       "prices": {
         "Lidl": 385.0,
-        "SPAR": 459.0,
         "Auchan": 399.0,
         "ALDI": 399.0,
         "Penny": 449.0,
+        "SPAR": 459.0,
         "Tesco": 448.0
       },
       "selected_products": {
@@ -1024,16 +1024,6 @@
           "source_product_name": "Paradicsom 1kg",
           "amount": 385.0,
           "unit_amount": 385.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "SPAR": {
-          "source_product_id": "5999559680007",
-          "source_product_name": "Fürtös paradicsom lédig",
-          "amount": 459.0,
-          "unit_amount": 459.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1069,6 +1059,16 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
+        "SPAR": {
+          "source_product_id": "5999559680007",
+          "source_product_name": "Fürtös paradicsom lédig",
+          "amount": 459.0,
+          "unit_amount": 459.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "Tesco": {
           "source_product_id": "2809140000000",
           "source_product_name": "FÜRTÖS PARADICSOM LÉDIG QQ",
@@ -1088,24 +1088,14 @@
       "category": "Zöldség",
       "expected_unit": "kg",
       "prices": {
-        "ALDI": 879.0,
         "Lidl": 655.0,
         "Auchan": 726.0,
         "Tesco": 736.0,
         "SPAR": 811.0,
-        "Penny": 845.0
+        "Penny": 845.0,
+        "ALDI": 869.0
       },
       "selected_products": {
-        "ALDI": {
-          "source_product_id": "aldi-730700",
-          "source_product_name": "Paprika tv lédig",
-          "amount": 879.0,
-          "unit_amount": 879.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
         "Lidl": {
           "source_product_id": "lidl-0082535",
           "source_product_name": "Hazai TV paprika kg",
@@ -1151,6 +1141,16 @@
           "source_product_name": "Magyar tv paprika lédig kg",
           "amount": 845.0,
           "unit_amount": 845.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "ALDI": {
+          "source_product_id": "aldi-730700",
+          "source_product_name": "Paprika tv lédig",
+          "amount": 869.0,
+          "unit_amount": 869.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
