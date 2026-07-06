@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-29T08:24:54.113584+00:00",
+  "updated_at": "2026-07-06T07:54:22.319241+00:00",
   "version": "store-network-hu-v2.0-non-lidl-osm",
   "scope": "Hungarian FMCG store network from OSM + optional overrides",
   "method_note": "Ez a verzió Lidl nélkül építi a bolthálózatot. ALDI, SPAR, Tesco, Auchan és Penny OSM/Overpass alapján frissül. Ha egy láncra 0 találat jön, a script megtartja a korábbi store-network-hu.json adott láncra vonatkozó adatait. Lidl külön, saját üzletlista alapján kerül majd be.",
@@ -5234,6 +5234,27 @@
       ]
     },
     {
+      "store_id": "penny_bataszek_penny_13980182110",
+      "company": "Penny",
+      "name": "Penny",
+      "city": "Bátaszék",
+      "area": "Bátaszék",
+      "region": "n.a.",
+      "address": "7140 Bátaszék, Szentháromság tér 22",
+      "lat": 46.186033,
+      "lon": 18.722291,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 13980182110,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "Penny",
+        "Penny Bátaszék",
+        "7140 Bátaszék, Szentháromság tér 22"
+      ]
+    },
+    {
       "store_id": "penny_buk_penny_11962426124",
       "company": "Penny",
       "name": "Penny",
@@ -7586,6 +7607,27 @@
       ]
     },
     {
+      "store_id": "penny_zirc_penny_169973539",
+      "company": "Penny",
+      "name": "Penny",
+      "city": "Zirc",
+      "area": "Zirc",
+      "region": "n.a.",
+      "address": "8420 Zirc, Rákóczi tér 12",
+      "lat": 47.262955,
+      "lon": 17.870587,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 169973539,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "Penny",
+        "Penny Zirc",
+        "8420 Zirc, Rákóczi tér 12"
+      ]
+    },
+    {
       "store_id": "penny_na_penny_293152460",
       "company": "Penny",
       "name": "Penny",
@@ -8291,27 +8333,6 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 165555253,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_169973539",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.262955,
-      "lon": 17.870587,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 169973539,
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
@@ -20466,8 +20487,8 @@
       "area": "Ajka",
       "region": "Közép-Dunántúl",
       "address": "8400 Ajka, Fő út 66",
-      "lat": 47.113974,
-      "lon": 17.548315,
+      "lat": 47.113978,
+      "lon": 17.54831,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 166825315,
