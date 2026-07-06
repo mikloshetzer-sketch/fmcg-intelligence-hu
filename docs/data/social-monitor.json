@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-07-06T15:59:10.966958+00:00",
+  "updated_at": "2026-07-06T20:23:32.324493+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-07-06T15:59:10.966958+00:00",
-    "leader_social": "Penny",
-    "leader_social_index": 16,
+    "updated_at": "2026-07-06T20:23:32.324493+00:00",
+    "leader_social": "Tesco",
+    "leader_social_index": 48,
     "dominant_social_topic": "árak és akciók",
     "overall_social_sentiment": "neutral"
   },
@@ -85,34 +85,214 @@
     },
     {
       "company": "Tesco",
-      "social_mentions": 0,
-      "raw_social_mentions": 0,
-      "dashboard_mentions": 0,
-      "background_mentions": 0,
-      "discarded_mentions": 0,
-      "weighted_social_mentions": 0,
-      "hu_relevant_mentions": 0,
-      "social_index": 0,
+      "social_mentions": 11,
+      "raw_social_mentions": 12,
+      "dashboard_mentions": 6,
+      "background_mentions": 5,
+      "discarded_mentions": 1,
+      "weighted_social_mentions": 8.5,
+      "hu_relevant_mentions": 6,
+      "social_index": 48,
       "social_sources": {
-        "reddit": 0,
-        "youtube": 0,
+        "reddit": 10,
+        "youtube": 1,
         "mastodon": 0
       },
       "raw_social_sources": {
-        "reddit": 0,
-        "youtube": 0,
+        "reddit": 11,
+        "youtube": 1,
         "mastodon": 0
       },
-      "dominant_social_topic": "általános vállalati említés",
-      "top_social_topics": [],
-      "topic_sentiment": {},
-      "social_sentiment": "neutral",
-      "latest_items": [],
-      "background_items": [],
+      "dominant_social_topic": "árak és akciók",
+      "top_social_topics": [
+        {
+          "topic": "árak és akciók",
+          "score": 8.0
+        },
+        {
+          "topic": "bolti élmény",
+          "score": 5.5
+        },
+        {
+          "topic": "digitalizáció és önkiszolgálás",
+          "score": 2.5
+        }
+      ],
+      "topic_sentiment": {
+        "bolti élmény": {
+          "positive": 1.0,
+          "neutral": 4.5,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        },
+        "digitalizáció és önkiszolgálás": {
+          "positive": 0.0,
+          "neutral": 2.0,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        },
+        "árak és akciók": {
+          "positive": 0.5,
+          "neutral": 6.0,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        }
+      },
+      "social_sentiment": "positive",
+      "latest_items": [
+        {
+          "id": "d12b7dc43f67c6c7",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "Things to sort after you land in the UK as an International Student",
+          "summary": "When I first landed in the UK, I genuinely had no idea what needed to be done first. Everything felt new and unfamiliar. But looking back, I’m proud that I navigated it all by myself and even helped guide a few of my fellow mates afterwards. These could sound like simple things, but getting them done the right way will definitely help you a long way. So what exactly do you sort out after landing in the UK? 1. SIM card: This is the key to the beginning of your journey. Having an international SIM",
+          "url": "https://www.reddit.com/r/AbroadEdge/comments/1u8nyc5/things_to_sort_after_you_land_in_the_uk_as_an/",
+          "published": "2026-06-17T21:57:17+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "positive"
+        },
+        {
+          "id": "496de6d18b7327fe",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "Virgin Red - Free 1,000 points sign up bonus (approx £5)",
+          "summary": "Virgin Red is a cashback website and app that lets you earn points when making a purchase through them. By using my referral link and making a transaction through them, both of us gain 1,000 points (approx £5). Virgin Red is unique in that there are multiple ways you can gain points through Virgin's other areas of businesses. You can gain points through Virgin Airlines flights and Virgin Credit Cards spending by transferring them across from the Virgin Atlantic Flying Club. Virgin Points never e",
+          "url": "https://www.reddit.com/r/beermoneyuk/comments/1u48ujj/virgin_red_free_1000_points_sign_up_bonus_approx_5/",
+          "published": "2026-06-12T21:53:57+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "657f7414e5b5bd40",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "Tesco Clubcard Jumper (thrifted at Fara Charity Shop)",
+          "summary": "submitted by /u/AntRnd to r/Thrift [link] [comments]",
+          "url": "https://www.reddit.com/r/Thrift/comments/1tzbiff/tesco_clubcard_jumper_thrifted_at_fara_charity/",
+          "published": "2026-06-07T13:00:06+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "5811e91faa424105",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "Tesco Clubcard Jumper (thrifted at Fara Charity Shop)",
+          "summary": "submitted by /u/AntRnd to r/CharityShopHauls [link] [comments]",
+          "url": "https://www.reddit.com/r/CharityShopHauls/comments/1tzbif2/tesco_clubcard_jumper_thrifted_at_fara_charity/",
+          "published": "2026-06-07T13:00:05+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "0b59be6f486529b6",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "Tesco Clubcard Jumper (thrifted at Fara Charity Shop)",
+          "summary": "submitted by /u/AntRnd to r/ganddee [link] [comments]",
+          "url": "https://www.reddit.com/r/ganddee/comments/1tzbidf/tesco_clubcard_jumper_thrifted_at_fara_charity/",
+          "published": "2026-06-07T13:00:03+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "d6cf6dfa6a42e627",
+          "source": "youtube",
+          "company": "Tesco",
+          "title": "A LÁTHATATLAN BOROS MEGINT LECSAPOTT?! 😱 Hóvégi bevásárlás - ALDI ÉS TESCO 😁🥬🍎🥑🥐🧅🧀 - YouTube",
+          "summary": "A LÁTHATATLAN BOROS MEGINT LECSAPOTT?! 😱 Hóvégi bevásárlás - ALDI ÉS TESCO 😁🥬🍎🥑🥐🧅🧀 YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE4xODREeng0akltT2xrajVFb3Z0d0VTSVlucGxvdGwwc0FrXzJEN3Z5N0xxYWtFRUtscThlaWphejlmODZ0ZUlyWmw1d1JOSDJkSXRnY1J3?oc=5",
+          "published": "Mon, 20 Apr 2026 14:05:06 GMT",
+          "query": "site:youtube.com \"Tesco Hungary\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        }
+      ],
+      "background_items": [
+        {
+          "id": "c13b20a5a54b9c9a",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "Slovakia Loyalty Cards - the solution is here",
+          "summary": "If you're visiting Slovakia, many supermarkets and drugstores offer lower prices only through their loyalty programs. You can try registering through the following official websites/apps: * Tesco Clubcard – https://tesco.sk/clubcard * Lidl Plus – https://www.lidl.sk/c/lidl-plus/s10024829 * Kaufland Card – https://www.kaufland.sk/kaufland-card.html * BILLA Bonus – https://www.billa.sk/registracia * dm active beauty – https://www.activebeauty.sk Please note that some programs may require a Slovak ",
+          "url": "https://www.reddit.com/r/SlovakiaLoyaltyCards/comments/1ufkl7i/slovakia_loyalty_cards_the_solution_is_here/",
+          "published": "2026-06-25T19:51:29+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "848f1f6216ff4da9",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "Teenagers allowed Tesco Clubcard for the first time in major shake up – and it could save them £351 a year",
+          "summary": "submitted by /u/thesun to r/tesco [link] [comments]",
+          "url": "https://www.reddit.com/r/tesco/comments/1uebkwz/teenagers_allowed_tesco_clubcard_for_the_first/",
+          "published": "2026-06-24T12:02:58+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "positive"
+        },
+        {
+          "id": "e2735512fa8b8fbc",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "MSc Thesis: AI‑Generated Personalised Promotions in Supermarket Loyalty Programmes",
+          "summary": "Hi everyone! I’m conducting a short anonymous survey for my MSc thesis, looking to gain an insight on how consumers perceive GenAI in supermarket settings. Participants should be 18 and over, and participate/had participated in a supermarket loyalty program (Tesco clubcard etc). It’s voluntary and anonymous, should take no more than 10 minutes if interested! Also feel free to exchange your surveys with me if you feel id be eligible to participate :) submitted by /u/groovy-chic- to r/SurveyExchan",
+          "url": "https://www.reddit.com/r/SurveyExchange/comments/1udmjlz/msc_thesis_aigenerated_personalised_promotions_in/",
+          "published": "2026-06-23T16:49:33+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "b064788a28decc03",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "£3.85 Tesco Clubcard Leeds Bridgewater Place",
+          "summary": "Rate /10 please submitted by /u/ObsidianFlesh to r/MealDealRates [link] [comments]",
+          "url": "https://www.reddit.com/r/MealDealRates/comments/1u1zat6/385_tesco_clubcard_leeds_bridgewater_place/",
+          "published": "2026-06-10T11:20:03+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "aa43dc51c694b26a",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "tescoclubcard",
+          "summary": "Doing an experiment to see how much tesco club card would max out at? Is there a limit? We shall find out maybe? I will post a picture of a club card for anyone to scan at the till or self checkout. [link]",
+          "url": "https://www.reddit.com/r/tescoclubcard/",
+          "published": "",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        }
+      ],
       "quality_summary": {
-        "dashboard_items": 0,
-        "background_items": 0,
-        "discarded_items": 0,
+        "dashboard_items": 6,
+        "background_items": 5,
+        "discarded_items": 1,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
       },
