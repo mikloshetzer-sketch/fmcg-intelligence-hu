@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-29T11:34:18Z",
+  "updated_at": "2026-07-06T11:15:55Z",
   "status": "ok",
   "source": "google_trends",
   "method": "pytrends_unofficial_best_effort_search_intent_v2_one_payload_per_company",
@@ -12,121 +12,90 @@
     {
       "id": "lidl",
       "company": "Lidl",
-      "data_status": "ok",
-      "dominant_intent": "store_access",
-      "dominant_intent_label": "Bolt / nyitvatartás",
-      "dominant_intent_score": 45,
-      "intent_share": [
-        {
-          "intent_id": "promotion",
-          "intent_label": "Akció / promóció",
-          "score": 6,
-          "share_pct": 8.1
-        },
-        {
-          "intent_id": "store_access",
-          "intent_label": "Bolt / nyitvatartás",
-          "score": 45,
-          "share_pct": 60.8
-        },
-        {
-          "intent_id": "price",
-          "intent_label": "Ár / drágulás",
-          "score": 7,
-          "share_pct": 9.5
-        },
-        {
-          "intent_id": "jobs",
-          "intent_label": "Állás / karrier",
-          "score": 5,
-          "share_pct": 6.8
-        },
-        {
-          "intent_id": "digital",
-          "intent_label": "App / online",
-          "score": 11,
-          "share_pct": 14.9
-        }
-      ],
+      "data_status": "no_data",
+      "dominant_intent": null,
+      "dominant_intent_label": null,
+      "dominant_intent_score": null,
+      "intent_share": [],
       "intents": [
         {
           "intent_id": "promotion",
           "intent_label": "Akció / promóció",
           "keyword": "Lidl akció",
-          "data_status": "ok",
-          "intent_score": 6,
-          "trend_direction": "up",
-          "avg_last_7": 3.0,
-          "avg_previous_7": 2.71,
-          "avg_last_30": 3.13,
-          "avg_period": 3.04,
-          "peak_period": 5.0,
-          "search_volatility": 26,
-          "error": null
+          "data_status": "no_data",
+          "intent_score": null,
+          "trend_direction": "n.a.",
+          "avg_last_7": null,
+          "avg_previous_7": null,
+          "avg_last_30": null,
+          "avg_period": null,
+          "peak_period": null,
+          "search_volatility": null,
+          "error": "TooManyRequestsError: The request failed: Google returned a response with code 429"
         },
         {
           "intent_id": "store_access",
           "intent_label": "Bolt / nyitvatartás",
           "keyword": "Lidl nyitvatartás",
-          "data_status": "ok",
-          "intent_score": 45,
-          "trend_direction": "up",
-          "avg_last_7": 31.86,
-          "avg_previous_7": 26.14,
-          "avg_last_30": 28.33,
-          "avg_period": 25.38,
-          "peak_period": 100.0,
-          "search_volatility": 70,
-          "error": null
+          "data_status": "no_data",
+          "intent_score": null,
+          "trend_direction": "n.a.",
+          "avg_last_7": null,
+          "avg_previous_7": null,
+          "avg_last_30": null,
+          "avg_period": null,
+          "peak_period": null,
+          "search_volatility": null,
+          "error": "TooManyRequestsError: The request failed: Google returned a response with code 429"
         },
         {
           "intent_id": "price",
           "intent_label": "Ár / drágulás",
           "keyword": "Lidl ár",
-          "data_status": "ok",
-          "intent_score": 7,
-          "trend_direction": "up",
-          "avg_last_7": 4.57,
-          "avg_previous_7": 3.86,
-          "avg_last_30": 4.63,
-          "avg_period": 4.74,
-          "peak_period": 7.0,
-          "search_volatility": 21,
-          "error": null
+          "data_status": "no_data",
+          "intent_score": null,
+          "trend_direction": "n.a.",
+          "avg_last_7": null,
+          "avg_previous_7": null,
+          "avg_last_30": null,
+          "avg_period": null,
+          "peak_period": null,
+          "search_volatility": null,
+          "error": "TooManyRequestsError: The request failed: Google returned a response with code 429"
         },
         {
           "intent_id": "jobs",
           "intent_label": "Állás / karrier",
           "keyword": "Lidl állás",
-          "data_status": "ok",
-          "intent_score": 5,
-          "trend_direction": "stable",
-          "avg_last_7": 2.0,
-          "avg_previous_7": 1.86,
-          "avg_last_30": 2.4,
-          "avg_period": 2.58,
-          "peak_period": 4.0,
-          "search_volatility": 30,
-          "error": null
+          "data_status": "no_data",
+          "intent_score": null,
+          "trend_direction": "n.a.",
+          "avg_last_7": null,
+          "avg_previous_7": null,
+          "avg_last_30": null,
+          "avg_period": null,
+          "peak_period": null,
+          "search_volatility": null,
+          "error": "TooManyRequestsError: The request failed: Google returned a response with code 429"
         },
         {
           "intent_id": "digital",
           "intent_label": "App / online",
           "keyword": "Lidl app",
-          "data_status": "ok",
-          "intent_score": 11,
-          "trend_direction": "stable",
-          "avg_last_7": 1.43,
-          "avg_previous_7": 1.57,
-          "avg_last_30": 1.03,
-          "avg_period": 0.68,
-          "peak_period": 3.0,
-          "search_volatility": 100,
-          "error": null
+          "data_status": "no_data",
+          "intent_score": null,
+          "trend_direction": "n.a.",
+          "avg_last_7": null,
+          "avg_previous_7": null,
+          "avg_last_30": null,
+          "avg_period": null,
+          "peak_period": null,
+          "search_volatility": null,
+          "error": "TooManyRequestsError: The request failed: Google returned a response with code 429"
         }
       ],
-      "payload_error": null,
-      "interpretation": "Lidl esetében a legerősebb keresési szándék: Bolt / nyitvatartás."
+      "payload_error": "TooManyRequestsError: The request failed: Google returned a response with code 429",
+      "interpretation": "Lidl esetében jelenleg nincs értelmezhető Google Trends keresési szándék adat."
     },
     {
       "id": "aldi",
@@ -140,31 +109,31 @@
           "intent_id": "promotion",
           "intent_label": "Akció / promóció",
           "score": 13,
-          "share_pct": 15.7
+          "share_pct": 15.5
         },
         {
           "intent_id": "store_access",
           "intent_label": "Bolt / nyitvatartás",
           "score": 41,
-          "share_pct": 49.4
+          "share_pct": 48.8
         },
         {
           "intent_id": "price",
           "intent_label": "Ár / drágulás",
-          "score": 7,
-          "share_pct": 8.4
+          "score": 8,
+          "share_pct": 9.5
         },
         {
           "intent_id": "jobs",
           "intent_label": "Állás / karrier",
-          "score": 12,
-          "share_pct": 14.5
+          "score": 11,
+          "share_pct": 13.1
         },
         {
           "intent_id": "digital",
           "intent_label": "App / online",
-          "score": 10,
-          "share_pct": 12.0
+          "score": 11,
+          "share_pct": 13.1
         }
       ],
       "intents": [
@@ -175,12 +144,12 @@
           "data_status": "ok",
           "intent_score": 13,
           "trend_direction": "up",
-          "avg_last_7": 3.29,
-          "avg_previous_7": 1.0,
-          "avg_last_30": 2.17,
-          "avg_period": 2.91,
-          "peak_period": 15.0,
-          "search_volatility": 84,
+          "avg_last_7": 3.14,
+          "avg_previous_7": 1.29,
+          "avg_last_30": 2.4,
+          "avg_period": 2.87,
+          "peak_period": 16.0,
+          "search_volatility": 89,
           "error": null
         },
         {
@@ -190,12 +159,12 @@
           "data_status": "ok",
           "intent_score": 41,
           "trend_direction": "up",
-          "avg_last_7": 27.43,
-          "avg_previous_7": 22.0,
-          "avg_last_30": 25.2,
-          "avg_period": 24.7,
+          "avg_last_7": 26.57,
+          "avg_previous_7": 20.57,
+          "avg_last_30": 25.83,
+          "avg_period": 25.23,
           "peak_period": 100.0,
-          "search_volatility": 62,
+          "search_volatility": 60,
           "error": null
         },
         {
@@ -203,14 +172,14 @@
           "intent_label": "Ár / drágulás",
           "keyword": "ALDI ár",
           "data_status": "ok",
-          "intent_score": 7,
+          "intent_score": 8,
           "trend_direction": "up",
-          "avg_last_7": 2.71,
-          "avg_previous_7": 2.29,
-          "avg_last_30": 2.97,
-          "avg_period": 3.19,
+          "avg_last_7": 3.0,
+          "avg_previous_7": 1.86,
+          "avg_last_30": 2.77,
+          "avg_period": 3.04,
           "peak_period": 5.0,
-          "search_volatility": 46,
+          "search_volatility": 50,
           "error": null
         },
         {
@@ -218,13 +187,13 @@
           "intent_label": "Állás / karrier",
           "keyword": "ALDI állás",
           "data_status": "ok",
-          "intent_score": 12,
+          "intent_score": 11,
           "trend_direction": "down",
-          "avg_last_7": 1.0,
-          "avg_previous_7": 1.71,
-          "avg_last_30": 1.43,
-          "avg_period": 1.58,
-          "peak_period": 5.0,
+          "avg_last_7": 0.71,
+          "avg_previous_7": 1.57,
+          "avg_last_30": 1.5,
+          "avg_period": 1.4,
+          "peak_period": 4.0,
           "search_volatility": 100,
           "error": null
         },
@@ -233,13 +202,13 @@
           "intent_label": "App / online",
           "keyword": "ALDI app",
           "data_status": "ok",
-          "intent_score": 10,
+          "intent_score": 11,
           "trend_direction": "stable",
           "avg_last_7": 0.0,
           "avg_previous_7": 0.0,
-          "avg_last_30": 0.0,
-          "avg_period": 0.17,
-          "peak_period": 3.0,
+          "avg_last_30": 0.1,
+          "avg_period": 0.13,
+          "peak_period": 4.0,
           "search_volatility": 100,
           "error": null
         }
@@ -253,31 +222,37 @@
       "data_status": "ok",
       "dominant_intent": "store_access",
       "dominant_intent_label": "Bolt / nyitvatartás",
-      "dominant_intent_score": 42,
+      "dominant_intent_score": 41,
       "intent_share": [
         {
           "intent_id": "promotion",
           "intent_label": "Akció / promóció",
           "score": 8,
-          "share_pct": 11.0
+          "share_pct": 9.5
         },
         {
           "intent_id": "store_access",
           "intent_label": "Bolt / nyitvatartás",
-          "score": 42,
-          "share_pct": 57.5
+          "score": 41,
+          "share_pct": 48.8
         },
         {
           "intent_id": "price",
           "intent_label": "Ár / drágulás",
           "score": 12,
-          "share_pct": 16.4
+          "share_pct": 14.3
         },
         {
           "intent_id": "jobs",
           "intent_label": "Állás / karrier",
+          "score": 12,
+          "share_pct": 14.3
+        },
+        {
+          "intent_id": "digital",
+          "intent_label": "App / online",
           "score": 11,
-          "share_pct": 15.1
+          "share_pct": 13.1
         }
       ],
       "intents": [
@@ -288,12 +263,12 @@
           "data_status": "ok",
           "intent_score": 8,
           "trend_direction": "down",
-          "avg_last_7": 2.0,
-          "avg_previous_7": 2.43,
-          "avg_last_30": 3.27,
-          "avg_period": 3.32,
+          "avg_last_7": 2.14,
+          "avg_previous_7": 3.14,
+          "avg_last_30": 3.73,
+          "avg_period": 3.79,
           "peak_period": 6.0,
-          "search_volatility": 54,
+          "search_volatility": 47,
           "error": null
         },
         {
@@ -301,12 +276,12 @@
           "intent_label": "Bolt / nyitvatartás",
           "keyword": "Penny nyitvatartás",
           "data_status": "ok",
-          "intent_score": 42,
+          "intent_score": 41,
           "trend_direction": "up",
-          "avg_last_7": 28.86,
-          "avg_previous_7": 23.71,
-          "avg_last_30": 26.63,
-          "avg_period": 25.57,
+          "avg_last_7": 26.86,
+          "avg_previous_7": 19.57,
+          "avg_last_30": 26.53,
+          "avg_period": 25.4,
           "peak_period": 100.0,
           "search_volatility": 64,
           "error": null
@@ -318,11 +293,11 @@
           "data_status": "ok",
           "intent_score": 12,
           "trend_direction": "up",
-          "avg_last_7": 1.86,
-          "avg_previous_7": 1.14,
-          "avg_last_30": 1.63,
-          "avg_period": 1.3,
-          "peak_period": 5.0,
+          "avg_last_7": 1.43,
+          "avg_previous_7": 1.0,
+          "avg_last_30": 1.33,
+          "avg_period": 1.42,
+          "peak_period": 6.0,
           "search_volatility": 100,
           "error": null
         },
@@ -331,13 +306,13 @@
           "intent_label": "Állás / karrier",
           "keyword": "Penny állás",
           "data_status": "ok",
-          "intent_score": 11,
+          "intent_score": 12,
           "trend_direction": "up",
-          "avg_last_7": 0.43,
-          "avg_previous_7": 0.0,
-          "avg_last_30": 0.77,
-          "avg_period": 0.89,
-          "peak_period": 4.0,
+          "avg_last_7": 1.14,
+          "avg_previous_7": 0.71,
+          "avg_last_30": 0.9,
+          "avg_period": 0.68,
+          "peak_period": 5.0,
           "search_volatility": 100,
           "error": null
         },
@@ -345,16 +320,16 @@
           "intent_id": "digital",
           "intent_label": "App / online",
           "keyword": "Penny app",
-          "data_status": "no_data",
-          "intent_score": null,
-          "trend_direction": "n.a.",
-          "avg_last_7": null,
-          "avg_previous_7": null,
-          "avg_last_30": null,
-          "avg_period": null,
-          "peak_period": null,
-          "search_volatility": null,
-          "error": "all_zero_values"
+          "data_status": "ok",
+          "intent_score": 11,
+          "trend_direction": "up",
+          "avg_last_7": 1.14,
+          "avg_previous_7": 0.0,
+          "avg_last_30": 0.27,
+          "avg_period": 0.15,
+          "peak_period": 5.0,
+          "search_volatility": 100,
+          "error": null
         }
       ],
       "payload_error": null,
@@ -363,71 +338,96 @@
     {
       "id": "spar",
       "company": "SPAR",
-      "data_status": "no_data",
-      "dominant_intent": null,
-      "dominant_intent_label": null,
-      "dominant_intent_score": null,
-      "intent_share": [],
+      "data_status": "ok",
+      "dominant_intent": "store_access",
+      "dominant_intent_label": "Bolt / nyitvatartás",
+      "dominant_intent_score": 41,
+      "intent_share": [
+        {
+          "intent_id": "promotion",
+          "intent_label": "Akció / promóció",
+          "score": 11,
+          "share_pct": 15.3
+        },
+        {
+          "intent_id": "store_access",
+          "intent_label": "Bolt / nyitvatartás",
+          "score": 41,
+          "share_pct": 56.9
+        },
+        {
+          "intent_id": "price",
+          "intent_label": "Ár / drágulás",
+          "score": 9,
+          "share_pct": 12.5
+        },
+        {
+          "intent_id": "jobs",
+          "intent_label": "Állás / karrier",
+          "score": 11,
+          "share_pct": 15.3
+        }
+      ],
       "intents": [
         {
           "intent_id": "promotion",
           "intent_label": "Akció / promóció",
           "keyword": "SPAR akció",
-          "data_status": "no_data",
-          "intent_score": null,
-          "trend_direction": "n.a.",
-          "avg_last_7": null,
-          "avg_previous_7": null,
-          "avg_last_30": null,
-          "avg_period": null,
-          "peak_period": null,
-          "search_volatility": null,
-          "error": "TooManyRequestsError: The request failed: Google returned a response with code 429"
+          "data_status": "ok",
+          "intent_score": 11,
+          "trend_direction": "up",
+          "avg_last_7": 2.29,
+          "avg_previous_7": 0.71,
+          "avg_last_30": 1.47,
+          "avg_period": 1.49,
+          "peak_period": 4.0,
+          "search_volatility": 86,
+          "error": null
         },
         {
           "intent_id": "store_access",
           "intent_label": "Bolt / nyitvatartás",
           "keyword": "SPAR nyitvatartás",
-          "data_status": "no_data",
-          "intent_score": null,
-          "trend_direction": "n.a.",
-          "avg_last_7": null,
-          "avg_previous_7": null,
-          "avg_last_30": null,
-          "avg_period": null,
-          "peak_period": null,
-          "search_volatility": null,
-          "error": "TooManyRequestsError: The request failed: Google returned a response with code 429"
+          "data_status": "ok",
+          "intent_score": 41,
+          "trend_direction": "up",
+          "avg_last_7": 27.0,
+          "avg_previous_7": 22.14,
+          "avg_last_30": 27.97,
+          "avg_period": 26.43,
+          "peak_period": 100.0,
+          "search_volatility": 57,
+          "error": null
         },
         {
           "intent_id": "price",
           "intent_label": "Ár / drágulás",
           "keyword": "SPAR ár",
-          "data_status": "no_data",
-          "intent_score": null,
-          "trend_direction": "n.a.",
-          "avg_last_7": null,
-          "avg_previous_7": null,
-          "avg_last_30": null,
-          "avg_period": null,
-          "peak_period": null,
-          "search_volatility": null,
-          "error": "TooManyRequestsError: The request failed: Google returned a response with code 429"
+          "data_status": "ok",
+          "intent_score": 9,
+          "trend_direction": "up",
+          "avg_last_7": 2.29,
+          "avg_previous_7": 1.57,
+          "avg_last_30": 2.53,
+          "avg_period": 2.92,
+          "peak_period": 7.0,
+          "search_volatility": 57,
+          "error": null
         },
         {
           "intent_id": "jobs",
           "intent_label": "Állás / karrier",
           "keyword": "SPAR állás",
-          "data_status": "no_data",
-          "intent_score": null,
-          "trend_direction": "n.a.",
-          "avg_last_7": null,
-          "avg_previous_7": null,
-          "avg_last_30": null,
-          "avg_period": null,
-          "peak_period": null,
-          "search_volatility": null,
-          "error": "TooManyRequestsError: The request failed: Google returned a response with code 429"
+          "data_status": "ok",
+          "intent_score": 11,
+          "trend_direction": "up",
+          "avg_last_7": 0.43,
+          "avg_previous_7": 0.0,
+          "avg_last_30": 0.43,
+          "avg_period": 0.36,
+          "peak_period": 2.0,
+          "search_volatility": 100,
+          "error": null
         },
         {
           "intent_id": "digital",
@@ -442,187 +442,249 @@
           "avg_period": null,
           "peak_period": null,
           "search_volatility": null,
-          "error": "TooManyRequestsError: The request failed: Google returned a response with code 429"
+          "error": "all_zero_values"
         }
       ],
-      "payload_error": "TooManyRequestsError: The request failed: Google returned a response with code 429",
-      "interpretation": "SPAR esetében jelenleg nincs értelmezhető Google Trends keresési szándék adat."
+      "payload_error": null,
+      "interpretation": "SPAR esetében a legerősebb keresési szándék: Bolt / nyitvatartás."
     },
     {
       "id": "tesco",
       "company": "Tesco",
-      "data_status": "no_data",
-      "dominant_intent": null,
-      "dominant_intent_label": null,
-      "dominant_intent_score": null,
-      "intent_share": [],
+      "data_status": "ok",
+      "dominant_intent": "store_access",
+      "dominant_intent_label": "Bolt / nyitvatartás",
+      "dominant_intent_score": 38,
+      "intent_share": [
+        {
+          "intent_id": "promotion",
+          "intent_label": "Akció / promóció",
+          "score": 6,
+          "share_pct": 9.2
+        },
+        {
+          "intent_id": "store_access",
+          "intent_label": "Bolt / nyitvatartás",
+          "score": 38,
+          "share_pct": 58.5
+        },
+        {
+          "intent_id": "price",
+          "intent_label": "Ár / drágulás",
+          "score": 5,
+          "share_pct": 7.7
+        },
+        {
+          "intent_id": "jobs",
+          "intent_label": "Állás / karrier",
+          "score": 9,
+          "share_pct": 13.8
+        },
+        {
+          "intent_id": "digital",
+          "intent_label": "Clubcard / digitális",
+          "score": 7,
+          "share_pct": 10.8
+        }
+      ],
       "intents": [
         {
           "intent_id": "promotion",
           "intent_label": "Akció / promóció",
           "keyword": "Tesco akció",
-          "data_status": "no_data",
-          "intent_score": null,
-          "trend_direction": "n.a.",
-          "avg_last_7": null,
-          "avg_previous_7": null,
-          "avg_last_30": null,
-          "avg_period": null,
-          "peak_period": null,
-          "search_volatility": null,
-          "error": "TooManyRequestsError: The request failed: Google returned a response with code 429"
+          "data_status": "ok",
+          "intent_score": 6,
+          "trend_direction": "up",
+          "avg_last_7": 2.43,
+          "avg_previous_7": 1.43,
+          "avg_last_30": 2.03,
+          "avg_period": 2.26,
+          "peak_period": 4.0,
+          "search_volatility": 41,
+          "error": null
         },
         {
           "intent_id": "store_access",
           "intent_label": "Bolt / nyitvatartás",
           "keyword": "Tesco nyitvatartás",
-          "data_status": "no_data",
-          "intent_score": null,
-          "trend_direction": "n.a.",
-          "avg_last_7": null,
-          "avg_previous_7": null,
-          "avg_last_30": null,
-          "avg_period": null,
-          "peak_period": null,
-          "search_volatility": null,
-          "error": "TooManyRequestsError: The request failed: Google returned a response with code 429"
+          "data_status": "ok",
+          "intent_score": 38,
+          "trend_direction": "up",
+          "avg_last_7": 19.0,
+          "avg_previous_7": 15.29,
+          "avg_last_30": 21.33,
+          "avg_period": 18.87,
+          "peak_period": 100.0,
+          "search_volatility": 83,
+          "error": null
         },
         {
           "intent_id": "price",
           "intent_label": "Ár / drágulás",
           "keyword": "Tesco ár",
-          "data_status": "no_data",
-          "intent_score": null,
-          "trend_direction": "n.a.",
-          "avg_last_7": null,
-          "avg_previous_7": null,
-          "avg_last_30": null,
-          "avg_period": null,
-          "peak_period": null,
-          "search_volatility": null,
-          "error": "TooManyRequestsError: The request failed: Google returned a response with code 429"
+          "data_status": "ok",
+          "intent_score": 5,
+          "trend_direction": "down",
+          "avg_last_7": 2.14,
+          "avg_previous_7": 2.43,
+          "avg_last_30": 2.6,
+          "avg_period": 2.91,
+          "peak_period": 5.0,
+          "search_volatility": 29,
+          "error": null
         },
         {
           "intent_id": "jobs",
           "intent_label": "Állás / karrier",
           "keyword": "Tesco állás",
-          "data_status": "no_data",
-          "intent_score": null,
-          "trend_direction": "n.a.",
-          "avg_last_7": null,
-          "avg_previous_7": null,
-          "avg_last_30": null,
-          "avg_period": null,
-          "peak_period": null,
-          "search_volatility": null,
-          "error": "TooManyRequestsError: The request failed: Google returned a response with code 429"
+          "data_status": "ok",
+          "intent_score": 9,
+          "trend_direction": "down",
+          "avg_last_7": 0.57,
+          "avg_previous_7": 1.86,
+          "avg_last_30": 1.23,
+          "avg_period": 1.21,
+          "peak_period": 3.0,
+          "search_volatility": 79,
+          "error": null
         },
         {
           "intent_id": "digital",
           "intent_label": "Clubcard / digitális",
           "keyword": "Tesco clubcard",
-          "data_status": "no_data",
-          "intent_score": null,
-          "trend_direction": "n.a.",
-          "avg_last_7": null,
-          "avg_previous_7": null,
-          "avg_last_30": null,
-          "avg_period": null,
-          "peak_period": null,
-          "search_volatility": null,
-          "error": "TooManyRequestsError: The request failed: Google returned a response with code 429"
+          "data_status": "ok",
+          "intent_score": 7,
+          "trend_direction": "up",
+          "avg_last_7": 2.0,
+          "avg_previous_7": 0.86,
+          "avg_last_30": 1.73,
+          "avg_period": 2.23,
+          "peak_period": 5.0,
+          "search_volatility": 50,
+          "error": null
         }
       ],
-      "payload_error": "TooManyRequestsError: The request failed: Google returned a response with code 429",
-      "interpretation": "Tesco esetében jelenleg nincs értelmezhető Google Trends keresési szándék adat."
+      "payload_error": null,
+      "interpretation": "Tesco esetében a legerősebb keresési szándék: Bolt / nyitvatartás."
     },
     {
       "id": "auchan",
       "company": "Auchan",
-      "data_status": "no_data",
-      "dominant_intent": null,
-      "dominant_intent_label": null,
-      "dominant_intent_score": null,
-      "intent_share": [],
+      "data_status": "ok",
+      "dominant_intent": "store_access",
+      "dominant_intent_label": "Bolt / nyitvatartás",
+      "dominant_intent_score": 37,
+      "intent_share": [
+        {
+          "intent_id": "promotion",
+          "intent_label": "Akció / promóció",
+          "score": 13,
+          "share_pct": 14.1
+        },
+        {
+          "intent_id": "store_access",
+          "intent_label": "Bolt / nyitvatartás",
+          "score": 37,
+          "share_pct": 40.2
+        },
+        {
+          "intent_id": "price",
+          "intent_label": "Ár / drágulás",
+          "score": 11,
+          "share_pct": 12.0
+        },
+        {
+          "intent_id": "jobs",
+          "intent_label": "Állás / karrier",
+          "score": 11,
+          "share_pct": 12.0
+        },
+        {
+          "intent_id": "digital",
+          "intent_label": "Online / digitális",
+          "score": 20,
+          "share_pct": 21.7
+        }
+      ],
       "intents": [
         {
           "intent_id": "promotion",
           "intent_label": "Akció / promóció",
           "keyword": "Auchan akció",
-          "data_status": "no_data",
-          "intent_score": null,
-          "trend_direction": "n.a.",
-          "avg_last_7": null,
-          "avg_previous_7": null,
-          "avg_last_30": null,
-          "avg_period": null,
-          "peak_period": null,
-          "search_volatility": null,
-          "error": "TooManyRequestsError: The request failed: Google returned a response with code 429"
+          "data_status": "ok",
+          "intent_score": 13,
+          "trend_direction": "up",
+          "avg_last_7": 3.43,
+          "avg_previous_7": 0.43,
+          "avg_last_30": 1.63,
+          "avg_period": 1.89,
+          "peak_period": 7.0,
+          "search_volatility": 100,
+          "error": null
         },
         {
           "intent_id": "store_access",
           "intent_label": "Bolt / nyitvatartás",
           "keyword": "Auchan nyitvatartás",
-          "data_status": "no_data",
-          "intent_score": null,
-          "trend_direction": "n.a.",
-          "avg_last_7": null,
-          "avg_previous_7": null,
-          "avg_last_30": null,
-          "avg_period": null,
-          "peak_period": null,
-          "search_volatility": null,
-          "error": "TooManyRequestsError: The request failed: Google returned a response with code 429"
+          "data_status": "ok",
+          "intent_score": 37,
+          "trend_direction": "up",
+          "avg_last_7": 18.0,
+          "avg_previous_7": 13.71,
+          "avg_last_30": 20.13,
+          "avg_period": 18.68,
+          "peak_period": 100.0,
+          "search_volatility": 76,
+          "error": null
         },
         {
           "intent_id": "price",
           "intent_label": "Ár / drágulás",
           "keyword": "Auchan ár",
-          "data_status": "no_data",
-          "intent_score": null,
-          "trend_direction": "n.a.",
-          "avg_last_7": null,
-          "avg_previous_7": null,
-          "avg_last_30": null,
-          "avg_period": null,
-          "peak_period": null,
-          "search_volatility": null,
-          "error": "TooManyRequestsError: The request failed: Google returned a response with code 429"
+          "data_status": "ok",
+          "intent_score": 11,
+          "trend_direction": "up",
+          "avg_last_7": 2.14,
+          "avg_previous_7": 1.86,
+          "avg_last_30": 3.37,
+          "avg_period": 3.62,
+          "peak_period": 10.0,
+          "search_volatility": 70,
+          "error": null
         },
         {
           "intent_id": "jobs",
           "intent_label": "Állás / karrier",
           "keyword": "Auchan állás",
-          "data_status": "no_data",
-          "intent_score": null,
-          "trend_direction": "n.a.",
-          "avg_last_7": null,
-          "avg_previous_7": null,
-          "avg_last_30": null,
-          "avg_period": null,
-          "peak_period": null,
-          "search_volatility": null,
-          "error": "TooManyRequestsError: The request failed: Google returned a response with code 429"
+          "data_status": "ok",
+          "intent_score": 11,
+          "trend_direction": "down",
+          "avg_last_7": 0.29,
+          "avg_previous_7": 0.43,
+          "avg_last_30": 0.17,
+          "avg_period": 0.26,
+          "peak_period": 3.0,
+          "search_volatility": 100,
+          "error": null
         },
         {
           "intent_id": "digital",
           "intent_label": "Online / digitális",
           "keyword": "Auchan online",
-          "data_status": "no_data",
-          "intent_score": null,
-          "trend_direction": "n.a.",
-          "avg_last_7": null,
-          "avg_previous_7": null,
-          "avg_last_30": null,
-          "avg_period": null,
-          "peak_period": null,
-          "search_volatility": null,
-          "error": "TooManyRequestsError: The request failed: Google returned a response with code 429"
+          "data_status": "ok",
+          "intent_score": 20,
+          "trend_direction": "stable",
+          "avg_last_7": 14.57,
+          "avg_previous_7": 14.71,
+          "avg_last_30": 16.73,
+          "avg_period": 18.25,
+          "peak_period": 34.0,
+          "search_volatility": 28,
+          "error": null
         }
       ],
-      "payload_error": "TooManyRequestsError: The request failed: Google returned a response with code 429",
-      "interpretation": "Auchan esetében jelenleg nincs értelmezhető Google Trends keresési szándék adat."
+      "payload_error": null,
+      "interpretation": "Auchan esetében a legerősebb keresési szándék: Bolt / nyitvatartás."
     }
   ]
 }
