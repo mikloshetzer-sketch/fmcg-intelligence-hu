@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-07-07T15:24:45.048869+00:00",
+  "updated_at": "2026-07-07T20:24:11.743606+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-07-07T15:24:45.048869+00:00",
-    "leader_social": "Tesco",
+    "updated_at": "2026-07-07T20:24:11.743606+00:00",
+    "leader_social": "Lidl",
     "leader_social_index": 16,
     "dominant_social_topic": "árak és akciók",
     "overall_social_sentiment": "neutral"
@@ -13,21 +13,21 @@
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 0,
-      "raw_social_mentions": 0,
-      "dashboard_mentions": 0,
+      "social_mentions": 2,
+      "raw_social_mentions": 2,
+      "dashboard_mentions": 2,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 0,
-      "hu_relevant_mentions": 0,
-      "social_index": 0,
+      "weighted_social_mentions": 2.0,
+      "hu_relevant_mentions": 2,
+      "social_index": 16,
       "social_sources": {
-        "reddit": 0,
+        "reddit": 2,
         "youtube": 0,
         "mastodon": 0
       },
       "raw_social_sources": {
-        "reddit": 0,
+        "reddit": 2,
         "youtube": 0,
         "mastodon": 0
       },
@@ -35,10 +35,37 @@
       "top_social_topics": [],
       "topic_sentiment": {},
       "social_sentiment": "neutral",
-      "latest_items": [],
+      "latest_items": [
+        {
+          "id": "9a9269a8746e6e12",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "Eközben a Lidl Magyarország:",
+          "summary": "submitted by /u/csibeszofficial to r/lidlaldihun [link] [comments]",
+          "url": "https://www.reddit.com/r/lidlaldihun/comments/1uq5q47/eközben_a_lidl_magyarország/",
+          "published": "2026-07-07T19:42:26+00:00",
+          "query": "Lidl Magyarország",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "9bc162564364f1ac",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "Eközben a Lidl Magyarország:",
+          "summary": "forrás submitted by /u/LimeHell to r/hungary [link] [comments]",
+          "url": "https://www.reddit.com/r/hungary/comments/1uq2tlx/eközben_a_lidl_magyarország/",
+          "published": "2026-07-07T18:03:23+00:00",
+          "query": "Lidl Magyarország",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        }
+      ],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 0,
+        "dashboard_items": 2,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
