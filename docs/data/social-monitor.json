@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-07-07T20:24:11.743606+00:00",
+  "updated_at": "2026-07-08T03:53:32.863160+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-07-07T20:24:11.743606+00:00",
+    "updated_at": "2026-07-08T03:53:32.863160+00:00",
     "leader_social": "Lidl",
     "leader_social_index": 16,
     "dominant_social_topic": "árak és akciók",
@@ -336,46 +336,32 @@
     },
     {
       "company": "Auchan",
-      "social_mentions": 1,
-      "raw_social_mentions": 1,
-      "dashboard_mentions": 1,
+      "social_mentions": 0,
+      "raw_social_mentions": 0,
+      "dashboard_mentions": 0,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 1.0,
-      "hu_relevant_mentions": 1,
-      "social_index": 16,
+      "weighted_social_mentions": 0,
+      "hu_relevant_mentions": 0,
+      "social_index": 0,
       "social_sources": {
         "reddit": 0,
-        "youtube": 1,
+        "youtube": 0,
         "mastodon": 0
       },
       "raw_social_sources": {
         "reddit": 0,
-        "youtube": 1,
+        "youtube": 0,
         "mastodon": 0
       },
       "dominant_social_topic": "általános vállalati említés",
       "top_social_topics": [],
       "topic_sentiment": {},
       "social_sentiment": "neutral",
-      "latest_items": [
-        {
-          "id": "c6a816231d9b3a8c",
-          "source": "youtube",
-          "company": "Auchan",
-          "title": "Az Auchan Magyarország teljes mértékben Jellinek Dániel cégéhez került - YouTube",
-          "summary": "Az Auchan Magyarország teljes mértékben Jellinek Dániel cégéhez került YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1rWkxVcTNVZ2RQWTJqeU9YOXlISUJGLVNkd1Zua21hYkJwUTVMWHJwa3E2cy15Nkl1LWpCcUxLdjVtMkF0ckM4NjFBdS1XWE9kaGZkNzRn?oc=5",
-          "published": "Fri, 26 Jun 2026 10:02:44 GMT",
-          "query": "site:youtube.com \"Auchan Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        }
-      ],
+      "latest_items": [],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 1,
+        "dashboard_items": 0,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
