@@ -1,16 +1,12 @@
 {
-  "updated_at": "2026-07-07T07:25:37Z",
+  "updated_at": "2026-07-08T06:19:49Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "method": "product-level price leadership and spread analysis",
   "cheapest_count": [
     {
       "company": "Auchan",
-      "count": 9
-    },
-    {
-      "company": "Lidl",
-      "count": 5
+      "count": 10
     },
     {
       "company": "Tesco",
@@ -21,8 +17,12 @@
       "count": 4
     },
     {
+      "company": "Lidl",
+      "count": 3
+    },
+    {
       "company": "Penny",
-      "count": 1
+      "count": 2
     },
     {
       "company": "ALDI",
@@ -88,20 +88,20 @@
     },
     {
       "company": "Penny",
-      "price_index": 105,
-      "value_score": 95,
+      "price_index": 104,
+      "value_score": 96,
       "index_coverage": 24
     }
   ],
   "category_leaders": [
     {
       "category": "Alapélelmiszer",
-      "leader": "Lidl",
-      "leader_index": 98,
+      "leader": "Penny",
+      "leader_index": 97,
       "ranking": [
         {
-          "company": "Lidl",
-          "category_index": 98,
+          "company": "Penny",
+          "category_index": 97,
           "coverage": 5
         },
         {
@@ -110,7 +110,7 @@
           "coverage": 4
         },
         {
-          "company": "Penny",
+          "company": "Lidl",
           "category_index": 99,
           "coverage": 5
         },
@@ -121,7 +121,7 @@
         },
         {
           "company": "Tesco",
-          "category_index": 101,
+          "category_index": 102,
           "coverage": 5
         },
         {
@@ -227,7 +227,7 @@
         },
         {
           "company": "Tesco",
-          "category_index": 103,
+          "category_index": 104,
           "coverage": 2
         },
         {
@@ -253,12 +253,12 @@
           "coverage": 4
         },
         {
-          "company": "Lidl",
-          "category_index": 99,
+          "company": "Tesco",
+          "category_index": 98,
           "coverage": 4
         },
         {
-          "company": "Tesco",
+          "company": "Lidl",
           "category_index": 99,
           "coverage": 4
         },
@@ -399,7 +399,7 @@
       "cheapest_price": 60.0,
       "most_expensive_company": "Penny",
       "most_expensive_price": 139.9,
-      "average_price": 112.15,
+      "average_price": 112.44,
       "spread_pct": 133.17,
       "competition_intensity": "nagy árszórás",
       "coverage": 5
@@ -477,6 +477,18 @@
       "coverage": 6
     },
     {
+      "product": "Rizs",
+      "category": "Alapélelmiszer",
+      "cheapest_company": "Penny",
+      "cheapest_price": 459.0,
+      "most_expensive_company": "Tesco",
+      "most_expensive_price": 599.0,
+      "average_price": 557.0,
+      "spread_pct": 30.5,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 5
+    },
+    {
       "product": "Trappista sajt",
       "category": "Tejtermék",
       "cheapest_company": "SPAR",
@@ -549,18 +561,6 @@
       "coverage": 6
     },
     {
-      "product": "Csirkemellfilé",
-      "category": "Húsáru",
-      "cheapest_company": "Lidl",
-      "cheapest_price": 1775.0,
-      "most_expensive_company": "SPAR",
-      "most_expensive_price": 1999.0,
-      "average_price": 1925.5,
-      "spread_pct": 12.62,
-      "competition_intensity": "közepes árverseny",
-      "coverage": 6
-    },
-    {
       "product": "Darált sertéshús",
       "category": "Húsáru",
       "cheapest_company": "Auchan",
@@ -597,16 +597,16 @@
       "coverage": 6
     },
     {
-      "product": "Rizs",
-      "category": "Alapélelmiszer",
-      "cheapest_company": "Lidl",
-      "cheapest_price": 549.0,
-      "most_expensive_company": "Tesco",
-      "most_expensive_price": 599.0,
-      "average_price": 575.0,
-      "spread_pct": 9.11,
+      "product": "Csirkemellfilé",
+      "category": "Húsáru",
+      "cheapest_company": "Auchan",
+      "cheapest_price": 1831.0,
+      "most_expensive_company": "SPAR",
+      "most_expensive_price": 1999.0,
+      "average_price": 1939.5,
+      "spread_pct": 9.18,
       "competition_intensity": "közepes árverseny",
-      "coverage": 5
+      "coverage": 6
     },
     {
       "product": "Banán",
@@ -732,6 +732,13 @@
       "coverage": 6
     },
     {
+      "product": "Rizs",
+      "category": "Alapélelmiszer",
+      "spread_pct": 30.5,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 5
+    },
+    {
       "product": "Trappista sajt",
       "category": "Tejtermék",
       "spread_pct": 30.15,
@@ -774,13 +781,6 @@
       "coverage": 6
     },
     {
-      "product": "Csirkemellfilé",
-      "category": "Húsáru",
-      "spread_pct": 12.62,
-      "competition_intensity": "közepes árverseny",
-      "coverage": 6
-    },
-    {
       "product": "Darált sertéshús",
       "category": "Húsáru",
       "spread_pct": 12.39,
@@ -802,11 +802,11 @@
       "coverage": 6
     },
     {
-      "product": "Rizs",
-      "category": "Alapélelmiszer",
-      "spread_pct": 9.11,
+      "product": "Csirkemellfilé",
+      "category": "Húsáru",
+      "spread_pct": 9.18,
       "competition_intensity": "közepes árverseny",
-      "coverage": 5
+      "coverage": 6
     },
     {
       "product": "Banán",

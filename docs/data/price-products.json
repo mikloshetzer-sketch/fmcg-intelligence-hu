@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-07T07:25:37Z",
+  "updated_at": "2026-07-08T06:19:49Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -626,29 +626,29 @@
       "category": "Húsáru",
       "expected_unit": "kg",
       "prices": {
-        "Lidl": 1775.0,
         "Auchan": 1831.0,
+        "Lidl": 1859.0,
         "ALDI": 1979.0,
         "Penny": 1979.0,
         "Tesco": 1990.0,
         "SPAR": 1999.0
       },
       "selected_products": {
-        "Lidl": {
-          "source_product_id": "lidl-0009810",
-          "source_product_name": "Húsfarm Csirkemellfilé , kg",
-          "amount": 1775.0,
-          "unit_amount": 1775.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
         "Auchan": {
           "source_product_id": "2110910000002",
           "source_product_name": "Székely Csürke csirkemellfilé \"A\" osztály vákuumcsomagolt Ft/kg",
           "amount": 1831.0,
           "unit_amount": 1831.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Lidl": {
+          "source_product_id": "2895800000000",
+          "source_product_name": "Csirkemell tokány, kg ",
+          "amount": 1859.0,
+          "unit_amount": 1859.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1536,7 +1536,7 @@
         },
         "Penny": {
           "source_product_id": "5998571525020",
-          "source_product_name": "Diamant kristálycukor",
+          "source_product_name": "Diamant Kristálycukor 1kg",
           "amount": 295.0,
           "unit_amount": 295.0,
           "unit": "kg",
@@ -1661,7 +1661,7 @@
       "expected_unit": "kg",
       "prices": {
         "Lidl": 549.0,
-        "Penny": 549.0,
+        "Penny": 459.0,
         "SPAR": 579.0,
         "Tesco": 599.0,
         "Auchan": 599.0
@@ -1680,8 +1680,8 @@
         "Penny": {
           "source_product_id": "penny-27554",
           "source_product_name": "B rizs",
-          "amount": 549.0,
-          "unit_amount": 549.0,
+          "amount": 459.0,
+          "unit_amount": 459.0,
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "1",
@@ -1727,7 +1727,7 @@
       "expected_unit": "db",
       "prices": {
         "SPAR": 118.69,
-        "Tesco": 117.25,
+        "Tesco": 118.688,
         "Auchan": 60.0,
         "ALDI": 124.9,
         "Penny": 139.9
@@ -1744,13 +1744,13 @@
           "price_type": "NORMAL"
         },
         "Tesco": {
-          "source_product_id": "5059944692234",
-          "source_product_name": "SPRINGFORCE TOALETTPAPÍR 2 RÉT. 4 TEKERCS",
-          "amount": 469.0,
-          "unit_amount": 117.25,
+          "source_product_id": "8004260013017",
+          "source_product_name": "Regina Delicate Calming Chamomile toalettpapír 3 rétegű 16 tekercs",
+          "amount": 1899.0,
+          "unit_amount": 118.688,
           "unit": "db",
           "unit_title": "csomag",
-          "packaging": "4",
+          "packaging": "16",
           "price_type": "NORMAL"
         },
         "Auchan": {
