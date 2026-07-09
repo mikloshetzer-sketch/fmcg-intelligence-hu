@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-07-09T04:29:30.902866+00:00",
+  "updated_at": "2026-07-09T10:03:25.863645+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-07-09T04:29:30.902866+00:00",
+    "updated_at": "2026-07-09T10:03:25.863645+00:00",
     "leader_social": "Lidl",
     "leader_social_index": 33,
     "dominant_social_topic": "árak és akciók",
@@ -460,6 +460,19 @@
       "social_sentiment": "neutral",
       "latest_items": [
         {
+          "id": "c9e2849ee730832b",
+          "source": "youtube",
+          "company": "CBA",
+          "title": "CBA Príma akciós újság 07.09. - 07.15. - YouTube",
+          "summary": "CBA Príma akciós újság 07.09. - 07.15. YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBsR0xYeW9sT09ITERKUzlCWGZ3UTkzVjFqWEhMNzFRYl9zMEx6MFdtU3dhWFNqdndNSEpOMUE4WHZpU2lGQVZjbGREUENRX1REY0std0x3?oc=5",
+          "published": "Mon, 06 Jul 2026 07:07:07 GMT",
+          "query": "site:youtube.com \"CBA Príma\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
           "id": "ad37c605a541e686",
           "source": "youtube",
           "company": "CBA",
@@ -467,19 +480,6 @@
           "summary": "CBA Príma akciós újság 05.21. - 05.27. YouTube",
           "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE03MGdRck1RVXhVS0ZHM3llYjE0ZFRkdVcwQTRtVmtmQ2QteWJDM0Nacmk5M0JoekdvOS1UNWtxeWxoTHN2UFhqOHlESm5qOWtvXzJDcw?oc=5",
           "published": "Sat, 16 May 2026 11:25:21 GMT",
-          "query": "site:youtube.com \"CBA Príma\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "c9d79b1cdf7f0181",
-          "source": "youtube",
-          "company": "CBA",
-          "title": "CBA Príma akciós újság 03.19. - 03.25. - YouTube",
-          "summary": "CBA Príma akciós újság 03.19. - 03.25. YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5pMmtUU1V3MVFQMElKQ0ltVWxVLTRKTFBuMk1zd3RrZkc1emZxY2pORF9GSm51dGtYM1hlWC1scDM3UGJIaGI5SXpRS2g5cG03ZVJ6WXVB?oc=5",
-          "published": "Mon, 16 Mar 2026 12:43:34 GMT",
           "query": "site:youtube.com \"CBA Príma\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
