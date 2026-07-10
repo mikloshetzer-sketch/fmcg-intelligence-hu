@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-08T06:19:49Z",
+  "updated_at": "2026-07-10T07:24:47Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "method": "unit-filtered product-level relative price index",
@@ -7,42 +7,42 @@
     {
       "company": "Auchan",
       "price_index": 97,
-      "basket_price_huf": 19805.0,
+      "basket_price_huf": 19824.0,
       "covered_products": 25,
-      "index_coverage": 24
+      "index_coverage": 25
     },
     {
       "company": "Lidl",
       "price_index": 97,
-      "basket_price_huf": 19800.75,
+      "basket_price_huf": 19561.08,
       "covered_products": 23,
       "index_coverage": 23
     },
     {
       "company": "ALDI",
-      "price_index": 99,
-      "basket_price_huf": 19678.32,
-      "covered_products": 23,
-      "index_coverage": 23
-    },
-    {
-      "company": "SPAR",
-      "price_index": 101,
-      "basket_price_huf": 20275.55,
+      "price_index": 100,
+      "basket_price_huf": 19954.12,
       "covered_products": 24,
       "index_coverage": 24
     },
     {
       "company": "Tesco",
-      "price_index": 101,
-      "basket_price_huf": 21137.05,
+      "price_index": 100,
+      "basket_price_huf": 21135.61,
       "covered_products": 25,
+      "index_coverage": 25
+    },
+    {
+      "company": "SPAR",
+      "price_index": 102,
+      "basket_price_huf": 20236.55,
+      "covered_products": 24,
       "index_coverage": 24
     },
     {
       "company": "Penny",
       "price_index": 104,
-      "basket_price_huf": 20620.01,
+      "basket_price_huf": 20570.01,
       "covered_products": 24,
       "index_coverage": 24
     }
@@ -50,7 +50,7 @@
   "weekly_change": [
     {
       "company": "ALDI",
-      "change_pct": 0.0
+      "change_pct": 1.01
     },
     {
       "company": "Auchan",
@@ -62,15 +62,15 @@
     },
     {
       "company": "Penny",
-      "change_pct": -0.95
+      "change_pct": 0.0
     },
     {
       "company": "SPAR",
-      "change_pct": 0.0
+      "change_pct": 0.99
     },
     {
       "company": "Tesco",
-      "change_pct": 0.0
+      "change_pct": -0.99
     }
   ]
 }
