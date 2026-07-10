@@ -1,34 +1,34 @@
 {
-  "updated_at": "2026-07-09T20:17:41.335677+00:00",
+  "updated_at": "2026-07-10T04:32:41.439432+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-07-09T20:17:41.335677+00:00",
+    "updated_at": "2026-07-10T04:32:41.439432+00:00",
     "leader_social": "Lidl",
-    "leader_social_index": 33,
+    "leader_social_index": 37,
     "dominant_social_topic": "árak és akciók",
     "overall_social_sentiment": "neutral"
   },
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 4,
-      "raw_social_mentions": 4,
-      "dashboard_mentions": 3,
+      "social_mentions": 5,
+      "raw_social_mentions": 5,
+      "dashboard_mentions": 4,
       "background_mentions": 1,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 3.5,
-      "hu_relevant_mentions": 3,
-      "social_index": 33,
+      "weighted_social_mentions": 4.5,
+      "hu_relevant_mentions": 4,
+      "social_index": 37,
       "social_sources": {
         "reddit": 3,
-        "youtube": 0,
+        "youtube": 1,
         "mastodon": 1
       },
       "raw_social_sources": {
         "reddit": 3,
-        "youtube": 0,
+        "youtube": 1,
         "mastodon": 1
       },
       "dominant_social_topic": "árak és akciók",
@@ -98,6 +98,19 @@
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
           "item_sentiment": "neutral"
+        },
+        {
+          "id": "a9737d245fd158ec",
+          "source": "youtube",
+          "company": "Lidl",
+          "title": "A dinnye útja: Hogyan kerül a legédesebb hazai görögdinnye a Lidl polcaira? 🍉 | Lidl Magyarország - YouTube",
+          "summary": "A dinnye útja: Hogyan kerül a legédesebb hazai görögdinnye a Lidl polcaira? 🍉 | Lidl Magyarország YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5xZVowSXh2bUdPNHRsU282dU4yaWR3c1YtVlNpemo4czBYNDNwTWJEVUFTQmNwY0hsYnFocEVYMkM0Mks2Wm1tMzlhTkFoTlRJSElGY2Vn?oc=5",
+          "published": "Tue, 16 Jun 2026 11:23:48 GMT",
+          "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
         }
       ],
       "background_items": [
@@ -116,7 +129,7 @@
         }
       ],
       "quality_summary": {
-        "dashboard_items": 3,
+        "dashboard_items": 4,
         "background_items": 1,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
