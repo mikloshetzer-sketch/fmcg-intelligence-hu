@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-07-12T14:02:37.309263+00:00",
+  "updated_at": "2026-07-12T19:37:26.920438+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-07-12T14:02:37.309263+00:00",
+    "updated_at": "2026-07-12T19:37:26.920438+00:00",
     "leader_social": "Lidl",
     "leader_social_index": 42,
     "dominant_social_topic": "árak és akciók",
@@ -13,29 +13,29 @@
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 7,
-      "raw_social_mentions": 7,
+      "social_mentions": 6,
+      "raw_social_mentions": 6,
       "dashboard_mentions": 5,
-      "background_mentions": 2,
+      "background_mentions": 1,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 6.0,
+      "weighted_social_mentions": 5.5,
       "hu_relevant_mentions": 5,
       "social_index": 42,
       "social_sources": {
         "reddit": 3,
         "youtube": 2,
-        "mastodon": 2
+        "mastodon": 1
       },
       "raw_social_sources": {
         "reddit": 3,
         "youtube": 2,
-        "mastodon": 2
+        "mastodon": 1
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 1.5
+          "score": 1.0
         },
         {
           "topic": "bolti élmény",
@@ -49,7 +49,7 @@
       "topic_sentiment": {
         "árak és akciók": {
           "positive": 0.0,
-          "neutral": 1.5,
+          "neutral": 1.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -150,24 +150,11 @@
           "hu_relevance": 0.5,
           "relevance_bucket": "background",
           "item_sentiment": "negative"
-        },
-        {
-          "id": "e41bdc184a4adafb",
-          "source": "mastodon",
-          "company": "Lidl",
-          "title": "",
-          "summary": "Lidl Cyprus uruchomił usługę Lidl Pay. Nowa funkcja w aplikacji Lidl Plus pozwala zapłacić za zakupy telefonem i automatycznie nalicza dostępne rabaty. # Cypr # Cypr24 # Lidl # LidlPay # LidlPlus # Zakupy # Technologia # Płatności # Cyprus # Finanse https://www. cypr24.eu/lidl-pay-juz-na-cypr ze/?utm_source=mastodon&utm_medium=jetpack_social",
-          "url": "https://mastodon.social/@cypr24/116885541792559309",
-          "published": "Wed, 08 Jul 2026 17:30:26 +0000",
-          "query": "#lidl",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "neutral"
         }
       ],
       "quality_summary": {
         "dashboard_items": 5,
-        "background_items": 2,
+        "background_items": 1,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
