@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-06T11:42:17Z",
+  "updated_at": "2026-07-13T10:33:57Z",
   "status": "ok",
   "source": "local_fmcg_osint_layers",
   "method": "keyword_weighted_consumer_narrative_engine_v1",
@@ -21,19 +21,19 @@
     "id": "lidl",
     "company": "Lidl",
     "confidence": "high",
-    "dominant_narrative": "employment_attention",
-    "dominant_narrative_label": "Munkaerő / állás",
+    "dominant_narrative": "price_sensitivity",
+    "dominant_narrative_label": "Árérzékenység",
     "scores": {
       "promotion_attention": 0,
-      "price_sensitivity": 0,
-      "employment_attention": 100,
+      "price_sensitivity": 100,
+      "employment_attention": 0,
       "customer_experience": 0,
       "digital_attention": 0
     },
     "raw_scores": {
       "promotion_attention": 0.0,
-      "price_sensitivity": 0.0,
-      "employment_attention": 4.8,
+      "price_sensitivity": 3.0,
+      "employment_attention": 0.0,
       "customer_experience": 0.0,
       "digital_attention": 0.0
     },
@@ -41,13 +41,13 @@
       "news": {
         "promotion_attention": 0.0,
         "price_sensitivity": 0.0,
-        "employment_attention": 4.8,
+        "employment_attention": 0.0,
         "customer_experience": 0.0,
         "digital_attention": 0.0
       },
       "social": {
         "promotion_attention": 0.0,
-        "price_sensitivity": 0.0,
+        "price_sensitivity": 3.0,
         "employment_attention": 0.0,
         "customer_experience": 0.0,
         "digital_attention": 0.0
@@ -68,31 +68,31 @@
       }
     },
     "evidence_counts": {
-      "news_texts": 9,
+      "news_texts": 5,
       "social_texts": 1,
       "linkedin_texts": 1,
       "jobs_texts": 0
     },
-    "interpretation": "Lidl esetében a legerősebb fogyasztói narratíva: Munkaerő / állás."
+    "interpretation": "Lidl esetében a legerősebb fogyasztói narratíva: Árérzékenység."
   },
   "companies": [
     {
       "id": "lidl",
       "company": "Lidl",
       "confidence": "high",
-      "dominant_narrative": "employment_attention",
-      "dominant_narrative_label": "Munkaerő / állás",
+      "dominant_narrative": "price_sensitivity",
+      "dominant_narrative_label": "Árérzékenység",
       "scores": {
         "promotion_attention": 0,
-        "price_sensitivity": 0,
-        "employment_attention": 100,
+        "price_sensitivity": 100,
+        "employment_attention": 0,
         "customer_experience": 0,
         "digital_attention": 0
       },
       "raw_scores": {
         "promotion_attention": 0.0,
-        "price_sensitivity": 0.0,
-        "employment_attention": 4.8,
+        "price_sensitivity": 3.0,
+        "employment_attention": 0.0,
         "customer_experience": 0.0,
         "digital_attention": 0.0
       },
@@ -100,13 +100,13 @@
         "news": {
           "promotion_attention": 0.0,
           "price_sensitivity": 0.0,
-          "employment_attention": 4.8,
+          "employment_attention": 0.0,
           "customer_experience": 0.0,
           "digital_attention": 0.0
         },
         "social": {
           "promotion_attention": 0.0,
-          "price_sensitivity": 0.0,
+          "price_sensitivity": 3.0,
           "employment_attention": 0.0,
           "customer_experience": 0.0,
           "digital_attention": 0.0
@@ -127,12 +127,12 @@
         }
       },
       "evidence_counts": {
-        "news_texts": 9,
+        "news_texts": 5,
         "social_texts": 1,
         "linkedin_texts": 1,
         "jobs_texts": 0
       },
-      "interpretation": "Lidl esetében a legerősebb fogyasztói narratíva: Munkaerő / állás."
+      "interpretation": "Lidl esetében a legerősebb fogyasztói narratíva: Árérzékenység."
     },
     {
       "id": "aldi",
@@ -185,7 +185,7 @@
         }
       },
       "evidence_counts": {
-        "news_texts": 5,
+        "news_texts": 3,
         "social_texts": 1,
         "linkedin_texts": 1,
         "jobs_texts": 0
@@ -254,122 +254,6 @@
       "id": "spar",
       "company": "SPAR",
       "confidence": "high",
-      "dominant_narrative": "price_sensitivity",
-      "dominant_narrative_label": "Árérzékenység",
-      "scores": {
-        "promotion_attention": 0,
-        "price_sensitivity": 100,
-        "employment_attention": 0,
-        "customer_experience": 40,
-        "digital_attention": 0
-      },
-      "raw_scores": {
-        "promotion_attention": 0.0,
-        "price_sensitivity": 3.0,
-        "employment_attention": 0.0,
-        "customer_experience": 1.2,
-        "digital_attention": 0.0
-      },
-      "source_scores": {
-        "news": {
-          "promotion_attention": 0.0,
-          "price_sensitivity": 0.0,
-          "employment_attention": 0.0,
-          "customer_experience": 1.2,
-          "digital_attention": 0.0
-        },
-        "social": {
-          "promotion_attention": 0.0,
-          "price_sensitivity": 3.0,
-          "employment_attention": 0.0,
-          "customer_experience": 0.0,
-          "digital_attention": 0.0
-        },
-        "linkedin": {
-          "promotion_attention": 0.0,
-          "price_sensitivity": 0.0,
-          "employment_attention": 0.0,
-          "customer_experience": 0.0,
-          "digital_attention": 0.0
-        },
-        "jobs": {
-          "promotion_attention": 0.0,
-          "price_sensitivity": 0.0,
-          "employment_attention": 0.0,
-          "customer_experience": 0.0,
-          "digital_attention": 0.0
-        }
-      },
-      "evidence_counts": {
-        "news_texts": 1,
-        "social_texts": 1,
-        "linkedin_texts": 1,
-        "jobs_texts": 0
-      },
-      "interpretation": "SPAR esetében a legerősebb fogyasztói narratíva: Árérzékenység."
-    },
-    {
-      "id": "tesco",
-      "company": "Tesco",
-      "confidence": "high",
-      "dominant_narrative": null,
-      "dominant_narrative_label": null,
-      "scores": {
-        "promotion_attention": 0,
-        "price_sensitivity": 0,
-        "employment_attention": 0,
-        "customer_experience": 0,
-        "digital_attention": 0
-      },
-      "raw_scores": {
-        "promotion_attention": 0.0,
-        "price_sensitivity": 0.0,
-        "employment_attention": 0.0,
-        "customer_experience": 0.0,
-        "digital_attention": 0.0
-      },
-      "source_scores": {
-        "news": {
-          "promotion_attention": 0.0,
-          "price_sensitivity": 0.0,
-          "employment_attention": 0.0,
-          "customer_experience": 0.0,
-          "digital_attention": 0.0
-        },
-        "social": {
-          "promotion_attention": 0.0,
-          "price_sensitivity": 0.0,
-          "employment_attention": 0.0,
-          "customer_experience": 0.0,
-          "digital_attention": 0.0
-        },
-        "linkedin": {
-          "promotion_attention": 0.0,
-          "price_sensitivity": 0.0,
-          "employment_attention": 0.0,
-          "customer_experience": 0.0,
-          "digital_attention": 0.0
-        },
-        "jobs": {
-          "promotion_attention": 0.0,
-          "price_sensitivity": 0.0,
-          "employment_attention": 0.0,
-          "customer_experience": 0.0,
-          "digital_attention": 0.0
-        }
-      },
-      "evidence_counts": {
-        "news_texts": 1,
-        "social_texts": 1,
-        "linkedin_texts": 1,
-        "jobs_texts": 0
-      },
-      "interpretation": "Tesco esetében jelenleg nincs elegendő fogyasztói narratíva-jel."
-    },
-    {
-      "id": "auchan",
-      "company": "Auchan",
-      "confidence": "high",
       "dominant_narrative": "employment_attention",
       "dominant_narrative_label": "Munkaerő / állás",
       "scores": {
@@ -417,12 +301,128 @@
         }
       },
       "evidence_counts": {
+        "news_texts": 1,
+        "social_texts": 1,
+        "linkedin_texts": 1,
+        "jobs_texts": 0
+      },
+      "interpretation": "SPAR esetében a legerősebb fogyasztói narratíva: Munkaerő / állás."
+    },
+    {
+      "id": "tesco",
+      "company": "Tesco",
+      "confidence": "high",
+      "dominant_narrative": "customer_experience",
+      "dominant_narrative_label": "Vásárlói élmény",
+      "scores": {
+        "promotion_attention": 0,
+        "price_sensitivity": 50,
+        "employment_attention": 0,
+        "customer_experience": 100,
+        "digital_attention": 0
+      },
+      "raw_scores": {
+        "promotion_attention": 0.0,
+        "price_sensitivity": 3.0,
+        "employment_attention": 0.0,
+        "customer_experience": 6.0,
+        "digital_attention": 0.0
+      },
+      "source_scores": {
+        "news": {
+          "promotion_attention": 0.0,
+          "price_sensitivity": 0.0,
+          "employment_attention": 0.0,
+          "customer_experience": 6.0,
+          "digital_attention": 0.0
+        },
+        "social": {
+          "promotion_attention": 0.0,
+          "price_sensitivity": 3.0,
+          "employment_attention": 0.0,
+          "customer_experience": 0.0,
+          "digital_attention": 0.0
+        },
+        "linkedin": {
+          "promotion_attention": 0.0,
+          "price_sensitivity": 0.0,
+          "employment_attention": 0.0,
+          "customer_experience": 0.0,
+          "digital_attention": 0.0
+        },
+        "jobs": {
+          "promotion_attention": 0.0,
+          "price_sensitivity": 0.0,
+          "employment_attention": 0.0,
+          "customer_experience": 0.0,
+          "digital_attention": 0.0
+        }
+      },
+      "evidence_counts": {
         "news_texts": 3,
         "social_texts": 1,
         "linkedin_texts": 1,
         "jobs_texts": 0
       },
-      "interpretation": "Auchan esetében a legerősebb fogyasztói narratíva: Munkaerő / állás."
+      "interpretation": "Tesco esetében a legerősebb fogyasztói narratíva: Vásárlói élmény."
+    },
+    {
+      "id": "auchan",
+      "company": "Auchan",
+      "confidence": "high",
+      "dominant_narrative": "price_sensitivity",
+      "dominant_narrative_label": "Árérzékenység",
+      "scores": {
+        "promotion_attention": 0,
+        "price_sensitivity": 100,
+        "employment_attention": 0,
+        "customer_experience": 0,
+        "digital_attention": 0
+      },
+      "raw_scores": {
+        "promotion_attention": 0.0,
+        "price_sensitivity": 3.0,
+        "employment_attention": 0.0,
+        "customer_experience": 0.0,
+        "digital_attention": 0.0
+      },
+      "source_scores": {
+        "news": {
+          "promotion_attention": 0.0,
+          "price_sensitivity": 0.0,
+          "employment_attention": 0.0,
+          "customer_experience": 0.0,
+          "digital_attention": 0.0
+        },
+        "social": {
+          "promotion_attention": 0.0,
+          "price_sensitivity": 3.0,
+          "employment_attention": 0.0,
+          "customer_experience": 0.0,
+          "digital_attention": 0.0
+        },
+        "linkedin": {
+          "promotion_attention": 0.0,
+          "price_sensitivity": 0.0,
+          "employment_attention": 0.0,
+          "customer_experience": 0.0,
+          "digital_attention": 0.0
+        },
+        "jobs": {
+          "promotion_attention": 0.0,
+          "price_sensitivity": 0.0,
+          "employment_attention": 0.0,
+          "customer_experience": 0.0,
+          "digital_attention": 0.0
+        }
+      },
+      "evidence_counts": {
+        "news_texts": 5,
+        "social_texts": 1,
+        "linkedin_texts": 1,
+        "jobs_texts": 0
+      },
+      "interpretation": "Auchan esetében a legerősebb fogyasztói narratíva: Árérzékenység."
     }
   ]
 }
