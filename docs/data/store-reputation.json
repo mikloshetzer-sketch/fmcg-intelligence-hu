@@ -1,18 +1,9 @@
 {
-  "updated_at": "2026-07-13T04:20:31.189557+00:00",
+  "updated_at": "2026-07-13T15:33:32.477065+00:00",
   "version": "store-reputation-layer-v1.1-fast",
   "scope": "Hungarian FMCG store-level reputation signal",
   "method_note": "Áruházi reputációs jelzőréteg. Nyílt Google News RSS keresések alapján dolgozik. Nem Google Reviews scraping és nem teljes vásárlói értékelési adatbázis.",
   "company_summary": [
-    {
-      "company": "Auchan",
-      "stores": 5,
-      "store_mentions": 1,
-      "review_signal_index": 3.0,
-      "negative_stores": 0,
-      "positive_stores": 0,
-      "dominant_store_topic": "nincs elég adat"
-    },
     {
       "company": "Lidl",
       "stores": 5,
@@ -21,6 +12,15 @@
       "negative_stores": 0,
       "positive_stores": 0,
       "dominant_store_topic": "árak és akciók"
+    },
+    {
+      "company": "Auchan",
+      "stores": 5,
+      "store_mentions": 0,
+      "review_signal_index": 0.0,
+      "negative_stores": 0,
+      "positive_stores": 0,
+      "dominant_store_topic": "nincs elég adat"
     },
     {
       "company": "Tesco",
@@ -76,25 +76,12 @@
       "area": "Budaörs",
       "lat": 47.4614,
       "lon": 18.9587,
-      "store_mentions": 1,
-      "review_signal_index": 15,
+      "store_mentions": 0,
+      "review_signal_index": 0,
       "review_sentiment": "neutral",
       "dominant_store_topic": "nincs elég adat",
       "top_store_topics": [],
-      "latest_items": [
-        {
-          "id": "6758f6634c1d844b",
-          "source": "google_news_rss",
-          "store_id": "auchan_budaors",
-          "company": "Auchan",
-          "store_name": "Auchan Budaörs",
-          "title": "2026. május 17-én a budaörsi Auchanba érkezik az eredeti BL-trófea - Esemenymenedzser.hu",
-          "summary": "2026. május 17-én a budaörsi Auchanba érkezik az eredeti BL-trófea Esemenymenedzser.hu",
-          "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNRF9ZUHB4SlpxWHRYSkEtUTRhLVRLOTJDYXF4M3BuY3VlaVNQZTNUaTh1RkdJcHFwcFBibUtpb3NXQUF3WklqcFU5VG9QX3pvNzZMZzB6MDV5STYzdUQ5cjB6YWtqZUE0QkR2U3hBdmFVdHFfSjNfWGZZYlNOX2lHZVZ5LWk3em53cWhVbDl6bkZEMkhrQkczdnM5d2JWU1haenVULUNJRFg5VzdNenFVSFBTZk50ZGlDLVBGNXlSZVJQS1oxNndxNWEyZm4tNVM5QzBscWd0WEpmZw?oc=5",
-          "published": "Sun, 17 May 2026 07:00:00 GMT",
-          "query": "\"Auchan Budaörs\" vélemény"
-        }
-      ],
+      "latest_items": [],
       "method_note": "Áruházi reputációs jelzőréteg nyílt Google News RSS keresésekből. Nem Google Reviews scraping, nem teljes vásárlói review-adatbázis.",
       "errors": []
     },
