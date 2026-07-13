@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-12T06:23:54Z",
+  "updated_at": "2026-07-13T06:42:22Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -241,29 +241,29 @@
       "category": "Tejtermék",
       "expected_unit": "kg",
       "prices": {
+        "Auchan": 1835.0,
         "SPAR": 1990.0,
-        "Auchan": 2045.0,
         "ALDI": 2390.0,
         "Lidl": 2390.0,
         "Penny": 2390.0,
         "Tesco": 2590.0
       },
       "selected_products": {
-        "SPAR": {
-          "source_product_id": "5998200460371",
-          "source_product_name": "Mizo trappista sajt",
-          "amount": 1990.0,
-          "unit_amount": 1990.0,
+        "Auchan": {
+          "source_product_id": "2104320000004",
+          "source_product_name": "Auchan Kedvenc trappista sajt Ft/kg",
+          "amount": 1835.0,
+          "unit_amount": 1835.0,
           "unit": "kg",
           "unit_title": "db",
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Auchan": {
-          "source_product_id": "2199180000004",
-          "source_product_name": "Riska félzsíros félkemény sajt Ft/kg",
-          "amount": 2045.0,
-          "unit_amount": 2045.0,
+        "SPAR": {
+          "source_product_id": "5998200460371",
+          "source_product_name": "Mizo trappista sajt",
+          "amount": 1990.0,
+          "unit_amount": 1990.0,
           "unit": "kg",
           "unit_title": "db",
           "packaging": "1",
@@ -318,14 +318,24 @@
       "category": "Tejtermék",
       "expected_unit": "kg",
       "prices": {
+        "ALDI": 1756.0,
         "Lidl": 1756.0,
         "Penny": 1756.0,
         "SPAR": 1788.0,
-        "ALDI": 1796.0,
         "Auchan": 2116.0,
         "Tesco": 2505.0
       },
       "selected_products": {
+        "ALDI": {
+          "source_product_id": "aldi-805321",
+          "source_product_name": "Desira márkázott vaj 250g",
+          "amount": 439.0,
+          "unit_amount": 1756.0,
+          "unit": "kg",
+          "unit_title": "db",
+          "packaging": "0.25",
+          "price_type": "NORMAL"
+        },
         "Lidl": {
           "source_product_id": "lidl-0059587",
           "source_product_name": "Pilos vaj,  250g",
@@ -351,16 +361,6 @@
           "source_product_name": "S-Budget vaj 250 g",
           "amount": 447.0,
           "unit_amount": 1788.0,
-          "unit": "kg",
-          "unit_title": "db",
-          "packaging": "0.25",
-          "price_type": "NORMAL"
-        },
-        "ALDI": {
-          "source_product_id": "aldi-805321",
-          "source_product_name": "Desira márkázott vaj 250g",
-          "amount": 449.0,
-          "unit_amount": 1796.0,
           "unit": "kg",
           "unit_title": "db",
           "packaging": "0.25",
@@ -704,11 +704,11 @@
       "expected_unit": "kg",
       "prices": {
         "Penny": 2999.0,
-        "SPAR": 3117.78,
         "Lidl": 2999.0,
         "ALDI": 2999.0,
         "Tesco": 3000.0,
-        "Auchan": 3109.0
+        "Auchan": 3109.0,
+        "SPAR": 3117.78
       },
       "selected_products": {
         "Penny": {
@@ -719,16 +719,6 @@
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "SPAR": {
-          "source_product_id": "5995885813959",
-          "source_product_name": "Gallio pulykamellfilé 450 g",
-          "amount": 1403.0,
-          "unit_amount": 3117.78,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "0.45",
           "price_type": "NORMAL"
         },
         "Lidl": {
@@ -766,6 +756,16 @@
           "source_product_name": "Pulykamellfilé 450 g",
           "amount": 1399.0,
           "unit_amount": 3109.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "0.45",
+          "price_type": "NORMAL"
+        },
+        "SPAR": {
+          "source_product_id": "5995885813959",
+          "source_product_name": "Gallio pulykamellfilé 450 g",
+          "amount": 1403.0,
+          "unit_amount": 3117.78,
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "0.45",
@@ -1012,7 +1012,7 @@
       "expected_unit": "kg",
       "prices": {
         "Lidl": 395.0,
-        "ALDI": 399.0,
+        "ALDI": 429.0,
         "Tesco": 437.0,
         "Auchan": 447.0,
         "SPAR": 493.0,
@@ -1032,8 +1032,8 @@
         "ALDI": {
           "source_product_id": "aldi-756566",
           "source_product_name": "Paradicsom fürtös lédig",
-          "amount": 399.0,
-          "unit_amount": 399.0,
+          "amount": 429.0,
+          "unit_amount": 429.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1286,27 +1286,37 @@
       "category": "Alapélelmiszer",
       "expected_unit": "kg",
       "prices": {
+        "Penny": 650.0,
+        "ALDI": 458.0,
         "SPAR": 629.0,
-        "ALDI": 629.0,
         "Lidl": 629.0,
         "Tesco": 650.0,
-        "Penny": 650.0,
         "Auchan": 710.0
       },
       "selected_products": {
-        "SPAR": {
-          "source_product_id": "5999033897549",
-          "source_product_name": "S-Budget Spagetti durum száraztészta 1000 g",
-          "amount": 629.0,
-          "unit_amount": 629.0,
+        "Penny": {
+          "source_product_id": "penny-27266",
+          "source_product_name": "San fabio fusilli durumtészta",
+          "amount": 325.0,
+          "unit_amount": 650.0,
           "unit": "kg",
           "unit_title": "csomag",
-          "packaging": "1",
+          "packaging": "0.5",
           "price_type": "NORMAL"
         },
         "ALDI": {
-          "source_product_id": "aldi-815463",
-          "source_product_name": "Cucina spagetti durum 1kg",
+          "source_product_id": "aldi-815435",
+          "source_product_name": "Orsótészta 500g",
+          "amount": 229.0,
+          "unit_amount": 458.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "0.5",
+          "price_type": "NORMAL"
+        },
+        "SPAR": {
+          "source_product_id": "5999033897549",
+          "source_product_name": "S-Budget Spagetti durum száraztészta 1000 g",
           "amount": 629.0,
           "unit_amount": 629.0,
           "unit": "kg",
@@ -1327,16 +1337,6 @@
         "Tesco": {
           "source_product_id": "5051007136365",
           "source_product_name": "TS SPAGETTI DURU M TESZT 500G ",
-          "amount": 325.0,
-          "unit_amount": 650.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "0.5",
-          "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-27266",
-          "source_product_name": "San fabio fusilli durumtészta",
           "amount": 325.0,
           "unit_amount": 650.0,
           "unit": "kg",
@@ -1594,24 +1594,14 @@
       "category": "Ital",
       "expected_unit": "l",
       "prices": {
-        "ALDI": 46.0,
         "Tesco": 66.0,
         "Auchan": 93.0,
         "SPAR": 66.0,
+        "ALDI": 66.0,
         "Lidl": 66.0,
         "Penny": 66.0
       },
       "selected_products": {
-        "ALDI": {
-          "source_product_id": "aldi-735607",
-          "source_product_name": "Aquitas ásv.enyhe 1,5 l",
-          "amount": 69.0,
-          "unit_amount": 46.0,
-          "unit": "l",
-          "unit_title": "db",
-          "packaging": "1.5",
-          "price_type": "NORMAL"
-        },
         "Tesco": {
           "source_product_id": "5051007167444",
           "source_product_name": "Tesco 1,5 l sava  ",
@@ -1635,6 +1625,16 @@
         "SPAR": {
           "source_product_id": "5999138201463",
           "source_product_name": "S-Budget Zafír szénsavmentes természetes ásványvíz 1,5 l",
+          "amount": 99.0,
+          "unit_amount": 66.0,
+          "unit": "l",
+          "unit_title": "db",
+          "packaging": "1.5",
+          "price_type": "NORMAL"
+        },
+        "ALDI": {
+          "source_product_id": "aldi-735607",
+          "source_product_name": "Aquitas ásv.enyhe 1,5 l",
           "amount": 99.0,
           "unit_amount": 66.0,
           "unit": "l",
