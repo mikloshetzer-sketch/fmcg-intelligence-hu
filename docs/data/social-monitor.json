@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-07-13T15:20:46.202635+00:00",
+  "updated_at": "2026-07-13T19:57:11.475343+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-07-13T15:20:46.202635+00:00",
+    "updated_at": "2026-07-13T19:57:11.475343+00:00",
     "leader_social": "Lidl",
     "leader_social_index": 42,
     "dominant_social_topic": "árak és akciók",
@@ -13,23 +13,23 @@
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 6,
-      "raw_social_mentions": 6,
+      "social_mentions": 7,
+      "raw_social_mentions": 7,
       "dashboard_mentions": 5,
-      "background_mentions": 1,
+      "background_mentions": 2,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 5.5,
+      "weighted_social_mentions": 6.0,
       "hu_relevant_mentions": 5,
       "social_index": 42,
       "social_sources": {
         "reddit": 3,
         "youtube": 2,
-        "mastodon": 1
+        "mastodon": 2
       },
       "raw_social_sources": {
         "reddit": 3,
         "youtube": 2,
-        "mastodon": 1
+        "mastodon": 2
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
@@ -44,6 +44,10 @@
         {
           "topic": "vásárlói panaszok",
           "score": 0.5
+        },
+        {
+          "topic": "digitalizáció és önkiszolgálás",
+          "score": 0.5
         }
       ],
       "topic_sentiment": {
@@ -57,6 +61,13 @@
         "bolti élmény": {
           "positive": 0.0,
           "neutral": 1.0,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        },
+        "digitalizáció és önkiszolgálás": {
+          "positive": 0.0,
+          "neutral": 0.5,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -139,6 +150,19 @@
       ],
       "background_items": [
         {
+          "id": "2aa6ea89c0a0f459",
+          "source": "mastodon",
+          "company": "Lidl",
+          "title": "",
+          "summary": "# Lidl macht das Scan & Go mit ihrem Kontrollzwang kaputt. # supermarkt",
+          "url": "https://digitalcourage.social/@ncws/116913372160983851",
+          "published": "Mon, 13 Jul 2026 15:28:04 +0000",
+          "query": "#lidl",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        },
+        {
           "id": "18899d33b520a55a",
           "source": "mastodon",
           "company": "Lidl",
@@ -154,7 +178,7 @@
       ],
       "quality_summary": {
         "dashboard_items": 5,
-        "background_items": 1,
+        "background_items": 2,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
