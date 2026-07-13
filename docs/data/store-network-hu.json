@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-06T07:54:22.319241+00:00",
+  "updated_at": "2026-07-13T06:29:37.977770+00:00",
   "version": "store-network-hu-v2.0-non-lidl-osm",
   "scope": "Hungarian FMCG store network from OSM + optional overrides",
   "method_note": "Ez a verzió Lidl nélkül építi a bolthálózatot. ALDI, SPAR, Tesco, Auchan és Penny OSM/Overpass alapján frissül. Ha egy láncra 0 találat jön, a script megtartja a korábbi store-network-hu.json adott láncra vonatkozó adatait. Lidl külön, saját üzletlista alapján kerül majd be.",
@@ -5976,8 +5976,8 @@
       "area": "Kecskemét",
       "region": "Dél-Alföld",
       "address": "6000 Kecskemét, Kossuth körút 60",
-      "lat": 46.899711,
-      "lon": 19.692157,
+      "lat": 46.899718,
+      "lon": 19.692224,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 262096182,
@@ -16754,6 +16754,27 @@
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 1842657119,
+      "brand": "Spar",
+      "operator": "",
+      "keywords": [
+        "Spar",
+        "SPAR n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "spar_na_spar_1843021451",
+      "company": "SPAR",
+      "name": "Spar",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 48.106513,
+      "lon": 19.809715,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 1843021451,
       "brand": "Spar",
       "operator": "",
       "keywords": [
