@@ -1,26 +1,26 @@
 {
-  "updated_at": "2026-07-14T08:35:08.580485+00:00",
+  "updated_at": "2026-07-14T14:23:23.343191+00:00",
   "status": "ok",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "companies": [
     {
       "company": "Lidl",
-      "mentions": 6,
-      "raw_mentions": 6,
-      "dashboard_mentions": 4,
+      "mentions": 5,
+      "raw_mentions": 5,
+      "dashboard_mentions": 3,
       "background_mentions": 2,
       "discarded_mentions": 0,
-      "weighted_mentions": 5.0,
-      "hu_relevant_mentions": 4,
-      "index": 42,
+      "weighted_mentions": 4.0,
+      "hu_relevant_mentions": 3,
+      "index": 38,
       "sources": {
         "reddit": 3,
-        "youtube": 1,
+        "youtube": 0,
         "mastodon": 2
       },
       "raw_sources": {
         "reddit": 3,
-        "youtube": 1,
+        "youtube": 0,
         "mastodon": 2
       },
       "sentiment": "negative",
@@ -125,46 +125,46 @@
     },
     {
       "company": "Auchan",
-      "mentions": 6,
-      "raw_mentions": 6,
-      "dashboard_mentions": 6,
+      "mentions": 1,
+      "raw_mentions": 1,
+      "dashboard_mentions": 1,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_mentions": 6.0,
-      "hu_relevant_mentions": 6,
-      "index": 33,
+      "weighted_mentions": 1.0,
+      "hu_relevant_mentions": 1,
+      "index": 16,
       "sources": {
-        "reddit": 5,
+        "reddit": 0,
         "youtube": 1,
         "mastodon": 0
       },
       "raw_sources": {
-        "reddit": 5,
+        "reddit": 0,
         "youtube": 1,
         "mastodon": 0
       },
       "sentiment": "neutral",
-      "topic": "árak és akciók",
+      "topic": "általános vállalati említés",
       "errors": []
     },
     {
       "company": "CBA",
-      "mentions": 2,
-      "raw_mentions": 2,
-      "dashboard_mentions": 2,
+      "mentions": 1,
+      "raw_mentions": 1,
+      "dashboard_mentions": 1,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_mentions": 2.0,
-      "hu_relevant_mentions": 2,
+      "weighted_mentions": 1.0,
+      "hu_relevant_mentions": 1,
       "index": 16,
       "sources": {
         "reddit": 0,
-        "youtube": 2,
+        "youtube": 1,
         "mastodon": 0
       },
       "raw_sources": {
         "reddit": 0,
-        "youtube": 2,
+        "youtube": 1,
         "mastodon": 0
       },
       "sentiment": "neutral",
