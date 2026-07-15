@@ -1,35 +1,35 @@
 {
-  "updated_at": "2026-07-15T14:18:37.070602+00:00",
+  "updated_at": "2026-07-15T19:44:47.695332+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-07-15T14:18:37.070602+00:00",
+    "updated_at": "2026-07-15T19:44:47.695332+00:00",
     "leader_social": "Lidl",
-    "leader_social_index": 38,
+    "leader_social_index": 33,
     "dominant_social_topic": "árak és akciók",
     "overall_social_sentiment": "neutral"
   },
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 5,
-      "raw_social_mentions": 5,
+      "social_mentions": 4,
+      "raw_social_mentions": 4,
       "dashboard_mentions": 3,
-      "background_mentions": 2,
+      "background_mentions": 1,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 4.0,
+      "weighted_social_mentions": 3.5,
       "hu_relevant_mentions": 3,
-      "social_index": 38,
+      "social_index": 33,
       "social_sources": {
         "reddit": 3,
         "youtube": 0,
-        "mastodon": 2
+        "mastodon": 1
       },
       "raw_social_sources": {
         "reddit": 3,
         "youtube": 0,
-        "mastodon": 2
+        "mastodon": 1
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
@@ -40,10 +40,6 @@
         {
           "topic": "bolti élmény",
           "score": 1.0
-        },
-        {
-          "topic": "vásárlói panaszok",
-          "score": 0.5
         },
         {
           "topic": "digitalizáció és önkiszolgálás",
@@ -71,16 +67,9 @@
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
-        },
-        "vásárlói panaszok": {
-          "positive": 0.0,
-          "neutral": 0.0,
-          "negative": 0.5,
-          "mixed": 0.0,
-          "dominant": "negative"
         }
       },
-      "social_sentiment": "negative",
+      "social_sentiment": "neutral",
       "latest_items": [
         {
           "id": "8ca47da029020938",
@@ -135,24 +124,11 @@
           "hu_relevance": 0.5,
           "relevance_bucket": "background",
           "item_sentiment": "neutral"
-        },
-        {
-          "id": "18899d33b520a55a",
-          "source": "mastodon",
-          "company": "Lidl",
-          "title": "",
-          "summary": "Wyciek danych klientów Lidla. To nie hasła są dziś największym problemem Bezpieczeństwo danych osobowych w handlu detalicznym to jeden z najbardziej palących problemów nowoczesnego rynku e-commerce. Lidl Polska rozpoczął wysyłanie oficjalnych powiadomień do części swoich klientów o incydencie bezpieczeństwa IT, do którego doszło u zewnętrznego dostawcy usług teleinformatycznych. Choć sieć w oficjalnym komunikacie usilnie uspokaja, że hasła oraz dane kart płatniczych nie zostały naruszone, przeję",
-          "url": "https://imagazine.pl/2026/07/12/wyciek-danych-lidl-zagrozenie-phishing-vishing/",
-          "published": "Sun, 12 Jul 2026 06:00:55 +0000",
-          "query": "#lidl",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "negative"
         }
       ],
       "quality_summary": {
         "dashboard_items": 3,
-        "background_items": 2,
+        "background_items": 1,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
@@ -198,70 +174,32 @@
     },
     {
       "company": "Tesco",
-      "social_mentions": 1,
-      "raw_social_mentions": 1,
-      "dashboard_mentions": 1,
+      "social_mentions": 0,
+      "raw_social_mentions": 0,
+      "dashboard_mentions": 0,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 1.0,
-      "hu_relevant_mentions": 1,
-      "social_index": 16,
+      "weighted_social_mentions": 0,
+      "hu_relevant_mentions": 0,
+      "social_index": 0,
       "social_sources": {
         "reddit": 0,
-        "youtube": 1,
+        "youtube": 0,
         "mastodon": 0
       },
       "raw_social_sources": {
         "reddit": 0,
-        "youtube": 1,
+        "youtube": 0,
         "mastodon": 0
       },
-      "dominant_social_topic": "árak és akciók",
-      "top_social_topics": [
-        {
-          "topic": "árak és akciók",
-          "score": 1.0
-        },
-        {
-          "topic": "bolti élmény",
-          "score": 1.0
-        }
-      ],
-      "topic_sentiment": {
-        "árak és akciók": {
-          "positive": 0.0,
-          "neutral": 1.0,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
-        },
-        "bolti élmény": {
-          "positive": 0.0,
-          "neutral": 1.0,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
-        }
-      },
+      "dominant_social_topic": "általános vállalati említés",
+      "top_social_topics": [],
+      "topic_sentiment": {},
       "social_sentiment": "neutral",
-      "latest_items": [
-        {
-          "id": "d6cf6dfa6a42e627",
-          "source": "youtube",
-          "company": "Tesco",
-          "title": "A LÁTHATATLAN BOROS MEGINT LECSAPOTT?! 😱 Hóvégi bevásárlás - ALDI ÉS TESCO 😁🥬🍎🥑🥐🧅🧀 - YouTube",
-          "summary": "A LÁTHATATLAN BOROS MEGINT LECSAPOTT?! 😱 Hóvégi bevásárlás - ALDI ÉS TESCO 😁🥬🍎🥑🥐🧅🧀 YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE4xODREeng0akltT2xrajVFb3Z0d0VTSVlucGxvdGwwc0FrXzJEN3Z5N0xxYWtFRUtscThlaWphejlmODZ0ZUlyWmw1d1JOSDJkSXRnY1J3?oc=5",
-          "published": "Mon, 20 Apr 2026 14:05:06 GMT",
-          "query": "site:youtube.com \"Tesco Hungary\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        }
-      ],
+      "latest_items": [],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 1,
+        "dashboard_items": 0,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
@@ -422,38 +360,125 @@
     },
     {
       "company": "Auchan",
-      "social_mentions": 1,
-      "raw_social_mentions": 1,
-      "dashboard_mentions": 1,
+      "social_mentions": 5,
+      "raw_social_mentions": 5,
+      "dashboard_mentions": 5,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 1.0,
-      "hu_relevant_mentions": 1,
-      "social_index": 16,
+      "weighted_social_mentions": 5.0,
+      "hu_relevant_mentions": 5,
+      "social_index": 29,
       "social_sources": {
-        "reddit": 0,
-        "youtube": 1,
+        "reddit": 5,
+        "youtube": 0,
         "mastodon": 0
       },
       "raw_social_sources": {
-        "reddit": 0,
-        "youtube": 1,
+        "reddit": 5,
+        "youtube": 0,
         "mastodon": 0
       },
-      "dominant_social_topic": "általános vállalati említés",
-      "top_social_topics": [],
-      "topic_sentiment": {},
+      "dominant_social_topic": "árak és akciók",
+      "top_social_topics": [
+        {
+          "topic": "árak és akciók",
+          "score": 2.0
+        },
+        {
+          "topic": "bolti élmény",
+          "score": 2.0
+        },
+        {
+          "topic": "termék és minőség",
+          "score": 2.0
+        }
+      ],
+      "topic_sentiment": {
+        "árak és akciók": {
+          "positive": 0.0,
+          "neutral": 2.0,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        },
+        "bolti élmény": {
+          "positive": 0.0,
+          "neutral": 2.0,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        },
+        "termék és minőség": {
+          "positive": 0.0,
+          "neutral": 2.0,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        }
+      },
       "social_sentiment": "neutral",
       "latest_items": [
         {
-          "id": "c6a816231d9b3a8c",
-          "source": "youtube",
+          "id": "4ac37df649d53868",
+          "source": "reddit",
           "company": "Auchan",
-          "title": "Az Auchan Magyarország teljes mértékben Jellinek Dániel cégéhez került - YouTube",
-          "summary": "Az Auchan Magyarország teljes mértékben Jellinek Dániel cégéhez került YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1rWkxVcTNVZ2RQWTJqeU9YOXlISUJGLVNkd1Zua21hYkJwUTVMWHJwa3E2cy15Nkl1LWpCcUxLdjVtMkF0ckM4NjFBdS1XWE9kaGZkNzRn?oc=5",
-          "published": "Fri, 26 Jun 2026 10:02:44 GMT",
-          "query": "site:youtube.com \"Auchan Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "title": "100%-ban magyar tulajdonú lett az Auchan Magyarország!",
+          "summary": "júniusban a Jellinek Dánielhez köthető Indotek Group megvásárolta az Auchan Retail Internationaltől az Auchan Magyarország fennmaradt 53 százalékos tulajdonrészét, ezzel a kereskedelmi lánc kizárólagos tulajdonosává vált. Az üzletlánc továbbra is az Auchan márkanév alatt működik tovább. Hosszú távú megállapodás biztosítja a márkanév használatát, a beszerzési együttműködések folytonosságát, valamint a vásárlók által megszokott saját márkás és külföldi importtermékek kínálatának megőrzését. A terv",
+          "url": "https://www.reddit.com/r/magyar/comments/1ugj47x/100ban_magyar_tulajdonú_lett_az_auchan/",
+          "published": "2026-06-26T21:08:54+00:00",
+          "query": "Auchan Magyarország",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "f3d561d9193d00f2",
+          "source": "reddit",
+          "company": "Auchan",
+          "title": "100%-ban magyar tulajdonú lett az Auchan Magyarország!",
+          "summary": "submitted by /u/frutigerflow to r/hungary [link] [comments]",
+          "url": "https://www.reddit.com/r/hungary/comments/1ugbp77/100ban_magyar_tulajdonú_lett_az_auchan/",
+          "published": "2026-06-26T16:30:23+00:00",
+          "query": "Auchan Magyarország",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "b36b109d531358b5",
+          "source": "reddit",
+          "company": "Auchan",
+          "title": "100%-ban magyar tulajdonú lett az Auchan Magyarország!",
+          "summary": "júniusban a Jellinek Dánielhez köthető Indotek Group megvásárolta az Auchan Retail Internationaltől az Auchan Magyarország fennmaradt 53 százalékos tulajdonrészét, ezzel a kereskedelmi lánc kizárólagos tulajdonosává vált. Az üzletlánc továbbra is az Auchan márkanév alatt működik tovább. Hosszú távú megállapodás biztosítja a márkanév használatát, a beszerzési együttműködések folytonosságát, valamint a vásárlók által megszokott saját márkás és külföldi importtermékek kínálatának megőrzését. A terv",
+          "url": "https://www.reddit.com/r/magyarretro/comments/1ug9l75/100ban_magyar_tulajdonú_lett_az_auchan/",
+          "published": "2026-06-26T15:13:04+00:00",
+          "query": "Auchan Magyarország",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "53919208e89f8a48",
+          "source": "reddit",
+          "company": "Auchan",
+          "title": "Száz százalékban Jellinek Dániel cégéhez került az Auchan Magyarország",
+          "summary": "submitted by /u/telex_bot to r/telex [link] [comments]",
+          "url": "https://www.reddit.com/r/telex/comments/1ug42xx/száz_százalékban_jellinek_dániel_cégéhez_került/",
+          "published": "2026-06-26T11:24:26+00:00",
+          "query": "Auchan Magyarország",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "4acbf4a072c70384",
+          "source": "reddit",
+          "company": "Auchan",
+          "title": "Száz százalékban Jellinek Dániel cégéhez került az Auchan Magyarország",
+          "summary": "submitted by /u/SzegedNewsBotka to r/buborek [link] [comments]",
+          "url": "https://www.reddit.com/r/buborek/comments/1ug2j7m/száz_százalékban_jellinek_dániel_cégéhez_került/",
+          "published": "2026-06-26T10:02:53+00:00",
+          "query": "Auchan Magyarország",
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
           "item_sentiment": "neutral"
@@ -461,7 +486,7 @@
       ],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 1,
+        "dashboard_items": 5,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
@@ -472,59 +497,32 @@
     },
     {
       "company": "CBA",
-      "social_mentions": 1,
-      "raw_social_mentions": 1,
-      "dashboard_mentions": 1,
+      "social_mentions": 0,
+      "raw_social_mentions": 0,
+      "dashboard_mentions": 0,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 1.0,
-      "hu_relevant_mentions": 1,
-      "social_index": 16,
+      "weighted_social_mentions": 0,
+      "hu_relevant_mentions": 0,
+      "social_index": 0,
       "social_sources": {
         "reddit": 0,
-        "youtube": 1,
+        "youtube": 0,
         "mastodon": 0
       },
       "raw_social_sources": {
         "reddit": 0,
-        "youtube": 1,
+        "youtube": 0,
         "mastodon": 0
       },
-      "dominant_social_topic": "árak és akciók",
-      "top_social_topics": [
-        {
-          "topic": "árak és akciók",
-          "score": 1.0
-        }
-      ],
-      "topic_sentiment": {
-        "árak és akciók": {
-          "positive": 0.0,
-          "neutral": 1.0,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
-        }
-      },
+      "dominant_social_topic": "általános vállalati említés",
+      "top_social_topics": [],
+      "topic_sentiment": {},
       "social_sentiment": "neutral",
-      "latest_items": [
-        {
-          "id": "a4fe014e08826245",
-          "source": "youtube",
-          "company": "CBA",
-          "title": "CBA Príma akciós újság 06.18. - 06.24. - YouTube",
-          "summary": "CBA Príma akciós újság 06.18. - 06.24. YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE95S3FNWlpDeXRGQXEzaFFtX1N4YWxaWVMxNnJlaVc4UUluS2g1QTg0a3VueWNES1pJSWREVE84SGQ3ZTQtOWNOUExVODNSYUhiNVpMVV9B?oc=5",
-          "published": "Mon, 15 Jun 2026 13:21:54 GMT",
-          "query": "site:youtube.com \"CBA Príma\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        }
-      ],
+      "latest_items": [],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 1,
+        "dashboard_items": 0,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
