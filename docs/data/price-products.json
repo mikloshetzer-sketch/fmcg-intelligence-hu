@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-14T06:01:50Z",
+  "updated_at": "2026-07-15T06:04:27Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -241,7 +241,7 @@
       "category": "Tejtermék",
       "expected_unit": "kg",
       "prices": {
-        "Auchan": 1835.0,
+        "Auchan": 1990.0,
         "SPAR": 1990.0,
         "ALDI": 2390.0,
         "Lidl": 2390.0,
@@ -252,8 +252,8 @@
         "Auchan": {
           "source_product_id": "2104320000004",
           "source_product_name": "Auchan Kedvenc trappista sajt Ft/kg",
-          "amount": 1835.0,
-          "unit_amount": 1835.0,
+          "amount": 1990.0,
+          "unit_amount": 1990.0,
           "unit": "kg",
           "unit_title": "db",
           "packaging": "1",
@@ -703,21 +703,21 @@
       "category": "Húsáru",
       "expected_unit": "kg",
       "prices": {
-        "Penny": 2999.0,
+        "Tesco": 2890.0,
         "Lidl": 2999.0,
         "ALDI": 2999.0,
-        "Tesco": 3000.0,
+        "Penny": 2999.0,
         "Auchan": 3109.0,
         "SPAR": 3117.78
       },
       "selected_products": {
-        "Penny": {
-          "source_product_id": "penny-122",
-          "source_product_name": "Kedvenc Hentese friss pulykamellfilé kg",
-          "amount": 2999.0,
-          "unit_amount": 2999.0,
+        "Tesco": {
+          "source_product_id": "2810510000000",
+          "source_product_name": "27. FRISS PULYKAMELL FILE PULTOS",
+          "amount": 2890.0,
+          "unit_amount": 2890.0,
           "unit": "kg",
-          "unit_title": "csomag",
+          "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
         },
@@ -741,14 +741,14 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Tesco": {
-          "source_product_id": "5995885820407",
-          "source_product_name": "TESCO FRISS PULYAKMELLFILÉ 450 g QQ",
-          "amount": 1350.0,
-          "unit_amount": 3000.0,
+        "Penny": {
+          "source_product_id": "penny-122",
+          "source_product_name": "Kedvenc Hentese friss pulykamellfilé kg",
+          "amount": 2999.0,
+          "unit_amount": 2999.0,
           "unit": "kg",
           "unit_title": "csomag",
-          "packaging": "0.45",
+          "packaging": "1",
           "price_type": "NORMAL"
         },
         "Auchan": {
@@ -809,13 +809,13 @@
           "price_type": "NORMAL"
         },
         "Auchan": {
-          "source_product_id": "2158990000000",
-          "source_product_name": "Kalodás piros alma Ft/kg",
-          "amount": 412.0,
+          "source_product_id": "5901085028208",
+          "source_product_name": "Piros alma csomagolt 2 kg",
+          "amount": 824.0,
           "unit_amount": 412.0,
           "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
+          "unit_title": "csomag",
+          "packaging": "2",
           "price_type": "NORMAL"
         },
         "SPAR": {
@@ -861,8 +861,7 @@
         "SPAR": 699.0,
         "ALDI": 699.0,
         "Lidl": 699.0,
-        "Penny": 699.0,
-        "Auchan": 749.0
+        "Penny": 699.0
       },
       "selected_products": {
         "Tesco": {
@@ -914,19 +913,9 @@
           "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
-        },
-        "Auchan": {
-          "source_product_id": "2188370000009",
-          "source_product_name": "Banán Ft/kg",
-          "amount": 749.0,
-          "unit_amount": 749.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
         }
       },
-      "coverage": 6
+      "coverage": 5
     },
     {
       "id": "32",
@@ -1050,12 +1039,12 @@
           "price_type": "NORMAL"
         },
         "Auchan": {
-          "source_product_id": "2182560000008",
-          "source_product_name": "Fürtös paradicsom Ft/kg",
+          "source_product_id": "5998985599686",
+          "source_product_name": "Paradicsom 1 kg",
           "amount": 447.0,
           "unit_amount": 447.0,
           "unit": "kg",
-          "unit_title": "kg",
+          "unit_title": "csomag",
           "packaging": "1",
           "price_type": "NORMAL"
         },
@@ -1090,8 +1079,8 @@
       "prices": {
         "SPAR": 811.0,
         "Penny": 799.0,
-        "Auchan": 698.0,
         "Tesco": 698.0,
+        "Auchan": 698.0,
         "ALDI": 749.0,
         "Lidl": 749.0
       },
@@ -1116,16 +1105,6 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Auchan": {
-          "source_product_id": "2182050000006",
-          "source_product_name": "Étkezési paprika Ft/kg",
-          "amount": 698.0,
-          "unit_amount": 698.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
         "Tesco": {
           "source_product_id": "2896050000000",
           "source_product_name": "PAPRIKA LÉDIG QQ",
@@ -1133,6 +1112,16 @@
           "unit_amount": 698.0,
           "unit": "kg",
           "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Auchan": {
+          "source_product_id": "5999886964221",
+          "source_product_name": "Étkezési paprika 1 kg",
+          "amount": 698.0,
+          "unit_amount": 698.0,
+          "unit": "kg",
+          "unit_title": "csomag",
           "packaging": "1",
           "price_type": "NORMAL"
         },
@@ -1165,19 +1154,19 @@
       "category": "Zöldség",
       "expected_unit": "kg",
       "prices": {
-        "Penny": 209.0,
+        "Penny": 149.0,
         "Tesco": 143.0,
         "Lidl": 189.0,
+        "Auchan": 195.0,
         "ALDI": 195.0,
-        "SPAR": 212.0,
-        "Auchan": 237.0
+        "SPAR": 212.0
       },
       "selected_products": {
         "Penny": {
           "source_product_id": "penny-518",
           "source_product_name": "Vöröshagyma lédig kg",
-          "amount": 209.0,
-          "unit_amount": 209.0,
+          "amount": 149.0,
+          "unit_amount": 149.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1203,6 +1192,16 @@
           "packaging": "2",
           "price_type": "NORMAL"
         },
+        "Auchan": {
+          "source_product_id": "5999860959151",
+          "source_product_name": "Vöröshagyma 1 kg",
+          "amount": 195.0,
+          "unit_amount": 195.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "ALDI": {
           "source_product_id": "aldi-753557",
           "source_product_name": "Vöröshagyma lédig",
@@ -1222,16 +1221,6 @@
           "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
-        },
-        "Auchan": {
-          "source_product_id": "5999860959144",
-          "source_product_name": "Vöröshagyma hálóban 2 kg",
-          "amount": 473.0,
-          "unit_amount": 237.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "2",
-          "price_type": "NORMAL"
         }
       },
       "coverage": 6
@@ -1243,7 +1232,7 @@
       "expected_unit": "kg",
       "prices": {
         "Tesco": 197.5,
-        "Auchan": 229.0,
+        "Auchan": 282.0,
         "ALDI": 399.8
       },
       "selected_products": {
@@ -1258,13 +1247,13 @@
           "price_type": "NORMAL"
         },
         "Auchan": {
-          "source_product_id": "2156440000006",
-          "source_product_name": "Sárga burgonya Ft/kg",
-          "amount": 229.0,
-          "unit_amount": 229.0,
+          "source_product_id": "5998899703759",
+          "source_product_name": "Sárga burgonya D-Pack 2,5 kg",
+          "amount": 704.0,
+          "unit_amount": 282.0,
           "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
+          "unit_title": "csomag",
+          "packaging": "2.5",
           "price_type": "NORMAL"
         },
         "ALDI": {
@@ -1746,7 +1735,7 @@
       "selected_products": {
         "SPAR": {
           "source_product_id": "8004260013154",
-          "source_product_name": "Regina Delicate Refreshing Aloe toalettpapír 3 rétegű 16 tekercs",
+          "source_product_name": "REGINA DELICATE REFRESH. TOALETT PAPÍR 3 R. 16 T.",
           "amount": 1899.0,
           "unit_amount": 118.69,
           "unit": "db",
