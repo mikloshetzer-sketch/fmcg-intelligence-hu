@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-17T06:07:32Z",
+  "updated_at": "2026-07-18T05:55:10Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "method": "product-level price leadership and spread analysis",
@@ -58,8 +58,8 @@
   "value_scores": [
     {
       "company": "Lidl",
-      "price_index": 96,
-      "value_score": 104,
+      "price_index": 95,
+      "value_score": 105,
       "index_coverage": 23
     },
     {
@@ -171,11 +171,11 @@
     {
       "category": "Gyümölcs",
       "leader": "Lidl",
-      "leader_index": 84,
+      "leader_index": 81,
       "ranking": [
         {
           "company": "Lidl",
-          "category_index": 84,
+          "category_index": 81,
           "coverage": 3
         },
         {
@@ -185,7 +185,7 @@
         },
         {
           "company": "Tesco",
-          "category_index": 98,
+          "category_index": 101,
           "coverage": 3
         },
         {
@@ -244,27 +244,27 @@
     },
     {
       "category": "Húsáru",
-      "leader": "ALDI",
+      "leader": "Auchan",
       "leader_index": 97,
       "ranking": [
-        {
-          "company": "ALDI",
-          "category_index": 97,
-          "coverage": 4
-        },
         {
           "company": "Auchan",
           "category_index": 97,
           "coverage": 4
         },
         {
-          "company": "Tesco",
-          "category_index": 99,
+          "company": "ALDI",
+          "category_index": 98,
           "coverage": 4
         },
         {
           "company": "Lidl",
-          "category_index": 101,
+          "category_index": 99,
+          "coverage": 4
+        },
+        {
+          "company": "Tesco",
+          "category_index": 99,
           "coverage": 4
         },
         {
@@ -423,7 +423,7 @@
       "cheapest_price": 325.0,
       "most_expensive_company": "Penny",
       "most_expensive_price": 599.0,
-      "average_price": 422.25,
+      "average_price": 428.58,
       "spread_pct": 84.31,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
@@ -483,7 +483,7 @@
       "cheapest_price": 1398.0,
       "most_expensive_company": "SPAR",
       "most_expensive_price": 1954.44,
-      "average_price": 1723.03,
+      "average_price": 1693.03,
       "spread_pct": 39.8,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
@@ -497,6 +497,18 @@
       "most_expensive_price": 207.0,
       "average_price": 180.67,
       "spread_pct": 38.93,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 6
+    },
+    {
+      "product": "Citrom",
+      "category": "Gyümölcs",
+      "cheapest_company": "Lidl",
+      "cheapest_price": 895.0,
+      "most_expensive_company": "Penny",
+      "most_expensive_price": 1199.0,
+      "average_price": 1114.78,
+      "spread_pct": 33.97,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
@@ -557,18 +569,6 @@
       "most_expensive_price": 1465.0,
       "average_price": 1380.83,
       "spread_pct": 22.19,
-      "competition_intensity": "nagy árszórás",
-      "coverage": 6
-    },
-    {
-      "product": "Citrom",
-      "category": "Gyümölcs",
-      "cheapest_company": "Lidl",
-      "cheapest_price": 995.0,
-      "most_expensive_company": "Penny",
-      "most_expensive_price": 1199.0,
-      "average_price": 1131.44,
-      "spread_pct": 20.5,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
@@ -746,6 +746,13 @@
       "coverage": 6
     },
     {
+      "product": "Citrom",
+      "category": "Gyümölcs",
+      "spread_pct": 33.97,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 6
+    },
+    {
       "product": "Trappista sajt",
       "category": "Tejtermék",
       "spread_pct": 30.15,
@@ -777,13 +784,6 @@
       "product": "Sertéscomb",
       "category": "Húsáru",
       "spread_pct": 22.19,
-      "competition_intensity": "nagy árszórás",
-      "coverage": 6
-    },
-    {
-      "product": "Citrom",
-      "category": "Gyümölcs",
-      "spread_pct": 20.5,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },

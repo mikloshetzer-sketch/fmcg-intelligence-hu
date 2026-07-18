@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-17T06:07:32Z",
+  "updated_at": "2026-07-18T05:55:10Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -550,7 +550,7 @@
       "expected_unit": "kg",
       "prices": {
         "ALDI": 1398.0,
-        "Lidl": 1749.0,
+        "Lidl": 1569.0,
         "SPAR": 1954.44,
         "Auchan": 1739.0,
         "Tesco": 1748.75,
@@ -570,8 +570,8 @@
         "Lidl": {
           "source_product_id": "lidl-0005545",
           "source_product_name": "Húsfarm XXL Sertés darálthús 30%,  1000g",
-          "amount": 1749.0,
-          "unit_amount": 1749.0,
+          "amount": 1569.0,
+          "unit_amount": 1569.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -784,7 +784,7 @@
         "Lidl": 325.0,
         "Auchan": 412.0,
         "SPAR": 431.5,
-        "Tesco": 441.0,
+        "Tesco": 479.0,
         "Penny": 599.0
       },
       "selected_products": {
@@ -831,8 +831,8 @@
         "Tesco": {
           "source_product_id": "2860480000000",
           "source_product_name": "IDARED ALMA LÉDIG QQ",
-          "amount": 441.0,
-          "unit_amount": 441.0,
+          "amount": 479.0,
+          "unit_amount": 479.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -934,29 +934,29 @@
       "category": "Gyümölcs",
       "expected_unit": "kg",
       "prices": {
+        "Lidl": 895.0,
         "Penny": 1199.0,
-        "Lidl": 995.0,
         "Tesco": 999.0,
         "SPAR": 1198.67,
         "Auchan": 1198.0,
         "ALDI": 1199.0
       },
       "selected_products": {
-        "Penny": {
-          "source_product_id": "penny-306",
-          "source_product_name": "Citrom lédig kg",
-          "amount": 1199.0,
-          "unit_amount": 1199.0,
+        "Lidl": {
+          "source_product_id": "lidl-0080160",
+          "source_product_name": "Citrom lédig",
+          "amount": 895.0,
+          "unit_amount": 895.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Lidl": {
-          "source_product_id": "lidl-0080160",
-          "source_product_name": "Citrom lédig",
-          "amount": 995.0,
-          "unit_amount": 995.0,
+        "Penny": {
+          "source_product_id": "penny-306",
+          "source_product_name": "Citrom lédig kg",
+          "amount": 1199.0,
+          "unit_amount": 1199.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
