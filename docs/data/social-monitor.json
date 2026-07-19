@@ -1,33 +1,33 @@
 {
-  "updated_at": "2026-07-19T13:59:58.988291+00:00",
+  "updated_at": "2026-07-19T19:39:56.984102+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-07-19T13:59:58.988291+00:00",
+    "updated_at": "2026-07-19T19:39:56.984102+00:00",
     "leader_social": "Lidl",
-    "leader_social_index": 33,
+    "leader_social_index": 48,
     "dominant_social_topic": "árak és akciók",
     "overall_social_sentiment": "neutral"
   },
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 6,
-      "raw_social_mentions": 6,
-      "dashboard_mentions": 5,
+      "social_mentions": 9,
+      "raw_social_mentions": 9,
+      "dashboard_mentions": 8,
       "background_mentions": 1,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 5.5,
-      "hu_relevant_mentions": 5,
-      "social_index": 33,
+      "weighted_social_mentions": 8.5,
+      "hu_relevant_mentions": 8,
+      "social_index": 48,
       "social_sources": {
-        "reddit": 5,
+        "reddit": 8,
         "youtube": 0,
         "mastodon": 1
       },
       "raw_social_sources": {
-        "reddit": 5,
+        "reddit": 8,
         "youtube": 0,
         "mastodon": 1
       },
@@ -35,11 +35,11 @@
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 3.0
+          "score": 6.0
         },
         {
           "topic": "bolti élmény",
-          "score": 3.0
+          "score": 1.0
         },
         {
           "topic": "munkaerő és foglalkoztatás",
@@ -53,14 +53,14 @@
       "topic_sentiment": {
         "árak és akciók": {
           "positive": 0.0,
-          "neutral": 3.0,
+          "neutral": 6.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
         },
         "bolti élmény": {
           "positive": 0.0,
-          "neutral": 2.0,
+          "neutral": 1.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -82,6 +82,32 @@
       },
       "social_sentiment": "neutral",
       "latest_items": [
+        {
+          "id": "57a5017c3258b709",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "Lidl akciós újság (07.23.)",
+          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
+          "url": "https://www.reddit.com/r/lidlaldihun/comments/1uzpwww/lidl_akciós_újság_0723/",
+          "published": "2026-07-18T08:05:05+00:00",
+          "query": "Lidl akció",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "0acf4875a0b7fa45",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "Lidl akciós újság (07.16.)",
+          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
+          "url": "https://www.reddit.com/r/lidlaldihun/comments/1uutz8x/lidl_akciós_újság_0716/",
+          "published": "2026-07-12T22:46:01+00:00",
+          "query": "Lidl akció",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
         {
           "id": "8ca47da029020938",
           "source": "reddit",
@@ -122,27 +148,40 @@
           "item_sentiment": "neutral"
         },
         {
-          "id": "fbe81ab3e1f31203",
+          "id": "ac69ce7f5e101357",
           "source": "reddit",
           "company": "Lidl",
-          "title": "Van még olyan boltban kapható jégkrém, amiben elegendő tejszín van?",
-          "summary": "Haagen dazst ne számítsuk, mert ez meg már sok. Régen az aldis sztacsatella és eper jégkrémekben volt 20-30(!!!) % tejszín is, ami az ízén s érezhető volt, ezek nagyon finom jégkrémek voltak, az epernek az eper íze is teljesen rendben volt % is de kb 3-4 éve ők is beálltak a sorba, hogy növényi olaj van benne, mint pl a Carte d'Or és társaiban már korábban is, ezek számomra sajnos nem megfelelőek és akkor nagyon diplomatikusan fogalmaztam. EDIT: Köszönöm a tippeket, elmentem most a Lidl-be és fé",
-          "url": "https://www.reddit.com/r/askhungary/comments/1un96a7/van_még_olyan_boltban_kapható_jégkrém_amiben/",
-          "published": "2026-07-04T13:31:29+00:00",
-          "query": "lidl.hu",
+          "title": "Lidl akciós újság (07.09.)",
+          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
+          "url": "https://www.reddit.com/r/lidlaldihun/comments/1unje82/lidl_akciós_újság_0709/",
+          "published": "2026-07-04T20:36:46+00:00",
+          "query": "Lidl akció",
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
           "item_sentiment": "neutral"
         },
         {
-          "id": "72350cc8d1fbbc5f",
+          "id": "63738a24db0da34e",
           "source": "reddit",
           "company": "Lidl",
-          "title": "Lidl sátor vélemény",
-          "summary": "Sziasztok! Aki esetleg már vett egyet eltudná mondani róla a véleményét., illetve össze csomagolva mekkora? submitted by /u/Bnecne to r/hikingHungary [link] [comments]",
-          "url": "https://www.reddit.com/r/hikingHungary/comments/1ufx8qa/lidl_sátor_vélemény/",
-          "published": "2026-06-26T05:03:09+00:00",
-          "query": "lidl.hu",
+          "title": "Lidl akciós újság (07.02.)",
+          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
+          "url": "https://www.reddit.com/r/lidlaldihun/comments/1uhapht/lidl_akciós_újság_0702/",
+          "published": "2026-06-27T18:52:53+00:00",
+          "query": "Lidl akció",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "fffdbf61bc8ad709",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "Lidl akciós újság (06.25.)",
+          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
+          "url": "https://www.reddit.com/r/lidlaldihun/comments/1uatnez/lidl_akciós_újság_0625/",
+          "published": "2026-06-20T10:54:54+00:00",
+          "query": "Lidl akció",
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
           "item_sentiment": "neutral"
@@ -164,7 +203,7 @@
         }
       ],
       "quality_summary": {
-        "dashboard_items": 5,
+        "dashboard_items": 8,
         "background_items": 1,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
@@ -435,129 +474,29 @@
     },
     {
       "company": "Auchan",
-      "social_mentions": 6,
-      "raw_social_mentions": 6,
-      "dashboard_mentions": 6,
+      "social_mentions": 1,
+      "raw_social_mentions": 1,
+      "dashboard_mentions": 1,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 6.0,
-      "hu_relevant_mentions": 6,
-      "social_index": 33,
+      "weighted_social_mentions": 1.0,
+      "hu_relevant_mentions": 1,
+      "social_index": 16,
       "social_sources": {
-        "reddit": 5,
+        "reddit": 0,
         "youtube": 1,
         "mastodon": 0
       },
       "raw_social_sources": {
-        "reddit": 5,
+        "reddit": 0,
         "youtube": 1,
         "mastodon": 0
       },
-      "dominant_social_topic": "árak és akciók",
-      "top_social_topics": [
-        {
-          "topic": "árak és akciók",
-          "score": 2.0
-        },
-        {
-          "topic": "bolti élmény",
-          "score": 2.0
-        },
-        {
-          "topic": "termék és minőség",
-          "score": 2.0
-        }
-      ],
-      "topic_sentiment": {
-        "árak és akciók": {
-          "positive": 0.0,
-          "neutral": 2.0,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
-        },
-        "bolti élmény": {
-          "positive": 0.0,
-          "neutral": 2.0,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
-        },
-        "termék és minőség": {
-          "positive": 0.0,
-          "neutral": 2.0,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
-        }
-      },
+      "dominant_social_topic": "általános vállalati említés",
+      "top_social_topics": [],
+      "topic_sentiment": {},
       "social_sentiment": "neutral",
       "latest_items": [
-        {
-          "id": "4ac37df649d53868",
-          "source": "reddit",
-          "company": "Auchan",
-          "title": "100%-ban magyar tulajdonú lett az Auchan Magyarország!",
-          "summary": "júniusban a Jellinek Dánielhez köthető Indotek Group megvásárolta az Auchan Retail Internationaltől az Auchan Magyarország fennmaradt 53 százalékos tulajdonrészét, ezzel a kereskedelmi lánc kizárólagos tulajdonosává vált. Az üzletlánc továbbra is az Auchan márkanév alatt működik tovább. Hosszú távú megállapodás biztosítja a márkanév használatát, a beszerzési együttműködések folytonosságát, valamint a vásárlók által megszokott saját márkás és külföldi importtermékek kínálatának megőrzését. A terv",
-          "url": "https://www.reddit.com/r/magyar/comments/1ugj47x/100ban_magyar_tulajdonú_lett_az_auchan/",
-          "published": "2026-06-26T21:08:54+00:00",
-          "query": "Auchan Magyarország",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "f3d561d9193d00f2",
-          "source": "reddit",
-          "company": "Auchan",
-          "title": "100%-ban magyar tulajdonú lett az Auchan Magyarország!",
-          "summary": "submitted by /u/frutigerflow to r/hungary [link] [comments]",
-          "url": "https://www.reddit.com/r/hungary/comments/1ugbp77/100ban_magyar_tulajdonú_lett_az_auchan/",
-          "published": "2026-06-26T16:30:23+00:00",
-          "query": "Auchan Magyarország",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "b36b109d531358b5",
-          "source": "reddit",
-          "company": "Auchan",
-          "title": "100%-ban magyar tulajdonú lett az Auchan Magyarország!",
-          "summary": "júniusban a Jellinek Dánielhez köthető Indotek Group megvásárolta az Auchan Retail Internationaltől az Auchan Magyarország fennmaradt 53 százalékos tulajdonrészét, ezzel a kereskedelmi lánc kizárólagos tulajdonosává vált. Az üzletlánc továbbra is az Auchan márkanév alatt működik tovább. Hosszú távú megállapodás biztosítja a márkanév használatát, a beszerzési együttműködések folytonosságát, valamint a vásárlók által megszokott saját márkás és külföldi importtermékek kínálatának megőrzését. A terv",
-          "url": "https://www.reddit.com/r/magyarretro/comments/1ug9l75/100ban_magyar_tulajdonú_lett_az_auchan/",
-          "published": "2026-06-26T15:13:04+00:00",
-          "query": "Auchan Magyarország",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "53919208e89f8a48",
-          "source": "reddit",
-          "company": "Auchan",
-          "title": "Száz százalékban Jellinek Dániel cégéhez került az Auchan Magyarország",
-          "summary": "submitted by /u/telex_bot to r/telex [link] [comments]",
-          "url": "https://www.reddit.com/r/telex/comments/1ug42xx/száz_százalékban_jellinek_dániel_cégéhez_került/",
-          "published": "2026-06-26T11:24:26+00:00",
-          "query": "Auchan Magyarország",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "4acbf4a072c70384",
-          "source": "reddit",
-          "company": "Auchan",
-          "title": "Száz százalékban Jellinek Dániel cégéhez került az Auchan Magyarország",
-          "summary": "submitted by /u/SzegedNewsBotka to r/buborek [link] [comments]",
-          "url": "https://www.reddit.com/r/buborek/comments/1ug2j7m/száz_százalékban_jellinek_dániel_cégéhez_került/",
-          "published": "2026-06-26T10:02:53+00:00",
-          "query": "Auchan Magyarország",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
         {
           "id": "c6a816231d9b3a8c",
           "source": "youtube",
@@ -574,7 +513,7 @@
       ],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 6,
+        "dashboard_items": 1,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
