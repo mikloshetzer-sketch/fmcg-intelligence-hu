@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-18T05:55:10Z",
+  "updated_at": "2026-07-19T06:19:56Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "method": "product-level price leadership and spread analysis",
@@ -63,25 +63,19 @@
       "index_coverage": 23
     },
     {
+      "company": "Auchan",
+      "price_index": 97,
+      "value_score": 103,
+      "index_coverage": 24
+    },
+    {
       "company": "ALDI",
       "price_index": 98,
       "value_score": 102,
       "index_coverage": 23
     },
     {
-      "company": "Auchan",
-      "price_index": 98,
-      "value_score": 102,
-      "index_coverage": 24
-    },
-    {
       "company": "SPAR",
-      "price_index": 102,
-      "value_score": 98,
-      "index_coverage": 24
-    },
-    {
-      "company": "Tesco",
       "price_index": 102,
       "value_score": 98,
       "index_coverage": 24
@@ -91,6 +85,12 @@
       "price_index": 104,
       "value_score": 96,
       "index_coverage": 23
+    },
+    {
+      "company": "Tesco",
+      "price_index": 104,
+      "value_score": 96,
+      "index_coverage": 24
     }
   ],
   "category_leaders": [
@@ -244,27 +244,27 @@
     },
     {
       "category": "Húsáru",
-      "leader": "Auchan",
+      "leader": "ALDI",
       "leader_index": 97,
       "ranking": [
+        {
+          "company": "ALDI",
+          "category_index": 97,
+          "coverage": 4
+        },
         {
           "company": "Auchan",
           "category_index": 97,
           "coverage": 4
         },
         {
-          "company": "ALDI",
-          "category_index": 98,
+          "company": "Tesco",
+          "category_index": 99,
           "coverage": 4
         },
         {
           "company": "Lidl",
-          "category_index": 99,
-          "coverage": 4
-        },
-        {
-          "company": "Tesco",
-          "category_index": 99,
+          "category_index": 101,
           "coverage": 4
         },
         {
@@ -356,36 +356,36 @@
     {
       "category": "Zöldség",
       "leader": "Lidl",
-      "leader_index": 90,
+      "leader_index": 88,
       "ranking": [
         {
           "company": "Lidl",
-          "category_index": 90,
-          "coverage": 3
-        },
-        {
-          "company": "Tesco",
-          "category_index": 93,
+          "category_index": 88,
           "coverage": 3
         },
         {
           "company": "ALDI",
-          "category_index": 101,
+          "category_index": 99,
           "coverage": 3
         },
         {
           "company": "Auchan",
-          "category_index": 101,
+          "category_index": 99,
           "coverage": 3
         },
         {
           "company": "Penny",
-          "category_index": 103,
+          "category_index": 101,
+          "coverage": 3
+        },
+        {
+          "company": "Tesco",
+          "category_index": 102,
           "coverage": 3
         },
         {
           "company": "SPAR",
-          "category_index": 113,
+          "category_index": 111,
           "coverage": 3
         }
       ]
@@ -447,7 +447,7 @@
       "cheapest_price": 532.67,
       "most_expensive_company": "SPAR",
       "most_expensive_price": 805.0,
-      "average_price": 698.28,
+      "average_price": 704.95,
       "spread_pct": 51.13,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
@@ -483,7 +483,7 @@
       "cheapest_price": 1398.0,
       "most_expensive_company": "SPAR",
       "most_expensive_price": 1954.44,
-      "average_price": 1693.03,
+      "average_price": 1723.03,
       "spread_pct": 39.8,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
@@ -495,7 +495,7 @@
       "cheapest_price": 149.0,
       "most_expensive_company": "SPAR",
       "most_expensive_price": 207.0,
-      "average_price": 180.67,
+      "average_price": 189.0,
       "spread_pct": 38.93,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
