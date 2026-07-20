@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-13T06:29:37.977770+00:00",
+  "updated_at": "2026-07-20T06:25:41.819957+00:00",
   "version": "store-network-hu-v2.0-non-lidl-osm",
   "scope": "Hungarian FMCG store network from OSM + optional overrides",
   "method_note": "Ez a verzió Lidl nélkül építi a bolthálózatot. ALDI, SPAR, Tesco, Auchan és Penny OSM/Overpass alapján frissül. Ha egy láncra 0 találat jön, a script megtartja a korábbi store-network-hu.json adott láncra vonatkozó adatait. Lidl külön, saját üzletlista alapján kerül majd be.",
@@ -2826,8 +2826,8 @@
       "area": "Nyíregyháza",
       "region": "Észak-Alföld",
       "address": "4400 Nyíregyháza, Pazonyi út 40",
-      "lat": 47.971348,
-      "lon": 21.741241,
+      "lat": 47.971345,
+      "lon": 21.741243,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 172620295,
@@ -9441,8 +9441,8 @@
       "area": "n.a.",
       "region": "n.a.",
       "address": "n.a.",
-      "lat": 47.384657,
-      "lon": 19.344518,
+      "lat": 47.384668,
+      "lon": 19.34453,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 564156662,
@@ -13389,7 +13389,7 @@
       "area": "Kecskemét",
       "region": "Dél-Alföld",
       "address": "6000 Kecskemét, Március 15. utca 5/A",
-      "lat": 46.918984,
+      "lat": 46.918985,
       "lon": 19.673661,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
@@ -16196,27 +16196,6 @@
       ]
     },
     {
-      "store_id": "spar_na_despar_13059201611",
-      "company": "SPAR",
-      "name": "Despar",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 46.772917,
-      "lon": 17.271633,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 13059201611,
-      "brand": "Spar",
-      "operator": "",
-      "keywords": [
-        "Despar",
-        "SPAR n.a.",
-        "n.a."
-      ]
-    },
-    {
       "store_id": "spar_na_spar_293152477",
       "company": "SPAR",
       "name": "Spar",
@@ -16763,27 +16742,6 @@
       ]
     },
     {
-      "store_id": "spar_na_spar_1843021451",
-      "company": "SPAR",
-      "name": "Spar",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 48.106513,
-      "lon": 19.809715,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 1843021451,
-      "brand": "Spar",
-      "operator": "",
-      "keywords": [
-        "Spar",
-        "SPAR n.a.",
-        "n.a."
-      ]
-    },
-    {
       "store_id": "spar_na_spar_1866025012",
       "company": "SPAR",
       "name": "Spar",
@@ -16791,8 +16749,8 @@
       "area": "n.a.",
       "region": "n.a.",
       "address": "n.a.",
-      "lat": 47.506377,
-      "lon": 19.076379,
+      "lat": 47.506363,
+      "lon": 19.076376,
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 1866025012,
@@ -20477,6 +20435,27 @@
         "Interspar",
         "SPAR Ózd",
         "3600 Ózd, Sárli út 4"
+      ]
+    },
+    {
+      "store_id": "spar_ullo_spar_564156668",
+      "company": "SPAR",
+      "name": "Spar",
+      "city": "Üllő",
+      "area": "Üllő",
+      "region": "n.a.",
+      "address": "2225 Üllő, Malom utca 2",
+      "lat": 47.383161,
+      "lon": 19.350582,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 564156668,
+      "brand": "Spar",
+      "operator": "Hepi-Trade Kft.",
+      "keywords": [
+        "Spar",
+        "SPAR Üllő",
+        "2225 Üllő, Malom utca 2"
       ]
     },
     {
