@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-07-20T04:12:27.388339+00:00",
+  "updated_at": "2026-07-20T09:40:58.860253+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-07-20T04:12:27.388339+00:00",
+    "updated_at": "2026-07-20T09:40:58.860253+00:00",
     "leader_social": "Lidl",
     "leader_social_index": 33,
     "dominant_social_topic": "árak és akciók",
@@ -13,21 +13,21 @@
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 4,
-      "raw_social_mentions": 4,
-      "dashboard_mentions": 3,
+      "social_mentions": 6,
+      "raw_social_mentions": 6,
+      "dashboard_mentions": 5,
       "background_mentions": 1,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 3.5,
-      "hu_relevant_mentions": 3,
+      "weighted_social_mentions": 5.5,
+      "hu_relevant_mentions": 5,
       "social_index": 33,
       "social_sources": {
-        "reddit": 3,
+        "reddit": 5,
         "youtube": 0,
         "mastodon": 1
       },
       "raw_social_sources": {
-        "reddit": 3,
+        "reddit": 5,
         "youtube": 0,
         "mastodon": 1
       },
@@ -35,11 +35,11 @@
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 1.0
+          "score": 3.0
         },
         {
           "topic": "bolti élmény",
-          "score": 1.0
+          "score": 3.0
         },
         {
           "topic": "munkaerő és foglalkoztatás",
@@ -53,14 +53,14 @@
       "topic_sentiment": {
         "árak és akciók": {
           "positive": 0.0,
-          "neutral": 1.0,
+          "neutral": 3.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
         },
         "bolti élmény": {
           "positive": 0.0,
-          "neutral": 1.0,
+          "neutral": 2.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -120,6 +120,32 @@
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
           "item_sentiment": "neutral"
+        },
+        {
+          "id": "fbe81ab3e1f31203",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "Van még olyan boltban kapható jégkrém, amiben elegendő tejszín van?",
+          "summary": "Haagen dazst ne számítsuk, mert ez meg már sok. Régen az aldis sztacsatella és eper jégkrémekben volt 20-30(!!!) % tejszín is, ami az ízén s érezhető volt, ezek nagyon finom jégkrémek voltak, az epernek az eper íze is teljesen rendben volt % is de kb 3-4 éve ők is beálltak a sorba, hogy növényi olaj van benne, mint pl a Carte d'Or és társaiban már korábban is, ezek számomra sajnos nem megfelelőek és akkor nagyon diplomatikusan fogalmaztam. EDIT: Köszönöm a tippeket, elmentem most a Lidl-be és fé",
+          "url": "https://www.reddit.com/r/askhungary/comments/1un96a7/van_még_olyan_boltban_kapható_jégkrém_amiben/",
+          "published": "2026-07-04T13:31:29+00:00",
+          "query": "lidl.hu",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "72350cc8d1fbbc5f",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "Lidl sátor vélemény",
+          "summary": "Sziasztok! Aki esetleg már vett egyet eltudná mondani róla a véleményét., illetve össze csomagolva mekkora? submitted by /u/Bnecne to r/hikingHungary [link] [comments]",
+          "url": "https://www.reddit.com/r/hikingHungary/comments/1ufx8qa/lidl_sátor_vélemény/",
+          "published": "2026-06-26T05:03:09+00:00",
+          "query": "lidl.hu",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
         }
       ],
       "background_items": [
@@ -138,7 +164,7 @@
         }
       ],
       "quality_summary": {
-        "dashboard_items": 3,
+        "dashboard_items": 5,
         "background_items": 1,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
