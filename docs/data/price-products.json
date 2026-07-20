@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-19T06:19:56Z",
+  "updated_at": "2026-07-20T06:36:32Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -549,31 +549,21 @@
       "category": "Húsáru",
       "expected_unit": "kg",
       "prices": {
-        "ALDI": 1398.0,
-        "Lidl": 1749.0,
+        "Penny": 1749.0,
         "SPAR": 1954.44,
         "Auchan": 1739.0,
         "Tesco": 1748.75,
-        "Penny": 1749.0
+        "ALDI": 1749.0,
+        "Lidl": 1749.0
       },
       "selected_products": {
-        "ALDI": {
-          "source_product_id": "aldi-35070",
-          "source_product_name": "Darált sertéshús 30% 500g",
-          "amount": 699.0,
-          "unit_amount": 1398.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "0.5",
-          "price_type": "NORMAL"
-        },
-        "Lidl": {
-          "source_product_id": "lidl-0005545",
-          "source_product_name": "Húsfarm XXL Sertés darálthús 30%,  1000g",
+        "Penny": {
+          "source_product_id": "penny-10995",
+          "source_product_name": "Sertés darálthús 30% zsírtart.",
           "amount": 1749.0,
           "unit_amount": 1749.0,
           "unit": "kg",
-          "unit_title": "kg",
+          "unit_title": "csomag",
           "packaging": "1",
           "price_type": "NORMAL"
         },
@@ -607,13 +597,23 @@
           "packaging": "0.8",
           "price_type": "NORMAL"
         },
-        "Penny": {
-          "source_product_id": "penny-10995",
-          "source_product_name": "Sertés darálthús 30% zsírtart.",
+        "ALDI": {
+          "source_product_id": "aldi-719455",
+          "source_product_name": "Darált sertéshús 30 % 1kg",
           "amount": 1749.0,
           "unit_amount": 1749.0,
           "unit": "kg",
           "unit_title": "csomag",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Lidl": {
+          "source_product_id": "lidl-0005545",
+          "source_product_name": "Húsfarm XXL Sertés darálthús 30%,  1000g",
+          "amount": 1749.0,
+          "unit_amount": 1749.0,
+          "unit": "kg",
+          "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
         }
@@ -627,8 +627,8 @@
       "expected_unit": "kg",
       "prices": {
         "Tesco": 1990.0,
-        "SPAR": 1846.0,
         "Auchan": 1833.0,
+        "SPAR": 1846.0,
         "Lidl": 1859.0,
         "ALDI": 1979.0,
         "Penny": 1979.0
@@ -644,21 +644,21 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "SPAR": {
-          "source_product_id": "5941893340420",
-          "source_product_name": "Csirkemell filé lédig",
-          "amount": 1846.0,
-          "unit_amount": 1846.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
         "Auchan": {
           "source_product_id": "2110910000002",
           "source_product_name": "Székely Csürke csirkemellfilé \"A\" osztály vákuumcsomagolt Ft/kg",
           "amount": 1833.0,
           "unit_amount": 1833.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "SPAR": {
+          "source_product_id": "5941893340420",
+          "source_product_name": "Csirkemell filé lédig",
+          "amount": 1846.0,
+          "unit_amount": 1846.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -857,24 +857,14 @@
       "category": "Gyümölcs",
       "expected_unit": "kg",
       "prices": {
-        "SPAR": 699.0,
         "Lidl": 599.0,
         "Penny": 699.0,
         "Tesco": 699.0,
+        "SPAR": 699.0,
         "ALDI": 699.0,
         "Auchan": 749.0
       },
       "selected_products": {
-        "SPAR": {
-          "source_product_id": "8591189960848",
-          "source_product_name": "Banán lédig",
-          "amount": 699.0,
-          "unit_amount": 699.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
         "Lidl": {
           "source_product_id": "lidl-0080000",
           "source_product_name": "Banán kg",
@@ -898,6 +888,16 @@
         "Tesco": {
           "source_product_id": "2870100000000",
           "source_product_name": "Banán lédig    ",
+          "amount": 699.0,
+          "unit_amount": 699.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "SPAR": {
+          "source_product_id": "8591189960848",
+          "source_product_name": "Banán lédig",
           "amount": 699.0,
           "unit_amount": 699.0,
           "unit": "kg",
@@ -934,29 +934,19 @@
       "category": "Gyümölcs",
       "expected_unit": "kg",
       "prices": {
-        "Lidl": 895.0,
-        "Penny": 1199.0,
+        "Lidl": 995.0,
         "Tesco": 999.0,
-        "SPAR": 1198.67,
         "Auchan": 1198.0,
-        "ALDI": 1199.0
+        "SPAR": 1198.67,
+        "ALDI": 1199.0,
+        "Penny": 1199.0
       },
       "selected_products": {
         "Lidl": {
           "source_product_id": "lidl-0080160",
           "source_product_name": "Citrom lédig",
-          "amount": 895.0,
-          "unit_amount": 895.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-306",
-          "source_product_name": "Citrom lédig kg",
-          "amount": 1199.0,
-          "unit_amount": 1199.0,
+          "amount": 995.0,
+          "unit_amount": 995.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -972,16 +962,6 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "SPAR": {
-          "source_product_id": "5999139405563",
-          "source_product_name": "S-budget xxl citrom 750g",
-          "amount": 899.0,
-          "unit_amount": 1198.67,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "0.75",
-          "price_type": "NORMAL"
-        },
         "Auchan": {
           "source_product_id": "8435177085253",
           "source_product_name": "Citrom 500 g",
@@ -992,9 +972,29 @@
           "packaging": "0.5",
           "price_type": "NORMAL"
         },
+        "SPAR": {
+          "source_product_id": "5999139405563",
+          "source_product_name": "S-budget xxl citrom 750g",
+          "amount": 899.0,
+          "unit_amount": 1198.67,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "0.75",
+          "price_type": "NORMAL"
+        },
         "ALDI": {
           "source_product_id": "aldi-854011",
           "source_product_name": "Citrom lédig",
+          "amount": 1199.0,
+          "unit_amount": 1199.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Penny": {
+          "source_product_id": "penny-306",
+          "source_product_name": "Citrom lédig kg",
           "amount": 1199.0,
           "unit_amount": 1199.0,
           "unit": "kg",
@@ -1013,10 +1013,10 @@
       "prices": {
         "Lidl": 395.0,
         "SPAR": 493.0,
-        "Penny": 499.0,
         "ALDI": 425.0,
         "Tesco": 429.0,
-        "Auchan": 447.0
+        "Auchan": 447.0,
+        "Penny": 451.0
       },
       "selected_products": {
         "Lidl": {
@@ -1034,16 +1034,6 @@
           "source_product_name": "Fürtös paradicsom lédig",
           "amount": 493.0,
           "unit_amount": 493.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-298",
-          "source_product_name": "Magyar fürtös paradicsom lé kg",
-          "amount": 499.0,
-          "unit_amount": 499.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1078,6 +1068,16 @@
           "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
+        },
+        "Penny": {
+          "source_product_id": "penny-298",
+          "source_product_name": "Magyar fürtös paradicsom lé kg",
+          "amount": 451.0,
+          "unit_amount": 451.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
         }
       },
       "coverage": 6
@@ -1089,11 +1089,11 @@
       "expected_unit": "kg",
       "prices": {
         "Lidl": 532.67,
-        "ALDI": 699.0,
-        "Penny": 799.0,
+        "ALDI": 649.0,
         "Auchan": 656.0,
         "SPAR": 805.0,
-        "Tesco": 738.0
+        "Tesco": 738.0,
+        "Penny": 762.0
       },
       "selected_products": {
         "Lidl": {
@@ -1107,22 +1107,12 @@
           "price_type": "NORMAL"
         },
         "ALDI": {
-          "source_product_id": "aldi-730700",
-          "source_product_name": "Paprika tv lédig",
-          "amount": 699.0,
-          "unit_amount": 699.0,
+          "source_product_id": "aldi-725203",
+          "source_product_name": "Paprika lecsó 1kg",
+          "amount": 649.0,
+          "unit_amount": 649.0,
           "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-308",
-          "source_product_name": "Magyar tv paprika lédig kg",
-          "amount": 799.0,
-          "unit_amount": 799.0,
-          "unit": "kg",
-          "unit_title": "kg",
+          "unit_title": "csomag",
           "packaging": "1",
           "price_type": "NORMAL"
         },
@@ -1151,6 +1141,16 @@
           "source_product_name": "PAPRIKA LÉDIG QQ",
           "amount": 738.0,
           "unit_amount": 738.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Penny": {
+          "source_product_id": "penny-308",
+          "source_product_name": "Magyar tv paprika lédig kg",
+          "amount": 762.0,
+          "unit_amount": 762.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1275,27 +1275,27 @@
       "category": "Alapélelmiszer",
       "expected_unit": "kg",
       "prices": {
-        "ALDI": 450.0,
         "SPAR": 629.0,
+        "ALDI": 629.0,
         "Lidl": 629.0,
         "Tesco": 650.0,
         "Penny": 650.0,
         "Auchan": 710.0
       },
       "selected_products": {
-        "ALDI": {
-          "source_product_id": "aldi-815464",
-          "source_product_name": "Cucina Nobile spagetti durum 500g",
-          "amount": 225.0,
-          "unit_amount": 450.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "0.5",
-          "price_type": "NORMAL"
-        },
         "SPAR": {
           "source_product_id": "5999033897549",
           "source_product_name": "S-Budget Spagetti durum száraztészta 1000 g",
+          "amount": 629.0,
+          "unit_amount": 629.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "ALDI": {
+          "source_product_id": "aldi-815463",
+          "source_product_name": "Cucina spagetti durum 1kg",
           "amount": 629.0,
           "unit_amount": 629.0,
           "unit": "kg",
