@@ -1,35 +1,35 @@
 {
-  "updated_at": "2026-07-21T09:08:18.978594+00:00",
+  "updated_at": "2026-07-21T14:33:49.904763+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-07-21T09:08:18.978594+00:00",
+    "updated_at": "2026-07-21T14:33:49.904763+00:00",
     "leader_social": "Lidl",
-    "leader_social_index": 33,
+    "leader_social_index": 16,
     "dominant_social_topic": "árak és akciók",
     "overall_social_sentiment": "neutral"
   },
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 4,
-      "raw_social_mentions": 4,
+      "social_mentions": 3,
+      "raw_social_mentions": 3,
       "dashboard_mentions": 3,
-      "background_mentions": 1,
+      "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 3.5,
+      "weighted_social_mentions": 3.0,
       "hu_relevant_mentions": 3,
-      "social_index": 33,
+      "social_index": 16,
       "social_sources": {
         "reddit": 3,
         "youtube": 0,
-        "mastodon": 1
+        "mastodon": 0
       },
       "raw_social_sources": {
         "reddit": 3,
         "youtube": 0,
-        "mastodon": 1
+        "mastodon": 0
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
@@ -40,14 +40,6 @@
         {
           "topic": "bolti élmény",
           "score": 1.0
-        },
-        {
-          "topic": "munkaerő és foglalkoztatás",
-          "score": 0.5
-        },
-        {
-          "topic": "digitalizáció és önkiszolgálás",
-          "score": 0.5
         }
       ],
       "topic_sentiment": {
@@ -61,20 +53,6 @@
         "bolti élmény": {
           "positive": 0.0,
           "neutral": 1.0,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
-        },
-        "munkaerő és foglalkoztatás": {
-          "positive": 0.0,
-          "neutral": 0.5,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
-        },
-        "digitalizáció és önkiszolgálás": {
-          "positive": 0.0,
-          "neutral": 0.5,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -122,24 +100,10 @@
           "item_sentiment": "neutral"
         }
       ],
-      "background_items": [
-        {
-          "id": "74e9947167f6d260",
-          "source": "mastodon",
-          "company": "Lidl",
-          "title": "",
-          "summary": "Ich nutze Selbstbedienungskassen gern – wenn sie gut funktionieren. Warum derselbe Einkauf bei verschiedenen Märkten völlig unterschiedlich ablaufen kann und weshalb mich ein Erdbeeretikett zum Bloggen brachte. ute-hauth.de/selber-selbst-kas… # selfScan # selbstbedienung # digitalerAlltag # lidl # kaufland # bloggt",
-          "url": "https://pirati.ca/display/ec054ce7-126a-5a56-6fac-b3d823155469",
-          "published": "Fri, 17 Jul 2026 16:21:03 +0000",
-          "query": "#lidl",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "neutral"
-        }
-      ],
+      "background_items": [],
       "quality_summary": {
         "dashboard_items": 3,
-        "background_items": 1,
+        "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
