@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-20T06:36:32Z",
+  "updated_at": "2026-07-21T06:20:14Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "method": "product-level price leadership and spread analysis",
@@ -9,24 +9,24 @@
       "count": 10
     },
     {
-      "company": "Lidl",
+      "company": "SPAR",
       "count": 4
     },
     {
-      "company": "SPAR",
-      "count": 4
+      "company": "Lidl",
+      "count": 3
     },
     {
       "company": "Penny",
       "count": 3
     },
     {
-      "company": "Tesco",
+      "company": "ALDI",
       "count": 2
     },
     {
-      "company": "ALDI",
-      "count": 1
+      "company": "Tesco",
+      "count": 2
     }
   ],
   "most_expensive_count": [
@@ -57,21 +57,21 @@
   ],
   "value_scores": [
     {
-      "company": "Lidl",
-      "price_index": 95,
-      "value_score": 105,
-      "index_coverage": 23
-    },
-    {
       "company": "Auchan",
       "price_index": 97,
       "value_score": 103,
       "index_coverage": 24
     },
     {
+      "company": "Lidl",
+      "price_index": 97,
+      "value_score": 103,
+      "index_coverage": 23
+    },
+    {
       "company": "ALDI",
-      "price_index": 100,
-      "value_score": 100,
+      "price_index": 99,
+      "value_score": 101,
       "index_coverage": 23
     },
     {
@@ -355,37 +355,37 @@
     },
     {
       "category": "Zöldség",
-      "leader": "Lidl",
-      "leader_index": 89,
+      "leader": "Penny",
+      "leader_index": 95,
       "ranking": [
         {
-          "company": "Lidl",
-          "category_index": 89,
-          "coverage": 3
-        },
-        {
           "company": "Penny",
-          "category_index": 97,
+          "category_index": 95,
           "coverage": 3
         },
         {
           "company": "ALDI",
-          "category_index": 98,
+          "category_index": 96,
           "coverage": 3
         },
         {
           "company": "Auchan",
-          "category_index": 100,
+          "category_index": 98,
+          "coverage": 3
+        },
+        {
+          "company": "Lidl",
+          "category_index": 98,
           "coverage": 3
         },
         {
           "company": "Tesco",
-          "category_index": 103,
+          "category_index": 101,
           "coverage": 3
         },
         {
           "company": "SPAR",
-          "category_index": 113,
+          "category_index": 111,
           "coverage": 3
         }
       ]
@@ -425,18 +425,6 @@
       "most_expensive_price": 599.0,
       "average_price": 428.58,
       "spread_pct": 84.31,
-      "competition_intensity": "nagy árszórás",
-      "coverage": 6
-    },
-    {
-      "product": "Zöldpaprika",
-      "category": "Zöldség",
-      "cheapest_company": "Lidl",
-      "cheapest_price": 532.67,
-      "most_expensive_company": "SPAR",
-      "most_expensive_price": 805.0,
-      "average_price": 690.45,
-      "spread_pct": 51.13,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
@@ -523,6 +511,18 @@
       "spread_pct": 24.79,
       "competition_intensity": "nagy árszórás",
       "coverage": 5
+    },
+    {
+      "product": "Zöldpaprika",
+      "category": "Zöldség",
+      "cheapest_company": "ALDI",
+      "cheapest_price": 649.0,
+      "most_expensive_company": "SPAR",
+      "most_expensive_price": 805.0,
+      "average_price": 726.5,
+      "spread_pct": 24.04,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 6
     },
     {
       "product": "Sertéscomb",
@@ -704,13 +704,6 @@
       "coverage": 6
     },
     {
-      "product": "Zöldpaprika",
-      "category": "Zöldség",
-      "spread_pct": 51.13,
-      "competition_intensity": "nagy árszórás",
-      "coverage": 6
-    },
-    {
       "product": "Vaj",
       "category": "Tejtermék",
       "spread_pct": 42.65,
@@ -758,6 +751,13 @@
       "spread_pct": 24.79,
       "competition_intensity": "nagy árszórás",
       "coverage": 5
+    },
+    {
+      "product": "Zöldpaprika",
+      "category": "Zöldség",
+      "spread_pct": 24.04,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 6
     },
     {
       "product": "Sertéscomb",

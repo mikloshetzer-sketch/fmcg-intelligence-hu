@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-20T06:36:32Z",
+  "updated_at": "2026-07-21T06:20:14Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -1088,24 +1088,14 @@
       "category": "Zöldség",
       "expected_unit": "kg",
       "prices": {
-        "Lidl": 532.67,
         "ALDI": 649.0,
         "Auchan": 656.0,
         "SPAR": 805.0,
         "Tesco": 738.0,
+        "Lidl": 749.0,
         "Penny": 762.0
       },
       "selected_products": {
-        "Lidl": {
-          "source_product_id": "lidl-0082657",
-          "source_product_name": "Lecsópaprika 1,5kg",
-          "amount": 799.0,
-          "unit_amount": 532.67,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "1.5",
-          "price_type": "NORMAL"
-        },
         "ALDI": {
           "source_product_id": "aldi-725203",
           "source_product_name": "Paprika lecsó 1kg",
@@ -1141,6 +1131,16 @@
           "source_product_name": "PAPRIKA LÉDIG QQ",
           "amount": 738.0,
           "unit_amount": 738.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Lidl": {
+          "source_product_id": "lidl-0082535",
+          "source_product_name": "Hazai TV paprika kg",
+          "amount": 749.0,
+          "unit_amount": 749.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
