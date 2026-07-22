@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-21T06:20:14Z",
+  "updated_at": "2026-07-22T06:18:51Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -87,24 +87,14 @@
       "category": "Tejtermék",
       "expected_unit": "l",
       "prices": {
-        "Auchan": 253.0,
         "SPAR": 265.0,
         "Tesco": 281.0,
+        "Auchan": 279.0,
         "ALDI": 295.0,
         "Lidl": 295.0,
         "Penny": 295.0
       },
       "selected_products": {
-        "Auchan": {
-          "source_product_id": "5999086458261",
-          "source_product_name": "Auchan Kedvenc pasztőrözött tej 2,8% 1 l",
-          "amount": 253.0,
-          "unit_amount": 253.0,
-          "unit": "l",
-          "unit_title": "db",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
         "SPAR": {
           "source_product_id": "5998200485633",
           "source_product_name": "HAZAI TEJ 2.8% 1 L ",
@@ -120,6 +110,16 @@
           "source_product_name": "Kunsági ESL tej 2.8% 1 L QQ",
           "amount": 281.0,
           "unit_amount": 281.0,
+          "unit": "l",
+          "unit_title": "db",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Auchan": {
+          "source_product_id": "5997534107570",
+          "source_product_name": "Abaúj dobozos tej 2,8% 1 l",
+          "amount": 279.0,
+          "unit_amount": 279.0,
           "unit": "l",
           "unit_title": "db",
           "packaging": "1",
@@ -934,27 +934,27 @@
       "category": "Gyümölcs",
       "expected_unit": "kg",
       "prices": {
-        "Lidl": 995.0,
         "Tesco": 999.0,
+        "Lidl": 999.0,
         "Auchan": 1198.0,
         "SPAR": 1198.67,
         "ALDI": 1199.0,
         "Penny": 1199.0
       },
       "selected_products": {
-        "Lidl": {
-          "source_product_id": "lidl-0080160",
-          "source_product_name": "Citrom lédig",
-          "amount": 995.0,
-          "unit_amount": 995.0,
+        "Tesco": {
+          "source_product_id": "2850160000000",
+          "source_product_name": "Citrom lédig    ",
+          "amount": 999.0,
+          "unit_amount": 999.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Tesco": {
-          "source_product_id": "2850160000000",
-          "source_product_name": "Citrom lédig    ",
+        "Lidl": {
+          "source_product_id": "lidl-0080160",
+          "source_product_name": "Citrom lédig",
           "amount": 999.0,
           "unit_amount": 999.0,
           "unit": "kg",
@@ -1728,7 +1728,7 @@
       "prices": {
         "Auchan": 53.0,
         "SPAR": 118.69,
-        "Tesco": 118.688,
+        "Tesco": 117.25,
         "ALDI": 119.9
       },
       "selected_products": {
@@ -1753,13 +1753,13 @@
           "price_type": "NORMAL"
         },
         "Tesco": {
-          "source_product_id": "8004260013017",
-          "source_product_name": "Regina Delicate Calming Chamomile toalettpapír 3 rétegű 16 tekercs",
-          "amount": 1899.0,
-          "unit_amount": 118.688,
+          "source_product_id": "5059944692234",
+          "source_product_name": "SPRINGFORCE TOALETTPAPÍR 2 RÉT. 4 TEKERCS",
+          "amount": 469.0,
+          "unit_amount": 117.25,
           "unit": "db",
           "unit_title": "csomag",
-          "packaging": "16",
+          "packaging": "4",
           "price_type": "NORMAL"
         },
         "ALDI": {
