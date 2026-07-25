@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-07-25T08:29:16.600837+00:00",
+  "updated_at": "2026-07-25T14:09:18.473457+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-07-25T08:29:16.600837+00:00",
+    "updated_at": "2026-07-25T14:09:18.473457+00:00",
     "leader_social": "Lidl",
     "leader_social_index": 33,
     "dominant_social_topic": "árak és akciók",
@@ -13,29 +13,29 @@
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 6,
-      "raw_social_mentions": 6,
-      "dashboard_mentions": 6,
+      "social_mentions": 8,
+      "raw_social_mentions": 8,
+      "dashboard_mentions": 8,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 6.0,
-      "hu_relevant_mentions": 6,
+      "weighted_social_mentions": 8.0,
+      "hu_relevant_mentions": 8,
       "social_index": 33,
       "social_sources": {
         "reddit": 3,
-        "youtube": 3,
+        "youtube": 5,
         "mastodon": 0
       },
       "raw_social_sources": {
         "reddit": 3,
-        "youtube": 3,
+        "youtube": 5,
         "mastodon": 0
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 4.0
+          "score": 6.0
         },
         {
           "topic": "bolti élmény",
@@ -45,7 +45,7 @@
       "topic_sentiment": {
         "árak és akciók": {
           "positive": 0.0,
-          "neutral": 4.0,
+          "neutral": 6.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -113,6 +113,19 @@
           "item_sentiment": "neutral"
         },
         {
+          "id": "3e372b35caccd494",
+          "source": "youtube",
+          "company": "Lidl",
+          "title": "🇭🇺 LIDL Magyarország Akciós újság – 20. hét Érvényes 05.14 - 05.20 2026 TV verzió - YouTube",
+          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 20. hét Érvényes 05.14 - 05.20 2026 TV verzió YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA1NXYtejM2NjZ2VUZ6XzhQQ28xeUg2YjM4M3ZocjJYZTBZWElIM1ZDVFdWMFBkTnBNU0s4VVF1WUNNb2NxUVlwbm9XOUlMdjN6bXJVYmF3?oc=5",
+          "published": "Sun, 10 May 2026 19:27:46 GMT",
+          "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
           "id": "e43b52ba20843594",
           "source": "youtube",
           "company": "Lidl",
@@ -137,11 +150,24 @@
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
           "item_sentiment": "neutral"
+        },
+        {
+          "id": "5d9b5769bb53bb1c",
+          "source": "youtube",
+          "company": "Lidl",
+          "title": "LIDL Akciós újság – 09. hét Érvényes 02.26 - 2026.03.01 TV verzió - YouTube",
+          "summary": "LIDL Akciós újság – 09. hét Érvényes 02.26 - 2026.03.01 TV verzió YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9TSlkzaUJzNWxDcXlvS3ZneW5jZnRzTm5wcjNqdnFrbXZ5Q3pmbHRrcnVjRWYwQkZCMFZFX0gwYWZzU2dLd0hvM1l5UGlGVHhfcGR0WnNn?oc=5",
+          "published": "Mon, 23 Feb 2026 15:41:35 GMT",
+          "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
         }
       ],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 6,
+        "dashboard_items": 8,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
