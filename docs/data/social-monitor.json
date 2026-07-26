@@ -1,51 +1,62 @@
 {
-  "updated_at": "2026-07-26T14:07:25.501343+00:00",
+  "updated_at": "2026-07-26T19:43:06.682668+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-07-26T14:07:25.501343+00:00",
+    "updated_at": "2026-07-26T19:43:06.682668+00:00",
     "leader_social": "Lidl",
-    "leader_social_index": 33,
+    "leader_social_index": 48,
     "dominant_social_topic": "árak és akciók",
     "overall_social_sentiment": "neutral"
   },
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 6,
-      "raw_social_mentions": 6,
-      "dashboard_mentions": 6,
+      "social_mentions": 9,
+      "raw_social_mentions": 9,
+      "dashboard_mentions": 9,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 6.0,
-      "hu_relevant_mentions": 6,
-      "social_index": 33,
+      "weighted_social_mentions": 9.0,
+      "hu_relevant_mentions": 9,
+      "social_index": 48,
       "social_sources": {
         "reddit": 3,
-        "youtube": 3,
+        "youtube": 6,
         "mastodon": 0
       },
       "raw_social_sources": {
         "reddit": 3,
-        "youtube": 3,
+        "youtube": 6,
         "mastodon": 0
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 4.0
+          "score": 6.0
         },
         {
           "topic": "bolti élmény",
           "score": 1.0
+        },
+        {
+          "topic": "termék és minőség",
+          "score": 1.0
         }
       ],
       "topic_sentiment": {
+        "termék és minőség": {
+          "positive": 0.0,
+          "neutral": 1.0,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        },
         "árak és akciók": {
           "positive": 0.0,
-          "neutral": 4.0,
+          "neutral": 6.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -60,6 +71,19 @@
       },
       "social_sentiment": "neutral",
       "latest_items": [
+        {
+          "id": "941e31447d2c67ab",
+          "source": "youtube",
+          "company": "Lidl",
+          "title": "🇭🇺 LIDL Magyarország Nonfood kínálatunk - 29 hét Érvényes 07.16 - 07.22 2026 - YouTube",
+          "summary": "🇭🇺 LIDL Magyarország Nonfood kínálatunk - 29 hét Érvényes 07.16 - 07.22 2026 YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1IS1pHcHdKZWllVHQtYUxwODNVNktCOEVQRDIyNlRydzlSbUcyb2lmdU1XejlvR1pDLXRkbjM5ZklGZE9OWFkwYS1RSDB6czg4bGtndzZR?oc=5",
+          "published": "Tue, 14 Jul 2026 15:17:00 GMT",
+          "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
         {
           "id": "214db63723c52e30",
           "source": "youtube",
@@ -113,6 +137,19 @@
           "item_sentiment": "neutral"
         },
         {
+          "id": "3e372b35caccd494",
+          "source": "youtube",
+          "company": "Lidl",
+          "title": "🇭🇺 LIDL Magyarország Akciós újság – 20. hét Érvényes 05.14 - 05.20 2026 TV verzió - YouTube",
+          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 20. hét Érvényes 05.14 - 05.20 2026 TV verzió YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA1NXYtejM2NjZ2VUZ6XzhQQ28xeUg2YjM4M3ZocjJYZTBZWElIM1ZDVFdWMFBkTnBNU0s4VVF1WUNNb2NxUVlwbm9XOUlMdjN6bXJVYmF3?oc=5",
+          "published": "Sun, 10 May 2026 19:27:46 GMT",
+          "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
           "id": "e43b52ba20843594",
           "source": "youtube",
           "company": "Lidl",
@@ -120,6 +157,19 @@
           "summary": "🇭🇺 LIDL Magyarország Akciós újság – 19. hét Érvényes 05.07-től 2026 TV verzió YouTube",
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBzYjBHSGFSS2k1ZUoydVpsWnBNd2RuSllXc2YzdEZITVRTZTA3NW8zdkFLYi1OYUZmX3FXRDdZM3ZnRTlEQmdOb1dSckpGeGNmSk1tVlV3?oc=5",
           "published": "Sun, 03 May 2026 19:52:23 GMT",
+          "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "04ff2ff15eec72aa",
+          "source": "youtube",
+          "company": "Lidl",
+          "title": "LIDL Akciós újság – 12. hét Érvényes 03.19-től - YouTube",
+          "summary": "LIDL Akciós újság – 12. hét Érvényes 03.19-től YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9ETU96elozSlFVdmRhTmdyeWFLeXFPVm5pVVhIZVFqZGhKdmJEUXFtTlZRWk1rcV9icTBmdW16a1FSLUZ5OURYVHFfWThHakY1LWlHYklR?oc=5",
+          "published": "Mon, 16 Mar 2026 16:33:27 GMT",
           "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
@@ -141,7 +191,7 @@
       ],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 6,
+        "dashboard_items": 9,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
@@ -412,64 +462,36 @@
     },
     {
       "company": "Auchan",
-      "social_mentions": 0,
-      "raw_social_mentions": 0,
-      "dashboard_mentions": 0,
+      "social_mentions": 5,
+      "raw_social_mentions": 5,
+      "dashboard_mentions": 5,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 0,
-      "hu_relevant_mentions": 0,
-      "social_index": 0,
+      "weighted_social_mentions": 5.0,
+      "hu_relevant_mentions": 5,
+      "social_index": 29,
       "social_sources": {
-        "reddit": 0,
+        "reddit": 5,
         "youtube": 0,
         "mastodon": 0
       },
       "raw_social_sources": {
-        "reddit": 0,
+        "reddit": 5,
         "youtube": 0,
-        "mastodon": 0
-      },
-      "dominant_social_topic": "általános vállalati említés",
-      "top_social_topics": [],
-      "topic_sentiment": {},
-      "social_sentiment": "neutral",
-      "latest_items": [],
-      "background_items": [],
-      "quality_summary": {
-        "dashboard_items": 0,
-        "background_items": 0,
-        "discarded_items": 0,
-        "dashboard_relevance_threshold": 0.8,
-        "background_relevance_threshold": 0.5
-      },
-      "method_note": "Nyílt RSS és keresési alapú social signal. Nem teljes social listening, nem reprezentatív közvélemény-kutatás. A V1.4 verzió szigorúbb HU relevance szűrést, dashboard/background/discarded bontást és topic-szintű sentiment mezőt használ.",
-      "errors": []
-    },
-    {
-      "company": "CBA",
-      "social_mentions": 2,
-      "raw_social_mentions": 2,
-      "dashboard_mentions": 2,
-      "background_mentions": 0,
-      "discarded_mentions": 0,
-      "weighted_social_mentions": 2.0,
-      "hu_relevant_mentions": 2,
-      "social_index": 16,
-      "social_sources": {
-        "reddit": 0,
-        "youtube": 2,
-        "mastodon": 0
-      },
-      "raw_social_sources": {
-        "reddit": 0,
-        "youtube": 2,
         "mastodon": 0
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
         {
           "topic": "árak és akciók",
+          "score": 2.0
+        },
+        {
+          "topic": "bolti élmény",
+          "score": 2.0
+        },
+        {
+          "topic": "termék és minőség",
           "score": 2.0
         }
       ],
@@ -480,23 +502,139 @@
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
+        },
+        "bolti élmény": {
+          "positive": 0.0,
+          "neutral": 2.0,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        },
+        "termék és minőség": {
+          "positive": 0.0,
+          "neutral": 2.0,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
         }
       },
       "social_sentiment": "neutral",
       "latest_items": [
         {
-          "id": "b35cf2789b72f5ed",
-          "source": "youtube",
-          "company": "CBA",
-          "title": "CBA Príma akciós újság 07.16. - 07.22. - YouTube",
-          "summary": "CBA Príma akciós újság 07.16. - 07.22. YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9aTDExZmZoNTBvZk5WQjBNSS1PT3NZZHRlMzhlcFROdFZ6dVNiMWplXy1xVWV6eVlMT1J0bi1jcjNnMXdHWTAxaUJYY3FoVnlRbU5LUUpn?oc=5",
-          "published": "Mon, 13 Jul 2026 09:41:41 GMT",
-          "query": "site:youtube.com \"CBA Prima\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "id": "4ac37df649d53868",
+          "source": "reddit",
+          "company": "Auchan",
+          "title": "100%-ban magyar tulajdonú lett az Auchan Magyarország!",
+          "summary": "júniusban a Jellinek Dánielhez köthető Indotek Group megvásárolta az Auchan Retail Internationaltől az Auchan Magyarország fennmaradt 53 százalékos tulajdonrészét, ezzel a kereskedelmi lánc kizárólagos tulajdonosává vált. Az üzletlánc továbbra is az Auchan márkanév alatt működik tovább. Hosszú távú megállapodás biztosítja a márkanév használatát, a beszerzési együttműködések folytonosságát, valamint a vásárlók által megszokott saját márkás és külföldi importtermékek kínálatának megőrzését. A terv",
+          "url": "https://www.reddit.com/r/magyar/comments/1ugj47x/100ban_magyar_tulajdonú_lett_az_auchan/",
+          "published": "2026-06-26T21:08:54+00:00",
+          "query": "Auchan Magyarország",
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
           "item_sentiment": "neutral"
         },
+        {
+          "id": "f3d561d9193d00f2",
+          "source": "reddit",
+          "company": "Auchan",
+          "title": "100%-ban magyar tulajdonú lett az Auchan Magyarország!",
+          "summary": "submitted by /u/frutigerflow to r/hungary [link] [comments]",
+          "url": "https://www.reddit.com/r/hungary/comments/1ugbp77/100ban_magyar_tulajdonú_lett_az_auchan/",
+          "published": "2026-06-26T16:30:23+00:00",
+          "query": "Auchan Magyarország",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "b36b109d531358b5",
+          "source": "reddit",
+          "company": "Auchan",
+          "title": "100%-ban magyar tulajdonú lett az Auchan Magyarország!",
+          "summary": "júniusban a Jellinek Dánielhez köthető Indotek Group megvásárolta az Auchan Retail Internationaltől az Auchan Magyarország fennmaradt 53 százalékos tulajdonrészét, ezzel a kereskedelmi lánc kizárólagos tulajdonosává vált. Az üzletlánc továbbra is az Auchan márkanév alatt működik tovább. Hosszú távú megállapodás biztosítja a márkanév használatát, a beszerzési együttműködések folytonosságát, valamint a vásárlók által megszokott saját márkás és külföldi importtermékek kínálatának megőrzését. A terv",
+          "url": "https://www.reddit.com/r/magyarretro/comments/1ug9l75/100ban_magyar_tulajdonú_lett_az_auchan/",
+          "published": "2026-06-26T15:13:04+00:00",
+          "query": "Auchan Magyarország",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "53919208e89f8a48",
+          "source": "reddit",
+          "company": "Auchan",
+          "title": "Száz százalékban Jellinek Dániel cégéhez került az Auchan Magyarország",
+          "summary": "submitted by /u/telex_bot to r/telex [link] [comments]",
+          "url": "https://www.reddit.com/r/telex/comments/1ug42xx/száz_százalékban_jellinek_dániel_cégéhez_került/",
+          "published": "2026-06-26T11:24:26+00:00",
+          "query": "Auchan Magyarország",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "4acbf4a072c70384",
+          "source": "reddit",
+          "company": "Auchan",
+          "title": "Száz százalékban Jellinek Dániel cégéhez került az Auchan Magyarország",
+          "summary": "submitted by /u/SzegedNewsBotka to r/buborek [link] [comments]",
+          "url": "https://www.reddit.com/r/buborek/comments/1ug2j7m/száz_százalékban_jellinek_dániel_cégéhez_került/",
+          "published": "2026-06-26T10:02:53+00:00",
+          "query": "Auchan Magyarország",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        }
+      ],
+      "background_items": [],
+      "quality_summary": {
+        "dashboard_items": 5,
+        "background_items": 0,
+        "discarded_items": 0,
+        "dashboard_relevance_threshold": 0.8,
+        "background_relevance_threshold": 0.5
+      },
+      "method_note": "Nyílt RSS és keresési alapú social signal. Nem teljes social listening, nem reprezentatív közvélemény-kutatás. A V1.4 verzió szigorúbb HU relevance szűrést, dashboard/background/discarded bontást és topic-szintű sentiment mezőt használ.",
+      "errors": []
+    },
+    {
+      "company": "CBA",
+      "social_mentions": 1,
+      "raw_social_mentions": 1,
+      "dashboard_mentions": 1,
+      "background_mentions": 0,
+      "discarded_mentions": 0,
+      "weighted_social_mentions": 1.0,
+      "hu_relevant_mentions": 1,
+      "social_index": 16,
+      "social_sources": {
+        "reddit": 0,
+        "youtube": 1,
+        "mastodon": 0
+      },
+      "raw_social_sources": {
+        "reddit": 0,
+        "youtube": 1,
+        "mastodon": 0
+      },
+      "dominant_social_topic": "árak és akciók",
+      "top_social_topics": [
+        {
+          "topic": "árak és akciók",
+          "score": 1.0
+        }
+      ],
+      "topic_sentiment": {
+        "árak és akciók": {
+          "positive": 0.0,
+          "neutral": 1.0,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        }
+      },
+      "social_sentiment": "neutral",
+      "latest_items": [
         {
           "id": "ad37c605a541e686",
           "source": "youtube",
@@ -513,7 +651,7 @@
       ],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 2,
+        "dashboard_items": 1,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
