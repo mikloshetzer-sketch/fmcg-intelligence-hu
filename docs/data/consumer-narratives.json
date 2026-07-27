@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-20T10:19:08Z",
+  "updated_at": "2026-07-27T10:49:20Z",
   "status": "ok",
   "source": "local_fmcg_osint_layers",
   "method": "keyword_weighted_consumer_narrative_engine_v1",
@@ -26,14 +26,14 @@
     "scores": {
       "promotion_attention": 0,
       "price_sensitivity": 100,
-      "employment_attention": 0,
+      "employment_attention": 37,
       "customer_experience": 0,
       "digital_attention": 0
     },
     "raw_scores": {
       "promotion_attention": 0.0,
       "price_sensitivity": 3.0,
-      "employment_attention": 0.0,
+      "employment_attention": 1.1,
       "customer_experience": 0.0,
       "digital_attention": 0.0
     },
@@ -55,7 +55,7 @@
       "linkedin": {
         "promotion_attention": 0.0,
         "price_sensitivity": 0.0,
-        "employment_attention": 0.0,
+        "employment_attention": 1.1,
         "customer_experience": 0.0,
         "digital_attention": 0.0
       },
@@ -68,7 +68,7 @@
       }
     },
     "evidence_counts": {
-      "news_texts": 5,
+      "news_texts": 9,
       "social_texts": 1,
       "linkedin_texts": 1,
       "jobs_texts": 0
@@ -85,14 +85,14 @@
       "scores": {
         "promotion_attention": 0,
         "price_sensitivity": 100,
-        "employment_attention": 0,
+        "employment_attention": 37,
         "customer_experience": 0,
         "digital_attention": 0
       },
       "raw_scores": {
         "promotion_attention": 0.0,
         "price_sensitivity": 3.0,
-        "employment_attention": 0.0,
+        "employment_attention": 1.1,
         "customer_experience": 0.0,
         "digital_attention": 0.0
       },
@@ -114,7 +114,7 @@
         "linkedin": {
           "promotion_attention": 0.0,
           "price_sensitivity": 0.0,
-          "employment_attention": 0.0,
+          "employment_attention": 1.1,
           "customer_experience": 0.0,
           "digital_attention": 0.0
         },
@@ -127,7 +127,7 @@
         }
       },
       "evidence_counts": {
-        "news_texts": 5,
+        "news_texts": 9,
         "social_texts": 1,
         "linkedin_texts": 1,
         "jobs_texts": 0
@@ -185,7 +185,7 @@
         }
       },
       "evidence_counts": {
-        "news_texts": 1,
+        "news_texts": 3,
         "social_texts": 1,
         "linkedin_texts": 1,
         "jobs_texts": 0
@@ -243,7 +243,7 @@
         }
       },
       "evidence_counts": {
-        "news_texts": 5,
+        "news_texts": 3,
         "social_texts": 1,
         "linkedin_texts": 1,
         "jobs_texts": 0
@@ -301,7 +301,7 @@
         }
       },
       "evidence_counts": {
-        "news_texts": 3,
+        "news_texts": 1,
         "social_texts": 1,
         "linkedin_texts": 1,
         "jobs_texts": 0
@@ -359,7 +359,7 @@
         }
       },
       "evidence_counts": {
-        "news_texts": 9,
+        "news_texts": 5,
         "social_texts": 1,
         "linkedin_texts": 1,
         "jobs_texts": 0
@@ -417,7 +417,7 @@
         }
       },
       "evidence_counts": {
-        "news_texts": 3,
+        "news_texts": 5,
         "social_texts": 1,
         "linkedin_texts": 1,
         "jobs_texts": 0
