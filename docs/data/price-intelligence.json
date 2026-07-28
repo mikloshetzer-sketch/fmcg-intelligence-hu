@@ -1,76 +1,76 @@
 {
-  "updated_at": "2026-07-27T06:52:59Z",
+  "updated_at": "2026-07-28T06:16:41Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "method": "unit-filtered product-level relative price index",
   "ranking": [
     {
       "company": "Lidl",
-      "price_index": 96,
-      "basket_price_huf": 19007.65,
+      "price_index": 95,
+      "basket_price_huf": 18951.32,
       "covered_products": 23,
       "index_coverage": 23
     },
     {
       "company": "Auchan",
-      "price_index": 100,
-      "basket_price_huf": 20237.0,
+      "price_index": 98,
+      "basket_price_huf": 20120.0,
       "covered_products": 25,
       "index_coverage": 24
     },
     {
       "company": "ALDI",
-      "price_index": 101,
-      "basket_price_huf": 19412.52,
+      "price_index": 99,
+      "basket_price_huf": 19407.52,
       "covered_products": 23,
       "index_coverage": 23
     },
     {
       "company": "SPAR",
-      "price_index": 102,
-      "basket_price_huf": 19729.57,
+      "price_index": 100,
+      "basket_price_huf": 19723.38,
       "covered_products": 24,
       "index_coverage": 24
     },
     {
-      "company": "Penny",
-      "price_index": null,
-      "basket_price_huf": 0,
-      "covered_products": 0,
-      "index_coverage": 0
+      "company": "Tesco",
+      "price_index": 103,
+      "basket_price_huf": 20819.5,
+      "covered_products": 25,
+      "index_coverage": 24
     },
     {
-      "company": "Tesco",
-      "price_index": null,
-      "basket_price_huf": 0,
-      "covered_products": 0,
-      "index_coverage": 0
+      "company": "Penny",
+      "price_index": 104,
+      "basket_price_huf": 20447.03,
+      "covered_products": 23,
+      "index_coverage": 23
     }
   ],
   "weekly_change": [
     {
       "company": "ALDI",
-      "change_pct": 4.12
+      "change_pct": -1.98
     },
     {
       "company": "Auchan",
-      "change_pct": 3.09
+      "change_pct": -2.0
     },
     {
       "company": "Lidl",
-      "change_pct": 0
+      "change_pct": -1.04
     },
     {
       "company": "Penny",
-      "change_pct": null
-    },
-    {
-      "company": "SPAR",
       "change_pct": 0
     },
     {
+      "company": "SPAR",
+      "change_pct": -1.96
+    },
+    {
       "company": "Tesco",
-      "change_pct": null
+      "change_pct": 0
     }
   ]
 }
