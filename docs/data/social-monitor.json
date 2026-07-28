@@ -1,89 +1,56 @@
 {
-  "updated_at": "2026-07-28T14:57:57.612987+00:00",
+  "updated_at": "2026-07-28T19:59:53.016814+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-07-28T14:57:57.612987+00:00",
+    "updated_at": "2026-07-28T19:59:53.016814+00:00",
     "leader_social": "Lidl",
-    "leader_social_index": 63,
+    "leader_social_index": 33,
     "dominant_social_topic": "árak és akciók",
     "overall_social_sentiment": "neutral"
   },
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 18,
-      "raw_social_mentions": 18,
-      "dashboard_mentions": 16,
-      "background_mentions": 2,
+      "social_mentions": 6,
+      "raw_social_mentions": 6,
+      "dashboard_mentions": 6,
+      "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 17.0,
-      "hu_relevant_mentions": 16,
-      "social_index": 63,
+      "weighted_social_mentions": 6.0,
+      "hu_relevant_mentions": 6,
+      "social_index": 33,
       "social_sources": {
-        "reddit": 11,
-        "youtube": 7,
+        "reddit": 3,
+        "youtube": 3,
         "mastodon": 0
       },
       "raw_social_sources": {
-        "reddit": 11,
-        "youtube": 7,
+        "reddit": 3,
+        "youtube": 3,
         "mastodon": 0
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 14.0
-        },
-        {
-          "topic": "digitalizáció és önkiszolgálás",
-          "score": 8.5
-        },
-        {
-          "topic": "bolti élmény",
           "score": 4.0
         },
         {
-          "topic": "munkaerő és foglalkoztatás",
-          "score": 3.0
-        },
-        {
-          "topic": "termék és minőség",
+          "topic": "bolti élmény",
           "score": 1.0
         }
       ],
       "topic_sentiment": {
         "árak és akciók": {
-          "positive": 4.0,
-          "neutral": 9.0,
+          "positive": 0.0,
+          "neutral": 4.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
         },
-        "munkaerő és foglalkoztatás": {
-          "positive": 2.0,
-          "neutral": 1.0,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "positive"
-        },
-        "digitalizáció és önkiszolgálás": {
-          "positive": 4.0,
-          "neutral": 1.5,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "positive"
-        },
         "bolti élmény": {
-          "positive": 2.0,
-          "neutral": 1.0,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "positive"
-        },
-        "termék és minőség": {
           "positive": 0.0,
           "neutral": 1.0,
           "negative": 0.0,
@@ -91,99 +58,8 @@
           "dominant": "neutral"
         }
       },
-      "social_sentiment": "positive",
+      "social_sentiment": "neutral",
       "latest_items": [
-        {
-          "id": "915dfc0231fe217a",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Warum werde ich beim Lidl Self Checkout in letzter Zeit jedes Mal kontrolliert?",
-          "summary": "Ich gehe immer zu Lidl einkaufen und bezahle fast immer an der self checkout Kasse. Ich scanne auch immer meine Lidl Plus App. Ich wurde bis vor kurzem seit den 1-2 Jahren wo es die Kassen hier gibt noch nie &quot;Stichprobenartig&quot; kontrolliert, aber seit 7 Einkäufen oder so muss wirklich JEDES mal mein Warenkorb durch einen Mitarbeiter geprüft werden, auch wenn ich nur 1-3 Artikel habe. Ich habe noch NIE bei Lidl an der Kasse etwas nicht gescannt oder geklaut. Ich kann mir nur vorstellen, ",
-          "url": "https://www.reddit.com/r/WerWieWas/comments/1v8v4me/warum_werde_ich_beim_lidl_self_checkout_in/",
-          "published": "2026-07-28T11:03:22+00:00",
-          "query": "Lidl Plus",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "positive"
-        },
-        {
-          "id": "1de912a3d27ad21c",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Weekly Shop for 2 With a Few Essentials... And a Bucket",
-          "summary": "£77.60 at Lidl plus £7-ish at Sainsbury's for the Heck sausages and dill. To feed two people with very active jobs and big appetites. Buckets were 99p which I was chuffed with (yes I know I'm exciting)! submitted by /u/GingerNinjaThe4th to r/whatsinyourcart [link] [comments]",
-          "url": "https://www.reddit.com/r/whatsinyourcart/comments/1v7z3lh/weekly_shop_for_2_with_a_few_essentials_and_a/",
-          "published": "2026-07-27T12:33:59+00:00",
-          "query": "Lidl Plus",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "positive"
-        },
-        {
-          "id": "77290edf42dc6f67",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "My thoughts on the pixel 10 pro",
-          "summary": "Before this phone I had a Samsung Galaxy A52s that literally unglued itself (classic Samsung adhesive failure). After that died, my dad took some cheap carrier deal and got an Oppo A5 Pro. I used it for about 6 months, and honestly, the signal on that thing was insane (the only good thing on that phone). My girlfriend has an iPhone 15 Pro and would constantly lose service in places like Lidl, so she’d end up using my cheap Oppo just to load her Lidl Plus app because I’d still have solid 4G. ​Now",
-          "url": "https://www.reddit.com/r/Pixel10Pro/comments/1v7wgj7/my_thoughts_on_the_pixel_10_pro/",
-          "published": "2026-07-27T10:26:45+00:00",
-          "query": "Lidl Plus",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "positive"
-        },
-        {
-          "id": "d58391c3a33a4f49",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "An analysis of the bonus point scheme in the new Lidl Plus app",
-          "summary": "First of all, I don't like Lidl's gamification of grocery shopping. I prefer the consistent pricing at Trader Joe's because I don't feel ripped off when I buy something and it goes on sale the next week. That said, at Lidl, I can stock up on items I use when they are on sale. Lidl brand mayonnaise, pickles, soft drinks, cookies, butter, cheese, etc., really any of their store brand stuff, are less expensive than anything available to me in person or online, when they are on sale. I also get good",
-          "url": "https://www.reddit.com/r/LidlUScustomers/comments/1v6fafk/an_analysis_of_the_bonus_point_scheme_in_the_new/",
-          "published": "2026-07-25T18:02:46+00:00",
-          "query": "Lidl Plus",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "positive"
-        },
-        {
-          "id": "e9d715fea5cca2fd",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Six weeks in and feeding one person is somehow the hardest chore",
-          "summary": "Moved for work 6 weeks ago into a tiny one bedroom, first place without my parents. I'm 24, thought I'd be fine. Tuesday at 7:30 I walked in, work shoes still on, and stared: one fork in the sink, laundry I forgot in the washer, zero toilet paper, and a fridge holding mustard, half a cucumber, and a lime that looked disappointed with me. When I lived at home dinner was just ready when I got off work. Detergent, toilet paper, all of it appeared. Now after a full day I cannot get myself to the sup",
-          "url": "https://www.reddit.com/r/LivingAlone/comments/1v3awpi/six_weeks_in_and_feeding_one_person_is_somehow/",
-          "published": "2026-07-22T09:18:09+00:00",
-          "query": "Lidl Plus",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "81e7461949cbad60",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "[139€ statt 175€ | -21%] CRIVIT SUP Aquaview Stand-up-Paddle-Board mit Sichtfenster, 315 × 84 cm, bis 140 kg @ Lidl",
-          "summary": "➡️ Zum Deal bei Lidl Preis: 175€ → 139€ (21% Ersparnis) ⏰ Gültig bis: Fr, 24.07.2026 22:00 Uhr Preis: 139€ statt 175€ bei Lidl, erhältlich vom 20.07. bis 25.07.2026. Mit dem Lidl Plus Gratis-Versand-Coupon entfallen die Versandkosten, andernfalls fallen reguläre Versandkosten an. Das Board misst 315 × 84 × 15 cm, trägt bis 140 kg und kommt inklusive Rucksack, Leash, Reparaturset und Finne – Paddel und Luftpumpe sind jedoch nicht enthalten und müssen separat gekauft werden. Besonderheit ist ein S",
-          "url": "https://www.reddit.com/r/deals_de/comments/1v1njmo/139_statt_175_21_crivit_sup_aquaview/",
-          "published": "2026-07-20T14:43:31+00:00",
-          "query": "Lidl Plus",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "941e31447d2c67ab",
-          "source": "youtube",
-          "company": "Lidl",
-          "title": "🇭🇺 LIDL Magyarország Nonfood kínálatunk - 29 hét Érvényes 07.16 - 07.22 2026 - YouTube",
-          "summary": "🇭🇺 LIDL Magyarország Nonfood kínálatunk - 29 hét Érvényes 07.16 - 07.22 2026 YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1IS1pHcHdKZWllVHQtYUxwODNVNktCOEVQRDIyNlRydzlSbUcyb2lmdU1XejlvR1pDLXRkbjM5ZklGZE9OWFkwYS1RSDB6czg4bGtndzZR?oc=5",
-          "published": "Tue, 14 Jul 2026 15:17:00 GMT",
-          "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
         {
           "id": "8ca47da029020938",
           "source": "reddit",
@@ -224,19 +100,6 @@
           "item_sentiment": "neutral"
         },
         {
-          "id": "3e372b35caccd494",
-          "source": "youtube",
-          "company": "Lidl",
-          "title": "🇭🇺 LIDL Magyarország Akciós újság – 20. hét Érvényes 05.14 - 05.20 2026 TV verzió - YouTube",
-          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 20. hét Érvényes 05.14 - 05.20 2026 TV verzió YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA1NXYtejM2NjZ2VUZ6XzhQQ28xeUg2YjM4M3ZocjJYZTBZWElIM1ZDVFdWMFBkTnBNU0s4VVF1WUNNb2NxUVlwbm9XOUlMdjN6bXJVYmF3?oc=5",
-          "published": "Sun, 10 May 2026 19:27:46 GMT",
-          "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
           "id": "e43b52ba20843594",
           "source": "youtube",
           "company": "Lidl",
@@ -248,39 +111,38 @@
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
           "item_sentiment": "neutral"
-        }
-      ],
-      "background_items": [
+        },
         {
-          "id": "f4090fcf2f789b5f",
-          "source": "reddit",
+          "id": "5734259504cf0014",
+          "source": "youtube",
           "company": "Lidl",
-          "title": "Receipts",
-          "summary": "I see there is a receipt tracker in the new app, and on the website. I only see one receipt, but if the app starts picking up our receipt history quickly and accurately, will be at least one small win for Lidl Plus. submitted by /u/NCSC10 to r/LidlUS [link] [comments]",
-          "url": "https://www.reddit.com/r/LidlUS/comments/1v7k0fp/receipts/",
-          "published": "2026-07-26T23:44:27+00:00",
-          "query": "Lidl Plus",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
+          "title": "🇭🇺 LIDL Magyarország Akciós újság – 14. hét Érvényes 04.01-től 2026 - YouTube",
+          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 14. hét Érvényes 04.01-től 2026 YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1SX2lrdXdqa2VUSEQzSW9BUHk5TVJqQWktZVFYdEloVTA2NWZJVjYtY1EzX3FhN2JPRmM5Z29saVIyTktJUVB0Q0p3M2w0eDh1VmJZNlJn?oc=5",
+          "published": "Sat, 28 Mar 2026 22:33:54 GMT",
+          "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
           "item_sentiment": "neutral"
         },
         {
-          "id": "b84ac3489023b1f5",
-          "source": "reddit",
+          "id": "5d9b5769bb53bb1c",
+          "source": "youtube",
           "company": "Lidl",
-          "title": "LidlPlus_NL",
-          "summary": "Lidl plus aanbiedingen om te delen [link]",
-          "url": "https://www.reddit.com/r/LidlPlus_NL/",
-          "published": "",
-          "query": "Lidl Plus",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
+          "title": "LIDL Akciós újság – 09. hét Érvényes 02.26 - 2026.03.01 TV verzió - YouTube",
+          "summary": "LIDL Akciós újság – 09. hét Érvényes 02.26 - 2026.03.01 TV verzió YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9TSlkzaUJzNWxDcXlvS3ZneW5jZnRzTm5wcjNqdnFrbXZ5Q3pmbHRrcnVjRWYwQkZCMFZFX0gwYWZzU2dLd0hvM1l5UGlGVHhfcGR0WnNn?oc=5",
+          "published": "Mon, 23 Feb 2026 15:41:35 GMT",
+          "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
           "item_sentiment": "neutral"
         }
       ],
+      "background_items": [],
       "quality_summary": {
-        "dashboard_items": 16,
-        "background_items": 2,
+        "dashboard_items": 6,
+        "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
