@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-07-28T03:45:28.144832+00:00",
+  "updated_at": "2026-07-28T09:16:38.085833+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-07-28T03:45:28.144832+00:00",
+    "updated_at": "2026-07-28T09:16:38.085833+00:00",
     "leader_social": "Lidl",
     "leader_social_index": 48,
     "dominant_social_topic": "árak és akciók",
@@ -85,19 +85,6 @@
           "item_sentiment": "neutral"
         },
         {
-          "id": "214db63723c52e30",
-          "source": "youtube",
-          "company": "Lidl",
-          "title": "🇭🇺 LIDL Magyarország Akciós újság – 29 hét Érvényes 07.16 - 07.22 2026 - YouTube",
-          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 29 hét Érvényes 07.16 - 07.22 2026 YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE85dmJxRFNDa2FPcXZkakJLN2pHY3VObzBaLTlac0dIWEUxVWNUaEM3VVIwRlJmejloMlp6UDhScnlwOGk3TFc0RTRPU3Y0TS1ZdnF2djdR?oc=5",
-          "published": "Tue, 14 Jul 2026 15:14:53 GMT",
-          "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
           "id": "8ca47da029020938",
           "source": "reddit",
           "company": "Lidl",
@@ -170,6 +157,19 @@
           "summary": "🇭🇺 LIDL Magyarország Akciós újság – 19. hét Érvényes 05.07 -től 2026 YouTube",
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFB6Nzk5dXJfVmw1RWVSZ0dZVHpHamlhczk1dW9nSUxUUFBXTnUyRlN4Si0xODdNZW1KamdhZU43SXdLOE1FWGFJZjRZNzFpWVN4NUx6bHlR?oc=5",
           "published": "Sun, 03 May 2026 19:43:27 GMT",
+          "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "4755f03efbcb8e9b",
+          "source": "youtube",
+          "company": "Lidl",
+          "title": "🇭🇺 LIDL Magyarország Akciós újság – 17. hét Érvényes 04.23-től 2026 TV verzió - YouTube",
+          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 17. hét Érvényes 04.23-től 2026 TV verzió YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA1STV5Mk5TLU9nQzd5ODBveTdiQjBuSzg5d3d5R2hoMXl5anBQcGo2cGVBR0FUenA3bGtEVkFNNkFpNTJwRW5mZ1kzOVFPQnZ3b1dRdzhB?oc=5",
+          "published": "Sun, 19 Apr 2026 19:01:16 GMT",
           "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
