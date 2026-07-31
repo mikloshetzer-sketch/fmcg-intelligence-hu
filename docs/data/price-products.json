@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-30T06:15:17Z",
+  "updated_at": "2026-07-31T06:35:04Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -857,14 +857,24 @@
       "category": "Gyümölcs",
       "expected_unit": "kg",
       "prices": {
+        "SPAR": 699.0,
         "ALDI": 599.0,
         "Lidl": 599.0,
         "Penny": 699.0,
         "Tesco": 699.0,
-        "SPAR": 699.0,
         "Auchan": 749.0
       },
       "selected_products": {
+        "SPAR": {
+          "source_product_id": "8591189960848",
+          "source_product_name": "Banán lédig",
+          "amount": 699.0,
+          "unit_amount": 699.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "ALDI": {
           "source_product_id": "aldi-21418",
           "source_product_name": "Banán lédig",
@@ -898,16 +908,6 @@
         "Tesco": {
           "source_product_id": "2870100000000",
           "source_product_name": "Banán lédig    ",
-          "amount": 699.0,
-          "unit_amount": 699.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "SPAR": {
-          "source_product_id": "8591189960848",
-          "source_product_name": "Banán lédig",
           "amount": 699.0,
           "unit_amount": 699.0,
           "unit": "kg",
@@ -1015,7 +1015,7 @@
         "Lidl": 385.0,
         "Penny": 449.0,
         "Auchan": 447.0,
-        "SPAR": 486.0,
+        "SPAR": 423.0,
         "ALDI": 499.0
       },
       "selected_products": {
@@ -1060,10 +1060,10 @@
           "price_type": "NORMAL"
         },
         "SPAR": {
-          "source_product_id": "5999559680304",
-          "source_product_name": "Fürtös paradicsom lédig",
-          "amount": 486.0,
-          "unit_amount": 486.0,
+          "source_product_id": "5999885209248",
+          "source_product_name": "Bugaci fürtös paradicsom lédig",
+          "amount": 423.0,
+          "unit_amount": 423.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1091,9 +1091,9 @@
         "SPAR": 563.33,
         "Lidl": 598.67,
         "ALDI": 625.0,
+        "Penny": 799.0,
         "Auchan": 726.0,
-        "Tesco": 757.0,
-        "Penny": 762.0
+        "Tesco": 757.0
       },
       "selected_products": {
         "SPAR": {
@@ -1126,6 +1126,16 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
+        "Penny": {
+          "source_product_id": "penny-308",
+          "source_product_name": "Magyar tv paprika lédig kg",
+          "amount": 799.0,
+          "unit_amount": 799.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "Auchan": {
           "source_product_id": "2182050000006",
           "source_product_name": "Étkezési paprika Ft/kg",
@@ -1141,16 +1151,6 @@
           "source_product_name": "PAPRIKA LÉDIG QQ",
           "amount": 757.0,
           "unit_amount": 757.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-308",
-          "source_product_name": "Magyar tv paprika lédig kg",
-          "amount": 762.0,
-          "unit_amount": 762.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",

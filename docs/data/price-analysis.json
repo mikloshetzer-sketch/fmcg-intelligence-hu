@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-30T06:15:17Z",
+  "updated_at": "2026-07-31T06:35:04Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "method": "product-level price leadership and spread analysis",
@@ -365,7 +365,7 @@
         },
         {
           "company": "SPAR",
-          "category_index": 99,
+          "category_index": 95,
           "coverage": 3
         },
         {
@@ -380,12 +380,12 @@
         },
         {
           "company": "ALDI",
-          "category_index": 102,
+          "category_index": 103,
           "coverage": 3
         },
         {
           "company": "Penny",
-          "category_index": 108,
+          "category_index": 110,
           "coverage": 3
         }
       ]
@@ -453,6 +453,18 @@
       "coverage": 6
     },
     {
+      "product": "Zöldpaprika",
+      "category": "Zöldség",
+      "cheapest_company": "SPAR",
+      "cheapest_price": 563.33,
+      "most_expensive_company": "Penny",
+      "most_expensive_price": 799.0,
+      "average_price": 678.17,
+      "spread_pct": 41.84,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 6
+    },
+    {
       "product": "Ásványvíz",
       "category": "Ital",
       "cheapest_company": "Tesco",
@@ -461,18 +473,6 @@
       "most_expensive_price": 93.0,
       "average_price": 70.5,
       "spread_pct": 40.91,
-      "competition_intensity": "nagy árszórás",
-      "coverage": 6
-    },
-    {
-      "product": "Zöldpaprika",
-      "category": "Zöldség",
-      "cheapest_company": "SPAR",
-      "cheapest_price": 563.33,
-      "most_expensive_company": "Penny",
-      "most_expensive_price": 762.0,
-      "average_price": 672.0,
-      "spread_pct": 35.27,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
@@ -495,7 +495,7 @@
       "cheapest_price": 385.0,
       "most_expensive_company": "ALDI",
       "most_expensive_price": 499.0,
-      "average_price": 441.83,
+      "average_price": 431.33,
       "spread_pct": 29.61,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
@@ -718,16 +718,16 @@
       "coverage": 6
     },
     {
-      "product": "Ásványvíz",
-      "category": "Ital",
-      "spread_pct": 40.91,
+      "product": "Zöldpaprika",
+      "category": "Zöldség",
+      "spread_pct": 41.84,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
     {
-      "product": "Zöldpaprika",
-      "category": "Zöldség",
-      "spread_pct": 35.27,
+      "product": "Ásványvíz",
+      "category": "Ital",
+      "spread_pct": 40.91,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
