@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-31T06:35:04Z",
+  "updated_at": "2026-08-01T06:18:52Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -241,14 +241,24 @@
       "category": "Tejtermék",
       "expected_unit": "kg",
       "prices": {
+        "Lidl": 2390.0,
         "Penny": 2390.0,
         "SPAR": 1990.0,
         "ALDI": 2050.0,
         "Auchan": 2389.0,
-        "Lidl": 2390.0,
         "Tesco": 2590.0
       },
       "selected_products": {
+        "Lidl": {
+          "source_product_id": "lidl-0001956",
+          "source_product_name": "Pilos Trappista sajt   ca1,4kg ",
+          "amount": 2390.0,
+          "unit_amount": 2390.0,
+          "unit": "kg",
+          "unit_title": "db",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "Penny": {
           "source_product_id": "penny-1251",
           "source_product_name": "Sissy trappista sajt egész kg",
@@ -284,16 +294,6 @@
           "source_product_name": "Auchan Kedvenc trappista sajt Ft/kg",
           "amount": 2389.0,
           "unit_amount": 2389.0,
-          "unit": "kg",
-          "unit_title": "db",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Lidl": {
-          "source_product_id": "lidl-0001956",
-          "source_product_name": "Pilos Trappista sajt   ca1,4kg ",
-          "amount": 2390.0,
-          "unit_amount": 2390.0,
           "unit": "kg",
           "unit_title": "db",
           "packaging": "1",
@@ -473,7 +473,7 @@
       "expected_unit": "kg",
       "prices": {
         "Auchan": 1199.0,
-        "Tesco": 1259.0,
+        "Tesco": 1278.0,
         "SPAR": 1402.0,
         "Lidl": 1465.0,
         "ALDI": 1465.0,
@@ -493,8 +493,8 @@
         "Tesco": {
           "source_product_id": "2870240000000",
           "source_product_name": "16. SERTES COMB pultos QQ",
-          "amount": 1259.0,
-          "unit_amount": 1259.0,
+          "amount": 1278.0,
+          "unit_amount": 1278.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -627,10 +627,10 @@
       "expected_unit": "kg",
       "prices": {
         "ALDI": 1775.0,
+        "Penny": 1789.0,
         "Auchan": 1833.0,
         "Tesco": 1846.0,
         "Lidl": 1859.0,
-        "Penny": 1979.0,
         "SPAR": 2018.0
       },
       "selected_products": {
@@ -639,6 +639,16 @@
           "source_product_name": "Húsmester csirkemellfilé kg vákuumcsomagolt",
           "amount": 1775.0,
           "unit_amount": 1775.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Penny": {
+          "source_product_id": "penny-10248",
+          "source_product_name": "Friss csirkemellfilé kg",
+          "amount": 1789.0,
+          "unit_amount": 1789.0,
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "1",
@@ -671,16 +681,6 @@
           "unit_amount": 1859.0,
           "unit": "kg",
           "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-10248",
-          "source_product_name": "Friss csirkemellfilé kg",
-          "amount": 1979.0,
-          "unit_amount": 1979.0,
-          "unit": "kg",
-          "unit_title": "csomag",
           "packaging": "1",
           "price_type": "NORMAL"
         },
@@ -785,7 +785,7 @@
         "Auchan": 412.0,
         "SPAR": 431.5,
         "Tesco": 479.0,
-        "Penny": 599.0
+        "Penny": 499.0
       },
       "selected_products": {
         "ALDI": {
@@ -841,8 +841,8 @@
         "Penny": {
           "source_product_id": "penny-102",
           "source_product_name": "Idared alma lédig kg",
-          "amount": 599.0,
-          "unit_amount": 599.0,
+          "amount": 499.0,
+          "unit_amount": 499.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1726,20 +1726,20 @@
       "category": "Háztartás",
       "expected_unit": "db",
       "prices": {
-        "SPAR": 112.46,
+        "SPAR": 112.25,
         "Tesco": 117.25,
         "Auchan": 46.0,
         "ALDI": 119.9
       },
       "selected_products": {
         "SPAR": {
-          "source_product_id": "5999139408656",
-          "source_product_name": "Lovely eü.papír fehér 3r 24t",
-          "amount": 2699.0,
-          "unit_amount": 112.46,
+          "source_product_id": "5999139407888",
+          "source_product_name": "S-Budget illatmentes toalettpapír 2 rétegű 4 tekercs",
+          "amount": 449.0,
+          "unit_amount": 112.25,
           "unit": "db",
           "unit_title": "csomag",
-          "packaging": "24",
+          "packaging": "4",
           "price_type": "NORMAL"
         },
         "Tesco": {
