@@ -1,165 +1,65 @@
 {
-  "updated_at": "2026-08-01T19:41:57.912024+00:00",
+  "updated_at": "2026-08-02T04:03:02.558922+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-08-01T19:41:57.912024+00:00",
+    "updated_at": "2026-08-02T04:03:02.558922+00:00",
     "leader_social": "Lidl",
-    "leader_social_index": 44,
+    "leader_social_index": 16,
     "dominant_social_topic": "árak és akciók",
     "overall_social_sentiment": "neutral"
   },
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 11,
-      "raw_social_mentions": 13,
-      "dashboard_mentions": 9,
-      "background_mentions": 2,
-      "discarded_mentions": 2,
-      "weighted_social_mentions": 10.0,
-      "hu_relevant_mentions": 9,
-      "social_index": 44,
+      "social_mentions": 3,
+      "raw_social_mentions": 3,
+      "dashboard_mentions": 3,
+      "background_mentions": 0,
+      "discarded_mentions": 0,
+      "weighted_social_mentions": 3.0,
+      "hu_relevant_mentions": 3,
+      "social_index": 16,
       "social_sources": {
-        "reddit": 11,
+        "reddit": 3,
         "youtube": 0,
         "mastodon": 0
       },
       "raw_social_sources": {
-        "reddit": 13,
+        "reddit": 3,
         "youtube": 0,
         "mastodon": 0
       },
-      "dominant_social_topic": "digitalizáció és önkiszolgálás",
+      "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
         {
-          "topic": "digitalizáció és önkiszolgálás",
-          "score": 8.5
-        },
-        {
           "topic": "árak és akciók",
-          "score": 8.0
+          "score": 1.0
         },
         {
           "topic": "bolti élmény",
-          "score": 4.0
-        },
-        {
-          "topic": "munkaerő és foglalkoztatás",
-          "score": 3.0
+          "score": 1.0
         }
       ],
       "topic_sentiment": {
         "árak és akciók": {
-          "positive": 4.0,
-          "neutral": 3.0,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "positive"
-        },
-        "munkaerő és foglalkoztatás": {
-          "positive": 2.0,
+          "positive": 0.0,
           "neutral": 1.0,
           "negative": 0.0,
           "mixed": 0.0,
-          "dominant": "positive"
-        },
-        "digitalizáció és önkiszolgálás": {
-          "positive": 4.0,
-          "neutral": 1.5,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "positive"
+          "dominant": "neutral"
         },
         "bolti élmény": {
-          "positive": 2.0,
+          "positive": 0.0,
           "neutral": 1.0,
           "negative": 0.0,
           "mixed": 0.0,
-          "dominant": "positive"
+          "dominant": "neutral"
         }
       },
-      "social_sentiment": "positive",
+      "social_sentiment": "neutral",
       "latest_items": [
-        {
-          "id": "84a8a3cc8e6903ff",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "[149€ statt 199€ | -25%] Crivit X F2 SUP Allround, Doppelkammer, 150 kg Tragkraft @ Lidl",
-          "summary": "➡️ Zum Deal bei Lidl Preis: 199€ → 149€ (25% Ersparnis) ⏰ Gültig bis: Do, 30.07.2026 21:59 Uhr Über die Lidl Plus App ist das SUP-Board heute für 149€ statt 199€ erhältlich (50€ Ersparnis). Die App ist Voraussetzung für den reduzierten Preis. Das Board verfügt über eine Doppelkammer-Konstruktion und eine Tragkraft von 150 kg. submitted by /u/ethereor to r/deals_de [link] [comments]",
-          "url": "https://www.reddit.com/r/deals_de/comments/1vb5g1d/149_statt_199_25_crivit_x_f2_sup_allround/",
-          "published": "2026-07-30T20:35:15+00:00",
-          "query": "Lidl Plus",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "155fde03f525fc4f",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "cod reducere 20% flixbus",
-          "summary": "salutare! nu știu câți dintre voi călătoriți cu flixbus dar pentru mine este o alternativă bună în ultimul timp, trenul fiind mult prea scump pentru ce oferă (în afară de ploșnițe, nu sunt mare fană). iar pentru că suntem o gașcă de studenți scârțari care vor să ajungă la mare pe ieftineală, disperați fiind după un voucher, oricât de mic, după adânci săpături am găsit această modalitate prin care puteți primi un cod de 20% reducere la flixbus, care bănuiesc că e valabil în toată europa, dar cel ",
-          "url": "https://www.reddit.com/r/roFrugal/comments/1va8q61/cod_reducere_20_flixbus/",
-          "published": "2026-07-29T20:53:00+00:00",
-          "query": "Lidl Plus",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "915dfc0231fe217a",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Warum werde ich beim Lidl Self Checkout in letzter Zeit jedes Mal kontrolliert?",
-          "summary": "Ich gehe immer zu Lidl einkaufen und bezahle fast immer an der self checkout Kasse. Ich scanne auch immer meine Lidl Plus App. Ich wurde bis vor kurzem seit den 1-2 Jahren wo es die Kassen hier gibt noch nie &quot;Stichprobenartig&quot; kontrolliert, aber seit 7 Einkäufen oder so muss wirklich JEDES mal mein Warenkorb durch einen Mitarbeiter geprüft werden, auch wenn ich nur 1-3 Artikel habe. Ich habe noch NIE bei Lidl an der Kasse etwas nicht gescannt oder geklaut. Ich kann mir nur vorstellen, ",
-          "url": "https://www.reddit.com/r/WerWieWas/comments/1v8v4me/warum_werde_ich_beim_lidl_self_checkout_in/",
-          "published": "2026-07-28T11:03:22+00:00",
-          "query": "Lidl Plus",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "positive"
-        },
-        {
-          "id": "1de912a3d27ad21c",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Weekly Shop for 2 With a Few Essentials... And a Bucket",
-          "summary": "£77.60 at Lidl plus £7-ish at Sainsbury's for the Heck sausages and dill. To feed two people with very active jobs and big appetites. Buckets were 99p which I was chuffed with (yes I know I'm exciting)! submitted by /u/GingerNinjaThe4th to r/whatsinyourcart [link] [comments]",
-          "url": "https://www.reddit.com/r/whatsinyourcart/comments/1v7z3lh/weekly_shop_for_2_with_a_few_essentials_and_a/",
-          "published": "2026-07-27T12:33:59+00:00",
-          "query": "Lidl Plus",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "positive"
-        },
-        {
-          "id": "77290edf42dc6f67",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "My thoughts on the pixel 10 pro",
-          "summary": "Before this phone I had a Samsung Galaxy A52s that literally unglued itself (classic Samsung adhesive failure). After that died, my dad took some cheap carrier deal and got an Oppo A5 Pro. I used it for about 6 months, and honestly, the signal on that thing was insane (the only good thing on that phone). My girlfriend has an iPhone 15 Pro and would constantly lose service in places like Lidl, so she’d end up using my cheap Oppo just to load her Lidl Plus app because I’d still have solid 4G. ​Now",
-          "url": "https://www.reddit.com/r/Pixel10Pro/comments/1v7wgj7/my_thoughts_on_the_pixel_10_pro/",
-          "published": "2026-07-27T10:26:45+00:00",
-          "query": "Lidl Plus",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "positive"
-        },
-        {
-          "id": "d58391c3a33a4f49",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "An analysis of the bonus point scheme in the new Lidl Plus app",
-          "summary": "First of all, I don't like Lidl's gamification of grocery shopping. I prefer the consistent pricing at Trader Joe's because I don't feel ripped off when I buy something and it goes on sale the next week. That said, at Lidl, I can stock up on items I use when they are on sale. Lidl brand mayonnaise, pickles, soft drinks, cookies, butter, cheese, etc., really any of their store brand stuff, are less expensive than anything available to me in person or online, when they are on sale. I also get good",
-          "url": "https://www.reddit.com/r/LidlUScustomers/comments/1v6fafk/an_analysis_of_the_bonus_point_scheme_in_the_new/",
-          "published": "2026-07-25T18:02:46+00:00",
-          "query": "Lidl Plus",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "positive"
-        },
         {
           "id": "8ca47da029020938",
           "source": "reddit",
@@ -200,38 +100,11 @@
           "item_sentiment": "neutral"
         }
       ],
-      "background_items": [
-        {
-          "id": "f4090fcf2f789b5f",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Receipts",
-          "summary": "I see there is a receipt tracker in the new app, and on the website. I only see one receipt, but if the app starts picking up our receipt history quickly and accurately, will be at least one small win for Lidl Plus. submitted by /u/NCSC10 to r/LidlUS [link] [comments]",
-          "url": "https://www.reddit.com/r/LidlUS/comments/1v7k0fp/receipts/",
-          "published": "2026-07-26T23:44:27+00:00",
-          "query": "Lidl Plus",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "b84ac3489023b1f5",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "LidlPlus_NL",
-          "summary": "Lidl plus aanbiedingen om te delen [link]",
-          "url": "https://www.reddit.com/r/LidlPlus_NL/",
-          "published": "",
-          "query": "Lidl Plus",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "neutral"
-        }
-      ],
+      "background_items": [],
       "quality_summary": {
-        "dashboard_items": 9,
-        "background_items": 2,
-        "discarded_items": 2,
+        "dashboard_items": 3,
+        "background_items": 0,
+        "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
       },
