@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-20T06:25:41.819957+00:00",
+  "updated_at": "2026-08-03T06:33:54.673903+00:00",
   "version": "store-network-hu-v2.0-non-lidl-osm",
   "scope": "Hungarian FMCG store network from OSM + optional overrides",
   "method_note": "Ez a verzió Lidl nélkül építi a bolthálózatot. ALDI, SPAR, Tesco, Auchan és Penny OSM/Overpass alapján frissül. Ha egy láncra 0 találat jön, a script megtartja a korábbi store-network-hu.json adott láncra vonatkozó adatait. Lidl külön, saját üzletlista alapján kerül majd be.",
@@ -1104,7 +1104,7 @@
       "area": "Budapest",
       "region": "Közép-Magyarország",
       "address": "1116 Budapest, Sopron út 60",
-      "lat": 47.461748,
+      "lat": 47.461745,
       "lon": 19.044848,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
@@ -2322,8 +2322,8 @@
       "area": "Kecskemét",
       "region": "Dél-Alföld",
       "address": "6000 Kecskemét, Szent István körút 30",
-      "lat": 46.911114,
-      "lon": 19.719481,
+      "lat": 46.911112,
+      "lon": 19.719531,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 475381689,
@@ -2847,8 +2847,8 @@
       "area": "Nyíregyháza",
       "region": "Észak-Alföld",
       "address": "4400 Nyíregyháza, Törzs utca 2",
-      "lat": 47.953042,
-      "lon": 21.742439,
+      "lat": 47.953037,
+      "lon": 21.742431,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 271768193,
@@ -14466,7 +14466,7 @@
       "osm_type": "node",
       "osm_id": 5047018730,
       "brand": "Spar",
-      "operator": "",
+      "operator": "Sió Top-Ker Kft.",
       "keywords": [
         "Spar",
         "SPAR Siófok",
@@ -14487,7 +14487,7 @@
       "osm_type": "way",
       "osm_id": 289967156,
       "brand": "Spar",
-      "operator": "SPAR Magyarország Kft.",
+      "operator": "Sió Top-Ker Kft.",
       "keywords": [
         "Spar",
         "SPAR Siófok",
@@ -14513,6 +14513,27 @@
         "Spar Express",
         "SPAR Siófok",
         "8600 Siófok, Vak Bottyán utca 1"
+      ]
+    },
+    {
+      "store_id": "spar_siofok_spar_market_13324162280",
+      "company": "SPAR",
+      "name": "Spar Market",
+      "city": "Siófok",
+      "area": "Siófok",
+      "region": "Dél-Dunántúl",
+      "address": "Siófok, Újpiac tér",
+      "lat": 46.907047,
+      "lon": 18.057573,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 13324162280,
+      "brand": "Spar",
+      "operator": "Goldfinger Kft.",
+      "keywords": [
+        "Spar Market",
+        "SPAR Siófok",
+        "Siófok, Újpiac tér"
       ]
     },
     {
@@ -16671,7 +16692,7 @@
       "osm_type": "node",
       "osm_id": 1770420617,
       "brand": "Spar",
-      "operator": "",
+      "operator": "Sió Top-Ker Kft.",
       "keywords": [
         "Spar",
         "SPAR n.a.",
@@ -19031,6 +19052,27 @@
       ]
     },
     {
+      "store_id": "spar_na_spar_343143954",
+      "company": "SPAR",
+      "name": "Spar",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.509805,
+      "lon": 18.003055,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 343143954,
+      "brand": "Spar",
+      "operator": "",
+      "keywords": [
+        "Spar",
+        "SPAR n.a.",
+        "n.a."
+      ]
+    },
+    {
       "store_id": "spar_na_spar_343633278",
       "company": "SPAR",
       "name": "Spar",
@@ -20265,27 +20307,6 @@
       "operator": "",
       "keywords": [
         "Spar Express",
-        "SPAR n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "spar_na_spar_market_13324162280",
-      "company": "SPAR",
-      "name": "Spar Market",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 46.907047,
-      "lon": 18.057573,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 13324162280,
-      "brand": "Spar",
-      "operator": "",
-      "keywords": [
-        "Spar Market",
         "SPAR n.a.",
         "n.a."
       ]
