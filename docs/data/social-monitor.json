@@ -1,58 +1,58 @@
 {
-  "updated_at": "2026-08-03T20:09:53.803831+00:00",
+  "updated_at": "2026-08-04T03:46:58.268986+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-08-03T20:09:53.803831+00:00",
+    "updated_at": "2026-08-04T03:46:58.268986+00:00",
     "leader_social": "Lidl",
-    "leader_social_index": 16,
+    "leader_social_index": 29,
     "dominant_social_topic": "árak és akciók",
     "overall_social_sentiment": "neutral"
   },
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 3,
-      "raw_social_mentions": 3,
-      "dashboard_mentions": 3,
+      "social_mentions": 4,
+      "raw_social_mentions": 4,
+      "dashboard_mentions": 4,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 3.0,
-      "hu_relevant_mentions": 3,
-      "social_index": 16,
+      "weighted_social_mentions": 4.0,
+      "hu_relevant_mentions": 4,
+      "social_index": 29,
       "social_sources": {
-        "reddit": 3,
+        "reddit": 4,
         "youtube": 0,
         "mastodon": 0
       },
       "raw_social_sources": {
-        "reddit": 3,
+        "reddit": 4,
         "youtube": 0,
         "mastodon": 0
       },
-      "dominant_social_topic": "árak és akciók",
+      "dominant_social_topic": "bolti élmény",
       "top_social_topics": [
         {
-          "topic": "árak és akciók",
-          "score": 1.0
+          "topic": "bolti élmény",
+          "score": 3.0
         },
         {
-          "topic": "bolti élmény",
-          "score": 1.0
+          "topic": "árak és akciók",
+          "score": 2.0
         }
       ],
       "topic_sentiment": {
         "árak és akciók": {
           "positive": 0.0,
-          "neutral": 1.0,
+          "neutral": 2.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
         },
         "bolti élmény": {
           "positive": 0.0,
-          "neutral": 1.0,
+          "neutral": 2.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -98,11 +98,24 @@
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
           "item_sentiment": "neutral"
+        },
+        {
+          "id": "fbe81ab3e1f31203",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "Van még olyan boltban kapható jégkrém, amiben elegendő tejszín van?",
+          "summary": "Haagen dazst ne számítsuk, mert ez meg már sok. Régen az aldis sztacsatella és eper jégkrémekben volt 20-30(!!!) % tejszín is, ami az ízén s érezhető volt, ezek nagyon finom jégkrémek voltak, az epernek az eper íze is teljesen rendben volt % is de kb 3-4 éve ők is beálltak a sorba, hogy növényi olaj van benne, mint pl a Carte d'Or és társaiban már korábban is, ezek számomra sajnos nem megfelelőek és akkor nagyon diplomatikusan fogalmaztam. EDIT: Köszönöm a tippeket, elmentem most a Lidl-be és fé",
+          "url": "https://www.reddit.com/r/askhungary/comments/1un96a7/van_még_olyan_boltban_kapható_jégkrém_amiben/",
+          "published": "2026-07-04T13:31:29+00:00",
+          "query": "lidl.hu",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
         }
       ],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 3,
+        "dashboard_items": 4,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
@@ -197,11 +210,11 @@
       "social_sentiment": "neutral",
       "latest_items": [
         {
-          "id": "a21af0ae990de892",
+          "id": "d6cf6dfa6a42e627",
           "source": "youtube",
           "company": "Tesco",
-          "title": "A LÁTHATATLAN BOROS MEGINT LECSAPOTT?! 😱 Hóvégi bevásárlás - ALDI ÉS TESCO 😁🥬🍎🥑🥐🧅🧀 - youtube.com",
-          "summary": "A LÁTHATATLAN BOROS MEGINT LECSAPOTT?! 😱 Hóvégi bevásárlás - ALDI ÉS TESCO 😁🥬🍎🥑🥐🧅🧀 youtube.com",
+          "title": "A LÁTHATATLAN BOROS MEGINT LECSAPOTT?! 😱 Hóvégi bevásárlás - ALDI ÉS TESCO 😁🥬🍎🥑🥐🧅🧀 - YouTube",
+          "summary": "A LÁTHATATLAN BOROS MEGINT LECSAPOTT?! 😱 Hóvégi bevásárlás - ALDI ÉS TESCO 😁🥬🍎🥑🥐🧅🧀 YouTube",
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE4xODREeng0akltT2xrajVFb3Z0d0VTSVlucGxvdGwwc0FrXzJEN3Z5N0xxYWtFRUtscThlaWphejlmODZ0ZUlyWmw1d1JOSDJkSXRnY1J3?oc=5",
           "published": "Mon, 20 Apr 2026 14:05:06 GMT",
           "query": "site:youtube.com \"Tesco Hungary\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
@@ -446,11 +459,11 @@
       "social_sentiment": "neutral",
       "latest_items": [
         {
-          "id": "30d9c92d8c65f508",
+          "id": "ad37c605a541e686",
           "source": "youtube",
           "company": "CBA",
-          "title": "CBA Príma akciós újság 05.21. - 05.27. - youtube.com",
-          "summary": "CBA Príma akciós újság 05.21. - 05.27. youtube.com",
+          "title": "CBA Príma akciós újság 05.21. - 05.27. - YouTube",
+          "summary": "CBA Príma akciós újság 05.21. - 05.27. YouTube",
           "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE03MGdRck1RVXhVS0ZHM3llYjE0ZFRkdVcwQTRtVmtmQ2QteWJDM0Nacmk5M0JoekdvOS1UNWtxeWxoTHN2UFhqOHlESm5qOWtvXzJDcw?oc=5",
           "published": "Sat, 16 May 2026 11:25:21 GMT",
           "query": "site:youtube.com \"CBA Príma\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
