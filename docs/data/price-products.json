@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03T06:49:49Z",
+  "updated_at": "2026-08-04T06:17:51Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -322,8 +322,8 @@
         "Lidl": 1756.0,
         "Penny": 1756.0,
         "SPAR": 1832.0,
-        "Auchan": 2016.0,
-        "Tesco": 2505.0
+        "Auchan": 2148.0,
+        "Tesco": 2395.0
       },
       "selected_products": {
         "ALDI": {
@@ -369,8 +369,8 @@
         "Auchan": {
           "source_product_id": "8588009543534",
           "source_product_name": "Kukkonia vaj 250 g",
-          "amount": 504.0,
-          "unit_amount": 2016.0,
+          "amount": 537.0,
+          "unit_amount": 2148.0,
           "unit": "kg",
           "unit_title": "db",
           "packaging": "0.25",
@@ -379,8 +379,8 @@
         "Tesco": {
           "source_product_id": "5051007118101",
           "source_product_name": "Tesco vaj 200 g QQ",
-          "amount": 501.0,
-          "unit_amount": 2505.0,
+          "amount": 479.0,
+          "unit_amount": 2395.0,
           "unit": "kg",
           "unit_title": "db",
           "packaging": "0.2",
@@ -396,8 +396,8 @@
       "expected_unit": "db",
       "prices": {
         "Lidl": 44.9,
+        "Penny": 46.63,
         "Auchan": 49.0,
-        "Penny": 49.5,
         "ALDI": 49.83,
         "Tesco": 56.0,
         "SPAR": 59.5
@@ -413,21 +413,21 @@
           "packaging": "10",
           "price_type": "NORMAL"
         },
-        "Auchan": {
-          "source_product_id": "5998171700025",
-          "source_product_name": "Szijártó friss tojás A osztály S méret 30 db",
-          "amount": 1455.0,
-          "unit_amount": 49.0,
+        "Penny": {
+          "source_product_id": "penny-1996",
+          "source_product_name": "Tálcás tojás s méretű 30db",
+          "amount": 1399.0,
+          "unit_amount": 46.63,
           "unit": "db",
           "unit_title": "doboz",
           "packaging": "30",
           "price_type": "NORMAL"
         },
-        "Penny": {
-          "source_product_id": "penny-1996",
-          "source_product_name": "Tálcás tojás s méretű 30db",
-          "amount": 1485.0,
-          "unit_amount": 49.5,
+        "Auchan": {
+          "source_product_id": "5998171700025",
+          "source_product_name": "Szijártó friss tojás A osztály S méret 30 db",
+          "amount": 1455.0,
+          "unit_amount": 49.0,
           "unit": "db",
           "unit_title": "doboz",
           "packaging": "30",
@@ -630,7 +630,7 @@
         "Tesco": 1846.0,
         "Lidl": 1859.0,
         "ALDI": 1979.0,
-        "Penny": 1979.0,
+        "Penny": 1919.0,
         "SPAR": 2018.0
       },
       "selected_products": {
@@ -677,8 +677,8 @@
         "Penny": {
           "source_product_id": "penny-10248",
           "source_product_name": "Friss csirkemellfilé kg",
-          "amount": 1979.0,
-          "unit_amount": 1979.0,
+          "amount": 1919.0,
+          "unit_amount": 1919.0,
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "1",
@@ -937,9 +937,9 @@
         "Auchan": 998.0,
         "Tesco": 999.0,
         "Lidl": 999.0,
+        "Penny": 1199.0,
         "SPAR": 1198.67,
-        "ALDI": 1199.0,
-        "Penny": 1199.0
+        "ALDI": 1199.0
       },
       "selected_products": {
         "Auchan": {
@@ -972,6 +972,16 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
+        "Penny": {
+          "source_product_id": "penny-306",
+          "source_product_name": "Citrom lédig kg",
+          "amount": 1199.0,
+          "unit_amount": 1199.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "SPAR": {
           "source_product_id": "5999139405563",
           "source_product_name": "S-budget xxl citrom 750g",
@@ -985,16 +995,6 @@
         "ALDI": {
           "source_product_id": "aldi-854011",
           "source_product_name": "Citrom lédig",
-          "amount": 1199.0,
-          "unit_amount": 1199.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-306",
-          "source_product_name": "Citrom lédig kg",
           "amount": 1199.0,
           "unit_amount": 1199.0,
           "unit": "kg",
@@ -1362,7 +1362,7 @@
       "selected_products": {
         "ALDI": {
           "source_product_id": "5998017555239",
-          "source_product_name": "Kunsági éden étolaj 1l",
+          "source_product_name": "Kunsági Éden 100% finomított napraforgó-étolaj 1 l",
           "amount": 739.0,
           "unit_amount": 739.0,
           "unit": "l",
@@ -1584,16 +1584,26 @@
       "expected_unit": "l",
       "prices": {
         "Tesco": 66.0,
+        "Auchan": 66.0,
         "SPAR": 66.0,
         "ALDI": 66.0,
         "Lidl": 66.0,
-        "Penny": 66.0,
-        "Auchan": 93.0
+        "Penny": 66.0
       },
       "selected_products": {
         "Tesco": {
           "source_product_id": "5051007167444",
           "source_product_name": "Tesco 1,5 l sava  ",
+          "amount": 99.0,
+          "unit_amount": 66.0,
+          "unit": "l",
+          "unit_title": "db",
+          "packaging": "1.5",
+          "price_type": "NORMAL"
+        },
+        "Auchan": {
+          "source_product_id": "5998835502026",
+          "source_product_name": "Pannon-Aqua szén-dioxiddal dúsított természetes ásványvíz 1,5 l",
           "amount": 99.0,
           "unit_amount": 66.0,
           "unit": "l",
@@ -1636,16 +1646,6 @@
           "source_product_name": "Kékforrás mentes ásványvíz",
           "amount": 99.0,
           "unit_amount": 66.0,
-          "unit": "l",
-          "unit_title": "db",
-          "packaging": "1.5",
-          "price_type": "NORMAL"
-        },
-        "Auchan": {
-          "source_product_id": "5997469100264",
-          "source_product_name": "Cívis szén-dioxiddal dúsított természetes ásványvíz 1,5 l",
-          "amount": 139.0,
-          "unit_amount": 93.0,
           "unit": "l",
           "unit_title": "db",
           "packaging": "1.5",
