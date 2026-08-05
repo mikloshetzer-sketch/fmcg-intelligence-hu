@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04T06:17:51Z",
+  "updated_at": "2026-08-05T06:16:24Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "method": "product-level price leadership and spread analysis",
@@ -13,20 +13,20 @@
       "count": 5
     },
     {
-      "company": "Lidl",
-      "count": 4
-    },
-    {
       "company": "ALDI",
       "count": 3
     },
     {
-      "company": "Tesco",
-      "count": 2
+      "company": "Lidl",
+      "count": 3
     },
     {
       "company": "Penny",
-      "count": 1
+      "count": 2
+    },
+    {
+      "company": "Tesco",
+      "count": 2
     }
   ],
   "most_expensive_count": [
@@ -133,22 +133,22 @@
     },
     {
       "category": "Frissáru",
-      "leader": "Lidl",
+      "leader": "Penny",
       "leader_index": 88,
       "ranking": [
         {
-          "company": "Lidl",
+          "company": "Penny",
           "category_index": 88,
           "coverage": 1
         },
         {
-          "company": "Penny",
-          "category_index": 91,
+          "company": "Lidl",
+          "category_index": 89,
           "coverage": 1
         },
         {
           "company": "Auchan",
-          "category_index": 96,
+          "category_index": 97,
           "coverage": 1
         },
         {
@@ -158,7 +158,7 @@
         },
         {
           "company": "Tesco",
-          "category_index": 110,
+          "category_index": 111,
           "coverage": 1
         },
         {
@@ -254,12 +254,12 @@
         },
         {
           "company": "Tesco",
-          "category_index": 96,
+          "category_index": 97,
           "coverage": 4
         },
         {
           "company": "Lidl",
-          "category_index": 100,
+          "category_index": 99,
           "coverage": 4
         },
         {
@@ -274,7 +274,7 @@
         },
         {
           "company": "SPAR",
-          "category_index": 106,
+          "category_index": 105,
           "coverage": 4
         }
       ]
@@ -467,12 +467,12 @@
     {
       "product": "Tojás",
       "category": "Frissáru",
-      "cheapest_company": "Lidl",
-      "cheapest_price": 44.9,
+      "cheapest_company": "Penny",
+      "cheapest_price": 44.83,
       "most_expensive_company": "SPAR",
       "most_expensive_price": 59.5,
-      "average_price": 50.98,
-      "spread_pct": 32.52,
+      "average_price": 50.68,
+      "spread_pct": 32.72,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
@@ -615,7 +615,7 @@
       "cheapest_price": 2869.0,
       "most_expensive_company": "SPAR",
       "most_expensive_price": 3117.78,
-      "average_price": 2978.8,
+      "average_price": 2997.13,
       "spread_pct": 8.67,
       "competition_intensity": "közepes árverseny",
       "coverage": 6
@@ -727,7 +727,7 @@
     {
       "product": "Tojás",
       "category": "Frissáru",
-      "spread_pct": 32.52,
+      "spread_pct": 32.72,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
