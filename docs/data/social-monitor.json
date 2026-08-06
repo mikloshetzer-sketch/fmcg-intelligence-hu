@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-08-06T09:20:33.084871+00:00",
+  "updated_at": "2026-08-06T14:52:39.620775+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-08-06T09:20:33.084871+00:00",
+    "updated_at": "2026-08-06T14:52:39.620775+00:00",
     "leader_social": "Tesco",
-    "leader_social_index": 36,
+    "leader_social_index": 20,
     "dominant_social_topic": "árak és akciók",
     "overall_social_sentiment": "neutral"
   },
@@ -149,21 +149,21 @@
     },
     {
       "company": "Tesco",
-      "social_mentions": 10,
-      "raw_social_mentions": 15,
-      "dashboard_mentions": 5,
-      "background_mentions": 5,
-      "discarded_mentions": 5,
-      "weighted_social_mentions": 7.5,
-      "hu_relevant_mentions": 5,
-      "social_index": 36,
+      "social_mentions": 2,
+      "raw_social_mentions": 2,
+      "dashboard_mentions": 2,
+      "background_mentions": 0,
+      "discarded_mentions": 0,
+      "weighted_social_mentions": 2.0,
+      "hu_relevant_mentions": 2,
+      "social_index": 20,
       "social_sources": {
-        "reddit": 9,
+        "reddit": 1,
         "youtube": 1,
         "mastodon": 0
       },
       "raw_social_sources": {
-        "reddit": 14,
+        "reddit": 1,
         "youtube": 1,
         "mastodon": 0
       },
@@ -171,43 +171,21 @@
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 6.0
-        },
-        {
-          "topic": "digitalizáció és önkiszolgálás",
-          "score": 5.5
+          "score": 2.0
         },
         {
           "topic": "bolti élmény",
           "score": 2.0
         },
         {
-          "topic": "vásárlói panaszok",
-          "score": 1.0
-        },
-        {
-          "topic": "termék és minőség",
+          "topic": "ellátási lánc és logisztika",
           "score": 1.0
         }
       ],
       "topic_sentiment": {
-        "vásárlói panaszok": {
-          "positive": 0.0,
-          "neutral": 0.0,
-          "negative": 1.0,
-          "mixed": 0.0,
-          "dominant": "negative"
-        },
-        "digitalizáció és önkiszolgálás": {
-          "positive": 0.0,
-          "neutral": 2.0,
-          "negative": 1.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
-        },
         "árak és akciók": {
           "positive": 0.0,
-          "neutral": 5.5,
+          "neutral": 2.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -225,68 +203,22 @@
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
-        },
-        "termék és minőség": {
-          "positive": 0.0,
-          "neutral": 0.5,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
         }
       },
-      "social_sentiment": "mixed",
+      "social_sentiment": "neutral",
       "latest_items": [
         {
-          "id": "30f097bab991c382",
+          "id": "db40612cff1fa5ee",
           "source": "reddit",
           "company": "Tesco",
-          "title": "What a scam PAYG has become",
-          "summary": "What a scam Tesco Mobile is. Having lived abroad for many years, I return to the UK occasionally and will buy a SIM to get service while I'm here. Usually, this means I choose a package, buy X amount of data and voice, and off I go. Tesco's PAYG Essentials package purports to be that but is actually a scam. You supposedly buy a package, but actually all you get is credit until you jump through all the hoops to &quot;attach&quot; the PAYG package to your purchase. If that doesnt happen for some r",
-          "url": "https://www.reddit.com/r/Tescomobile/comments/1ve08il/what_a_scam_payg_has_become/",
-          "published": "2026-08-03T01:59:34+00:00",
-          "query": "Tesco Clubcard",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "negative"
-        },
-        {
-          "id": "1d15eb716321a4fb",
-          "source": "reddit",
-          "company": "Tesco",
-          "title": "Might be a stupid question about clubcard",
-          "summary": "If i bought alcohol in store using my own card but my parents tesco clubcard, will they be able to see what i bought. Im not under 18, but my parents are strict af and very religious. And nothing here or on the internet is giving me a clear answer. Also one other thing, i accidentally used my debit card instead of clubcard first but she then refunded me clubcard points after i scanned it after paying. Will this show? Ik im panicking but i really would appreciate anyone helping. Thanks submitted ",
-          "url": "https://www.reddit.com/r/tesco/comments/1v9261v/might_be_a_stupid_question_about_clubcard/",
-          "published": "2026-07-28T15:42:58+00:00",
-          "query": "Tesco Clubcard",
+          "title": "A Tescóban nem lesz hűtött ital, és az elektromos autókat sem lehet tölteni",
+          "summary": "A Tesco a kormányzati felhíváshoz csatlakozva energiatakarékossági intézkedéseket vezet be áruházaiban az energiaellátás biztonságának támogatása érdekében – közölte a cég a Facebook-oldalán. A Tesco Magyarország jelezte, hogy ennek részeként egyes területeken átmenetileg alacsonyabb fényerővel működtetik világítási rendszereiket, beszüntetik az italhűtő automaták működését, illetve lezárják a parkolóban található elektromos töltőket is. Elkezdődött az egymásra licitálás, kérdés ki lesz a követk",
+          "url": "https://www.reddit.com/r/rohadtmelegvan/comments/1vcrhf7/a_tescóban_nem_lesz_hűtött_ital_és_az_elektromos/",
+          "published": "2026-08-01T16:15:26+00:00",
+          "query": "Tesco Magyarország",
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
           "item_sentiment": "neutral"
-        },
-        {
-          "id": "284da39769d3621c",
-          "source": "reddit",
-          "company": "Tesco",
-          "title": "I just damned a spy. If I re-indoctrinate them, will they become a follower or stay a spy?",
-          "summary": "Today after finally killing Shamura I can back to a turquoise cat worshipping me that I instantly knew that was a spy because of two reasons. 1. There once was a turquoise cat in my cult but I killed him like 30 in game days ago. 2. They had one of the standard generated names while the rest of my followers have names such as Ninky Nonk and Tesco Clubcard. And I decided that in my usual tradition, I torture the spies. So I damned his ass. So if I get him back, will he be a follower or will he ev",
-          "url": "https://www.reddit.com/r/CultOfTheLamb/comments/1v3ndlf/i_just_damned_a_spy_if_i_reindoctrinate_them_will/",
-          "published": "2026-07-22T17:44:51+00:00",
-          "query": "Tesco Clubcard",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "e55f2cfcc6665c8d",
-          "source": "reddit",
-          "company": "Tesco",
-          "title": "How to challenge the “reasonable suspicion” head-on to maximise chances of s.303Z17–303Z19 POCA compensation claims in England?",
-          "summary": "In these enlightened times, under the benevolent gaze of Chapter 3B of the Proceeds of Crime Act 2002 (as inserted by the Criminal Finances Act 2017), we no longer require such antiquated niceties as a criminal conviction, a live prosecution, or even a coherent theory of wrongdoing. Nay! A mere reasonable suspicion that monies in a bank account are “recoverable property” (s.303Z1 POCA) or intended for unlawful conduct suffices for an Account Freezing Order (AFO) in the Magistrates’ Court. Enforc",
-          "url": "https://www.reddit.com/r/LegalAdviceUK/comments/1v1pbs3/how_to_challenge_the_reasonable_suspicion_headon/",
-          "published": "2026-07-20T15:50:24+00:00",
-          "query": "Tesco Clubcard",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "positive"
         },
         {
           "id": "d6cf6dfa6a42e627",
@@ -302,77 +234,11 @@
           "item_sentiment": "neutral"
         }
       ],
-      "background_items": [
-        {
-          "id": "53f4981327fe88ee",
-          "source": "reddit",
-          "company": "Tesco",
-          "title": "Tesco Clubcard Challenges is back today and you can get up to £50 worth of points",
-          "summary": "submitted by /u/thesun to r/tesco [link] [comments]",
-          "url": "https://www.reddit.com/r/tesco/comments/1vehgr1/tesco_clubcard_challenges_is_back_today_and_you/",
-          "published": "2026-08-03T15:57:56+00:00",
-          "query": "Tesco Clubcard",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "367793fbf7eabe0a",
-          "source": "reddit",
-          "company": "Tesco",
-          "title": "Haven’t got a Tesco Clubcard. Use the QR Code to receive discounts on clubcard products.",
-          "summary": "submitted by /u/Fresh-Information-64 to u/Fresh-Information-64 [link] [comments]",
-          "url": "https://www.reddit.com/r/u_Fresh-Information-64/comments/1vef4jo/havent_got_a_tesco_clubcard_use_the_qr_code_to/",
-          "published": "2026-08-03T14:32:15+00:00",
-          "query": "Tesco Clubcard",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "940e58b64ad225a2",
-          "source": "reddit",
-          "company": "Tesco",
-          "title": "Tesco Clubcard",
-          "summary": "submitted by /u/DiamondMaster07 to r/maygar [link] [comments]",
-          "url": "https://www.reddit.com/r/maygar/comments/1vdb8x7/tesco_clubcard/",
-          "published": "2026-08-02T07:12:05+00:00",
-          "query": "Tesco Clubcard",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "63ec0d0043b430ec",
-          "source": "reddit",
-          "company": "Tesco",
-          "title": "Tesco clubcard plus",
-          "summary": "Opinions? Is it worth getting, yes or no? submitted by /u/jnenn0 to r/tesco [link] [comments]",
-          "url": "https://www.reddit.com/r/tesco/comments/1uujj25/tesco_clubcard_plus/",
-          "published": "2026-07-12T16:05:51+00:00",
-          "query": "Tesco Clubcard",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "aa43dc51c694b26a",
-          "source": "reddit",
-          "company": "Tesco",
-          "title": "tescoclubcard",
-          "summary": "Doing an experiment to see how much tesco club card would max out at? Is there a limit? We shall find out maybe? I will post a picture of a club card for anyone to scan at the till or self checkout. [link]",
-          "url": "https://www.reddit.com/r/tescoclubcard/",
-          "published": "",
-          "query": "Tesco Clubcard",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "neutral"
-        }
-      ],
+      "background_items": [],
       "quality_summary": {
-        "dashboard_items": 5,
-        "background_items": 5,
-        "discarded_items": 5,
+        "dashboard_items": 2,
+        "background_items": 0,
+        "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
       },
