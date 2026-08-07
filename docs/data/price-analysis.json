@@ -1,32 +1,32 @@
 {
-  "updated_at": "2026-08-06T06:19:39Z",
+  "updated_at": "2026-08-07T05:26:03Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "method": "product-level price leadership and spread analysis",
   "cheapest_count": [
     {
       "company": "Auchan",
-      "count": 6
+      "count": 7
     },
     {
       "company": "SPAR",
       "count": 6
     },
     {
+      "company": "Lidl",
+      "count": 4
+    },
+    {
       "company": "ALDI",
       "count": 3
     },
     {
-      "company": "Lidl",
-      "count": 3
-    },
-    {
       "company": "Penny",
-      "count": 3
+      "count": 2
     },
     {
       "company": "Tesco",
-      "count": 3
+      "count": 2
     }
   ],
   "most_expensive_count": [
@@ -35,24 +35,24 @@
       "count": 8
     },
     {
-      "company": "Penny",
+      "company": "SPAR",
       "count": 5
     },
     {
-      "company": "SPAR",
-      "count": 5
+      "company": "Penny",
+      "count": 4
     },
     {
       "company": "Auchan",
       "count": 3
     },
     {
-      "company": "Lidl",
+      "company": "ALDI",
       "count": 2
     },
     {
-      "company": "ALDI",
-      "count": 1
+      "company": "Lidl",
+      "count": 2
     }
   ],
   "value_scores": [
@@ -97,11 +97,11 @@
     {
       "category": "Alapélelmiszer",
       "leader": "Auchan",
-      "leader_index": 98,
+      "leader_index": 97,
       "ranking": [
         {
           "company": "Auchan",
-          "category_index": 98,
+          "category_index": 97,
           "coverage": 5
         },
         {
@@ -111,7 +111,7 @@
         },
         {
           "company": "Lidl",
-          "category_index": 99,
+          "category_index": 100,
           "coverage": 5
         },
         {
@@ -553,7 +553,7 @@
       "category": "Gyümölcs",
       "cheapest_company": "Auchan",
       "cheapest_price": 999.0,
-      "most_expensive_company": "Penny",
+      "most_expensive_company": "ALDI",
       "most_expensive_price": 1199.0,
       "average_price": 1098.94,
       "spread_pct": 20.02,
@@ -623,7 +623,7 @@
     {
       "product": "Pulykamellfilé",
       "category": "Húsáru",
-      "cheapest_company": "Penny",
+      "cheapest_company": "Lidl",
       "cheapest_price": 2999.0,
       "most_expensive_company": "SPAR",
       "most_expensive_price": 3117.78,
@@ -647,11 +647,11 @@
     {
       "product": "Étolaj",
       "category": "Alapélelmiszer",
-      "cheapest_company": "Tesco",
+      "cheapest_company": "Auchan",
       "cheapest_price": 745.0,
       "most_expensive_company": "SPAR",
       "most_expensive_price": 759.0,
-      "average_price": 750.17,
+      "average_price": 749.33,
       "spread_pct": 1.88,
       "competition_intensity": "erős árverseny",
       "coverage": 6

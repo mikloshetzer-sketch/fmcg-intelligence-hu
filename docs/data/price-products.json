@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-06T06:19:39Z",
+  "updated_at": "2026-08-07T05:26:03Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -703,24 +703,14 @@
       "category": "Húsáru",
       "expected_unit": "kg",
       "prices": {
-        "Penny": 2999.0,
         "Lidl": 2999.0,
         "ALDI": 2999.0,
+        "Penny": 2999.0,
         "SPAR": 3117.78,
         "Tesco": 3000.0,
         "Auchan": 3089.0
       },
       "selected_products": {
-        "Penny": {
-          "source_product_id": "penny-122",
-          "source_product_name": "Kedvenc Hentese friss pulykamellfilé kg",
-          "amount": 2999.0,
-          "unit_amount": 2999.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
         "Lidl": {
           "source_product_id": "2884940000000",
           "source_product_name": "Pulykamell  kg",
@@ -734,6 +724,16 @@
         "ALDI": {
           "source_product_id": "aldi-726314",
           "source_product_name": "Húsmester pulykamellfilé kg vákuumcsomagolt",
+          "amount": 2999.0,
+          "unit_amount": 2999.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Penny": {
+          "source_product_id": "penny-122",
+          "source_product_name": "Kedvenc Hentese friss pulykamellfilé kg",
           "amount": 2999.0,
           "unit_amount": 2999.0,
           "unit": "kg",
@@ -937,9 +937,9 @@
         "Auchan": 999.0,
         "Tesco": 999.0,
         "Lidl": 999.0,
-        "Penny": 1199.0,
         "SPAR": 1198.67,
-        "ALDI": 1199.0
+        "ALDI": 1199.0,
+        "Penny": 1199.0
       },
       "selected_products": {
         "Auchan": {
@@ -972,16 +972,6 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Penny": {
-          "source_product_id": "penny-306",
-          "source_product_name": "Citrom lédig kg",
-          "amount": 1199.0,
-          "unit_amount": 1199.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
         "SPAR": {
           "source_product_id": "5999139405563",
           "source_product_name": "S-budget xxl citrom 750g",
@@ -995,6 +985,16 @@
         "ALDI": {
           "source_product_id": "aldi-854011",
           "source_product_name": "Citrom lédig",
+          "amount": 1199.0,
+          "unit_amount": 1199.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Penny": {
+          "source_product_id": "penny-306",
+          "source_product_name": "Citrom lédig kg",
           "amount": 1199.0,
           "unit_amount": 1199.0,
           "unit": "kg",
@@ -1098,7 +1098,7 @@
       "selected_products": {
         "SPAR": {
           "source_product_id": "5999139410222",
-          "source_product_name": "S-Budget XXL lecsópaprika 1,5kg",
+          "source_product_name": "SB XXL LECSÓPAPRIKA1,5KG",
           "amount": 845.0,
           "unit_amount": 563.33,
           "unit": "kg",
@@ -1352,14 +1352,24 @@
       "category": "Alapélelmiszer",
       "expected_unit": "l",
       "prices": {
+        "Auchan": 745.0,
         "Tesco": 745.0,
         "ALDI": 749.0,
         "Lidl": 749.0,
         "Penny": 749.0,
-        "Auchan": 750.0,
         "SPAR": 759.0
       },
       "selected_products": {
+        "Auchan": {
+          "source_product_id": "5999086455338",
+          "source_product_name": "Auchan Kedvenc finomított napraforgó étolaj 1 l",
+          "amount": 745.0,
+          "unit_amount": 745.0,
+          "unit": "l",
+          "unit_title": "db",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "Tesco": {
           "source_product_id": "6420155000092",
           "source_product_name": "GOLDEN IMPERIAL NAPRAFORGÓ ÉTOLAJ 1 L QQ",
@@ -1395,16 +1405,6 @@
           "source_product_name": "Penny napraforgó étolaj",
           "amount": 749.0,
           "unit_amount": 749.0,
-          "unit": "l",
-          "unit_title": "db",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Auchan": {
-          "source_product_id": "5999086455338",
-          "source_product_name": "Auchan Kedvenc finomított napraforgó étolaj 1 l",
-          "amount": 750.0,
-          "unit_amount": 750.0,
           "unit": "l",
           "unit_title": "db",
           "packaging": "1",
