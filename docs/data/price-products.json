@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07T05:26:03Z",
+  "updated_at": "2026-08-08T04:44:08Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -88,7 +88,7 @@
       "expected_unit": "l",
       "prices": {
         "SPAR": 265.0,
-        "Tesco": 296.0,
+        "Tesco": 281.0,
         "Auchan": 271.0,
         "ALDI": 295.0,
         "Lidl": 295.0,
@@ -108,8 +108,8 @@
         "Tesco": {
           "source_product_id": "5999561314051",
           "source_product_name": "Kunsági ESL tej 2.8% 1 L QQ",
-          "amount": 296.0,
-          "unit_amount": 296.0,
+          "amount": 281.0,
+          "unit_amount": 281.0,
           "unit": "l",
           "unit_title": "db",
           "packaging": "1",
@@ -398,8 +398,8 @@
         "Penny": 44.83,
         "Lidl": 44.9,
         "Auchan": 49.0,
+        "Tesco": 50.1667,
         "ALDI": 51.97,
-        "Tesco": 56.0,
         "SPAR": 59.5
       },
       "selected_products": {
@@ -433,21 +433,21 @@
           "packaging": "30",
           "price_type": "NORMAL"
         },
-        "ALDI": {
-          "source_product_id": "5997877310415",
-          "source_product_name": "Ketreces tojás 30 db S",
-          "amount": 1559.0,
-          "unit_amount": 51.97,
+        "Tesco": {
+          "source_product_id": "5998244700044",
+          "source_product_name": "MU 30DB TOJÁS 1290G S MÉRET QQ",
+          "amount": 1505.0,
+          "unit_amount": 50.1667,
           "unit": "db",
           "unit_title": "doboz",
           "packaging": "30",
           "price_type": "NORMAL"
         },
-        "Tesco": {
-          "source_product_id": "5998244700044",
-          "source_product_name": "MU 30DB TOJÁS 1290G S MÉRET QQ",
-          "amount": 1680.0,
-          "unit_amount": 56.0,
+        "ALDI": {
+          "source_product_id": "5997877310415",
+          "source_product_name": "Ketreces tojás 30 db S",
+          "amount": 1559.0,
+          "unit_amount": 51.97,
           "unit": "db",
           "unit_title": "doboz",
           "packaging": "30",
@@ -475,7 +475,7 @@
         "Lidl": 1465.0,
         "ALDI": 989.0,
         "Auchan": 1169.0,
-        "Tesco": 1278.0,
+        "Tesco": 1203.0,
         "SPAR": 1359.0,
         "Penny": 1465.0
       },
@@ -513,8 +513,8 @@
         "Tesco": {
           "source_product_id": "2870240000000",
           "source_product_name": "16. SERTES COMB pultos QQ",
-          "amount": 1278.0,
-          "unit_amount": 1278.0,
+          "amount": 1203.0,
+          "unit_amount": 1203.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -551,10 +551,10 @@
       "prices": {
         "SPAR": 1954.44,
         "Tesco": 1748.75,
+        "Penny": 1749.0,
         "Auchan": 1199.0,
         "ALDI": 1749.0,
-        "Lidl": 1749.0,
-        "Penny": 1749.0
+        "Lidl": 1749.0
       },
       "selected_products": {
         "SPAR": {
@@ -575,6 +575,16 @@
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "0.8",
+          "price_type": "NORMAL"
+        },
+        "Penny": {
+          "source_product_id": "penny-10995",
+          "source_product_name": "Sertés darálthús 30% zsírtart.",
+          "amount": 1749.0,
+          "unit_amount": 1749.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "1",
           "price_type": "NORMAL"
         },
         "Auchan": {
@@ -604,16 +614,6 @@
           "unit_amount": 1749.0,
           "unit": "kg",
           "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-10995",
-          "source_product_name": "Sertés darálthús 30% zsírtart.",
-          "amount": 1749.0,
-          "unit_amount": 1749.0,
-          "unit": "kg",
-          "unit_title": "csomag",
           "packaging": "1",
           "price_type": "NORMAL"
         }
@@ -1011,7 +1011,7 @@
       "category": "Zöldség",
       "expected_unit": "kg",
       "prices": {
-        "Lidl": 385.0,
+        "Lidl": 389.0,
         "Auchan": 391.0,
         "Tesco": 514.0,
         "SPAR": 525.0,
@@ -1022,8 +1022,8 @@
         "Lidl": {
           "source_product_id": "lidl-0082488",
           "source_product_name": "Paradicsom 1kg",
-          "amount": 385.0,
-          "unit_amount": 385.0,
+          "amount": 389.0,
+          "unit_amount": 389.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1726,7 +1726,7 @@
       "category": "Háztartás",
       "expected_unit": "db",
       "prices": {
-        "SPAR": 112.46,
+        "SPAR": 112.25,
         "Tesco": 117.25,
         "Auchan": 46.0,
         "ALDI": 119.9,
@@ -1734,13 +1734,13 @@
       },
       "selected_products": {
         "SPAR": {
-          "source_product_id": "5999139408656",
-          "source_product_name": "Lovely eü.papír fehér 3r 24t",
-          "amount": 2699.0,
-          "unit_amount": 112.46,
+          "source_product_id": "5999139407888",
+          "source_product_name": "S-Budget illatmentes toalettpapír 2 rétegű 4 tekercs",
+          "amount": 449.0,
+          "unit_amount": 112.25,
           "unit": "db",
           "unit_title": "csomag",
-          "packaging": "24",
+          "packaging": "4",
           "price_type": "NORMAL"
         },
         "Tesco": {
