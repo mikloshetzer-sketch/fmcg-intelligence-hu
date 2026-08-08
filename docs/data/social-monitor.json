@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-08-08T02:27:40.222284+00:00",
+  "updated_at": "2026-08-08T07:28:20.211820+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-08-08T02:27:40.222284+00:00",
+    "updated_at": "2026-08-08T07:28:20.211820+00:00",
     "leader_social": "Lidl",
     "leader_social_index": 37,
     "dominant_social_topic": "árak és akciók",
@@ -174,21 +174,21 @@
     },
     {
       "company": "Tesco",
-      "social_mentions": 2,
-      "raw_social_mentions": 2,
-      "dashboard_mentions": 2,
+      "social_mentions": 1,
+      "raw_social_mentions": 1,
+      "dashboard_mentions": 1,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 2.0,
-      "hu_relevant_mentions": 2,
-      "social_index": 20,
+      "weighted_social_mentions": 1.0,
+      "hu_relevant_mentions": 1,
+      "social_index": 16,
       "social_sources": {
-        "reddit": 1,
+        "reddit": 0,
         "youtube": 1,
         "mastodon": 0
       },
       "raw_social_sources": {
-        "reddit": 1,
+        "reddit": 0,
         "youtube": 1,
         "mastodon": 0
       },
@@ -196,33 +196,22 @@
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 2.0
+          "score": 1.0
         },
         {
           "topic": "bolti élmény",
-          "score": 2.0
-        },
-        {
-          "topic": "ellátási lánc és logisztika",
           "score": 1.0
         }
       ],
       "topic_sentiment": {
         "árak és akciók": {
           "positive": 0.0,
-          "neutral": 2.0,
+          "neutral": 1.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
         },
         "bolti élmény": {
-          "positive": 0.0,
-          "neutral": 2.0,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
-        },
-        "ellátási lánc és logisztika": {
           "positive": 0.0,
           "neutral": 1.0,
           "negative": 0.0,
@@ -232,19 +221,6 @@
       },
       "social_sentiment": "neutral",
       "latest_items": [
-        {
-          "id": "db40612cff1fa5ee",
-          "source": "reddit",
-          "company": "Tesco",
-          "title": "A Tescóban nem lesz hűtött ital, és az elektromos autókat sem lehet tölteni",
-          "summary": "A Tesco a kormányzati felhíváshoz csatlakozva energiatakarékossági intézkedéseket vezet be áruházaiban az energiaellátás biztonságának támogatása érdekében – közölte a cég a Facebook-oldalán. A Tesco Magyarország jelezte, hogy ennek részeként egyes területeken átmenetileg alacsonyabb fényerővel működtetik világítási rendszereiket, beszüntetik az italhűtő automaták működését, illetve lezárják a parkolóban található elektromos töltőket is. Elkezdődött az egymásra licitálás, kérdés ki lesz a követk",
-          "url": "https://www.reddit.com/r/rohadtmelegvan/comments/1vcrhf7/a_tescóban_nem_lesz_hűtött_ital_és_az_elektromos/",
-          "published": "2026-08-01T16:15:26+00:00",
-          "query": "Tesco Magyarország",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
         {
           "id": "d6cf6dfa6a42e627",
           "source": "youtube",
@@ -261,7 +237,7 @@
       ],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 2,
+        "dashboard_items": 1,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
