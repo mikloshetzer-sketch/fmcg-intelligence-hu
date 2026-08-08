@@ -1,33 +1,33 @@
 {
-  "updated_at": "2026-08-08T13:25:57.132038+00:00",
+  "updated_at": "2026-08-08T19:07:09.855625+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-08-08T13:25:57.132038+00:00",
+    "updated_at": "2026-08-08T19:07:09.855625+00:00",
     "leader_social": "Lidl",
-    "leader_social_index": 52,
+    "leader_social_index": 37,
     "dominant_social_topic": "árak és akciók",
     "overall_social_sentiment": "neutral"
   },
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 10,
-      "raw_social_mentions": 10,
-      "dashboard_mentions": 9,
+      "social_mentions": 4,
+      "raw_social_mentions": 4,
+      "dashboard_mentions": 3,
       "background_mentions": 1,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 9.5,
-      "hu_relevant_mentions": 9,
-      "social_index": 52,
+      "weighted_social_mentions": 3.5,
+      "hu_relevant_mentions": 3,
+      "social_index": 37,
       "social_sources": {
-        "reddit": 7,
+        "reddit": 1,
         "youtube": 2,
         "mastodon": 1
       },
       "raw_social_sources": {
-        "reddit": 7,
+        "reddit": 1,
         "youtube": 2,
         "mastodon": 1
       },
@@ -35,7 +35,7 @@
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 9.0
+          "score": 3.0
         },
         {
           "topic": "bolti élmény",
@@ -49,7 +49,7 @@
       "topic_sentiment": {
         "árak és akciók": {
           "positive": 0.0,
-          "neutral": 9.0,
+          "neutral": 3.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -72,84 +72,6 @@
       "social_sentiment": "neutral",
       "latest_items": [
         {
-          "id": "2993e5082bf8951c",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Lidl akciós újság (08.13.)",
-          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
-          "url": "https://www.reddit.com/r/lidlaldihun/comments/1vituk7/lidl_akciós_újság_0813/",
-          "published": "2026-08-08T11:43:16+00:00",
-          "query": "Lidl akció",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "6d9779c01081c0ce",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Lidl akciós újság (08.06.)",
-          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
-          "url": "https://www.reddit.com/r/lidlaldihun/comments/1vcbhj1/lidl_akciós_újság_0806/",
-          "published": "2026-08-01T02:59:51+00:00",
-          "query": "Lidl akció",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "808c1de712cecb61",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "ÚJ LIDL Akciós Újság",
-          "summary": "#lidl #akciósújság submitted by /u/Rough-Ball-8599 to u/Rough-Ball-8599 [link] [comments]",
-          "url": "https://www.reddit.com/r/u_Rough-Ball-8599/comments/1v70lql/új_lidl_akciós_újság/",
-          "published": "2026-07-26T10:53:39+00:00",
-          "query": "Lidl akció",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "1955d24af6756486",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Lidl akciós újság (07.30.)",
-          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
-          "url": "https://www.reddit.com/r/lidlaldihun/comments/1v645ge/lidl_akciós_újság_0730/",
-          "published": "2026-07-25T09:57:27+00:00",
-          "query": "Lidl akció",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "57a5017c3258b709",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Lidl akciós újság (07.23.)",
-          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
-          "url": "https://www.reddit.com/r/lidlaldihun/comments/1uzpwww/lidl_akciós_újság_0723/",
-          "published": "2026-07-18T08:05:05+00:00",
-          "query": "Lidl akció",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "0acf4875a0b7fa45",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Lidl akciós újság (07.16.)",
-          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
-          "url": "https://www.reddit.com/r/lidlaldihun/comments/1uutz8x/lidl_akciós_újság_0716/",
-          "published": "2026-07-12T22:46:01+00:00",
-          "query": "Lidl akció",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
           "id": "8ca47da029020938",
           "source": "reddit",
           "company": "Lidl",
@@ -163,11 +85,11 @@
           "item_sentiment": "neutral"
         },
         {
-          "id": "319fef5aa59f2b93",
+          "id": "8e02755e824b8ffa",
           "source": "youtube",
           "company": "Lidl",
-          "title": "🇭🇺 LIDL Magyarország Akciós újság – 23. hét Érvényes 06.04 - 06.10 2026 TV verzió - youtube.com",
-          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 23. hét Érvényes 06.04 - 06.10 2026 TV verzió youtube.com",
+          "title": "🇭🇺 LIDL Magyarország Akciós újság – 23. hét Érvényes 06.04 - 06.10 2026 TV verzió - YouTube",
+          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 23. hét Érvényes 06.04 - 06.10 2026 TV verzió YouTube",
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFB2TUZkVlNJb3dzTzZZNndOcXVGQU9vcndDanNiclh2YlctWHNucnhZMVdlZS13VGFpelVGdmNBMDJCLUxpbXczeFdVeFNaQ3RDT0VtNmJn?oc=5",
           "published": "Sat, 30 May 2026 23:22:33 GMT",
           "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
@@ -176,11 +98,11 @@
           "item_sentiment": "neutral"
         },
         {
-          "id": "aee642714a0a7f72",
+          "id": "3e372b35caccd494",
           "source": "youtube",
           "company": "Lidl",
-          "title": "🇭🇺 LIDL Magyarország Akciós újság – 20. hét Érvényes 05.14 - 05.20 2026 TV verzió - youtube.com",
-          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 20. hét Érvényes 05.14 - 05.20 2026 TV verzió youtube.com",
+          "title": "🇭🇺 LIDL Magyarország Akciós újság – 20. hét Érvényes 05.14 - 05.20 2026 TV verzió - YouTube",
+          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 20. hét Érvényes 05.14 - 05.20 2026 TV verzió YouTube",
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA1NXYtejM2NjZ2VUZ6XzhQQ28xeUg2YjM4M3ZocjJYZTBZWElIM1ZDVFdWMFBkTnBNU0s4VVF1WUNNb2NxUVlwbm9XOUlMdjN6bXJVYmF3?oc=5",
           "published": "Sun, 10 May 2026 19:27:46 GMT",
           "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
@@ -205,7 +127,7 @@
         }
       ],
       "quality_summary": {
-        "dashboard_items": 9,
+        "dashboard_items": 3,
         "background_items": 1,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
@@ -300,11 +222,11 @@
       "social_sentiment": "neutral",
       "latest_items": [
         {
-          "id": "a21af0ae990de892",
+          "id": "d6cf6dfa6a42e627",
           "source": "youtube",
           "company": "Tesco",
-          "title": "A LÁTHATATLAN BOROS MEGINT LECSAPOTT?! 😱 Hóvégi bevásárlás - ALDI ÉS TESCO 😁🥬🍎🥑🥐🧅🧀 - youtube.com",
-          "summary": "A LÁTHATATLAN BOROS MEGINT LECSAPOTT?! 😱 Hóvégi bevásárlás - ALDI ÉS TESCO 😁🥬🍎🥑🥐🧅🧀 youtube.com",
+          "title": "A LÁTHATATLAN BOROS MEGINT LECSAPOTT?! 😱 Hóvégi bevásárlás - ALDI ÉS TESCO 😁🥬🍎🥑🥐🧅🧀 - YouTube",
+          "summary": "A LÁTHATATLAN BOROS MEGINT LECSAPOTT?! 😱 Hóvégi bevásárlás - ALDI ÉS TESCO 😁🥬🍎🥑🥐🧅🧀 YouTube",
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE4xODREeng0akltT2xrajVFb3Z0d0VTSVlucGxvdGwwc0FrXzJEN3Z5N0xxYWtFRUtscThlaWphejlmODZ0ZUlyWmw1d1JOSDJkSXRnY1J3?oc=5",
           "published": "Mon, 20 Apr 2026 14:05:06 GMT",
           "query": "site:youtube.com \"Tesco Hungary\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
@@ -549,11 +471,11 @@
       "social_sentiment": "neutral",
       "latest_items": [
         {
-          "id": "b15e5570c9ea10f1",
+          "id": "9a1fea266272003d",
           "source": "youtube",
           "company": "CBA",
-          "title": "CBA Príma akciós újság 04.23. - 04.29. - youtube.com",
-          "summary": "CBA Príma akciós újság 04.23. - 04.29. youtube.com",
+          "title": "CBA Príma akciós újság 04.23. - 04.29. - YouTube",
+          "summary": "CBA Príma akciós újság 04.23. - 04.29. YouTube",
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBULTZqM00ySGtMZF9FV0s4ekRtTG5lMlNDemNySGRwOGp1bTZPT2tPbmpxekRlX3d3NENkZVl5VW51V1VOekZMNk1RLTNsZDB0S3h4UVhB?oc=5",
           "published": "Mon, 20 Apr 2026 15:11:20 GMT",
           "query": "site:youtube.com \"CBA Príma\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
