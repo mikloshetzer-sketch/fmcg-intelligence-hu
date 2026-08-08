@@ -1,25 +1,25 @@
 {
-  "updated_at": "2026-08-08T07:28:20.211820+00:00",
+  "updated_at": "2026-08-08T13:25:57.132038+00:00",
   "status": "ok",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "companies": [
     {
       "company": "Lidl",
-      "mentions": 4,
-      "raw_mentions": 4,
-      "dashboard_mentions": 3,
+      "mentions": 10,
+      "raw_mentions": 10,
+      "dashboard_mentions": 9,
       "background_mentions": 1,
       "discarded_mentions": 0,
-      "weighted_mentions": 3.5,
-      "hu_relevant_mentions": 3,
-      "index": 37,
+      "weighted_mentions": 9.5,
+      "hu_relevant_mentions": 9,
+      "index": 52,
       "sources": {
-        "reddit": 1,
+        "reddit": 7,
         "youtube": 2,
         "mastodon": 1
       },
       "raw_sources": {
-        "reddit": 1,
+        "reddit": 7,
         "youtube": 2,
         "mastodon": 1
       },
@@ -149,22 +149,22 @@
     },
     {
       "company": "CBA",
-      "mentions": 2,
-      "raw_mentions": 2,
-      "dashboard_mentions": 2,
+      "mentions": 1,
+      "raw_mentions": 1,
+      "dashboard_mentions": 1,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_mentions": 2.0,
-      "hu_relevant_mentions": 2,
+      "weighted_mentions": 1.0,
+      "hu_relevant_mentions": 1,
       "index": 16,
       "sources": {
         "reddit": 0,
-        "youtube": 2,
+        "youtube": 1,
         "mastodon": 0
       },
       "raw_sources": {
         "reddit": 0,
-        "youtube": 2,
+        "youtube": 1,
         "mastodon": 0
       },
       "sentiment": "neutral",
