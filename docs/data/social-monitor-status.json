@@ -1,26 +1,26 @@
 {
-  "updated_at": "2026-08-08T19:07:09.855625+00:00",
+  "updated_at": "2026-08-09T02:34:33.299237+00:00",
   "status": "ok",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "companies": [
     {
       "company": "Lidl",
-      "mentions": 4,
-      "raw_mentions": 4,
-      "dashboard_mentions": 3,
+      "mentions": 5,
+      "raw_mentions": 5,
+      "dashboard_mentions": 4,
       "background_mentions": 1,
       "discarded_mentions": 0,
-      "weighted_mentions": 3.5,
-      "hu_relevant_mentions": 3,
-      "index": 37,
+      "weighted_mentions": 4.5,
+      "hu_relevant_mentions": 4,
+      "index": 33,
       "sources": {
-        "reddit": 1,
-        "youtube": 2,
+        "reddit": 0,
+        "youtube": 4,
         "mastodon": 1
       },
       "raw_sources": {
-        "reddit": 1,
-        "youtube": 2,
+        "reddit": 0,
+        "youtube": 4,
         "mastodon": 1
       },
       "sentiment": "neutral",
@@ -53,21 +53,21 @@
     },
     {
       "company": "Tesco",
-      "mentions": 1,
-      "raw_mentions": 1,
-      "dashboard_mentions": 1,
+      "mentions": 2,
+      "raw_mentions": 2,
+      "dashboard_mentions": 2,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_mentions": 1.0,
-      "hu_relevant_mentions": 1,
-      "index": 16,
+      "weighted_mentions": 2.0,
+      "hu_relevant_mentions": 2,
+      "index": 20,
       "sources": {
-        "reddit": 0,
+        "reddit": 1,
         "youtube": 1,
         "mastodon": 0
       },
       "raw_sources": {
-        "reddit": 0,
+        "reddit": 1,
         "youtube": 1,
         "mastodon": 0
       },
