@@ -1,26 +1,26 @@
 {
-  "updated_at": "2026-08-10T08:12:55.208412+00:00",
+  "updated_at": "2026-08-10T13:54:31.624040+00:00",
   "status": "ok",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "companies": [
     {
       "company": "Lidl",
-      "mentions": 4,
-      "raw_mentions": 5,
-      "dashboard_mentions": 3,
+      "mentions": 2,
+      "raw_mentions": 3,
+      "dashboard_mentions": 1,
       "background_mentions": 1,
       "discarded_mentions": 1,
-      "weighted_mentions": 3.5,
-      "hu_relevant_mentions": 3,
-      "index": 33,
+      "weighted_mentions": 1.5,
+      "hu_relevant_mentions": 1,
+      "index": 20,
       "sources": {
         "reddit": 0,
-        "youtube": 3,
+        "youtube": 1,
         "mastodon": 1
       },
       "raw_sources": {
         "reddit": 0,
-        "youtube": 3,
+        "youtube": 1,
         "mastodon": 2
       },
       "sentiment": "neutral",
@@ -53,25 +53,25 @@
     },
     {
       "company": "Tesco",
-      "mentions": 1,
-      "raw_mentions": 1,
-      "dashboard_mentions": 1,
-      "background_mentions": 0,
-      "discarded_mentions": 0,
-      "weighted_mentions": 1.0,
-      "hu_relevant_mentions": 1,
-      "index": 16,
+      "mentions": 12,
+      "raw_mentions": 18,
+      "dashboard_mentions": 5,
+      "background_mentions": 7,
+      "discarded_mentions": 6,
+      "weighted_mentions": 8.5,
+      "hu_relevant_mentions": 5,
+      "index": 51,
       "sources": {
-        "reddit": 0,
+        "reddit": 11,
         "youtube": 1,
         "mastodon": 0
       },
       "raw_sources": {
-        "reddit": 0,
+        "reddit": 17,
         "youtube": 1,
         "mastodon": 0
       },
-      "sentiment": "neutral",
+      "sentiment": "mixed",
       "topic": "árak és akciók",
       "errors": []
     },

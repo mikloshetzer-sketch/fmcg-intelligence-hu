@@ -1,41 +1,41 @@
 {
-  "updated_at": "2026-08-10T08:12:55.208412+00:00",
+  "updated_at": "2026-08-10T13:54:31.624040+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-08-10T08:12:55.208412+00:00",
-    "leader_social": "Lidl",
-    "leader_social_index": 33,
+    "updated_at": "2026-08-10T13:54:31.624040+00:00",
+    "leader_social": "Tesco",
+    "leader_social_index": 51,
     "dominant_social_topic": "árak és akciók",
     "overall_social_sentiment": "neutral"
   },
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 4,
-      "raw_social_mentions": 5,
-      "dashboard_mentions": 3,
+      "social_mentions": 2,
+      "raw_social_mentions": 3,
+      "dashboard_mentions": 1,
       "background_mentions": 1,
       "discarded_mentions": 1,
-      "weighted_social_mentions": 3.5,
-      "hu_relevant_mentions": 3,
-      "social_index": 33,
+      "weighted_social_mentions": 1.5,
+      "hu_relevant_mentions": 1,
+      "social_index": 20,
       "social_sources": {
         "reddit": 0,
-        "youtube": 3,
+        "youtube": 1,
         "mastodon": 1
       },
       "raw_social_sources": {
         "reddit": 0,
-        "youtube": 3,
+        "youtube": 1,
         "mastodon": 2
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 3.0
+          "score": 1.0
         },
         {
           "topic": "bolti élmény",
@@ -49,7 +49,7 @@
       "topic_sentiment": {
         "árak és akciók": {
           "positive": 0.0,
-          "neutral": 3.0,
+          "neutral": 1.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -72,39 +72,13 @@
       "social_sentiment": "neutral",
       "latest_items": [
         {
-          "id": "8e02755e824b8ffa",
+          "id": "aee642714a0a7f72",
           "source": "youtube",
           "company": "Lidl",
-          "title": "🇭🇺 LIDL Magyarország Akciós újság – 23. hét Érvényes 06.04 - 06.10 2026 TV verzió - YouTube",
-          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 23. hét Érvényes 06.04 - 06.10 2026 TV verzió YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFB2TUZkVlNJb3dzTzZZNndOcXVGQU9vcndDanNiclh2YlctWHNucnhZMVdlZS13VGFpelVGdmNBMDJCLUxpbXczeFdVeFNaQ3RDT0VtNmJn?oc=5",
-          "published": "Sat, 30 May 2026 23:22:33 GMT",
-          "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "3e372b35caccd494",
-          "source": "youtube",
-          "company": "Lidl",
-          "title": "🇭🇺 LIDL Magyarország Akciós újság – 20. hét Érvényes 05.14 - 05.20 2026 TV verzió - YouTube",
-          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 20. hét Érvényes 05.14 - 05.20 2026 TV verzió YouTube",
+          "title": "🇭🇺 LIDL Magyarország Akciós újság – 20. hét Érvényes 05.14 - 05.20 2026 TV verzió - youtube.com",
+          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 20. hét Érvényes 05.14 - 05.20 2026 TV verzió youtube.com",
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA1NXYtejM2NjZ2VUZ6XzhQQ28xeUg2YjM4M3ZocjJYZTBZWElIM1ZDVFdWMFBkTnBNU0s4VVF1WUNNb2NxUVlwbm9XOUlMdjN6bXJVYmF3?oc=5",
           "published": "Sun, 10 May 2026 19:27:46 GMT",
-          "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "e43b52ba20843594",
-          "source": "youtube",
-          "company": "Lidl",
-          "title": "🇭🇺 LIDL Magyarország Akciós újság – 19. hét Érvényes 05.07-től 2026 TV verzió - YouTube",
-          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 19. hét Érvényes 05.07-től 2026 TV verzió YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBzYjBHSGFSS2k1ZUoydVpsWnBNd2RuSllXc2YzdEZITVRTZTA3NW8zdkFLYi1OYUZmX3FXRDdZM3ZnRTlEQmdOb1dSckpGeGNmSk1tVlV3?oc=5",
-          "published": "Sun, 03 May 2026 19:52:23 GMT",
           "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
@@ -127,7 +101,7 @@
         }
       ],
       "quality_summary": {
-        "dashboard_items": 3,
+        "dashboard_items": 1,
         "background_items": 1,
         "discarded_items": 1,
         "dashboard_relevance_threshold": 0.8,
@@ -174,21 +148,21 @@
     },
     {
       "company": "Tesco",
-      "social_mentions": 1,
-      "raw_social_mentions": 1,
-      "dashboard_mentions": 1,
-      "background_mentions": 0,
-      "discarded_mentions": 0,
-      "weighted_social_mentions": 1.0,
-      "hu_relevant_mentions": 1,
-      "social_index": 16,
+      "social_mentions": 12,
+      "raw_social_mentions": 18,
+      "dashboard_mentions": 5,
+      "background_mentions": 7,
+      "discarded_mentions": 6,
+      "weighted_social_mentions": 8.5,
+      "hu_relevant_mentions": 5,
+      "social_index": 51,
       "social_sources": {
-        "reddit": 0,
+        "reddit": 11,
         "youtube": 1,
         "mastodon": 0
       },
       "raw_social_sources": {
-        "reddit": 0,
+        "reddit": 17,
         "youtube": 1,
         "mastodon": 0
       },
@@ -196,37 +170,129 @@
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 1.0
+          "score": 7.0
+        },
+        {
+          "topic": "digitalizáció és önkiszolgálás",
+          "score": 5.5
         },
         {
           "topic": "bolti élmény",
+          "score": 2.0
+        },
+        {
+          "topic": "vásárlói panaszok",
+          "score": 1.0
+        },
+        {
+          "topic": "termék és minőség",
           "score": 1.0
         }
       ],
       "topic_sentiment": {
+        "vásárlói panaszok": {
+          "positive": 0.0,
+          "neutral": 0.0,
+          "negative": 1.0,
+          "mixed": 0.0,
+          "dominant": "negative"
+        },
+        "digitalizáció és önkiszolgálás": {
+          "positive": 0.0,
+          "neutral": 2.0,
+          "negative": 1.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        },
         "árak és akciók": {
           "positive": 0.0,
-          "neutral": 1.0,
+          "neutral": 6.5,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
         },
         "bolti élmény": {
           "positive": 0.0,
+          "neutral": 2.0,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        },
+        "ellátási lánc és logisztika": {
+          "positive": 0.0,
           "neutral": 1.0,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        },
+        "termék és minőség": {
+          "positive": 0.0,
+          "neutral": 0.5,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
         }
       },
-      "social_sentiment": "neutral",
+      "social_sentiment": "mixed",
       "latest_items": [
         {
-          "id": "d6cf6dfa6a42e627",
+          "id": "30f097bab991c382",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "What a scam PAYG has become",
+          "summary": "What a scam Tesco Mobile is. Having lived abroad for many years, I return to the UK occasionally and will buy a SIM to get service while I'm here. Usually, this means I choose a package, buy X amount of data and voice, and off I go. Tesco's PAYG Essentials package purports to be that but is actually a scam. You supposedly buy a package, but actually all you get is credit until you jump through all the hoops to &quot;attach&quot; the PAYG package to your purchase. If that doesnt happen for some r",
+          "url": "https://www.reddit.com/r/Tescomobile/comments/1ve08il/what_a_scam_payg_has_become/",
+          "published": "2026-08-03T01:59:34+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "negative"
+        },
+        {
+          "id": "1d15eb716321a4fb",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "Might be a stupid question about clubcard",
+          "summary": "If i bought alcohol in store using my own card but my parents tesco clubcard, will they be able to see what i bought. Im not under 18, but my parents are strict af and very religious. And nothing here or on the internet is giving me a clear answer. Also one other thing, i accidentally used my debit card instead of clubcard first but she then refunded me clubcard points after i scanned it after paying. Will this show? Ik im panicking but i really would appreciate anyone helping. Thanks submitted ",
+          "url": "https://www.reddit.com/r/tesco/comments/1v9261v/might_be_a_stupid_question_about_clubcard/",
+          "published": "2026-07-28T15:42:58+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "284da39769d3621c",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "I just damned a spy. If I re-indoctrinate them, will they become a follower or stay a spy?",
+          "summary": "Today after finally killing Shamura I can back to a turquoise cat worshipping me that I instantly knew that was a spy because of two reasons. 1. There once was a turquoise cat in my cult but I killed him like 30 in game days ago. 2. They had one of the standard generated names while the rest of my followers have names such as Ninky Nonk and Tesco Clubcard. And I decided that in my usual tradition, I torture the spies. So I damned his ass. So if I get him back, will he be a follower or will he ev",
+          "url": "https://www.reddit.com/r/CultOfTheLamb/comments/1v3ndlf/i_just_damned_a_spy_if_i_reindoctrinate_them_will/",
+          "published": "2026-07-22T17:44:51+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "e55f2cfcc6665c8d",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "How to challenge the “reasonable suspicion” head-on to maximise chances of s.303Z17–303Z19 POCA compensation claims in England?",
+          "summary": "In these enlightened times, under the benevolent gaze of Chapter 3B of the Proceeds of Crime Act 2002 (as inserted by the Criminal Finances Act 2017), we no longer require such antiquated niceties as a criminal conviction, a live prosecution, or even a coherent theory of wrongdoing. Nay! A mere reasonable suspicion that monies in a bank account are “recoverable property” (s.303Z1 POCA) or intended for unlawful conduct suffices for an Account Freezing Order (AFO) in the Magistrates’ Court. Enforc",
+          "url": "https://www.reddit.com/r/LegalAdviceUK/comments/1v1pbs3/how_to_challenge_the_reasonable_suspicion_headon/",
+          "published": "2026-07-20T15:50:24+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "positive"
+        },
+        {
+          "id": "a21af0ae990de892",
           "source": "youtube",
           "company": "Tesco",
-          "title": "A LÁTHATATLAN BOROS MEGINT LECSAPOTT?! 😱 Hóvégi bevásárlás - ALDI ÉS TESCO 😁🥬🍎🥑🥐🧅🧀 - YouTube",
-          "summary": "A LÁTHATATLAN BOROS MEGINT LECSAPOTT?! 😱 Hóvégi bevásárlás - ALDI ÉS TESCO 😁🥬🍎🥑🥐🧅🧀 YouTube",
+          "title": "A LÁTHATATLAN BOROS MEGINT LECSAPOTT?! 😱 Hóvégi bevásárlás - ALDI ÉS TESCO 😁🥬🍎🥑🥐🧅🧀 - youtube.com",
+          "summary": "A LÁTHATATLAN BOROS MEGINT LECSAPOTT?! 😱 Hóvégi bevásárlás - ALDI ÉS TESCO 😁🥬🍎🥑🥐🧅🧀 youtube.com",
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE4xODREeng0akltT2xrajVFb3Z0d0VTSVlucGxvdGwwc0FrXzJEN3Z5N0xxYWtFRUtscThlaWphejlmODZ0ZUlyWmw1d1JOSDJkSXRnY1J3?oc=5",
           "published": "Mon, 20 Apr 2026 14:05:06 GMT",
           "query": "site:youtube.com \"Tesco Hungary\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
@@ -235,11 +301,103 @@
           "item_sentiment": "neutral"
         }
       ],
-      "background_items": [],
+      "background_items": [
+        {
+          "id": "9d828b1b783688c3",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "Tesco clubcard for poland people",
+          "summary": "submitted by /u/Wisnia_s2 to r/czech [link] [comments]",
+          "url": "https://www.reddit.com/r/czech/comments/1vk25b1/tesco_clubcard_for_poland_people/",
+          "published": "2026-08-09T21:41:10+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "5c8c82877ab20d48",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "Win a holiday with Tesco Clubcard confusion",
+          "summary": "Along with my receipt today I got a &quot;congratulations, you're in the free prize draw... 40 holidays to be won...&quot; The T&C link is for general Tesco T&Cs, not Holiday draw T&Cs. I want to know if there is a money substitute as I don't do holidays and have no-one to give it to. Can anyone direct me to this information ? I'm in England btw. 😁 submitted by /u/e650man to r/tesco [link] [comments]",
+          "url": "https://www.reddit.com/r/tesco/comments/1vhx5g9/win_a_holiday_with_tesco_clubcard_confusion/",
+          "published": "2026-08-07T10:44:08+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "53f4981327fe88ee",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "Tesco Clubcard Challenges is back today and you can get up to £50 worth of points",
+          "summary": "submitted by /u/thesun to r/tesco [link] [comments]",
+          "url": "https://www.reddit.com/r/tesco/comments/1vehgr1/tesco_clubcard_challenges_is_back_today_and_you/",
+          "published": "2026-08-03T15:57:56+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "367793fbf7eabe0a",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "Haven’t got a Tesco Clubcard. Use the QR Code to receive discounts on clubcard products.",
+          "summary": "submitted by /u/Fresh-Information-64 to u/Fresh-Information-64 [link] [comments]",
+          "url": "https://www.reddit.com/r/u_Fresh-Information-64/comments/1vef4jo/havent_got_a_tesco_clubcard_use_the_qr_code_to/",
+          "published": "2026-08-03T14:32:15+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "940e58b64ad225a2",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "Tesco Clubcard",
+          "summary": "submitted by /u/DiamondMaster07 to r/maygar [link] [comments]",
+          "url": "https://www.reddit.com/r/maygar/comments/1vdb8x7/tesco_clubcard/",
+          "published": "2026-08-02T07:12:05+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "63ec0d0043b430ec",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "Tesco clubcard plus",
+          "summary": "Opinions? Is it worth getting, yes or no? submitted by /u/jnenn0 to r/tesco [link] [comments]",
+          "url": "https://www.reddit.com/r/tesco/comments/1uujj25/tesco_clubcard_plus/",
+          "published": "2026-07-12T16:05:51+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "aa43dc51c694b26a",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "tescoclubcard",
+          "summary": "Doing an experiment to see how much tesco club card would max out at? Is there a limit? We shall find out maybe? I will post a picture of a club card for anyone to scan at the till or self checkout. [link]",
+          "url": "https://www.reddit.com/r/tescoclubcard/",
+          "published": "",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        }
+      ],
       "quality_summary": {
-        "dashboard_items": 1,
-        "background_items": 0,
-        "discarded_items": 0,
+        "dashboard_items": 5,
+        "background_items": 7,
+        "discarded_items": 6,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
       },
@@ -471,11 +629,11 @@
       "social_sentiment": "neutral",
       "latest_items": [
         {
-          "id": "9a1fea266272003d",
+          "id": "b15e5570c9ea10f1",
           "source": "youtube",
           "company": "CBA",
-          "title": "CBA Príma akciós újság 04.23. - 04.29. - YouTube",
-          "summary": "CBA Príma akciós újság 04.23. - 04.29. YouTube",
+          "title": "CBA Príma akciós újság 04.23. - 04.29. - youtube.com",
+          "summary": "CBA Príma akciós újság 04.23. - 04.29. youtube.com",
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBULTZqM00ySGtMZF9FV0s4ekRtTG5lMlNDemNySGRwOGp1bTZPT2tPbmpxekRlX3d3NENkZVl5VW51V1VOekZMNk1RLTNsZDB0S3h4UVhB?oc=5",
           "published": "Mon, 20 Apr 2026 15:11:20 GMT",
           "query": "site:youtube.com \"CBA Príma\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
