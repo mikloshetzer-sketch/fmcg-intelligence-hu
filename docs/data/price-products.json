@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10T05:13:25Z",
+  "updated_at": "2026-08-11T04:56:26Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -551,10 +551,10 @@
       "prices": {
         "SPAR": 1954.44,
         "Tesco": 1748.75,
-        "Penny": 1749.0,
         "Auchan": 1199.0,
         "ALDI": 1749.0,
-        "Lidl": 1749.0
+        "Lidl": 1749.0,
+        "Penny": 1749.0
       },
       "selected_products": {
         "SPAR": {
@@ -575,16 +575,6 @@
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "0.8",
-          "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-10995",
-          "source_product_name": "Sertés darálthús 30% zsírtart.",
-          "amount": 1749.0,
-          "unit_amount": 1749.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "1",
           "price_type": "NORMAL"
         },
         "Auchan": {
@@ -614,6 +604,16 @@
           "unit_amount": 1749.0,
           "unit": "kg",
           "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Penny": {
+          "source_product_id": "penny-10995",
+          "source_product_name": "Sertés darálthús 30% zsírtart.",
+          "amount": 1749.0,
+          "unit_amount": 1749.0,
+          "unit": "kg",
+          "unit_title": "csomag",
           "packaging": "1",
           "price_type": "NORMAL"
         }
@@ -1015,7 +1015,7 @@
         "Auchan": 391.0,
         "Tesco": 520.0,
         "SPAR": 525.0,
-        "Penny": 550.0,
+        "Penny": 590.0,
         "ALDI": 599.0
       },
       "selected_products": {
@@ -1062,8 +1062,8 @@
         "Penny": {
           "source_product_id": "penny-298",
           "source_product_name": "Magyar fürtös paradicsom lé kg",
-          "amount": 550.0,
-          "unit_amount": 550.0,
+          "amount": 590.0,
+          "unit_amount": 590.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1165,14 +1165,24 @@
       "category": "Zöldség",
       "expected_unit": "kg",
       "prices": {
+        "Penny": 149.0,
         "Lidl": 179.5,
         "Tesco": 193.0,
         "Auchan": 194.0,
         "ALDI": 195.0,
-        "SPAR": 200.0,
-        "Penny": 209.0
+        "SPAR": 200.0
       },
       "selected_products": {
+        "Penny": {
+          "source_product_id": "penny-518",
+          "source_product_name": "Vöröshagyma lédig kg",
+          "amount": 149.0,
+          "unit_amount": 149.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "Lidl": {
           "source_product_id": "lidl-0083333",
           "source_product_name": "Vöröshagyma 2kg",
@@ -1218,16 +1228,6 @@
           "source_product_name": "Vöröshagyma lédig",
           "amount": 200.0,
           "unit_amount": 200.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-518",
-          "source_product_name": "Vöröshagyma lédig kg",
-          "amount": 209.0,
-          "unit_amount": 209.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1352,24 +1352,14 @@
       "category": "Alapélelmiszer",
       "expected_unit": "l",
       "prices": {
-        "Auchan": 745.0,
         "Tesco": 745.0,
         "ALDI": 749.0,
         "Lidl": 749.0,
         "Penny": 749.0,
+        "Auchan": 750.0,
         "SPAR": 759.0
       },
       "selected_products": {
-        "Auchan": {
-          "source_product_id": "5999086455338",
-          "source_product_name": "Auchan Kedvenc finomított napraforgó étolaj 1 l",
-          "amount": 745.0,
-          "unit_amount": 745.0,
-          "unit": "l",
-          "unit_title": "db",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
         "Tesco": {
           "source_product_id": "6420155000092",
           "source_product_name": "GOLDEN IMPERIAL NAPRAFORGÓ ÉTOLAJ 1 L QQ",
@@ -1405,6 +1395,16 @@
           "source_product_name": "Penny napraforgó étolaj",
           "amount": 749.0,
           "unit_amount": 749.0,
+          "unit": "l",
+          "unit_title": "db",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Auchan": {
+          "source_product_id": "5999086455338",
+          "source_product_name": "Auchan Kedvenc finomított napraforgó étolaj 1 l",
+          "amount": 750.0,
+          "unit_amount": 750.0,
           "unit": "l",
           "unit_title": "db",
           "packaging": "1",
@@ -1660,7 +1660,7 @@
       "category": "Alapélelmiszer",
       "expected_unit": "kg",
       "prices": {
-        "Auchan": 410.0,
+        "Auchan": 360.0,
         "Lidl": 549.0,
         "Penny": 549.0,
         "SPAR": 579.0,
@@ -1670,8 +1670,8 @@
         "Auchan": {
           "source_product_id": "5999086450562",
           "source_product_name": "Auchan Tipp \"B\" minőségű rizs 1 kg",
-          "amount": 410.0,
-          "unit_amount": 410.0,
+          "amount": 360.0,
+          "unit_amount": 360.0,
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "1",
@@ -1728,7 +1728,7 @@
       "prices": {
         "SPAR": 112.25,
         "Tesco": 117.25,
-        "Auchan": 46.0,
+        "Auchan": 42.0,
         "ALDI": 119.9,
         "Penny": 124.75
       },
@@ -1756,8 +1756,8 @@
         "Auchan": {
           "source_product_id": "3858893661160",
           "source_product_name": "Violeta Limited Edition toalettpapír 3 rétegű 95 lap 16 tekercs",
-          "amount": 740.0,
-          "unit_amount": 46.0,
+          "amount": 670.0,
+          "unit_amount": 42.0,
           "unit": "db",
           "unit_title": "csomag",
           "packaging": "16",
