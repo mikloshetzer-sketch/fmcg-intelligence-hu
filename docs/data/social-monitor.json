@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-08-12T13:55:43.218508+00:00",
+  "updated_at": "2026-08-12T19:35:50.597843+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-08-12T13:55:43.218508+00:00",
+    "updated_at": "2026-08-12T19:35:50.597843+00:00",
     "leader_social": "Lidl",
     "leader_social_index": 33,
     "dominant_social_topic": "árak és akciók",
@@ -200,70 +200,32 @@
     },
     {
       "company": "Tesco",
-      "social_mentions": 1,
-      "raw_social_mentions": 1,
-      "dashboard_mentions": 1,
+      "social_mentions": 0,
+      "raw_social_mentions": 0,
+      "dashboard_mentions": 0,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 1.0,
-      "hu_relevant_mentions": 1,
-      "social_index": 16,
+      "weighted_social_mentions": 0,
+      "hu_relevant_mentions": 0,
+      "social_index": 0,
       "social_sources": {
         "reddit": 0,
-        "youtube": 1,
+        "youtube": 0,
         "mastodon": 0
       },
       "raw_social_sources": {
         "reddit": 0,
-        "youtube": 1,
+        "youtube": 0,
         "mastodon": 0
       },
-      "dominant_social_topic": "árak és akciók",
-      "top_social_topics": [
-        {
-          "topic": "árak és akciók",
-          "score": 1.0
-        },
-        {
-          "topic": "bolti élmény",
-          "score": 1.0
-        }
-      ],
-      "topic_sentiment": {
-        "árak és akciók": {
-          "positive": 0.0,
-          "neutral": 1.0,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
-        },
-        "bolti élmény": {
-          "positive": 0.0,
-          "neutral": 1.0,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
-        }
-      },
+      "dominant_social_topic": "általános vállalati említés",
+      "top_social_topics": [],
+      "topic_sentiment": {},
       "social_sentiment": "neutral",
-      "latest_items": [
-        {
-          "id": "d6cf6dfa6a42e627",
-          "source": "youtube",
-          "company": "Tesco",
-          "title": "A LÁTHATATLAN BOROS MEGINT LECSAPOTT?! 😱 Hóvégi bevásárlás - ALDI ÉS TESCO 😁🥬🍎🥑🥐🧅🧀 - YouTube",
-          "summary": "A LÁTHATATLAN BOROS MEGINT LECSAPOTT?! 😱 Hóvégi bevásárlás - ALDI ÉS TESCO 😁🥬🍎🥑🥐🧅🧀 YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE4xODREeng0akltT2xrajVFb3Z0d0VTSVlucGxvdGwwc0FrXzJEN3Z5N0xxYWtFRUtscThlaWphejlmODZ0ZUlyWmw1d1JOSDJkSXRnY1J3?oc=5",
-          "published": "Mon, 20 Apr 2026 14:05:06 GMT",
-          "query": "site:youtube.com \"Tesco Hungary\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        }
-      ],
+      "latest_items": [],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 1,
+        "dashboard_items": 0,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
