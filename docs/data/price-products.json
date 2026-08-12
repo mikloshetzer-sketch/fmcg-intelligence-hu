@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-11T04:56:26Z",
+  "updated_at": "2026-08-12T05:21:13Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -1165,14 +1165,24 @@
       "category": "Zöldség",
       "expected_unit": "kg",
       "prices": {
+        "Auchan": 100.0,
         "Penny": 149.0,
         "Lidl": 179.5,
         "Tesco": 193.0,
-        "Auchan": 194.0,
         "ALDI": 195.0,
         "SPAR": 200.0
       },
       "selected_products": {
+        "Auchan": {
+          "source_product_id": "2182420000001",
+          "source_product_name": "Vöröshagyma Ft/kg",
+          "amount": 100.0,
+          "unit_amount": 100.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "Penny": {
           "source_product_id": "penny-518",
           "source_product_name": "Vöröshagyma lédig kg",
@@ -1198,16 +1208,6 @@
           "source_product_name": "VÖRÖSHAGYMA LÉDIG QQ",
           "amount": 193.0,
           "unit_amount": 193.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Auchan": {
-          "source_product_id": "2182420000001",
-          "source_product_name": "Vöröshagyma Ft/kg",
-          "amount": 194.0,
-          "unit_amount": 194.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1510,7 +1510,7 @@
         "Lidl": 290.0,
         "SPAR": 290.0,
         "ALDI": 290.0,
-        "Auchan": 294.0,
+        "Auchan": 296.0,
         "Tesco": 304.0
       },
       "selected_products": {
@@ -1557,8 +1557,8 @@
         "Auchan": {
           "source_product_id": "4008671013004",
           "source_product_name": "Sweet Family kristálycukor 1 kg",
-          "amount": 294.0,
-          "unit_amount": 294.0,
+          "amount": 296.0,
+          "unit_amount": 296.0,
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "1",
@@ -1726,7 +1726,7 @@
       "category": "Háztartás",
       "expected_unit": "db",
       "prices": {
-        "SPAR": 112.25,
+        "SPAR": 102.5,
         "Tesco": 117.25,
         "Auchan": 42.0,
         "ALDI": 119.9,
@@ -1734,13 +1734,13 @@
       },
       "selected_products": {
         "SPAR": {
-          "source_product_id": "5999139407888",
-          "source_product_name": "S-Budget illatmentes toalettpapír 2 rétegű 4 tekercs",
-          "amount": 449.0,
-          "unit_amount": 112.25,
+          "source_product_id": "8004260013154",
+          "source_product_name": "Regina Delicate Refreshing Aloe toalettpapír 3 rétegű 16 tekercs",
+          "amount": 1640.0,
+          "unit_amount": 102.5,
           "unit": "db",
           "unit_title": "csomag",
-          "packaging": "4",
+          "packaging": "16",
           "price_type": "NORMAL"
         },
         "Tesco": {
