@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-08-13T13:55:34.466864+00:00",
+  "updated_at": "2026-08-13T19:33:34.066906+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-08-13T13:55:34.466864+00:00",
+    "updated_at": "2026-08-13T19:33:34.066906+00:00",
     "leader_social": "Lidl",
     "leader_social_index": 33,
     "dominant_social_topic": "árak és akciók",
@@ -13,29 +13,29 @@
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 7,
-      "raw_social_mentions": 8,
-      "dashboard_mentions": 5,
+      "social_mentions": 5,
+      "raw_social_mentions": 6,
+      "dashboard_mentions": 3,
       "background_mentions": 2,
       "discarded_mentions": 1,
-      "weighted_social_mentions": 6.0,
-      "hu_relevant_mentions": 5,
+      "weighted_social_mentions": 4.0,
+      "hu_relevant_mentions": 3,
       "social_index": 33,
       "social_sources": {
         "reddit": 0,
-        "youtube": 5,
+        "youtube": 3,
         "mastodon": 2
       },
       "raw_social_sources": {
         "reddit": 0,
-        "youtube": 5,
+        "youtube": 3,
         "mastodon": 3
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 5.5
+          "score": 3.5
         },
         {
           "topic": "bolti élmény",
@@ -53,7 +53,7 @@
       "topic_sentiment": {
         "árak és akciók": {
           "positive": 0.0,
-          "neutral": 5.5,
+          "neutral": 3.5,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -120,32 +120,6 @@
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
           "item_sentiment": "neutral"
-        },
-        {
-          "id": "0df7879327f6edfd",
-          "source": "youtube",
-          "company": "Lidl",
-          "title": "🇭🇺 LIDL Magyarország Akciós újság – 18. hét Érvényes 04.30-től 2026 - YouTube",
-          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 18. hét Érvényes 04.30-től 2026 YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFAxMmhRbF85djlKQVpmc0RULTNOemFReVJJZnJhZlpubXVlaEVUeEN6ZUluT09TZklOd2xaak5ZTjQ3MTFoLW1ySi1uNG1BZjd3WUFsZkFR?oc=5",
-          "published": "Sun, 26 Apr 2026 19:29:34 GMT",
-          "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "4755f03efbcb8e9b",
-          "source": "youtube",
-          "company": "Lidl",
-          "title": "🇭🇺 LIDL Magyarország Akciós újság – 17. hét Érvényes 04.23-től 2026 TV verzió - YouTube",
-          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 17. hét Érvényes 04.23-től 2026 TV verzió YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA1STV5Mk5TLU9nQzd5ODBveTdiQjBuSzg5d3d5R2hoMXl5anBQcGo2cGVBR0FUenA3bGtEVkFNNkFpNTJwRW5mZ1kzOVFPQnZ3b1dRdzhB?oc=5",
-          "published": "Sun, 19 Apr 2026 19:01:16 GMT",
-          "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
         }
       ],
       "background_items": [
@@ -177,7 +151,7 @@
         }
       ],
       "quality_summary": {
-        "dashboard_items": 5,
+        "dashboard_items": 3,
         "background_items": 2,
         "discarded_items": 1,
         "dashboard_relevance_threshold": 0.8,
