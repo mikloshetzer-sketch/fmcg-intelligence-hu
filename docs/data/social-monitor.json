@@ -1,41 +1,41 @@
 {
-  "updated_at": "2026-08-13T03:07:16.549544+00:00",
+  "updated_at": "2026-08-13T08:00:12.987740+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-08-13T03:07:16.549544+00:00",
+    "updated_at": "2026-08-13T08:00:12.987740+00:00",
     "leader_social": "Lidl",
-    "leader_social_index": 20,
+    "leader_social_index": 33,
     "dominant_social_topic": "árak és akciók",
     "overall_social_sentiment": "neutral"
   },
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 3,
-      "raw_social_mentions": 4,
-      "dashboard_mentions": 2,
+      "social_mentions": 5,
+      "raw_social_mentions": 6,
+      "dashboard_mentions": 4,
       "background_mentions": 1,
       "discarded_mentions": 1,
-      "weighted_social_mentions": 2.5,
-      "hu_relevant_mentions": 2,
-      "social_index": 20,
+      "weighted_social_mentions": 4.5,
+      "hu_relevant_mentions": 4,
+      "social_index": 33,
       "social_sources": {
         "reddit": 0,
-        "youtube": 2,
+        "youtube": 4,
         "mastodon": 1
       },
       "raw_social_sources": {
         "reddit": 0,
-        "youtube": 2,
+        "youtube": 4,
         "mastodon": 2
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 2.0
+          "score": 4.0
         },
         {
           "topic": "bolti élmény",
@@ -49,7 +49,7 @@
       "topic_sentiment": {
         "árak és akciók": {
           "positive": 0.0,
-          "neutral": 2.0,
+          "neutral": 4.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -96,6 +96,32 @@
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
           "item_sentiment": "neutral"
+        },
+        {
+          "id": "e43b52ba20843594",
+          "source": "youtube",
+          "company": "Lidl",
+          "title": "🇭🇺 LIDL Magyarország Akciós újság – 19. hét Érvényes 05.07-től 2026 TV verzió - YouTube",
+          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 19. hét Érvényes 05.07-től 2026 TV verzió YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBzYjBHSGFSS2k1ZUoydVpsWnBNd2RuSllXc2YzdEZITVRTZTA3NW8zdkFLYi1OYUZmX3FXRDdZM3ZnRTlEQmdOb1dSckpGeGNmSk1tVlV3?oc=5",
+          "published": "Sun, 03 May 2026 19:52:23 GMT",
+          "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "0df7879327f6edfd",
+          "source": "youtube",
+          "company": "Lidl",
+          "title": "🇭🇺 LIDL Magyarország Akciós újság – 18. hét Érvényes 04.30-től 2026 - YouTube",
+          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 18. hét Érvényes 04.30-től 2026 YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFAxMmhRbF85djlKQVpmc0RULTNOemFReVJJZnJhZlpubXVlaEVUeEN6ZUluT09TZklOd2xaak5ZTjQ3MTFoLW1ySi1uNG1BZjd3WUFsZkFR?oc=5",
+          "published": "Sun, 26 Apr 2026 19:29:34 GMT",
+          "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
         }
       ],
       "background_items": [
@@ -114,7 +140,7 @@
         }
       ],
       "quality_summary": {
-        "dashboard_items": 2,
+        "dashboard_items": 4,
         "background_items": 1,
         "discarded_items": 1,
         "dashboard_relevance_threshold": 0.8,
