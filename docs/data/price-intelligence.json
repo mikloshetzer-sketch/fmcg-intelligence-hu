@@ -1,22 +1,22 @@
 {
-  "updated_at": "2026-08-13T05:24:59Z",
+  "updated_at": "2026-08-14T05:22:04Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "method": "unit-filtered product-level relative price index",
   "ranking": [
     {
       "company": "Auchan",
-      "price_index": 91,
-      "basket_price_huf": 19478.0,
+      "price_index": 93,
+      "basket_price_huf": 19491.0,
       "covered_products": 25,
-      "index_coverage": 24
+      "index_coverage": 25
     },
     {
       "company": "Lidl",
-      "price_index": 98,
-      "basket_price_huf": 19435.15,
-      "covered_products": 23,
-      "index_coverage": 23
+      "price_index": 97,
+      "basket_price_huf": 19615.15,
+      "covered_products": 24,
+      "index_coverage": 24
     },
     {
       "company": "ALDI",
@@ -41,24 +41,24 @@
     },
     {
       "company": "Tesco",
-      "price_index": 105,
-      "basket_price_huf": 20881.67,
+      "price_index": 104,
+      "basket_price_huf": 20884.83,
       "covered_products": 25,
-      "index_coverage": 24
+      "index_coverage": 25
     }
   ],
   "weekly_change": [
     {
       "company": "ALDI",
-      "change_pct": -1.96
-    },
-    {
-      "company": "Auchan",
       "change_pct": 0.0
     },
     {
+      "company": "Auchan",
+      "change_pct": 2.2
+    },
+    {
       "company": "Lidl",
-      "change_pct": 1.03
+      "change_pct": -1.02
     },
     {
       "company": "Penny",
@@ -70,7 +70,7 @@
     },
     {
       "company": "Tesco",
-      "change_pct": 0.0
+      "change_pct": -0.95
     }
   ]
 }

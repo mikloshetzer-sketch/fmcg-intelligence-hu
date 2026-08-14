@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-13T05:24:59Z",
+  "updated_at": "2026-08-14T05:22:04Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -1242,10 +1242,21 @@
       "category": "Zöldség",
       "expected_unit": "kg",
       "prices": {
+        "Lidl": 180.0,
         "Tesco": 197.5,
         "Auchan": 229.0
       },
       "selected_products": {
+        "Lidl": {
+          "source_product_id": "lidl-0083244",
+          "source_product_name": "Burgonya 2kg hálós",
+          "amount": 360.0,
+          "unit_amount": 180.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "2",
+          "price_type": "NORMAL"
+        },
         "Tesco": {
           "source_product_id": "5999881895124",
           "source_product_name": "ÉTKEZÉSI BURGONYA PIROS 10 kg",
@@ -1267,7 +1278,7 @@
           "price_type": "NORMAL"
         }
       },
-      "coverage": 2
+      "coverage": 3
     },
     {
       "id": "50",
@@ -1584,26 +1595,16 @@
       "expected_unit": "l",
       "prices": {
         "Tesco": 66.0,
-        "Auchan": 66.0,
         "SPAR": 66.0,
         "ALDI": 66.0,
         "Lidl": 66.0,
-        "Penny": 66.0
+        "Penny": 66.0,
+        "Auchan": 79.0
       },
       "selected_products": {
         "Tesco": {
           "source_product_id": "5051007167444",
           "source_product_name": "Tesco 1,5 l sava  ",
-          "amount": 99.0,
-          "unit_amount": 66.0,
-          "unit": "l",
-          "unit_title": "db",
-          "packaging": "1.5",
-          "price_type": "NORMAL"
-        },
-        "Auchan": {
-          "source_product_id": "5998835502026",
-          "source_product_name": "Pannon-Aqua szén-dioxiddal dúsított természetes ásványvíz 1,5 l",
           "amount": 99.0,
           "unit_amount": 66.0,
           "unit": "l",
@@ -1646,6 +1647,16 @@
           "source_product_name": "Kékforrás mentes ásványvíz",
           "amount": 99.0,
           "unit_amount": 66.0,
+          "unit": "l",
+          "unit_title": "db",
+          "packaging": "1.5",
+          "price_type": "NORMAL"
+        },
+        "Auchan": {
+          "source_product_id": "5999086462930",
+          "source_product_name": "Auchan Tipp Pannon-Aqua szénsavmentes természetes ásványvíz 1,5 l",
+          "amount": 119.0,
+          "unit_amount": 79.0,
           "unit": "l",
           "unit_title": "db",
           "packaging": "1.5",
@@ -1794,7 +1805,7 @@
       "prices": {
         "Auchan": 303.0,
         "SPAR": 449.67,
-        "Tesco": 496.333,
+        "Tesco": 499.5,
         "Penny": 624.75,
         "Lidl": 463.18,
         "ALDI": 497.38
@@ -1821,13 +1832,13 @@
           "price_type": "NORMAL"
         },
         "Tesco": {
-          "source_product_id": "5051007164788",
-          "source_product_name": "TD SPRINGFORCE WASHING GEL COL ",
-          "amount": 1489.0,
-          "unit_amount": 496.333,
+          "source_product_id": "5051007175326",
+          "source_product_name": "TD SPRINGFORCE COLOUR WOOLWASH 25 WASHES 2 l",
+          "amount": 999.0,
+          "unit_amount": 499.5,
           "unit": "l",
           "unit_title": "db",
-          "packaging": "3",
+          "packaging": "2",
           "price_type": "NORMAL"
         },
         "Penny": {

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-13T05:24:59Z",
+  "updated_at": "2026-08-14T05:22:04Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "method": "product-level price leadership and spread analysis",
@@ -14,7 +14,7 @@
     },
     {
       "company": "Lidl",
-      "count": 3
+      "count": 4
     },
     {
       "company": "Tesco",
@@ -31,20 +31,20 @@
   ],
   "most_expensive_count": [
     {
-      "company": "Tesco",
-      "count": 8
-    },
-    {
       "company": "SPAR",
       "count": 7
     },
     {
-      "company": "Penny",
-      "count": 4
+      "company": "Tesco",
+      "count": 7
     },
     {
       "company": "Auchan",
-      "count": 2
+      "count": 4
+    },
+    {
+      "company": "Penny",
+      "count": 4
     },
     {
       "company": "Lidl",
@@ -58,15 +58,15 @@
   "value_scores": [
     {
       "company": "Auchan",
-      "price_index": 91,
-      "value_score": 109,
-      "index_coverage": 24
+      "price_index": 93,
+      "value_score": 107,
+      "index_coverage": 25
     },
     {
       "company": "Lidl",
-      "price_index": 98,
-      "value_score": 102,
-      "index_coverage": 23
+      "price_index": 97,
+      "value_score": 103,
+      "index_coverage": 24
     },
     {
       "company": "ALDI",
@@ -88,9 +88,9 @@
     },
     {
       "company": "Tesco",
-      "price_index": 105,
-      "value_score": 95,
-      "index_coverage": 24
+      "price_index": 104,
+      "value_score": 96,
+      "index_coverage": 25
     }
   ],
   "category_leaders": [
@@ -227,7 +227,7 @@
         },
         {
           "company": "Tesco",
-          "category_index": 110,
+          "category_index": 111,
           "coverage": 2
         },
         {
@@ -282,36 +282,36 @@
     {
       "category": "Ital",
       "leader": "ALDI",
-      "leader_index": 100,
+      "leader_index": 97,
       "ranking": [
         {
           "company": "ALDI",
-          "category_index": 100,
-          "coverage": 1
-        },
-        {
-          "company": "Auchan",
-          "category_index": 100,
+          "category_index": 97,
           "coverage": 1
         },
         {
           "company": "Lidl",
-          "category_index": 100,
+          "category_index": 97,
           "coverage": 1
         },
         {
           "company": "Penny",
-          "category_index": 100,
+          "category_index": 97,
           "coverage": 1
         },
         {
           "company": "SPAR",
-          "category_index": 100,
+          "category_index": 97,
           "coverage": 1
         },
         {
           "company": "Tesco",
-          "category_index": 100,
+          "category_index": 97,
+          "coverage": 1
+        },
+        {
+          "company": "Auchan",
+          "category_index": 116,
           "coverage": 1
         }
       ]
@@ -356,17 +356,17 @@
     {
       "category": "Zöldség",
       "leader": "Auchan",
-      "leader_index": 77,
+      "leader_index": 86,
       "ranking": [
         {
           "company": "Auchan",
-          "category_index": 77,
-          "coverage": 3
+          "category_index": 86,
+          "coverage": 4
         },
         {
           "company": "Lidl",
-          "category_index": 97,
-          "coverage": 3
+          "category_index": 95,
+          "coverage": 4
         },
         {
           "company": "Penny",
@@ -374,12 +374,12 @@
           "coverage": 3
         },
         {
-          "company": "SPAR",
-          "category_index": 107,
-          "coverage": 3
+          "company": "Tesco",
+          "category_index": 105,
+          "coverage": 4
         },
         {
-          "company": "Tesco",
+          "company": "SPAR",
           "category_index": 107,
           "coverage": 3
         },
@@ -411,7 +411,7 @@
       "cheapest_price": 303.0,
       "most_expensive_company": "Penny",
       "most_expensive_price": 624.75,
-      "average_price": 472.39,
+      "average_price": 472.91,
       "spread_pct": 106.19,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
@@ -501,6 +501,18 @@
       "coverage": 6
     },
     {
+      "product": "Étkezési burgonya",
+      "category": "Zöldség",
+      "cheapest_company": "Lidl",
+      "cheapest_price": 180.0,
+      "most_expensive_company": "Auchan",
+      "most_expensive_price": 229.0,
+      "average_price": 202.17,
+      "spread_pct": 27.22,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 3
+    },
+    {
       "product": "Banán",
       "category": "Gyümölcs",
       "cheapest_company": "SPAR",
@@ -533,6 +545,18 @@
       "most_expensive_price": 1199.0,
       "average_price": 1065.44,
       "spread_pct": 20.14,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 6
+    },
+    {
+      "product": "Ásványvíz",
+      "category": "Ital",
+      "cheapest_company": "Tesco",
+      "cheapest_price": 66.0,
+      "most_expensive_company": "Auchan",
+      "most_expensive_price": 79.0,
+      "average_price": 68.17,
+      "spread_pct": 19.7,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
@@ -667,18 +691,6 @@
       "spread_pct": 0.36,
       "competition_intensity": "erős árverseny",
       "coverage": 6
-    },
-    {
-      "product": "Ásványvíz",
-      "category": "Ital",
-      "cheapest_company": "Tesco",
-      "cheapest_price": 66.0,
-      "most_expensive_company": "Tesco",
-      "most_expensive_price": 66.0,
-      "average_price": 66.0,
-      "spread_pct": 0.0,
-      "competition_intensity": "erős árverseny",
-      "coverage": 6
     }
   ],
   "product_spreads": [
@@ -746,6 +758,13 @@
       "coverage": 6
     },
     {
+      "product": "Étkezési burgonya",
+      "category": "Zöldség",
+      "spread_pct": 27.22,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 3
+    },
+    {
       "product": "Banán",
       "category": "Gyümölcs",
       "spread_pct": 25.04,
@@ -763,6 +782,13 @@
       "product": "Citrom",
       "category": "Gyümölcs",
       "spread_pct": 20.14,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 6
+    },
+    {
+      "product": "Ásványvíz",
+      "category": "Ital",
+      "spread_pct": 19.7,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
@@ -840,13 +866,6 @@
       "product": "ESL tej 1,5%",
       "category": "Tejtermék",
       "spread_pct": 0.36,
-      "competition_intensity": "erős árverseny",
-      "coverage": 6
-    },
-    {
-      "product": "Ásványvíz",
-      "category": "Ital",
-      "spread_pct": 0.0,
       "competition_intensity": "erős árverseny",
       "coverage": 6
     }
