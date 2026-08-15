@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-14T05:22:04Z",
+  "updated_at": "2026-08-15T04:16:59Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -627,10 +627,10 @@
       "expected_unit": "kg",
       "prices": {
         "Lidl": 1859.0,
+        "Penny": 1789.0,
         "Tesco": 1846.0,
         "Auchan": 1902.0,
         "ALDI": 1979.0,
-        "Penny": 1979.0,
         "SPAR": 2010.0
       },
       "selected_products": {
@@ -641,6 +641,16 @@
           "unit_amount": 1859.0,
           "unit": "kg",
           "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Penny": {
+          "source_product_id": "penny-10248",
+          "source_product_name": "Friss csirkemellfilé kg",
+          "amount": 1789.0,
+          "unit_amount": 1789.0,
+          "unit": "kg",
+          "unit_title": "csomag",
           "packaging": "1",
           "price_type": "NORMAL"
         },
@@ -674,16 +684,6 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Penny": {
-          "source_product_id": "penny-10248",
-          "source_product_name": "Friss csirkemellfilé kg",
-          "amount": 1979.0,
-          "unit_amount": 1979.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
         "SPAR": {
           "source_product_id": "5999550782526",
           "source_product_name": "S-Budget friss csirkemellfilé",
@@ -707,8 +707,7 @@
         "ALDI": 2999.0,
         "Penny": 2999.0,
         "Tesco": 3000.0,
-        "Auchan": 3089.0,
-        "SPAR": 3117.78
+        "Auchan": 3089.0
       },
       "selected_products": {
         "Lidl": {
@@ -760,19 +759,9 @@
           "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
-        },
-        "SPAR": {
-          "source_product_id": "5995885813959",
-          "source_product_name": "Gallio pulykamellfilé 450 g",
-          "amount": 1403.0,
-          "unit_amount": 3117.78,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "0.45",
-          "price_type": "NORMAL"
         }
       },
-      "coverage": 6
+      "coverage": 5
     },
     {
       "id": "28",
@@ -1013,8 +1002,8 @@
       "prices": {
         "Lidl": 389.0,
         "Auchan": 391.0,
-        "Tesco": 520.0,
         "Penny": 590.0,
+        "Tesco": 520.0,
         "ALDI": 599.0,
         "SPAR": 618.0
       },
@@ -1039,21 +1028,21 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Tesco": {
-          "source_product_id": "2809140000000",
-          "source_product_name": "FÜRTÖS PARADICSOM LÉDIG QQ",
-          "amount": 520.0,
-          "unit_amount": 520.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
         "Penny": {
           "source_product_id": "penny-298",
           "source_product_name": "Magyar fürtös paradicsom lé kg",
           "amount": 590.0,
           "unit_amount": 590.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Tesco": {
+          "source_product_id": "2809140000000",
+          "source_product_name": "FÜRTÖS PARADICSOM LÉDIG QQ",
+          "amount": 520.0,
+          "unit_amount": 520.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1242,21 +1231,11 @@
       "category": "Zöldség",
       "expected_unit": "kg",
       "prices": {
-        "Lidl": 180.0,
         "Tesco": 197.5,
-        "Auchan": 229.0
+        "Auchan": 229.0,
+        "Lidl": 299.5
       },
       "selected_products": {
-        "Lidl": {
-          "source_product_id": "lidl-0083244",
-          "source_product_name": "Burgonya 2kg hálós",
-          "amount": 360.0,
-          "unit_amount": 180.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "2",
-          "price_type": "NORMAL"
-        },
         "Tesco": {
           "source_product_id": "5999881895124",
           "source_product_name": "ÉTKEZÉSI BURGONYA PIROS 10 kg",
@@ -1275,6 +1254,16 @@
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Lidl": {
+          "source_product_id": "lidl-0083244",
+          "source_product_name": "Burgonya 2kg hálós",
+          "amount": 599.0,
+          "unit_amount": 299.5,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "2",
           "price_type": "NORMAL"
         }
       },
