@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-16T02:10:04.512643+00:00",
+  "updated_at": "2026-08-16T13:17:13.697958+00:00",
   "version": "store-reputation-layer-v1.1-fast",
   "scope": "Hungarian FMCG store-level reputation signal",
   "method_note": "Áruházi reputációs jelzőréteg. Nyílt Google News RSS keresések alapján dolgozik. Nem Google Reviews scraping és nem teljes vásárlói értékelési adatbázis.",
@@ -7,8 +7,8 @@
     {
       "company": "Auchan",
       "stores": 5,
-      "store_mentions": 1,
-      "review_signal_index": 3.0,
+      "store_mentions": 2,
+      "review_signal_index": 6.0,
       "negative_stores": 0,
       "positive_stores": 0,
       "dominant_store_topic": "árak és akciók"
@@ -145,12 +145,25 @@
       "area": "Dunakeszi",
       "lat": 47.6325,
       "lon": 19.1395,
-      "store_mentions": 0,
-      "review_signal_index": 0,
+      "store_mentions": 1,
+      "review_signal_index": 15,
       "review_sentiment": "neutral",
       "dominant_store_topic": "nincs elég adat",
       "top_store_topics": [],
-      "latest_items": [],
+      "latest_items": [
+        {
+          "id": "343399190b582125",
+          "source": "google_news_rss",
+          "store_id": "auchan_dunakeszi",
+          "company": "Auchan",
+          "store_name": "Auchan Dunakeszi",
+          "title": "Családi program padlógázon – Jön az Auchan sebesség nap - dunakeszipost.hu",
+          "summary": "Családi program padlógázon – Jön az Auchan sebesség nap dunakeszipost.hu",
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNQUZuN3dzS29XYU4wb3daODRNVnFLemxkU1JqaEhwZ2tIb0kwcUNHbFBwOW9Idjl4QjJaeXlGUTRPZXFVSS1vM0JHX3dWYUFJVXRvTk9VYjZHNHByX1hHQ1Y0YTdMN0hVMGFsU0lMLUFRend5NEh1UXBVaWFnWkY5Q1IxWmZYQQ?oc=5",
+          "published": "Thu, 16 Jul 2026 07:00:00 GMT",
+          "query": "\"Auchan Dunakeszi\" vélemény"
+        }
+      ],
       "method_note": "Áruházi reputációs jelzőréteg nyílt Google News RSS keresésekből. Nem Google Reviews scraping, nem teljes vásárlói review-adatbázis.",
       "errors": []
     },
