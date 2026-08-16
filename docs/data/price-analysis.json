@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-15T04:16:59Z",
+  "updated_at": "2026-08-16T04:22:59Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "method": "product-level price leadership and spread analysis",
@@ -32,11 +32,11 @@
   "most_expensive_count": [
     {
       "company": "Tesco",
-      "count": 7
+      "count": 8
     },
     {
       "company": "SPAR",
-      "count": 6
+      "count": 5
     },
     {
       "company": "Auchan",
@@ -356,36 +356,36 @@
     {
       "category": "Zöldség",
       "leader": "Auchan",
-      "leader_index": 82,
+      "leader_index": 81,
       "ranking": [
         {
           "company": "Auchan",
-          "category_index": 82,
-          "coverage": 4
-        },
-        {
-          "company": "Tesco",
-          "category_index": 101,
-          "coverage": 4
-        },
-        {
-          "company": "Lidl",
-          "category_index": 104,
+          "category_index": 81,
           "coverage": 4
         },
         {
           "company": "Penny",
-          "category_index": 104,
+          "category_index": 102,
           "coverage": 3
         },
         {
+          "company": "Tesco",
+          "category_index": 104,
+          "coverage": 4
+        },
+        {
+          "company": "Lidl",
+          "category_index": 105,
+          "coverage": 4
+        },
+        {
           "company": "SPAR",
-          "category_index": 107,
+          "category_index": 105,
           "coverage": 3
         },
         {
           "company": "ALDI",
-          "category_index": 109,
+          "category_index": 107,
           "coverage": 3
         }
       ]
@@ -423,7 +423,7 @@
       "cheapest_price": 99.0,
       "most_expensive_company": "SPAR",
       "most_expensive_price": 200.0,
-      "average_price": 169.25,
+      "average_price": 170.92,
       "spread_pct": 102.02,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
@@ -445,10 +445,10 @@
       "category": "Zöldség",
       "cheapest_company": "Lidl",
       "cheapest_price": 389.0,
-      "most_expensive_company": "SPAR",
-      "most_expensive_price": 618.0,
-      "average_price": 517.83,
-      "spread_pct": 58.87,
+      "most_expensive_company": "Tesco",
+      "most_expensive_price": 629.0,
+      "average_price": 536.0,
+      "spread_pct": 61.7,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
@@ -477,6 +477,18 @@
       "coverage": 3
     },
     {
+      "product": "Zöldpaprika",
+      "category": "Zöldség",
+      "cheapest_company": "SPAR",
+      "cheapest_price": 563.33,
+      "most_expensive_company": "Lidl",
+      "most_expensive_price": 785.33,
+      "average_price": 688.44,
+      "spread_pct": 39.41,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 6
+    },
+    {
       "product": "Vaj",
       "category": "Tejtermék",
       "cheapest_company": "ALDI",
@@ -485,18 +497,6 @@
       "most_expensive_price": 2395.0,
       "average_price": 1907.83,
       "spread_pct": 36.39,
-      "competition_intensity": "nagy árszórás",
-      "coverage": 6
-    },
-    {
-      "product": "Zöldpaprika",
-      "category": "Zöldség",
-      "cheapest_company": "SPAR",
-      "cheapest_price": 563.33,
-      "most_expensive_company": "Lidl",
-      "most_expensive_price": 749.0,
-      "average_price": 685.55,
-      "spread_pct": 32.96,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
@@ -725,7 +725,7 @@
     {
       "product": "Paradicsom",
       "category": "Zöldség",
-      "spread_pct": 58.87,
+      "spread_pct": 61.7,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
@@ -744,16 +744,16 @@
       "coverage": 3
     },
     {
-      "product": "Vaj",
-      "category": "Tejtermék",
-      "spread_pct": 36.39,
+      "product": "Zöldpaprika",
+      "category": "Zöldség",
+      "spread_pct": 39.41,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
     {
-      "product": "Zöldpaprika",
-      "category": "Zöldség",
-      "spread_pct": 32.96,
+      "product": "Vaj",
+      "category": "Tejtermék",
+      "spread_pct": 36.39,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },

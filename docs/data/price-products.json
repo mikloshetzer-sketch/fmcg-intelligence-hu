@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-15T04:16:59Z",
+  "updated_at": "2026-08-16T04:22:59Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -1003,9 +1003,9 @@
         "Lidl": 389.0,
         "Auchan": 391.0,
         "Penny": 590.0,
-        "Tesco": 520.0,
         "ALDI": 599.0,
-        "SPAR": 618.0
+        "SPAR": 618.0,
+        "Tesco": 629.0
       },
       "selected_products": {
         "Lidl": {
@@ -1038,16 +1038,6 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Tesco": {
-          "source_product_id": "2809140000000",
-          "source_product_name": "FÜRTÖS PARADICSOM LÉDIG QQ",
-          "amount": 520.0,
-          "unit_amount": 520.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
         "ALDI": {
           "source_product_id": "aldi-756566",
           "source_product_name": "Paradicsom fürtös lédig",
@@ -1067,6 +1057,16 @@
           "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
+        },
+        "Tesco": {
+          "source_product_id": "2809140000000",
+          "source_product_name": "FÜRTÖS PARADICSOM LÉDIG QQ",
+          "amount": 629.0,
+          "unit_amount": 629.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
         }
       },
       "coverage": 6
@@ -1080,9 +1080,9 @@
         "SPAR": 563.33,
         "ALDI": 650.0,
         "Auchan": 670.0,
-        "Tesco": 732.0,
-        "Lidl": 749.0,
-        "Penny": 749.0
+        "Tesco": 713.0,
+        "Penny": 749.0,
+        "Lidl": 785.33
       },
       "selected_products": {
         "SPAR": {
@@ -1118,18 +1118,8 @@
         "Tesco": {
           "source_product_id": "2896050000000",
           "source_product_name": "PAPRIKA LÉDIG QQ",
-          "amount": 732.0,
-          "unit_amount": 732.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Lidl": {
-          "source_product_id": "lidl-0082535",
-          "source_product_name": "Hazai TV paprika kg",
-          "amount": 749.0,
-          "unit_amount": 749.0,
+          "amount": 713.0,
+          "unit_amount": 713.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1144,6 +1134,16 @@
           "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
+        },
+        "Lidl": {
+          "source_product_id": "lidl-0082651",
+          "source_product_name": "Lecsópaprika 750g",
+          "amount": 589.0,
+          "unit_amount": 785.33,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "0.75",
+          "price_type": "NORMAL"
         }
       },
       "coverage": 6
@@ -1157,7 +1157,7 @@
         "Auchan": 99.0,
         "Penny": 149.0,
         "SPAR": 200.0,
-        "Lidl": 179.5,
+        "Lidl": 189.5,
         "Tesco": 193.0,
         "ALDI": 195.0
       },
@@ -1195,8 +1195,8 @@
         "Lidl": {
           "source_product_id": "lidl-0083333",
           "source_product_name": "Vöröshagyma 2kg",
-          "amount": 359.0,
-          "unit_amount": 179.5,
+          "amount": 379.0,
+          "unit_amount": 189.5,
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "2",
