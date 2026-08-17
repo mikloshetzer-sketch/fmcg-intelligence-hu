@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-08-17T13:20:17.900553+00:00",
+  "updated_at": "2026-08-17T19:07:08.826961+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-08-17T13:20:17.900553+00:00",
+    "updated_at": "2026-08-17T19:07:08.826961+00:00",
     "leader_social": "Lidl",
     "leader_social_index": 16,
     "dominant_social_topic": "árak és akciók",
@@ -14,10 +14,10 @@
     {
       "company": "Lidl",
       "social_mentions": 1,
-      "raw_social_mentions": 2,
+      "raw_social_mentions": 1,
       "dashboard_mentions": 0,
       "background_mentions": 1,
-      "discarded_mentions": 1,
+      "discarded_mentions": 0,
       "weighted_social_mentions": 0.5,
       "hu_relevant_mentions": 0,
       "social_index": 16,
@@ -29,7 +29,7 @@
       "raw_social_sources": {
         "reddit": 0,
         "youtube": 0,
-        "mastodon": 2
+        "mastodon": 1
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
@@ -78,7 +78,7 @@
       "quality_summary": {
         "dashboard_items": 0,
         "background_items": 1,
-        "discarded_items": 1,
+        "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
       },
@@ -382,11 +382,11 @@
       "social_sentiment": "neutral",
       "latest_items": [
         {
-          "id": "83b5ba0cc8c824d6",
+          "id": "0d986c57244a466d",
           "source": "youtube",
           "company": "CBA",
-          "title": "CBA Príma akciós újság 08.21. - 08.26. - youtube.com",
-          "summary": "CBA Príma akciós újság 08.21. - 08.26. youtube.com",
+          "title": "CBA Príma akciós újság 08.21. - 08.26. - YouTube",
+          "summary": "CBA Príma akciós újság 08.21. - 08.26. YouTube",
           "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE4yX2hRX0Y1Mzk4ckpqZC1hRDVwSzdYSlN0b1dwZnROeW9Xdy1xWERxQ2RCMS1RZ2hSOWkyUHZnSnN3RFpMZTRwc3p0R09aUnRacDZjMQ?oc=5",
           "published": "Fri, 14 Aug 2026 12:23:15 GMT",
           "query": "site:youtube.com \"CBA Príma\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
