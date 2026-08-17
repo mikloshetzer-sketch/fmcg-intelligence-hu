@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10T04:53:29.578935+00:00",
+  "updated_at": "2026-08-17T04:01:38.081131+00:00",
   "version": "store-network-hu-v2.0-non-lidl-osm",
   "scope": "Hungarian FMCG store network from OSM + optional overrides",
   "method_note": "Ez a verzió Lidl nélkül építi a bolthálózatot. ALDI, SPAR, Tesco, Auchan és Penny OSM/Overpass alapján frissül. Ha egy láncra 0 találat jön, a script megtartja a korábbi store-network-hu.json adott láncra vonatkozó adatait. Lidl külön, saját üzletlista alapján kerül majd be.",
@@ -1104,7 +1104,7 @@
       "area": "Budapest",
       "region": "Közép-Magyarország",
       "address": "1116 Budapest, Sopron út 60",
-      "lat": 47.461748,
+      "lat": 47.461745,
       "lon": 19.044848,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
@@ -2322,8 +2322,8 @@
       "area": "Kecskemét",
       "region": "Dél-Alföld",
       "address": "6000 Kecskemét, Szent István körút 30",
-      "lat": 46.911114,
-      "lon": 19.719481,
+      "lat": 46.911112,
+      "lon": 19.719531,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 475381689,
@@ -2826,8 +2826,8 @@
       "area": "Nyíregyháza",
       "region": "Észak-Alföld",
       "address": "4400 Nyíregyháza, Pazonyi út 40",
-      "lat": 47.971348,
-      "lon": 21.741241,
+      "lat": 47.971345,
+      "lon": 21.741243,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 172620295,
@@ -2847,8 +2847,8 @@
       "area": "Nyíregyháza",
       "region": "Észak-Alföld",
       "address": "4400 Nyíregyháza, Törzs utca 2",
-      "lat": 47.953042,
-      "lon": 21.742439,
+      "lat": 47.953037,
+      "lon": 21.742431,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 271768193,
@@ -4480,7 +4480,7 @@
     {
       "store_id": "penny_albertirsa_penny_737109294",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Albertirsa",
       "area": "Albertirsa",
       "region": "n.a.",
@@ -4490,10 +4490,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 737109294,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Albertirsa",
         "2730 Albertirsa, Pesti út 112-118"
       ]
@@ -4501,7 +4501,7 @@
     {
       "store_id": "penny_baja_penny_12674203384",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Baja",
       "area": "Baja",
       "region": "Dél-Alföld",
@@ -4511,10 +4511,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 12674203384,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Baja",
         "6500 Baja, Csermák Mihály tér 4"
       ]
@@ -4522,7 +4522,7 @@
     {
       "store_id": "penny_balassagyarmat_penny_547707465",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Balassagyarmat",
       "area": "Balassagyarmat",
       "region": "Észak-Magyarország",
@@ -4532,10 +4532,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 547707465,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Balassagyarmat",
         "2660 Balassagyarmat, Kóvári út 12"
       ]
@@ -4543,7 +4543,7 @@
     {
       "store_id": "penny_balatonalmadi_penny_135294869",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Balatonalmádi",
       "area": "Balatonalmádi",
       "region": "Közép-Dunántúl",
@@ -4556,7 +4556,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Balatonalmádi",
         "8220 Balatonalmádi, József Attila út 2"
       ]
@@ -4564,7 +4564,7 @@
     {
       "store_id": "penny_balatonfured_penny_281295530",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Balatonfüred",
       "area": "Balatonfüred",
       "region": "Közép-Dunántúl",
@@ -4577,7 +4577,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Balatonfüred",
         "8230 Balatonfüred, Széchenyi utca 47"
       ]
@@ -4585,7 +4585,7 @@
     {
       "store_id": "penny_balatonlelle_penny_289143201",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Balatonlelle",
       "area": "Balatonlelle",
       "region": "Dél-Dunántúl",
@@ -4598,7 +4598,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Balatonlelle",
         "8638 Balatonlelle, Rákóczi út"
       ]
@@ -4606,7 +4606,7 @@
     {
       "store_id": "penny_balmazujvaros_penny_1030707243",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Balmazújváros",
       "area": "Balmazújváros",
       "region": "n.a.",
@@ -4616,10 +4616,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 1030707243,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Balmazújváros",
         "4060 Balmazújváros, Kastélykert utca 1-3"
       ]
@@ -4627,7 +4627,7 @@
     {
       "store_id": "penny_barcs_penny_23661195",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Barcs",
       "area": "Barcs",
       "region": "n.a.",
@@ -4640,7 +4640,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Barcs",
         "7570 Barcs, Hősök tere 6-7"
       ]
@@ -4648,7 +4648,7 @@
     {
       "store_id": "penny_berettyoujfalu_penny_1156998536",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Berettyóújfalu",
       "area": "Berettyóújfalu",
       "region": "Észak-Alföld",
@@ -4661,7 +4661,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Berettyóújfalu",
         "4100 Berettyóújfalu, Dózsa György utca 30"
       ]
@@ -4669,7 +4669,7 @@
     {
       "store_id": "penny_biatorbagy_penny_96795869",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Biatorbágy",
       "area": "Biatorbágy",
       "region": "n.a.",
@@ -4679,10 +4679,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 96795869,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Biatorbágy",
         "2051 Biatorbágy, Csodaszarvas utca 1"
       ]
@@ -4690,7 +4690,7 @@
     {
       "store_id": "penny_bonyhad_penny_339445587",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Bonyhád",
       "area": "Bonyhád",
       "region": "Dél-Dunántúl",
@@ -4700,12 +4700,495 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 339445587,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny Bonyhád",
+        "7150 Bonyhád, Zrínyi Miklós utca 25"
+      ]
+    },
+    {
+      "store_id": "penny_budapest_penny_282108249",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1193 Budapest, Üllői út 266",
+      "lat": 47.453182,
+      "lon": 19.157183,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 282108249,
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
-        "Penny Bonyhád",
-        "7150 Bonyhád, Zrínyi Miklós utca 25"
+        "PENNY",
+        "Penny Budapest",
+        "1193 Budapest, Üllői út 266"
+      ]
+    },
+    {
+      "store_id": "penny_budapest_penny_1493003701",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1048 Budapest, Külső Szilágyi út 4",
+      "lat": 47.57911,
+      "lon": 19.11546,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 1493003701,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny Budapest",
+        "1048 Budapest, Külső Szilágyi út 4"
+      ]
+    },
+    {
+      "store_id": "penny_budapest_penny_2688618033",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1085 Budapest, József körút 45",
+      "lat": 47.490572,
+      "lon": 19.070528,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 2688618033,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny Budapest",
+        "1085 Budapest, József körút 45"
+      ]
+    },
+    {
+      "store_id": "penny_budapest_penny_3077954933",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1102 Budapest, Liget tér 1",
+      "lat": 47.482656,
+      "lon": 19.128984,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 3077954933,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny Budapest",
+        "1102 Budapest, Liget tér 1"
+      ]
+    },
+    {
+      "store_id": "penny_budapest_penny_3278538261",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1087 Budapest, Könyves Kálmán körút 62-64",
+      "lat": 47.482025,
+      "lon": 19.102841,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 3278538261,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny Budapest",
+        "1087 Budapest, Könyves Kálmán körút 62-64"
+      ]
+    },
+    {
+      "store_id": "penny_budapest_penny_4405487435",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1068 Budapest, Király utca 82",
+      "lat": 47.504709,
+      "lon": 19.06784,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 4405487435,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny Budapest",
+        "1068 Budapest, Király utca 82"
+      ]
+    },
+    {
+      "store_id": "penny_budapest_penny_4453281691",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1039 Budapest, Pünkösdfürdő utca 52-54",
+      "lat": 47.59474,
+      "lon": 19.054309,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 4453281691,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny Budapest",
+        "1039 Budapest, Pünkösdfürdő utca 52-54"
+      ]
+    },
+    {
+      "store_id": "penny_budapest_penny_4475378779",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1134 Budapest, Váci út 9-15",
+      "lat": 47.519115,
+      "lon": 19.061254,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 4475378779,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny Budapest",
+        "1134 Budapest, Váci út 9-15"
+      ]
+    },
+    {
+      "store_id": "penny_budapest_penny_5244501228",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1137 Budapest, Szent István körút 30",
+      "lat": 47.511051,
+      "lon": 19.054671,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 5244501228,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny Budapest",
+        "1137 Budapest, Szent István körút 30"
+      ]
+    },
+    {
+      "store_id": "penny_budapest_penny_8518374917",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1133 Budapest, Véső utca 11",
+      "lat": 47.52915,
+      "lon": 19.062206,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 8518374917,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny Budapest",
+        "1133 Budapest, Véső utca 11"
+      ]
+    },
+    {
+      "store_id": "penny_budapest_penny_13176893379",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1042 Budapest, Rózsa utca 20-22",
+      "lat": 47.557747,
+      "lon": 19.099591,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 13176893379,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny Budapest",
+        "1042 Budapest, Rózsa utca 20-22"
+      ]
+    },
+    {
+      "store_id": "penny_budapest_penny_27056405",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1118 Budapest, Rétköz utca 1",
+      "lat": 47.464359,
+      "lon": 19.005943,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 27056405,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny Budapest",
+        "1118 Budapest, Rétköz utca 1"
+      ]
+    },
+    {
+      "store_id": "penny_budapest_penny_120135964",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1152 Budapest, Régi Fóti út 66-68",
+      "lat": 47.560964,
+      "lon": 19.121601,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 120135964,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny Budapest",
+        "1152 Budapest, Régi Fóti út 66-68"
+      ]
+    },
+    {
+      "store_id": "penny_budapest_penny_126514484",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1135 Budapest, Jász utca 105",
+      "lat": 47.536918,
+      "lon": 19.087347,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 126514484,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny Budapest",
+        "1135 Budapest, Jász utca 105"
+      ]
+    },
+    {
+      "store_id": "penny_budapest_penny_141299311",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1047 Budapest, Baross utca 6",
+      "lat": 47.566287,
+      "lon": 19.080226,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 141299311,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny Budapest",
+        "1047 Budapest, Baross utca 6"
+      ]
+    },
+    {
+      "store_id": "penny_budapest_penny_188808280",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1087 Budapest, Hős utca 9",
+      "lat": 47.495958,
+      "lon": 19.107527,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 188808280,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny Budapest",
+        "1087 Budapest, Hős utca 9"
+      ]
+    },
+    {
+      "store_id": "penny_budapest_penny_190039011",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1173 Budapest, Pesti út 16-18",
+      "lat": 47.484774,
+      "lon": 19.236065,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 190039011,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny Budapest",
+        "1173 Budapest, Pesti út 16-18"
+      ]
+    },
+    {
+      "store_id": "penny_budapest_penny_198810302",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1033 Budapest, Huszti út 36",
+      "lat": 47.556762,
+      "lon": 19.039734,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 198810302,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny Budapest",
+        "1033 Budapest, Huszti út 36"
+      ]
+    },
+    {
+      "store_id": "penny_budapest_penny_201280393",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1211 Budapest, Kossuth Lajos utca 69",
+      "lat": 47.428761,
+      "lon": 19.069765,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 201280393,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny Budapest",
+        "1211 Budapest, Kossuth Lajos utca 69"
+      ]
+    },
+    {
+      "store_id": "penny_budapest_penny_207513259",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1102 Budapest, Kolozsvári utca 55",
+      "lat": 47.491243,
+      "lon": 19.137055,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 207513259,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny Budapest",
+        "1102 Budapest, Kolozsvári utca 55"
+      ]
+    },
+    {
+      "store_id": "penny_budapest_penny_209911034",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1144 Budapest, Füredi utca 17",
+      "lat": 47.509957,
+      "lon": 19.145396,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 209911034,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny Budapest",
+        "1144 Budapest, Füredi utca 17"
+      ]
+    },
+    {
+      "store_id": "penny_budapest_penny_252121043",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1203 Budapest, Topánka utca 7",
+      "lat": 47.438265,
+      "lon": 19.101393,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 252121043,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny Budapest",
+        "1203 Budapest, Topánka utca 7"
+      ]
+    },
+    {
+      "store_id": "penny_budapest_penny_289074731",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1191 Budapest, Ady Endre út 32-40",
+      "lat": 47.460913,
+      "lon": 19.131777,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 289074731,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny Budapest",
+        "1191 Budapest, Ady Endre út 32-40"
       ]
     },
     {
@@ -4730,27 +5213,6 @@
       ]
     },
     {
-      "store_id": "penny_budapest_penny_282108249",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1193 Budapest, Üllői út 266",
-      "lat": 47.453182,
-      "lon": 19.157183,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 282108249,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny Budapest",
-        "1193 Budapest, Üllői út 266"
-      ]
-    },
-    {
       "store_id": "penny_budapest_penny_599375622",
       "company": "Penny",
       "name": "Penny",
@@ -4769,489 +5231,6 @@
         "Penny",
         "Penny Budapest",
         "1156 Budapest, Nyírpalota út 2"
-      ]
-    },
-    {
-      "store_id": "penny_budapest_penny_1493003701",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1048 Budapest, Külső Szilágyi út 4",
-      "lat": 47.57911,
-      "lon": 19.11546,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 1493003701,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny Budapest",
-        "1048 Budapest, Külső Szilágyi út 4"
-      ]
-    },
-    {
-      "store_id": "penny_budapest_penny_2688618033",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1085 Budapest, József körút 45",
-      "lat": 47.490572,
-      "lon": 19.070528,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 2688618033,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny Budapest",
-        "1085 Budapest, József körút 45"
-      ]
-    },
-    {
-      "store_id": "penny_budapest_penny_3077954933",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1102 Budapest, Liget tér 1",
-      "lat": 47.482656,
-      "lon": 19.128984,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 3077954933,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny Budapest",
-        "1102 Budapest, Liget tér 1"
-      ]
-    },
-    {
-      "store_id": "penny_budapest_penny_3278538261",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1087 Budapest, Könyves Kálmán körút 62-64",
-      "lat": 47.482025,
-      "lon": 19.102841,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 3278538261,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny Budapest",
-        "1087 Budapest, Könyves Kálmán körút 62-64"
-      ]
-    },
-    {
-      "store_id": "penny_budapest_penny_4405487435",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1068 Budapest, Király utca 82",
-      "lat": 47.504709,
-      "lon": 19.06784,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 4405487435,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny Budapest",
-        "1068 Budapest, Király utca 82"
-      ]
-    },
-    {
-      "store_id": "penny_budapest_penny_4453281691",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1039 Budapest, Pünkösdfürdő utca 52-54",
-      "lat": 47.59474,
-      "lon": 19.054309,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 4453281691,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny Budapest",
-        "1039 Budapest, Pünkösdfürdő utca 52-54"
-      ]
-    },
-    {
-      "store_id": "penny_budapest_penny_4475378779",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1134 Budapest, Váci út 9-15",
-      "lat": 47.519115,
-      "lon": 19.061254,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 4475378779,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny Budapest",
-        "1134 Budapest, Váci út 9-15"
-      ]
-    },
-    {
-      "store_id": "penny_budapest_penny_5244501228",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1137 Budapest, Szent István körút 30",
-      "lat": 47.511051,
-      "lon": 19.054671,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 5244501228,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny Budapest",
-        "1137 Budapest, Szent István körút 30"
-      ]
-    },
-    {
-      "store_id": "penny_budapest_penny_8518374917",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1133 Budapest, Véső utca 11",
-      "lat": 47.52915,
-      "lon": 19.062206,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 8518374917,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny Budapest",
-        "1133 Budapest, Véső utca 11"
-      ]
-    },
-    {
-      "store_id": "penny_budapest_penny_13176893379",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1042 Budapest, Rózsa utca 20-22",
-      "lat": 47.557747,
-      "lon": 19.099591,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 13176893379,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny Budapest",
-        "1042 Budapest, Rózsa utca 20-22"
-      ]
-    },
-    {
-      "store_id": "penny_budapest_penny_27056405",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1118 Budapest, Rétköz utca 1",
-      "lat": 47.464359,
-      "lon": 19.005943,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 27056405,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny Budapest",
-        "1118 Budapest, Rétköz utca 1"
-      ]
-    },
-    {
-      "store_id": "penny_budapest_penny_120135964",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1152 Budapest, Régi Fóti út 66-68",
-      "lat": 47.560964,
-      "lon": 19.121601,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 120135964,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny Budapest",
-        "1152 Budapest, Régi Fóti út 66-68"
-      ]
-    },
-    {
-      "store_id": "penny_budapest_penny_126514484",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1135 Budapest, Jász utca 105",
-      "lat": 47.536918,
-      "lon": 19.087347,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 126514484,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny Budapest",
-        "1135 Budapest, Jász utca 105"
-      ]
-    },
-    {
-      "store_id": "penny_budapest_penny_141299311",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1047 Budapest, Baross utca 6",
-      "lat": 47.566287,
-      "lon": 19.080226,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 141299311,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny Budapest",
-        "1047 Budapest, Baross utca 6"
-      ]
-    },
-    {
-      "store_id": "penny_budapest_penny_188808280",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1087 Budapest, Hős utca 9",
-      "lat": 47.495958,
-      "lon": 19.107527,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 188808280,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny Budapest",
-        "1087 Budapest, Hős utca 9"
-      ]
-    },
-    {
-      "store_id": "penny_budapest_penny_190039011",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1173 Budapest, Pesti út 16-18",
-      "lat": 47.484774,
-      "lon": 19.236065,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 190039011,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny Budapest",
-        "1173 Budapest, Pesti út 16-18"
-      ]
-    },
-    {
-      "store_id": "penny_budapest_penny_198810302",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1033 Budapest, Huszti út 36",
-      "lat": 47.556762,
-      "lon": 19.039734,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 198810302,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny Budapest",
-        "1033 Budapest, Huszti út 36"
-      ]
-    },
-    {
-      "store_id": "penny_budapest_penny_201280393",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1211 Budapest, Kossuth Lajos utca 69",
-      "lat": 47.428761,
-      "lon": 19.069765,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 201280393,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny Budapest",
-        "1211 Budapest, Kossuth Lajos utca 69"
-      ]
-    },
-    {
-      "store_id": "penny_budapest_penny_207513259",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1102 Budapest, Kolozsvári utca 55",
-      "lat": 47.491243,
-      "lon": 19.137055,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 207513259,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny Budapest",
-        "1102 Budapest, Kolozsvári utca 55"
-      ]
-    },
-    {
-      "store_id": "penny_budapest_penny_209911034",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1144 Budapest, Füredi utca 17",
-      "lat": 47.509957,
-      "lon": 19.145396,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 209911034,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny Budapest",
-        "1144 Budapest, Füredi utca 17"
-      ]
-    },
-    {
-      "store_id": "penny_budapest_penny_252121043",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1203 Budapest, Topánka utca 7",
-      "lat": 47.438265,
-      "lon": 19.101393,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 252121043,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny Budapest",
-        "1203 Budapest, Topánka utca 7"
-      ]
-    },
-    {
-      "store_id": "penny_budapest_penny_289074731",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1191 Budapest, Ady Endre út 32-40",
-      "lat": 47.460913,
-      "lon": 19.131777,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 289074731,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny Budapest",
-        "1191 Budapest, Ady Endre út 32-40"
-      ]
-    },
-    {
-      "store_id": "penny_bataszek_penny_13980182110",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "Bátaszék",
-      "area": "Bátaszék",
-      "region": "n.a.",
-      "address": "7140 Bátaszék, Szentháromság tér 22",
-      "lat": 46.186033,
-      "lon": 18.722291,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 13980182110,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny Bátaszék",
-        "7140 Bátaszék, Szentháromság tér 22"
       ]
     },
     {
@@ -5278,7 +5257,7 @@
     {
       "store_id": "penny_cegled_penny_5214084246",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Cegléd",
       "area": "Cegléd",
       "region": "Közép-Magyarország",
@@ -5291,7 +5270,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Cegléd",
         "2700 Cegléd, Kőrösi út 38"
       ]
@@ -5299,7 +5278,7 @@
     {
       "store_id": "penny_cegled_penny_260858313",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Cegléd",
       "area": "Cegléd",
       "region": "Közép-Magyarország",
@@ -5309,10 +5288,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 260858313,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Cegléd",
         "2700 Cegléd, Malomtó szél 27"
       ]
@@ -5320,7 +5299,7 @@
     {
       "store_id": "penny_csongrad_penny_611761413",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Csongrád",
       "area": "Csongrád",
       "region": "n.a.",
@@ -5330,10 +5309,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 611761413,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Csongrád",
         "6640 Csongrád, Fő utca 61/A"
       ]
@@ -5341,7 +5320,7 @@
     {
       "store_id": "penny_csorna_penny_293518117",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Csorna",
       "area": "Csorna",
       "region": "n.a.",
@@ -5351,10 +5330,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 293518117,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Csorna",
         "9300 Csorna, Soproni út 66/D"
       ]
@@ -5383,7 +5362,7 @@
     {
       "store_id": "penny_dabas_penny_711135607",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Dabas",
       "area": "Dabas",
       "region": "Közép-Magyarország",
@@ -5393,10 +5372,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 711135607,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Dabas",
         "2370 Dabas, Pesti út 2"
       ]
@@ -5404,7 +5383,7 @@
     {
       "store_id": "penny_debrecen_penny_4429089574",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Debrecen",
       "area": "Debrecen",
       "region": "Észak-Alföld",
@@ -5417,7 +5396,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Debrecen",
         "4026 Debrecen, Péterfia utca 13-19"
       ]
@@ -5425,7 +5404,7 @@
     {
       "store_id": "penny_debrecen_penny_140066876",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Debrecen",
       "area": "Debrecen",
       "region": "Észak-Alföld",
@@ -5435,10 +5414,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 140066876,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Debrecen",
         "4031 Debrecen, István út 135"
       ]
@@ -5446,7 +5425,7 @@
     {
       "store_id": "penny_debrecen_penny_273622927",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Debrecen",
       "area": "Debrecen",
       "region": "Észak-Alföld",
@@ -5459,7 +5438,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Debrecen",
         "4033 Debrecen, Sámsoni út 99-103"
       ]
@@ -5467,7 +5446,7 @@
     {
       "store_id": "penny_derecske_penny_216507145",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Derecske",
       "area": "Derecske",
       "region": "n.a.",
@@ -5477,10 +5456,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 216507145,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Derecske",
         "4130 Derecske, Köztársaság út 67"
       ]
@@ -5488,7 +5467,7 @@
     {
       "store_id": "penny_dorog_penny_39955557",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Dorog",
       "area": "Dorog",
       "region": "n.a.",
@@ -5498,10 +5477,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 39955557,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Dorog",
         "2510 Dorog, Bécsi út 86"
       ]
@@ -5519,7 +5498,7 @@
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 1450963404,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
         "Penny",
@@ -5530,7 +5509,7 @@
     {
       "store_id": "penny_eger_penny_207323629",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Eger",
       "area": "Eger",
       "region": "Észak-Magyarország",
@@ -5543,7 +5522,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Eger",
         "3300 Eger, Mátyás király út 139"
       ]
@@ -5551,7 +5530,7 @@
     {
       "store_id": "penny_eger_penny_220694263",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Eger",
       "area": "Eger",
       "region": "Észak-Magyarország",
@@ -5564,7 +5543,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Eger",
         "3300 Eger, II. Rákóczi Ferenc utca 94"
       ]
@@ -5572,7 +5551,7 @@
     {
       "store_id": "penny_encs_penny_284480066",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Encs",
       "area": "Encs",
       "region": "n.a.",
@@ -5582,10 +5561,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 284480066,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Encs",
         "Encs"
       ]
@@ -5593,7 +5572,7 @@
     {
       "store_id": "penny_fehergyarmat_penny_527735083",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Fehérgyarmat",
       "area": "Fehérgyarmat",
       "region": "n.a.",
@@ -5606,7 +5585,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Fehérgyarmat",
         "4900 Fehérgyarmat, Kiss Ernő utca 16-20"
       ]
@@ -5614,7 +5593,7 @@
     {
       "store_id": "penny_fuzesabony_penny_221864250",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Füzesabony",
       "area": "Füzesabony",
       "region": "n.a.",
@@ -5627,7 +5606,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Füzesabony",
         "3390 Füzesabony, Arany János út 18"
       ]
@@ -5677,7 +5656,7 @@
     {
       "store_id": "penny_godollo_penny_232708615",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Gödöllő",
       "area": "Gödöllő",
       "region": "Közép-Magyarország",
@@ -5687,10 +5666,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 232708615,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Gödöllő",
         "2100 Gödöllő, Dózsa György út 90-92"
       ]
@@ -5698,7 +5677,7 @@
     {
       "store_id": "penny_hajduboszormeny_penny_305162031",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Hajdúböszörmény",
       "area": "Hajdúböszörmény",
       "region": "Észak-Alföld",
@@ -5708,10 +5687,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 305162031,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Hajdúböszörmény",
         "4220 Hajdúböszörmény, Baltazár Dezső utca 7-9"
       ]
@@ -5719,7 +5698,7 @@
     {
       "store_id": "penny_hajdudorog_penny_311232621",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Hajdúdorog",
       "area": "Hajdúdorog",
       "region": "n.a.",
@@ -5729,10 +5708,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 311232621,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Hajdúdorog",
         "4087 Hajdúdorog, Böszörményi út 29"
       ]
@@ -5740,7 +5719,7 @@
     {
       "store_id": "penny_hajduhadhaz_penny_263268588",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Hajdúhadház",
       "area": "Hajdúhadház",
       "region": "n.a.",
@@ -5750,10 +5729,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 263268588,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Hajdúhadház",
         "4242 Hajdúhadház, Dr. Földi János utca 57/A"
       ]
@@ -5761,7 +5740,7 @@
     {
       "store_id": "penny_hajdunanas_penny_345572505",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Hajdúnánás",
       "area": "Hajdúnánás",
       "region": "n.a.",
@@ -5771,10 +5750,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 345572505,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Hajdúnánás",
         "4080 Hajdúnánás, Mártírok útja 6-8"
       ]
@@ -5782,7 +5761,7 @@
     {
       "store_id": "penny_hajdusamson_penny_1277674930",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Hajdúsámson",
       "area": "Hajdúsámson",
       "region": "n.a.",
@@ -5792,10 +5771,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 1277674930,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Hajdúsámson",
         "4251 Hajdúsámson, Kossuth utca 7-9"
       ]
@@ -5803,7 +5782,7 @@
     {
       "store_id": "penny_hatvan_penny_228874780",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Hatvan",
       "area": "Hatvan",
       "region": "n.a.",
@@ -5813,10 +5792,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 228874780,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Hatvan",
         "3000 Hatvan, Horváth Mihály út 82"
       ]
@@ -5824,7 +5803,7 @@
     {
       "store_id": "penny_hodmezovasarhely_penny_618285104",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Hódmezővásárhely",
       "area": "Hódmezővásárhely",
       "region": "Dél-Alföld",
@@ -5837,7 +5816,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Hódmezővásárhely",
         "Hódmezővásárhely"
       ]
@@ -5845,7 +5824,7 @@
     {
       "store_id": "penny_isaszeg_penny_614266852",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Isaszeg",
       "area": "Isaszeg",
       "region": "n.a.",
@@ -5858,7 +5837,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Isaszeg",
         "2117 Isaszeg, Rákóczi út 58"
       ]
@@ -5866,7 +5845,7 @@
     {
       "store_id": "penny_jaszarokszallas_penny_3916591361",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Jászárokszállás",
       "area": "Jászárokszállás",
       "region": "n.a.",
@@ -5876,10 +5855,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 3916591361,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Jászárokszállás",
         "5123 Jászárokszállás, Kossuth Lajos utca 4"
       ]
@@ -5887,7 +5866,7 @@
     {
       "store_id": "penny_kalocsa_penny_251031328",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Kalocsa",
       "area": "Kalocsa",
       "region": "n.a.",
@@ -5897,10 +5876,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 251031328,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Kalocsa",
         "6300 Kalocsa, Széchenyi utca 10"
       ]
@@ -5908,7 +5887,7 @@
     {
       "store_id": "penny_kapuvar_penny_236048163",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Kapuvár",
       "area": "Kapuvár",
       "region": "n.a.",
@@ -5921,7 +5900,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Kapuvár",
         "9330 Kapuvár, Győri út 12"
       ]
@@ -5929,7 +5908,7 @@
     {
       "store_id": "penny_kecskemet_penny_1289495591",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Kecskemét",
       "area": "Kecskemét",
       "region": "Dél-Alföld",
@@ -5939,10 +5918,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 1289495591,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Kecskemét",
         "6000 Kecskemét, Kodály Zoltán tér 8"
       ]
@@ -5950,7 +5929,7 @@
     {
       "store_id": "penny_kecskemet_penny_261971876",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Kecskemét",
       "area": "Kecskemét",
       "region": "Dél-Alföld",
@@ -5963,7 +5942,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Kecskemét",
         "6000 Kecskemét, Tordai utca 2"
       ]
@@ -5971,20 +5950,20 @@
     {
       "store_id": "penny_kecskemet_penny_262096182",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Kecskemét",
       "area": "Kecskemét",
       "region": "Dél-Alföld",
       "address": "6000 Kecskemét, Kossuth körút 60",
-      "lat": 46.899718,
-      "lon": 19.692224,
+      "lat": 46.899711,
+      "lon": 19.692157,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 262096182,
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Kecskemét",
         "6000 Kecskemét, Kossuth körút 60"
       ]
@@ -5992,7 +5971,7 @@
     {
       "store_id": "penny_kisber_penny_603742444",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Kisbér",
       "area": "Kisbér",
       "region": "n.a.",
@@ -6002,10 +5981,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 603742444,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Kisbér",
         "2870 Kisbér, Városház tér 1"
       ]
@@ -6013,7 +5992,7 @@
     {
       "store_id": "penny_kiskunfelegyhaza_penny_234858065",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Kiskunfélegyháza",
       "area": "Kiskunfélegyháza",
       "region": "n.a.",
@@ -6026,7 +6005,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Kiskunfélegyháza",
         "6100 Kiskunfélegyháza, Dr. Holló Lajos utca 93"
       ]
@@ -6034,7 +6013,7 @@
     {
       "store_id": "penny_kiskunmajsa_penny_798173266",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Kiskunmajsa",
       "area": "Kiskunmajsa",
       "region": "n.a.",
@@ -6044,10 +6023,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 798173266,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Kiskunmajsa",
         "6120 Kiskunmajsa, Félegyházi utca 22"
       ]
@@ -6055,7 +6034,7 @@
     {
       "store_id": "penny_kiskoros_penny_1030185297",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Kiskőrös",
       "area": "Kiskőrös",
       "region": "n.a.",
@@ -6068,7 +6047,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Kiskőrös",
         "6200 Kiskőrös, Dózsa György utca 31"
       ]
@@ -6076,7 +6055,7 @@
     {
       "store_id": "penny_kunmadaras_penny_834629887",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Kunmadaras",
       "area": "Kunmadaras",
       "region": "n.a.",
@@ -6086,10 +6065,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 834629887,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Kunmadaras",
         "5321 Kunmadaras, Semmelweis Ignác utca 3"
       ]
@@ -6097,7 +6076,7 @@
     {
       "store_id": "penny_kormend_penny_205987713",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Körmend",
       "area": "Körmend",
       "region": "n.a.",
@@ -6107,10 +6086,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 205987713,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Körmend",
         "9900 Körmend, Rákóczi utca 49"
       ]
@@ -6118,7 +6097,7 @@
     {
       "store_id": "penny_koszeg_penny_135338105",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Kőszeg",
       "area": "Kőszeg",
       "region": "n.a.",
@@ -6131,7 +6110,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Kőszeg",
         "9730 Kőszeg, Pogányi út 1"
       ]
@@ -6139,7 +6118,7 @@
     {
       "store_id": "penny_lajosmizse_penny_3432048292",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Lajosmizse",
       "area": "Lajosmizse",
       "region": "n.a.",
@@ -6149,39 +6128,18 @@
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 3432048292,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Lajosmizse",
         "6050 Lajosmizse, Dózsa György út 147"
       ]
     },
     {
-      "store_id": "penny_lenti_penny_239117110",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "Lenti",
-      "area": "Lenti",
-      "region": "n.a.",
-      "address": "8960 Lenti, Széchenyi István tér 5",
-      "lat": 46.623038,
-      "lon": 16.547455,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 239117110,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny Lenti",
-        "8960 Lenti, Széchenyi István tér 5"
-      ]
-    },
-    {
       "store_id": "penny_mezokovacshaza_penny_235548779",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Mezőkovácsháza",
       "area": "Mezőkovácsháza",
       "region": "n.a.",
@@ -6191,10 +6149,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 235548779,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Mezőkovácsháza",
         "5800 Mezőkovácsháza, Árpád utca 147-149"
       ]
@@ -6202,7 +6160,7 @@
     {
       "store_id": "penny_miskolc_penny_118158951",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Miskolc",
       "area": "Miskolc",
       "region": "Észak-Magyarország",
@@ -6215,7 +6173,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Miskolc",
         "3534 Miskolc, Andrássy utca 65"
       ]
@@ -6223,7 +6181,7 @@
     {
       "store_id": "penny_monor_penny_321742247",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Monor",
       "area": "Monor",
       "region": "Közép-Magyarország",
@@ -6236,7 +6194,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Monor",
         "2200 Monor, Ady Endre út 5"
       ]
@@ -6244,7 +6202,7 @@
     {
       "store_id": "penny_mosonmagyarovar_penny_1149150103",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Mosonmagyaróvár",
       "area": "Mosonmagyaróvár",
       "region": "Nyugat-Dunántúl",
@@ -6257,7 +6215,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Mosonmagyaróvár",
         "9200 Mosonmagyaróvár, Szent István király út 52"
       ]
@@ -6286,7 +6244,7 @@
     {
       "store_id": "penny_mateszalka_penny_237505991",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Mátészalka",
       "area": "Mátészalka",
       "region": "n.a.",
@@ -6296,10 +6254,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 237505991,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Mátészalka",
         "4700 Mátészalka, József Attila köz 9"
       ]
@@ -6307,7 +6265,7 @@
     {
       "store_id": "penny_mor_penny_290730667",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Mór",
       "area": "Mór",
       "region": "n.a.",
@@ -6317,10 +6275,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 290730667,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Mór",
         "8060 Mór, Deák Ferenc utca 28"
       ]
@@ -6349,7 +6307,7 @@
     {
       "store_id": "penny_nagykoros_penny_306244632",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Nagykőrös",
       "area": "Nagykőrös",
       "region": "n.a.",
@@ -6359,10 +6317,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 306244632,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Nagykőrös",
         "2750 Nagykőrös, Kecskeméti út 86"
       ]
@@ -6370,7 +6328,7 @@
     {
       "store_id": "penny_nyirbator_penny_278920314",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Nyírbátor",
       "area": "Nyírbátor",
       "region": "n.a.",
@@ -6380,10 +6338,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 278920314,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Nyírbátor",
         "4300 Nyírbátor, Zrínyi Ilona utca 10"
       ]
@@ -6391,7 +6349,7 @@
     {
       "store_id": "penny_nyiregyhaza_penny_229991779",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Nyíregyháza",
       "area": "Nyíregyháza",
       "region": "Észak-Alföld",
@@ -6401,10 +6359,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 229991779,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Nyíregyháza",
         "4400 Nyíregyháza, László utca"
       ]
@@ -6412,7 +6370,7 @@
     {
       "store_id": "penny_nyiregyhaza_penny_271770682",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Nyíregyháza",
       "area": "Nyíregyháza",
       "region": "Észak-Alföld",
@@ -6422,10 +6380,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 271770682,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Nyíregyháza",
         "4400 Nyíregyháza, Család utca 21"
       ]
@@ -6433,7 +6391,7 @@
     {
       "store_id": "penny_nyiregyhaza_penny_302817484",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Nyíregyháza",
       "area": "Nyíregyháza",
       "region": "Észak-Alföld",
@@ -6443,10 +6401,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 302817484,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Nyíregyháza",
         "4400 Nyíregyháza, Állomás tér 6"
       ]
@@ -6454,7 +6412,7 @@
     {
       "store_id": "penny_oroshaza_penny_616589935",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Orosháza",
       "area": "Orosháza",
       "region": "n.a.",
@@ -6464,10 +6422,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 616589935,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Orosháza",
         "5900 Orosháza, Móricz Zsigmond utca 2"
       ]
@@ -6475,7 +6433,7 @@
     {
       "store_id": "penny_oroszlany_penny_314309056",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Oroszlány",
       "area": "Oroszlány",
       "region": "n.a.",
@@ -6485,10 +6443,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 314309056,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Oroszlány",
         "2840 Oroszlány, Takács Imre utca 1/A"
       ]
@@ -6496,7 +6454,7 @@
     {
       "store_id": "penny_paks_penny_371351622",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Paks",
       "area": "Paks",
       "region": "n.a.",
@@ -6506,10 +6464,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 371351622,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Paks",
         "7030 Paks, Táncsics Mihály utca 11"
       ]
@@ -6517,7 +6475,7 @@
     {
       "store_id": "penny_pilis_penny_292522926",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Pilis",
       "area": "Pilis",
       "region": "n.a.",
@@ -6527,10 +6485,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 292522926,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Pilis",
         "2721 Pilis"
       ]
@@ -6538,7 +6496,7 @@
     {
       "store_id": "penny_polgar_penny_319599001",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Polgár",
       "area": "Polgár",
       "region": "n.a.",
@@ -6548,10 +6506,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 319599001,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Polgár",
         "4090 Polgár, Hősök utca 38-42"
       ]
@@ -6601,7 +6559,7 @@
     {
       "store_id": "penny_paszto_penny_631302068",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Pásztó",
       "area": "Pásztó",
       "region": "n.a.",
@@ -6611,10 +6569,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 631302068,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Pásztó",
         "3060 Pásztó, Gyárliget utca 1"
       ]
@@ -6622,7 +6580,7 @@
     {
       "store_id": "penny_pecel_penny_298187487",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Pécel",
       "area": "Pécel",
       "region": "n.a.",
@@ -6632,10 +6590,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 298187487,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Pécel",
         "2119 Pécel, Ráday Gedeon tér 2"
       ]
@@ -6643,7 +6601,7 @@
     {
       "store_id": "penny_pecs_penny_3185092487",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Pécs",
       "area": "Pécs",
       "region": "Dél-Dunántúl",
@@ -6653,10 +6611,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 3185092487,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Pécs",
         "7632 Pécs, Megyeri út 84"
       ]
@@ -6664,7 +6622,7 @@
     {
       "store_id": "penny_pecs_penny_3196787205",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Pécs",
       "area": "Pécs",
       "region": "Dél-Dunántúl",
@@ -6674,10 +6632,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 3196787205,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Pécs",
         "7632 Pécs, Siklósi út 68/a"
       ]
@@ -6685,7 +6643,7 @@
     {
       "store_id": "penny_pecs_penny_41861037",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Pécs",
       "area": "Pécs",
       "region": "Dél-Dunántúl",
@@ -6695,10 +6653,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 41861037,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Pécs",
         "7632 Pécs, Sztárai Mihály út 4"
       ]
@@ -6706,7 +6664,7 @@
     {
       "store_id": "penny_pecs_penny_279451477",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Pécs",
       "area": "Pécs",
       "region": "Dél-Dunántúl",
@@ -6716,10 +6674,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 279451477,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Pécs",
         "7630 Pécs, Pécsváradi út 1"
       ]
@@ -6727,7 +6685,7 @@
     {
       "store_id": "penny_pecsvarad_penny_956426040",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Pécsvárad",
       "area": "Pécsvárad",
       "region": "n.a.",
@@ -6737,10 +6695,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 956426040,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Pécsvárad",
         "7720 Pécsvárad, Erzsébeti utca"
       ]
@@ -6748,7 +6706,7 @@
     {
       "store_id": "penny_rakamaz_penny_332310159",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Rakamaz",
       "area": "Rakamaz",
       "region": "n.a.",
@@ -6758,10 +6716,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 332310159,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Rakamaz",
         "4465 Rakamaz, Kossuth út 5"
       ]
@@ -6769,7 +6727,7 @@
     {
       "store_id": "penny_rackeve_penny_2931107059",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Ráckeve",
       "area": "Ráckeve",
       "region": "n.a.",
@@ -6779,10 +6737,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 2931107059,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Ráckeve",
         "2300 Ráckeve, Móricz Zsigmond utca 1-9"
       ]
@@ -6790,7 +6748,7 @@
     {
       "store_id": "penny_sajoszentpeter_penny_1137064699",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Sajószentpéter",
       "area": "Sajószentpéter",
       "region": "n.a.",
@@ -6800,10 +6758,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 1137064699,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Sajószentpéter",
         "3770 Sajószentpéter, Kossuth Lajos út 190-194"
       ]
@@ -6811,7 +6769,7 @@
     {
       "store_id": "penny_siklos_penny_690021095",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Siklós",
       "area": "Siklós",
       "region": "n.a.",
@@ -6821,10 +6779,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 690021095,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Siklós",
         "7800 Siklós, Szent István tér 7"
       ]
@@ -6874,7 +6832,7 @@
     {
       "store_id": "penny_szarvas_penny_275974348",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Szarvas",
       "area": "Szarvas",
       "region": "n.a.",
@@ -6884,10 +6842,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 275974348,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Szarvas",
         "5540 Szarvas, Szabadság út 47"
       ]
@@ -6895,7 +6853,7 @@
     {
       "store_id": "penny_szeged_penny_80408865",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Szeged",
       "area": "Szeged",
       "region": "Dél-Alföld",
@@ -6908,7 +6866,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Szeged",
         "6723 Szeged, Makkosházi körút 27"
       ]
@@ -6916,7 +6874,7 @@
     {
       "store_id": "penny_szeged_penny_93303527",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Szeged",
       "area": "Szeged",
       "region": "Dél-Alföld",
@@ -6929,7 +6887,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Szeged",
         "6728 Szeged, Dorozsmai út 52/A"
       ]
@@ -6947,7 +6905,7 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 328984202,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
         "Penny",
@@ -6958,7 +6916,7 @@
     {
       "store_id": "penny_szekszard_penny_362854955",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Szekszárd",
       "area": "Szekszárd",
       "region": "Dél-Dunántúl",
@@ -6968,10 +6926,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 362854955,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Szekszárd",
         "7100 Szekszárd, Béri Balogh Ádám utca 79"
       ]
@@ -6979,7 +6937,7 @@
     {
       "store_id": "penny_szentes_penny_370667740",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Szentes",
       "area": "Szentes",
       "region": "n.a.",
@@ -6992,7 +6950,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Szentes",
         "6600 Szentes, Kossuth Lajos utca 29-31"
       ]
@@ -7000,7 +6958,7 @@
     {
       "store_id": "penny_szentlorinc_penny_314074112",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Szentlőrinc",
       "area": "Szentlőrinc",
       "region": "n.a.",
@@ -7010,10 +6968,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 314074112,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Szentlőrinc",
         "7940 Szentlőrinc, Ifjúság útja 1"
       ]
@@ -7021,7 +6979,7 @@
     {
       "store_id": "penny_szerencs_penny_706185631",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Szerencs",
       "area": "Szerencs",
       "region": "n.a.",
@@ -7031,10 +6989,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 706185631,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Szerencs",
         "3900 Szerencs, Rákóczi út 115"
       ]
@@ -7042,7 +7000,7 @@
     {
       "store_id": "penny_szigethalom_penny_4565746890",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Szigethalom",
       "area": "Szigethalom",
       "region": "n.a.",
@@ -7052,10 +7010,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 4565746890,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Szigethalom",
         "2315 Szigethalom, Mű út 35"
       ]
@@ -7063,7 +7021,7 @@
     {
       "store_id": "penny_szigetszentmiklos_penny_153991428",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Szigetszentmiklós",
       "area": "Szigetszentmiklós",
       "region": "Közép-Magyarország",
@@ -7073,12 +7031,33 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 153991428,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny Szigetszentmiklós",
+        "2310 Szigetszentmiklós, Bajcsy-Zsilinszky utca 8"
+      ]
+    },
+    {
+      "store_id": "penny_szolnok_penny_302549542",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "Szolnok",
+      "area": "Szolnok",
+      "region": "Észak-Alföld",
+      "address": "5000 Szolnok, Bolt köz 2",
+      "lat": 47.168459,
+      "lon": 20.17357,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 302549542,
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
-        "Penny Szigetszentmiklós",
-        "2310 Szigetszentmiklós, Bajcsy-Zsilinszky utca 8"
+        "PENNY",
+        "Penny Szolnok",
+        "5000 Szolnok, Bolt köz 2"
       ]
     },
     {
@@ -7103,30 +7082,9 @@
       ]
     },
     {
-      "store_id": "penny_szolnok_penny_302549542",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "Szolnok",
-      "area": "Szolnok",
-      "region": "Észak-Alföld",
-      "address": "5000 Szolnok, Bolt köz 2",
-      "lat": 47.168459,
-      "lon": 20.17357,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 302549542,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny Szolnok",
-        "5000 Szolnok, Bolt köz 2"
-      ]
-    },
-    {
       "store_id": "penny_szombathely_penny_230567153",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Szombathely",
       "area": "Szombathely",
       "region": "Nyugat-Dunántúl",
@@ -7136,10 +7094,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 230567153,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Szombathely",
         "9700 Szombathely, Gazdag Erzsi utca 12"
       ]
@@ -7147,7 +7105,7 @@
     {
       "store_id": "penny_szombathely_penny_288962373",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Szombathely",
       "area": "Szombathely",
       "region": "Nyugat-Dunántúl",
@@ -7157,10 +7115,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 288962373,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Szombathely",
         "9700 Szombathely, Körmendi út 42-48"
       ]
@@ -7168,7 +7126,7 @@
     {
       "store_id": "penny_szekesfehervar_penny_41390036",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Székesfehérvár",
       "area": "Székesfehérvár",
       "region": "Közép-Dunántúl",
@@ -7178,10 +7136,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 41390036,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Székesfehérvár",
         "8000 Székesfehérvár, Széchenyi utca 104"
       ]
@@ -7189,7 +7147,7 @@
     {
       "store_id": "penny_szekesfehervar_penny_215846973",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Székesfehérvár",
       "area": "Székesfehérvár",
       "region": "Közép-Dunántúl",
@@ -7199,10 +7157,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 215846973,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Székesfehérvár",
         "8000 Székesfehérvár, Palotai út 10"
       ]
@@ -7210,7 +7168,7 @@
     {
       "store_id": "penny_sarbogard_penny_230893689",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Sárbogárd",
       "area": "Sárbogárd",
       "region": "n.a.",
@@ -7223,7 +7181,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Sárbogárd",
         "7000 Sárbogárd, Ady Endre utca 184-192"
       ]
@@ -7231,7 +7189,7 @@
     {
       "store_id": "penny_satoraljaujhely_penny_330720155",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Sátoraljaújhely",
       "area": "Sátoraljaújhely",
       "region": "n.a.",
@@ -7241,16 +7199,16 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 330720155,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Sátoraljaújhely",
         "3980 Sátoraljaújhely, Rákóczi utca 34"
       ]
     },
     {
-      "store_id": "penny_tab_penny_21034979",
+      "store_id": "penny_tab_penny_1471711829",
       "company": "Penny",
       "name": "Penny",
       "city": "Tab",
@@ -7260,8 +7218,8 @@
       "lat": 46.735904,
       "lon": 18.036093,
       "source": "openstreetmap_overpass",
-      "osm_type": "relation",
-      "osm_id": 21034979,
+      "osm_type": "way",
+      "osm_id": 1471711829,
       "brand": "Penny",
       "operator": "",
       "keywords": [
@@ -7273,7 +7231,7 @@
     {
       "store_id": "penny_tamasi_penny_230257825",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Tamási",
       "area": "Tamási",
       "region": "n.a.",
@@ -7283,10 +7241,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 230257825,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Tamási",
         "7090 Tamási, Szabadság út 59-63"
       ]
@@ -7294,7 +7252,7 @@
     {
       "store_id": "penny_tapolca_penny_167081061",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Tapolca",
       "area": "Tapolca",
       "region": "n.a.",
@@ -7304,10 +7262,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 167081061,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Tapolca",
         "8300 Tapolca, Gyulakeszi út 120"
       ]
@@ -7315,7 +7273,7 @@
     {
       "store_id": "penny_tatabanya_penny_227192192",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Tatabánya",
       "area": "Tatabánya",
       "region": "Közép-Dunántúl",
@@ -7325,10 +7283,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 227192192,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Tatabánya",
         "2800 Tatabánya, Petőfi Sándor utca"
       ]
@@ -7336,7 +7294,7 @@
     {
       "store_id": "penny_tiszakecske_penny_3940469187",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Tiszakécske",
       "area": "Tiszakécske",
       "region": "n.a.",
@@ -7346,10 +7304,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 3940469187,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Tiszakécske",
         "6060 Tiszakécske, Vincze János Nándor utca 1"
       ]
@@ -7357,7 +7315,7 @@
     {
       "store_id": "penny_tiszaujvaros_penny_291788674",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Tiszaújváros",
       "area": "Tiszaújváros",
       "region": "n.a.",
@@ -7367,10 +7325,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 291788674,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Tiszaújváros",
         "3580 Tiszaújváros, Lévai József utca 62"
       ]
@@ -7378,7 +7336,7 @@
     {
       "store_id": "penny_tolna_penny_937835660",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Tolna",
       "area": "Tolna",
       "region": "n.a.",
@@ -7388,10 +7346,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 937835660,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Tolna",
         "7130 Tolna, Arany János utca 5"
       ]
@@ -7399,7 +7357,7 @@
     {
       "store_id": "penny_veszprem_penny_2118325214",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Veszprém",
       "area": "Veszprém",
       "region": "Közép-Dunántúl",
@@ -7412,7 +7370,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Veszprém",
         "8200 Veszprém, Dózsa György tér 1"
       ]
@@ -7420,7 +7378,7 @@
     {
       "store_id": "penny_veszprem_penny_186522183",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Veszprém",
       "area": "Veszprém",
       "region": "Közép-Dunántúl",
@@ -7433,7 +7391,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Veszprém",
         "8200 Veszprém, Csillag utca 22"
       ]
@@ -7441,7 +7399,7 @@
     {
       "store_id": "penny_veszprem_penny_188063964",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Veszprém",
       "area": "Veszprém",
       "region": "Közép-Dunántúl",
@@ -7454,7 +7412,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Veszprém",
         "8200 Veszprém, Egyetem utca 16"
       ]
@@ -7462,7 +7420,7 @@
     {
       "store_id": "penny_veszprem_penny_192619199",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Veszprém",
       "area": "Veszprém",
       "region": "Közép-Dunántúl",
@@ -7475,7 +7433,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Veszprém",
         "8200 Veszprém, Aulich Lajos utca"
       ]
@@ -7483,7 +7441,7 @@
     {
       "store_id": "penny_varpalota_penny_1529959432",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Várpalota",
       "area": "Várpalota",
       "region": "n.a.",
@@ -7496,7 +7454,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Várpalota",
         "8100 Várpalota, Hétvezér utca 1"
       ]
@@ -7504,7 +7462,7 @@
     {
       "store_id": "penny_vasarosnameny_penny_300664556",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Vásárosnamény",
       "area": "Vásárosnamény",
       "region": "n.a.",
@@ -7514,10 +7472,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 300664556,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Vásárosnamény",
         "4800 Vásárosnamény, Jókai út 36"
       ]
@@ -7546,7 +7504,7 @@
     {
       "store_id": "penny_zalaegerszeg_penny_2972054861",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Zalaegerszeg",
       "area": "Zalaegerszeg",
       "region": "Nyugat-Dunántúl",
@@ -7556,10 +7514,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 2972054861,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Zalaegerszeg",
         "8900 Zalaegerszeg, Köztársaság útja 51"
       ]
@@ -7567,7 +7525,7 @@
     {
       "store_id": "penny_zalaegerszeg_penny_208065306",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Zalaegerszeg",
       "area": "Zalaegerszeg",
       "region": "Nyugat-Dunántúl",
@@ -7580,7 +7538,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Zalaegerszeg",
         "8900 Zalaegerszeg, Platán sor 17/b"
       ]
@@ -7588,7 +7546,7 @@
     {
       "store_id": "penny_zalaszentgrot_penny_224531215",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Zalaszentgrót",
       "area": "Zalaszentgrót",
       "region": "n.a.",
@@ -7598,39 +7556,18 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 224531215,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Zalaszentgrót",
         "8790 Zalaszentgrót, Batthyány Lajos utca 2/A"
       ]
     },
     {
-      "store_id": "penny_zirc_penny_169973539",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "Zirc",
-      "area": "Zirc",
-      "region": "n.a.",
-      "address": "8420 Zirc, Rákóczi tér 12",
-      "lat": 47.262955,
-      "lon": 17.870587,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 169973539,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny Zirc",
-        "8420 Zirc, Rákóczi tér 12"
-      ]
-    },
-    {
       "store_id": "penny_na_penny_293152460",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "n.a.",
       "area": "n.a.",
       "region": "n.a.",
@@ -7640,10 +7577,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 293152460,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny n.a.",
         "n.a."
       ]
@@ -7651,7 +7588,7 @@
     {
       "store_id": "penny_na_penny_1119860424",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "n.a.",
       "area": "n.a.",
       "region": "n.a.",
@@ -7661,10 +7598,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 1119860424,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny n.a.",
         "n.a."
       ]
@@ -7672,7 +7609,7 @@
     {
       "store_id": "penny_na_penny_1297029996",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "n.a.",
       "area": "n.a.",
       "region": "n.a.",
@@ -7682,10 +7619,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 1297029996,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny n.a.",
         "n.a."
       ]
@@ -7693,7 +7630,7 @@
     {
       "store_id": "penny_na_penny_1343128385",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "n.a.",
       "area": "n.a.",
       "region": "n.a.",
@@ -7703,10 +7640,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 1343128385,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny n.a.",
         "n.a."
       ]
@@ -7714,7 +7651,7 @@
     {
       "store_id": "penny_na_penny_1456577484",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "n.a.",
       "area": "n.a.",
       "region": "n.a.",
@@ -7724,10 +7661,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 1456577484,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny n.a.",
         "n.a."
       ]
@@ -7735,7 +7672,7 @@
     {
       "store_id": "penny_na_penny_1639349505",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "n.a.",
       "area": "n.a.",
       "region": "n.a.",
@@ -7745,10 +7682,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 1639349505,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny n.a.",
         "n.a."
       ]
@@ -7756,7 +7693,7 @@
     {
       "store_id": "penny_na_penny_1868517606",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "n.a.",
       "area": "n.a.",
       "region": "n.a.",
@@ -7766,10 +7703,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 1868517606,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny n.a.",
         "n.a."
       ]
@@ -7777,7 +7714,7 @@
     {
       "store_id": "penny_na_penny_1886474583",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "n.a.",
       "area": "n.a.",
       "region": "n.a.",
@@ -7787,10 +7724,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 1886474583,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny n.a.",
         "n.a."
       ]
@@ -7798,7 +7735,7 @@
     {
       "store_id": "penny_na_penny_2935683015",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "n.a.",
       "area": "n.a.",
       "region": "n.a.",
@@ -7811,7 +7748,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny n.a.",
         "n.a."
       ]
@@ -7819,7 +7756,7 @@
     {
       "store_id": "penny_na_penny_2969950886",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "n.a.",
       "area": "n.a.",
       "region": "n.a.",
@@ -7829,10 +7766,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 2969950886,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny n.a.",
         "n.a."
       ]
@@ -7840,7 +7777,7 @@
     {
       "store_id": "penny_na_penny_3389557783",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "n.a.",
       "area": "n.a.",
       "region": "n.a.",
@@ -7850,10 +7787,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 3389557783,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny n.a.",
         "n.a."
       ]
@@ -7861,7 +7798,7 @@
     {
       "store_id": "penny_na_penny_3456352643",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "n.a.",
       "area": "n.a.",
       "region": "n.a.",
@@ -7871,10 +7808,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 3456352643,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny n.a.",
         "n.a."
       ]
@@ -7882,7 +7819,7 @@
     {
       "store_id": "penny_na_penny_3462281796",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "n.a.",
       "area": "n.a.",
       "region": "n.a.",
@@ -7895,7 +7832,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny n.a.",
         "n.a."
       ]
@@ -7903,7 +7840,7 @@
     {
       "store_id": "penny_na_penny_3489668109",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "n.a.",
       "area": "n.a.",
       "region": "n.a.",
@@ -7913,10 +7850,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 3489668109,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny n.a.",
         "n.a."
       ]
@@ -7924,7 +7861,7 @@
     {
       "store_id": "penny_na_penny_5093942574",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "n.a.",
       "area": "n.a.",
       "region": "n.a.",
@@ -7934,10 +7871,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 5093942574,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny n.a.",
         "n.a."
       ]
@@ -7945,7 +7882,7 @@
     {
       "store_id": "penny_na_penny_5151180360",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "n.a.",
       "area": "n.a.",
       "region": "n.a.",
@@ -7958,7 +7895,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny n.a.",
         "n.a."
       ]
@@ -7966,7 +7903,7 @@
     {
       "store_id": "penny_na_penny_5519212958",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "n.a.",
       "area": "n.a.",
       "region": "n.a.",
@@ -7976,10 +7913,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 5519212958,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny n.a.",
         "n.a."
       ]
@@ -7987,7 +7924,7 @@
     {
       "store_id": "penny_na_penny_6627725983",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "n.a.",
       "area": "n.a.",
       "region": "n.a.",
@@ -7997,10 +7934,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 6627725983,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny n.a.",
         "n.a."
       ]
@@ -8008,7 +7945,7 @@
     {
       "store_id": "penny_na_penny_8607517074",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "n.a.",
       "area": "n.a.",
       "region": "n.a.",
@@ -8021,7 +7958,7 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny n.a.",
         "n.a."
       ]
@@ -8029,7 +7966,7 @@
     {
       "store_id": "penny_na_penny_11559250287",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "n.a.",
       "area": "n.a.",
       "region": "n.a.",
@@ -8042,7 +7979,1414 @@
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_32890313",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 46.364847,
+      "lon": 17.796823,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 32890313,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_70301767",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 48.255563,
+      "lon": 20.625281,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 70301767,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_78323971",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.691289,
+      "lon": 19.134101,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 78323971,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_103434054",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.562728,
+      "lon": 18.408637,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 103434054,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_104914809",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.648574,
+      "lon": 18.315449,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 104914809,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_112748233",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 46.685693,
+      "lon": 21.089021,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 112748233,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_118265537",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 48.105617,
+      "lon": 20.770157,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 118265537,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_119013963",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 48.081919,
+      "lon": 20.7859,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 119013963,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_123486085",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.738247,
+      "lon": 18.141318,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 123486085,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_165555253",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 46.776288,
+      "lon": 17.244297,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 165555253,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_169973539",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.262955,
+      "lon": 17.870587,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 169973539,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_170221517",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 46.189123,
+      "lon": 18.267588,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 170221517,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_171936547",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 46.773591,
+      "lon": 17.265505,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 171936547,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_173555798",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 48.104368,
+      "lon": 19.801984,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 173555798,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_184341380",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 46.125493,
+      "lon": 19.338532,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 184341380,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_199635312",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 46.462661,
+      "lon": 17.010965,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 199635312,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_201871766",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.176696,
+      "lon": 20.402667,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 201871766,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_205948002",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 46.818881,
+      "lon": 21.033493,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 205948002,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_206246488",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 46.772497,
+      "lon": 21.127417,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 206246488,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_219400698",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.208937,
+      "lon": 18.631063,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 219400698,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_221525564",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "Húszöles út",
+      "lat": 47.621065,
+      "lon": 20.748453,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 221525564,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "Húszöles út"
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_222401891",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.419182,
+      "lon": 19.741069,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 222401891,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_222472999",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.490132,
+      "lon": 19.892985,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 222472999,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_222704338",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.513727,
+      "lon": 20.142406,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 222704338,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_226986499",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.594286,
+      "lon": 18.388036,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 226986499,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_230260456",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 46.901432,
+      "lon": 18.049606,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 230260456,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_230603322",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 46.926426,
+      "lon": 18.247053,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 230603322,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_230904749",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.368066,
+      "lon": 20.631926,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 230904749,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_231122095",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.468997,
+      "lon": 19.157378,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 231122095,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_231276105",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.959741,
+      "lon": 21.353838,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 231276105,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_231541076",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.390437,
+      "lon": 19.204975,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 231541076,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_232588539",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 46.933654,
+      "lon": 20.817267,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 232588539,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_237153952",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 46.458404,
+      "lon": 16.982704,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 237153952,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_239117110",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 46.623038,
+      "lon": 16.547455,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 239117110,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_243419248",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 46.972552,
+      "lon": 18.928041,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 243419248,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_245832094",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 46.958545,
+      "lon": 16.276447,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 245832094,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_255896059",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 46.212248,
+      "lon": 20.47177,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 255896059,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_260830099",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.189889,
+      "lon": 20.0077,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 260830099,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_261439547",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.775201,
+      "lon": 19.93106,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 261439547,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_265644317",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 46.640502,
+      "lon": 21.265278,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 265644317,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_268943875",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.112025,
+      "lon": 17.556432,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 268943875,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_272849431",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 48.230755,
+      "lon": 22.066789,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 272849431,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_274652356",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 48.328327,
+      "lon": 21.559551,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 274652356,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_278328655",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 46.803575,
+      "lon": 18.917475,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 278328655,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_278641694",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.015525,
+      "lon": 21.16753,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 278641694,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_281442920",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.63118,
+      "lon": 19.128365,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 281442920,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_284186219",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.378132,
+      "lon": 18.935131,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 284186219,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_284730796",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.442711,
+      "lon": 21.387512,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 284730796,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_292054359",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.002824,
+      "lon": 20.614298,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 292054359,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_292869961",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.650971,
+      "lon": 19.481124,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 292869961,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_304085028",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.25421,
+      "lon": 16.925342,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 304085028,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_306827346",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.616796,
+      "lon": 19.577367,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 306827346,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_319250660",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.597429,
+      "lon": 20.288254,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 319250660,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_320518215",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.193823,
+      "lon": 20.180253,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 320518215,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_324279887",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 48.116881,
+      "lon": 21.411292,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 324279887,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_335571529",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 46.380343,
+      "lon": 18.132057,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 335571529,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_346953154",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 46.738815,
+      "lon": 21.373369,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 346953154,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_353521355",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.345136,
+      "lon": 19.157561,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 353521355,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_357014503",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 48.218126,
+      "lon": 20.269071,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 357014503,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_380201788",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.700564,
+      "lon": 17.641967,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 380201788,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_406403374",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 46.582465,
+      "lon": 17.410701,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 406403374,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_549657015",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.308354,
+      "lon": 20.937332,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 549657015,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_564156662",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.384657,
+      "lon": 19.344518,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 564156662,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_616974662",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.616533,
+      "lon": 18.89762,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 616974662,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_688138756",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.475127,
+      "lon": 20.599572,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 688138756,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_1030707242",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 48.404869,
+      "lon": 22.168229,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 1030707242,
+      "brand": "PENNY",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
+        "Penny n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "penny_na_penny_1458707352",
+      "company": "Penny",
+      "name": "PENNY",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.433462,
+      "lon": 19.202269,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 1458707352,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "PENNY",
         "Penny n.a.",
         "n.a."
       ]
@@ -8090,90 +9434,6 @@
       ]
     },
     {
-      "store_id": "penny_na_penny_13339304583",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 46.906268,
-      "lon": 18.051714,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 13339304583,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_32890313",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 46.364847,
-      "lon": 17.796823,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 32890313,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_70301767",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 48.255563,
-      "lon": 20.625281,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 70301767,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_78323971",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.691289,
-      "lon": 19.134101,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 78323971,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
       "store_id": "penny_na_penny_100010920",
       "company": "Penny",
       "name": "Penny",
@@ -8195,447 +9455,6 @@
       ]
     },
     {
-      "store_id": "penny_na_penny_103434054",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.562728,
-      "lon": 18.408637,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 103434054,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_104914809",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.648574,
-      "lon": 18.315449,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 104914809,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_112748233",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 46.685693,
-      "lon": 21.089021,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 112748233,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_118265537",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 48.105617,
-      "lon": 20.770157,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 118265537,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_119013963",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 48.081919,
-      "lon": 20.7859,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 119013963,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_123486085",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.738247,
-      "lon": 18.141318,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 123486085,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_165555253",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 46.776288,
-      "lon": 17.244297,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 165555253,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_170221517",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 46.189123,
-      "lon": 18.267588,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 170221517,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_171936547",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 46.773591,
-      "lon": 17.265505,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 171936547,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_173555798",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 48.104368,
-      "lon": 19.801984,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 173555798,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_184341380",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 46.125493,
-      "lon": 19.338532,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 184341380,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_199635312",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 46.462661,
-      "lon": 17.010965,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 199635312,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_201871766",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.176696,
-      "lon": 20.402667,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 201871766,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_205948002",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 46.818881,
-      "lon": 21.033493,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 205948002,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_206246488",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 46.772497,
-      "lon": 21.127417,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 206246488,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_219400698",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.208937,
-      "lon": 18.631063,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 219400698,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_221525564",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "Húszöles út",
-      "lat": 47.621065,
-      "lon": 20.748453,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 221525564,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "Húszöles út"
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_222401891",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.419182,
-      "lon": 19.741069,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 222401891,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_222472999",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.490132,
-      "lon": 19.892985,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 222472999,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_222704338",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.513727,
-      "lon": 20.142406,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 222704338,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_226986499",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.594286,
-      "lon": 18.388036,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 226986499,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
       "store_id": "penny_na_penny_229103290",
       "company": "Penny",
       "name": "Penny",
@@ -8648,615 +9467,6 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 229103290,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_230260456",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 46.901432,
-      "lon": 18.049606,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 230260456,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_230603322",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 46.926426,
-      "lon": 18.247053,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 230603322,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_230904749",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.368066,
-      "lon": 20.631926,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 230904749,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_231122095",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.468997,
-      "lon": 19.157378,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 231122095,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_231276105",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.959741,
-      "lon": 21.353838,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 231276105,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_231541076",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.390437,
-      "lon": 19.204975,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 231541076,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_232588539",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 46.933654,
-      "lon": 20.817267,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 232588539,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_237153952",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 46.458404,
-      "lon": 16.982704,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 237153952,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_243419248",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 46.972552,
-      "lon": 18.928041,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 243419248,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_245832094",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 46.958545,
-      "lon": 16.276447,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 245832094,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_255896059",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 46.212248,
-      "lon": 20.47177,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 255896059,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_260830099",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.189889,
-      "lon": 20.0077,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 260830099,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_261439547",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.775201,
-      "lon": 19.93106,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 261439547,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_265644317",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 46.640502,
-      "lon": 21.265278,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 265644317,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_268943875",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.112025,
-      "lon": 17.556432,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 268943875,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_272849431",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 48.230755,
-      "lon": 22.066789,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 272849431,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_274652356",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 48.328327,
-      "lon": 21.559551,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 274652356,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_278328655",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 46.803575,
-      "lon": 18.917475,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 278328655,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_278641694",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.015525,
-      "lon": 21.16753,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 278641694,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_281442920",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.63118,
-      "lon": 19.128365,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 281442920,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_284186219",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.378132,
-      "lon": 18.935131,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 284186219,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_284730796",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.442711,
-      "lon": 21.387512,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 284730796,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_292054359",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.002824,
-      "lon": 20.614298,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 292054359,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_292869961",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.650971,
-      "lon": 19.481124,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 292869961,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_304085028",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.25421,
-      "lon": 16.925342,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 304085028,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_306827346",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.616796,
-      "lon": 19.577367,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 306827346,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_319250660",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.597429,
-      "lon": 20.288254,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 319250660,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_320518215",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.193823,
-      "lon": 20.180253,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 320518215,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_324279887",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 48.116881,
-      "lon": 21.411292,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 324279887,
       "brand": "Penny",
       "operator": "Penny-Market Kft.",
       "keywords": [
@@ -9287,261 +9497,9 @@
       ]
     },
     {
-      "store_id": "penny_na_penny_335571529",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 46.380343,
-      "lon": 18.132057,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 335571529,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_346953154",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 46.738815,
-      "lon": 21.373369,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 346953154,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_353521355",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.345136,
-      "lon": 19.157561,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 353521355,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_357014503",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 48.218126,
-      "lon": 20.269071,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 357014503,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_380201788",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.700564,
-      "lon": 17.641967,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 380201788,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_406403374",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 46.582465,
-      "lon": 17.410701,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 406403374,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_549657015",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.308354,
-      "lon": 20.937332,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 549657015,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_564156662",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.384668,
-      "lon": 19.34453,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 564156662,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_616974662",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.616533,
-      "lon": 18.89762,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 616974662,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_688138756",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.475127,
-      "lon": 20.599572,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 688138756,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_1030707242",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 48.404869,
-      "lon": 22.168229,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 1030707242,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "penny_na_penny_1458707352",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.433462,
-      "lon": 19.202269,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 1458707352,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
       "store_id": "penny_erd_penny_220554539",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Érd",
       "area": "Érd",
       "region": "Közép-Magyarország",
@@ -9551,10 +9509,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 220554539,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Érd",
         "2030 Érd, Bajcsy-Zsilinszky út"
       ]
@@ -9562,7 +9520,7 @@
     {
       "store_id": "penny_ujfeherto_penny_235029329",
       "company": "Penny",
-      "name": "Penny",
+      "name": "PENNY",
       "city": "Újfehértó",
       "area": "Újfehértó",
       "region": "n.a.",
@@ -9572,10 +9530,10 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 235029329,
-      "brand": "Penny",
+      "brand": "PENNY",
       "operator": "Penny-Market Kft.",
       "keywords": [
-        "Penny",
+        "PENNY",
         "Penny Újfehértó",
         "4244 Újfehértó, Debreceni út 7-9"
       ]
@@ -11300,27 +11258,6 @@
         "Spar",
         "SPAR Budapest",
         "1155 Budapest, Szent Korona útja"
-      ]
-    },
-    {
-      "store_id": "spar_budapest_spar_40813408",
-      "company": "SPAR",
-      "name": "Spar",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1182 Budapest, Alacskai út 3",
-      "lat": 47.416045,
-      "lon": 19.207266,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 40813408,
-      "brand": "Spar",
-      "operator": "",
-      "keywords": [
-        "Spar",
-        "SPAR Budapest",
-        "1182 Budapest, Alacskai út 3"
       ]
     },
     {
@@ -13368,8 +13305,8 @@
       "area": "Kecskemét",
       "region": "Dél-Alföld",
       "address": "6000 Kecskemét, Korona utca 2",
-      "lat": 46.907498,
-      "lon": 19.688681,
+      "lat": 46.907476,
+      "lon": 19.688704,
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 1296374281,
@@ -14487,7 +14424,7 @@
       "osm_type": "node",
       "osm_id": 5047018730,
       "brand": "Spar",
-      "operator": "Sió Top-Ker Kft.",
+      "operator": "",
       "keywords": [
         "Spar",
         "SPAR Siófok",
@@ -14508,7 +14445,7 @@
       "osm_type": "way",
       "osm_id": 289967156,
       "brand": "Spar",
-      "operator": "Sió Top-Ker Kft.",
+      "operator": "SPAR Magyarország Kft.",
       "keywords": [
         "Spar",
         "SPAR Siófok",
@@ -14534,27 +14471,6 @@
         "Spar Express",
         "SPAR Siófok",
         "8600 Siófok, Vak Bottyán utca 1"
-      ]
-    },
-    {
-      "store_id": "spar_siofok_spar_market_13324162280",
-      "company": "SPAR",
-      "name": "Spar Market",
-      "city": "Siófok",
-      "area": "Siófok",
-      "region": "Dél-Dunántúl",
-      "address": "Siófok, Újpiac tér",
-      "lat": 46.907047,
-      "lon": 18.057573,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 13324162280,
-      "brand": "Spar",
-      "operator": "Goldfinger Kft.",
-      "keywords": [
-        "Spar Market",
-        "SPAR Siófok",
-        "Siófok, Újpiac tér"
       ]
     },
     {
@@ -16238,6 +16154,27 @@
       ]
     },
     {
+      "store_id": "spar_na_despar_13059201611",
+      "company": "SPAR",
+      "name": "Despar",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 46.772917,
+      "lon": 17.271633,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 13059201611,
+      "brand": "Spar",
+      "operator": "",
+      "keywords": [
+        "Despar",
+        "SPAR n.a.",
+        "n.a."
+      ]
+    },
+    {
       "store_id": "spar_na_spar_293152477",
       "company": "SPAR",
       "name": "Spar",
@@ -16713,7 +16650,7 @@
       "osm_type": "node",
       "osm_id": 1770420617,
       "brand": "Spar",
-      "operator": "Sió Top-Ker Kft.",
+      "operator": "",
       "keywords": [
         "Spar",
         "SPAR n.a.",
@@ -18191,6 +18128,27 @@
       ]
     },
     {
+      "store_id": "spar_na_spar_40813408",
+      "company": "SPAR",
+      "name": "Spar",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.416045,
+      "lon": 19.207266,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 40813408,
+      "brand": "Spar",
+      "operator": "",
+      "keywords": [
+        "Spar",
+        "SPAR n.a.",
+        "n.a."
+      ]
+    },
+    {
       "store_id": "spar_na_spar_78220327",
       "company": "SPAR",
       "name": "Spar",
@@ -19052,27 +19010,6 @@
       ]
     },
     {
-      "store_id": "spar_na_spar_343143954",
-      "company": "SPAR",
-      "name": "Spar",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.509805,
-      "lon": 18.003055,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 343143954,
-      "brand": "Spar",
-      "operator": "",
-      "keywords": [
-        "Spar",
-        "SPAR n.a.",
-        "n.a."
-      ]
-    },
-    {
       "store_id": "spar_na_spar_343633278",
       "company": "SPAR",
       "name": "Spar",
@@ -19316,27 +19253,6 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 546081355,
-      "brand": "Spar",
-      "operator": "",
-      "keywords": [
-        "Spar",
-        "SPAR n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "spar_na_spar_551511267",
-      "company": "SPAR",
-      "name": "Spar",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.73959,
-      "lon": 20.408527,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 551511267,
       "brand": "Spar",
       "operator": "",
       "keywords": [
@@ -20328,6 +20244,27 @@
       "operator": "",
       "keywords": [
         "Spar Express",
+        "SPAR n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "spar_na_spar_market_13324162280",
+      "company": "SPAR",
+      "name": "Spar Market",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 46.907047,
+      "lon": 18.057573,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 13324162280,
+      "brand": "Spar",
+      "operator": "",
+      "keywords": [
+        "Spar Market",
         "SPAR n.a.",
         "n.a."
       ]
