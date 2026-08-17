@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-08-10T08:15:32Z",
-  "status": "fallback_error",
+  "updated_at": "2026-08-17T07:37:16Z",
+  "status": "ok",
   "source": "google_trends",
   "method": "pytrends_unofficial_best_effort_search_intent_v2_one_payload_per_company",
   "geo": "HU",
   "timeframe": "today 12-m",
   "important_note": "A Google Trends keresési szándék mutató relatív keresési indexekből készül. Nem abszolút keresési darabszám, nem reprezentatív fogyasztói kutatás. A PyTrends nem hivatalos Google API, ezért rate limit és adatkimaradás előfordulhat. Egy céghez egyszerre legfeljebb 5 kulcsszó kerül lekérdezésre.",
-  "error": "No valid Google Trends search intent data returned.",
+  "error": null,
   "global_errors": [],
   "companies": [
     {
@@ -295,7 +295,7 @@
           "avg_period": null,
           "peak_period": null,
           "search_volatility": null,
-          "error": "ReadTimeout: HTTPSConnectionPool(host='trends.google.com', port=443): Read timed out. (read timeout=5)"
+          "error": "TooManyRequestsError: The request failed: Google returned a response with code 429"
         },
         {
           "intent_id": "store_access",
@@ -310,7 +310,7 @@
           "avg_period": null,
           "peak_period": null,
           "search_volatility": null,
-          "error": "ReadTimeout: HTTPSConnectionPool(host='trends.google.com', port=443): Read timed out. (read timeout=5)"
+          "error": "TooManyRequestsError: The request failed: Google returned a response with code 429"
         },
         {
           "intent_id": "price",
@@ -325,7 +325,7 @@
           "avg_period": null,
           "peak_period": null,
           "search_volatility": null,
-          "error": "ReadTimeout: HTTPSConnectionPool(host='trends.google.com', port=443): Read timed out. (read timeout=5)"
+          "error": "TooManyRequestsError: The request failed: Google returned a response with code 429"
         },
         {
           "intent_id": "jobs",
@@ -340,7 +340,7 @@
           "avg_period": null,
           "peak_period": null,
           "search_volatility": null,
-          "error": "ReadTimeout: HTTPSConnectionPool(host='trends.google.com', port=443): Read timed out. (read timeout=5)"
+          "error": "TooManyRequestsError: The request failed: Google returned a response with code 429"
         },
         {
           "intent_id": "digital",
@@ -355,10 +355,10 @@
           "avg_period": null,
           "peak_period": null,
           "search_volatility": null,
-          "error": "ReadTimeout: HTTPSConnectionPool(host='trends.google.com', port=443): Read timed out. (read timeout=5)"
+          "error": "TooManyRequestsError: The request failed: Google returned a response with code 429"
         }
       ],
-      "payload_error": "ReadTimeout: HTTPSConnectionPool(host='trends.google.com', port=443): Read timed out. (read timeout=5)",
+      "payload_error": "TooManyRequestsError: The request failed: Google returned a response with code 429",
       "interpretation": "SPAR esetében jelenleg nincs értelmezhető Google Trends keresési szándék adat."
     },
     {
@@ -452,90 +452,121 @@
     {
       "id": "auchan",
       "company": "Auchan",
-      "data_status": "no_data",
-      "dominant_intent": null,
-      "dominant_intent_label": null,
-      "dominant_intent_score": null,
-      "intent_share": [],
+      "data_status": "ok",
+      "dominant_intent": "store_access",
+      "dominant_intent_label": "Bolt / nyitvatartás",
+      "dominant_intent_score": 36,
+      "intent_share": [
+        {
+          "intent_id": "promotion",
+          "intent_label": "Akció / promóció",
+          "score": 10,
+          "share_pct": 11.6
+        },
+        {
+          "intent_id": "store_access",
+          "intent_label": "Bolt / nyitvatartás",
+          "score": 36,
+          "share_pct": 41.9
+        },
+        {
+          "intent_id": "price",
+          "intent_label": "Ár / drágulás",
+          "score": 10,
+          "share_pct": 11.6
+        },
+        {
+          "intent_id": "jobs",
+          "intent_label": "Állás / karrier",
+          "score": 11,
+          "share_pct": 12.8
+        },
+        {
+          "intent_id": "digital",
+          "intent_label": "Online / digitális",
+          "score": 19,
+          "share_pct": 22.1
+        }
+      ],
       "intents": [
         {
           "intent_id": "promotion",
           "intent_label": "Akció / promóció",
           "keyword": "Auchan akció",
-          "data_status": "no_data",
-          "intent_score": null,
-          "trend_direction": "n.a.",
-          "avg_last_7": null,
-          "avg_previous_7": null,
-          "avg_last_30": null,
-          "avg_period": null,
-          "peak_period": null,
-          "search_volatility": null,
-          "error": "TooManyRequestsError: The request failed: Google returned a response with code 429"
+          "data_status": "ok",
+          "intent_score": 10,
+          "trend_direction": "up",
+          "avg_last_7": 3.57,
+          "avg_previous_7": 3.0,
+          "avg_last_30": 2.57,
+          "avg_period": 3.0,
+          "peak_period": 8.0,
+          "search_volatility": 65,
+          "error": null
         },
         {
           "intent_id": "store_access",
           "intent_label": "Bolt / nyitvatartás",
           "keyword": "Auchan nyitvatartás",
-          "data_status": "no_data",
-          "intent_score": null,
-          "trend_direction": "n.a.",
-          "avg_last_7": null,
-          "avg_previous_7": null,
-          "avg_last_30": null,
-          "avg_period": null,
-          "peak_period": null,
-          "search_volatility": null,
-          "error": "TooManyRequestsError: The request failed: Google returned a response with code 429"
+          "data_status": "ok",
+          "intent_score": 36,
+          "trend_direction": "up",
+          "avg_last_7": 18.86,
+          "avg_previous_7": 16.71,
+          "avg_last_30": 15.9,
+          "avg_period": 18.43,
+          "peak_period": 100.0,
+          "search_volatility": 78,
+          "error": null
         },
         {
           "intent_id": "price",
           "intent_label": "Ár / drágulás",
           "keyword": "Auchan ár",
-          "data_status": "no_data",
-          "intent_score": null,
-          "trend_direction": "n.a.",
-          "avg_last_7": null,
-          "avg_previous_7": null,
-          "avg_last_30": null,
-          "avg_period": null,
-          "peak_period": null,
-          "search_volatility": null,
-          "error": "TooManyRequestsError: The request failed: Google returned a response with code 429"
+          "data_status": "ok",
+          "intent_score": 10,
+          "trend_direction": "stable",
+          "avg_last_7": 3.29,
+          "avg_previous_7": 3.14,
+          "avg_last_30": 3.53,
+          "avg_period": 3.81,
+          "peak_period": 10.0,
+          "search_volatility": 58,
+          "error": null
         },
         {
           "intent_id": "jobs",
           "intent_label": "Állás / karrier",
           "keyword": "Auchan állás",
-          "data_status": "no_data",
-          "intent_score": null,
-          "trend_direction": "n.a.",
-          "avg_last_7": null,
-          "avg_previous_7": null,
-          "avg_last_30": null,
-          "avg_period": null,
-          "peak_period": null,
-          "search_volatility": null,
-          "error": "TooManyRequestsError: The request failed: Google returned a response with code 429"
+          "data_status": "ok",
+          "intent_score": 11,
+          "trend_direction": "up",
+          "avg_last_7": 0.29,
+          "avg_previous_7": 0.0,
+          "avg_last_30": 0.07,
+          "avg_period": 0.36,
+          "peak_period": 4.0,
+          "search_volatility": 100,
+          "error": null
         },
         {
           "intent_id": "digital",
           "intent_label": "Online / digitális",
           "keyword": "Auchan online",
-          "data_status": "no_data",
-          "intent_score": null,
-          "trend_direction": "n.a.",
-          "avg_last_7": null,
-          "avg_previous_7": null,
-          "avg_last_30": null,
-          "avg_period": null,
-          "peak_period": null,
-          "search_volatility": null,
-          "error": "TooManyRequestsError: The request failed: Google returned a response with code 429"
+          "data_status": "ok",
+          "intent_score": 19,
+          "trend_direction": "stable",
+          "avg_last_7": 14.71,
+          "avg_previous_7": 16.0,
+          "avg_last_30": 15.2,
+          "avg_period": 17.49,
+          "peak_period": 33.0,
+          "search_volatility": 29,
+          "error": null
         }
       ],
-      "payload_error": "TooManyRequestsError: The request failed: Google returned a response with code 429",
-      "interpretation": "Auchan esetében jelenleg nincs értelmezhető Google Trends keresési szándék adat."
+      "payload_error": null,
+      "interpretation": "Auchan esetében a legerősebb keresési szándék: Bolt / nyitvatartás."
     }
   ]
 }
