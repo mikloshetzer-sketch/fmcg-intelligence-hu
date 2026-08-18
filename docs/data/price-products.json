@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-17T04:29:07Z",
+  "updated_at": "2026-08-18T04:22:13Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -472,7 +472,7 @@
       "category": "Húsáru",
       "expected_unit": "kg",
       "prices": {
-        "Tesco": 1203.0,
+        "Tesco": 1380.0,
         "Auchan": 1199.0,
         "SPAR": 1359.0,
         "Lidl": 1465.0,
@@ -483,8 +483,8 @@
         "Tesco": {
           "source_product_id": "2870240000000",
           "source_product_name": "16. SERTES COMB pultos QQ",
-          "amount": 1203.0,
-          "unit_amount": 1203.0,
+          "amount": 1380.0,
+          "unit_amount": 1380.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -549,14 +549,24 @@
       "category": "Húsáru",
       "expected_unit": "kg",
       "prices": {
+        "Penny": 1749.0,
         "SPAR": 1954.44,
         "Auchan": 1699.0,
         "Tesco": 1748.75,
         "ALDI": 1749.0,
-        "Lidl": 1749.0,
-        "Penny": 1749.0
+        "Lidl": 1749.0
       },
       "selected_products": {
+        "Penny": {
+          "source_product_id": "penny-10995",
+          "source_product_name": "Sertés darálthús 30% zsírtart.",
+          "amount": 1749.0,
+          "unit_amount": 1749.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "SPAR": {
           "source_product_id": "5999033810241",
           "source_product_name": "S-Budget sertés darálthús 900 g",
@@ -604,16 +614,6 @@
           "unit_amount": 1749.0,
           "unit": "kg",
           "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-10995",
-          "source_product_name": "Sertés darálthús 30% zsírtart.",
-          "amount": 1749.0,
-          "unit_amount": 1749.0,
-          "unit": "kg",
-          "unit_title": "csomag",
           "packaging": "1",
           "price_type": "NORMAL"
         }
@@ -703,13 +703,23 @@
       "category": "Húsáru",
       "expected_unit": "kg",
       "prices": {
+        "Tesco": 3000.0,
         "Lidl": 2999.0,
         "ALDI": 2999.0,
         "Penny": 2999.0,
-        "Tesco": 3000.0,
         "Auchan": 3089.0
       },
       "selected_products": {
+        "Tesco": {
+          "source_product_id": "5995885820407",
+          "source_product_name": "TESCO FRISS PULYAKMELLFILÉ 450 g QQ",
+          "amount": 1350.0,
+          "unit_amount": 3000.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "0.45",
+          "price_type": "NORMAL"
+        },
         "Lidl": {
           "source_product_id": "2884940000000",
           "source_product_name": "Pulykamell  kg",
@@ -738,16 +748,6 @@
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Tesco": {
-          "source_product_id": "5995885820407",
-          "source_product_name": "TESCO FRISS PULYAKMELLFILÉ 450 g QQ",
-          "amount": 1350.0,
-          "unit_amount": 3000.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "0.45",
           "price_type": "NORMAL"
         },
         "Auchan": {
@@ -849,8 +849,8 @@
         "Lidl": 599.0,
         "SPAR": 599.0,
         "ALDI": 599.0,
-        "Penny": 699.0,
         "Tesco": 699.0,
+        "Penny": 699.0,
         "Auchan": 749.0
       },
       "selected_products": {
@@ -884,9 +884,9 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Penny": {
-          "source_product_id": "penny-302",
-          "source_product_name": "Banán lédig kg",
+        "Tesco": {
+          "source_product_id": "2870100000000",
+          "source_product_name": "Banán lédig    ",
           "amount": 699.0,
           "unit_amount": 699.0,
           "unit": "kg",
@@ -894,9 +894,9 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Tesco": {
-          "source_product_id": "2870100000000",
-          "source_product_name": "Banán lédig    ",
+        "Penny": {
+          "source_product_id": "penny-302",
+          "source_product_name": "Banán lédig kg",
           "amount": 699.0,
           "unit_amount": 699.0,
           "unit": "kg",
@@ -1005,7 +1005,7 @@
         "Penny": 495.0,
         "ALDI": 599.0,
         "SPAR": 618.0,
-        "Tesco": 629.0
+        "Tesco": 623.0
       },
       "selected_products": {
         "Lidl": {
@@ -1061,8 +1061,8 @@
         "Tesco": {
           "source_product_id": "2809140000000",
           "source_product_name": "FÜRTÖS PARADICSOM LÉDIG QQ",
-          "amount": 629.0,
-          "unit_amount": 629.0,
+          "amount": 623.0,
+          "unit_amount": 623.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1082,7 +1082,7 @@
         "ALDI": 650.0,
         "Auchan": 670.0,
         "Tesco": 713.0,
-        "Penny": 749.0
+        "Penny": 826.67
       },
       "selected_products": {
         "Lidl": {
@@ -1136,13 +1136,13 @@
           "price_type": "NORMAL"
         },
         "Penny": {
-          "source_product_id": "penny-308",
-          "source_product_name": "Magyar tv paprika lédig kg",
-          "amount": 749.0,
-          "unit_amount": 749.0,
+          "source_product_id": "penny-375",
+          "source_product_name": "Hazai lecsópaprika 750gr",
+          "amount": 620.0,
+          "unit_amount": 826.67,
           "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
+          "unit_title": "csomag",
+          "packaging": "0.75",
           "price_type": "NORMAL"
         }
       },
@@ -1727,8 +1727,8 @@
       "expected_unit": "db",
       "prices": {
         "SPAR": 102.5,
-        "Tesco": 117.25,
         "Auchan": 42.0,
+        "Tesco": 117.25,
         "ALDI": 119.9,
         "Penny": 124.75
       },
@@ -1743,16 +1743,6 @@
           "packaging": "16",
           "price_type": "NORMAL"
         },
-        "Tesco": {
-          "source_product_id": "5059944692234",
-          "source_product_name": "SPRINGFORCE TOALETTPAPÍR 2 RÉT. 4 TEKERCS",
-          "amount": 469.0,
-          "unit_amount": 117.25,
-          "unit": "db",
-          "unit_title": "csomag",
-          "packaging": "4",
-          "price_type": "NORMAL"
-        },
         "Auchan": {
           "source_product_id": "3858893661160",
           "source_product_name": "Violeta Limited Edition toalettpapír 3 rétegű 95 lap 16 tekercs",
@@ -1761,6 +1751,16 @@
           "unit": "db",
           "unit_title": "csomag",
           "packaging": "16",
+          "price_type": "NORMAL"
+        },
+        "Tesco": {
+          "source_product_id": "5059944692234",
+          "source_product_name": "SPRINGFORCE TOALETTPAPÍR 2 RÉT. 4 TEKERCS",
+          "amount": 469.0,
+          "unit_amount": 117.25,
+          "unit": "db",
+          "unit_title": "csomag",
+          "packaging": "4",
           "price_type": "NORMAL"
         },
         "ALDI": {
