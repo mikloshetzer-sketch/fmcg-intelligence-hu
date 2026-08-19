@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-18T04:22:13Z",
+  "updated_at": "2026-08-19T04:23:42Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -549,21 +549,21 @@
       "category": "Húsáru",
       "expected_unit": "kg",
       "prices": {
-        "Penny": 1749.0,
+        "Lidl": 1749.0,
         "SPAR": 1954.44,
         "Auchan": 1699.0,
         "Tesco": 1748.75,
         "ALDI": 1749.0,
-        "Lidl": 1749.0
+        "Penny": 1749.0
       },
       "selected_products": {
-        "Penny": {
-          "source_product_id": "penny-10995",
-          "source_product_name": "Sertés darálthús 30% zsírtart.",
+        "Lidl": {
+          "source_product_id": "lidl-0005545",
+          "source_product_name": "Húsfarm XXL Sertés darálthús 30%,  1000g",
           "amount": 1749.0,
           "unit_amount": 1749.0,
           "unit": "kg",
-          "unit_title": "csomag",
+          "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
         },
@@ -607,13 +607,13 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Lidl": {
-          "source_product_id": "lidl-0005545",
-          "source_product_name": "Húsfarm XXL Sertés darálthús 30%,  1000g",
+        "Penny": {
+          "source_product_id": "penny-10995",
+          "source_product_name": "Sertés darálthús 30% zsírtart.",
           "amount": 1749.0,
           "unit_amount": 1749.0,
           "unit": "kg",
-          "unit_title": "kg",
+          "unit_title": "csomag",
           "packaging": "1",
           "price_type": "NORMAL"
         }
@@ -627,11 +627,11 @@
       "expected_unit": "kg",
       "prices": {
         "Tesco": 1846.0,
+        "SPAR": 2010.0,
         "Lidl": 1859.0,
         "Auchan": 1902.0,
         "ALDI": 1979.0,
-        "Penny": 1979.0,
-        "SPAR": 2010.0
+        "Penny": 1979.0
       },
       "selected_products": {
         "Tesco": {
@@ -639,6 +639,16 @@
           "source_product_name": "CSIRKE MELLFILÉ VÁKUMCS Ft/kg",
           "amount": 1846.0,
           "unit_amount": 1846.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "SPAR": {
+          "source_product_id": "5999550782526",
+          "source_product_name": "S-Budget friss csirkemellfilé",
+          "amount": 2010.0,
+          "unit_amount": 2010.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -681,16 +691,6 @@
           "unit_amount": 1979.0,
           "unit": "kg",
           "unit_title": "csomag",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "SPAR": {
-          "source_product_id": "5999550782526",
-          "source_product_name": "S-Budget friss csirkemellfilé",
-          "amount": 2010.0,
-          "unit_amount": 2010.0,
-          "unit": "kg",
-          "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
         }
@@ -846,7 +846,7 @@
       "category": "Gyümölcs",
       "expected_unit": "kg",
       "prices": {
-        "Lidl": 599.0,
+        "Lidl": 399.0,
         "SPAR": 599.0,
         "ALDI": 599.0,
         "Tesco": 699.0,
@@ -857,8 +857,8 @@
         "Lidl": {
           "source_product_id": "lidl-0080000",
           "source_product_name": "Banán kg",
-          "amount": 599.0,
-          "unit_amount": 599.0,
+          "amount": 399.0,
+          "unit_amount": 399.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1602,8 +1602,8 @@
           "price_type": "NORMAL"
         },
         "SPAR": {
-          "source_product_id": "5999138201463",
-          "source_product_name": "S-Budget Zafír szénsavmentes természetes ásványvíz 1,5 l",
+          "source_product_id": "5999138201159",
+          "source_product_name": "S-Budget Zafír szén-dioxiddal dúsított természetes ásványvíz 1,5 l",
           "amount": 99.0,
           "unit_amount": 66.0,
           "unit": "l",
@@ -1794,7 +1794,7 @@
       "prices": {
         "Auchan": 303.0,
         "SPAR": 449.67,
-        "Tesco": 499.5,
+        "Tesco": 464.5,
         "Penny": 624.75,
         "Lidl": 463.18,
         "ALDI": 497.38
@@ -1823,8 +1823,8 @@
         "Tesco": {
           "source_product_id": "5051007175326",
           "source_product_name": "TD SPRINGFORCE COLOUR WOOLWASH 25 WASHES 2 l",
-          "amount": 999.0,
-          "unit_amount": 499.5,
+          "amount": 929.0,
+          "unit_amount": 464.5,
           "unit": "l",
           "unit_title": "db",
           "packaging": "2",
