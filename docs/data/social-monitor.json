@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-08-21T13:25:12.758049+00:00",
+  "updated_at": "2026-08-21T19:05:56.596564+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-08-21T13:25:12.758049+00:00",
+    "updated_at": "2026-08-21T19:05:56.596564+00:00",
     "leader_social": "Lidl",
-    "leader_social_index": 33,
+    "leader_social_index": 29,
     "dominant_social_topic": "árak és akciók",
     "overall_social_sentiment": "neutral"
   },
@@ -15,44 +15,33 @@
       "company": "Lidl",
       "social_mentions": 6,
       "raw_social_mentions": 6,
-      "dashboard_mentions": 5,
-      "background_mentions": 1,
+      "dashboard_mentions": 6,
+      "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 5.5,
-      "hu_relevant_mentions": 5,
-      "social_index": 33,
+      "weighted_social_mentions": 6.0,
+      "hu_relevant_mentions": 6,
+      "social_index": 29,
       "social_sources": {
         "reddit": 0,
-        "youtube": 5,
-        "mastodon": 1
+        "youtube": 6,
+        "mastodon": 0
       },
       "raw_social_sources": {
         "reddit": 0,
-        "youtube": 5,
-        "mastodon": 1
+        "youtube": 6,
+        "mastodon": 0
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 5.5
-        },
-        {
-          "topic": "digitalizáció és önkiszolgálás",
-          "score": 0.5
+          "score": 6.0
         }
       ],
       "topic_sentiment": {
         "árak és akciók": {
           "positive": 0.0,
-          "neutral": 5.5,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
-        },
-        "digitalizáció és önkiszolgálás": {
-          "positive": 0.0,
-          "neutral": 0.5,
+          "neutral": 6.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -81,6 +70,19 @@
           "summary": "🇭🇺 LIDL Magyarország Akciós újság – 19. hét Érvényes 05.07-től 2026 TV verzió YouTube",
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBzYjBHSGFSS2k1ZUoydVpsWnBNd2RuSllXc2YzdEZITVRTZTA3NW8zdkFLYi1OYUZmX3FXRDdZM3ZnRTlEQmdOb1dSckpGeGNmSk1tVlV3?oc=5",
           "published": "Sun, 03 May 2026 19:52:23 GMT",
+          "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "4755f03efbcb8e9b",
+          "source": "youtube",
+          "company": "Lidl",
+          "title": "🇭🇺 LIDL Magyarország Akciós újság – 17. hét Érvényes 04.23-től 2026 TV verzió - YouTube",
+          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 17. hét Érvényes 04.23-től 2026 TV verzió YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA1STV5Mk5TLU9nQzd5ODBveTdiQjBuSzg5d3d5R2hoMXl5anBQcGo2cGVBR0FUenA3bGtEVkFNNkFpNTJwRW5mZ1kzOVFPQnZ3b1dRdzhB?oc=5",
+          "published": "Sun, 19 Apr 2026 19:01:16 GMT",
           "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
@@ -126,24 +128,10 @@
           "item_sentiment": "neutral"
         }
       ],
-      "background_items": [
-        {
-          "id": "23a2c7ca2326f092",
-          "source": "mastodon",
-          "company": "Lidl",
-          "title": "",
-          "summary": "Hallo Lidl, Eure Idee, durch die Hintertür Personal durch Selbstbedienungskassen abzubauen, scheint zumindest bei mir im Ort zu mißlingen. Gut so! Vielleicht ein anderer Denkansatz, falls ihr unbedingt Euren Gewinn optimieren wollt: Wie wäre es mit # inklusion ? Kann man steuerlich geltend machen, und läßt sich prima vermarkten. Das wäre wirklich einmal \"Lidl Plus\"😉 # Lidl # Scanandgo # HaltungZeigen # Rückratzeigen",
-          "url": "https://sueden.social/@toolboxxblogger/117087523320966524",
-          "published": "Thu, 13 Aug 2026 09:37:00 +0000",
-          "query": "#lidl",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "neutral"
-        }
-      ],
+      "background_items": [],
       "quality_summary": {
-        "dashboard_items": 5,
-        "background_items": 1,
+        "dashboard_items": 6,
+        "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
