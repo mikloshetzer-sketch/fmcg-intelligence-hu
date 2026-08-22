@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-22T02:03:48.785132+00:00",
+  "updated_at": "2026-08-22T13:17:02.199268+00:00",
   "version": "store-reputation-layer-v1.1-fast",
   "scope": "Hungarian FMCG store-level reputation signal",
   "method_note": "Áruházi reputációs jelzőréteg. Nyílt Google News RSS keresések alapján dolgozik. Nem Google Reviews scraping és nem teljes vásárlói értékelési adatbázis.",
@@ -7,8 +7,8 @@
     {
       "company": "Auchan",
       "stores": 5,
-      "store_mentions": 3,
-      "review_signal_index": 9.0,
+      "store_mentions": 2,
+      "review_signal_index": 6.0,
       "negative_stores": 0,
       "positive_stores": 0,
       "dominant_store_topic": "árak és akciók"
@@ -59,38 +59,12 @@
       "area": "Soroksár",
       "lat": 47.4001,
       "lon": 19.1582,
-      "store_mentions": 1,
-      "review_signal_index": 15,
+      "store_mentions": 0,
+      "review_signal_index": 0,
       "review_sentiment": "neutral",
-      "dominant_store_topic": "kassza és várakozás",
-      "top_store_topics": [
-        {
-          "topic": "kassza és várakozás",
-          "score": 1
-        },
-        {
-          "topic": "árak és akciók",
-          "score": 1
-        },
-        {
-          "topic": "tisztaság és bolti élmény",
-          "score": 1
-        }
-      ],
-      "latest_items": [
-        {
-          "id": "08d8210bc35f1e41",
-          "source": "google_news_rss",
-          "store_id": "auchan_soroksar",
-          "company": "Auchan",
-          "store_name": "Auchan Soroksár",
-          "title": "Díjat nyert az Auchan soroksári áruháza - Store Insider",
-          "summary": "Díjat nyert az Auchan soroksári áruháza Store Insider",
-          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBtd1Q3enk3TG5fcjlGM05MU1hjZ2Q0ZTFWR2g0YUszenJFeUpYMEwwUGFKN3U4a21EUmZlLUN3dVIyQlVpN2htYlI3UTF6a1puejdwT2tGZ1p5aThWWjlPc1h2Qy02aFBFV3pCa0dOczVHZHU1ajQ0?oc=5",
-          "published": "Wed, 13 May 2026 07:00:00 GMT",
-          "query": "\"Auchan Soroksár\" vélemény"
-        }
-      ],
+      "dominant_store_topic": "nincs elég adat",
+      "top_store_topics": [],
+      "latest_items": [],
       "method_note": "Áruházi reputációs jelzőréteg nyílt Google News RSS keresésekből. Nem Google Reviews scraping, nem teljes vásárlói review-adatbázis.",
       "errors": []
     },
