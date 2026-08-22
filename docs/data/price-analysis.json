@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-08-21T04:25:58Z",
+  "updated_at": "2026-08-22T04:19:14Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "method": "product-level price leadership and spread analysis",
   "cheapest_count": [
     {
       "company": "Auchan",
-      "count": 8
+      "count": 9
     },
     {
       "company": "Lidl",
@@ -14,7 +14,7 @@
     },
     {
       "company": "SPAR",
-      "count": 5
+      "count": 4
     },
     {
       "company": "Tesco",
@@ -58,8 +58,8 @@
   "value_scores": [
     {
       "company": "Auchan",
-      "price_index": 94,
-      "value_score": 106,
+      "price_index": 93,
+      "value_score": 107,
       "index_coverage": 25
     },
     {
@@ -244,37 +244,37 @@
     },
     {
       "category": "Húsáru",
-      "leader": "Tesco",
-      "leader_index": 98,
+      "leader": "Auchan",
+      "leader_index": 96,
       "ranking": [
+        {
+          "company": "Auchan",
+          "category_index": 96,
+          "coverage": 4
+        },
         {
           "company": "Tesco",
           "category_index": 98,
           "coverage": 4
         },
         {
-          "company": "Auchan",
-          "category_index": 99,
-          "coverage": 4
-        },
-        {
           "company": "Lidl",
-          "category_index": 99,
+          "category_index": 100,
           "coverage": 4
         },
         {
           "company": "ALDI",
-          "category_index": 101,
+          "category_index": 102,
           "coverage": 4
         },
         {
           "company": "Penny",
-          "category_index": 101,
+          "category_index": 102,
           "coverage": 4
         },
         {
           "company": "SPAR",
-          "category_index": 103,
+          "category_index": 104,
           "coverage": 3
         }
       ]
@@ -525,6 +525,18 @@
       "coverage": 6
     },
     {
+      "product": "Sertéscomb",
+      "category": "Húsáru",
+      "cheapest_company": "Auchan",
+      "cheapest_price": 1199.0,
+      "most_expensive_company": "Lidl",
+      "most_expensive_price": 1465.0,
+      "average_price": 1387.83,
+      "spread_pct": 22.19,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 6
+    },
+    {
       "product": "Ásványvíz",
       "category": "Ital",
       "cheapest_company": "Tesco",
@@ -617,18 +629,6 @@
       "most_expensive_price": 205.0,
       "average_price": 195.92,
       "spread_pct": 8.18,
-      "competition_intensity": "közepes árverseny",
-      "coverage": 6
-    },
-    {
-      "product": "Sertéscomb",
-      "category": "Húsáru",
-      "cheapest_company": "SPAR",
-      "cheapest_price": 1359.0,
-      "most_expensive_company": "Lidl",
-      "most_expensive_price": 1465.0,
-      "average_price": 1419.83,
-      "spread_pct": 7.8,
       "competition_intensity": "közepes árverseny",
       "coverage": 6
     },
@@ -772,6 +772,13 @@
       "coverage": 6
     },
     {
+      "product": "Sertéscomb",
+      "category": "Húsáru",
+      "spread_pct": 22.19,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 6
+    },
+    {
       "product": "Ásványvíz",
       "category": "Ital",
       "spread_pct": 19.7,
@@ -824,13 +831,6 @@
       "product": "Vöröshagyma",
       "category": "Zöldség",
       "spread_pct": 8.18,
-      "competition_intensity": "közepes árverseny",
-      "coverage": 6
-    },
-    {
-      "product": "Sertéscomb",
-      "category": "Húsáru",
-      "spread_pct": 7.8,
       "competition_intensity": "közepes árverseny",
       "coverage": 6
     },

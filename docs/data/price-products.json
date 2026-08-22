@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-21T04:25:58Z",
+  "updated_at": "2026-08-22T04:19:14Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -472,14 +472,24 @@
       "category": "Húsáru",
       "expected_unit": "kg",
       "prices": {
+        "Auchan": 1199.0,
         "SPAR": 1359.0,
-        "Tesco": 1380.0,
-        "Auchan": 1385.0,
+        "Tesco": 1374.0,
         "Lidl": 1465.0,
         "ALDI": 1465.0,
         "Penny": 1465.0
       },
       "selected_products": {
+        "Auchan": {
+          "source_product_id": "2173290000000",
+          "source_product_name": "Süldő Sertés Comb bőrös, csontos védőgázas csomagolásban Ft/kg",
+          "amount": 1199.0,
+          "unit_amount": 1199.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "SPAR": {
           "source_product_id": "spar-343064004",
           "source_product_name": "REGNUM sertéscomb csont nélkül lédig",
@@ -493,18 +503,8 @@
         "Tesco": {
           "source_product_id": "2870240000000",
           "source_product_name": "16. SERTES COMB pultos QQ",
-          "amount": 1380.0,
-          "unit_amount": 1380.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Auchan": {
-          "source_product_id": "2156690000009",
-          "source_product_name": "Sertés Comb csont nélkül, vákuumcsomagolásban Ft/kg",
-          "amount": 1385.0,
-          "unit_amount": 1385.0,
+          "amount": 1374.0,
+          "unit_amount": 1374.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
