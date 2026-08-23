@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-22T04:19:14Z",
+  "updated_at": "2026-08-23T04:25:25Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -707,7 +707,8 @@
         "Lidl": 2999.0,
         "ALDI": 2999.0,
         "Penny": 2999.0,
-        "Auchan": 3089.0
+        "Auchan": 3089.0,
+        "SPAR": 3117.78
       },
       "selected_products": {
         "Tesco": {
@@ -759,9 +760,19 @@
           "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
+        },
+        "SPAR": {
+          "source_product_id": "5995885813959",
+          "source_product_name": "Gallio pulykamellfilé 450 g",
+          "amount": 1403.0,
+          "unit_amount": 3117.78,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "0.45",
+          "price_type": "NORMAL"
         }
       },
-      "coverage": 5
+      "coverage": 6
     },
     {
       "id": "28",
@@ -1734,8 +1745,8 @@
       },
       "selected_products": {
         "SPAR": {
-          "source_product_id": "5998648704372",
-          "source_product_name": "Ooops! Excellence Sensitive toalettpapír 3 rétegű 16 tekercs",
+          "source_product_id": "5998648706192",
+          "source_product_name": "Ooops! Exc  Kam 16t 3r TP  ",
           "amount": 1690.0,
           "unit_amount": 105.63,
           "unit": "db",

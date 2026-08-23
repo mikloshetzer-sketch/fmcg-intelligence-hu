@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-22T04:19:14Z",
+  "updated_at": "2026-08-23T04:25:25Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "method": "product-level price leadership and spread analysis",
@@ -40,11 +40,11 @@
     },
     {
       "company": "SPAR",
-      "count": 5
+      "count": 6
     },
     {
       "company": "Auchan",
-      "count": 4
+      "count": 3
     },
     {
       "company": "Lidl",
@@ -78,7 +78,7 @@
       "company": "SPAR",
       "price_index": 101,
       "value_score": 99,
-      "index_coverage": 23
+      "index_coverage": 24
     },
     {
       "company": "Tesco",
@@ -264,18 +264,18 @@
         },
         {
           "company": "ALDI",
-          "category_index": 102,
+          "category_index": 101,
           "coverage": 4
         },
         {
           "company": "Penny",
-          "category_index": 102,
+          "category_index": 101,
           "coverage": 4
         },
         {
           "company": "SPAR",
           "category_index": 104,
-          "coverage": 3
+          "coverage": 4
         }
       ]
     },
@@ -649,12 +649,12 @@
       "category": "Húsáru",
       "cheapest_company": "Lidl",
       "cheapest_price": 2999.0,
-      "most_expensive_company": "Auchan",
-      "most_expensive_price": 3089.0,
-      "average_price": 3017.2,
-      "spread_pct": 3.0,
+      "most_expensive_company": "SPAR",
+      "most_expensive_price": 3117.78,
+      "average_price": 3033.96,
+      "spread_pct": 3.96,
       "competition_intensity": "erős árverseny",
-      "coverage": 5
+      "coverage": 6
     },
     {
       "product": "Étolaj",
@@ -844,9 +844,9 @@
     {
       "product": "Pulykamellfilé",
       "category": "Húsáru",
-      "spread_pct": 3.0,
+      "spread_pct": 3.96,
       "competition_intensity": "erős árverseny",
-      "coverage": 5
+      "coverage": 6
     },
     {
       "product": "Étolaj",
