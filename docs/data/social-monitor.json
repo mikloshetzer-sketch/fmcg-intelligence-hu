@@ -1,47 +1,47 @@
 {
-  "updated_at": "2026-08-23T18:56:30.950220+00:00",
+  "updated_at": "2026-08-24T02:06:37.264373+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-08-23T18:56:30.950220+00:00",
-    "leader_social": "Tesco",
-    "leader_social_index": 34,
+    "updated_at": "2026-08-24T02:06:37.264373+00:00",
+    "leader_social": "Lidl",
+    "leader_social_index": 29,
     "dominant_social_topic": "árak és akciók",
     "overall_social_sentiment": "neutral"
   },
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 5,
-      "raw_social_mentions": 5,
-      "dashboard_mentions": 5,
+      "social_mentions": 7,
+      "raw_social_mentions": 7,
+      "dashboard_mentions": 7,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 5.0,
-      "hu_relevant_mentions": 5,
+      "weighted_social_mentions": 7.0,
+      "hu_relevant_mentions": 7,
       "social_index": 29,
       "social_sources": {
         "reddit": 0,
-        "youtube": 5,
+        "youtube": 7,
         "mastodon": 0
       },
       "raw_social_sources": {
         "reddit": 0,
-        "youtube": 5,
+        "youtube": 7,
         "mastodon": 0
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 5.0
+          "score": 7.0
         }
       ],
       "topic_sentiment": {
         "árak és akciók": {
           "positive": 0.0,
-          "neutral": 5.0,
+          "neutral": 7.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -49,6 +49,19 @@
       },
       "social_sentiment": "neutral",
       "latest_items": [
+        {
+          "id": "8e02755e824b8ffa",
+          "source": "youtube",
+          "company": "Lidl",
+          "title": "🇭🇺 LIDL Magyarország Akciós újság – 23. hét Érvényes 06.04 - 06.10 2026 TV verzió - YouTube",
+          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 23. hét Érvényes 06.04 - 06.10 2026 TV verzió YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFB2TUZkVlNJb3dzTzZZNndOcXVGQU9vcndDanNiclh2YlctWHNucnhZMVdlZS13VGFpelVGdmNBMDJCLUxpbXczeFdVeFNaQ3RDT0VtNmJn?oc=5",
+          "published": "Sat, 30 May 2026 23:22:33 GMT",
+          "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
         {
           "id": "3e372b35caccd494",
           "source": "youtube",
@@ -70,6 +83,19 @@
           "summary": "🇭🇺 LIDL Magyarország Akciós újság – 19. hét Érvényes 05.07-től 2026 TV verzió YouTube",
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBzYjBHSGFSS2k1ZUoydVpsWnBNd2RuSllXc2YzdEZITVRTZTA3NW8zdkFLYi1OYUZmX3FXRDdZM3ZnRTlEQmdOb1dSckpGeGNmSk1tVlV3?oc=5",
           "published": "Sun, 03 May 2026 19:52:23 GMT",
+          "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "4755f03efbcb8e9b",
+          "source": "youtube",
+          "company": "Lidl",
+          "title": "🇭🇺 LIDL Magyarország Akciós újság – 17. hét Érvényes 04.23-től 2026 TV verzió - YouTube",
+          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 17. hét Érvényes 04.23-től 2026 TV verzió YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA1STV5Mk5TLU9nQzd5ODBveTdiQjBuSzg5d3d5R2hoMXl5anBQcGo2cGVBR0FUenA3bGtEVkFNNkFpNTJwRW5mZ1kzOVFPQnZ3b1dRdzhB?oc=5",
+          "published": "Sun, 19 Apr 2026 19:01:16 GMT",
           "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
@@ -117,7 +143,7 @@
       ],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 5,
+        "dashboard_items": 7,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
@@ -164,21 +190,21 @@
     },
     {
       "company": "Tesco",
-      "social_mentions": 11,
-      "raw_social_mentions": 21,
-      "dashboard_mentions": 3,
-      "background_mentions": 8,
-      "discarded_mentions": 10,
-      "weighted_social_mentions": 7.0,
-      "hu_relevant_mentions": 3,
-      "social_index": 34,
+      "social_mentions": 1,
+      "raw_social_mentions": 1,
+      "dashboard_mentions": 1,
+      "background_mentions": 0,
+      "discarded_mentions": 0,
+      "weighted_social_mentions": 1.0,
+      "hu_relevant_mentions": 1,
+      "social_index": 16,
       "social_sources": {
-        "reddit": 11,
+        "reddit": 1,
         "youtube": 0,
         "mastodon": 0
       },
       "raw_social_sources": {
-        "reddit": 21,
+        "reddit": 1,
         "youtube": 0,
         "mastodon": 0
       },
@@ -186,51 +212,22 @@
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 7.5
-        },
-        {
-          "topic": "digitalizáció és önkiszolgálás",
-          "score": 5.5
-        },
-        {
-          "topic": "termék és minőség",
-          "score": 2.0
-        },
-        {
-          "topic": "vásárlói panaszok",
           "score": 1.0
         },
         {
           "topic": "bolti élmény",
+          "score": 1.0
+        },
+        {
+          "topic": "ellátási lánc és logisztika",
           "score": 1.0
         }
       ],
       "topic_sentiment": {
         "árak és akciók": {
           "positive": 0.0,
-          "neutral": 6.0,
+          "neutral": 1.0,
           "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
-        },
-        "termék és minőség": {
-          "positive": 0.0,
-          "neutral": 1.5,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
-        },
-        "vásárlói panaszok": {
-          "positive": 0.0,
-          "neutral": 0.0,
-          "negative": 1.0,
-          "mixed": 0.0,
-          "dominant": "negative"
-        },
-        "digitalizáció és önkiszolgálás": {
-          "positive": 0.0,
-          "neutral": 2.0,
-          "negative": 1.0,
           "mixed": 0.0,
           "dominant": "neutral"
         },
@@ -240,160 +237,36 @@
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
+        },
+        "ellátási lánc és logisztika": {
+          "positive": 0.0,
+          "neutral": 1.0,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
         }
       },
-      "social_sentiment": "negative",
+      "social_sentiment": "neutral",
       "latest_items": [
         {
-          "id": "57c2df01646a553d",
+          "id": "db40612cff1fa5ee",
           "source": "reddit",
           "company": "Tesco",
-          "title": "I've been recording prices at 13 UK supermarkets every night for a year. In the last 90 days, 2,080 products got a price rise right before going \"on offer\".",
-          "summary": "For the past year I've been recording shelf prices at 13 UK supermarkets every night (Tesco, Sainsbury's, Asda, Morrisons, Aldi, Iceland, Co-op, Waitrose, Ocado, B&M and a few more) as a side project. Went digging through the price histories recently and some of what turned up felt worth sharing here. In the last 90 days, 2,080 products had their base price go up and then went &quot;on offer&quot; against the new higher price within a few weeks, with the offer price no better than what the thing",
-          "url": "https://www.reddit.com/r/UKFrugal/comments/1vlds57/ive_been_recording_prices_at_13_uk_supermarkets/",
-          "published": "2026-08-11T10:34:41+00:00",
-          "query": "Tesco Clubcard",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "30f097bab991c382",
-          "source": "reddit",
-          "company": "Tesco",
-          "title": "What a scam PAYG has become",
-          "summary": "What a scam Tesco Mobile is. Having lived abroad for many years, I return to the UK occasionally and will buy a SIM to get service while I'm here. Usually, this means I choose a package, buy X amount of data and voice, and off I go. Tesco's PAYG Essentials package purports to be that but is actually a scam. You supposedly buy a package, but actually all you get is credit until you jump through all the hoops to &quot;attach&quot; the PAYG package to your purchase. If that doesnt happen for some r",
-          "url": "https://www.reddit.com/r/Tescomobile/comments/1ve08il/what_a_scam_payg_has_become/",
-          "published": "2026-08-03T01:59:34+00:00",
-          "query": "Tesco Clubcard",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "negative"
-        },
-        {
-          "id": "1d15eb716321a4fb",
-          "source": "reddit",
-          "company": "Tesco",
-          "title": "Might be a stupid question about clubcard",
-          "summary": "If i bought alcohol in store using my own card but my parents tesco clubcard, will they be able to see what i bought. Im not under 18, but my parents are strict af and very religious. And nothing here or on the internet is giving me a clear answer. Also one other thing, i accidentally used my debit card instead of clubcard first but she then refunded me clubcard points after i scanned it after paying. Will this show? Ik im panicking but i really would appreciate anyone helping. Thanks submitted ",
-          "url": "https://www.reddit.com/r/tesco/comments/1v9261v/might_be_a_stupid_question_about_clubcard/",
-          "published": "2026-07-28T15:42:58+00:00",
-          "query": "Tesco Clubcard",
+          "title": "A Tescóban nem lesz hűtött ital, és az elektromos autókat sem lehet tölteni",
+          "summary": "A Tesco a kormányzati felhíváshoz csatlakozva energiatakarékossági intézkedéseket vezet be áruházaiban az energiaellátás biztonságának támogatása érdekében – közölte a cég a Facebook-oldalán. A Tesco Magyarország jelezte, hogy ennek részeként egyes területeken átmenetileg alacsonyabb fényerővel működtetik világítási rendszereiket, beszüntetik az italhűtő automaták működését, illetve lezárják a parkolóban található elektromos töltőket is. Elkezdődött az egymásra licitálás, kérdés ki lesz a követk",
+          "url": "https://www.reddit.com/r/rohadtmelegvan/comments/1vcrhf7/a_tescóban_nem_lesz_hűtött_ital_és_az_elektromos/",
+          "published": "2026-08-01T16:15:26+00:00",
+          "query": "Tesco Magyarország",
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
           "item_sentiment": "neutral"
         }
       ],
-      "background_items": [
-        {
-          "id": "b86ae07199326c8d",
-          "source": "reddit",
-          "company": "Tesco",
-          "title": "£3.85 Tesco Clubcard",
-          "summary": "submitted by /u/Embarrassed-Sky1634 to r/RateMyMealDeal [link] [comments]",
-          "url": "https://www.reddit.com/r/RateMyMealDeal/comments/1vudkgj/385_tesco_clubcard/",
-          "published": "2026-08-21T11:21:33+00:00",
-          "query": "Tesco Clubcard",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "b940216d8593c1d5",
-          "source": "reddit",
-          "company": "Tesco",
-          "title": "Tesco launches KPop Demon Hunters inspired takeover of The Café - and Kids can Eat for Free",
-          "summary": "KPop Demon Hunters is coming to Tesco this summer with a takeover of the supermarket’s Cafés. Six of The Café’s across the country, will undergo a total KPop Demon Hunters makeover with Coventry, St Helens, Watford, York, Ashby De La Zouch and Hatfield going all out with redesigned entranceways, counters and furniture, and new selfie stations, KPop Demon Hunters activities and Korean inspired menu add ons. A further 135 of The Cafés will offer the Korean-inspired menu add ons, selfie stations an",
-          "url": "https://www.reddit.com/r/KpopDemonhunters/comments/1vs8ik0/tesco_launches_kpop_demon_hunters_inspired/",
-          "published": "2026-08-19T01:36:54+00:00",
-          "query": "Tesco Clubcard",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "9d828b1b783688c3",
-          "source": "reddit",
-          "company": "Tesco",
-          "title": "Tesco clubcard for poland people",
-          "summary": "submitted by /u/Wisnia_s2 to r/czech [link] [comments]",
-          "url": "https://www.reddit.com/r/czech/comments/1vk25b1/tesco_clubcard_for_poland_people/",
-          "published": "2026-08-09T21:41:10+00:00",
-          "query": "Tesco Clubcard",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "5c8c82877ab20d48",
-          "source": "reddit",
-          "company": "Tesco",
-          "title": "Win a holiday with Tesco Clubcard confusion",
-          "summary": "Along with my receipt today I got a &quot;congratulations, you're in the free prize draw... 40 holidays to be won...&quot; The T&C link is for general Tesco T&Cs, not Holiday draw T&Cs. I want to know if there is a money substitute as I don't do holidays and have no-one to give it to. Can anyone direct me to this information ? I'm in England btw. 😁 submitted by /u/e650man to r/tesco [link] [comments]",
-          "url": "https://www.reddit.com/r/tesco/comments/1vhx5g9/win_a_holiday_with_tesco_clubcard_confusion/",
-          "published": "2026-08-07T10:44:08+00:00",
-          "query": "Tesco Clubcard",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "53f4981327fe88ee",
-          "source": "reddit",
-          "company": "Tesco",
-          "title": "Tesco Clubcard Challenges is back today and you can get up to £50 worth of points",
-          "summary": "submitted by /u/thesun to r/tesco [link] [comments]",
-          "url": "https://www.reddit.com/r/tesco/comments/1vehgr1/tesco_clubcard_challenges_is_back_today_and_you/",
-          "published": "2026-08-03T15:57:56+00:00",
-          "query": "Tesco Clubcard",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "367793fbf7eabe0a",
-          "source": "reddit",
-          "company": "Tesco",
-          "title": "Haven’t got a Tesco Clubcard. Use the QR Code to receive discounts on clubcard products.",
-          "summary": "submitted by /u/Fresh-Information-64 to u/Fresh-Information-64 [link] [comments]",
-          "url": "https://www.reddit.com/r/u_Fresh-Information-64/comments/1vef4jo/havent_got_a_tesco_clubcard_use_the_qr_code_to/",
-          "published": "2026-08-03T14:32:15+00:00",
-          "query": "Tesco Clubcard",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "940e58b64ad225a2",
-          "source": "reddit",
-          "company": "Tesco",
-          "title": "Tesco Clubcard",
-          "summary": "submitted by /u/DiamondMaster07 to r/maygar [link] [comments]",
-          "url": "https://www.reddit.com/r/maygar/comments/1vdb8x7/tesco_clubcard/",
-          "published": "2026-08-02T07:12:05+00:00",
-          "query": "Tesco Clubcard",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "aa43dc51c694b26a",
-          "source": "reddit",
-          "company": "Tesco",
-          "title": "tescoclubcard",
-          "summary": "Doing an experiment to see how much tesco club card would max out at? Is there a limit? We shall find out maybe? I will post a picture of a club card for anyone to scan at the till or self checkout. [link]",
-          "url": "https://www.reddit.com/r/tescoclubcard/",
-          "published": "",
-          "query": "Tesco Clubcard",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
-          "item_sentiment": "neutral"
-        }
-      ],
+      "background_items": [],
       "quality_summary": {
-        "dashboard_items": 3,
-        "background_items": 8,
-        "discarded_items": 10,
+        "dashboard_items": 1,
+        "background_items": 0,
+        "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
       },
