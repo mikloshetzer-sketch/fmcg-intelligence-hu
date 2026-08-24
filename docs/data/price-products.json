@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-23T04:25:25Z",
+  "updated_at": "2026-08-24T04:32:49Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -549,21 +549,21 @@
       "category": "Húsáru",
       "expected_unit": "kg",
       "prices": {
-        "Lidl": 1749.0,
+        "Penny": 1749.0,
         "SPAR": 1954.44,
         "Auchan": 1699.0,
         "Tesco": 1748.75,
         "ALDI": 1749.0,
-        "Penny": 1749.0
+        "Lidl": 1749.0
       },
       "selected_products": {
-        "Lidl": {
-          "source_product_id": "lidl-0005545",
-          "source_product_name": "Húsfarm XXL Sertés darálthús 30%,  1000g",
+        "Penny": {
+          "source_product_id": "penny-10995",
+          "source_product_name": "Sertés darálthús 30% zsírtart.",
           "amount": 1749.0,
           "unit_amount": 1749.0,
           "unit": "kg",
-          "unit_title": "kg",
+          "unit_title": "csomag",
           "packaging": "1",
           "price_type": "NORMAL"
         },
@@ -607,13 +607,13 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Penny": {
-          "source_product_id": "penny-10995",
-          "source_product_name": "Sertés darálthús 30% zsírtart.",
+        "Lidl": {
+          "source_product_id": "lidl-0005545",
+          "source_product_name": "Húsfarm XXL Sertés darálthús 30%,  1000g",
           "amount": 1749.0,
           "unit_amount": 1749.0,
           "unit": "kg",
-          "unit_title": "csomag",
+          "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
         }
@@ -935,11 +935,11 @@
       "expected_unit": "kg",
       "prices": {
         "Auchan": 849.0,
+        "Penny": 1199.0,
         "Tesco": 999.0,
         "ALDI": 999.0,
         "Lidl": 999.0,
-        "SPAR": 1198.67,
-        "Penny": 1199.0
+        "SPAR": 1198.67
       },
       "selected_products": {
         "Auchan": {
@@ -947,6 +947,16 @@
           "source_product_name": "Citrom Ft/kg",
           "amount": 849.0,
           "unit_amount": 849.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Penny": {
+          "source_product_id": "penny-306",
+          "source_product_name": "Citrom lédig kg",
+          "amount": 1199.0,
+          "unit_amount": 1199.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -990,16 +1000,6 @@
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "0.75",
-          "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-306",
-          "source_product_name": "Citrom lédig kg",
-          "amount": 1199.0,
-          "unit_amount": 1199.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
           "price_type": "NORMAL"
         }
       },
@@ -1522,7 +1522,7 @@
         "Lidl": 290.0,
         "SPAR": 290.0,
         "ALDI": 290.0,
-        "Tesco": 304.0
+        "Tesco": 329.0
       },
       "selected_products": {
         "Auchan": {
@@ -1578,8 +1578,8 @@
         "Tesco": {
           "source_product_id": "5051007099431",
           "source_product_name": "Tesco kristálycukor 1 kg QQ",
-          "amount": 304.0,
-          "unit_amount": 304.0,
+          "amount": 329.0,
+          "unit_amount": 329.0,
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "1",
@@ -1594,14 +1594,24 @@
       "category": "Ital",
       "expected_unit": "l",
       "prices": {
+        "ALDI": 46.0,
         "Tesco": 66.0,
         "SPAR": 66.0,
-        "ALDI": 66.0,
         "Lidl": 66.0,
         "Penny": 66.0,
         "Auchan": 79.0
       },
       "selected_products": {
+        "ALDI": {
+          "source_product_id": "aldi-735607",
+          "source_product_name": "Aquitas ásv.enyhe 1,5 l",
+          "amount": 69.0,
+          "unit_amount": 46.0,
+          "unit": "l",
+          "unit_title": "db",
+          "packaging": "1.5",
+          "price_type": "NORMAL"
+        },
         "Tesco": {
           "source_product_id": "5051007167444",
           "source_product_name": "Tesco 1,5 l sava  ",
@@ -1615,16 +1625,6 @@
         "SPAR": {
           "source_product_id": "5999138201159",
           "source_product_name": "S-Budget Zafír szén-dioxiddal dúsított természetes ásványvíz 1,5 l",
-          "amount": 99.0,
-          "unit_amount": 66.0,
-          "unit": "l",
-          "unit_title": "db",
-          "packaging": "1.5",
-          "price_type": "NORMAL"
-        },
-        "ALDI": {
-          "source_product_id": "aldi-735607",
-          "source_product_name": "Aquitas ásv.enyhe 1,5 l",
           "amount": 99.0,
           "unit_amount": 66.0,
           "unit": "l",
@@ -1739,14 +1739,14 @@
       "prices": {
         "SPAR": 105.63,
         "Auchan": 42.0,
-        "Tesco": 117.25,
+        "Tesco": 136.219,
         "ALDI": 119.9,
         "Penny": 124.75
       },
       "selected_products": {
         "SPAR": {
-          "source_product_id": "5998648706192",
-          "source_product_name": "Ooops! Exc  Kam 16t 3r TP  ",
+          "source_product_id": "5998648704372",
+          "source_product_name": "Ooops! Excellence Sensitive toalettpapír 3 rétegű 16 tekercs",
           "amount": 1690.0,
           "unit_amount": 105.63,
           "unit": "db",
@@ -1765,13 +1765,13 @@
           "price_type": "NORMAL"
         },
         "Tesco": {
-          "source_product_id": "5059944692234",
-          "source_product_name": "SPRINGFORCE TOALETTPAPÍR 2 RÉT. 4 TEKERCS",
-          "amount": 469.0,
-          "unit_amount": 117.25,
+          "source_product_id": "5998648704341",
+          "source_product_name": "OOOPS WC PAP.32T EK.3R ",
+          "amount": 4359.0,
+          "unit_amount": 136.219,
           "unit": "db",
           "unit_title": "csomag",
-          "packaging": "4",
+          "packaging": "32",
           "price_type": "NORMAL"
         },
         "ALDI": {
