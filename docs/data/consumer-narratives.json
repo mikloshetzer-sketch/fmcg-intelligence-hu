@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-17T07:56:50Z",
+  "updated_at": "2026-08-24T08:01:33Z",
   "status": "ok",
   "source": "local_fmcg_osint_layers",
   "method": "keyword_weighted_consumer_narrative_engine_v1",
@@ -254,19 +254,19 @@
       "id": "spar",
       "company": "SPAR",
       "confidence": "high",
-      "dominant_narrative": "employment_attention",
-      "dominant_narrative_label": "Munkaerő / állás",
+      "dominant_narrative": null,
+      "dominant_narrative_label": null,
       "scores": {
         "promotion_attention": 0,
         "price_sensitivity": 0,
-        "employment_attention": 100,
+        "employment_attention": 0,
         "customer_experience": 0,
         "digital_attention": 0
       },
       "raw_scores": {
         "promotion_attention": 0.0,
         "price_sensitivity": 0.0,
-        "employment_attention": 1.1,
+        "employment_attention": 0.0,
         "customer_experience": 0.0,
         "digital_attention": 0.0
       },
@@ -288,7 +288,7 @@
         "linkedin": {
           "promotion_attention": 0.0,
           "price_sensitivity": 0.0,
-          "employment_attention": 1.1,
+          "employment_attention": 0.0,
           "customer_experience": 0.0,
           "digital_attention": 0.0
         },
@@ -306,7 +306,7 @@
         "linkedin_texts": 1,
         "jobs_texts": 0
       },
-      "interpretation": "SPAR esetében a legerősebb fogyasztói narratíva: Munkaerő / állás."
+      "interpretation": "SPAR esetében jelenleg nincs elegendő fogyasztói narratíva-jel."
     },
     {
       "id": "tesco",
@@ -359,7 +359,7 @@
         }
       },
       "evidence_counts": {
-        "news_texts": 7,
+        "news_texts": 9,
         "social_texts": 1,
         "linkedin_texts": 1,
         "jobs_texts": 0
@@ -370,19 +370,19 @@
       "id": "auchan",
       "company": "Auchan",
       "confidence": "high",
-      "dominant_narrative": "employment_attention",
-      "dominant_narrative_label": "Munkaerő / állás",
+      "dominant_narrative": null,
+      "dominant_narrative_label": null,
       "scores": {
         "promotion_attention": 0,
         "price_sensitivity": 0,
-        "employment_attention": 100,
+        "employment_attention": 0,
         "customer_experience": 0,
         "digital_attention": 0
       },
       "raw_scores": {
         "promotion_attention": 0.0,
         "price_sensitivity": 0.0,
-        "employment_attention": 1.1,
+        "employment_attention": 0.0,
         "customer_experience": 0.0,
         "digital_attention": 0.0
       },
@@ -404,7 +404,7 @@
         "linkedin": {
           "promotion_attention": 0.0,
           "price_sensitivity": 0.0,
-          "employment_attention": 1.1,
+          "employment_attention": 0.0,
           "customer_experience": 0.0,
           "digital_attention": 0.0
         },
@@ -417,12 +417,12 @@
         }
       },
       "evidence_counts": {
-        "news_texts": 5,
+        "news_texts": 3,
         "social_texts": 1,
         "linkedin_texts": 1,
         "jobs_texts": 0
       },
-      "interpretation": "Auchan esetében a legerősebb fogyasztói narratíva: Munkaerő / állás."
+      "interpretation": "Auchan esetében jelenleg nincs elegendő fogyasztói narratíva-jel."
     }
   ]
 }
