@@ -1,18 +1,18 @@
 {
-  "updated_at": "2026-08-17T04:01:38.081131+00:00",
+  "updated_at": "2026-08-24T04:04:47.498874+00:00",
   "status": "ok",
   "version": "store-network-hu-v2.0-non-lidl-osm",
   "source": "openstreetmap_overpass_non_lidl_plus_fallback_plus_optional_overrides",
-  "store_count": 1156,
+  "store_count": 1160,
   "company_totals": {
     "ALDI": 188,
     "Auchan": 25,
-    "Penny": 241,
-    "SPAR": 520,
+    "Penny": 243,
+    "SPAR": 522,
     "Tesco": 182
   },
   "source_totals": {
-    "openstreetmap_overpass": 1156
+    "openstreetmap_overpass": 1160
   },
   "companies": [
     {
@@ -25,7 +25,7 @@
         "Aldi"
       ],
       "notes": [
-        "exact_brand=188 via https://overpass-api.de/api/interpreter",
+        "exact_brand_error=502 Server Error: Bad Gateway for url: https://overpass.kumi.systems/api/interpreter",
         "regex_brand=188 via https://overpass-api.de/api/interpreter"
       ]
     },
@@ -33,7 +33,7 @@
       "company": "SPAR",
       "source": "openstreetmap_overpass",
       "status": "ok",
-      "stores": 520,
+      "stores": 522,
       "brand_values": [
         "SPAR",
         "Spar",
@@ -41,8 +41,8 @@
         "Interspar"
       ],
       "notes": [
-        "exact_brand=520 via https://overpass.kumi.systems/api/interpreter",
-        "regex_brand_error=504 Server Error: Gateway Timeout for url: https://overpass.kumi.systems/api/interpreter"
+        "exact_brand_error=500 Server Error: Internal Server Error for url: https://overpass.kumi.systems/api/interpreter",
+        "regex_brand=522 via https://overpass-api.de/api/interpreter"
       ]
     },
     {
@@ -55,7 +55,7 @@
         "TESCO"
       ],
       "notes": [
-        "exact_brand_error=504 Server Error: Gateway Timeout for url: https://overpass.kumi.systems/api/interpreter",
+        "exact_brand=182 via https://overpass-api.de/api/interpreter",
         "regex_brand=182 via https://overpass-api.de/api/interpreter"
       ]
     },
@@ -70,14 +70,14 @@
       ],
       "notes": [
         "exact_brand=25 via https://overpass-api.de/api/interpreter",
-        "regex_brand=25 via https://overpass-api.de/api/interpreter"
+        "regex_brand_error=500 Server Error: Internal Server Error for url: https://overpass.kumi.systems/api/interpreter"
       ]
     },
     {
       "company": "Penny",
       "source": "openstreetmap_overpass",
       "status": "ok",
-      "stores": 241,
+      "stores": 243,
       "brand_values": [
         "Penny",
         "PENNY",
@@ -85,8 +85,8 @@
         "PENNY Market"
       ],
       "notes": [
-        "exact_brand=241 via https://overpass.kumi.systems/api/interpreter",
-        "regex_brand_error=HTTPSConnectionPool(host='overpass.kumi.systems', port=443): Read timed out. (read timeout=150)"
+        "exact_brand=243 via https://overpass-api.de/api/interpreter",
+        "regex_brand=243 via https://overpass-api.de/api/interpreter"
       ]
     }
   ],
