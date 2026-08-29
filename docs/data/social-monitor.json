@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-08-29T07:15:11.337299+00:00",
+  "updated_at": "2026-08-29T16:49:29.631347+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-08-29T07:15:11.337299+00:00",
+    "updated_at": "2026-08-29T16:49:29.631347+00:00",
     "leader_social": "Lidl",
     "leader_social_index": 16,
     "dominant_social_topic": "árak és akciók",
@@ -13,72 +13,59 @@
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 2,
-      "raw_social_mentions": 2,
-      "dashboard_mentions": 2,
+      "social_mentions": 1,
+      "raw_social_mentions": 1,
+      "dashboard_mentions": 1,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 2.0,
-      "hu_relevant_mentions": 2,
+      "weighted_social_mentions": 1.0,
+      "hu_relevant_mentions": 1,
       "social_index": 16,
       "social_sources": {
         "reddit": 0,
-        "youtube": 2,
+        "youtube": 1,
         "mastodon": 0
       },
       "raw_social_sources": {
         "reddit": 0,
-        "youtube": 2,
+        "youtube": 1,
         "mastodon": 0
       },
-      "dominant_social_topic": "árak és akciók",
+      "dominant_social_topic": "munkaerő és foglalkoztatás",
       "top_social_topics": [
         {
-          "topic": "árak és akciók",
-          "score": 2.0
+          "topic": "munkaerő és foglalkoztatás",
+          "score": 1.0
         }
       ],
       "topic_sentiment": {
-        "árak és akciók": {
-          "positive": 0.0,
-          "neutral": 2.0,
+        "munkaerő és foglalkoztatás": {
+          "positive": 1.0,
+          "neutral": 0.0,
           "negative": 0.0,
           "mixed": 0.0,
-          "dominant": "neutral"
+          "dominant": "positive"
         }
       },
-      "social_sentiment": "neutral",
+      "social_sentiment": "positive",
       "latest_items": [
         {
-          "id": "4630a8d40e9ec298",
+          "id": "272e62a59061627c",
           "source": "youtube",
           "company": "Lidl",
-          "title": "🇭🇺 LIDL Magyarország Akciós újság – 26. hét Érvényes 06.25 - 07.01 2026 - YouTube",
-          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 26. hét Érvényes 06.25 - 07.01 2026 YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9wVGQ2SHYwaFI4NHN4d1kzSEp5Q2xMaXREbEpjNENEc1dzaDhWekY5azU1YU1SMVdtR1FQdmpieDhka24yb0xqLVpVblZKUVVTTXhReVdB?oc=5",
-          "published": "Sun, 21 Jun 2026 00:20:24 GMT",
+          "title": "Van egy jobb ajánlatunk! – Nálunk dolgozni igazán megéri! | Lidl Magyarország - YouTube",
+          "summary": "Van egy jobb ajánlatunk! – Nálunk dolgozni igazán megéri! | Lidl Magyarország YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE82TGlzekU4OEFGbVFvTjNDa1oxX0tuc3hCU2lxZjRPcXdVWFI0Rm5VOEJRWVpCamk5bzBib3ZNbmp6ekc4bkVsZGRta3ZVWlpqQVMxdFhB?oc=5",
+          "published": "Fri, 29 May 2026 06:52:15 GMT",
           "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "e43b52ba20843594",
-          "source": "youtube",
-          "company": "Lidl",
-          "title": "🇭🇺 LIDL Magyarország Akciós újság – 19. hét Érvényes 05.07-től 2026 TV verzió - YouTube",
-          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 19. hét Érvényes 05.07-től 2026 TV verzió YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBzYjBHSGFSS2k1ZUoydVpsWnBNd2RuSllXc2YzdEZITVRTZTA3NW8zdkFLYi1OYUZmX3FXRDdZM3ZnRTlEQmdOb1dSckpGeGNmSk1tVlV3?oc=5",
-          "published": "Sun, 03 May 2026 19:52:23 GMT",
-          "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
+          "item_sentiment": "positive"
         }
       ],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 2,
+        "dashboard_items": 1,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
