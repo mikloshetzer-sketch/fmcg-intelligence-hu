@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-28T15:43:26Z",
+  "updated_at": "2026-08-29T10:30:26Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "method": "product-level price leadership and spread analysis",
@@ -10,11 +10,11 @@
     },
     {
       "company": "Lidl",
-      "count": 5
+      "count": 6
     },
     {
       "company": "Penny",
-      "count": 4
+      "count": 3
     },
     {
       "company": "Tesco",
@@ -35,12 +35,12 @@
       "count": 11
     },
     {
-      "company": "Auchan",
-      "count": 6
+      "company": "Penny",
+      "count": 7
     },
     {
-      "company": "Penny",
-      "count": 6
+      "company": "Auchan",
+      "count": 5
     },
     {
       "company": "ALDI",
@@ -64,8 +64,8 @@
     },
     {
       "company": "Lidl",
-      "price_index": 97,
-      "value_score": 103,
+      "price_index": 95,
+      "value_score": 105,
       "index_coverage": 24
     },
     {
@@ -76,9 +76,9 @@
     },
     {
       "company": "Penny",
-      "price_index": 103,
-      "value_score": 97,
-      "index_coverage": 24
+      "price_index": 104,
+      "value_score": 96,
+      "index_coverage": 25
     },
     {
       "company": "Tesco",
@@ -219,26 +219,26 @@
     },
     {
       "category": "Húsáru",
-      "leader": "Auchan",
-      "leader_index": 96,
+      "leader": "Penny",
+      "leader_index": 95,
       "ranking": [
+        {
+          "company": "Penny",
+          "category_index": 95,
+          "coverage": 4
+        },
         {
           "company": "Auchan",
           "category_index": 96,
           "coverage": 4
         },
         {
-          "company": "Penny",
-          "category_index": 97,
+          "company": "Lidl",
+          "category_index": 102,
           "coverage": 4
         },
         {
           "company": "Tesco",
-          "category_index": 101,
-          "coverage": 4
-        },
-        {
-          "company": "Lidl",
           "category_index": 102,
           "coverage": 4
         },
@@ -316,11 +316,11 @@
     {
       "category": "Zöldség",
       "leader": "Lidl",
-      "leader_index": 92,
+      "leader_index": 83,
       "ranking": [
         {
           "company": "Lidl",
-          "category_index": 92,
+          "category_index": 83,
           "coverage": 4
         },
         {
@@ -335,8 +335,8 @@
         },
         {
           "company": "Penny",
-          "category_index": 109,
-          "coverage": 3
+          "category_index": 116,
+          "coverage": 4
         }
       ]
     }
@@ -379,6 +379,18 @@
       "coverage": 4
     },
     {
+      "product": "Vöröshagyma",
+      "category": "Zöldség",
+      "cheapest_company": "Lidl",
+      "cheapest_price": 119.0,
+      "most_expensive_company": "Tesco",
+      "most_expensive_price": 199.0,
+      "average_price": 165.25,
+      "spread_pct": 67.23,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 4
+    },
+    {
       "product": "Alma",
       "category": "Gyümölcs",
       "cheapest_company": "Lidl",
@@ -403,6 +415,18 @@
       "coverage": 4
     },
     {
+      "product": "Étkezési burgonya",
+      "category": "Zöldség",
+      "cheapest_company": "Tesco",
+      "cheapest_price": 197.5,
+      "most_expensive_company": "Penny",
+      "most_expensive_price": 299.0,
+      "average_price": 228.62,
+      "spread_pct": 51.39,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 4
+    },
+    {
       "product": "Vaj",
       "category": "Tejtermék",
       "cheapest_company": "ALDI",
@@ -423,18 +447,6 @@
       "most_expensive_price": 1199.0,
       "average_price": 997.75,
       "spread_pct": 33.97,
-      "competition_intensity": "nagy árszórás",
-      "coverage": 4
-    },
-    {
-      "product": "Vöröshagyma",
-      "category": "Zöldség",
-      "cheapest_company": "Penny",
-      "cheapest_price": 149.0,
-      "most_expensive_company": "Tesco",
-      "most_expensive_price": 199.0,
-      "average_price": 179.0,
-      "spread_pct": 33.56,
       "competition_intensity": "nagy árszórás",
       "coverage": 4
     },
@@ -553,22 +565,10 @@
       "cheapest_price": 1775.0,
       "most_expensive_company": "ALDI",
       "most_expensive_price": 1979.0,
-      "average_price": 1884.0,
+      "average_price": 1872.2,
       "spread_pct": 11.49,
       "competition_intensity": "közepes árverseny",
       "coverage": 5
-    },
-    {
-      "product": "Étkezési burgonya",
-      "category": "Zöldség",
-      "cheapest_company": "Tesco",
-      "cheapest_price": 197.5,
-      "most_expensive_company": "Auchan",
-      "most_expensive_price": 220.0,
-      "average_price": 205.17,
-      "spread_pct": 11.39,
-      "competition_intensity": "közepes árverseny",
-      "coverage": 3
     },
     {
       "product": "Trappista sajt",
@@ -666,6 +666,13 @@
       "coverage": 4
     },
     {
+      "product": "Vöröshagyma",
+      "category": "Zöldség",
+      "spread_pct": 67.23,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 4
+    },
+    {
       "product": "Alma",
       "category": "Gyümölcs",
       "spread_pct": 66.89,
@@ -680,6 +687,13 @@
       "coverage": 4
     },
     {
+      "product": "Étkezési burgonya",
+      "category": "Zöldség",
+      "spread_pct": 51.39,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 4
+    },
+    {
       "product": "Vaj",
       "category": "Tejtermék",
       "spread_pct": 36.39,
@@ -690,13 +704,6 @@
       "product": "Citrom",
       "category": "Gyümölcs",
       "spread_pct": 33.97,
-      "competition_intensity": "nagy árszórás",
-      "coverage": 4
-    },
-    {
-      "product": "Vöröshagyma",
-      "category": "Zöldség",
-      "spread_pct": 33.56,
       "competition_intensity": "nagy árszórás",
       "coverage": 4
     },
@@ -769,13 +776,6 @@
       "spread_pct": 11.49,
       "competition_intensity": "közepes árverseny",
       "coverage": 5
-    },
-    {
-      "product": "Étkezési burgonya",
-      "category": "Zöldség",
-      "spread_pct": 11.39,
-      "competition_intensity": "közepes árverseny",
-      "coverage": 3
     },
     {
       "product": "Trappista sajt",

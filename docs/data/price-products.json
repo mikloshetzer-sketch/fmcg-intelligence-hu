@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-28T15:43:26Z",
+  "updated_at": "2026-08-29T10:30:26Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -539,10 +539,10 @@
       "expected_unit": "kg",
       "prices": {
         "Auchan": 1775.0,
-        "Tesco": 1828.0,
+        "Penny": 1789.0,
         "Lidl": 1859.0,
-        "ALDI": 1979.0,
-        "Penny": 1979.0
+        "Tesco": 1959.0,
+        "ALDI": 1979.0
       },
       "selected_products": {
         "Auchan": {
@@ -555,13 +555,13 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Tesco": {
-          "source_product_id": "2824940000000",
-          "source_product_name": "TESCO CSIRKE MELLFILÉ VAC Ft/kg QQ",
-          "amount": 1828.0,
-          "unit_amount": 1828.0,
+        "Penny": {
+          "source_product_id": "penny-10248",
+          "source_product_name": "Friss csirkemellfilé kg",
+          "amount": 1789.0,
+          "unit_amount": 1789.0,
           "unit": "kg",
-          "unit_title": "kg",
+          "unit_title": "csomag",
           "packaging": "1",
           "price_type": "NORMAL"
         },
@@ -575,6 +575,16 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
+        "Tesco": {
+          "source_product_id": "2856090000000",
+          "source_product_name": "CSIRKE MELLFILÉ VÁKUMCS Ft/kg",
+          "amount": 1959.0,
+          "unit_amount": 1959.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "ALDI": {
           "source_product_id": "aldi-320859",
           "source_product_name": "Húsmester csirkemellfilé kg vákuumcsomagolt",
@@ -582,16 +592,6 @@
           "unit_amount": 1979.0,
           "unit": "kg",
           "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-10248",
-          "source_product_name": "Friss csirkemellfilé kg",
-          "amount": 1979.0,
-          "unit_amount": 1979.0,
-          "unit": "kg",
-          "unit_title": "csomag",
           "packaging": "1",
           "price_type": "NORMAL"
         }
@@ -945,12 +945,22 @@
       "category": "Zöldség",
       "expected_unit": "kg",
       "prices": {
+        "Lidl": 119.0,
         "Penny": 149.0,
-        "Lidl": 174.0,
         "Auchan": 194.0,
         "Tesco": 199.0
       },
       "selected_products": {
+        "Lidl": {
+          "source_product_id": "lidl-0083325",
+          "source_product_name": "Vöröshagyma lédig",
+          "amount": 119.0,
+          "unit_amount": 119.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "Penny": {
           "source_product_id": "penny-518",
           "source_product_name": "Vöröshagyma lédig kg",
@@ -959,16 +969,6 @@
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Lidl": {
-          "source_product_id": "lidl-0083333",
-          "source_product_name": "Vöröshagyma 2kg",
-          "amount": 348.0,
-          "unit_amount": 174.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "2",
           "price_type": "NORMAL"
         },
         "Auchan": {
@@ -1002,6 +1002,7 @@
       "prices": {
         "Tesco": 197.5,
         "Lidl": 198.0,
+        "Penny": 299.0,
         "Auchan": 220.0
       },
       "selected_products": {
@@ -1025,6 +1026,16 @@
           "packaging": "2",
           "price_type": "NORMAL"
         },
+        "Penny": {
+          "source_product_id": "penny-555",
+          "source_product_name": "Új piros burgonya lédig kg",
+          "amount": 299.0,
+          "unit_amount": 299.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "Auchan": {
           "source_product_id": "5999863235061",
           "source_product_name": "Piros burgonya 5 kg",
@@ -1036,7 +1047,7 @@
           "price_type": "NORMAL"
         }
       },
-      "coverage": 3
+      "coverage": 4
     },
     {
       "id": "50",
@@ -1129,7 +1140,7 @@
         },
         "Auchan": {
           "source_product_id": "5998017555239",
-          "source_product_name": "Kunsági Éden 100% finomított napraforgó-étolaj 1 l",
+          "source_product_name": "Kunsági éden étolaj 1l",
           "amount": 749.0,
           "unit_amount": 749.0,
           "unit": "l",
@@ -1251,7 +1262,7 @@
       "selected_products": {
         "Auchan": {
           "source_product_id": "4008671013004",
-          "source_product_name": "Sweet Family kristálycukor 1 kg",
+          "source_product_name": "Sweet Family Kristálycukor 1kg",
           "amount": 289.0,
           "unit_amount": 289.0,
           "unit": "kg",
@@ -1261,7 +1272,7 @@
         },
         "ALDI": {
           "source_product_id": "4008671013004",
-          "source_product_name": "Sweet Family kristálycukor 1 kg",
+          "source_product_name": "Sweet Family Kristálycukor 1kg",
           "amount": 290.0,
           "unit_amount": 290.0,
           "unit": "kg",
@@ -1271,7 +1282,7 @@
         },
         "Penny": {
           "source_product_id": "5998571525020",
-          "source_product_name": "Diamant kristálycukor",
+          "source_product_name": "Diamant Kristálycukor 1kg",
           "amount": 289.0,
           "unit_amount": 289.0,
           "unit": "kg",
@@ -1281,7 +1292,7 @@
         },
         "Lidl": {
           "source_product_id": "5998571525020",
-          "source_product_name": "Diamant kristálycukor",
+          "source_product_name": "Diamant Kristálycukor 1kg",
           "amount": 290.0,
           "unit_amount": 290.0,
           "unit": "kg",
