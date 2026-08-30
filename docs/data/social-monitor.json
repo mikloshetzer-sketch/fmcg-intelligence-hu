@@ -1,124 +1,83 @@
 {
-  "updated_at": "2026-08-30T05:38:57.649133+00:00",
+  "updated_at": "2026-08-30T12:07:00.569822+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-08-30T05:38:57.649133+00:00",
+    "updated_at": "2026-08-30T12:07:00.569822+00:00",
     "leader_social": "Lidl",
-    "leader_social_index": 29,
+    "leader_social_index": 16,
     "dominant_social_topic": "árak és akciók",
     "overall_social_sentiment": "neutral"
   },
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 5,
-      "raw_social_mentions": 5,
-      "dashboard_mentions": 5,
-      "background_mentions": 0,
+      "social_mentions": 1,
+      "raw_social_mentions": 1,
+      "dashboard_mentions": 0,
+      "background_mentions": 1,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 5.0,
-      "hu_relevant_mentions": 5,
-      "social_index": 29,
+      "weighted_social_mentions": 0.5,
+      "hu_relevant_mentions": 0,
+      "social_index": 16,
       "social_sources": {
-        "reddit": 5,
+        "reddit": 0,
         "youtube": 0,
-        "mastodon": 0
+        "mastodon": 1
       },
       "raw_social_sources": {
-        "reddit": 5,
+        "reddit": 0,
         "youtube": 0,
-        "mastodon": 0
+        "mastodon": 1
       },
-      "dominant_social_topic": "árak és akciók",
+      "dominant_social_topic": "bolti élmény",
       "top_social_topics": [
         {
-          "topic": "árak és akciók",
-          "score": 5.0
+          "topic": "bolti élmény",
+          "score": 0.5
+        },
+        {
+          "topic": "digitalizáció és önkiszolgálás",
+          "score": 0.5
         }
       ],
       "topic_sentiment": {
-        "árak és akciók": {
+        "bolti élmény": {
           "positive": 0.0,
-          "neutral": 5.0,
+          "neutral": 0.5,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        },
+        "digitalizáció és önkiszolgálás": {
+          "positive": 0.0,
+          "neutral": 0.5,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
         }
       },
       "social_sentiment": "neutral",
-      "latest_items": [
+      "latest_items": [],
+      "background_items": [
         {
-          "id": "a1dac98c85dff980",
-          "source": "reddit",
+          "id": "8c122b5f6068d216",
+          "source": "mastodon",
           "company": "Lidl",
-          "title": "Lidl akciós újság (09.03.)",
-          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
-          "url": "https://www.reddit.com/r/lidlaldihun/comments/1w1dtif/lidl_akciós_újság_0903/",
-          "published": "2026-08-29T05:31:38+00:00",
-          "query": "Lidl akció",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "207f5b10f2e480aa",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Lidl akciós újság (08.27.)",
-          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
-          "url": "https://www.reddit.com/r/lidlaldihun/comments/1vv4i04/lidl_akciós_újság_0827/",
-          "published": "2026-08-22T06:17:11+00:00",
-          "query": "Lidl akció",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "0507868d9640b088",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Lidl akciós újság (08.19.)",
-          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
-          "url": "https://www.reddit.com/r/lidlaldihun/comments/1vp2nlt/lidl_akciós_újság_0819/",
-          "published": "2026-08-15T13:17:11+00:00",
-          "query": "Lidl akció",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "2993e5082bf8951c",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Lidl akciós újság (08.13.)",
-          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
-          "url": "https://www.reddit.com/r/lidlaldihun/comments/1vituk7/lidl_akciós_újság_0813/",
-          "published": "2026-08-08T11:43:16+00:00",
-          "query": "Lidl akció",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "6d9779c01081c0ce",
-          "source": "reddit",
-          "company": "Lidl",
-          "title": "Lidl akciós újság (08.06.)",
-          "summary": "submitted by /u/E_ri_ka to r/lidlaldihun [link] [comments]",
-          "url": "https://www.reddit.com/r/lidlaldihun/comments/1vcbhj1/lidl_akciós_újság_0806/",
-          "published": "2026-08-01T02:59:51+00:00",
-          "query": "Lidl akció",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
+          "title": "",
+          "summary": "Un compte à rebours sur les parkings Lidl polonais (AutoPlus) : https://www. autoplus.fr/actualite/lidl-au- dela-de-90-minutes-le-stationnement-est-desormais-payant-1463443.html # Autoplus # Lidl # Automobile",
+          "url": "https://piaille.fr/@Millennium/117183992928870281",
+          "published": "Sun, 30 Aug 2026 10:30:29 +0000",
+          "query": "#lidl",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
           "item_sentiment": "neutral"
         }
       ],
-      "background_items": [],
       "quality_summary": {
-        "dashboard_items": 5,
-        "background_items": 0,
+        "dashboard_items": 0,
+        "background_items": 1,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
