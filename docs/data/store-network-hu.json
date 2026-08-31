@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-24T04:04:47.498874+00:00",
+  "updated_at": "2026-08-31T09:43:49.380012+00:00",
   "version": "store-network-hu-v2.0-non-lidl-osm",
   "scope": "Hungarian FMCG store network from OSM + optional overrides",
   "method_note": "Ez a verzió Lidl nélkül építi a bolthálózatot. ALDI, SPAR, Tesco, Auchan és Penny OSM/Overpass alapján frissül. Ha egy láncra 0 találat jön, a script megtartja a korábbi store-network-hu.json adott láncra vonatkozó adatait. Lidl külön, saját üzletlista alapján kerül majd be.",
@@ -1167,8 +1167,8 @@
       "area": "Budapest",
       "region": "Közép-Magyarország",
       "address": "1173 Budapest, Pesti út 2",
-      "lat": 47.485561,
-      "lon": 19.225541,
+      "lat": 47.485562,
+      "lon": 19.225551,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 420276817,
@@ -3974,27 +3974,6 @@
       ]
     },
     {
-      "store_id": "auchan_budapest_auchan_24318035",
-      "company": "Auchan",
-      "name": "Auchan",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1239 Budapest, Bevásárló utca 2",
-      "lat": 47.419185,
-      "lon": 19.157755,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 24318035,
-      "brand": "Auchan",
-      "operator": "",
-      "keywords": [
-        "Auchan",
-        "Auchan Budapest",
-        "1239 Budapest, Bevásárló utca 2"
-      ]
-    },
-    {
       "store_id": "auchan_budapest_auchan_26836958",
       "company": "Auchan",
       "name": "Auchan",
@@ -4055,6 +4034,27 @@
         "Auchan",
         "Auchan Budapest",
         "1117 Budapest, Hunyadi János út 19"
+      ]
+    },
+    {
+      "store_id": "auchan_budapest_auchan_1553523729",
+      "company": "Auchan",
+      "name": "Auchan",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1239 Budapest, Bevásárló utca 2",
+      "lat": 47.41928,
+      "lon": 19.157972,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 1553523729,
+      "brand": "Auchan",
+      "operator": "",
+      "keywords": [
+        "Auchan",
+        "Auchan Budapest",
+        "1239 Budapest, Bevásárló utca 2"
       ]
     },
     {
@@ -9483,8 +9483,8 @@
       "area": "n.a.",
       "region": "n.a.",
       "address": "n.a.",
-      "lat": 47.475127,
-      "lon": 20.599572,
+      "lat": 47.475135,
+      "lon": 20.59956,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 688138756,
@@ -9620,27 +9620,6 @@
         "Spar",
         "SPAR Adony",
         "2457 Adony, Rákóczi Ferenc utca 18"
-      ]
-    },
-    {
-      "store_id": "spar_alsopahok_spar_203093392",
-      "company": "SPAR",
-      "name": "Spar",
-      "city": "Alsópáhok",
-      "area": "Alsópáhok",
-      "region": "n.a.",
-      "address": "8394 Alsópáhok, Hévizi utca 18",
-      "lat": 46.77818,
-      "lon": 17.183522,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 203093392,
-      "brand": "Spar",
-      "operator": "",
-      "keywords": [
-        "Spar",
-        "SPAR Alsópáhok",
-        "8394 Alsópáhok, Hévizi utca 18"
       ]
     },
     {
@@ -12213,7 +12192,7 @@
       "area": "Budapest",
       "region": "Közép-Magyarország",
       "address": "1137 Budapest, Jászai Mari tér 5",
-      "lat": 47.514118,
+      "lat": 47.514082,
       "lon": 19.048365,
       "source": "openstreetmap_overpass",
       "osm_type": "node",
@@ -13211,6 +13190,27 @@
         "Spar",
         "SPAR Herend",
         "8440 Herend, Vasút utca 1/c"
+      ]
+    },
+    {
+      "store_id": "spar_heviz_spar_203093392",
+      "company": "SPAR",
+      "name": "Spar",
+      "city": "Hévíz",
+      "area": "Hévíz",
+      "region": "n.a.",
+      "address": "8380 Hévíz, Hévizi utca 18",
+      "lat": 46.77818,
+      "lon": 17.183522,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 203093392,
+      "brand": "Spar",
+      "operator": "",
+      "keywords": [
+        "Spar",
+        "SPAR Hévíz",
+        "8380 Hévíz, Hévizi utca 18"
       ]
     },
     {
