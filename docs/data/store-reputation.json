@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-01T05:39:06.930195+00:00",
+  "updated_at": "2026-09-01T16:54:00.949568+00:00",
   "version": "store-reputation-layer-v1.1-fast",
   "scope": "Hungarian FMCG store-level reputation signal",
   "method_note": "Áruházi reputációs jelzőréteg. Nyílt Google News RSS keresések alapján dolgozik. Nem Google Reviews scraping és nem teljes vásárlói értékelési adatbázis.",
@@ -7,7 +7,7 @@
     {
       "company": "Auchan",
       "stores": 5,
-      "store_mentions": 4,
+      "store_mentions": 3,
       "review_signal_index": 9.0,
       "negative_stores": 0,
       "positive_stores": 0,
@@ -59,18 +59,18 @@
       "area": "Soroksár",
       "lat": 47.4001,
       "lon": 19.1582,
-      "store_mentions": 2,
+      "store_mentions": 1,
       "review_signal_index": 15,
       "review_sentiment": "neutral",
       "dominant_store_topic": "kassza és várakozás",
       "top_store_topics": [
         {
           "topic": "kassza és várakozás",
-          "score": 2
+          "score": 1
         },
         {
           "topic": "árak és akciók",
-          "score": 2
+          "score": 1
         },
         {
           "topic": "tisztaság és bolti élmény",
@@ -78,18 +78,6 @@
         }
       ],
       "latest_items": [
-        {
-          "id": "a8d963401ff699fb",
-          "source": "google_news_rss",
-          "store_id": "auchan_soroksar",
-          "company": "Auchan",
-          "store_name": "Auchan Soroksár",
-          "title": "Retail excellence díjat nyert az Auchan soroksári áruháza - Trade magazin",
-          "summary": "Retail excellence díjat nyert az Auchan soroksári áruháza Trade magazin",
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPRmFycW1zeE9WX0xjYUlRWHY0bnpYTk4xcGNNYm4wNTY4ZDhoeWRFOENfc2NNODVIYW94WXJUZkU5djBtOVZ6dTVtckdJZHZOSlRfUzBmVHNsVldEdk0xS3BPOUN0WDVJX0pZYjV1VjdYTkU5WS1JYXRYWnNUNDFZbFZPcW5vaFg1emxydlFR?oc=5",
-          "published": "Thu, 14 May 2026 07:00:00 GMT",
-          "query": "\"Auchan Soroksár\" vélemény"
-        },
         {
           "id": "08d8210bc35f1e41",
           "source": "google_news_rss",
