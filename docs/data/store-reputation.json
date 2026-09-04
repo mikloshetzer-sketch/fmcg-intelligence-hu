@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-03T16:40:25.828166+00:00",
+  "updated_at": "2026-09-04T05:04:44.858123+00:00",
   "version": "store-reputation-layer-v1.1-fast",
   "scope": "Hungarian FMCG store-level reputation signal",
   "method_note": "Áruházi reputációs jelzőréteg. Nyílt Google News RSS keresések alapján dolgozik. Nem Google Reviews scraping és nem teljes vásárlói értékelési adatbázis.",
@@ -7,11 +7,11 @@
     {
       "company": "Auchan",
       "stores": 5,
-      "store_mentions": 2,
-      "review_signal_index": 6.0,
+      "store_mentions": 3,
+      "review_signal_index": 9.0,
       "negative_stores": 0,
       "positive_stores": 0,
-      "dominant_store_topic": "kassza és várakozás"
+      "dominant_store_topic": "árak és akciók"
     },
     {
       "company": "Lidl",
@@ -136,12 +136,30 @@
       "area": "Maglód",
       "lat": 47.4462,
       "lon": 19.3528,
-      "store_mentions": 0,
-      "review_signal_index": 0,
+      "store_mentions": 1,
+      "review_signal_index": 15,
       "review_sentiment": "neutral",
-      "dominant_store_topic": "nincs elég adat",
-      "top_store_topics": [],
-      "latest_items": [],
+      "dominant_store_topic": "árak és akciók",
+      "top_store_topics": [
+        {
+          "topic": "árak és akciók",
+          "score": 1
+        }
+      ],
+      "latest_items": [
+        {
+          "id": "ecae389a2f5d2331",
+          "source": "google_news_rss",
+          "store_id": "auchan_maglod",
+          "company": "Auchan",
+          "store_name": "Auchan Maglód",
+          "title": "Vár az Auchan Korzó Autósmozi Maglódon: Ingyenes vetítés és popcorn a csillagos ég alatt - BudaPestkörnyéke.hu",
+          "summary": "Vár az Auchan Korzó Autósmozi Maglódon: Ingyenes vetítés és popcorn a csillagos ég alatt BudaPestkörnyéke.hu",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPRlNoMUJwd2RDV2FuY2hOQlpSaUZrRUotcC0xQVdFMHp4WUR1anZkd0JzYUNweGNISWNCWjVkNlFiZkNKZmF1Sm1LRGFQTGdiYUhaLU55eF9sRFlTcU5KWGJ1WUVhUEFZSk11THpHWVRYRjhlaEJGSXNEeEwtX2lCLTFRUXd1MWllckJwVndwaDM2RjBCTmRKblBmQzh0Nm83czhhdmhENE5fSGwyZFl3bFV0eHZzc03SAbwBQVVfeXFMUGlacmpTWm1nMFJDRDFCa0wtOWJUc2Y4MDNfNnQ0SGNRaXZySjNETlV6aWNYOWdTcWZuNGdxeEpqbXlydGNPNHVVX2tCdVk3bVhNY0F6UkJDTFZqaFpaQ0g4VEFfTC1iR1JoenNIVXdHckxFaHNRWWU4YWl0TUNvSklNUm9UeWJEQW4yZnYzX2pCVEVDb2FVaDUxLW9sWEVCWTZUeVFaREhZUjRGNWN5YzgwYnhIS1kycFl4THU?oc=5",
+          "published": "Tue, 11 Aug 2026 07:00:00 GMT",
+          "query": "\"Auchan Maglód\" vélemény"
+        }
+      ],
       "method_note": "Áruházi reputációs jelzőréteg nyílt Google News RSS keresésekből. Nem Google Reviews scraping, nem teljes vásárlói review-adatbázis.",
       "errors": []
     },
