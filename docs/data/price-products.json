@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-03T08:19:44Z",
+  "updated_at": "2026-09-04T08:16:09Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -406,7 +406,7 @@
       "category": "Húsáru",
       "expected_unit": "kg",
       "prices": {
-        "Auchan": 1385.0,
+        "Auchan": 1199.0,
         "Lidl": 1465.0,
         "ALDI": 1465.0,
         "Penny": 1465.0,
@@ -414,10 +414,10 @@
       },
       "selected_products": {
         "Auchan": {
-          "source_product_id": "2156690000009",
-          "source_product_name": "Sertés Comb csont nélkül, vákuumcsomagolásban Ft/kg",
-          "amount": 1385.0,
-          "unit_amount": 1385.0,
+          "source_product_id": "2173290000000",
+          "source_product_name": "Süldő Sertés Comb bőrös, csontos védőgázas csomagolásban Ft/kg",
+          "amount": 1199.0,
+          "unit_amount": 1199.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -606,7 +606,7 @@
       "prices": {
         "Auchan": 2869.0,
         "SPAR": 3117.78,
-        "Lidl": 2999.0,
+        "Lidl": 399.0,
         "ALDI": 2999.0,
         "Penny": 2999.0
       },
@@ -635,7 +635,7 @@
           "source_product_id": "2884940000000",
           "source_product_name": "Pulykamell  kg",
           "amount": 2999.0,
-          "unit_amount": 2999.0,
+          "unit_amount": 399.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -725,12 +725,22 @@
       "category": "Gyümölcs",
       "expected_unit": "kg",
       "prices": {
+        "SPAR": 699.0,
         "Lidl": 599.0,
         "Auchan": 629.0,
-        "SPAR": 699.0,
         "Penny": 699.0
       },
       "selected_products": {
+        "SPAR": {
+          "source_product_id": "8591189960848",
+          "source_product_name": "Banán lédig",
+          "amount": 699.0,
+          "unit_amount": 699.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "Lidl": {
           "source_product_id": "lidl-0080000",
           "source_product_name": "Banán kg",
@@ -746,16 +756,6 @@
           "source_product_name": "Banán Ft/kg",
           "amount": 629.0,
           "unit_amount": 629.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "SPAR": {
-          "source_product_id": "8591189960848",
-          "source_product_name": "Banán lédig",
-          "amount": 699.0,
-          "unit_amount": 699.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -783,7 +783,7 @@
         "Lidl": 999.0,
         "Auchan": 799.0,
         "SPAR": 899.0,
-        "Penny": 1199.0
+        "Penny": 799.0
       },
       "selected_products": {
         "Lidl": {
@@ -819,8 +819,8 @@
         "Penny": {
           "source_product_id": "penny-306",
           "source_product_name": "Citrom lédig kg",
-          "amount": 1199.0,
-          "unit_amount": 1199.0,
+          "amount": 799.0,
+          "unit_amount": 799.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1002,8 +1002,8 @@
       "prices": {
         "Auchan": 185.0,
         "Lidl": 198.0,
-        "SPAR": 282.0,
-        "Penny": 399.8
+        "Penny": 204.0,
+        "SPAR": 282.0
       },
       "selected_products": {
         "Auchan": {
@@ -1026,6 +1026,16 @@
           "packaging": "2",
           "price_type": "NORMAL"
         },
+        "Penny": {
+          "source_product_id": "penny-204",
+          "source_product_name": "Burgonya lédig sárga kg",
+          "amount": 204.0,
+          "unit_amount": 204.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "SPAR": {
           "source_product_id": "5999564670086",
           "source_product_name": "Sárga burgonya lédig",
@@ -1034,16 +1044,6 @@
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-336",
-          "source_product_name": "Piros burgonya 5kg",
-          "amount": 1999.0,
-          "unit_amount": 399.8,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "5",
           "price_type": "NORMAL"
         }
       },
@@ -1457,8 +1457,8 @@
           "price_type": "NORMAL"
         },
         "SPAR": {
-          "source_product_id": "8004260013130",
-          "source_product_name": "Regina Delicate Refreshing Aloe toalettpapír 3 rétegű 8 tekercs",
+          "source_product_id": "8004260012935",
+          "source_product_name": "Regina Delicate Gentle Feeling toalettpapír 3 rétegű 8 tekercs",
           "amount": 979.0,
           "unit_amount": 122.38,
           "unit": "db",
