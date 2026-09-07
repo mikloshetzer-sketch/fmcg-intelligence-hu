@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-31T11:42:59Z",
+  "updated_at": "2026-09-07T10:34:01Z",
   "status": "ok",
   "source": "linkedin_public_jobs_search",
   "method": "non_login_public_search_best_effort",
@@ -11,7 +11,7 @@
       "linkedin_active_ads_hint": 8,
       "category_scores": {
         "store": 2,
-        "warehouse": 2,
+        "warehouse": 3,
         "management": 4,
         "office": 4,
         "expansion": 0
@@ -29,7 +29,7 @@
             "store": 0,
             "warehouse": 1,
             "management": 1,
-            "office": 2,
+            "office": 1,
             "expansion": 0
           }
         },
@@ -40,9 +40,9 @@
           "count_hint": 1,
           "category_scores": {
             "store": 2,
-            "warehouse": 1,
+            "warehouse": 2,
             "management": 3,
-            "office": 2,
+            "office": 3,
             "expansion": 0
           }
         }
@@ -51,12 +51,12 @@
     {
       "id": "lidl",
       "company": "Lidl",
-      "linkedin_active_ads_hint": 10,
+      "linkedin_active_ads_hint": 945,
       "category_scores": {
-        "store": 2,
-        "warehouse": 2,
-        "management": 5,
-        "office": 8,
+        "store": 0,
+        "warehouse": 3,
+        "management": 4,
+        "office": 7,
         "expansion": 0
       },
       "dominant_signal": "logistics_recruitment_signal",
@@ -67,12 +67,12 @@
           "query": "Lidl Magyarország",
           "url": "https://www.linkedin.com/jobs/search/?keywords=Lidl+Magyarorsz%C3%A1g&location=Hungary",
           "status": "fetched",
-          "count_hint": 10,
+          "count_hint": 945,
           "category_scores": {
-            "store": 2,
-            "warehouse": 1,
-            "management": 3,
-            "office": 4,
+            "store": 0,
+            "warehouse": 2,
+            "management": 2,
+            "office": 3,
             "expansion": 0
           }
         },
@@ -98,7 +98,7 @@
       "category_scores": {
         "store": 0,
         "warehouse": 0,
-        "management": 2,
+        "management": 4,
         "office": 4,
         "expansion": 0
       },
@@ -114,7 +114,7 @@
           "category_scores": {
             "store": 0,
             "warehouse": 0,
-            "management": 1,
+            "management": 2,
             "office": 2,
             "expansion": 0
           }
@@ -123,11 +123,11 @@
           "query": "ALDI Hungary",
           "url": "https://www.linkedin.com/jobs/search/?keywords=ALDI+Hungary&location=Hungary",
           "status": "fetched",
-          "count_hint": null,
+          "count_hint": 1,
           "category_scores": {
             "store": 0,
             "warehouse": 0,
-            "management": 1,
+            "management": 2,
             "office": 2,
             "expansion": 0
           }
@@ -139,10 +139,10 @@
       "company": "SPAR",
       "linkedin_active_ads_hint": 4,
       "category_scores": {
-        "store": 2,
-        "warehouse": 2,
-        "management": 4,
-        "office": 8,
+        "store": 1,
+        "warehouse": 3,
+        "management": 5,
+        "office": 6,
         "expansion": 0
       },
       "dominant_signal": "logistics_recruitment_signal",
@@ -158,7 +158,7 @@
             "store": 1,
             "warehouse": 1,
             "management": 2,
-            "office": 4,
+            "office": 3,
             "expansion": 0
           }
         },
@@ -168,10 +168,10 @@
           "status": "fetched",
           "count_hint": null,
           "category_scores": {
-            "store": 1,
-            "warehouse": 1,
-            "management": 2,
-            "office": 4,
+            "store": 0,
+            "warehouse": 2,
+            "management": 3,
+            "office": 3,
             "expansion": 0
           }
         }
@@ -183,9 +183,9 @@
       "linkedin_active_ads_hint": 1,
       "category_scores": {
         "store": 0,
-        "warehouse": 2,
+        "warehouse": 3,
         "management": 4,
-        "office": 10,
+        "office": 7,
         "expansion": 0
       },
       "dominant_signal": "logistics_recruitment_signal",
@@ -199,9 +199,9 @@
           "count_hint": 1,
           "category_scores": {
             "store": 0,
-            "warehouse": 1,
+            "warehouse": 2,
             "management": 2,
-            "office": 5,
+            "office": 3,
             "expansion": 0
           }
         },
@@ -214,7 +214,7 @@
             "store": 0,
             "warehouse": 1,
             "management": 2,
-            "office": 5,
+            "office": 4,
             "expansion": 0
           }
         }
@@ -223,15 +223,15 @@
     {
       "id": "penny",
       "company": "Penny",
-      "linkedin_active_ads_hint": 1,
+      "linkedin_active_ads_hint": 2,
       "category_scores": {
-        "store": 1,
+        "store": 0,
         "warehouse": 2,
-        "management": 5,
-        "office": 5,
-        "expansion": 0
+        "management": 4,
+        "office": 7,
+        "expansion": 1
       },
-      "dominant_signal": "logistics_recruitment_signal",
+      "dominant_signal": "possible_expansion_signal",
       "source_confidence": "medium",
       "source_note": "Publikus LinkedIn Jobs keresési oldal alapján. Nem belépett scraping, nem hivatalos API. Blokkolás esetén a jel alacsony megbízhatóságú.",
       "queries": [
@@ -239,25 +239,25 @@
           "query": "Penny Magyarország",
           "url": "https://www.linkedin.com/jobs/search/?keywords=Penny+Magyarorsz%C3%A1g&location=Hungary",
           "status": "fetched",
-          "count_hint": null,
+          "count_hint": 1,
           "category_scores": {
             "store": 0,
             "warehouse": 1,
             "management": 2,
             "office": 3,
-            "expansion": 0
+            "expansion": 1
           }
         },
         {
           "query": "Penny Market Hungary",
           "url": "https://www.linkedin.com/jobs/search/?keywords=Penny+Market+Hungary&location=Hungary",
           "status": "fetched",
-          "count_hint": 1,
+          "count_hint": 2,
           "category_scores": {
-            "store": 1,
+            "store": 0,
             "warehouse": 1,
-            "management": 3,
-            "office": 2,
+            "management": 2,
+            "office": 4,
             "expansion": 0
           }
         }
