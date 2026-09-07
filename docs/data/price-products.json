@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-06T08:09:43Z",
+  "updated_at": "2026-09-07T08:40:56Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -10,24 +10,14 @@
       "category": "Tejtermék",
       "expected_unit": "l",
       "prices": {
-        "Penny": 279.0,
         "Tesco": 261.0,
         "Auchan": 279.0,
         "SPAR": 279.0,
         "ALDI": 279.0,
-        "Lidl": 279.0
+        "Lidl": 279.0,
+        "Penny": 279.0
       },
       "selected_products": {
-        "Penny": {
-          "source_product_id": "penny-21206",
-          "source_product_name": "Sissy ESL tej 1,5% 1l",
-          "amount": 279.0,
-          "unit_amount": 279.0,
-          "unit": "l",
-          "unit_title": "db",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
         "Tesco": {
           "source_product_id": "5999561314075",
           "source_product_name": "Kunsági ESL tej 1.5% 1 L QQ",
@@ -71,6 +61,16 @@
         "Lidl": {
           "source_product_id": "lidl-0001586",
           "source_product_name": "Pilos Friss Tej 1,5%,  1l, ",
+          "amount": 279.0,
+          "unit_amount": 279.0,
+          "unit": "l",
+          "unit_title": "db",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Penny": {
+          "source_product_id": "penny-21206",
+          "source_product_name": "Sissy ESL tej 1,5% 1l",
           "amount": 279.0,
           "unit_amount": 279.0,
           "unit": "l",
@@ -549,24 +549,14 @@
       "category": "Húsáru",
       "expected_unit": "kg",
       "prices": {
-        "ALDI": 1299.0,
         "Penny": 1749.0,
         "SPAR": 1954.44,
         "Auchan": 1699.0,
         "Tesco": 1748.75,
+        "ALDI": 1749.0,
         "Lidl": 1749.0
       },
       "selected_products": {
-        "ALDI": {
-          "source_product_id": "aldi-323242",
-          "source_product_name": "Darált sertéshús 30 % 1kg",
-          "amount": 1299.0,
-          "unit_amount": 1299.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
         "Penny": {
           "source_product_id": "penny-10995",
           "source_product_name": "Sertés darálthús 30% zsírtart.",
@@ -607,6 +597,16 @@
           "packaging": "0.8",
           "price_type": "NORMAL"
         },
+        "ALDI": {
+          "source_product_id": "aldi-323242",
+          "source_product_name": "Darált sertéshús 30 % 1kg",
+          "amount": 1749.0,
+          "unit_amount": 1749.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "Lidl": {
           "source_product_id": "lidl-0005545",
           "source_product_name": "Húsfarm XXL Sertés darálthús 30%,  1000g",
@@ -627,7 +627,7 @@
       "expected_unit": "kg",
       "prices": {
         "Tesco": 1959.0,
-        "Lidl": 1859.0,
+        "Lidl": 1699.0,
         "Auchan": 1902.0,
         "SPAR": 1973.0,
         "ALDI": 1979.0,
@@ -647,8 +647,8 @@
         "Lidl": {
           "source_product_id": "2895800000000",
           "source_product_name": "Csirkemell tokány, kg ",
-          "amount": 1859.0,
-          "unit_amount": 1859.0,
+          "amount": 1699.0,
+          "unit_amount": 1699.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -704,11 +704,11 @@
       "expected_unit": "kg",
       "prices": {
         "Auchan": 2869.0,
-        "SPAR": 3117.78,
         "Lidl": 2999.0,
         "ALDI": 2999.0,
         "Penny": 2999.0,
-        "Tesco": 3035.56
+        "Tesco": 3035.56,
+        "SPAR": 3102.22
       },
       "selected_products": {
         "Auchan": {
@@ -719,16 +719,6 @@
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "SPAR": {
-          "source_product_id": "5995885813959",
-          "source_product_name": "Gallio pulykamellfilé 450 g",
-          "amount": 1403.0,
-          "unit_amount": 3117.78,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "0.45",
           "price_type": "NORMAL"
         },
         "Lidl": {
@@ -766,6 +756,16 @@
           "source_product_name": "TESCO FRISS PULYAKMELLFILÉ 450 g QQ",
           "amount": 1366.0,
           "unit_amount": 3035.56,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "0.45",
+          "price_type": "NORMAL"
+        },
+        "SPAR": {
+          "source_product_id": "5995885813959",
+          "source_product_name": "Gallio pulykamellfilé 450 g",
+          "amount": 1396.0,
+          "unit_amount": 3102.22,
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "0.45",
@@ -857,34 +857,14 @@
       "category": "Gyümölcs",
       "expected_unit": "kg",
       "prices": {
-        "SPAR": 699.0,
-        "ALDI": 399.0,
         "Penny": 599.0,
         "Auchan": 629.0,
         "Tesco": 699.0,
+        "SPAR": 699.0,
+        "ALDI": 699.0,
         "Lidl": 699.0
       },
       "selected_products": {
-        "SPAR": {
-          "source_product_id": "8591189960848",
-          "source_product_name": "Banán lédig",
-          "amount": 699.0,
-          "unit_amount": 699.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "ALDI": {
-          "source_product_id": "aldi-166908",
-          "source_product_name": "Banán lédig",
-          "amount": 399.0,
-          "unit_amount": 399.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
         "Penny": {
           "source_product_id": "penny-302",
           "source_product_name": "Banán lédig kg",
@@ -915,6 +895,26 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
+        "SPAR": {
+          "source_product_id": "8591189960848",
+          "source_product_name": "Banán lédig",
+          "amount": 699.0,
+          "unit_amount": 699.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "ALDI": {
+          "source_product_id": "aldi-166908",
+          "source_product_name": "Banán lédig",
+          "amount": 699.0,
+          "unit_amount": 699.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "Lidl": {
           "source_product_id": "lidl-0080000",
           "source_product_name": "Banán kg",
@@ -934,29 +934,19 @@
       "category": "Gyümölcs",
       "expected_unit": "kg",
       "prices": {
-        "Lidl": 999.0,
-        "Penny": 799.0,
+        "Lidl": 599.0,
         "Auchan": 799.0,
         "SPAR": 899.0,
         "ALDI": 999.0,
-        "Tesco": 1199.0
+        "Tesco": 1199.0,
+        "Penny": 1199.0
       },
       "selected_products": {
         "Lidl": {
           "source_product_id": "lidl-0080160",
           "source_product_name": "Citrom lédig",
-          "amount": 999.0,
-          "unit_amount": 999.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-306",
-          "source_product_name": "Citrom lédig kg",
-          "amount": 799.0,
-          "unit_amount": 799.0,
+          "amount": 599.0,
+          "unit_amount": 599.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -995,6 +985,16 @@
         "Tesco": {
           "source_product_id": "2850160000000",
           "source_product_name": "Citrom lédig    ",
+          "amount": 1199.0,
+          "unit_amount": 1199.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Penny": {
+          "source_product_id": "penny-306",
+          "source_product_name": "Citrom lédig kg",
           "amount": 1199.0,
           "unit_amount": 1199.0,
           "unit": "kg",
