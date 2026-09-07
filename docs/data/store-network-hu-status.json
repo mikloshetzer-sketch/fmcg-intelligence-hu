@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-31T09:43:49.380012+00:00",
+  "updated_at": "2026-09-07T08:17:12.112104+00:00",
   "status": "ok",
   "version": "store-network-hu-v2.0-non-lidl-osm",
   "source": "openstreetmap_overpass_non_lidl_plus_fallback_plus_optional_overrides",
@@ -17,16 +17,16 @@
   "companies": [
     {
       "company": "ALDI",
-      "source": "openstreetmap_overpass",
-      "status": "ok",
+      "source": "fallback_previous_store_network",
+      "status": "fallback_previous",
       "stores": 188,
       "brand_values": [
         "ALDI",
         "Aldi"
       ],
       "notes": [
-        "exact_brand=188 via https://overpass-api.de/api/interpreter",
-        "regex_brand=188 via https://overpass-api.de/api/interpreter"
+        "exact_brand=0 via https://overpass.kumi.systems/api/interpreter",
+        "regex_brand=0 via https://overpass.kumi.systems/api/interpreter"
       ]
     },
     {
@@ -41,8 +41,8 @@
         "Interspar"
       ],
       "notes": [
-        "exact_brand=522 via https://overpass-api.de/api/interpreter",
-        "regex_brand_error=502 Server Error: Bad Gateway for url: https://overpass.kumi.systems/api/interpreter"
+        "exact_brand_error=HTTPSConnectionPool(host='overpass.kumi.systems', port=443): Read timed out. (read timeout=150)",
+        "regex_brand=522 via https://overpass-api.de/api/interpreter"
       ]
     },
     {
@@ -55,8 +55,8 @@
         "TESCO"
       ],
       "notes": [
-        "exact_brand_error=502 Server Error: Bad Gateway for url: https://overpass.kumi.systems/api/interpreter",
-        "regex_brand=182 via https://overpass-api.de/api/interpreter"
+        "exact_brand=182 via https://overpass-api.de/api/interpreter",
+        "regex_brand=181 via https://overpass.kumi.systems/api/interpreter"
       ]
     },
     {
@@ -86,7 +86,7 @@
       ],
       "notes": [
         "exact_brand=243 via https://overpass-api.de/api/interpreter",
-        "regex_brand_error=502 Server Error: Bad Gateway for url: https://overpass.kumi.systems/api/interpreter"
+        "regex_brand_error=504 Server Error: Gateway Timeout for url: https://overpass.kumi.systems/api/interpreter"
       ]
     }
   ],

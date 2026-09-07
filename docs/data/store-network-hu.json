@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-31T09:43:49.380012+00:00",
+  "updated_at": "2026-09-07T08:17:12.112104+00:00",
   "version": "store-network-hu-v2.0-non-lidl-osm",
   "scope": "Hungarian FMCG store network from OSM + optional overrides",
   "method_note": "Ez a verzió Lidl nélkül építi a bolthálózatot. ALDI, SPAR, Tesco, Auchan és Penny OSM/Overpass alapján frissül. Ha egy láncra 0 találat jön, a script megtartja a korábbi store-network-hu.json adott láncra vonatkozó adatait. Lidl külön, saját üzletlista alapján kerül majd be.",
@@ -8286,8 +8286,8 @@
       "area": "n.a.",
       "region": "n.a.",
       "address": "n.a.",
-      "lat": 48.081919,
-      "lon": 20.7859,
+      "lat": 48.081918,
+      "lon": 20.785906,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 119013963,
@@ -9620,6 +9620,27 @@
         "Spar",
         "SPAR Adony",
         "2457 Adony, Rákóczi Ferenc utca 18"
+      ]
+    },
+    {
+      "store_id": "spar_alsopahok_spar_203093392",
+      "company": "SPAR",
+      "name": "Spar",
+      "city": "Alsópáhok",
+      "area": "Alsópáhok",
+      "region": "n.a.",
+      "address": "8394 Alsópáhok, Hévizi utca 18",
+      "lat": 46.77818,
+      "lon": 17.183522,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 203093392,
+      "brand": "Spar",
+      "operator": "",
+      "keywords": [
+        "Spar",
+        "SPAR Alsópáhok",
+        "8394 Alsópáhok, Hévizi utca 18"
       ]
     },
     {
@@ -13193,27 +13214,6 @@
       ]
     },
     {
-      "store_id": "spar_heviz_spar_203093392",
-      "company": "SPAR",
-      "name": "Spar",
-      "city": "Hévíz",
-      "area": "Hévíz",
-      "region": "n.a.",
-      "address": "8380 Hévíz, Hévizi utca 18",
-      "lat": 46.77818,
-      "lon": 17.183522,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 203093392,
-      "brand": "Spar",
-      "operator": "",
-      "keywords": [
-        "Spar",
-        "SPAR Hévíz",
-        "8380 Hévíz, Hévizi utca 18"
-      ]
-    },
-    {
       "store_id": "spar_hodmezovasarhely_interspar_1866096038",
       "company": "SPAR",
       "name": "Interspar",
@@ -16280,27 +16280,6 @@
       ]
     },
     {
-      "store_id": "spar_na_spar_318618226",
-      "company": "SPAR",
-      "name": "Spar",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.458102,
-      "lon": 19.146398,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 318618226,
-      "brand": "Spar",
-      "operator": "Spar",
-      "keywords": [
-        "Spar",
-        "SPAR n.a.",
-        "n.a."
-      ]
-    },
-    {
       "store_id": "spar_na_spar_319942872",
       "company": "SPAR",
       "name": "Spar",
@@ -17484,8 +17463,8 @@
       "area": "n.a.",
       "region": "n.a.",
       "address": "n.a.",
-      "lat": 47.515833,
-      "lon": 19.058934,
+      "lat": 47.515816,
+      "lon": 19.058938,
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 4735607198,
@@ -17652,8 +17631,8 @@
       "area": "n.a.",
       "region": "n.a.",
       "address": "n.a.",
-      "lat": 47.499808,
-      "lon": 19.068886,
+      "lat": 47.499817,
+      "lon": 19.068878,
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 6404861507,
@@ -19654,6 +19633,27 @@
       "osm_id": 1303599544,
       "brand": "Spar",
       "operator": "",
+      "keywords": [
+        "Spar",
+        "SPAR n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "spar_na_spar_1555338295",
+      "company": "SPAR",
+      "name": "Spar",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.458073,
+      "lon": 19.146377,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 1555338295,
+      "brand": "Spar",
+      "operator": "Spar",
       "keywords": [
         "Spar",
         "SPAR n.a.",
