@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-08T08:22:18Z",
+  "updated_at": "2026-09-09T08:24:45Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -88,7 +88,7 @@
       "expected_unit": "l",
       "prices": {
         "SPAR": 265.0,
-        "Tesco": 349.0,
+        "Tesco": 296.0,
         "Auchan": 271.0,
         "ALDI": 295.0,
         "Lidl": 295.0,
@@ -106,10 +106,10 @@
           "price_type": "NORMAL"
         },
         "Tesco": {
-          "source_product_id": "5998200485633",
-          "source_product_name": "HAZAI TEJ 2.8% 1 L ",
-          "amount": 349.0,
-          "unit_amount": 349.0,
+          "source_product_id": "5999561314051",
+          "source_product_name": "Kunsági ESL tej 2.8% 1 L QQ",
+          "amount": 296.0,
+          "unit_amount": 296.0,
           "unit": "l",
           "unit_title": "db",
           "packaging": "1",
@@ -704,7 +704,7 @@
       "expected_unit": "kg",
       "prices": {
         "Auchan": 2869.0,
-        "Lidl": 2999.0,
+        "Lidl": 2869.0,
         "ALDI": 2999.0,
         "Penny": 2999.0,
         "Tesco": 3035.56,
@@ -722,10 +722,10 @@
           "price_type": "NORMAL"
         },
         "Lidl": {
-          "source_product_id": "2884940000000",
-          "source_product_name": "Pulykamell  kg",
-          "amount": 2999.0,
-          "unit_amount": 2999.0,
+          "source_product_id": "lidl-0006908",
+          "source_product_name": "Húsfarm Friss pulykamellfilé csont és bőr nélkül , kg ",
+          "amount": 2869.0,
+          "unit_amount": 2869.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -858,7 +858,7 @@
       "expected_unit": "kg",
       "prices": {
         "Penny": 599.0,
-        "SPAR": 699.0,
+        "SPAR": 549.0,
         "Auchan": 629.0,
         "Tesco": 699.0,
         "ALDI": 699.0,
@@ -878,8 +878,8 @@
         "SPAR": {
           "source_product_id": "8591189960848",
           "source_product_name": "Banán lédig",
-          "amount": 699.0,
-          "unit_amount": 699.0,
+          "amount": 549.0,
+          "unit_amount": 549.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -935,16 +935,26 @@
       "expected_unit": "kg",
       "prices": {
         "Auchan": 799.0,
+        "Penny": 799.0,
         "SPAR": 899.0,
         "Lidl": 899.0,
         "Tesco": 999.0,
-        "ALDI": 999.0,
-        "Penny": 1199.0
+        "ALDI": 999.0
       },
       "selected_products": {
         "Auchan": {
           "source_product_id": "2188440000007",
           "source_product_name": "Citrom Ft/kg",
+          "amount": 799.0,
+          "unit_amount": 799.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Penny": {
+          "source_product_id": "penny-306",
+          "source_product_name": "Citrom lédig kg",
           "amount": 799.0,
           "unit_amount": 799.0,
           "unit": "kg",
@@ -991,16 +1001,6 @@
           "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-306",
-          "source_product_name": "Citrom lédig kg",
-          "amount": 1199.0,
-          "unit_amount": 1199.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
         }
       },
       "coverage": 6
@@ -1012,7 +1012,7 @@
       "expected_unit": "kg",
       "prices": {
         "Lidl": 399.0,
-        "Auchan": 405.0,
+        "Auchan": 419.0,
         "SPAR": 749.0,
         "Tesco": 732.0,
         "ALDI": 779.0,
@@ -1032,8 +1032,8 @@
         "Auchan": {
           "source_product_id": "5998985599686",
           "source_product_name": "Paradicsom 1 kg",
-          "amount": 405.0,
-          "unit_amount": 405.0,
+          "amount": 419.0,
+          "unit_amount": 419.0,
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "1",
@@ -1244,7 +1244,7 @@
       "prices": {
         "Auchan": 185.0,
         "Lidl": 198.0,
-        "Penny": 399.8,
+        "Penny": 329.0,
         "Tesco": 263.0,
         "SPAR": 281.0
       },
@@ -1270,13 +1270,13 @@
           "price_type": "NORMAL"
         },
         "Penny": {
-          "source_product_id": "penny-336",
-          "source_product_name": "Piros burgonya 5kg",
-          "amount": 1999.0,
-          "unit_amount": 399.8,
+          "source_product_id": "penny-555",
+          "source_product_name": "Piros burgonya lédig kg",
+          "amount": 329.0,
+          "unit_amount": 329.0,
           "unit": "kg",
           "unit_title": "csomag",
-          "packaging": "5",
+          "packaging": "1",
           "price_type": "NORMAL"
         },
         "Tesco": {
@@ -1539,24 +1539,14 @@
       "category": "Alapélelmiszer",
       "expected_unit": "kg",
       "prices": {
-        "Penny": 289.0,
         "ALDI": 290.0,
         "Auchan": 295.0,
-        "Lidl": 290.0,
         "SPAR": 290.0,
+        "Lidl": 295.0,
+        "Penny": 295.0,
         "Tesco": 329.0
       },
       "selected_products": {
-        "Penny": {
-          "source_product_id": "penny-26009",
-          "source_product_name": "Penny kristálycukor",
-          "amount": 289.0,
-          "unit_amount": 289.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
         "ALDI": {
           "source_product_id": "4008671013004",
           "source_product_name": "Sweet Family kristálycukor 1 kg",
@@ -1577,9 +1567,9 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Lidl": {
-          "source_product_id": "5998571525020",
-          "source_product_name": "Diamant Kristálycukor 1kg",
+        "SPAR": {
+          "source_product_id": "5999139407475",
+          "source_product_name": "S-BUDGET Kristálycukor 1kg",
           "amount": 290.0,
           "unit_amount": 290.0,
           "unit": "kg",
@@ -1587,11 +1577,21 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "SPAR": {
-          "source_product_id": "5999139407475",
-          "source_product_name": "S-BUDGET Kristálycukor 1kg",
-          "amount": 290.0,
-          "unit_amount": 290.0,
+        "Lidl": {
+          "source_product_id": "5906340630622",
+          "source_product_name": "Kristálycukor , 1kg",
+          "amount": 295.0,
+          "unit_amount": 295.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Penny": {
+          "source_product_id": "penny-26009",
+          "source_product_name": "Penny kristálycukor",
+          "amount": 295.0,
+          "unit_amount": 295.0,
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "1",
@@ -1693,23 +1693,13 @@
       "category": "Alapélelmiszer",
       "expected_unit": "kg",
       "prices": {
-        "Auchan": 360.0,
         "Lidl": 549.0,
         "Penny": 549.0,
         "SPAR": 579.0,
-        "Tesco": 599.0
+        "Tesco": 599.0,
+        "Auchan": 599.0
       },
       "selected_products": {
-        "Auchan": {
-          "source_product_id": "5999086450562",
-          "source_product_name": "Auchan Tipp \"B\" minőségű rizs 1 kg",
-          "amount": 360.0,
-          "unit_amount": 360.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
         "Lidl": {
           "source_product_id": "lidl-6402831",
           "source_product_name": "Golden Sun Hosszú szemű \\\"B\\\" rizs, 1kg",
@@ -1743,6 +1733,16 @@
         "Tesco": {
           "source_product_id": "5051007090148",
           "source_product_name": "HEARTY FOOD RIZS 1KG ",
+          "amount": 599.0,
+          "unit_amount": 599.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Auchan": {
+          "source_product_id": "5999086469731",
+          "source_product_name": "Auchan Tipp \"B\" minőségű rizs 1 kg",
           "amount": 599.0,
           "unit_amount": 599.0,
           "unit": "kg",
