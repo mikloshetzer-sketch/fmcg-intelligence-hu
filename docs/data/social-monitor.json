@@ -1,54 +1,150 @@
 {
-  "updated_at": "2026-09-10T16:35:20.541174+00:00",
+  "updated_at": "2026-09-10T21:02:57.918264+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-09-10T16:35:20.541174+00:00",
+    "updated_at": "2026-09-10T21:02:57.918264+00:00",
     "leader_social": "Lidl",
-    "leader_social_index": 33,
+    "leader_social_index": 57,
     "dominant_social_topic": "árak és akciók",
     "overall_social_sentiment": "neutral"
   },
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 7,
-      "raw_social_mentions": 7,
-      "dashboard_mentions": 6,
-      "background_mentions": 1,
-      "discarded_mentions": 0,
-      "weighted_social_mentions": 6.5,
-      "hu_relevant_mentions": 6,
-      "social_index": 33,
+      "social_mentions": 15,
+      "raw_social_mentions": 16,
+      "dashboard_mentions": 8,
+      "background_mentions": 7,
+      "discarded_mentions": 1,
+      "weighted_social_mentions": 11.5,
+      "hu_relevant_mentions": 8,
+      "social_index": 57,
       "social_sources": {
-        "reddit": 0,
-        "youtube": 6,
+        "reddit": 10,
+        "youtube": 4,
         "mastodon": 1
       },
       "raw_social_sources": {
-        "reddit": 0,
-        "youtube": 6,
+        "reddit": 11,
+        "youtube": 4,
         "mastodon": 1
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 6.5
+          "score": 10.0
+        },
+        {
+          "topic": "digitalizáció és önkiszolgálás",
+          "score": 3.5
+        },
+        {
+          "topic": "bolti élmény",
+          "score": 1.5
+        },
+        {
+          "topic": "vásárlói panaszok",
+          "score": 0.5
+        },
+        {
+          "topic": "munkaerő és foglalkoztatás",
+          "score": 0.5
         }
       ],
       "topic_sentiment": {
         "árak és akciók": {
           "positive": 0.0,
-          "neutral": 6.5,
+          "neutral": 9.5,
+          "negative": 0.5,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        },
+        "digitalizáció és önkiszolgálás": {
+          "positive": 0.0,
+          "neutral": 3.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
+        },
+        "bolti élmény": {
+          "positive": 0.0,
+          "neutral": 1.5,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        },
+        "munkaerő és foglalkoztatás": {
+          "positive": 0.0,
+          "neutral": 0.5,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        },
+        "vásárlói panaszok": {
+          "positive": 0.0,
+          "neutral": 0.0,
+          "negative": 0.5,
+          "mixed": 0.0,
+          "dominant": "negative"
         }
       },
-      "social_sentiment": "neutral",
+      "social_sentiment": "negative",
       "latest_items": [
+        {
+          "id": "8570c46106459d6e",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "Mi-am ridicat produsele castigate in momentul in care am deschis Mystery Box-urile.",
+          "summary": "Am surprins angajatii, care habar nu aveau de aceasta promotie. Nu-i bai, le-am explicat eu cu ce se mananca. Bonus, am fost surprins sa observ ca totalul a fost exact 150 Ron. 150 Ron este suma care iti permite sa accesezi concursul Lidl Plus. Mentionez, nu am urmarit exact costul total. Ochiometric urmaream sa depasesc suma de 150 Ron pt a fi eligibil concursul. Poftim frugal! :)) Am uitat sa activez doua dintre produsele castigate si m-am trezit ca l-am achitat integral. Aveti grija sa nu fac",
+          "url": "https://www.reddit.com/r/roFrugal/comments/1wavopk/miam_ridicat_produsele_castigate_in_momentul_in/",
+          "published": "2026-09-08T17:53:38+00:00",
+          "query": "Lidl Plus",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "f6077ef892ec1665",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "[99€ statt 249€ | -60%] PARKSIDE PERFORMANCE Waschsauger PPWS 10 A2 mit 2 Waschdüsen, 99€ (Lidl Plus ab 21.09) @ Lidl",
+          "summary": "➡️ Zum Deal bei Lidl Preis: 249€ → 99€ (60% Ersparnis) ⏰ Gültig bis: So, 27.09.2026 20:00 Uhr Erhältlich ab dem 21.09. in Lidl-Filialen für 99€ statt des Vergleichspreises von 249€ – der letzte Angebotspreis lag bei 149€. Voraussetzung ist eine Lidl-Plus-Mitgliedschaft (kostenlose App). Das Gerät ist ein Kombi-Waschsauger zur Tiefenreinigung von Teppichen, Polstern und Autositzen mit Sprüh- und Saugfunktion, 3 Waschdüsen sowie einem 7,5 m langen Netzkabel für einen Arbeitsradius von bis zu 10 m.",
+          "url": "https://www.reddit.com/r/deals_de/comments/1w9a46u/99_statt_249_60_parkside_performance_waschsauger/",
+          "published": "2026-09-06T22:21:25+00:00",
+          "query": "Lidl Plus",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "e2fc0d0139b5d674",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "Lidl, Hungary - 40.040 HUF / 111 EUR",
+          "summary": "submitted by /u/Round-Style-7550 to r/Grocerycost [link] [comments]",
+          "url": "https://www.reddit.com/r/Grocerycost/comments/1w84fwo/lidl_hungary_40040_huf_111_eur/",
+          "published": "2026-09-05T15:55:20+00:00",
+          "query": "Lidl Plus",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "2e19c638b53de28a",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "Lidl.de | Pay with Wero and secure 5€ voucher",
+          "summary": "https://www.lidl.de/c/wero/s10099894 Select Wero as the payment method in the Lidl online shop. On the Monday after your order, receive a 5 € voucher for the Lidl online shop in your Lidl Plus account. Promotional period 01.09.–31.10.2026 submitted by /u/Curious-Builder-5532 to r/WeroWallet [link] [comments]",
+          "url": "https://www.reddit.com/r/WeroWallet/comments/1w608p8/lidlde_pay_with_wero_and_secure_5_voucher/",
+          "published": "2026-09-03T07:16:43+00:00",
+          "query": "Lidl Plus",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
         {
           "id": "b90b1c4f3e05af48",
           "source": "youtube",
@@ -63,19 +159,6 @@
           "item_sentiment": "neutral"
         },
         {
-          "id": "3e372b35caccd494",
-          "source": "youtube",
-          "company": "Lidl",
-          "title": "🇭🇺 LIDL Magyarország Akciós újság – 20. hét Érvényes 05.14 - 05.20 2026 TV verzió - YouTube",
-          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 20. hét Érvényes 05.14 - 05.20 2026 TV verzió YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA1NXYtejM2NjZ2VUZ6XzhQQ28xeUg2YjM4M3ZocjJYZTBZWElIM1ZDVFdWMFBkTnBNU0s4VVF1WUNNb2NxUVlwbm9XOUlMdjN6bXJVYmF3?oc=5",
-          "published": "Sun, 10 May 2026 19:27:46 GMT",
-          "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
           "id": "e43b52ba20843594",
           "source": "youtube",
           "company": "Lidl",
@@ -83,19 +166,6 @@
           "summary": "🇭🇺 LIDL Magyarország Akciós újság – 19. hét Érvényes 05.07-től 2026 TV verzió YouTube",
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBzYjBHSGFSS2k1ZUoydVpsWnBNd2RuSllXc2YzdEZITVRTZTA3NW8zdkFLYi1OYUZmX3FXRDdZM3ZnRTlEQmdOb1dSckpGeGNmSk1tVlV3?oc=5",
           "published": "Sun, 03 May 2026 19:52:23 GMT",
-          "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "0df7879327f6edfd",
-          "source": "youtube",
-          "company": "Lidl",
-          "title": "🇭🇺 LIDL Magyarország Akciós újság – 18. hét Érvényes 04.30-től 2026 - YouTube",
-          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 18. hét Érvényes 04.30-től 2026 YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFAxMmhRbF85djlKQVpmc0RULTNOemFReVJJZnJhZlpubXVlaEVUeEN6ZUluT09TZklOd2xaak5ZTjQ3MTFoLW1ySi1uNG1BZjd3WUFsZkFR?oc=5",
-          "published": "Sun, 26 Apr 2026 19:29:34 GMT",
           "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
@@ -130,6 +200,19 @@
       ],
       "background_items": [
         {
+          "id": "c7cd0eeae66425b9",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "[39,99€ statt 62,90€ | -36%] PARKSIDE PERFORMANCE Akku PAPP 208 A1, 20 V / 8 Ah, 39,99 € [Lidl Filiale / ab 2 Stück versandkostenfrei mit Lidl Plus] @ Lidl",
+          "summary": "➡️ Zum Deal bei Lidl Preis: 62,90€ → 39,99€ (36% Ersparnis) ⏰ Gültig bis: So, 13.09.2026 21:59 Uhr Preis: 39,99€ statt 62,90€ (laut Idealo). In der Filiale zum Dealpreis erhältlich. Online kommt ein Versandkostenaufschlag von 5,95€ hinzu, was einen Einzelkauf auf 45,94€ verteuert. Wer online bestellt und die Lidl-Plus-App nutzt, kann ab einem Bestellwert von 79€ einen Coupon für 5,95€ Versandkostenrabatt einlösen. Zwei Akkus kosten zusammen 79,98€ und erreichen damit genau den Mindestbestellwert",
+          "url": "https://www.reddit.com/r/deals_de/comments/1wbd16h/3999_statt_6290_36_parkside_performance_akku_papp/",
+          "published": "2026-09-09T05:56:15+00:00",
+          "query": "Lidl Plus",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        },
+        {
           "id": "0d60aa4be1595767",
           "source": "mastodon",
           "company": "Lidl",
@@ -141,12 +224,77 @@
           "hu_relevance": 0.5,
           "relevance_bucket": "background",
           "item_sentiment": "neutral"
+        },
+        {
+          "id": "a03e50ae92cd7a72",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "Lidl Auto-Woche ab 21. September: Parkside Waschsauger für 99 € mit Lidl Plus statt 199 €",
+          "summary": "Im neuen Lidl-Prospekt für die Woche ab dem 21. September sind einige Auto- und Werkstattangebote dabei. Auffällig finde ich vor allem den Parkside Performance Waschsauger PPWS 10 A2 für 99 € mit Lidl Plus . Im Prospekt werden dafür sonst 199 € genannt. Dazu kommen unter anderem die Ultimate Speed 4-in-1-Powerbank mit Kompressor für 49,99 € , eine Parkside Performance Akku-Ratsche inklusive Akku und Ladegerät für 59,99 € sowie der OOONO Co-Driver No. 1 für 24,99 € . Beim Waschsauger sind laut He",
+          "url": "https://www.reddit.com/r/u_PreisKing_Deals/comments/1wah71z/lidl_autowoche_ab_21_september_parkside/",
+          "published": "2026-09-08T07:08:49+00:00",
+          "query": "Lidl Plus",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "27d289b79def87dd",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "[279€ statt 379€ | -26%] Philips 55PUS7800/12 55\" 4K QLED Smart-TV mit HDR10+, Dolby Atmos, Titan OS (Lidl Filiale Regional ab 10.09.) @ Lidl",
+          "summary": "➡️ Zum Deal bei Lidl Preis: 379€ → 279€ (26% Ersparnis) Philips 55PUS7800/12 für 279€ statt 379€ in der Lidl-Filiale – Ersparnis von 100€ (ca. 26%). Das Angebot gilt ab Donnerstag, 10.09., nur vor Ort in der Filiale, kein Online-Kauf möglich. Wichtig: Die Aktion ist regional aufgeteilt. Nur in den sogenannten roten Regionen (u.a. Nordwesten, Westen, Teile von NRW, Niedersachsen, Hamburg, Schleswig-Holstein) wird dieses Philips-Modell angeboten. In den grünen Regionen (Osten, Süden) gibt es statt",
+          "url": "https://www.reddit.com/r/deals_de/comments/1w97a6y/279_statt_379_26_philips_55pus780012_55_4k_qled/",
+          "published": "2026-09-06T20:29:06+00:00",
+          "query": "Lidl Plus",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "f92a68a8e3e91357",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "Welke van deze performance decoupeerzagen?",
+          "summary": "Er zijn 2 performance types en op beide krijg je nu 20% extra korting met lidl plus ( in Nederland) Kent iemand de grote verschillen tussen deze twee machines? Voor / nadelen? Dank voor de tip! submitted by /u/ejdb to r/Parkside [link] [comments]",
+          "url": "https://www.reddit.com/r/Parkside/comments/1w6abck/welke_van_deze_performance_decoupeerzagen/",
+          "published": "2026-09-03T15:17:10+00:00",
+          "query": "Lidl Plus",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "b5994b664437afcb",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "Lidl plus - nemoguće se registrovati?",
+          "summary": "Pre par dana sam bio sa drugarom u Lidlu, pokušao je da se registruje na Lidl Plus aplikaciju, ali nikada mu nije stigao verifikacioni SMS kod. Evo par dana kasnije, i ja pokušavam isto, i ni meni ne stiže SMS kod. Da li neko zna da li Yettel blokira lidl ili je neki problem do Lidla? submitted by /u/thundererz to r/AskSerbia [link] [comments]",
+          "url": "https://www.reddit.com/r/AskSerbia/comments/1w5q0f5/lidl_plus_nemoguće_se_registrovati/",
+          "published": "2026-09-02T22:55:20+00:00",
+          "query": "Lidl Plus",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "negative"
+        },
+        {
+          "id": "b84ac3489023b1f5",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "LidlPlus_NL",
+          "summary": "Lidl plus aanbiedingen om te delen [link]",
+          "url": "https://www.reddit.com/r/LidlPlus_NL/",
+          "published": "",
+          "query": "Lidl Plus",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
         }
       ],
       "quality_summary": {
-        "dashboard_items": 6,
-        "background_items": 1,
-        "discarded_items": 0,
+        "dashboard_items": 8,
+        "background_items": 7,
+        "discarded_items": 1,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
       },
@@ -489,19 +637,6 @@
           "item_sentiment": "neutral"
         },
         {
-          "id": "9a1fea266272003d",
-          "source": "youtube",
-          "company": "CBA",
-          "title": "CBA Príma akciós újság 04.23. - 04.29. - YouTube",
-          "summary": "CBA Príma akciós újság 04.23. - 04.29. YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBULTZqM00ySGtMZF9FV0s4ekRtTG5lMlNDemNySGRwOGp1bTZPT2tPbmpxekRlX3d3NENkZVl5VW51V1VOekZMNk1RLTNsZDB0S3h4UVhB?oc=5",
-          "published": "Mon, 20 Apr 2026 15:11:20 GMT",
-          "query": "site:youtube.com \"CBA Prima\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
           "id": "fbd381886ee81a57",
           "source": "youtube",
           "company": "CBA",
@@ -510,6 +645,19 @@
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9mdzc2X1BrQmU1N3dDRHIxLVJjZ3BqampfemF1SlVvRkpzNjNwZ3N6Qm5iVVlfbERtaWhlSnllRHlBVnNpeW96cUVwQ09yQ2Exbk94dExB?oc=5",
           "published": "Thu, 26 Mar 2026 13:22:56 GMT",
           "query": "site:youtube.com \"CBA Príma\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "c9d79b1cdf7f0181",
+          "source": "youtube",
+          "company": "CBA",
+          "title": "CBA Príma akciós újság 03.19. - 03.25. - YouTube",
+          "summary": "CBA Príma akciós újság 03.19. - 03.25. YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5pMmtUU1V3MVFQMElKQ0ltVWxVLTRKTFBuMk1zd3RrZkc1emZxY2pORF9GSm51dGtYM1hlWC1scDM3UGJIaGI5SXpRS2g5cG03ZVJ6WXVB?oc=5",
+          "published": "Mon, 16 Mar 2026 12:43:34 GMT",
+          "query": "site:youtube.com \"CBA Prima\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
           "item_sentiment": "neutral"
