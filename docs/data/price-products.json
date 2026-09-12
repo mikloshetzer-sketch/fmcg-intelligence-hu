@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-11T08:21:01Z",
+  "updated_at": "2026-09-12T08:10:08Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -242,9 +242,9 @@
       "expected_unit": "kg",
       "prices": {
         "Penny": 2390.0,
+        "ALDI": 1990.0,
         "SPAR": 1990.0,
         "Auchan": 2389.0,
-        "ALDI": 2390.0,
         "Lidl": 2390.0,
         "Tesco": 2590.0
       },
@@ -254,6 +254,16 @@
           "source_product_name": "Sissy trappista sajt egész kg",
           "amount": 2390.0,
           "unit_amount": 2390.0,
+          "unit": "kg",
+          "unit_title": "db",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "ALDI": {
+          "source_product_id": "2834050000004",
+          "source_product_name": "Tolle trappista sajt kg",
+          "amount": 1990.0,
+          "unit_amount": 1990.0,
           "unit": "kg",
           "unit_title": "db",
           "packaging": "1",
@@ -274,16 +284,6 @@
           "source_product_name": "Auchan Kedvenc trappista sajt Ft/kg",
           "amount": 2389.0,
           "unit_amount": 2389.0,
-          "unit": "kg",
-          "unit_title": "db",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "ALDI": {
-          "source_product_id": "aldi-321828",
-          "source_product_name": "Kokárdás trappista sajt kg",
-          "amount": 2390.0,
-          "unit_amount": 2390.0,
           "unit": "kg",
           "unit_title": "db",
           "packaging": "1",
@@ -396,10 +396,10 @@
       "expected_unit": "db",
       "prices": {
         "Penny": 47.63,
+        "Tesco": 47.8333,
         "Lidl": 47.9,
         "Auchan": 49.0,
         "ALDI": 49.97,
-        "Tesco": 50.1667,
         "SPAR": 52.1
       },
       "selected_products": {
@@ -408,6 +408,16 @@
           "source_product_name": "Tálcás tojás s méretű 30db",
           "amount": 1429.0,
           "unit_amount": 47.63,
+          "unit": "db",
+          "unit_title": "doboz",
+          "packaging": "30",
+          "price_type": "NORMAL"
+        },
+        "Tesco": {
+          "source_product_id": "5998244700044",
+          "source_product_name": "MU 30DB TOJÁS 1290G S MÉRET QQ",
+          "amount": 1435.0,
+          "unit_amount": 47.8333,
           "unit": "db",
           "unit_title": "doboz",
           "packaging": "30",
@@ -438,16 +448,6 @@
           "source_product_name": "Ketreces tojás 30 db S",
           "amount": 1499.0,
           "unit_amount": 49.97,
-          "unit": "db",
-          "unit_title": "doboz",
-          "packaging": "30",
-          "price_type": "NORMAL"
-        },
-        "Tesco": {
-          "source_product_id": "5998244700044",
-          "source_product_name": "MU 30DB TOJÁS 1290G S MÉRET QQ",
-          "amount": 1505.0,
-          "unit_amount": 50.1667,
           "unit": "db",
           "unit_title": "doboz",
           "packaging": "30",
@@ -686,7 +686,7 @@
         },
         "Penny": {
           "source_product_id": "penny-10248",
-          "source_product_name": "Friss csirkemellfilé kg",
+          "source_product_name": "Kedvenc Hentese friss csirkemellfilé kg",
           "amount": 1979.0,
           "unit_amount": 1979.0,
           "unit": "kg",
@@ -1089,11 +1089,11 @@
       "expected_unit": "kg",
       "prices": {
         "ALDI": 599.0,
+        "Penny": 826.67,
         "SPAR": 602.0,
         "Auchan": 628.0,
         "Tesco": 765.0,
-        "Lidl": 819.0,
-        "Penny": 826.67
+        "Lidl": 819.0
       },
       "selected_products": {
         "ALDI": {
@@ -1104,6 +1104,16 @@
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Penny": {
+          "source_product_id": "penny-375",
+          "source_product_name": "Hazai lecsópaprika 750gr",
+          "amount": 620.0,
+          "unit_amount": 826.67,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "0.75",
           "price_type": "NORMAL"
         },
         "SPAR": {
@@ -1144,16 +1154,6 @@
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-375",
-          "source_product_name": "Hazai lecsópaprika 750gr",
-          "amount": 620.0,
-          "unit_amount": 826.67,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "0.75",
           "price_type": "NORMAL"
         }
       },
@@ -1245,7 +1245,7 @@
         "Auchan": 196.0,
         "Lidl": 198.0,
         "SPAR": 255.0,
-        "Penny": 329.0,
+        "Penny": 319.0,
         "Tesco": 263.0,
         "ALDI": 289.0
       },
@@ -1281,12 +1281,12 @@
           "price_type": "NORMAL"
         },
         "Penny": {
-          "source_product_id": "penny-555",
-          "source_product_name": "Piros burgonya lédig kg",
-          "amount": 329.0,
-          "unit_amount": 329.0,
+          "source_product_id": "penny-204",
+          "source_product_name": "Burgonya lédig sárga kg",
+          "amount": 319.0,
+          "unit_amount": 319.0,
           "unit": "kg",
-          "unit_title": "csomag",
+          "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
         },
@@ -1875,8 +1875,8 @@
           "price_type": "NORMAL"
         },
         "SPAR": {
-          "source_product_id": "5999033894852",
-          "source_product_name": "S-Budget Color mosószergél 40 mosás 3 l",
+          "source_product_id": "5999033894845",
+          "source_product_name": "S-Budget univerzális mosószergél 40 mosás 3 l",
           "amount": 1349.0,
           "unit_amount": 449.67,
           "unit": "l",
