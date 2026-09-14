@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-07T10:34:01Z",
+  "updated_at": "2026-09-14T10:51:02Z",
   "status": "ok",
   "source": "linkedin_public_jobs_search",
   "method": "non_login_public_search_best_effort",
@@ -10,10 +10,10 @@
       "company": "Auchan",
       "linkedin_active_ads_hint": 8,
       "category_scores": {
-        "store": 2,
-        "warehouse": 3,
-        "management": 4,
-        "office": 4,
+        "store": 3,
+        "warehouse": 2,
+        "management": 5,
+        "office": 6,
         "expansion": 0
       },
       "dominant_signal": "logistics_recruitment_signal",
@@ -29,7 +29,7 @@
             "store": 0,
             "warehouse": 1,
             "management": 1,
-            "office": 1,
+            "office": 4,
             "expansion": 0
           }
         },
@@ -37,12 +37,12 @@
           "query": "Auchan Retail Magyarország",
           "url": "https://www.linkedin.com/jobs/search/?keywords=Auchan+Retail+Magyarorsz%C3%A1g&location=Hungary",
           "status": "fetched",
-          "count_hint": 1,
+          "count_hint": 2,
           "category_scores": {
-            "store": 2,
-            "warehouse": 2,
-            "management": 3,
-            "office": 3,
+            "store": 3,
+            "warehouse": 1,
+            "management": 4,
+            "office": 2,
             "expansion": 0
           }
         }
@@ -51,7 +51,7 @@
     {
       "id": "lidl",
       "company": "Lidl",
-      "linkedin_active_ads_hint": 945,
+      "linkedin_active_ads_hint": 959,
       "category_scores": {
         "store": 0,
         "warehouse": 3,
@@ -67,7 +67,7 @@
           "query": "Lidl Magyarország",
           "url": "https://www.linkedin.com/jobs/search/?keywords=Lidl+Magyarorsz%C3%A1g&location=Hungary",
           "status": "fetched",
-          "count_hint": 945,
+          "count_hint": 959,
           "category_scores": {
             "store": 0,
             "warehouse": 2,
@@ -94,12 +94,12 @@
     {
       "id": "aldi",
       "company": "ALDI",
-      "linkedin_active_ads_hint": 1,
+      "linkedin_active_ads_hint": 979,
       "category_scores": {
         "store": 0,
         "warehouse": 0,
-        "management": 4,
-        "office": 4,
+        "management": 2,
+        "office": 2,
         "expansion": 0
       },
       "dominant_signal": "management_recruitment_signal",
@@ -110,12 +110,12 @@
           "query": "ALDI Magyarország",
           "url": "https://www.linkedin.com/jobs/search/?keywords=ALDI+Magyarorsz%C3%A1g&location=Hungary",
           "status": "fetched",
-          "count_hint": 1,
+          "count_hint": 979,
           "category_scores": {
             "store": 0,
             "warehouse": 0,
-            "management": 2,
-            "office": 2,
+            "management": 1,
+            "office": 1,
             "expansion": 0
           }
         },
@@ -127,8 +127,8 @@
           "category_scores": {
             "store": 0,
             "warehouse": 0,
-            "management": 2,
-            "office": 2,
+            "management": 1,
+            "office": 1,
             "expansion": 0
           }
         }
@@ -139,10 +139,10 @@
       "company": "SPAR",
       "linkedin_active_ads_hint": 4,
       "category_scores": {
-        "store": 1,
-        "warehouse": 3,
+        "store": 2,
+        "warehouse": 2,
         "management": 5,
-        "office": 6,
+        "office": 7,
         "expansion": 0
       },
       "dominant_signal": "logistics_recruitment_signal",
@@ -157,7 +157,7 @@
           "category_scores": {
             "store": 1,
             "warehouse": 1,
-            "management": 2,
+            "management": 3,
             "office": 3,
             "expansion": 0
           }
@@ -166,12 +166,12 @@
           "query": "SPAR Hungary",
           "url": "https://www.linkedin.com/jobs/search/?keywords=SPAR+Hungary&location=Hungary",
           "status": "fetched",
-          "count_hint": null,
+          "count_hint": 4,
           "category_scores": {
-            "store": 0,
-            "warehouse": 2,
-            "management": 3,
-            "office": 3,
+            "store": 1,
+            "warehouse": 1,
+            "management": 2,
+            "office": 4,
             "expansion": 0
           }
         }
@@ -185,7 +185,7 @@
         "store": 0,
         "warehouse": 3,
         "management": 4,
-        "office": 7,
+        "office": 8,
         "expansion": 0
       },
       "dominant_signal": "logistics_recruitment_signal",
@@ -201,7 +201,7 @@
             "store": 0,
             "warehouse": 2,
             "management": 2,
-            "office": 3,
+            "office": 5,
             "expansion": 0
           }
         },
@@ -214,7 +214,7 @@
             "store": 0,
             "warehouse": 1,
             "management": 2,
-            "office": 4,
+            "office": 3,
             "expansion": 0
           }
         }
@@ -228,10 +228,10 @@
         "store": 0,
         "warehouse": 2,
         "management": 4,
-        "office": 7,
-        "expansion": 1
+        "office": 8,
+        "expansion": 0
       },
-      "dominant_signal": "possible_expansion_signal",
+      "dominant_signal": "logistics_recruitment_signal",
       "source_confidence": "medium",
       "source_note": "Publikus LinkedIn Jobs keresési oldal alapján. Nem belépett scraping, nem hivatalos API. Blokkolás esetén a jel alacsony megbízhatóságú.",
       "queries": [
@@ -245,7 +245,7 @@
             "warehouse": 1,
             "management": 2,
             "office": 3,
-            "expansion": 1
+            "expansion": 0
           }
         },
         {
@@ -257,7 +257,7 @@
             "store": 0,
             "warehouse": 1,
             "management": 2,
-            "office": 4,
+            "office": 5,
             "expansion": 0
           }
         }
