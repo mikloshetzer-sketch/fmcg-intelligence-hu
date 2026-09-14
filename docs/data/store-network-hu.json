@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-07T08:17:12.112104+00:00",
+  "updated_at": "2026-09-14T08:53:55.398495+00:00",
   "version": "store-network-hu-v2.0-non-lidl-osm",
   "scope": "Hungarian FMCG store network from OSM + optional overrides",
   "method_note": "Ez a verzió Lidl nélkül építi a bolthálózatot. ALDI, SPAR, Tesco, Auchan és Penny OSM/Overpass alapján frissül. Ha egy láncra 0 találat jön, a script megtartja a korábbi store-network-hu.json adott láncra vonatkozó adatait. Lidl külön, saját üzletlista alapján kerül majd be.",
@@ -9629,7 +9629,7 @@
       "city": "Alsópáhok",
       "area": "Alsópáhok",
       "region": "n.a.",
-      "address": "8394 Alsópáhok, Hévizi utca 18",
+      "address": "8394 Alsópáhok, Hévízi utca 18",
       "lat": 46.77818,
       "lon": 17.183522,
       "source": "openstreetmap_overpass",
@@ -9640,7 +9640,7 @@
       "keywords": [
         "Spar",
         "SPAR Alsópáhok",
-        "8394 Alsópáhok, Hévizi utca 18"
+        "8394 Alsópáhok, Hévízi utca 18"
       ]
     },
     {
@@ -10547,6 +10547,27 @@
       ]
     },
     {
+      "store_id": "spar_budapest_spar_1970729503",
+      "company": "SPAR",
+      "name": "Spar",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1052 Budapest, Károly körút 22-24",
+      "lat": 47.495886,
+      "lon": 19.05791,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 1970729503,
+      "brand": "Spar",
+      "operator": "SPAR Magyarország Kereskedelmi Kft.",
+      "keywords": [
+        "Spar",
+        "SPAR Budapest",
+        "1052 Budapest, Károly körút 22-24"
+      ]
+    },
+    {
       "store_id": "spar_budapest_spar_2076963676",
       "company": "SPAR",
       "name": "Spar",
@@ -10554,8 +10575,8 @@
       "area": "Budapest",
       "region": "Közép-Magyarország",
       "address": "1088 Budapest, Rákóczi út 19",
-      "lat": 47.495226,
-      "lon": 19.064541,
+      "lat": 47.49521,
+      "lon": 19.064626,
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 2076963676,
@@ -11303,27 +11324,6 @@
       ]
     },
     {
-      "store_id": "spar_budapest_spar_40813408",
-      "company": "SPAR",
-      "name": "Spar",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1188 Budapest, Alacskai út 3",
-      "lat": 47.416045,
-      "lon": 19.207266,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 40813408,
-      "brand": "Spar",
-      "operator": "",
-      "keywords": [
-        "Spar",
-        "SPAR Budapest",
-        "1188 Budapest, Alacskai út 3"
-      ]
-    },
-    {
       "store_id": "spar_budapest_spar_46907460",
       "company": "SPAR",
       "name": "Spar",
@@ -11751,8 +11751,8 @@
       "area": "Budapest",
       "region": "Közép-Magyarország",
       "address": "1186 Budapest, Cziffra György utca 15/b",
-      "lat": 47.433057,
-      "lon": 19.178332,
+      "lat": 47.433074,
+      "lon": 19.178274,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 243721853,
@@ -11996,6 +11996,27 @@
       ]
     },
     {
+      "store_id": "spar_budapest_spar_683521450",
+      "company": "SPAR",
+      "name": "Spar",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "Budapest, Kőrösi Csoma Sándor út",
+      "lat": 47.488234,
+      "lon": 19.13522,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 683521450,
+      "brand": "Spar",
+      "operator": "",
+      "keywords": [
+        "Spar",
+        "SPAR Budapest",
+        "Budapest, Kőrösi Csoma Sándor út"
+      ]
+    },
+    {
       "store_id": "spar_budapest_spar_911532658",
       "company": "SPAR",
       "name": "Spar",
@@ -12143,27 +12164,6 @@
       ]
     },
     {
-      "store_id": "spar_budapest_spar_express_9828470893",
-      "company": "SPAR",
-      "name": "Spar Express",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1112 Budapest, Budaörsi út 112",
-      "lat": 47.465195,
-      "lon": 19.013636,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 9828470893,
-      "brand": "Spar",
-      "operator": "",
-      "keywords": [
-        "Spar Express",
-        "SPAR Budapest",
-        "1112 Budapest, Budaörsi út 112"
-      ]
-    },
-    {
       "store_id": "spar_budapest_spar_express_11409081745",
       "company": "SPAR",
       "name": "Spar Express",
@@ -12213,7 +12213,7 @@
       "area": "Budapest",
       "region": "Közép-Magyarország",
       "address": "1137 Budapest, Jászai Mari tér 5",
-      "lat": 47.514082,
+      "lat": 47.514118,
       "lon": 19.048365,
       "source": "openstreetmap_overpass",
       "osm_type": "node",
@@ -13368,8 +13368,8 @@
       "area": "Kecskemét",
       "region": "Dél-Alföld",
       "address": "6000 Kecskemét, Korona utca 2",
-      "lat": 46.907498,
-      "lon": 19.688681,
+      "lat": 46.907476,
+      "lon": 19.688704,
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 1296374281,
@@ -13410,7 +13410,7 @@
       "area": "Kecskemét",
       "region": "Dél-Alföld",
       "address": "6000 Kecskemét, Március 15. utca 5/A",
-      "lat": 46.918985,
+      "lat": 46.918984,
       "lon": 19.673661,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
@@ -13662,8 +13662,8 @@
       "area": "Lenti",
       "region": "n.a.",
       "address": "8960 Lenti, Zrínyi Miklós utca 2",
-      "lat": 46.623992,
-      "lon": 16.54142,
+      "lat": 46.624025,
+      "lon": 16.541434,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 282238687,
@@ -14487,7 +14487,7 @@
       "osm_type": "node",
       "osm_id": 5047018730,
       "brand": "Spar",
-      "operator": "Sió Top-Ker Kft.",
+      "operator": "",
       "keywords": [
         "Spar",
         "SPAR Siófok",
@@ -14508,7 +14508,7 @@
       "osm_type": "way",
       "osm_id": 289967156,
       "brand": "Spar",
-      "operator": "Sió Top-Ker Kft.",
+      "operator": "SPAR Magyarország Kft.",
       "keywords": [
         "Spar",
         "SPAR Siófok",
@@ -14534,27 +14534,6 @@
         "Spar Express",
         "SPAR Siófok",
         "8600 Siófok, Vak Bottyán utca 1"
-      ]
-    },
-    {
-      "store_id": "spar_siofok_spar_market_13324162280",
-      "company": "SPAR",
-      "name": "Spar Market",
-      "city": "Siófok",
-      "area": "Siófok",
-      "region": "Dél-Dunántúl",
-      "address": "Siófok, Újpiac tér",
-      "lat": 46.907047,
-      "lon": 18.057573,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 13324162280,
-      "brand": "Spar",
-      "operator": "Goldfinger Kft.",
-      "keywords": [
-        "Spar Market",
-        "SPAR Siófok",
-        "Siófok, Újpiac tér"
       ]
     },
     {
@@ -15062,27 +15041,6 @@
       ]
     },
     {
-      "store_id": "spar_szentgotthard_spar_389375675",
-      "company": "SPAR",
-      "name": "Spar",
-      "city": "Szentgotthárd",
-      "area": "Szentgotthárd",
-      "region": "n.a.",
-      "address": "9970 Szentgotthárd, Füzesi út 10",
-      "lat": 46.960675,
-      "lon": 16.276195,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 389375675,
-      "brand": "Spar",
-      "operator": "",
-      "keywords": [
-        "Spar",
-        "SPAR Szentgotthárd",
-        "9970 Szentgotthárd, Füzesi út 10"
-      ]
-    },
-    {
       "store_id": "spar_szentlorinc_spar_314074113",
       "company": "SPAR",
       "name": "Spar",
@@ -15153,8 +15111,8 @@
       "area": "Szigetvár",
       "region": "n.a.",
       "address": "7900 Szigetvár, József Attila utca 81/1",
-      "lat": 46.048874,
-      "lon": 17.811006,
+      "lat": 46.048881,
+      "lon": 17.811014,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 373173228,
@@ -16259,6 +16217,27 @@
       ]
     },
     {
+      "store_id": "spar_na_despar_13059201611",
+      "company": "SPAR",
+      "name": "Despar",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 46.772917,
+      "lon": 17.271633,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 13059201611,
+      "brand": "Spar",
+      "operator": "",
+      "keywords": [
+        "Despar",
+        "SPAR n.a.",
+        "n.a."
+      ]
+    },
+    {
       "store_id": "spar_na_spar_293152477",
       "company": "SPAR",
       "name": "Spar",
@@ -16273,6 +16252,27 @@
       "osm_id": 293152477,
       "brand": "Spar",
       "operator": "",
+      "keywords": [
+        "Spar",
+        "SPAR n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "spar_na_spar_318618226",
+      "company": "SPAR",
+      "name": "Spar",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.458102,
+      "lon": 19.146398,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 318618226,
+      "brand": "Spar",
+      "operator": "Spar",
       "keywords": [
         "Spar",
         "SPAR n.a.",
@@ -16713,7 +16713,7 @@
       "osm_type": "node",
       "osm_id": 1770420617,
       "brand": "Spar",
-      "operator": "Sió Top-Ker Kft.",
+      "operator": "",
       "keywords": [
         "Spar",
         "SPAR n.a.",
@@ -16784,6 +16784,27 @@
       ]
     },
     {
+      "store_id": "spar_na_spar_1843021451",
+      "company": "SPAR",
+      "name": "Spar",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 48.106513,
+      "lon": 19.809715,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 1843021451,
+      "brand": "Spar",
+      "operator": "",
+      "keywords": [
+        "Spar",
+        "SPAR n.a.",
+        "n.a."
+      ]
+    },
+    {
       "store_id": "spar_na_spar_1866025012",
       "company": "SPAR",
       "name": "Spar",
@@ -16791,8 +16812,8 @@
       "area": "n.a.",
       "region": "n.a.",
       "address": "n.a.",
-      "lat": 47.506363,
-      "lon": 19.076376,
+      "lat": 47.506377,
+      "lon": 19.076379,
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 1866025012,
@@ -17330,6 +17351,27 @@
       ]
     },
     {
+      "store_id": "spar_na_spar_3470101953",
+      "company": "SPAR",
+      "name": "Spar",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 46.697142,
+      "lon": 19.031772,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 3470101953,
+      "brand": "Spar",
+      "operator": "",
+      "keywords": [
+        "Spar",
+        "SPAR n.a.",
+        "n.a."
+      ]
+    },
+    {
       "store_id": "spar_na_spar_3479932378",
       "company": "SPAR",
       "name": "Spar",
@@ -17463,8 +17505,8 @@
       "area": "n.a.",
       "region": "n.a.",
       "address": "n.a.",
-      "lat": 47.515816,
-      "lon": 19.058938,
+      "lat": 47.515833,
+      "lon": 19.058934,
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 4735607198,
@@ -17531,6 +17573,27 @@
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 4933470149,
+      "brand": "Spar",
+      "operator": "",
+      "keywords": [
+        "Spar",
+        "SPAR n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "spar_na_spar_4933474751",
+      "company": "SPAR",
+      "name": "Spar",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.491299,
+      "lon": 18.315801,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 4933474751,
       "brand": "Spar",
       "operator": "",
       "keywords": [
@@ -17631,8 +17694,8 @@
       "area": "n.a.",
       "region": "n.a.",
       "address": "n.a.",
-      "lat": 47.499817,
-      "lon": 19.068878,
+      "lat": 47.499808,
+      "lon": 19.068886,
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 6404861507,
@@ -18191,6 +18254,27 @@
       ]
     },
     {
+      "store_id": "spar_na_spar_40813408",
+      "company": "SPAR",
+      "name": "Spar",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.416045,
+      "lon": 19.207266,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 40813408,
+      "brand": "Spar",
+      "operator": "",
+      "keywords": [
+        "Spar",
+        "SPAR n.a.",
+        "n.a."
+      ]
+    },
+    {
       "store_id": "spar_na_spar_78220327",
       "company": "SPAR",
       "name": "Spar",
@@ -18373,6 +18457,27 @@
       "osm_id": 131027123,
       "brand": "Spar",
       "operator": "",
+      "keywords": [
+        "Spar",
+        "SPAR n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "spar_na_spar_131467936",
+      "company": "SPAR",
+      "name": "Spar",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.585098,
+      "lon": 19.116308,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 131467936,
+      "brand": "Spar",
+      "operator": "Bezárt",
       "keywords": [
         "Spar",
         "SPAR n.a.",
@@ -18723,8 +18828,8 @@
       "area": "n.a.",
       "region": "n.a.",
       "address": "Kossuth utca",
-      "lat": 46.219565,
-      "lon": 20.477715,
+      "lat": 46.219588,
+      "lon": 20.477655,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 242562824,
@@ -19031,6 +19136,27 @@
       ]
     },
     {
+      "store_id": "spar_na_spar_325680373",
+      "company": "SPAR",
+      "name": "Spar",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.018153,
+      "lon": 20.286239,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 325680373,
+      "brand": "Spar",
+      "operator": "",
+      "keywords": [
+        "Spar",
+        "SPAR n.a.",
+        "n.a."
+      ]
+    },
+    {
       "store_id": "spar_na_spar_334888270",
       "company": "SPAR",
       "name": "Spar",
@@ -19043,27 +19169,6 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 334888270,
-      "brand": "Spar",
-      "operator": "",
-      "keywords": [
-        "Spar",
-        "SPAR n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "spar_na_spar_343143954",
-      "company": "SPAR",
-      "name": "Spar",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.509805,
-      "lon": 18.003055,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 343143954,
       "brand": "Spar",
       "operator": "",
       "keywords": [
@@ -19325,27 +19430,6 @@
       ]
     },
     {
-      "store_id": "spar_na_spar_551511267",
-      "company": "SPAR",
-      "name": "Spar",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.73959,
-      "lon": 20.408527,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 551511267,
-      "brand": "Spar",
-      "operator": "",
-      "keywords": [
-        "Spar",
-        "SPAR n.a.",
-        "n.a."
-      ]
-    },
-    {
       "store_id": "spar_na_spar_586598747",
       "company": "SPAR",
       "name": "Spar",
@@ -19400,27 +19484,6 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 631407537,
-      "brand": "Spar",
-      "operator": "",
-      "keywords": [
-        "Spar",
-        "SPAR n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "spar_na_spar_683521450",
-      "company": "SPAR",
-      "name": "Spar",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.488234,
-      "lon": 19.13522,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 683521450,
       "brand": "Spar",
       "operator": "",
       "keywords": [
@@ -19633,27 +19696,6 @@
       "osm_id": 1303599544,
       "brand": "Spar",
       "operator": "",
-      "keywords": [
-        "Spar",
-        "SPAR n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "spar_na_spar_1555338295",
-      "company": "SPAR",
-      "name": "Spar",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.458073,
-      "lon": 19.146377,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 1555338295,
-      "brand": "Spar",
-      "operator": "Spar",
       "keywords": [
         "Spar",
         "SPAR n.a.",
@@ -19967,6 +20009,27 @@
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 9828234072,
+      "brand": "Spar",
+      "operator": "",
+      "keywords": [
+        "Spar Express",
+        "SPAR n.a.",
+        "n.a."
+      ]
+    },
+    {
+      "store_id": "spar_na_spar_express_9828470893",
+      "company": "SPAR",
+      "name": "Spar Express",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.465195,
+      "lon": 19.013636,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 9828470893,
       "brand": "Spar",
       "operator": "",
       "keywords": [
@@ -20354,6 +20417,27 @@
       ]
     },
     {
+      "store_id": "spar_na_spar_market_13324162280",
+      "company": "SPAR",
+      "name": "Spar Market",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 46.907047,
+      "lon": 18.057573,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 13324162280,
+      "brand": "Spar",
+      "operator": "",
+      "keywords": [
+        "Spar Market",
+        "SPAR n.a.",
+        "n.a."
+      ]
+    },
+    {
       "store_id": "spar_na_spar_partner_4939176958",
       "company": "SPAR",
       "name": "Spar Partner",
@@ -20370,27 +20454,6 @@
       "operator": "",
       "keywords": [
         "Spar Partner",
-        "SPAR n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "spar_na_spar_quick_easy_13859812084",
-      "company": "SPAR",
-      "name": "Spar Quick & Easy",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.639708,
-      "lon": 19.124989,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 13859812084,
-      "brand": "Spar",
-      "operator": "",
-      "keywords": [
-        "Spar Quick & Easy",
         "SPAR n.a.",
         "n.a."
       ]
@@ -20498,27 +20561,6 @@
         "Interspar",
         "SPAR Ózd",
         "3600 Ózd, Sárli út 4"
-      ]
-    },
-    {
-      "store_id": "spar_ullo_spar_564156668",
-      "company": "SPAR",
-      "name": "Spar",
-      "city": "Üllő",
-      "area": "Üllő",
-      "region": "n.a.",
-      "address": "2225 Üllő, Malom utca 2",
-      "lat": 47.383161,
-      "lon": 19.350582,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 564156668,
-      "brand": "Spar",
-      "operator": "Hepi-Trade Kft.",
-      "keywords": [
-        "Spar",
-        "SPAR Üllő",
-        "2225 Üllő, Malom utca 2"
       ]
     },
     {
