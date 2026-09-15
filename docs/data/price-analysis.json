@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-14T09:18:13Z",
+  "updated_at": "2026-09-15T09:00:02Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "method": "product-level price leadership and spread analysis",
@@ -57,37 +57,37 @@
   ],
   "value_scores": [
     {
-      "company": "Lidl",
-      "price_index": 94,
-      "value_score": 106,
-      "index_coverage": 24
-    },
-    {
       "company": "Auchan",
       "price_index": 95,
       "value_score": 105,
       "index_coverage": 25
     },
     {
-      "company": "ALDI",
-      "price_index": 98,
-      "value_score": 102,
+      "company": "Lidl",
+      "price_index": 95,
+      "value_score": 105,
       "index_coverage": 24
     },
     {
       "company": "SPAR",
-      "price_index": 101,
-      "value_score": 99,
+      "price_index": 99,
+      "value_score": 101,
       "index_coverage": 25
     },
     {
-      "company": "Penny",
-      "price_index": 105,
-      "value_score": 95,
+      "company": "ALDI",
+      "price_index": 100,
+      "value_score": 100,
       "index_coverage": 24
     },
     {
       "company": "Tesco",
+      "price_index": 105,
+      "value_score": 95,
+      "index_coverage": 25
+    },
+    {
+      "company": "Penny",
       "price_index": 106,
       "value_score": 94,
       "index_coverage": 25
@@ -110,12 +110,12 @@
           "coverage": 5
         },
         {
-          "company": "Penny",
-          "category_index": 100,
+          "company": "SPAR",
+          "category_index": 99,
           "coverage": 5
         },
         {
-          "company": "SPAR",
+          "company": "Penny",
           "category_index": 100,
           "coverage": 5
         },
@@ -208,16 +208,11 @@
     {
       "category": "Háztartás",
       "leader": "Auchan",
-      "leader_index": 75,
+      "leader_index": 76,
       "ranking": [
         {
           "company": "Auchan",
-          "category_index": 75,
-          "coverage": 2
-        },
-        {
-          "company": "ALDI",
-          "category_index": 87,
+          "category_index": 76,
           "coverage": 2
         },
         {
@@ -227,18 +222,23 @@
         },
         {
           "company": "SPAR",
-          "category_index": 111,
+          "category_index": 92,
+          "coverage": 2
+        },
+        {
+          "company": "ALDI",
+          "category_index": 106,
           "coverage": 2
         },
         {
           "company": "Tesco",
-          "category_index": 119,
+          "category_index": 110,
           "coverage": 2
         },
         {
           "company": "Penny",
-          "category_index": 124,
-          "coverage": 1
+          "category_index": 120,
+          "coverage": 2
         }
       ]
     },
@@ -254,27 +254,27 @@
         },
         {
           "company": "Lidl",
-          "category_index": 95,
+          "category_index": 100,
           "coverage": 4
         },
         {
           "company": "Tesco",
-          "category_index": 102,
+          "category_index": 101,
           "coverage": 4
         },
         {
           "company": "ALDI",
-          "category_index": 103,
+          "category_index": 102,
           "coverage": 4
         },
         {
           "company": "Penny",
-          "category_index": 103,
+          "category_index": 102,
           "coverage": 4
         },
         {
           "company": "SPAR",
-          "category_index": 104,
+          "category_index": 103,
           "coverage": 4
         }
       ]
@@ -396,13 +396,13 @@
       "product": "Toalettpapír",
       "category": "Háztartás",
       "cheapest_company": "Auchan",
-      "cheapest_price": 42.0,
+      "cheapest_price": 51.0,
       "most_expensive_company": "Tesco",
       "most_expensive_price": 136.22,
-      "average_price": 92.62,
-      "spread_pct": 224.33,
+      "average_price": 107.19,
+      "spread_pct": 167.1,
       "competition_intensity": "nagy árszórás",
-      "coverage": 4
+      "coverage": 5
     },
     {
       "product": "Paradicsom",
@@ -459,7 +459,7 @@
       "cheapest_price": 490.0,
       "most_expensive_company": "Auchan",
       "most_expensive_price": 710.0,
-      "average_price": 626.33,
+      "average_price": 619.5,
       "spread_pct": 44.9,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
@@ -471,7 +471,7 @@
       "cheapest_price": 1369.0,
       "most_expensive_company": "SPAR",
       "most_expensive_price": 1954.44,
-      "average_price": 1661.53,
+      "average_price": 1719.87,
       "spread_pct": 42.76,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
@@ -615,7 +615,7 @@
       "cheapest_price": 290.0,
       "most_expensive_company": "Tesco",
       "most_expensive_price": 329.0,
-      "average_price": 299.0,
+      "average_price": 298.17,
       "spread_pct": 13.45,
       "competition_intensity": "közepes árverseny",
       "coverage": 6
@@ -697,9 +697,9 @@
     {
       "product": "Toalettpapír",
       "category": "Háztartás",
-      "spread_pct": 224.33,
+      "spread_pct": 167.1,
       "competition_intensity": "nagy árszórás",
-      "coverage": 4
+      "coverage": 5
     },
     {
       "product": "Paradicsom",
