@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-15T09:00:02Z",
+  "updated_at": "2026-09-16T08:52:50Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -784,7 +784,7 @@
         "ALDI": 325.0,
         "Lidl": 325.0,
         "SPAR": 357.5,
-        "Auchan": 405.0,
+        "Auchan": 398.0,
         "Penny": 499.0
       },
       "selected_products": {
@@ -831,8 +831,8 @@
         "Auchan": {
           "source_product_id": "2158990000000",
           "source_product_name": "Kalodás piros alma Ft/kg",
-          "amount": 405.0,
-          "unit_amount": 405.0,
+          "amount": 398.0,
+          "unit_amount": 398.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1012,7 +1012,7 @@
       "expected_unit": "kg",
       "prices": {
         "Lidl": 399.0,
-        "Auchan": 419.0,
+        "Auchan": 433.0,
         "Penny": 799.0,
         "ALDI": 799.0,
         "Tesco": 822.0,
@@ -1032,8 +1032,8 @@
         "Auchan": {
           "source_product_id": "5998985599686",
           "source_product_name": "Paradicsom 1 kg",
-          "amount": 419.0,
-          "unit_amount": 419.0,
+          "amount": 433.0,
+          "unit_amount": 433.0,
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "1",
@@ -1091,7 +1091,7 @@
         "Penny": 826.67,
         "ALDI": 599.0,
         "SPAR": 602.0,
-        "Auchan": 628.0,
+        "Auchan": 698.0,
         "Lidl": 749.0,
         "Tesco": 765.0
       },
@@ -1129,8 +1129,8 @@
         "Auchan": {
           "source_product_id": "2182050000006",
           "source_product_name": "Étkezési paprika Ft/kg",
-          "amount": 628.0,
-          "unit_amount": 628.0,
+          "amount": 698.0,
+          "unit_amount": 698.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1243,11 +1243,11 @@
       "expected_unit": "kg",
       "prices": {
         "Lidl": 194.5,
-        "Auchan": 196.0,
+        "Auchan": 202.0,
         "SPAR": 255.0,
         "Penny": 319.0,
         "Tesco": 270.0,
-        "ALDI": 289.0
+        "ALDI": 287.8
       },
       "selected_products": {
         "Lidl": {
@@ -1261,13 +1261,13 @@
           "price_type": "NORMAL"
         },
         "Auchan": {
-          "source_product_id": "5999863235078",
-          "source_product_name": "Piros burgonya 10 kg",
-          "amount": 1955.0,
-          "unit_amount": 196.0,
+          "source_product_id": "2156440000006",
+          "source_product_name": "Sárga burgonya Ft/kg",
+          "amount": 202.0,
+          "unit_amount": 202.0,
           "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "10",
+          "unit_title": "kg",
+          "packaging": "1",
           "price_type": "NORMAL"
         },
         "SPAR": {
@@ -1301,13 +1301,13 @@
           "price_type": "NORMAL"
         },
         "ALDI": {
-          "source_product_id": "aldi-329547",
-          "source_product_name": "Burgonya étkezési lédig",
-          "amount": 289.0,
-          "unit_amount": 289.0,
+          "source_product_id": "aldi-329530",
+          "source_product_name": "Burgonya étkezési 5kg",
+          "amount": 1439.0,
+          "unit_amount": 287.8,
           "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
+          "unit_title": "csomag",
+          "packaging": "5",
           "price_type": "NORMAL"
         }
       },
@@ -1704,13 +1704,23 @@
       "category": "Alapélelmiszer",
       "expected_unit": "kg",
       "prices": {
+        "Tesco": 549.0,
         "Lidl": 549.0,
-        "Penny": 549.0,
+        "Penny": 459.0,
         "SPAR": 579.0,
-        "Tesco": 599.0,
         "Auchan": 599.0
       },
       "selected_products": {
+        "Tesco": {
+          "source_product_id": "5051007090148",
+          "source_product_name": "HEARTY FOOD RIZS 1KG ",
+          "amount": 549.0,
+          "unit_amount": 549.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "Lidl": {
           "source_product_id": "lidl-6402831",
           "source_product_name": "Golden Sun Hosszú szemű \\\"B\\\" rizs, 1kg",
@@ -1724,8 +1734,8 @@
         "Penny": {
           "source_product_id": "penny-27554",
           "source_product_name": "B rizs",
-          "amount": 549.0,
-          "unit_amount": 549.0,
+          "amount": 459.0,
+          "unit_amount": 459.0,
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "1",
@@ -1736,16 +1746,6 @@
           "source_product_name": "S-Budget ¨B¨ minőségű rizs 1 kg",
           "amount": 579.0,
           "unit_amount": 579.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Tesco": {
-          "source_product_id": "5051007090148",
-          "source_product_name": "HEARTY FOOD RIZS 1KG ",
-          "amount": 599.0,
-          "unit_amount": 599.0,
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "1",
@@ -1770,7 +1770,7 @@
       "category": "Háztartás",
       "expected_unit": "db",
       "prices": {
-        "SPAR": 102.5,
+        "SPAR": 105.83,
         "Auchan": 51.0,
         "Tesco": 136.219,
         "ALDI": 121.5,
@@ -1778,13 +1778,13 @@
       },
       "selected_products": {
         "SPAR": {
-          "source_product_id": "8004260013154",
-          "source_product_name": "Regina Delicate Refreshing Aloe toalettpapír 3 rétegű 16 tekercs",
-          "amount": 1640.0,
-          "unit_amount": 102.5,
+          "source_product_id": "6414301080601",
+          "source_product_name": "Tento Family Delicate illatmentes toalettpapír 3 rétegű 24 tekercs",
+          "amount": 2540.0,
+          "unit_amount": 105.83,
           "unit": "db",
           "unit_title": "csomag",
-          "packaging": "16",
+          "packaging": "24",
           "price_type": "NORMAL"
         },
         "Auchan": {
