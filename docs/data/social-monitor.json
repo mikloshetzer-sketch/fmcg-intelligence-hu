@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-09-17T17:11:17.519695+00:00",
+  "updated_at": "2026-09-17T21:35:30.802164+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-09-17T17:11:17.519695+00:00",
+    "updated_at": "2026-09-17T21:35:30.802164+00:00",
     "leader_social": "Lidl",
     "leader_social_index": 33,
     "dominant_social_topic": "árak és akciók",
@@ -173,21 +173,21 @@
     },
     {
       "company": "Tesco",
-      "social_mentions": 0,
-      "raw_social_mentions": 0,
-      "dashboard_mentions": 0,
+      "social_mentions": 1,
+      "raw_social_mentions": 1,
+      "dashboard_mentions": 1,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 0,
-      "hu_relevant_mentions": 0,
-      "social_index": 0,
+      "weighted_social_mentions": 1.0,
+      "hu_relevant_mentions": 1,
+      "social_index": 16,
       "social_sources": {
-        "reddit": 0,
+        "reddit": 1,
         "youtube": 0,
         "mastodon": 0
       },
       "raw_social_sources": {
-        "reddit": 0,
+        "reddit": 1,
         "youtube": 0,
         "mastodon": 0
       },
@@ -195,10 +195,24 @@
       "top_social_topics": [],
       "topic_sentiment": {},
       "social_sentiment": "neutral",
-      "latest_items": [],
+      "latest_items": [
+        {
+          "id": "5b80d4b1c6e505af",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "Tesco, Hungary, 0.06€",
+          "summary": "Ok, a bit clickbait title, in total 3.36€, but i collected and returned 24 bottles. Everything was 75% off submitted by /u/Dareeo to r/Grocerycost [link] [comments]",
+          "url": "https://www.reddit.com/r/Grocerycost/comments/1wj17bt/tesco_hungary_006/",
+          "published": "2026-09-17T17:56:00+00:00",
+          "query": "Tesco Hungary",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        }
+      ],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 0,
+        "dashboard_items": 1,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
