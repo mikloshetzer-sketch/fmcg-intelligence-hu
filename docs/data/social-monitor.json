@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-09-16T21:31:32.672162+00:00",
+  "updated_at": "2026-09-17T05:06:24.076413+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-09-16T21:31:32.672162+00:00",
+    "updated_at": "2026-09-17T05:06:24.076413+00:00",
     "leader_social": "CBA",
     "leader_social_index": 29,
     "dominant_social_topic": "árak és akciók",
@@ -382,35 +382,35 @@
     },
     {
       "company": "CBA",
-      "social_mentions": 4,
-      "raw_social_mentions": 4,
-      "dashboard_mentions": 4,
+      "social_mentions": 6,
+      "raw_social_mentions": 6,
+      "dashboard_mentions": 6,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 4.0,
-      "hu_relevant_mentions": 4,
+      "weighted_social_mentions": 6.0,
+      "hu_relevant_mentions": 6,
       "social_index": 29,
       "social_sources": {
         "reddit": 0,
-        "youtube": 4,
+        "youtube": 6,
         "mastodon": 0
       },
       "raw_social_sources": {
         "reddit": 0,
-        "youtube": 4,
+        "youtube": 6,
         "mastodon": 0
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 4.0
+          "score": 6.0
         }
       ],
       "topic_sentiment": {
         "árak és akciók": {
           "positive": 0.0,
-          "neutral": 4.0,
+          "neutral": 6.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -418,6 +418,32 @@
       },
       "social_sentiment": "neutral",
       "latest_items": [
+        {
+          "id": "20afc4fe8149a548",
+          "source": "youtube",
+          "company": "CBA",
+          "title": "CBA Príma akciós újság 09.17. - 09.23. - YouTube",
+          "summary": "CBA Príma akciós újság 09.17. - 09.23. YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1EVEN5ejFqT3N5RUhLMG1KUDFibXVFZGw3NE1BMTJuelY0YXdabl94T3U2a25idjRyanVsSWdUYmRvaUp5UWprZkEzdy1WUGtpSWhITXRn?oc=5",
+          "published": "Mon, 14 Sep 2026 15:03:33 GMT",
+          "query": "site:youtube.com \"CBA Príma\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "db98f6d30380747d",
+          "source": "youtube",
+          "company": "CBA",
+          "title": "CBA Príma akciós újság 08.21. - 08.26. - YouTube",
+          "summary": "CBA Príma akciós újság 08.21. - 08.26. YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBpd1lCakJrbEs4bHZ3dlZWQ3ExRlBOZzR0c0lZVnplZ2RDMDc5SWxXOUVFVjlzcmRueExFRHdHVmpXNmhYN3VfUlJTVS1yQktuQzhxR0h3?oc=5",
+          "published": "Fri, 14 Aug 2026 09:43:56 GMT",
+          "query": "site:youtube.com \"CBA Príma\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
         {
           "id": "924455cbd5c79007",
           "source": "youtube",
@@ -473,7 +499,7 @@
       ],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 4,
+        "dashboard_items": 6,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
