@@ -1,58 +1,65 @@
 {
-  "updated_at": "2026-09-17T21:35:30.802164+00:00",
+  "updated_at": "2026-09-18T04:59:04.845339+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-09-17T21:35:30.802164+00:00",
+    "updated_at": "2026-09-18T04:59:04.845339+00:00",
     "leader_social": "Lidl",
-    "leader_social_index": 33,
+    "leader_social_index": 37,
     "dominant_social_topic": "árak és akciók",
     "overall_social_sentiment": "neutral"
   },
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 4,
-      "raw_social_mentions": 4,
-      "dashboard_mentions": 4,
+      "social_mentions": 5,
+      "raw_social_mentions": 5,
+      "dashboard_mentions": 5,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 4.0,
-      "hu_relevant_mentions": 4,
-      "social_index": 33,
+      "weighted_social_mentions": 5.0,
+      "hu_relevant_mentions": 5,
+      "social_index": 37,
       "social_sources": {
         "reddit": 1,
         "youtube": 3,
-        "mastodon": 0
+        "mastodon": 1
       },
       "raw_social_sources": {
         "reddit": 1,
         "youtube": 3,
-        "mastodon": 0
+        "mastodon": 1
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 2.0
+          "score": 3.0
+        },
+        {
+          "topic": "bolti élmény",
+          "score": 3.0
         },
         {
           "topic": "termék és minőség",
           "score": 2.0
-        },
-        {
-          "topic": "bolti élmény",
-          "score": 1.0
         }
       ],
       "topic_sentiment": {
-        "bolti élmény": {
-          "positive": 0.0,
-          "neutral": 1.0,
+        "árak és akciók": {
+          "positive": 1.0,
+          "neutral": 2.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
+        },
+        "bolti élmény": {
+          "positive": 1.0,
+          "neutral": 1.0,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "positive"
         },
         "termék és minőség": {
           "positive": 0.0,
@@ -60,17 +67,23 @@
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
-        },
-        "árak és akciók": {
-          "positive": 0.0,
-          "neutral": 2.0,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
         }
       },
-      "social_sentiment": "neutral",
+      "social_sentiment": "positive",
       "latest_items": [
+        {
+          "id": "de471c5fde3ffd03",
+          "source": "mastodon",
+          "company": "Lidl",
+          "title": "",
+          "summary": "Jövőre már mind a 440 holland üzletét villanykamionokkal látná el a Lidl https:// fed.brid.gy/r/https://villanya utosok.hu/2026/09/17/jovore-mar-mind-a-440-holland-uzletet-villanykamionokkal-latna-el-a-lidl/",
+          "url": "https://fed.brid.gy/r/https://villanyautosok.hu/2026/09/17/jovore-mar-mind-a-440-holland-uzletet-villanykamionokkal-latna-el-a-lidl/",
+          "published": "Thu, 17 Sep 2026 03:05:57 +0000",
+          "query": "#lidl",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "positive"
+        },
         {
           "id": "c4f3c29e3f2395b1",
           "source": "reddit",
@@ -126,7 +139,7 @@
       ],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 4,
+        "dashboard_items": 5,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
@@ -173,21 +186,21 @@
     },
     {
       "company": "Tesco",
-      "social_mentions": 1,
-      "raw_social_mentions": 1,
-      "dashboard_mentions": 1,
+      "social_mentions": 0,
+      "raw_social_mentions": 0,
+      "dashboard_mentions": 0,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 1.0,
-      "hu_relevant_mentions": 1,
-      "social_index": 16,
+      "weighted_social_mentions": 0,
+      "hu_relevant_mentions": 0,
+      "social_index": 0,
       "social_sources": {
-        "reddit": 1,
+        "reddit": 0,
         "youtube": 0,
         "mastodon": 0
       },
       "raw_social_sources": {
-        "reddit": 1,
+        "reddit": 0,
         "youtube": 0,
         "mastodon": 0
       },
@@ -195,24 +208,10 @@
       "top_social_topics": [],
       "topic_sentiment": {},
       "social_sentiment": "neutral",
-      "latest_items": [
-        {
-          "id": "5b80d4b1c6e505af",
-          "source": "reddit",
-          "company": "Tesco",
-          "title": "Tesco, Hungary, 0.06€",
-          "summary": "Ok, a bit clickbait title, in total 3.36€, but i collected and returned 24 bottles. Everything was 75% off submitted by /u/Dareeo to r/Grocerycost [link] [comments]",
-          "url": "https://www.reddit.com/r/Grocerycost/comments/1wj17bt/tesco_hungary_006/",
-          "published": "2026-09-17T17:56:00+00:00",
-          "query": "Tesco Hungary",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        }
-      ],
+      "latest_items": [],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 1,
+        "dashboard_items": 0,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
@@ -409,35 +408,35 @@
     },
     {
       "company": "CBA",
-      "social_mentions": 4,
-      "raw_social_mentions": 4,
-      "dashboard_mentions": 4,
+      "social_mentions": 6,
+      "raw_social_mentions": 6,
+      "dashboard_mentions": 6,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 4.0,
-      "hu_relevant_mentions": 4,
+      "weighted_social_mentions": 6.0,
+      "hu_relevant_mentions": 6,
       "social_index": 29,
       "social_sources": {
         "reddit": 0,
-        "youtube": 4,
+        "youtube": 6,
         "mastodon": 0
       },
       "raw_social_sources": {
         "reddit": 0,
-        "youtube": 4,
+        "youtube": 6,
         "mastodon": 0
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 4.0
+          "score": 6.0
         }
       ],
       "topic_sentiment": {
         "árak és akciók": {
           "positive": 0.0,
-          "neutral": 4.0,
+          "neutral": 6.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -496,11 +495,37 @@
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
           "item_sentiment": "neutral"
+        },
+        {
+          "id": "9a1fea266272003d",
+          "source": "youtube",
+          "company": "CBA",
+          "title": "CBA Príma akciós újság 04.23. - 04.29. - YouTube",
+          "summary": "CBA Príma akciós újság 04.23. - 04.29. YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBULTZqM00ySGtMZF9FV0s4ekRtTG5lMlNDemNySGRwOGp1bTZPT2tPbmpxekRlX3d3NENkZVl5VW51V1VOekZMNk1RLTNsZDB0S3h4UVhB?oc=5",
+          "published": "Mon, 20 Apr 2026 15:11:20 GMT",
+          "query": "site:youtube.com \"CBA Príma\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "fbd381886ee81a57",
+          "source": "youtube",
+          "company": "CBA",
+          "title": "CBA Príma akciós újság 03.26. - 04.04. - YouTube",
+          "summary": "CBA Príma akciós újság 03.26. - 04.04. YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9mdzc2X1BrQmU1N3dDRHIxLVJjZ3BqampfemF1SlVvRkpzNjNwZ3N6Qm5iVVlfbERtaWhlSnllRHlBVnNpeW96cUVwQ09yQ2Exbk94dExB?oc=5",
+          "published": "Thu, 26 Mar 2026 13:22:56 GMT",
+          "query": "site:youtube.com \"CBA Príma\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
         }
       ],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 4,
+        "dashboard_items": 6,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
