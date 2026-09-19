@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-18T08:32:24Z",
+  "updated_at": "2026-09-19T08:19:35Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -88,7 +88,7 @@
       "expected_unit": "l",
       "prices": {
         "SPAR": 265.0,
-        "Tesco": 296.0,
+        "Tesco": 281.0,
         "Auchan": 271.0,
         "ALDI": 295.0,
         "Lidl": 295.0,
@@ -108,8 +108,8 @@
         "Tesco": {
           "source_product_id": "5999561314051",
           "source_product_name": "Kunsági ESL tej 2.8% 1 L QQ",
-          "amount": 296.0,
-          "unit_amount": 296.0,
+          "amount": 281.0,
+          "unit_amount": 281.0,
           "unit": "l",
           "unit_title": "db",
           "packaging": "1",
@@ -474,7 +474,7 @@
       "prices": {
         "ALDI": 1169.0,
         "Auchan": 1199.0,
-        "Tesco": 1383.0,
+        "Tesco": 1362.0,
         "Lidl": 1465.0,
         "Penny": 1465.0,
         "SPAR": 1472.0
@@ -503,8 +503,8 @@
         "Tesco": {
           "source_product_id": "2870240000000",
           "source_product_name": "16. SERTES COMB pultos QQ",
-          "amount": 1383.0,
-          "unit_amount": 1383.0,
+          "amount": 1362.0,
+          "unit_amount": 1362.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -782,9 +782,9 @@
       "prices": {
         "SPAR": 357.5,
         "Lidl": 319.0,
-        "Tesco": 320.0,
         "ALDI": 325.0,
         "Auchan": 365.0,
+        "Tesco": 461.0,
         "Penny": 499.0
       },
       "selected_products": {
@@ -808,16 +808,6 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Tesco": {
-          "source_product_id": "2860480000000",
-          "source_product_name": "IDARED ALMA LÉDIG QQ",
-          "amount": 320.0,
-          "unit_amount": 320.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
         "ALDI": {
           "source_product_id": "aldi-484058",
           "source_product_name": "Alma piros lédig",
@@ -833,6 +823,16 @@
           "source_product_name": "Kalodás piros alma Ft/kg",
           "amount": 365.0,
           "unit_amount": 365.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Tesco": {
+          "source_product_id": "2860480000000",
+          "source_product_name": "IDARED ALMA LÉDIG QQ",
+          "amount": 461.0,
+          "unit_amount": 461.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -934,7 +934,7 @@
       "category": "Gyümölcs",
       "expected_unit": "kg",
       "prices": {
-        "Tesco": 1059.0,
+        "Tesco": 999.0,
         "SPAR": 899.0,
         "Lidl": 899.0,
         "Auchan": 998.0,
@@ -945,8 +945,8 @@
         "Tesco": {
           "source_product_id": "2850160000000",
           "source_product_name": "Citrom lédig    ",
-          "amount": 1059.0,
-          "unit_amount": 1059.0,
+          "amount": 999.0,
+          "unit_amount": 999.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1247,7 +1247,7 @@
         "SPAR": 262.0,
         "Tesco": 270.0,
         "ALDI": 285.0,
-        "Penny": 319.0
+        "Penny": 289.0
       },
       "selected_products": {
         "Lidl": {
@@ -1303,8 +1303,8 @@
         "Penny": {
           "source_product_id": "penny-204",
           "source_product_name": "Burgonya lédig sárga kg",
-          "amount": 319.0,
-          "unit_amount": 319.0,
+          "amount": 289.0,
+          "unit_amount": 289.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
