@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-19T08:19:35Z",
+  "updated_at": "2026-09-20T08:51:18Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -628,8 +628,8 @@
       "prices": {
         "Tesco": 1959.0,
         "SPAR": 1700.0,
-        "Lidl": 1729.0,
         "ALDI": 1789.0,
+        "Lidl": 1859.0,
         "Auchan": 1899.0,
         "Penny": 1979.0
       },
@@ -654,21 +654,21 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Lidl": {
-          "source_product_id": "2895800000000",
-          "source_product_name": "Csirkemell tokány, kg ",
-          "amount": 1729.0,
-          "unit_amount": 1729.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
         "ALDI": {
           "source_product_id": "aldi-320859",
           "source_product_name": "Húsmester csirkemellfilé kg vákuumcsomagolt",
           "amount": 1789.0,
           "unit_amount": 1789.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Lidl": {
+          "source_product_id": "2895800000000",
+          "source_product_name": "Csirkemell tokány, kg ",
+          "amount": 1859.0,
+          "unit_amount": 1859.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -784,7 +784,7 @@
         "Lidl": 319.0,
         "ALDI": 325.0,
         "Auchan": 365.0,
-        "Tesco": 461.0,
+        "Tesco": 479.0,
         "Penny": 499.0
       },
       "selected_products": {
@@ -831,8 +831,8 @@
         "Tesco": {
           "source_product_id": "2860480000000",
           "source_product_name": "IDARED ALMA LÉDIG QQ",
-          "amount": 461.0,
-          "unit_amount": 461.0,
+          "amount": 479.0,
+          "unit_amount": 479.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -939,7 +939,7 @@
         "Lidl": 899.0,
         "Auchan": 998.0,
         "ALDI": 999.0,
-        "Penny": 1199.0
+        "Penny": 1198.0
       },
       "selected_products": {
         "Tesco": {
@@ -993,13 +993,13 @@
           "price_type": "NORMAL"
         },
         "Penny": {
-          "source_product_id": "penny-306",
-          "source_product_name": "Citrom lédig kg",
-          "amount": 1199.0,
-          "unit_amount": 1199.0,
+          "source_product_id": "penny-107",
+          "source_product_name": "Citrom 500g",
+          "amount": 599.0,
+          "unit_amount": 1198.0,
           "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
+          "unit_title": "csomag",
+          "packaging": "0.5",
           "price_type": "NORMAL"
         }
       },
@@ -1093,7 +1093,7 @@
         "SPAR": 602.0,
         "Auchan": 698.0,
         "Penny": 699.0,
-        "Tesco": 765.0
+        "Tesco": 766.0
       },
       "selected_products": {
         "Lidl": {
@@ -1149,8 +1149,8 @@
         "Tesco": {
           "source_product_id": "2896050000000",
           "source_product_name": "PAPRIKA LÉDIG QQ",
-          "amount": 765.0,
-          "unit_amount": 765.0,
+          "amount": 766.0,
+          "unit_amount": 766.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1167,7 +1167,7 @@
       "prices": {
         "Lidl": 189.5,
         "Penny": 169.0,
-        "Tesco": 199.0,
+        "Tesco": 205.0,
         "ALDI": 205.0,
         "SPAR": 219.0,
         "Auchan": 222.0
@@ -1196,8 +1196,8 @@
         "Tesco": {
           "source_product_id": "5995034200661",
           "source_product_name": "GH VÖRÖSHAGYMA  1 KG QQ",
-          "amount": 199.0,
-          "unit_amount": 199.0,
+          "amount": 205.0,
+          "unit_amount": 205.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1560,7 +1560,7 @@
       "selected_products": {
         "Auchan": {
           "source_product_id": "4008671013004",
-          "source_product_name": "Sweet Family kristálycukor 1 kg",
+          "source_product_name": "Sweet Family Kristálycukor 1kg",
           "amount": 290.0,
           "unit_amount": 290.0,
           "unit": "kg",
@@ -1570,7 +1570,7 @@
         },
         "ALDI": {
           "source_product_id": "4008671013004",
-          "source_product_name": "Sweet Family kristálycukor 1 kg",
+          "source_product_name": "Sweet Family Kristálycukor 1kg",
           "amount": 295.0,
           "unit_amount": 295.0,
           "unit": "kg",

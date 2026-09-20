@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-19T08:19:35Z",
+  "updated_at": "2026-09-20T08:51:18Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "method": "product-level price leadership and spread analysis",
@@ -171,11 +171,11 @@
     {
       "category": "Gyümölcs",
       "leader": "Lidl",
-      "leader_index": 78,
+      "leader_index": 77,
       "ranking": [
         {
           "company": "Lidl",
-          "category_index": 78,
+          "category_index": 77,
           "coverage": 3
         },
         {
@@ -190,12 +190,12 @@
         },
         {
           "company": "Auchan",
-          "category_index": 103,
+          "category_index": 102,
           "coverage": 3
         },
         {
           "company": "Tesco",
-          "category_index": 108,
+          "category_index": 110,
           "coverage": 3
         },
         {
@@ -254,12 +254,12 @@
         },
         {
           "company": "Auchan",
-          "category_index": 97,
+          "category_index": 96,
           "coverage": 4
         },
         {
           "company": "Lidl",
-          "category_index": 100,
+          "category_index": 101,
           "coverage": 4
         },
         {
@@ -274,7 +274,7 @@
         },
         {
           "company": "SPAR",
-          "category_index": 104,
+          "category_index": 103,
           "coverage": 4
         }
       ]
@@ -385,7 +385,7 @@
         },
         {
           "company": "Tesco",
-          "category_index": 111,
+          "category_index": 112,
           "coverage": 4
         }
       ]
@@ -435,7 +435,7 @@
       "cheapest_price": 319.0,
       "most_expensive_company": "Penny",
       "most_expensive_price": 499.0,
-      "average_price": 387.75,
+      "average_price": 390.75,
       "spread_pct": 56.43,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
@@ -465,18 +465,6 @@
       "coverage": 6
     },
     {
-      "product": "Citrom",
-      "category": "Gyümölcs",
-      "cheapest_company": "SPAR",
-      "cheapest_price": 899.0,
-      "most_expensive_company": "Penny",
-      "most_expensive_price": 1199.0,
-      "average_price": 998.83,
-      "spread_pct": 33.37,
-      "competition_intensity": "nagy árszórás",
-      "coverage": 6
-    },
-    {
       "product": "Vaj",
       "category": "Tejtermék",
       "cheapest_company": "ALDI",
@@ -489,13 +477,25 @@
       "coverage": 6
     },
     {
+      "product": "Citrom",
+      "category": "Gyümölcs",
+      "cheapest_company": "SPAR",
+      "cheapest_price": 899.0,
+      "most_expensive_company": "Penny",
+      "most_expensive_price": 1198.0,
+      "average_price": 998.67,
+      "spread_pct": 33.26,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 6
+    },
+    {
       "product": "Vöröshagyma",
       "category": "Zöldség",
       "cheapest_company": "Penny",
       "cheapest_price": 169.0,
       "most_expensive_company": "Auchan",
       "most_expensive_price": 222.0,
-      "average_price": 200.58,
+      "average_price": 201.58,
       "spread_pct": 31.36,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
@@ -542,9 +542,9 @@
       "cheapest_company": "Lidl",
       "cheapest_price": 592.0,
       "most_expensive_company": "Tesco",
-      "most_expensive_price": 765.0,
-      "average_price": 659.17,
-      "spread_pct": 29.22,
+      "most_expensive_price": 766.0,
+      "average_price": 659.33,
+      "spread_pct": 29.39,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
@@ -579,7 +579,7 @@
       "cheapest_price": 1700.0,
       "most_expensive_company": "Penny",
       "most_expensive_price": 1979.0,
-      "average_price": 1842.5,
+      "average_price": 1864.17,
       "spread_pct": 16.41,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
@@ -737,16 +737,16 @@
       "coverage": 6
     },
     {
-      "product": "Citrom",
-      "category": "Gyümölcs",
-      "spread_pct": 33.37,
+      "product": "Vaj",
+      "category": "Tejtermék",
+      "spread_pct": 33.35,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
     {
-      "product": "Vaj",
-      "category": "Tejtermék",
-      "spread_pct": 33.35,
+      "product": "Citrom",
+      "category": "Gyümölcs",
+      "spread_pct": 33.26,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
@@ -781,7 +781,7 @@
     {
       "product": "Zöldpaprika",
       "category": "Zöldség",
-      "spread_pct": 29.22,
+      "spread_pct": 29.39,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
