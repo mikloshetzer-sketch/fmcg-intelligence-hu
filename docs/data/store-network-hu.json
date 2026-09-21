@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-14T08:53:55.398495+00:00",
+  "updated_at": "2026-09-21T08:55:44.894034+00:00",
   "version": "store-network-hu-v2.0-non-lidl-osm",
   "scope": "Hungarian FMCG store network from OSM + optional overrides",
   "method_note": "Ez a verzió Lidl nélkül építi a bolthálózatot. ALDI, SPAR, Tesco, Auchan és Penny OSM/Overpass alapján frissül. Ha egy láncra 0 találat jön, a script megtartja a korábbi store-network-hu.json adott láncra vonatkozó adatait. Lidl külön, saját üzletlista alapján kerül majd be.",
@@ -6627,8 +6627,8 @@
       "area": "Pécel",
       "region": "n.a.",
       "address": "2119 Pécel, Ráday Gedeon tér 2",
-      "lat": 47.491888,
-      "lon": 19.342022,
+      "lat": 47.491882,
+      "lon": 19.342038,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 298187487,
@@ -8286,8 +8286,8 @@
       "area": "n.a.",
       "region": "n.a.",
       "address": "n.a.",
-      "lat": 48.081918,
-      "lon": 20.785906,
+      "lat": 48.081919,
+      "lon": 20.7859,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 119013963,
@@ -9483,8 +9483,8 @@
       "area": "n.a.",
       "region": "n.a.",
       "address": "n.a.",
-      "lat": 47.475135,
-      "lon": 20.59956,
+      "lat": 47.475127,
+      "lon": 20.599572,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 688138756,
@@ -9629,7 +9629,7 @@
       "city": "Alsópáhok",
       "area": "Alsópáhok",
       "region": "n.a.",
-      "address": "8394 Alsópáhok, Hévízi utca 18",
+      "address": "8394 Alsópáhok, Hévizi utca 18",
       "lat": 46.77818,
       "lon": 17.183522,
       "source": "openstreetmap_overpass",
@@ -9640,7 +9640,7 @@
       "keywords": [
         "Spar",
         "SPAR Alsópáhok",
-        "8394 Alsópáhok, Hévízi utca 18"
+        "8394 Alsópáhok, Hévizi utca 18"
       ]
     },
     {
@@ -10575,8 +10575,8 @@
       "area": "Budapest",
       "region": "Közép-Magyarország",
       "address": "1088 Budapest, Rákóczi út 19",
-      "lat": 47.49521,
-      "lon": 19.064626,
+      "lat": 47.495226,
+      "lon": 19.064541,
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 2076963676,
@@ -11751,8 +11751,8 @@
       "area": "Budapest",
       "region": "Közép-Magyarország",
       "address": "1186 Budapest, Cziffra György utca 15/b",
-      "lat": 47.433074,
-      "lon": 19.178274,
+      "lat": 47.433057,
+      "lon": 19.178332,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 243721853,
@@ -12161,6 +12161,27 @@
         "Spar Express",
         "SPAR Budapest",
         "1116 Budapest, Fehérvári út 166"
+      ]
+    },
+    {
+      "store_id": "spar_budapest_spar_express_9828470893",
+      "company": "SPAR",
+      "name": "Spar Express",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1112 Budapest, Budaörsi út 112",
+      "lat": 47.465195,
+      "lon": 19.013636,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 9828470893,
+      "brand": "Spar",
+      "operator": "",
+      "keywords": [
+        "Spar Express",
+        "SPAR Budapest",
+        "1112 Budapest, Budaörsi út 112"
       ]
     },
     {
@@ -17582,27 +17603,6 @@
       ]
     },
     {
-      "store_id": "spar_na_spar_4933474751",
-      "company": "SPAR",
-      "name": "Spar",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.491299,
-      "lon": 18.315801,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 4933474751,
-      "brand": "Spar",
-      "operator": "",
-      "keywords": [
-        "Spar",
-        "SPAR n.a.",
-        "n.a."
-      ]
-    },
-    {
       "store_id": "spar_na_spar_5003431621",
       "company": "SPAR",
       "name": "Spar",
@@ -18464,27 +18464,6 @@
       ]
     },
     {
-      "store_id": "spar_na_spar_131467936",
-      "company": "SPAR",
-      "name": "Spar",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.585098,
-      "lon": 19.116308,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 131467936,
-      "brand": "Spar",
-      "operator": "Bezárt",
-      "keywords": [
-        "Spar",
-        "SPAR n.a.",
-        "n.a."
-      ]
-    },
-    {
       "store_id": "spar_na_spar_131560786",
       "company": "SPAR",
       "name": "Spar",
@@ -18828,8 +18807,8 @@
       "area": "n.a.",
       "region": "n.a.",
       "address": "Kossuth utca",
-      "lat": 46.219588,
-      "lon": 20.477655,
+      "lat": 46.219565,
+      "lon": 20.477715,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 242562824,
@@ -20018,27 +19997,6 @@
       ]
     },
     {
-      "store_id": "spar_na_spar_express_9828470893",
-      "company": "SPAR",
-      "name": "Spar Express",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.465195,
-      "lon": 19.013636,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 9828470893,
-      "brand": "Spar",
-      "operator": "",
-      "keywords": [
-        "Spar Express",
-        "SPAR n.a.",
-        "n.a."
-      ]
-    },
-    {
       "store_id": "spar_na_spar_express_9861784835",
       "company": "SPAR",
       "name": "Spar Express",
@@ -20459,6 +20417,27 @@
       ]
     },
     {
+      "store_id": "spar_na_spar_quick_easy_13859812084",
+      "company": "SPAR",
+      "name": "Spar Quick & Easy",
+      "city": "n.a.",
+      "area": "n.a.",
+      "region": "n.a.",
+      "address": "n.a.",
+      "lat": 47.639708,
+      "lon": 19.124989,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 13859812084,
+      "brand": "Spar",
+      "operator": "",
+      "keywords": [
+        "Spar Quick & Easy",
+        "SPAR n.a.",
+        "n.a."
+      ]
+    },
+    {
       "store_id": "spar_na_spar_szupermarket_3862678658",
       "company": "SPAR",
       "name": "Spar Szupermarket",
@@ -20585,9 +20564,9 @@
       ]
     },
     {
-      "store_id": "tesco_ajka_tesco_166825315",
+      "store_id": "tesco_ajka_tesco_extra_166825315",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Ajka",
       "area": "Ajka",
       "region": "Közép-Dunántúl",
@@ -20600,7 +20579,7 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Ajka",
         "8400 Ajka, Fő út 66"
       ]
@@ -20627,9 +20606,9 @@
       ]
     },
     {
-      "store_id": "tesco_baja_tesco_121249543",
+      "store_id": "tesco_baja_tesco_extra_121249543",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Baja",
       "area": "Baja",
       "region": "Dél-Alföld",
@@ -20642,15 +20621,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Baja",
         "6500 Baja, Gránátos utca 11"
       ]
     },
     {
-      "store_id": "tesco_balassagyarmat_tesco_9769333",
+      "store_id": "tesco_balassagyarmat_tesco_extra_9769333",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Balassagyarmat",
       "area": "Balassagyarmat",
       "region": "Észak-Magyarország",
@@ -20663,15 +20642,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Balassagyarmat",
         "2660 Balassagyarmat, Mikszáth Kálmán út 56"
       ]
     },
     {
-      "store_id": "tesco_balatonboglar_tesco_1318775311",
+      "store_id": "tesco_balatonboglar_tesco_extra_1318775311",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Balatonboglár",
       "area": "Balatonboglár",
       "region": "n.a.",
@@ -20684,7 +20663,7 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Balatonboglár",
         "8630 Balatonboglár, Klapka utca 30"
       ]
@@ -20711,9 +20690,9 @@
       ]
     },
     {
-      "store_id": "tesco_balatonfured_tesco_1788509369",
+      "store_id": "tesco_balatonfured_tesco_extra_1788509369",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Balatonfüred",
       "area": "Balatonfüred",
       "region": "Közép-Dunántúl",
@@ -20726,15 +20705,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Balatonfüred",
         "8230 Balatonfüred, Széchenyi utca 55"
       ]
     },
     {
-      "store_id": "tesco_berettyoujfalu_tesco_218986779",
+      "store_id": "tesco_berettyoujfalu_tesco_extra_218986779",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Berettyóújfalu",
       "area": "Berettyóújfalu",
       "region": "Észak-Alföld",
@@ -20747,15 +20726,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Berettyóújfalu",
         "4100 Berettyóújfalu, Honvéd utca 13"
       ]
     },
     {
-      "store_id": "tesco_bicske_tesco_1156820103",
+      "store_id": "tesco_bicske_tesco_extra_1156820103",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Bicske",
       "area": "Bicske",
       "region": "n.a.",
@@ -20768,15 +20747,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Bicske",
         "2060 Bicske, Csabdi utca 4"
       ]
     },
     {
-      "store_id": "tesco_bonyhad_tesco_234050035",
+      "store_id": "tesco_bonyhad_tesco_extra_234050035",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Bonyhád",
       "area": "Bonyhád",
       "region": "Dél-Dunántúl",
@@ -20789,15 +20768,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Bonyhád",
         "7150 Bonyhád, Völgység utca 8"
       ]
     },
     {
-      "store_id": "tesco_budakeszi_tesco_752198395",
+      "store_id": "tesco_budakeszi_tesco_extra_752198395",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Budakeszi",
       "area": "Budakeszi",
       "region": "Közép-Magyarország",
@@ -20810,72 +20789,9 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Budakeszi",
         "2092 Budakeszi, Bianka utca 1"
-      ]
-    },
-    {
-      "store_id": "tesco_budapest_tesco_166004114",
-      "company": "Tesco",
-      "name": "Tesco",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1222 Budapest, Nagytétényi út 35",
-      "lat": 47.407945,
-      "lon": 19.019319,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 166004114,
-      "brand": "Tesco",
-      "operator": "TESCO-GLOBAL Áruházak Zrt.",
-      "keywords": [
-        "Tesco",
-        "Tesco Budapest",
-        "1222 Budapest, Nagytétényi út 35"
-      ]
-    },
-    {
-      "store_id": "tesco_budapest_tesco_866731937",
-      "company": "Tesco",
-      "name": "Tesco",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1117 Budapest, Hengermalom út 19-21",
-      "lat": 47.458997,
-      "lon": 19.051365,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 866731937,
-      "brand": "Tesco",
-      "operator": "TESCO-GLOBAL Áruházak Zrt.",
-      "keywords": [
-        "Tesco",
-        "Tesco Budapest",
-        "1117 Budapest, Hengermalom út 19-21"
-      ]
-    },
-    {
-      "store_id": "tesco_budapest_tesco_1025017256",
-      "company": "Tesco",
-      "name": "Tesco",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1087 Budapest, Kerepesi út 9-11",
-      "lat": 47.498571,
-      "lon": 19.093521,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 1025017256,
-      "brand": "Tesco",
-      "operator": "TESCO-GLOBAL Áruházak Zrt.",
-      "keywords": [
-        "Tesco",
-        "Tesco Budapest",
-        "1087 Budapest, Kerepesi út 9-11"
       ]
     },
     {
@@ -20897,111 +20813,6 @@
         "Tesco",
         "Tesco Budapest",
         "1036 Budapest, Kolosy tér 4"
-      ]
-    },
-    {
-      "store_id": "tesco_budapest_tesco_26041341",
-      "company": "Tesco",
-      "name": "Tesco",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1173 Budapest, Pesti út 5",
-      "lat": 47.482678,
-      "lon": 19.227829,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 26041341,
-      "brand": "Tesco",
-      "operator": "TESCO-GLOBAL Áruházak Zrt.",
-      "keywords": [
-        "Tesco",
-        "Tesco Budapest",
-        "1173 Budapest, Pesti út 5"
-      ]
-    },
-    {
-      "store_id": "tesco_budapest_tesco_112384199",
-      "company": "Tesco",
-      "name": "Tesco",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1214 Budapest, II. Rákóczi Ferenc út 191",
-      "lat": 47.41508,
-      "lon": 19.054761,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 112384199,
-      "brand": "Tesco",
-      "operator": "TESCO-GLOBAL Áruházak Zrt.",
-      "keywords": [
-        "Tesco",
-        "Tesco Budapest",
-        "1214 Budapest, II. Rákóczi Ferenc út 191"
-      ]
-    },
-    {
-      "store_id": "tesco_budapest_tesco_127526158",
-      "company": "Tesco",
-      "name": "Tesco",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1202 Budapest, Mártírok útja 281",
-      "lat": 47.42753,
-      "lon": 19.146273,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 127526158,
-      "brand": "Tesco",
-      "operator": "TESCO-GLOBAL Áruházak Zrt.",
-      "keywords": [
-        "Tesco",
-        "Tesco Budapest",
-        "1202 Budapest, Mártírok útja 281"
-      ]
-    },
-    {
-      "store_id": "tesco_budapest_tesco_190864591",
-      "company": "Tesco",
-      "name": "Tesco",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1037 Budapest, Bécsi út 258",
-      "lat": 47.562904,
-      "lon": 19.021566,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 190864591,
-      "brand": "Tesco",
-      "operator": "TESCO-GLOBAL Áruházak Zrt.",
-      "keywords": [
-        "Tesco",
-        "Tesco Budapest",
-        "1037 Budapest, Bécsi út 258"
-      ]
-    },
-    {
-      "store_id": "tesco_budapest_tesco_1500864544",
-      "company": "Tesco",
-      "name": "Tesco",
-      "city": "Budapest",
-      "area": "Budapest",
-      "region": "Közép-Magyarország",
-      "address": "1191 Budapest, Vak Bottyán utca 75/B",
-      "lat": 47.462625,
-      "lon": 19.145994,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 1500864544,
-      "brand": "Tesco",
-      "operator": "TESCO-GLOBAL Áruházak Zrt.",
-      "keywords": [
-        "Tesco",
-        "Tesco Budapest",
-        "1191 Budapest, Vak Bottyán utca 75/B"
       ]
     },
     {
@@ -21488,9 +21299,240 @@
       ]
     },
     {
-      "store_id": "tesco_budaors_tesco_5312202817",
+      "store_id": "tesco_budapest_tesco_extra_166004114",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1222 Budapest, Nagytétényi út 35",
+      "lat": 47.407945,
+      "lon": 19.019319,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 166004114,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco Extra",
+        "Tesco Budapest",
+        "1222 Budapest, Nagytétényi út 35"
+      ]
+    },
+    {
+      "store_id": "tesco_budapest_tesco_extra_866731937",
+      "company": "Tesco",
+      "name": "Tesco Extra",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1117 Budapest, Hengermalom út 19-21",
+      "lat": 47.458997,
+      "lon": 19.051365,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 866731937,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco Extra",
+        "Tesco Budapest",
+        "1117 Budapest, Hengermalom út 19-21"
+      ]
+    },
+    {
+      "store_id": "tesco_budapest_tesco_extra_1025017256",
+      "company": "Tesco",
+      "name": "Tesco Extra",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1087 Budapest, Kerepesi út 9-11",
+      "lat": 47.498571,
+      "lon": 19.093521,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 1025017256,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco Extra",
+        "Tesco Budapest",
+        "1087 Budapest, Kerepesi út 9-11"
+      ]
+    },
+    {
+      "store_id": "tesco_budapest_tesco_extra_13773664797",
+      "company": "Tesco",
+      "name": "Tesco Extra",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1138 Budapest, Gács utca 3",
+      "lat": 47.555462,
+      "lon": 19.080461,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 13773664797,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco Extra",
+        "Tesco Budapest",
+        "1138 Budapest, Gács utca 3"
+      ]
+    },
+    {
+      "store_id": "tesco_budapest_tesco_extra_13904233110",
+      "company": "Tesco",
+      "name": "Tesco Extra",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1152 Budapest, Szentmihályi út 131",
+      "lat": 47.551878,
+      "lon": 19.139225,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 13904233110,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco Extra",
+        "Tesco Budapest",
+        "1152 Budapest, Szentmihályi út 131"
+      ]
+    },
+    {
+      "store_id": "tesco_budapest_tesco_extra_26041341",
+      "company": "Tesco",
+      "name": "Tesco Extra",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1173 Budapest, Pesti út 5",
+      "lat": 47.482678,
+      "lon": 19.227829,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 26041341,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco Extra",
+        "Tesco Budapest",
+        "1173 Budapest, Pesti út 5"
+      ]
+    },
+    {
+      "store_id": "tesco_budapest_tesco_extra_112384199",
+      "company": "Tesco",
+      "name": "Tesco Extra",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1214 Budapest, II. Rákóczi Ferenc út 191",
+      "lat": 47.41508,
+      "lon": 19.054761,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 112384199,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco Extra",
+        "Tesco Budapest",
+        "1214 Budapest, II. Rákóczi Ferenc út 191"
+      ]
+    },
+    {
+      "store_id": "tesco_budapest_tesco_extra_127526158",
+      "company": "Tesco",
+      "name": "Tesco Extra",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1202 Budapest, Mártírok útja 281",
+      "lat": 47.42753,
+      "lon": 19.146273,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 127526158,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco Extra",
+        "Tesco Budapest",
+        "1202 Budapest, Mártírok útja 281"
+      ]
+    },
+    {
+      "store_id": "tesco_budapest_tesco_extra_190864591",
+      "company": "Tesco",
+      "name": "Tesco Extra",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1037 Budapest, Bécsi út 258",
+      "lat": 47.562904,
+      "lon": 19.021566,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 190864591,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco Extra",
+        "Tesco Budapest",
+        "1037 Budapest, Bécsi út 258"
+      ]
+    },
+    {
+      "store_id": "tesco_budapest_tesco_extra_191492777",
+      "company": "Tesco",
+      "name": "Tesco Extra",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1149 Budapest, Pillangó utca 15",
+      "lat": 47.505173,
+      "lon": 19.116992,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 191492777,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco Extra",
+        "Tesco Budapest",
+        "1149 Budapest, Pillangó utca 15"
+      ]
+    },
+    {
+      "store_id": "tesco_budapest_tesco_extra_1500864544",
+      "company": "Tesco",
+      "name": "Tesco Extra",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1191 Budapest, Vak Bottyán utca 75/B",
+      "lat": 47.462625,
+      "lon": 19.145994,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 1500864544,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco Extra",
+        "Tesco Budapest",
+        "1191 Budapest, Vak Bottyán utca 75/B"
+      ]
+    },
+    {
+      "store_id": "tesco_budaors_tesco_extra_5312202817",
+      "company": "Tesco",
+      "name": "Tesco Extra",
       "city": "Budaörs",
       "area": "Budaörs",
       "region": "Közép-Magyarország",
@@ -21503,30 +21545,9 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Budaörs",
         "2040 Budaörs, Kinizsi utca 1"
-      ]
-    },
-    {
-      "store_id": "tesco_bekescsaba_tesco_112741511",
-      "company": "Tesco",
-      "name": "Tesco",
-      "city": "Békéscsaba",
-      "area": "Békéscsaba",
-      "region": "Dél-Alföld",
-      "address": "5600 Békéscsaba, Szarvasi út 68",
-      "lat": 46.680448,
-      "lon": 21.074917,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 112741511,
-      "brand": "Tesco",
-      "operator": "TESCO-GLOBAL Áruházak Zrt.",
-      "keywords": [
-        "Tesco",
-        "Tesco Békéscsaba",
-        "5600 Békéscsaba, Szarvasi út 68"
       ]
     },
     {
@@ -21551,9 +21572,30 @@
       ]
     },
     {
-      "store_id": "tesco_cegled_tesco_150786762",
+      "store_id": "tesco_bekescsaba_tesco_extra_112741511",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
+      "city": "Békéscsaba",
+      "area": "Békéscsaba",
+      "region": "Dél-Alföld",
+      "address": "5600 Békéscsaba, Szarvasi út 68",
+      "lat": 46.680448,
+      "lon": 21.074917,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 112741511,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco Extra",
+        "Tesco Békéscsaba",
+        "5600 Békéscsaba, Szarvasi út 68"
+      ]
+    },
+    {
+      "store_id": "tesco_cegled_tesco_extra_150786762",
+      "company": "Tesco",
+      "name": "Tesco Extra",
       "city": "Cegléd",
       "area": "Cegléd",
       "region": "Közép-Magyarország",
@@ -21566,7 +21608,7 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Cegléd",
         "2700 Cegléd, Malomtó szél 30"
       ]
@@ -21593,9 +21635,9 @@
       ]
     },
     {
-      "store_id": "tesco_csorna_tesco_3900079",
+      "store_id": "tesco_csorna_tesco_extra_3900079",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Csorna",
       "area": "Csorna",
       "region": "n.a.",
@@ -21608,15 +21650,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Csorna",
         "9300 Csorna, Bartók Béla út 3/C"
       ]
     },
     {
-      "store_id": "tesco_dabas_tesco_3471930793",
+      "store_id": "tesco_dabas_tesco_extra_3471930793",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Dabas",
       "area": "Dabas",
       "region": "Közép-Magyarország",
@@ -21629,7 +21671,7 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Dabas",
         "2370 Dabas"
       ]
@@ -21677,6 +21719,27 @@
       ]
     },
     {
+      "store_id": "tesco_debrecen_tesco_extra_120212084",
+      "company": "Tesco",
+      "name": "Tesco Extra",
+      "city": "Debrecen",
+      "area": "Debrecen",
+      "region": "Észak-Alföld",
+      "address": "4031 Debrecen, Kishegyesi út 1-11",
+      "lat": 47.531059,
+      "lon": 21.609014,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 120212084,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco Extra",
+        "Tesco Debrecen",
+        "4031 Debrecen, Kishegyesi út 1-11"
+      ]
+    },
+    {
       "store_id": "tesco_debrecen_tesco_extra_186360758",
       "company": "Tesco",
       "name": "Tesco Extra",
@@ -21698,9 +21761,9 @@
       ]
     },
     {
-      "store_id": "tesco_dombovar_tesco_311641694",
+      "store_id": "tesco_dombovar_tesco_extra_311641694",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Dombóvár",
       "area": "Dombóvár",
       "region": "n.a.",
@@ -21713,7 +21776,7 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Dombóvár",
         "7200 Dombóvár, Köztársaság utca 7"
       ]
@@ -21740,27 +21803,6 @@
       ]
     },
     {
-      "store_id": "tesco_dunaharaszti_tesco_146232399",
-      "company": "Tesco",
-      "name": "Tesco",
-      "city": "Dunaharaszti",
-      "area": "Dunaharaszti",
-      "region": "Közép-Magyarország",
-      "address": "2330 Dunaharaszti, Némedi út 69",
-      "lat": 47.344017,
-      "lon": 19.118543,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 146232399,
-      "brand": "Tesco",
-      "operator": "TESCO-GLOBAL Áruházak Zrt.",
-      "keywords": [
-        "Tesco",
-        "Tesco Dunaharaszti",
-        "2330 Dunaharaszti, Némedi út 69"
-      ]
-    },
-    {
       "store_id": "tesco_dunaharaszti_tesco_844823841",
       "company": "Tesco",
       "name": "Tesco",
@@ -21782,9 +21824,30 @@
       ]
     },
     {
-      "store_id": "tesco_dunakeszi_tesco_161543325",
+      "store_id": "tesco_dunaharaszti_tesco_extra_146232399",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
+      "city": "Dunaharaszti",
+      "area": "Dunaharaszti",
+      "region": "Közép-Magyarország",
+      "address": "2330 Dunaharaszti, Némedi út 69",
+      "lat": 47.344017,
+      "lon": 19.118543,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 146232399,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco Extra",
+        "Tesco Dunaharaszti",
+        "2330 Dunaharaszti, Némedi út 69"
+      ]
+    },
+    {
+      "store_id": "tesco_dunakeszi_tesco_extra_161543325",
+      "company": "Tesco",
+      "name": "Tesco Extra",
       "city": "Dunakeszi",
       "area": "Dunakeszi",
       "region": "Közép-Magyarország",
@@ -21797,15 +21860,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Dunakeszi",
         "2120 Dunakeszi, Fóti út 120"
       ]
     },
     {
-      "store_id": "tesco_dunakeszi_tesco_305263988",
+      "store_id": "tesco_dunakeszi_tesco_extra_305263988",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Dunakeszi",
       "area": "Dunakeszi",
       "region": "Közép-Magyarország",
@@ -21818,30 +21881,9 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Dunakeszi",
         "2120 Dunakeszi, Fő út 190"
-      ]
-    },
-    {
-      "store_id": "tesco_dunaujvaros_tesco_144206066",
-      "company": "Tesco",
-      "name": "Tesco",
-      "city": "Dunaújváros",
-      "area": "Dunaújváros",
-      "region": "Közép-Dunántúl",
-      "address": "2400 Dunaújváros, Aranyvölgyi út 6",
-      "lat": 46.977399,
-      "lon": 18.925114,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 144206066,
-      "brand": "Tesco",
-      "operator": "TESCO-GLOBAL Áruházak Zrt.",
-      "keywords": [
-        "Tesco",
-        "Tesco Dunaújváros",
-        "2400 Dunaújváros, Aranyvölgyi út 6"
       ]
     },
     {
@@ -21866,6 +21908,27 @@
       ]
     },
     {
+      "store_id": "tesco_dunaujvaros_tesco_extra_144206066",
+      "company": "Tesco",
+      "name": "Tesco Extra",
+      "city": "Dunaújváros",
+      "area": "Dunaújváros",
+      "region": "Közép-Dunántúl",
+      "address": "2400 Dunaújváros, Aranyvölgyi út 6",
+      "lat": 46.977399,
+      "lon": 18.925114,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 144206066,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco Extra",
+        "Tesco Dunaújváros",
+        "2400 Dunaújváros, Aranyvölgyi út 6"
+      ]
+    },
+    {
       "store_id": "tesco_eger_tesco_4840059322",
       "company": "Tesco",
       "name": "Tesco",
@@ -21887,9 +21950,9 @@
       ]
     },
     {
-      "store_id": "tesco_eger_tesco_128532330",
+      "store_id": "tesco_eger_tesco_extra_128532330",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Eger",
       "area": "Eger",
       "region": "Észak-Magyarország",
@@ -21902,15 +21965,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Eger",
         "3300 Eger, II. Rákóczi Ferenc utca 100"
       ]
     },
     {
-      "store_id": "tesco_esztergom_tesco_35160671",
+      "store_id": "tesco_esztergom_tesco_extra_35160671",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Esztergom",
       "area": "Esztergom",
       "region": "Közép-Dunántúl",
@@ -21923,15 +21986,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Esztergom",
         "2500 Esztergom, Mátyás király utca 30"
       ]
     },
     {
-      "store_id": "tesco_gyula_tesco_264961996",
+      "store_id": "tesco_gyula_tesco_extra_264961996",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Gyula",
       "area": "Gyula",
       "region": "Dél-Alföld",
@@ -21944,7 +22007,7 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Gyula",
         "5700 Gyula, Csabai út 3"
       ]
@@ -21971,9 +22034,9 @@
       ]
     },
     {
-      "store_id": "tesco_gyongyos_tesco_191438603",
+      "store_id": "tesco_gyongyos_tesco_extra_191438603",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Gyöngyös",
       "area": "Gyöngyös",
       "region": "n.a.",
@@ -21986,7 +22049,7 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Gyöngyös",
         "3200 Gyöngyös, Vásár utca 2"
       ]
@@ -22118,27 +22181,6 @@
       ]
     },
     {
-      "store_id": "tesco_gyor_tesco_202423006",
-      "company": "Tesco",
-      "name": "Tesco",
-      "city": "Győr",
-      "area": "Győr",
-      "region": "Nyugat-Dunántúl",
-      "address": "9012 Győr, Királyszék út 33",
-      "lat": 47.648631,
-      "lon": 17.626744,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 202423006,
-      "brand": "Tesco",
-      "operator": "TESCO-GLOBAL Áruházak Zrt.",
-      "keywords": [
-        "Tesco",
-        "Tesco Győr",
-        "9012 Győr, Királyszék út 33"
-      ]
-    },
-    {
       "store_id": "tesco_gyor_tesco_265217396",
       "company": "Tesco",
       "name": "Tesco",
@@ -22181,9 +22223,30 @@
       ]
     },
     {
-      "store_id": "tesco_godollo_tesco_220425502",
+      "store_id": "tesco_gyor_tesco_extra_202423006",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
+      "city": "Győr",
+      "area": "Győr",
+      "region": "Nyugat-Dunántúl",
+      "address": "9012 Győr, Királyszék út 33",
+      "lat": 47.648631,
+      "lon": 17.626744,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 202423006,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco Extra",
+        "Tesco Győr",
+        "9012 Győr, Királyszék út 33"
+      ]
+    },
+    {
+      "store_id": "tesco_godollo_tesco_extra_220425502",
+      "company": "Tesco",
+      "name": "Tesco Extra",
       "city": "Gödöllő",
       "area": "Gödöllő",
       "region": "Közép-Magyarország",
@@ -22196,15 +22259,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Gödöllő",
         "2100 Gödöllő, Thegze Lajos utca 2"
       ]
     },
     {
-      "store_id": "tesco_hajduszoboszlo_tesco_264215116",
+      "store_id": "tesco_hajduszoboszlo_tesco_extra_264215116",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Hajdúszoboszló",
       "area": "Hajdúszoboszló",
       "region": "n.a.",
@@ -22217,15 +22280,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Hajdúszoboszló",
         "4200 Hajdúszoboszló, Kabai út"
       ]
     },
     {
-      "store_id": "tesco_hatvan_tesco_224105510",
+      "store_id": "tesco_hatvan_tesco_extra_224105510",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Hatvan",
       "area": "Hatvan",
       "region": "n.a.",
@@ -22238,15 +22301,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Hatvan",
         "3000 Hatvan, Bibó István út 1"
       ]
     },
     {
-      "store_id": "tesco_hodmezovasarhely_tesco_176301257",
+      "store_id": "tesco_hodmezovasarhely_tesco_extra_176301257",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Hódmezővásárhely",
       "area": "Hódmezővásárhely",
       "region": "Dél-Alföld",
@@ -22259,7 +22322,7 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Hódmezővásárhely",
         "6800 Hódmezővásárhely, Hódtó utca 17"
       ]
@@ -22286,9 +22349,9 @@
       ]
     },
     {
-      "store_id": "tesco_jaszbereny_tesco_222473001",
+      "store_id": "tesco_jaszbereny_tesco_extra_222473001",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Jászberény",
       "area": "Jászberény",
       "region": "n.a.",
@@ -22301,15 +22364,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Jászberény",
         "5100 Jászberény, Nagykátai út 2/A"
       ]
     },
     {
-      "store_id": "tesco_kalocsa_tesco_232355923",
+      "store_id": "tesco_kalocsa_tesco_extra_232355923",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Kalocsa",
       "area": "Kalocsa",
       "region": "n.a.",
@@ -22322,19 +22385,19 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Kalocsa",
         "6300 Kalocsa, Bátyai utca 8-10"
       ]
     },
     {
-      "store_id": "tesco_kaposvar_tesco_30924458",
+      "store_id": "tesco_kaposvar_tesco_extra_30924458",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Kaposvár",
       "area": "Kaposvár",
       "region": "Dél-Dunántúl",
-      "address": "7400 Kaposvár, Berzsenyi Dániel utca 13",
+      "address": "7400 Kaposvár, Berzsenyi utca 13",
       "lat": 46.360517,
       "lon": 17.781813,
       "source": "openstreetmap_overpass",
@@ -22343,15 +22406,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Kaposvár",
-        "7400 Kaposvár, Berzsenyi Dániel utca 13"
+        "7400 Kaposvár, Berzsenyi utca 13"
       ]
     },
     {
-      "store_id": "tesco_karcag_tesco_194553803",
+      "store_id": "tesco_karcag_tesco_extra_194553803",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Karcag",
       "area": "Karcag",
       "region": "Észak-Alföld",
@@ -22364,15 +22427,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Karcag",
         "5300 Karcag, Kisújszállási út 34"
       ]
     },
     {
-      "store_id": "tesco_kazincbarcika_tesco_276651486",
+      "store_id": "tesco_kazincbarcika_tesco_extra_276651486",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Kazincbarcika",
       "area": "Kazincbarcika",
       "region": "Észak-Magyarország",
@@ -22385,30 +22448,9 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Kazincbarcika",
         "3700 Kazincbarcika, Attila utca 10/B"
-      ]
-    },
-    {
-      "store_id": "tesco_kecskemet_tesco_1303961374",
-      "company": "Tesco",
-      "name": "Tesco",
-      "city": "Kecskemét",
-      "area": "Kecskemét",
-      "region": "Dél-Alföld",
-      "address": "6000 Kecskemét, Izsáki út 12/B",
-      "lat": 46.89311,
-      "lon": 19.666549,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 1303961374,
-      "brand": "Tesco",
-      "operator": "TESCO-GLOBAL Áruházak Zrt.",
-      "keywords": [
-        "Tesco",
-        "Tesco Kecskemét",
-        "6000 Kecskemét, Izsáki út 12/B"
       ]
     },
     {
@@ -22433,9 +22475,30 @@
       ]
     },
     {
-      "store_id": "tesco_keszthely_tesco_171815523",
+      "store_id": "tesco_kecskemet_tesco_extra_1303961374",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
+      "city": "Kecskemét",
+      "area": "Kecskemét",
+      "region": "Dél-Alföld",
+      "address": "6000 Kecskemét, Izsáki út 12/B",
+      "lat": 46.89311,
+      "lon": 19.666549,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 1303961374,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco Extra",
+        "Tesco Kecskemét",
+        "6000 Kecskemét, Izsáki út 12/B"
+      ]
+    },
+    {
+      "store_id": "tesco_keszthely_tesco_extra_171815523",
+      "company": "Tesco",
+      "name": "Tesco Extra",
       "city": "Keszthely",
       "area": "Keszthely",
       "region": "n.a.",
@@ -22448,15 +22511,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Keszthely",
         "8360 Keszthely, Csapás út 27"
       ]
     },
     {
-      "store_id": "tesco_kiskunfelegyhaza_tesco_53199695",
+      "store_id": "tesco_kiskunfelegyhaza_tesco_extra_53199695",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Kiskunfélegyháza",
       "area": "Kiskunfélegyháza",
       "region": "n.a.",
@@ -22469,15 +22532,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Kiskunfélegyháza",
         "6100 Kiskunfélegyháza, IX. körzet tanya 8/B"
       ]
     },
     {
-      "store_id": "tesco_kiskunhalas_tesco_235487350",
+      "store_id": "tesco_kiskunhalas_tesco_extra_235487350",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Kiskunhalas",
       "area": "Kiskunhalas",
       "region": "n.a.",
@@ -22490,7 +22553,7 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Kiskunhalas",
         "6400 Kiskunhalas, Fejérföld utca 24"
       ]
@@ -22517,9 +22580,9 @@
       ]
     },
     {
-      "store_id": "tesco_kiskoros_tesco_232477111",
+      "store_id": "tesco_kiskoros_tesco_extra_232477111",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Kiskőrös",
       "area": "Kiskőrös",
       "region": "n.a.",
@@ -22532,15 +22595,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Kiskőrös",
         "6200 Kiskőrös, Kossuth Lajos út 61"
       ]
     },
     {
-      "store_id": "tesco_kisvarda_tesco_272849433",
+      "store_id": "tesco_kisvarda_tesco_extra_272849433",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Kisvárda",
       "area": "Kisvárda",
       "region": "n.a.",
@@ -22553,15 +22616,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Kisvárda",
         "4600 Kisvárda, Városmajor út 72"
       ]
     },
     {
-      "store_id": "tesco_komlo_tesco_170221511",
+      "store_id": "tesco_komlo_tesco_extra_170221511",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Komló",
       "area": "Komló",
       "region": "n.a.",
@@ -22574,15 +22637,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Komló",
         "7300 Komló, Kossuth Lajos utca 54-56"
       ]
     },
     {
-      "store_id": "tesco_komarom_tesco_123374197",
+      "store_id": "tesco_komarom_tesco_extra_123374197",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Komárom",
       "area": "Komárom",
       "region": "n.a.",
@@ -22595,7 +22658,7 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Komárom",
         "2900 Komárom, Bajcsy-Zsilinszky utca 7"
       ]
@@ -22622,9 +22685,9 @@
       ]
     },
     {
-      "store_id": "tesco_kormend_tesco_294870925",
+      "store_id": "tesco_kormend_tesco_extra_294870925",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Körmend",
       "area": "Körmend",
       "region": "n.a.",
@@ -22637,15 +22700,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Körmend",
         "9900 Körmend, Sport utca 5"
       ]
     },
     {
-      "store_id": "tesco_koszeg_tesco_553324162",
+      "store_id": "tesco_koszeg_tesco_extra_553324162",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Kőszeg",
       "area": "Kőszeg",
       "region": "n.a.",
@@ -22658,7 +22721,7 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Kőszeg",
         "9730 Kőszeg, Pogányi út 7"
       ]
@@ -22685,9 +22748,9 @@
       ]
     },
     {
-      "store_id": "tesco_mako_tesco_194203730",
+      "store_id": "tesco_mako_tesco_extra_194203730",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Makó",
       "area": "Makó",
       "region": "n.a.",
@@ -22700,15 +22763,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Makó",
         "6900 Makó, Aradi utca 103"
       ]
     },
     {
-      "store_id": "tesco_marcali_tesco_270082696",
+      "store_id": "tesco_marcali_tesco_extra_270082696",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Marcali",
       "area": "Marcali",
       "region": "n.a.",
@@ -22721,7 +22784,7 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Marcali",
         "8700 Marcali, Noszlopy Gáspár utca 177"
       ]
@@ -22769,9 +22832,9 @@
       ]
     },
     {
-      "store_id": "tesco_mezokovesd_tesco_236374990",
+      "store_id": "tesco_mezokovesd_tesco_extra_236374990",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Mezőkövesd",
       "area": "Mezőkövesd",
       "region": "n.a.",
@@ -22784,30 +22847,9 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Mezőkövesd",
         "3400 Mezőkövesd, Egri út 51"
-      ]
-    },
-    {
-      "store_id": "tesco_miskolc_tesco_1661000718",
-      "company": "Tesco",
-      "name": "Tesco",
-      "city": "Miskolc",
-      "area": "Miskolc",
-      "region": "Észak-Magyarország",
-      "address": "3508 Miskolc, Mésztelep utca 1/A",
-      "lat": 48.073962,
-      "lon": 20.776925,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 1661000718,
-      "brand": "Tesco",
-      "operator": "TESCO-GLOBAL Áruházak Zrt.",
-      "keywords": [
-        "Tesco",
-        "Tesco Miskolc",
-        "3508 Miskolc, Mésztelep utca 1/A"
       ]
     },
     {
@@ -22853,9 +22895,51 @@
       ]
     },
     {
-      "store_id": "tesco_mohacs_tesco_238998362",
+      "store_id": "tesco_miskolc_tesco_extra_1661000718",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
+      "city": "Miskolc",
+      "area": "Miskolc",
+      "region": "Észak-Magyarország",
+      "address": "3508 Miskolc, Mésztelep utca 1/A",
+      "lat": 48.073962,
+      "lon": 20.776925,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 1661000718,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco Extra",
+        "Tesco Miskolc",
+        "3508 Miskolc, Mésztelep utca 1/A"
+      ]
+    },
+    {
+      "store_id": "tesco_miskolc_tesco_extra_118967839",
+      "company": "Tesco",
+      "name": "Tesco Extra",
+      "city": "Miskolc",
+      "area": "Miskolc",
+      "region": "Észak-Magyarország",
+      "address": "3526 Miskolc, Szentpéteri kapu 103",
+      "lat": 48.126489,
+      "lon": 20.781927,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 118967839,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco Extra",
+        "Tesco Miskolc",
+        "3526 Miskolc, Szentpéteri kapu 103"
+      ]
+    },
+    {
+      "store_id": "tesco_mohacs_tesco_extra_238998362",
+      "company": "Tesco",
+      "name": "Tesco Extra",
       "city": "Mohács",
       "area": "Mohács",
       "region": "n.a.",
@@ -22868,7 +22952,7 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Mohács",
         "7700 Mohács, Pécsi út 61"
       ]
@@ -22895,27 +22979,6 @@
       ]
     },
     {
-      "store_id": "tesco_mosonmagyarovar_tesco_99349847",
-      "company": "Tesco",
-      "name": "Tesco",
-      "city": "Mosonmagyaróvár",
-      "area": "Mosonmagyaróvár",
-      "region": "Nyugat-Dunántúl",
-      "address": "9200 Mosonmagyaróvár, Királyhidai utca 42",
-      "lat": 47.87646,
-      "lon": 17.257042,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 99349847,
-      "brand": "Tesco",
-      "operator": "TESCO-GLOBAL Áruházak Zrt.",
-      "keywords": [
-        "Tesco",
-        "Tesco Mosonmagyaróvár",
-        "9200 Mosonmagyaróvár, Királyhidai utca 42"
-      ]
-    },
-    {
       "store_id": "tesco_mosonmagyarovar_tesco_99350132",
       "company": "Tesco",
       "name": "Tesco",
@@ -22937,9 +23000,30 @@
       ]
     },
     {
-      "store_id": "tesco_mateszalka_tesco_163383605",
+      "store_id": "tesco_mosonmagyarovar_tesco_extra_99349847",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
+      "city": "Mosonmagyaróvár",
+      "area": "Mosonmagyaróvár",
+      "region": "Nyugat-Dunántúl",
+      "address": "9200 Mosonmagyaróvár, Királyhidai utca 42",
+      "lat": 47.87646,
+      "lon": 17.257042,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 99349847,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco Extra",
+        "Tesco Mosonmagyaróvár",
+        "9200 Mosonmagyaróvár, Királyhidai utca 42"
+      ]
+    },
+    {
+      "store_id": "tesco_mateszalka_tesco_extra_163383605",
+      "company": "Tesco",
+      "name": "Tesco Extra",
       "city": "Mátészalka",
       "area": "Mátészalka",
       "region": "n.a.",
@@ -22952,15 +23036,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Mátészalka",
         "4700 Mátészalka, Alkotmány út 1/A"
       ]
     },
     {
-      "store_id": "tesco_nagyatad_tesco_547880260",
+      "store_id": "tesco_nagyatad_tesco_extra_547880260",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Nagyatád",
       "area": "Nagyatád",
       "region": "n.a.",
@@ -22973,15 +23057,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Nagyatád",
         "7500 Nagyatád, Szabadság út 38"
       ]
     },
     {
-      "store_id": "tesco_nagykanizsa_tesco_152636546",
+      "store_id": "tesco_nagykanizsa_tesco_extra_152636546",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Nagykanizsa",
       "area": "Nagykanizsa",
       "region": "Nyugat-Dunántúl",
@@ -22994,15 +23078,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Nagykanizsa",
         "8800 Nagykanizsa, Boszorkány utca 2"
       ]
     },
     {
-      "store_id": "tesco_nagykoros_tesco_262123797",
+      "store_id": "tesco_nagykoros_tesco_extra_262123797",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Nagykőrös",
       "area": "Nagykőrös",
       "region": "n.a.",
@@ -23015,15 +23099,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Nagykőrös",
         "2750 Nagykőrös, Ceglédi út 32"
       ]
     },
     {
-      "store_id": "tesco_nyirbator_tesco_274160362",
+      "store_id": "tesco_nyirbator_tesco_extra_274160362",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Nyírbátor",
       "area": "Nyírbátor",
       "region": "n.a.",
@@ -23036,15 +23120,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Nyírbátor",
         "4300 Nyírbátor, Debreceni utca 71"
       ]
     },
     {
-      "store_id": "tesco_nyiregyhaza_tesco_146227711",
+      "store_id": "tesco_nyiregyhaza_tesco_extra_146227711",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Nyíregyháza",
       "area": "Nyíregyháza",
       "region": "Észak-Alföld",
@@ -23057,15 +23141,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Nyíregyháza",
         "4400 Nyíregyháza, Pazonyi út 36"
       ]
     },
     {
-      "store_id": "tesco_oroshaza_tesco_229913877",
+      "store_id": "tesco_oroshaza_tesco_extra_229913877",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Orosháza",
       "area": "Orosháza",
       "region": "n.a.",
@@ -23078,15 +23162,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Orosháza",
         "5900 Orosháza, Vásárhelyi út 23/A"
       ]
     },
     {
-      "store_id": "tesco_oroszlany_tesco_314309057",
+      "store_id": "tesco_oroszlany_tesco_extra_314309057",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Oroszlány",
       "area": "Oroszlány",
       "region": "n.a.",
@@ -23099,15 +23183,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Oroszlány",
         "2840 Oroszlány, Környei út 3-5"
       ]
     },
     {
-      "store_id": "tesco_paks_tesco_270246914",
+      "store_id": "tesco_paks_tesco_extra_270246914",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Paks",
       "area": "Paks",
       "region": "n.a.",
@@ -23120,7 +23204,7 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Paks",
         "7030 Paks, Tolnai út 2"
       ]
@@ -23147,45 +23231,24 @@
       ]
     },
     {
-      "store_id": "tesco_pecs_tesco_35096466",
+      "store_id": "tesco_papa_tesco_extra_229066703",
       "company": "Tesco",
-      "name": "Tesco",
-      "city": "Pécs",
-      "area": "Pécs",
-      "region": "Dél-Dunántúl",
-      "address": "7630 Pécs, Budai vám 1",
-      "lat": 46.082887,
-      "lon": 18.270854,
+      "name": "Tesco Extra",
+      "city": "Pápa",
+      "area": "Pápa",
+      "region": "n.a.",
+      "address": "8500 Pápa, Celli út 92",
+      "lat": 47.320985,
+      "lon": 17.449091,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
-      "osm_id": 35096466,
+      "osm_id": 229066703,
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
-        "Tesco Pécs",
-        "7630 Pécs, Budai vám 1"
-      ]
-    },
-    {
-      "store_id": "tesco_pecs_tesco_35096529",
-      "company": "Tesco",
-      "name": "Tesco",
-      "city": "Pécs",
-      "area": "Pécs",
-      "region": "Dél-Dunántúl",
-      "address": "7634 Pécs, Makay István út 5",
-      "lat": 46.063296,
-      "lon": 18.184071,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 35096529,
-      "brand": "Tesco",
-      "operator": "TESCO-GLOBAL Áruházak Zrt.",
-      "keywords": [
-        "Tesco",
-        "Tesco Pécs",
-        "7634 Pécs, Makay István út 5"
+        "Tesco Extra",
+        "Tesco Pápa",
+        "8500 Pápa, Celli út 92"
       ]
     },
     {
@@ -23210,9 +23273,51 @@
       ]
     },
     {
-      "store_id": "tesco_pecs_tesco_168196063",
+      "store_id": "tesco_pecs_tesco_extra_35096466",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
+      "city": "Pécs",
+      "area": "Pécs",
+      "region": "Dél-Dunántúl",
+      "address": "7630 Pécs, Budai vám 1",
+      "lat": 46.082887,
+      "lon": 18.270854,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 35096466,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco Extra",
+        "Tesco Pécs",
+        "7630 Pécs, Budai vám 1"
+      ]
+    },
+    {
+      "store_id": "tesco_pecs_tesco_extra_35096529",
+      "company": "Tesco",
+      "name": "Tesco Extra",
+      "city": "Pécs",
+      "area": "Pécs",
+      "region": "Dél-Dunántúl",
+      "address": "7634 Pécs, Makay István út 5",
+      "lat": 46.063296,
+      "lon": 18.184071,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 35096529,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco Extra",
+        "Tesco Pécs",
+        "7634 Pécs, Makay István út 5"
+      ]
+    },
+    {
+      "store_id": "tesco_pecs_tesco_extra_168196063",
+      "company": "Tesco",
+      "name": "Tesco Extra",
       "city": "Pécs",
       "area": "Pécs",
       "region": "Dél-Dunántúl",
@@ -23225,7 +23330,7 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Pécs",
         "7631 Pécs, Kincses út 1"
       ]
@@ -23252,9 +23357,9 @@
       ]
     },
     {
-      "store_id": "tesco_salgotarjan_tesco_394896753",
+      "store_id": "tesco_salgotarjan_tesco_extra_394896753",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Salgótarján",
       "area": "Salgótarján",
       "region": "Észak-Magyarország",
@@ -23267,7 +23372,7 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Salgótarján",
         "3100 Salgótarján, Rákóczi út 143"
       ]
@@ -23294,9 +23399,9 @@
       ]
     },
     {
-      "store_id": "tesco_siklos_tesco_81367961",
+      "store_id": "tesco_siklos_tesco_extra_81367961",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Siklós",
       "area": "Siklós",
       "region": "n.a.",
@@ -23309,30 +23414,9 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Siklós",
         "7800 Siklós, Harkányi út 55"
-      ]
-    },
-    {
-      "store_id": "tesco_siofok_tesco_165499121",
-      "company": "Tesco",
-      "name": "Tesco",
-      "city": "Siófok",
-      "area": "Siófok",
-      "region": "Dél-Dunántúl",
-      "address": "8600 Siófok, Vak Bottyán utca 27",
-      "lat": 46.892611,
-      "lon": 18.057105,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 165499121,
-      "brand": "Tesco",
-      "operator": "TESCO-GLOBAL Áruházak Zrt.",
-      "keywords": [
-        "Tesco",
-        "Tesco Siófok",
-        "8600 Siófok, Vak Bottyán utca 27"
       ]
     },
     {
@@ -23357,6 +23441,27 @@
       ]
     },
     {
+      "store_id": "tesco_siofok_tesco_extra_165499121",
+      "company": "Tesco",
+      "name": "Tesco Extra",
+      "city": "Siófok",
+      "area": "Siófok",
+      "region": "Dél-Dunántúl",
+      "address": "8600 Siófok, Vak Bottyán utca 27",
+      "lat": 46.892611,
+      "lon": 18.057105,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 165499121,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco Extra",
+        "Tesco Siófok",
+        "8600 Siófok, Vak Bottyán utca 27"
+      ]
+    },
+    {
       "store_id": "tesco_sopron_s_market_1406975311",
       "company": "Tesco",
       "name": "S-Market",
@@ -23375,27 +23480,6 @@
         "S-Market",
         "Tesco Sopron",
         "9400 Sopron, Végfordulat 9"
-      ]
-    },
-    {
-      "store_id": "tesco_sopron_tesco_89688335",
-      "company": "Tesco",
-      "name": "Tesco",
-      "city": "Sopron",
-      "area": "Sopron",
-      "region": "Nyugat-Dunántúl",
-      "address": "9400 Sopron, Ipar körút 30",
-      "lat": 47.669881,
-      "lon": 16.612765,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 89688335,
-      "brand": "Tesco",
-      "operator": "TESCO-GLOBAL Áruházak Zrt.",
-      "keywords": [
-        "Tesco",
-        "Tesco Sopron",
-        "9400 Sopron, Ipar körút 30"
       ]
     },
     {
@@ -23483,9 +23567,30 @@
       ]
     },
     {
-      "store_id": "tesco_szarvas_tesco_269577561",
+      "store_id": "tesco_sopron_tesco_extra_89688335",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
+      "city": "Sopron",
+      "area": "Sopron",
+      "region": "Nyugat-Dunántúl",
+      "address": "9400 Sopron, Ipar körút 30",
+      "lat": 47.669881,
+      "lon": 16.612765,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 89688335,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco Extra",
+        "Tesco Sopron",
+        "9400 Sopron, Ipar körút 30"
+      ]
+    },
+    {
+      "store_id": "tesco_szarvas_tesco_extra_269577561",
+      "company": "Tesco",
+      "name": "Tesco Extra",
       "city": "Szarvas",
       "area": "Szarvas",
       "region": "n.a.",
@@ -23498,7 +23603,7 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Szarvas",
         "5540 Szarvas, Csabai út 9"
       ]
@@ -23546,27 +23651,6 @@
       ]
     },
     {
-      "store_id": "tesco_szeged_tesco_4736930561",
-      "company": "Tesco",
-      "name": "Tesco",
-      "city": "Szeged",
-      "area": "Szeged",
-      "region": "Dél-Alföld",
-      "address": "6729 Szeged, Szabadkai út 7",
-      "lat": 46.2443,
-      "lon": 20.121009,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 4736930561,
-      "brand": "Tesco",
-      "operator": "TESCO-GLOBAL Áruházak Zrt.",
-      "keywords": [
-        "Tesco",
-        "Tesco Szeged",
-        "6729 Szeged, Szabadkai út 7"
-      ]
-    },
-    {
       "store_id": "tesco_szeged_tesco_153586778",
       "company": "Tesco",
       "name": "Tesco",
@@ -23585,6 +23669,48 @@
         "Tesco",
         "Tesco Szeged",
         "6723 Szeged, Makkosházi körút 4"
+      ]
+    },
+    {
+      "store_id": "tesco_szeged_tesco_extra_4736930561",
+      "company": "Tesco",
+      "name": "Tesco Extra",
+      "city": "Szeged",
+      "area": "Szeged",
+      "region": "Dél-Alföld",
+      "address": "6729 Szeged, Szabadkai út 7",
+      "lat": 46.2443,
+      "lon": 20.121009,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 4736930561,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco Extra",
+        "Tesco Szeged",
+        "6729 Szeged, Szabadkai út 7"
+      ]
+    },
+    {
+      "store_id": "tesco_szeged_tesco_extra_4781258096",
+      "company": "Tesco",
+      "name": "Tesco Extra",
+      "city": "Szeged",
+      "area": "Szeged",
+      "region": "Dél-Alföld",
+      "address": "6724 Szeged, Rókusi körút 42-64",
+      "lat": 46.268022,
+      "lon": 20.138593,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 4781258096,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco Extra",
+        "Tesco Szeged",
+        "6724 Szeged, Rókusi körút 42-64"
       ]
     },
     {
@@ -23609,9 +23735,9 @@
       ]
     },
     {
-      "store_id": "tesco_szekszard_tesco_7686644770",
+      "store_id": "tesco_szekszard_tesco_extra_7686644770",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Szekszárd",
       "area": "Szekszárd",
       "region": "Dél-Dunántúl",
@@ -23624,15 +23750,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Szekszárd",
         "7100 Szekszárd, Tartsay Vilmos utca 40"
       ]
     },
     {
-      "store_id": "tesco_szentes_tesco_309096191",
+      "store_id": "tesco_szentes_tesco_extra_309096191",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Szentes",
       "area": "Szentes",
       "region": "n.a.",
@@ -23645,15 +23771,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Szentes",
         "6600 Szentes, Alsórét 258"
       ]
     },
     {
-      "store_id": "tesco_szerencs_tesco_1498877225",
+      "store_id": "tesco_szerencs_tesco_extra_1498877225",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Szerencs",
       "area": "Szerencs",
       "region": "n.a.",
@@ -23666,15 +23792,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Szerencs",
         "3900 Szerencs, Gyár utca 40"
       ]
     },
     {
-      "store_id": "tesco_szigetvar_tesco_244391894",
+      "store_id": "tesco_szigetvar_tesco_extra_244391894",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Szigetvár",
       "area": "Szigetvár",
       "region": "n.a.",
@@ -23687,7 +23813,7 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Szigetvár",
         "7900 Szigetvár, Almáspatak utca 7"
       ]
@@ -23735,24 +23861,24 @@
       ]
     },
     {
-      "store_id": "tesco_szombathely_tesco_201603992",
+      "store_id": "tesco_szolnok_tesco_extra_260815159",
       "company": "Tesco",
-      "name": "Tesco",
-      "city": "Szombathely",
-      "area": "Szombathely",
-      "region": "Nyugat-Dunántúl",
-      "address": "9700 Szombathely, Zanati út 70",
-      "lat": 47.239443,
-      "lon": 16.652766,
+      "name": "Tesco Extra",
+      "city": "Szolnok",
+      "area": "Szolnok",
+      "region": "Észak-Alföld",
+      "address": "5000 Szolnok, Téglagyári út 30",
+      "lat": 47.17741,
+      "lon": 20.167731,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
-      "osm_id": 201603992,
+      "osm_id": 260815159,
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
-        "Tesco Szombathely",
-        "9700 Szombathely, Zanati út 70"
+        "Tesco Extra",
+        "Tesco Szolnok",
+        "5000 Szolnok, Téglagyári út 30"
       ]
     },
     {
@@ -23777,9 +23903,30 @@
       ]
     },
     {
-      "store_id": "tesco_szazhalombatta_tesco_197459813",
+      "store_id": "tesco_szombathely_tesco_extra_201603992",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
+      "city": "Szombathely",
+      "area": "Szombathely",
+      "region": "Nyugat-Dunántúl",
+      "address": "9700 Szombathely, Zanati út 70",
+      "lat": 47.239443,
+      "lon": 16.652766,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 201603992,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco Extra",
+        "Tesco Szombathely",
+        "9700 Szombathely, Zanati út 70"
+      ]
+    },
+    {
+      "store_id": "tesco_szazhalombatta_tesco_extra_197459813",
+      "company": "Tesco",
+      "name": "Tesco Extra",
       "city": "Százhalombatta",
       "area": "Százhalombatta",
       "region": "n.a.",
@@ -23792,15 +23939,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Százhalombatta",
         "2440 Százhalombatta, Damjanich utca 29"
       ]
     },
     {
-      "store_id": "tesco_szekesfehervar_tesco_2316853129",
+      "store_id": "tesco_szekesfehervar_tesco_extra_2316853129",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Székesfehérvár",
       "area": "Székesfehérvár",
       "region": "Közép-Dunántúl",
@@ -23813,15 +23960,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Székesfehérvár",
         "8000 Székesfehérvár, Palotai út 6"
       ]
     },
     {
-      "store_id": "tesco_szekesfehervar_tesco_34851815",
+      "store_id": "tesco_szekesfehervar_tesco_extra_34851815",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Székesfehérvár",
       "area": "Székesfehérvár",
       "region": "Közép-Dunántúl",
@@ -23834,15 +23981,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Székesfehérvár",
         "8000 Székesfehérvár, Aszalvölgyi út 1"
       ]
     },
     {
-      "store_id": "tesco_sarbogard_tesco_221500373",
+      "store_id": "tesco_sarbogard_tesco_extra_221500373",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Sárbogárd",
       "area": "Sárbogárd",
       "region": "n.a.",
@@ -23855,15 +24002,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Sárbogárd",
         "7000 Sárbogárd, Ady Endre út 19"
       ]
     },
     {
-      "store_id": "tesco_sarvar_tesco_295648546",
+      "store_id": "tesco_sarvar_tesco_extra_295648546",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Sárvár",
       "area": "Sárvár",
       "region": "n.a.",
@@ -23876,15 +24023,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Sárvár",
         "9600 Sárvár, Rákóczi Ferenc út 83"
       ]
     },
     {
-      "store_id": "tesco_satoraljaujhely_tesco_230156914",
+      "store_id": "tesco_satoraljaujhely_tesco_extra_230156914",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Sátoraljaújhely",
       "area": "Sátoraljaújhely",
       "region": "n.a.",
@@ -23897,7 +24044,7 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Sátoraljaújhely",
         "3980 Sátoraljaújhely, Kazinczy Ferenc utca 105"
       ]
@@ -23966,9 +24113,9 @@
       ]
     },
     {
-      "store_id": "tesco_tapolca_tesco_10320676",
+      "store_id": "tesco_tapolca_tesco_extra_10320676",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Tapolca",
       "area": "Tapolca",
       "region": "n.a.",
@@ -23981,15 +24128,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Tapolca",
         "8300 Tapolca, Veszprémi út 5"
       ]
     },
     {
-      "store_id": "tesco_tata_tesco_285332597",
+      "store_id": "tesco_tata_tesco_extra_285332597",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Tata",
       "area": "Tata",
       "region": "n.a.",
@@ -24002,15 +24149,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Tata",
         "2890 Tata, Ring utca 1"
       ]
     },
     {
-      "store_id": "tesco_tatabanya_tesco_120229169",
+      "store_id": "tesco_tatabanya_tesco_extra_120229169",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Tatabánya",
       "area": "Tatabánya",
       "region": "Közép-Dunántúl",
@@ -24023,15 +24170,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Tatabánya",
         "2800 Tatabánya, Bláthy Ottó utca 1"
       ]
     },
     {
-      "store_id": "tesco_tiszafured_tesco_226698475",
+      "store_id": "tesco_tiszafured_tesco_extra_226698475",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Tiszafüred",
       "area": "Tiszafüred",
       "region": "n.a.",
@@ -24044,15 +24191,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Tiszafüred",
         "5350 Tiszafüred, Madách Imre utca 2"
       ]
     },
     {
-      "store_id": "tesco_tiszaujvaros_tesco_284757338",
+      "store_id": "tesco_tiszaujvaros_tesco_extra_284757338",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Tiszaújváros",
       "area": "Tiszaújváros",
       "region": "n.a.",
@@ -24065,7 +24212,7 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Tiszaújváros",
         "3580 Tiszaújváros, Örösi út 1/A"
       ]
@@ -24134,9 +24281,9 @@
       ]
     },
     {
-      "store_id": "tesco_vecses_tesco_727750381",
+      "store_id": "tesco_vecses_tesco_extra_727750381",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Vecsés",
       "area": "Vecsés",
       "region": "Közép-Magyarország",
@@ -24149,7 +24296,7 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Vecsés",
         "2220 Vecsés, Fő út 246-248"
       ]
@@ -24176,9 +24323,9 @@
       ]
     },
     {
-      "store_id": "tesco_veszprem_tesco_9148931",
+      "store_id": "tesco_veszprem_tesco_extra_9148931",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Veszprém",
       "area": "Veszprém",
       "region": "Közép-Dunántúl",
@@ -24191,15 +24338,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Veszprém",
         "8200 Veszprém, Külső-Kádártai út 3"
       ]
     },
     {
-      "store_id": "tesco_vac_tesco_3237453813",
+      "store_id": "tesco_vac_tesco_extra_3237453813",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Vác",
       "area": "Vác",
       "region": "Közép-Magyarország",
@@ -24212,15 +24359,15 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Vác",
         "2600 Vác, Deres utca 2"
       ]
     },
     {
-      "store_id": "tesco_varpalota_tesco_139564826",
+      "store_id": "tesco_varpalota_tesco_extra_139564826",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Várpalota",
       "area": "Várpalota",
       "region": "n.a.",
@@ -24233,7 +24380,7 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Várpalota",
         "8100 Várpalota, Fehérvári út 17"
       ]
@@ -24260,9 +24407,9 @@
       ]
     },
     {
-      "store_id": "tesco_zalaegerszeg_tesco_171713991",
+      "store_id": "tesco_zalaegerszeg_tesco_extra_171713991",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Zalaegerszeg",
       "area": "Zalaegerszeg",
       "region": "Nyugat-Dunántúl",
@@ -24275,7 +24422,7 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Zalaegerszeg",
         "8900 Zalaegerszeg, Sport utca 1"
       ]
@@ -24302,30 +24449,9 @@
       ]
     },
     {
-      "store_id": "tesco_na_tesco_13904233110",
+      "store_id": "tesco_erd_tesco_extra_12390531069",
       "company": "Tesco",
-      "name": "Tesco",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.551878,
-      "lon": 19.139225,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 13904233110,
-      "brand": "Tesco",
-      "operator": "",
-      "keywords": [
-        "Tesco",
-        "Tesco n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "tesco_erd_tesco_12390531069",
-      "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Érd",
       "area": "Érd",
       "region": "Közép-Magyarország",
@@ -24338,7 +24464,7 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Érd",
         "2030 Érd, Budafoki út 2-4"
       ]
@@ -24365,9 +24491,9 @@
       ]
     },
     {
-      "store_id": "tesco_ozd_tesco_357284269",
+      "store_id": "tesco_ozd_tesco_extra_357284269",
       "company": "Tesco",
-      "name": "Tesco",
+      "name": "Tesco Extra",
       "city": "Ózd",
       "area": "Ózd",
       "region": "n.a.",
@@ -24380,7 +24506,7 @@
       "brand": "Tesco",
       "operator": "TESCO-GLOBAL Áruházak Zrt.",
       "keywords": [
-        "Tesco",
+        "Tesco Extra",
         "Tesco Ózd",
         "3600 Ózd, Brassói út 3"
       ]
