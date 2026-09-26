@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-25T09:08:13Z",
+  "updated_at": "2026-09-26T08:51:49Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -241,14 +241,24 @@
       "category": "Tejtermék",
       "expected_unit": "kg",
       "prices": {
+        "Lidl": 2390.0,
         "Penny": 2390.0,
         "Auchan": 2141.0,
         "ALDI": 2390.0,
-        "Lidl": 2390.0,
         "SPAR": 2390.0,
         "Tesco": 2590.0
       },
       "selected_products": {
+        "Lidl": {
+          "source_product_id": "lidl-0001956",
+          "source_product_name": "Pilos Trappista sajt   ca1,4kg ",
+          "amount": 2390.0,
+          "unit_amount": 2390.0,
+          "unit": "kg",
+          "unit_title": "db",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "Penny": {
           "source_product_id": "penny-1251",
           "source_product_name": "Sissy trappista sajt egész kg",
@@ -272,16 +282,6 @@
         "ALDI": {
           "source_product_id": "aldi-321828",
           "source_product_name": "Kokárdás trappista sajt kg",
-          "amount": 2390.0,
-          "unit_amount": 2390.0,
-          "unit": "kg",
-          "unit_title": "db",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Lidl": {
-          "source_product_id": "lidl-0001956",
-          "source_product_name": "Pilos Trappista sajt   ca1,4kg ",
           "amount": 2390.0,
           "unit_amount": 2390.0,
           "unit": "kg",
@@ -473,7 +473,7 @@
       "expected_unit": "kg",
       "prices": {
         "Auchan": 1199.0,
-        "Tesco": 1362.0,
+        "Tesco": 1313.0,
         "Lidl": 1465.0,
         "ALDI": 1465.0,
         "Penny": 1465.0,
@@ -493,8 +493,8 @@
         "Tesco": {
           "source_product_id": "2870240000000",
           "source_product_name": "16. SERTES COMB pultos QQ",
-          "amount": 1362.0,
-          "unit_amount": 1362.0,
+          "amount": 1313.0,
+          "unit_amount": 1313.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -627,11 +627,11 @@
       "expected_unit": "kg",
       "prices": {
         "Auchan": 1699.0,
-        "Lidl": 1729.0,
-        "Tesco": 1743.0,
+        "Penny": 1979.0,
+        "Tesco": 1959.0,
+        "Lidl": 1859.0,
         "SPAR": 1926.0,
-        "ALDI": 1979.0,
-        "Penny": 1979.0
+        "ALDI": 1979.0
       },
       "selected_products": {
         "Auchan": {
@@ -644,21 +644,31 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Lidl": {
-          "source_product_id": "2895800000000",
-          "source_product_name": "Csirkemell tokány, kg ",
-          "amount": 1729.0,
-          "unit_amount": 1729.0,
+        "Penny": {
+          "source_product_id": "penny-10248",
+          "source_product_name": "Kedvenc Hentese friss csirkemellfilé kg",
+          "amount": 1979.0,
+          "unit_amount": 1979.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Tesco": {
+          "source_product_id": "2856090000000",
+          "source_product_name": "CSIRKE MELLFILÉ VÁKUMCS Ft/kg",
+          "amount": 1959.0,
+          "unit_amount": 1959.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Tesco": {
-          "source_product_id": "2804780000000",
-          "source_product_name": "14. FRISS CSIRKEMELL FILE PULTOS QQ",
-          "amount": 1743.0,
-          "unit_amount": 1743.0,
+        "Lidl": {
+          "source_product_id": "2895800000000",
+          "source_product_name": "Csirkemell tokány, kg ",
+          "amount": 1859.0,
+          "unit_amount": 1859.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -681,16 +691,6 @@
           "unit_amount": 1979.0,
           "unit": "kg",
           "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-10248",
-          "source_product_name": "Kedvenc Hentese friss csirkemellfilé kg",
-          "amount": 1979.0,
-          "unit_amount": 1979.0,
-          "unit": "kg",
-          "unit_title": "csomag",
           "packaging": "1",
           "price_type": "NORMAL"
         }
@@ -1013,10 +1013,10 @@
       "prices": {
         "Lidl": 429.0,
         "Auchan": 433.0,
-        "ALDI": 799.0,
         "Tesco": 805.0,
         "SPAR": 880.0,
-        "Penny": 931.0
+        "Penny": 931.0,
+        "ALDI": 975.0
       },
       "selected_products": {
         "Lidl": {
@@ -1036,16 +1036,6 @@
           "unit_amount": 433.0,
           "unit": "kg",
           "unit_title": "csomag",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "ALDI": {
-          "source_product_id": "aldi-166633",
-          "source_product_name": "Paradicsom fürtös lédig",
-          "amount": 799.0,
-          "unit_amount": 799.0,
-          "unit": "kg",
-          "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
         },
@@ -1078,6 +1068,16 @@
           "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
+        },
+        "ALDI": {
+          "source_product_id": "aldi-166633",
+          "source_product_name": "Paradicsom fürtös lédig",
+          "amount": 975.0,
+          "unit_amount": 975.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
         }
       },
       "coverage": 6
@@ -1091,8 +1091,8 @@
         "Lidl": 592.0,
         "Penny": 826.67,
         "Auchan": 599.0,
-        "ALDI": 599.0,
         "SPAR": 602.0,
+        "ALDI": 649.0,
         "Tesco": 765.0
       },
       "selected_products": {
@@ -1126,16 +1126,6 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "ALDI": {
-          "source_product_id": "aldi-456579",
-          "source_product_name": "Paprika lecsó 1kg",
-          "amount": 599.0,
-          "unit_amount": 599.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
         "SPAR": {
           "source_product_id": "5999139410222",
           "source_product_name": "S-budget xxl lecsópaprika 1,5kg",
@@ -1144,6 +1134,16 @@
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "1.5",
+          "price_type": "NORMAL"
+        },
+        "ALDI": {
+          "source_product_id": "aldi-456579",
+          "source_product_name": "Paprika lecsó 1kg",
+          "amount": 649.0,
+          "unit_amount": 649.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "1",
           "price_type": "NORMAL"
         },
         "Tesco": {
@@ -1770,23 +1770,13 @@
       "category": "Háztartás",
       "expected_unit": "db",
       "prices": {
-        "SPAR": 105.83,
         "Auchan": 51.0,
-        "Tesco": 117.25,
-        "ALDI": 121.5,
-        "Penny": 124.75
+        "Penny": 124.75,
+        "SPAR": 105.83,
+        "Tesco": 140.563,
+        "ALDI": 139.5
       },
       "selected_products": {
-        "SPAR": {
-          "source_product_id": "6414301080601",
-          "source_product_name": "Tento Family Delicate illatmentes toalettpapír 3 rétegű 24 tekercs",
-          "amount": 2540.0,
-          "unit_amount": 105.83,
-          "unit": "db",
-          "unit_title": "csomag",
-          "packaging": "24",
-          "price_type": "NORMAL"
-        },
         "Auchan": {
           "source_product_id": "8606034950124",
           "source_product_name": "Perfex toalettpapír Soft & Light, Pure white 3 rétegű 125 lap 16 tekercs",
@@ -1795,26 +1785,6 @@
           "unit": "db",
           "unit_title": "csomag",
           "packaging": "16",
-          "price_type": "NORMAL"
-        },
-        "Tesco": {
-          "source_product_id": "5059944692234",
-          "source_product_name": "SPRINGFORCE TOALETTPAPÍR 2 RÉT. 4 TEKERCS",
-          "amount": 469.0,
-          "unit_amount": 117.25,
-          "unit": "db",
-          "unit_title": "csomag",
-          "packaging": "4",
-          "price_type": "NORMAL"
-        },
-        "ALDI": {
-          "source_product_id": "aldi-525191",
-          "source_product_name": "Toalettpapír 3r. 10x220",
-          "amount": 1215.0,
-          "unit_amount": 121.5,
-          "unit": "db",
-          "unit_title": "csomag",
-          "packaging": "10",
           "price_type": "NORMAL"
         },
         "Penny": {
@@ -1826,6 +1796,36 @@
           "unit_title": "csomag",
           "packaging": "4",
           "price_type": "NORMAL"
+        },
+        "SPAR": {
+          "source_product_id": "6414301080601",
+          "source_product_name": "Tento Family Delicate illatmentes toalettpapír 3 rétegű 24 tekercs",
+          "amount": 2540.0,
+          "unit_amount": 105.83,
+          "unit": "db",
+          "unit_title": "csomag",
+          "packaging": "24",
+          "price_type": "NORMAL"
+        },
+        "Tesco": {
+          "source_product_id": "5998648704372",
+          "source_product_name": "Ooops! Excellence Sensitive toalettpapír 3 rétegű 16 tekercs",
+          "amount": 2249.0,
+          "unit_amount": 140.563,
+          "unit": "db",
+          "unit_title": "csomag",
+          "packaging": "16",
+          "price_type": "NORMAL"
+        },
+        "ALDI": {
+          "source_product_id": "aldi-524817",
+          "source_product_name": "Toalettpapír 4 rétegű, 10x200",
+          "amount": 1395.0,
+          "unit_amount": 139.5,
+          "unit": "db",
+          "unit_title": "csomag",
+          "packaging": "10",
+          "price_type": "NORMAL"
         }
       },
       "coverage": 5
@@ -1836,34 +1836,14 @@
       "category": "Háztartás",
       "expected_unit": "l",
       "prices": {
-        "Auchan": 524.0,
-        "Penny": 674.75,
         "SPAR": 449.67,
         "Tesco": 463.0,
         "Lidl": 463.18,
-        "ALDI": 497.38
+        "ALDI": 497.38,
+        "Auchan": 524.0,
+        "Penny": 674.75
       },
       "selected_products": {
-        "Auchan": {
-          "source_product_id": "5998147323968",
-          "source_product_name": "Floren XXXL Color folyékony mosószer 70 mosás 4,75 l",
-          "amount": 2490.0,
-          "unit_amount": 524.0,
-          "unit": "l",
-          "unit_title": "db",
-          "packaging": "4.75",
-          "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "5999079511157",
-          "source_product_name": "Silkylux universal mosógél 4l",
-          "amount": 2699.0,
-          "unit_amount": 674.75,
-          "unit": "l",
-          "unit_title": "db",
-          "packaging": "4",
-          "price_type": "NORMAL"
-        },
         "SPAR": {
           "source_product_id": "5999033894845",
           "source_product_name": "S-Budget univerzális mosószergél 40 mosás 3 l",
@@ -1902,6 +1882,26 @@
           "unit": "l",
           "unit_title": "db",
           "packaging": "4.2",
+          "price_type": "NORMAL"
+        },
+        "Auchan": {
+          "source_product_id": "5998147323968",
+          "source_product_name": "Floren XXXL Color folyékony mosószer 70 mosás 4,75 l",
+          "amount": 2490.0,
+          "unit_amount": 524.0,
+          "unit": "l",
+          "unit_title": "db",
+          "packaging": "4.75",
+          "price_type": "NORMAL"
+        },
+        "Penny": {
+          "source_product_id": "5999079511157",
+          "source_product_name": "Silkylux universal mosógél 4l",
+          "amount": 2699.0,
+          "unit_amount": 674.75,
+          "unit": "l",
+          "unit_title": "db",
+          "packaging": "4",
           "price_type": "NORMAL"
         }
       },
