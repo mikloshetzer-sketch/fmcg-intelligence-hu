@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-26T08:51:49Z",
+  "updated_at": "2026-09-27T09:34:03Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -857,14 +857,24 @@
       "category": "Gyümölcs",
       "expected_unit": "kg",
       "prices": {
+        "Penny": 599.0,
         "Tesco": 699.0,
         "SPAR": 699.0,
         "ALDI": 699.0,
         "Lidl": 399.0,
-        "Penny": 699.0,
         "Auchan": 749.0
       },
       "selected_products": {
+        "Penny": {
+          "source_product_id": "penny-302",
+          "source_product_name": "Banán lédig kg",
+          "amount": 599.0,
+          "unit_amount": 599.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "Tesco": {
           "source_product_id": "2870100000000",
           "source_product_name": "Banán lédig    ",
@@ -900,16 +910,6 @@
           "source_product_name": "Banán kg",
           "amount": 399.0,
           "unit_amount": 399.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-302",
-          "source_product_name": "Banán lédig kg",
-          "amount": 699.0,
-          "unit_amount": 699.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1560,7 +1560,7 @@
       "selected_products": {
         "Auchan": {
           "source_product_id": "4008671013004",
-          "source_product_name": "Sweet Family kristálycukor 1 kg",
+          "source_product_name": "Sweet Family Kristálycukor 1kg",
           "amount": 290.0,
           "unit_amount": 290.0,
           "unit": "kg",
@@ -1570,7 +1570,7 @@
         },
         "ALDI": {
           "source_product_id": "4008671013004",
-          "source_product_name": "Sweet Family kristálycukor 1 kg",
+          "source_product_name": "Sweet Family Kristálycukor 1kg",
           "amount": 295.0,
           "unit_amount": 295.0,
           "unit": "kg",
