@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-21T10:54:56Z",
+  "updated_at": "2026-09-28T11:51:18Z",
   "status": "ok",
   "source": "linkedin_public_jobs_search",
   "method": "non_login_public_search_best_effort",
@@ -8,16 +8,16 @@
     {
       "id": "auchan",
       "company": "Auchan",
-      "linkedin_active_ads_hint": 2,
+      "linkedin_active_ads_hint": null,
       "category_scores": {
         "store": 3,
-        "warehouse": 2,
+        "warehouse": 5,
         "management": 3,
-        "office": 8,
+        "office": 7,
         "expansion": 0
       },
       "dominant_signal": "logistics_recruitment_signal",
-      "source_confidence": "medium",
+      "source_confidence": "low",
       "source_note": "Publikus LinkedIn Jobs keresési oldal alapján. Nem belépett scraping, nem hivatalos API. Blokkolás esetén a jel alacsony megbízhatóságú.",
       "queries": [
         {
@@ -27,7 +27,7 @@
           "count_hint": null,
           "category_scores": {
             "store": 0,
-            "warehouse": 1,
+            "warehouse": 2,
             "management": 1,
             "office": 4,
             "expansion": 0
@@ -37,12 +37,12 @@
           "query": "Auchan Retail Magyarország",
           "url": "https://www.linkedin.com/jobs/search/?keywords=Auchan+Retail+Magyarorsz%C3%A1g&location=Hungary",
           "status": "fetched",
-          "count_hint": 2,
+          "count_hint": null,
           "category_scores": {
             "store": 3,
-            "warehouse": 1,
+            "warehouse": 3,
             "management": 2,
-            "office": 4,
+            "office": 3,
             "expansion": 0
           }
         }
@@ -51,12 +51,12 @@
     {
       "id": "lidl",
       "company": "Lidl",
-      "linkedin_active_ads_hint": 1,
+      "linkedin_active_ads_hint": 946,
       "category_scores": {
         "store": 0,
         "warehouse": 4,
         "management": 4,
-        "office": 6,
+        "office": 7,
         "expansion": 0
       },
       "dominant_signal": "logistics_recruitment_signal",
@@ -67,7 +67,7 @@
           "query": "Lidl Magyarország",
           "url": "https://www.linkedin.com/jobs/search/?keywords=Lidl+Magyarorsz%C3%A1g&location=Hungary",
           "status": "fetched",
-          "count_hint": 1,
+          "count_hint": 946,
           "category_scores": {
             "store": 0,
             "warehouse": 2,
@@ -80,12 +80,12 @@
           "query": "Lidl Hungary",
           "url": "https://www.linkedin.com/jobs/search/?keywords=Lidl+Hungary&location=Hungary",
           "status": "fetched",
-          "count_hint": 1,
+          "count_hint": null,
           "category_scores": {
             "store": 0,
             "warehouse": 2,
             "management": 2,
-            "office": 3,
+            "office": 4,
             "expansion": 0
           }
         }
@@ -94,15 +94,15 @@
     {
       "id": "aldi",
       "company": "ALDI",
-      "linkedin_active_ads_hint": 10,
+      "linkedin_active_ads_hint": 978,
       "category_scores": {
         "store": 0,
         "warehouse": 0,
-        "management": 0,
-        "office": 2,
+        "management": 4,
+        "office": 3,
         "expansion": 0
       },
-      "dominant_signal": "weak_signal",
+      "dominant_signal": "management_recruitment_signal",
       "source_confidence": "medium",
       "source_note": "Publikus LinkedIn Jobs keresési oldal alapján. Nem belépett scraping, nem hivatalos API. Blokkolás esetén a jel alacsony megbízhatóságú.",
       "queries": [
@@ -110,12 +110,12 @@
           "query": "ALDI Magyarország",
           "url": "https://www.linkedin.com/jobs/search/?keywords=ALDI+Magyarorsz%C3%A1g&location=Hungary",
           "status": "fetched",
-          "count_hint": 10,
+          "count_hint": 978,
           "category_scores": {
             "store": 0,
             "warehouse": 0,
-            "management": 0,
-            "office": 1,
+            "management": 2,
+            "office": 2,
             "expansion": 0
           }
         },
@@ -123,11 +123,11 @@
           "query": "ALDI Hungary",
           "url": "https://www.linkedin.com/jobs/search/?keywords=ALDI+Hungary&location=Hungary",
           "status": "fetched",
-          "count_hint": 10,
+          "count_hint": 1,
           "category_scores": {
             "store": 0,
             "warehouse": 0,
-            "management": 0,
+            "management": 2,
             "office": 1,
             "expansion": 0
           }
@@ -137,12 +137,12 @@
     {
       "id": "spar",
       "company": "SPAR",
-      "linkedin_active_ads_hint": 5,
+      "linkedin_active_ads_hint": 4,
       "category_scores": {
-        "store": 1,
+        "store": 0,
         "warehouse": 2,
-        "management": 3,
-        "office": 7,
+        "management": 4,
+        "office": 6,
         "expansion": 0
       },
       "dominant_signal": "logistics_recruitment_signal",
@@ -153,11 +153,11 @@
           "query": "SPAR Magyarország",
           "url": "https://www.linkedin.com/jobs/search/?keywords=SPAR+Magyarorsz%C3%A1g&location=Hungary",
           "status": "fetched",
-          "count_hint": 5,
+          "count_hint": 4,
           "category_scores": {
-            "store": 1,
+            "store": 0,
             "warehouse": 1,
-            "management": 1,
+            "management": 2,
             "office": 3,
             "expansion": 0
           }
@@ -171,7 +171,7 @@
             "store": 0,
             "warehouse": 1,
             "management": 2,
-            "office": 4,
+            "office": 3,
             "expansion": 0
           }
         }
@@ -182,8 +182,8 @@
       "company": "Tesco",
       "linkedin_active_ads_hint": 1,
       "category_scores": {
-        "store": 0,
-        "warehouse": 3,
+        "store": 2,
+        "warehouse": 2,
         "management": 4,
         "office": 7,
         "expansion": 0
@@ -198,8 +198,8 @@
           "status": "fetched",
           "count_hint": 1,
           "category_scores": {
-            "store": 0,
-            "warehouse": 2,
+            "store": 1,
+            "warehouse": 1,
             "management": 2,
             "office": 4,
             "expansion": 0
@@ -211,7 +211,7 @@
           "status": "fetched",
           "count_hint": 1,
           "category_scores": {
-            "store": 0,
+            "store": 1,
             "warehouse": 1,
             "management": 2,
             "office": 3,
@@ -225,8 +225,8 @@
       "company": "Penny",
       "linkedin_active_ads_hint": 2,
       "category_scores": {
-        "store": 1,
-        "warehouse": 1,
+        "store": 0,
+        "warehouse": 0,
         "management": 5,
         "office": 8,
         "expansion": 0
@@ -241,10 +241,10 @@
           "status": "fetched",
           "count_hint": 1,
           "category_scores": {
-            "store": 1,
-            "warehouse": 1,
+            "store": 0,
+            "warehouse": 0,
             "management": 3,
-            "office": 3,
+            "office": 4,
             "expansion": 0
           }
         },
@@ -257,7 +257,7 @@
             "store": 0,
             "warehouse": 0,
             "management": 2,
-            "office": 5,
+            "office": 4,
             "expansion": 0
           }
         }
