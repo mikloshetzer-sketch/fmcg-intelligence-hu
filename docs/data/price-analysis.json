@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-28T10:13:18Z",
+  "updated_at": "2026-09-29T10:10:38Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "method": "product-level price leadership and spread analysis",
@@ -31,24 +31,24 @@
   ],
   "most_expensive_count": [
     {
+      "company": "Penny",
+      "count": 6
+    },
+    {
+      "company": "SPAR",
+      "count": 6
+    },
+    {
       "company": "Tesco",
-      "count": 7
+      "count": 6
     },
     {
       "company": "Auchan",
       "count": 5
     },
     {
-      "company": "Penny",
-      "count": 5
-    },
-    {
-      "company": "SPAR",
-      "count": 5
-    },
-    {
       "company": "ALDI",
-      "count": 3
+      "count": 2
     },
     {
       "company": "Lidl",
@@ -76,8 +76,8 @@
     },
     {
       "company": "ALDI",
-      "price_index": 102,
-      "value_score": 98,
+      "price_index": 101,
+      "value_score": 99,
       "index_coverage": 24
     },
     {
@@ -171,11 +171,11 @@
     {
       "category": "Gyümölcs",
       "leader": "Auchan",
-      "leader_index": 91,
+      "leader_index": 92,
       "ranking": [
         {
           "company": "Auchan",
-          "category_index": 91,
+          "category_index": 92,
           "coverage": 3
         },
         {
@@ -184,18 +184,18 @@
           "coverage": 3
         },
         {
-          "company": "ALDI",
-          "category_index": 97,
-          "coverage": 3
-        },
-        {
           "company": "SPAR",
           "category_index": 97,
           "coverage": 3
         },
         {
+          "company": "ALDI",
+          "category_index": 98,
+          "coverage": 3
+        },
+        {
           "company": "Tesco",
-          "category_index": 106,
+          "category_index": 104,
           "coverage": 3
         },
         {
@@ -208,11 +208,11 @@
     {
       "category": "Háztartás",
       "leader": "Auchan",
-      "leader_index": 74,
+      "leader_index": 73,
       "ranking": [
         {
           "company": "Auchan",
-          "category_index": 74,
+          "category_index": 73,
           "coverage": 2
         },
         {
@@ -222,22 +222,22 @@
         },
         {
           "company": "SPAR",
-          "category_index": 91,
+          "category_index": 95,
           "coverage": 2
         },
         {
           "company": "Tesco",
-          "category_index": 108,
+          "category_index": 102,
           "coverage": 2
         },
         {
           "company": "ALDI",
-          "category_index": 111,
+          "category_index": 108,
           "coverage": 2
         },
         {
           "company": "Penny",
-          "category_index": 121,
+          "category_index": 127,
           "coverage": 2
         }
       ]
@@ -356,11 +356,11 @@
     {
       "category": "Zöldség",
       "leader": "Lidl",
-      "leader_index": 78,
+      "leader_index": 79,
       "ranking": [
         {
           "company": "Lidl",
-          "category_index": 78,
+          "category_index": 79,
           "coverage": 4
         },
         {
@@ -369,23 +369,23 @@
           "coverage": 4
         },
         {
+          "company": "ALDI",
+          "category_index": 103,
+          "coverage": 4
+        },
+        {
           "company": "SPAR",
-          "category_index": 106,
+          "category_index": 107,
           "coverage": 4
         },
         {
           "company": "Tesco",
-          "category_index": 108,
-          "coverage": 4
-        },
-        {
-          "company": "ALDI",
           "category_index": 110,
           "coverage": 4
         },
         {
           "company": "Penny",
-          "category_index": 110,
+          "category_index": 111,
           "coverage": 4
         }
       ]
@@ -396,11 +396,11 @@
       "product": "Toalettpapír",
       "category": "Háztartás",
       "cheapest_company": "Auchan",
-      "cheapest_price": 51.0,
-      "most_expensive_company": "Tesco",
-      "most_expensive_price": 140.56,
-      "average_price": 112.33,
-      "spread_pct": 175.61,
+      "cheapest_price": 45.0,
+      "most_expensive_company": "Penny",
+      "most_expensive_price": 124.75,
+      "average_price": 102.87,
+      "spread_pct": 177.22,
       "competition_intensity": "nagy árszórás",
       "coverage": 5
     },
@@ -409,10 +409,10 @@
       "category": "Zöldség",
       "cheapest_company": "Lidl",
       "cheapest_price": 429.0,
-      "most_expensive_company": "ALDI",
-      "most_expensive_price": 975.0,
-      "average_price": 716.83,
-      "spread_pct": 127.27,
+      "most_expensive_company": "SPAR",
+      "most_expensive_price": 880.0,
+      "average_price": 690.33,
+      "spread_pct": 105.13,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
@@ -435,7 +435,7 @@
       "cheapest_price": 325.0,
       "most_expensive_company": "Penny",
       "most_expensive_price": 499.0,
-      "average_price": 386.83,
+      "average_price": 382.0,
       "spread_pct": 53.54,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
@@ -459,7 +459,7 @@
       "cheapest_price": 194.5,
       "most_expensive_company": "Penny",
       "most_expensive_price": 289.0,
-      "average_price": 263.75,
+      "average_price": 263.25,
       "spread_pct": 48.59,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
@@ -471,7 +471,7 @@
       "cheapest_price": 592.0,
       "most_expensive_company": "Penny",
       "most_expensive_price": 826.67,
-      "average_price": 672.28,
+      "average_price": 663.95,
       "spread_pct": 39.64,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
@@ -555,7 +555,7 @@
       "cheapest_price": 189.5,
       "most_expensive_company": "SPAR",
       "most_expensive_price": 223.0,
-      "average_price": 208.25,
+      "average_price": 208.92,
       "spread_pct": 17.68,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
@@ -697,14 +697,14 @@
     {
       "product": "Toalettpapír",
       "category": "Háztartás",
-      "spread_pct": 175.61,
+      "spread_pct": 177.22,
       "competition_intensity": "nagy árszórás",
       "coverage": 5
     },
     {
       "product": "Paradicsom",
       "category": "Zöldség",
-      "spread_pct": 127.27,
+      "spread_pct": 105.13,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
