@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-09-30T12:53:02.492360+00:00",
+  "updated_at": "2026-09-30T22:27:49.560121+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-09-30T12:53:02.492360+00:00",
+    "updated_at": "2026-09-30T22:27:49.560121+00:00",
     "leader_social": "Lidl",
     "leader_social_index": 48,
     "dominant_social_topic": "árak és akciók",
@@ -13,22 +13,22 @@
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 9,
-      "raw_social_mentions": 9,
-      "dashboard_mentions": 9,
+      "social_mentions": 10,
+      "raw_social_mentions": 10,
+      "dashboard_mentions": 10,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 9.0,
-      "hu_relevant_mentions": 9,
+      "weighted_social_mentions": 10.0,
+      "hu_relevant_mentions": 10,
       "social_index": 48,
       "social_sources": {
         "reddit": 1,
-        "youtube": 8,
+        "youtube": 9,
         "mastodon": 0
       },
       "raw_social_sources": {
         "reddit": 1,
-        "youtube": 8,
+        "youtube": 9,
         "mastodon": 0
       },
       "dominant_social_topic": "árak és akciók",
@@ -39,7 +39,7 @@
         },
         {
           "topic": "termék és minőség",
-          "score": 2.0
+          "score": 3.0
         },
         {
           "topic": "bolti élmény",
@@ -56,7 +56,7 @@
         },
         "termék és minőség": {
           "positive": 0.0,
-          "neutral": 1.0,
+          "neutral": 2.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -85,11 +85,11 @@
           "item_sentiment": "neutral"
         },
         {
-          "id": "1b507c973a8872a6",
+          "id": "4630a8d40e9ec298",
           "source": "youtube",
           "company": "Lidl",
-          "title": "🇭🇺 LIDL Magyarország Akciós újság – 26. hét Érvényes 06.25 - 07.01 2026 - youtube.com",
-          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 26. hét Érvényes 06.25 - 07.01 2026 youtube.com",
+          "title": "🇭🇺 LIDL Magyarország Akciós újság – 26. hét Érvényes 06.25 - 07.01 2026 - YouTube",
+          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 26. hét Érvényes 06.25 - 07.01 2026 YouTube",
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9wVGQ2SHYwaFI4NHN4d1kzSEp5Q2xMaXREbEpjNENEc1dzaDhWekY5azU1YU1SMVdtR1FQdmpieDhka24yb0xqLVpVblZKUVVTTXhReVdB?oc=5",
           "published": "Sun, 21 Jun 2026 00:20:24 GMT",
           "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
@@ -98,11 +98,11 @@
           "item_sentiment": "neutral"
         },
         {
-          "id": "c8dcb86a6da70922",
+          "id": "dc65f00e89f03554",
           "source": "youtube",
           "company": "Lidl",
-          "title": "Lidl akciós újság - 2026.06.18 - 2026.06.24 - youtube.com",
-          "summary": "Lidl akciós újság - 2026.06.18 - 2026.06.24 youtube.com",
+          "title": "Lidl akciós újság - 2026.06.18 - 2026.06.24 - YouTube",
+          "summary": "Lidl akciós újság - 2026.06.18 - 2026.06.24 YouTube",
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE41eUFVRmctWU1fMjU1eDZOZkV6ZjBUM0VBWEd2RkhVZ0dZaXU2ai0wblo4aDJiY2Z2ZjNOaFpoZzlVUFMwMnUtSW1MdzdFbXhPY1kxZXJ3?oc=5",
           "published": "Sat, 13 Jun 2026 09:01:51 GMT",
           "query": "site:youtube.com \"Lidl Plus\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
@@ -111,11 +111,11 @@
           "item_sentiment": "neutral"
         },
         {
-          "id": "4c7d8edc801f92bb",
+          "id": "13af7a728875ef19",
           "source": "youtube",
           "company": "Lidl",
-          "title": "Lidl akciós újság - 2026.06.11 - 2026.06.17 - youtube.com",
-          "summary": "Lidl akciós újság - 2026.06.11 - 2026.06.17 youtube.com",
+          "title": "Lidl akciós újság - 2026.06.11 - 2026.06.17 - YouTube",
+          "summary": "Lidl akciós újság - 2026.06.11 - 2026.06.17 YouTube",
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFB1RlRQY3VoZW9idGVfT1lWZjRsTjBkbEJOZHY4WVBseGV5Y2pmM0Z5Mkk1Y1ZlNUVHWlRQVWR3WUtfWkVQQ0V6M0RlSmJIWWs4T0NQUmtR?oc=5",
           "published": "Sat, 06 Jun 2026 07:57:21 GMT",
           "query": "site:youtube.com \"Lidl Plus\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
@@ -124,11 +124,24 @@
           "item_sentiment": "neutral"
         },
         {
-          "id": "aee642714a0a7f72",
+          "id": "8e02755e824b8ffa",
           "source": "youtube",
           "company": "Lidl",
-          "title": "🇭🇺 LIDL Magyarország Akciós újság – 20. hét Érvényes 05.14 - 05.20 2026 TV verzió - youtube.com",
-          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 20. hét Érvényes 05.14 - 05.20 2026 TV verzió youtube.com",
+          "title": "🇭🇺 LIDL Magyarország Akciós újság – 23. hét Érvényes 06.04 - 06.10 2026 TV verzió - YouTube",
+          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 23. hét Érvényes 06.04 - 06.10 2026 TV verzió YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFB2TUZkVlNJb3dzTzZZNndOcXVGQU9vcndDanNiclh2YlctWHNucnhZMVdlZS13VGFpelVGdmNBMDJCLUxpbXczeFdVeFNaQ3RDT0VtNmJn?oc=5",
+          "published": "Sat, 30 May 2026 23:22:33 GMT",
+          "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "3e372b35caccd494",
+          "source": "youtube",
+          "company": "Lidl",
+          "title": "🇭🇺 LIDL Magyarország Akciós újság – 20. hét Érvényes 05.14 - 05.20 2026 TV verzió - YouTube",
+          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 20. hét Érvényes 05.14 - 05.20 2026 TV verzió YouTube",
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA1NXYtejM2NjZ2VUZ6XzhQQ28xeUg2YjM4M3ZocjJYZTBZWElIM1ZDVFdWMFBkTnBNU0s4VVF1WUNNb2NxUVlwbm9XOUlMdjN6bXJVYmF3?oc=5",
           "published": "Sun, 10 May 2026 19:27:46 GMT",
           "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
@@ -137,11 +150,11 @@
           "item_sentiment": "neutral"
         },
         {
-          "id": "32db2e89125c7329",
+          "id": "e43b52ba20843594",
           "source": "youtube",
           "company": "Lidl",
-          "title": "🇭🇺 LIDL Magyarország Akciós újság – 19. hét Érvényes 05.07-től 2026 TV verzió - youtube.com",
-          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 19. hét Érvényes 05.07-től 2026 TV verzió youtube.com",
+          "title": "🇭🇺 LIDL Magyarország Akciós újság – 19. hét Érvényes 05.07-től 2026 TV verzió - YouTube",
+          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 19. hét Érvényes 05.07-től 2026 TV verzió YouTube",
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBzYjBHSGFSS2k1ZUoydVpsWnBNd2RuSllXc2YzdEZITVRTZTA3NW8zdkFLYi1OYUZmX3FXRDdZM3ZnRTlEQmdOb1dSckpGeGNmSk1tVlV3?oc=5",
           "published": "Sun, 03 May 2026 19:52:23 GMT",
           "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
@@ -150,11 +163,11 @@
           "item_sentiment": "neutral"
         },
         {
-          "id": "758ca27ad436958c",
+          "id": "0df7879327f6edfd",
           "source": "youtube",
           "company": "Lidl",
-          "title": "🇭🇺 LIDL Magyarország Akciós újság – 18. hét Érvényes 04.30-től 2026 - youtube.com",
-          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 18. hét Érvényes 04.30-től 2026 youtube.com",
+          "title": "🇭🇺 LIDL Magyarország Akciós újság – 18. hét Érvényes 04.30-től 2026 - YouTube",
+          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 18. hét Érvényes 04.30-től 2026 YouTube",
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFAxMmhRbF85djlKQVpmc0RULTNOemFReVJJZnJhZlpubXVlaEVUeEN6ZUluT09TZklOd2xaak5ZTjQ3MTFoLW1ySi1uNG1BZjd3WUFsZkFR?oc=5",
           "published": "Sun, 26 Apr 2026 19:29:34 GMT",
           "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
@@ -163,11 +176,11 @@
           "item_sentiment": "neutral"
         },
         {
-          "id": "14e66c36250f1414",
+          "id": "4755f03efbcb8e9b",
           "source": "youtube",
           "company": "Lidl",
-          "title": "🇭🇺 LIDL Magyarország Akciós újság – 17. hét Érvényes 04.23-től 2026 TV verzió - youtube.com",
-          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 17. hét Érvényes 04.23-től 2026 TV verzió youtube.com",
+          "title": "🇭🇺 LIDL Magyarország Akciós újság – 17. hét Érvényes 04.23-től 2026 TV verzió - YouTube",
+          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 17. hét Érvényes 04.23-től 2026 TV verzió YouTube",
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA1STV5Mk5TLU9nQzd5ODBveTdiQjBuSzg5d3d5R2hoMXl5anBQcGo2cGVBR0FUenA3bGtEVkFNNkFpNTJwRW5mZ1kzOVFPQnZ3b1dRdzhB?oc=5",
           "published": "Sun, 19 Apr 2026 19:01:16 GMT",
           "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
@@ -176,14 +189,14 @@
           "item_sentiment": "neutral"
         },
         {
-          "id": "d789e7720355ae28",
+          "id": "48339626f339bf85",
           "source": "youtube",
           "company": "Lidl",
-          "title": "🇭🇺 LIDL Magyarország Akciós újság – 15. hét Érvényes 04.09-től 2026 TV verzió - youtube.com",
-          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 15. hét Érvényes 04.09-től 2026 TV verzió youtube.com",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5hQnNTWjlJODQ3S3FXdXMxUWZZZkt6elNQOHl5aG9yenExM2IxZ2pWYlR6Ynl2OHhzTGZNdmpGMnBYaFViRmlqT19nb2FJN3NnSEZ4a2xB?oc=5",
-          "published": "Wed, 08 Apr 2026 14:01:16 GMT",
-          "query": "site:youtube.com \"Lidl Plus\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "title": "🇭🇺 LIDL Magyarország Nonfood kínálatunk - 16. hét Érvényes 04.16-től 2026 - YouTube",
+          "summary": "🇭🇺 LIDL Magyarország Nonfood kínálatunk - 16. hét Érvényes 04.16-től 2026 YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1IeWwwQlhIT25UVnh5MTNrVnNwS1R4cDNOejdsTzRlU3NJZDZTS3k4STUyZGxFTGI4dTgzTEpLWlVFTXVfVXJBS1M0bUp6a0U5VWdoZHNB?oc=5",
+          "published": "Sat, 11 Apr 2026 21:25:47 GMT",
+          "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
           "item_sentiment": "neutral"
@@ -191,7 +204,7 @@
       ],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 9,
+        "dashboard_items": 10,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
@@ -497,11 +510,11 @@
       "social_sentiment": "neutral",
       "latest_items": [
         {
-          "id": "6cc8761e6cc23c21",
+          "id": "b8082e456994a72b",
           "source": "youtube",
           "company": "CBA",
-          "title": "CBA Príma akciós újság 09.17. - 09.23. - youtube.com",
-          "summary": "CBA Príma akciós újság 09.17. - 09.23. youtube.com",
+          "title": "CBA Príma akciós újság 09.17. - 09.23. - YouTube",
+          "summary": "CBA Príma akciós újság 09.17. - 09.23. YouTube",
           "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1YX1h6RVVLOHJaVXdOME5UajQ1ZFpsRnpTLUkyTUswQ01wb2diWnk2SkFhaFc0WEh6OEo2VHRFZFota1VqQ1k3ZlE2dW5yeU13R09YWQ?oc=5",
           "published": "Mon, 14 Sep 2026 07:44:06 GMT",
           "query": "site:youtube.com \"CBA Príma\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
@@ -510,11 +523,11 @@
           "item_sentiment": "neutral"
         },
         {
-          "id": "e34bea8e57e6b4bb",
+          "id": "b35cf2789b72f5ed",
           "source": "youtube",
           "company": "CBA",
-          "title": "CBA Príma akciós újság 07.16. - 07.22. - youtube.com",
-          "summary": "CBA Príma akciós újság 07.16. - 07.22. youtube.com",
+          "title": "CBA Príma akciós újság 07.16. - 07.22. - YouTube",
+          "summary": "CBA Príma akciós újság 07.16. - 07.22. YouTube",
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9aTDExZmZoNTBvZk5WQjBNSS1PT3NZZHRlMzhlcFROdFZ6dVNiMWplXy1xVWV6eVlMT1J0bi1jcjNnMXdHWTAxaUJYY3FoVnlRbU5LUUpn?oc=5",
           "published": "Mon, 13 Jul 2026 09:41:41 GMT",
           "query": "site:youtube.com \"CBA Príma\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
@@ -523,11 +536,11 @@
           "item_sentiment": "neutral"
         },
         {
-          "id": "b15e5570c9ea10f1",
+          "id": "9a1fea266272003d",
           "source": "youtube",
           "company": "CBA",
-          "title": "CBA Príma akciós újság 04.23. - 04.29. - youtube.com",
-          "summary": "CBA Príma akciós újság 04.23. - 04.29. youtube.com",
+          "title": "CBA Príma akciós újság 04.23. - 04.29. - YouTube",
+          "summary": "CBA Príma akciós újság 04.23. - 04.29. YouTube",
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBULTZqM00ySGtMZF9FV0s4ekRtTG5lMlNDemNySGRwOGp1bTZPT2tPbmpxekRlX3d3NENkZVl5VW51V1VOekZMNk1RLTNsZDB0S3h4UVhB?oc=5",
           "published": "Mon, 20 Apr 2026 15:11:20 GMT",
           "query": "site:youtube.com \"CBA Príma\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
