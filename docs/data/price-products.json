@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-29T10:10:38Z",
+  "updated_at": "2026-09-30T10:02:44Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -588,8 +588,8 @@
           "price_type": "NORMAL"
         },
         "Auchan": {
-          "source_product_id": "2118100000009",
-          "source_product_name": "Sertés darált hús Ft/kg",
+          "source_product_id": "2167650000007",
+          "source_product_name": "Auchan Kedvenc sertés darált hús maximum 30% zsírtartalommal Ft/kg családi",
           "amount": 1699.0,
           "unit_amount": 1699.0,
           "unit": "kg",
@@ -780,14 +780,24 @@
       "category": "Gyümölcs",
       "expected_unit": "kg",
       "prices": {
+        "Auchan": 321.0,
         "ALDI": 325.0,
         "Lidl": 325.0,
-        "Auchan": 349.0,
         "SPAR": 362.0,
         "Tesco": 432.0,
         "Penny": 499.0
       },
       "selected_products": {
+        "Auchan": {
+          "source_product_id": "2158990000000",
+          "source_product_name": "Kalodás piros alma Ft/kg",
+          "amount": 321.0,
+          "unit_amount": 321.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "ALDI": {
           "source_product_id": "aldi-484058",
           "source_product_name": "Alma piros lédig",
@@ -803,16 +813,6 @@
           "source_product_name": "Alma, Shampion kg",
           "amount": 325.0,
           "unit_amount": 325.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Auchan": {
-          "source_product_id": "2188520000002",
-          "source_product_name": "Idared alma Ft/kg",
-          "amount": 349.0,
-          "unit_amount": 349.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1169,8 +1169,8 @@
         "ALDI": 205.0,
         "Penny": 205.0,
         "Tesco": 209.0,
-        "Auchan": 222.0,
-        "SPAR": 223.0
+        "SPAR": 223.0,
+        "Auchan": 237.0
       },
       "selected_products": {
         "Lidl": {
@@ -1213,16 +1213,6 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Auchan": {
-          "source_product_id": "2182420000001",
-          "source_product_name": "Vöröshagyma Ft/kg",
-          "amount": 222.0,
-          "unit_amount": 222.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
         "SPAR": {
           "source_product_id": "28306009",
           "source_product_name": "Vöröshagyma lédig",
@@ -1231,6 +1221,16 @@
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Auchan": {
+          "source_product_id": "5999860959144",
+          "source_product_name": "Vöröshagyma hálóban 2 kg",
+          "amount": 473.0,
+          "unit_amount": 237.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "2",
           "price_type": "NORMAL"
         }
       },
