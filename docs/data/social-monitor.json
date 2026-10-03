@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-10-03T16:34:31.568000+00:00",
+  "updated_at": "2026-10-03T21:38:46.007492+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-10-03T16:34:31.568000+00:00",
+    "updated_at": "2026-10-03T21:38:46.007492+00:00",
     "leader_social": "Lidl",
     "leader_social_index": 48,
     "dominant_social_topic": "árak és akciók",
@@ -13,22 +13,22 @@
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 10,
-      "raw_social_mentions": 10,
-      "dashboard_mentions": 10,
+      "social_mentions": 9,
+      "raw_social_mentions": 9,
+      "dashboard_mentions": 9,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 10.0,
-      "hu_relevant_mentions": 10,
+      "weighted_social_mentions": 9.0,
+      "hu_relevant_mentions": 9,
       "social_index": 48,
       "social_sources": {
         "reddit": 1,
-        "youtube": 9,
+        "youtube": 8,
         "mastodon": 0
       },
       "raw_social_sources": {
         "reddit": 1,
-        "youtube": 9,
+        "youtube": 8,
         "mastodon": 0
       },
       "dominant_social_topic": "árak és akciók",
@@ -39,7 +39,7 @@
         },
         {
           "topic": "termék és minőség",
-          "score": 3.0
+          "score": 2.0
         },
         {
           "topic": "bolti élmény",
@@ -56,7 +56,7 @@
         },
         "termék és minőség": {
           "positive": 0.0,
-          "neutral": 2.0,
+          "neutral": 1.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -176,19 +176,6 @@
           "item_sentiment": "neutral"
         },
         {
-          "id": "48339626f339bf85",
-          "source": "youtube",
-          "company": "Lidl",
-          "title": "🇭🇺 LIDL Magyarország Nonfood kínálatunk - 16. hét Érvényes 04.16-től 2026 - YouTube",
-          "summary": "🇭🇺 LIDL Magyarország Nonfood kínálatunk - 16. hét Érvényes 04.16-től 2026 YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1IeWwwQlhIT25UVnh5MTNrVnNwS1R4cDNOejdsTzRlU3NJZDZTS3k4STUyZGxFTGI4dTgzTEpLWlVFTXVfVXJBS1M0bUp6a0U5VWdoZHNB?oc=5",
-          "published": "Sat, 11 Apr 2026 21:25:47 GMT",
-          "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
           "id": "bb786c794a845ffc",
           "source": "youtube",
           "company": "Lidl",
@@ -204,7 +191,7 @@
       ],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 10,
+        "dashboard_items": 9,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
