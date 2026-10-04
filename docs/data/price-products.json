@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-03T09:28:09Z",
+  "updated_at": "2026-10-04T10:15:24Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -246,7 +246,7 @@
         "Lidl": 2390.0,
         "Penny": 2390.0,
         "SPAR": 2390.0,
-        "Tesco": 2570.0
+        "Tesco": 2590.0
       },
       "selected_products": {
         "Auchan": {
@@ -300,13 +300,13 @@
           "price_type": "NORMAL"
         },
         "Tesco": {
-          "source_product_id": "5999558217334",
-          "source_product_name": "LECKER TRAPPISTA SAJT FELEZETT 700 g",
-          "amount": 1799.0,
-          "unit_amount": 2570.0,
+          "source_product_id": "2857760000000",
+          "source_product_name": "PURE MILK SAJTHASÁB ",
+          "amount": 2590.0,
+          "unit_amount": 2590.0,
           "unit": "kg",
           "unit_title": "db",
-          "packaging": "0.7",
+          "packaging": "1",
           "price_type": "NORMAL"
         }
       },
@@ -939,7 +939,7 @@
         "ALDI": 899.0,
         "Lidl": 899.0,
         "Auchan": 999.0,
-        "Penny": 1199.0
+        "Penny": 999.0
       },
       "selected_products": {
         "SPAR": {
@@ -995,8 +995,8 @@
         "Penny": {
           "source_product_id": "penny-306",
           "source_product_name": "Citrom lédig kg",
-          "amount": 1199.0,
-          "unit_amount": 1199.0,
+          "amount": 999.0,
+          "unit_amount": 999.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1232,9 +1232,9 @@
       "expected_unit": "kg",
       "prices": {
         "Lidl": 194.5,
+        "Tesco": 269.0,
         "Auchan": 272.0,
         "SPAR": 273.0,
-        "Tesco": 279.0,
         "ALDI": 285.0,
         "Penny": 289.0
       },
@@ -1247,6 +1247,16 @@
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "2",
+          "price_type": "NORMAL"
+        },
+        "Tesco": {
+          "source_product_id": "2853980000000",
+          "source_product_name": "Piros burgonya lédig QQ",
+          "amount": 269.0,
+          "unit_amount": 269.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
           "price_type": "NORMAL"
         },
         "Auchan": {
@@ -1264,16 +1274,6 @@
           "source_product_name": "Burgonya piros lédig",
           "amount": 273.0,
           "unit_amount": 273.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Tesco": {
-          "source_product_id": "2815880000000",
-          "source_product_name": "SÁRGA BURGONYA LÉDIG QQ",
-          "amount": 279.0,
-          "unit_amount": 279.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
