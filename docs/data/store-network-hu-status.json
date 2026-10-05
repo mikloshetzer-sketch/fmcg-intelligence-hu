@@ -1,39 +1,39 @@
 {
-  "updated_at": "2026-09-28T09:45:19.244150+00:00",
+  "updated_at": "2026-10-05T10:25:10.189744+00:00",
   "status": "ok",
   "version": "store-network-hu-v2.0-non-lidl-osm",
   "source": "openstreetmap_overpass_non_lidl_plus_fallback_plus_optional_overrides",
-  "store_count": 1170,
+  "store_count": 1169,
   "company_totals": {
-    "ALDI": 189,
+    "ALDI": 187,
     "Auchan": 25,
     "Penny": 243,
-    "SPAR": 524,
+    "SPAR": 525,
     "Tesco": 189
   },
   "source_totals": {
-    "openstreetmap_overpass": 1170
+    "openstreetmap_overpass": 1169
   },
   "companies": [
     {
       "company": "ALDI",
       "source": "openstreetmap_overpass",
       "status": "ok",
-      "stores": 189,
+      "stores": 187,
       "brand_values": [
         "ALDI",
         "Aldi"
       ],
       "notes": [
-        "exact_brand=189 via https://overpass-api.de/api/interpreter",
-        "regex_brand=189 via https://overpass-api.de/api/interpreter"
+        "exact_brand_error=HTTPSConnectionPool(host='overpass.kumi.systems', port=443): Read timed out. (read timeout=150)",
+        "regex_brand=187 via https://overpass.kumi.systems/api/interpreter"
       ]
     },
     {
       "company": "SPAR",
       "source": "openstreetmap_overpass",
       "status": "ok",
-      "stores": 524,
+      "stores": 525,
       "brand_values": [
         "SPAR",
         "Spar",
@@ -41,8 +41,8 @@
         "Interspar"
       ],
       "notes": [
-        "exact_brand=524 via https://overpass-api.de/api/interpreter",
-        "regex_brand_error=HTTPSConnectionPool(host='overpass.kumi.systems', port=443): Read timed out. (read timeout=150)"
+        "exact_brand=525 via https://overpass-api.de/api/interpreter",
+        "regex_brand=525 via https://overpass-api.de/api/interpreter"
       ]
     },
     {
@@ -55,7 +55,7 @@
         "TESCO"
       ],
       "notes": [
-        "exact_brand=181 via https://overpass.kumi.systems/api/interpreter",
+        "exact_brand_error=HTTPSConnectionPool(host='overpass.kumi.systems', port=443): Read timed out. (read timeout=150)",
         "regex_brand=189 via https://overpass-api.de/api/interpreter"
       ]
     },
@@ -69,7 +69,7 @@
         "AUCHAN"
       ],
       "notes": [
-        "exact_brand=25 via https://overpass-api.de/api/interpreter",
+        "exact_brand_error=HTTPSConnectionPool(host='overpass.kumi.systems', port=443): Read timed out. (read timeout=150)",
         "regex_brand=25 via https://overpass-api.de/api/interpreter"
       ]
     },
