@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-05T10:54:19Z",
+  "updated_at": "2026-10-06T10:50:09Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -246,7 +246,7 @@
         "Lidl": 2390.0,
         "Penny": 2390.0,
         "SPAR": 2390.0,
-        "Tesco": 2590.0
+        "Tesco": 2570.0
       },
       "selected_products": {
         "Auchan": {
@@ -300,13 +300,13 @@
           "price_type": "NORMAL"
         },
         "Tesco": {
-          "source_product_id": "2857760000000",
-          "source_product_name": "PURE MILK SAJTHASÁB ",
-          "amount": 2590.0,
-          "unit_amount": 2590.0,
+          "source_product_id": "5999558217334",
+          "source_product_name": "LECKER TRAPPISTA SAJT FELEZETT 700 g",
+          "amount": 1799.0,
+          "unit_amount": 2570.0,
           "unit": "kg",
           "unit_title": "db",
-          "packaging": "1",
+          "packaging": "0.7",
           "price_type": "NORMAL"
         }
       },
@@ -397,10 +397,10 @@
       "prices": {
         "Penny": 45.63,
         "Lidl": 45.9,
-        "Tesco": 47.8333,
         "Auchan": 49.0,
         "ALDI": 49.97,
-        "SPAR": 52.1
+        "SPAR": 52.1,
+        "Tesco": 57.1667
       },
       "selected_products": {
         "Penny": {
@@ -421,16 +421,6 @@
           "unit": "db",
           "unit_title": "doboz",
           "packaging": "10",
-          "price_type": "NORMAL"
-        },
-        "Tesco": {
-          "source_product_id": "5998244700044",
-          "source_product_name": "MU 30DB TOJÁS 1290G S MÉRET QQ",
-          "amount": 1435.0,
-          "unit_amount": 47.8333,
-          "unit": "db",
-          "unit_title": "doboz",
-          "packaging": "30",
           "price_type": "NORMAL"
         },
         "Auchan": {
@@ -461,6 +451,16 @@
           "unit": "db",
           "unit_title": "doboz",
           "packaging": "10",
+          "price_type": "NORMAL"
+        },
+        "Tesco": {
+          "source_product_id": "5998244700044",
+          "source_product_name": "MU 30DB TOJÁS 1290G S MÉRET QQ",
+          "amount": 1715.0,
+          "unit_amount": 57.1667,
+          "unit": "db",
+          "unit_title": "doboz",
+          "packaging": "30",
           "price_type": "NORMAL"
         }
       },
@@ -1165,23 +1165,13 @@
       "category": "Zöldség",
       "expected_unit": "kg",
       "prices": {
-        "Lidl": 189.5,
         "Penny": 205.0,
+        "Lidl": 189.5,
         "Tesco": 209.0,
         "SPAR": 230.0,
         "Auchan": 99.0
       },
       "selected_products": {
-        "Lidl": {
-          "source_product_id": "lidl-0083333",
-          "source_product_name": "Vöröshagyma 2kg",
-          "amount": 379.0,
-          "unit_amount": 189.5,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "2",
-          "price_type": "NORMAL"
-        },
         "Penny": {
           "source_product_id": "penny-518",
           "source_product_name": "Vöröshagyma lédig kg",
@@ -1190,6 +1180,16 @@
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Lidl": {
+          "source_product_id": "lidl-0083333",
+          "source_product_name": "Vöröshagyma 2kg",
+          "amount": 379.0,
+          "unit_amount": 189.5,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "2",
           "price_type": "NORMAL"
         },
         "Tesco": {
@@ -1395,7 +1395,7 @@
       "selected_products": {
         "Auchan": {
           "source_product_id": "5998017555239",
-          "source_product_name": "Kunsági éden étolaj 1l",
+          "source_product_name": "Kunsági Éden 100% finomított napraforgó-étolaj 1 l",
           "amount": 739.0,
           "unit_amount": 739.0,
           "unit": "l",
@@ -1549,7 +1549,7 @@
       "selected_products": {
         "ALDI": {
           "source_product_id": "4008671013004",
-          "source_product_name": "Sweet Family Kristálycukor 1kg",
+          "source_product_name": "Sweet Family kristálycukor 1 kg",
           "amount": 295.0,
           "unit_amount": 295.0,
           "unit": "kg",
@@ -1559,7 +1559,7 @@
         },
         "Auchan": {
           "source_product_id": "4008671013004",
-          "source_product_name": "Sweet Family Kristálycukor 1kg",
+          "source_product_name": "Sweet Family kristálycukor 1 kg",
           "amount": 295.0,
           "unit_amount": 295.0,
           "unit": "kg",
@@ -1617,7 +1617,7 @@
       "expected_unit": "l",
       "prices": {
         "Tesco": 66.0,
-        "SPAR": 66.0,
+        "SPAR": 54.67,
         "ALDI": 66.0,
         "Lidl": 66.0,
         "Penny": 66.0,
@@ -1635,10 +1635,10 @@
           "price_type": "NORMAL"
         },
         "SPAR": {
-          "source_product_id": "5999138200558",
-          "source_product_name": "S-Budget Zafír szénsavmentes természetes ásványvíz 1,5 l",
-          "amount": 99.0,
-          "unit_amount": 66.0,
+          "source_product_id": "5999545594455",
+          "source_product_name": "Mizse szén-dioxiddal enyhén dúsított természetes ásványvíz 1,5 l",
+          "amount": 82.0,
+          "unit_amount": 54.67,
           "unit": "l",
           "unit_title": "db",
           "packaging": "1.5",
