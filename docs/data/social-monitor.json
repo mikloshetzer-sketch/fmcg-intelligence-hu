@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-10-08T13:52:10.697723+00:00",
+  "updated_at": "2026-10-08T23:29:37.602618+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-10-08T13:52:10.697723+00:00",
+    "updated_at": "2026-10-08T23:29:37.602618+00:00",
     "leader_social": "Lidl",
     "leader_social_index": 33,
     "dominant_social_topic": "árak és akciók",
@@ -13,29 +13,29 @@
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 6,
-      "raw_social_mentions": 7,
-      "dashboard_mentions": 6,
+      "social_mentions": 5,
+      "raw_social_mentions": 6,
+      "dashboard_mentions": 5,
       "background_mentions": 0,
       "discarded_mentions": 1,
-      "weighted_social_mentions": 6.0,
-      "hu_relevant_mentions": 6,
+      "weighted_social_mentions": 5.0,
+      "hu_relevant_mentions": 5,
       "social_index": 33,
       "social_sources": {
         "reddit": 1,
-        "youtube": 5,
+        "youtube": 4,
         "mastodon": 0
       },
       "raw_social_sources": {
         "reddit": 1,
-        "youtube": 5,
+        "youtube": 4,
         "mastodon": 1
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 5.0
+          "score": 4.0
         },
         {
           "topic": "termék és minőség",
@@ -63,7 +63,7 @@
         },
         "árak és akciók": {
           "positive": 0.0,
-          "neutral": 5.0,
+          "neutral": 4.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -135,24 +135,11 @@
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
           "item_sentiment": "neutral"
-        },
-        {
-          "id": "4755f03efbcb8e9b",
-          "source": "youtube",
-          "company": "Lidl",
-          "title": "🇭🇺 LIDL Magyarország Akciós újság – 17. hét Érvényes 04.23-től 2026 TV verzió - YouTube",
-          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 17. hét Érvényes 04.23-től 2026 TV verzió YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA1STV5Mk5TLU9nQzd5ODBveTdiQjBuSzg5d3d5R2hoMXl5anBQcGo2cGVBR0FUenA3bGtEVkFNNkFpNTJwRW5mZ1kzOVFPQnZ3b1dRdzhB?oc=5",
-          "published": "Sun, 19 Apr 2026 19:01:16 GMT",
-          "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
         }
       ],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 6,
+        "dashboard_items": 5,
         "background_items": 0,
         "discarded_items": 1,
         "dashboard_relevance_threshold": 0.8,
@@ -398,55 +385,29 @@
     },
     {
       "company": "Auchan",
-      "social_mentions": 2,
-      "raw_social_mentions": 2,
-      "dashboard_mentions": 2,
+      "social_mentions": 1,
+      "raw_social_mentions": 1,
+      "dashboard_mentions": 1,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 2.0,
-      "hu_relevant_mentions": 2,
-      "social_index": 20,
+      "weighted_social_mentions": 1.0,
+      "hu_relevant_mentions": 1,
+      "social_index": 16,
       "social_sources": {
-        "reddit": 1,
+        "reddit": 0,
         "youtube": 1,
         "mastodon": 0
       },
       "raw_social_sources": {
-        "reddit": 1,
+        "reddit": 0,
         "youtube": 1,
         "mastodon": 0
       },
-      "dominant_social_topic": "árak és akciók",
-      "top_social_topics": [
-        {
-          "topic": "árak és akciók",
-          "score": 1.0
-        }
-      ],
-      "topic_sentiment": {
-        "árak és akciók": {
-          "positive": 0.0,
-          "neutral": 1.0,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
-        }
-      },
+      "dominant_social_topic": "általános vállalati említés",
+      "top_social_topics": [],
+      "topic_sentiment": {},
       "social_sentiment": "neutral",
       "latest_items": [
-        {
-          "id": "08c8f76e48005b86",
-          "source": "reddit",
-          "company": "Auchan",
-          "title": "A zuhanyzóban OkAuchan!",
-          "summary": "Megszólalt Jellinek Dániel ügyvédje, miután az Auchan Magyarország Kft.-ben is érdekelt milliárdost sajtóértesülések alapján kedden előállították a Volán-ügyben. submitted by /u/gergohungary to r/hungary [link] [comments]",
-          "url": "https://www.reddit.com/r/hungary/comments/1wkic2x/a_zuhanyzóban_okauchan/",
-          "published": "2026-09-19T10:09:54+00:00",
-          "query": "Auchan Magyarország",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
         {
           "id": "c6a816231d9b3a8c",
           "source": "youtube",
@@ -463,7 +424,7 @@
       ],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 2,
+        "dashboard_items": 1,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
@@ -474,35 +435,35 @@
     },
     {
       "company": "CBA",
-      "social_mentions": 4,
-      "raw_social_mentions": 4,
-      "dashboard_mentions": 4,
+      "social_mentions": 3,
+      "raw_social_mentions": 3,
+      "dashboard_mentions": 3,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 4.0,
-      "hu_relevant_mentions": 4,
-      "social_index": 29,
+      "weighted_social_mentions": 3.0,
+      "hu_relevant_mentions": 3,
+      "social_index": 16,
       "social_sources": {
         "reddit": 0,
-        "youtube": 4,
+        "youtube": 3,
         "mastodon": 0
       },
       "raw_social_sources": {
         "reddit": 0,
-        "youtube": 4,
+        "youtube": 3,
         "mastodon": 0
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 4.0
+          "score": 3.0
         }
       ],
       "topic_sentiment": {
         "árak és akciók": {
           "positive": 0.0,
-          "neutral": 4.0,
+          "neutral": 3.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -518,19 +479,6 @@
           "summary": "CBA Príma akciós újság 09.17. - 09.23. YouTube",
           "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1YX1h6RVVLOHJaVXdOME5UajQ1ZFpsRnpTLUkyTUswQ01wb2diWnk2SkFhaFc0WEh6OEo2VHRFZFota1VqQ1k3ZlE2dW5yeU13R09YWQ?oc=5",
           "published": "Mon, 14 Sep 2026 07:44:06 GMT",
-          "query": "site:youtube.com \"CBA Príma\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "2bd39a0afbd1a0b2",
-          "source": "youtube",
-          "company": "CBA",
-          "title": "CBA Príma akciós újság 08.13. - 08.19. - YouTube",
-          "summary": "CBA Príma akciós újság 08.13. - 08.19. YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE53WURpSmx2UW13SFU1NjFOX2NVVUQ1SzNROXc2WlgwdVhGZVFJV1N1Q3V6OHNtT0pBX0xQQldMVFNYX2lZN1dzd3VYNlhZRktCSXpQZTln?oc=5",
-          "published": "Mon, 10 Aug 2026 19:39:53 GMT",
           "query": "site:youtube.com \"CBA Príma\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
@@ -565,7 +513,7 @@
       ],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 4,
+        "dashboard_items": 3,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
