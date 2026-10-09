@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-08T10:58:44Z",
+  "updated_at": "2026-10-09T10:57:11Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -245,8 +245,8 @@
         "ALDI": 1990.0,
         "Auchan": 2141.0,
         "Lidl": 2390.0,
-        "Tesco": 2570.0,
-        "Penny": 2750.0
+        "Penny": 2390.0,
+        "Tesco": 2570.0
       },
       "selected_products": {
         "SPAR": {
@@ -289,6 +289,16 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
+        "Penny": {
+          "source_product_id": "penny-1251",
+          "source_product_name": "Sissy trappista sajt egész kg",
+          "amount": 2390.0,
+          "unit_amount": 2390.0,
+          "unit": "kg",
+          "unit_title": "db",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "Tesco": {
           "source_product_id": "5999558217334",
           "source_product_name": "LECKER TRAPPISTA SAJT FELEZETT 700 g",
@@ -297,16 +307,6 @@
           "unit": "kg",
           "unit_title": "db",
           "packaging": "0.7",
-          "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "2812010000000",
-          "source_product_name": "Tolle trappista sajt egész kg",
-          "amount": 2750.0,
-          "unit_amount": 2750.0,
-          "unit": "kg",
-          "unit_title": "db",
-          "packaging": "1",
           "price_type": "NORMAL"
         }
       },
@@ -319,26 +319,16 @@
       "expected_unit": "kg",
       "prices": {
         "ALDI": 1796.0,
-        "Lidl": 1796.0,
         "Penny": 1796.0,
         "SPAR": 2052.0,
         "Auchan": 2388.0,
+        "Lidl": 1996.0,
         "Tesco": 2395.0
       },
       "selected_products": {
         "ALDI": {
           "source_product_id": "aldi-740220",
           "source_product_name": "Desira márkázott vaj 250g",
-          "amount": 449.0,
-          "unit_amount": 1796.0,
-          "unit": "kg",
-          "unit_title": "db",
-          "packaging": "0.25",
-          "price_type": "NORMAL"
-        },
-        "Lidl": {
-          "source_product_id": "lidl-0059587",
-          "source_product_name": "Pilos vaj,  250g",
           "amount": 449.0,
           "unit_amount": 1796.0,
           "unit": "kg",
@@ -371,6 +361,16 @@
           "source_product_name": "Ammerländer márkázott vaj 250 g",
           "amount": 597.0,
           "unit_amount": 2388.0,
+          "unit": "kg",
+          "unit_title": "db",
+          "packaging": "0.25",
+          "price_type": "NORMAL"
+        },
+        "Lidl": {
+          "source_product_id": "lidl-0059587",
+          "source_product_name": "Pilos vaj,  250g",
+          "amount": 499.0,
+          "unit_amount": 1996.0,
           "unit": "kg",
           "unit_title": "db",
           "packaging": "0.25",
@@ -1473,14 +1473,24 @@
       "category": "Alapélelmiszer",
       "expected_unit": "kg",
       "prices": {
+        "Penny": 178.0,
         "Auchan": 181.0,
         "Tesco": 182.0,
         "SPAR": 183.0,
         "ALDI": 183.0,
-        "Lidl": 183.0,
-        "Penny": 183.0
+        "Lidl": 183.0
       },
       "selected_products": {
+        "Penny": {
+          "source_product_id": "penny-2621",
+          "source_product_name": "Penny finomliszt",
+          "amount": 178.0,
+          "unit_amount": 178.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "Auchan": {
           "source_product_id": "5999086469649",
           "source_product_name": "Auchan Tipp búzafinomliszt BL-55 1 kg",
@@ -1524,16 +1534,6 @@
         "Lidl": {
           "source_product_id": "lidl-0002118",
           "source_product_name": "Belbake Búzafinomliszt BL-55,  1kg",
-          "amount": 183.0,
-          "unit_amount": 183.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-2621",
-          "source_product_name": "Penny finomliszt",
           "amount": 183.0,
           "unit_amount": 183.0,
           "unit": "kg",
@@ -1627,29 +1627,29 @@
       "category": "Ital",
       "expected_unit": "l",
       "prices": {
-        "SPAR": 54.67,
         "Tesco": 66.0,
+        "SPAR": 54.67,
         "ALDI": 66.0,
         "Lidl": 66.0,
         "Penny": 66.0,
         "Auchan": 86.0
       },
       "selected_products": {
-        "SPAR": {
-          "source_product_id": "5999545594455",
-          "source_product_name": "Mizse szén-dioxiddal enyhén dúsított természetes ásványvíz 1,5 l",
-          "amount": 82.0,
-          "unit_amount": 54.67,
-          "unit": "l",
-          "unit_title": "db",
-          "packaging": "1.5",
-          "price_type": "NORMAL"
-        },
         "Tesco": {
           "source_product_id": "5051007167444",
           "source_product_name": "Tesco 1,5 l sava  ",
           "amount": 99.0,
           "unit_amount": 66.0,
+          "unit": "l",
+          "unit_title": "db",
+          "packaging": "1.5",
+          "price_type": "NORMAL"
+        },
+        "SPAR": {
+          "source_product_id": "5999545594455",
+          "source_product_name": "Mizse szén-dioxiddal enyhén dúsított természetes ásványvíz 1,5 l",
+          "amount": 82.0,
+          "unit_amount": 54.67,
           "unit": "l",
           "unit_title": "db",
           "packaging": "1.5",

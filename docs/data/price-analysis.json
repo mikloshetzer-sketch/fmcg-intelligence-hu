@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-08T10:58:44Z",
+  "updated_at": "2026-10-09T10:57:11Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "method": "product-level price leadership and spread analysis",
@@ -7,10 +7,6 @@
     {
       "company": "ALDI",
       "count": 6
-    },
-    {
-      "company": "Auchan",
-      "count": 5
     },
     {
       "company": "Lidl",
@@ -21,12 +17,16 @@
       "count": 5
     },
     {
+      "company": "Auchan",
+      "count": 4
+    },
+    {
       "company": "Tesco",
       "count": 3
     },
     {
       "company": "Penny",
-      "count": 1
+      "count": 2
     }
   ],
   "most_expensive_count": [
@@ -36,14 +36,14 @@
     },
     {
       "company": "Penny",
-      "count": 6
-    },
-    {
-      "company": "ALDI",
-      "count": 4
+      "count": 5
     },
     {
       "company": "Tesco",
+      "count": 5
+    },
+    {
+      "company": "ALDI",
       "count": 4
     },
     {
@@ -88,8 +88,8 @@
     },
     {
       "company": "Penny",
-      "price_index": 107,
-      "value_score": 93,
+      "price_index": 106,
+      "value_score": 94,
       "index_coverage": 25
     }
   ],
@@ -327,7 +327,7 @@
           "coverage": 5
         },
         {
-          "company": "Lidl",
+          "company": "Penny",
           "category_index": 98,
           "coverage": 5
         },
@@ -342,8 +342,8 @@
           "coverage": 5
         },
         {
-          "company": "Penny",
-          "category_index": 101,
+          "company": "Lidl",
+          "category_index": 100,
           "coverage": 5
         },
         {
@@ -489,18 +489,6 @@
       "coverage": 6
     },
     {
-      "product": "Trappista sajt",
-      "category": "Tejtermék",
-      "cheapest_company": "ALDI",
-      "cheapest_price": 1990.0,
-      "most_expensive_company": "Penny",
-      "most_expensive_price": 2750.0,
-      "average_price": 2371.83,
-      "spread_pct": 38.19,
-      "competition_intensity": "nagy árszórás",
-      "coverage": 6
-    },
-    {
       "product": "Zöldpaprika",
       "category": "Zöldség",
       "cheapest_company": "SPAR",
@@ -519,7 +507,7 @@
       "cheapest_price": 1796.0,
       "most_expensive_company": "Tesco",
       "most_expensive_price": 2395.0,
-      "average_price": 2037.17,
+      "average_price": 2070.5,
       "spread_pct": 33.35,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
@@ -533,6 +521,18 @@
       "most_expensive_price": 250.0,
       "average_price": 215.75,
       "spread_pct": 31.93,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 6
+    },
+    {
+      "product": "Trappista sajt",
+      "category": "Tejtermék",
+      "cheapest_company": "ALDI",
+      "cheapest_price": 1990.0,
+      "most_expensive_company": "Tesco",
+      "most_expensive_price": 2570.0,
+      "average_price": 2311.83,
+      "spread_pct": 29.15,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
@@ -669,6 +669,18 @@
       "coverage": 6
     },
     {
+      "product": "Finomliszt",
+      "category": "Alapélelmiszer",
+      "cheapest_company": "Penny",
+      "cheapest_price": 178.0,
+      "most_expensive_company": "SPAR",
+      "most_expensive_price": 183.0,
+      "average_price": 181.67,
+      "spread_pct": 2.81,
+      "competition_intensity": "erős árverseny",
+      "coverage": 6
+    },
+    {
       "product": "Étolaj",
       "category": "Alapélelmiszer",
       "cheapest_company": "Auchan",
@@ -677,18 +689,6 @@
       "most_expensive_price": 749.0,
       "average_price": 746.67,
       "spread_pct": 1.35,
-      "competition_intensity": "erős árverseny",
-      "coverage": 6
-    },
-    {
-      "product": "Finomliszt",
-      "category": "Alapélelmiszer",
-      "cheapest_company": "Auchan",
-      "cheapest_price": 181.0,
-      "most_expensive_company": "SPAR",
-      "most_expensive_price": 183.0,
-      "average_price": 182.5,
-      "spread_pct": 1.1,
       "competition_intensity": "erős árverseny",
       "coverage": 6
     }
@@ -751,13 +751,6 @@
       "coverage": 6
     },
     {
-      "product": "Trappista sajt",
-      "category": "Tejtermék",
-      "spread_pct": 38.19,
-      "competition_intensity": "nagy árszórás",
-      "coverage": 6
-    },
-    {
       "product": "Zöldpaprika",
       "category": "Zöldség",
       "spread_pct": 37.32,
@@ -775,6 +768,13 @@
       "product": "Vöröshagyma",
       "category": "Zöldség",
       "spread_pct": 31.93,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 6
+    },
+    {
+      "product": "Trappista sajt",
+      "category": "Tejtermék",
+      "spread_pct": 29.15,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
@@ -856,16 +856,16 @@
       "coverage": 6
     },
     {
-      "product": "Étolaj",
+      "product": "Finomliszt",
       "category": "Alapélelmiszer",
-      "spread_pct": 1.35,
+      "spread_pct": 2.81,
       "competition_intensity": "erős árverseny",
       "coverage": 6
     },
     {
-      "product": "Finomliszt",
+      "product": "Étolaj",
       "category": "Alapélelmiszer",
-      "spread_pct": 1.1,
+      "spread_pct": 1.35,
       "competition_intensity": "erős árverseny",
       "coverage": 6
     }
