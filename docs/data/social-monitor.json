@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-10-09T13:38:15.196971+00:00",
+  "updated_at": "2026-10-09T22:47:37.131786+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-10-09T13:38:15.196971+00:00",
+    "updated_at": "2026-10-09T22:47:37.131786+00:00",
     "leader_social": "Lidl",
-    "leader_social_index": 33,
+    "leader_social_index": 37,
     "dominant_social_topic": "árak és akciók",
     "overall_social_sentiment": "neutral"
   },
@@ -15,35 +15,43 @@
       "company": "Lidl",
       "social_mentions": 7,
       "raw_social_mentions": 8,
-      "dashboard_mentions": 7,
-      "background_mentions": 0,
+      "dashboard_mentions": 6,
+      "background_mentions": 1,
       "discarded_mentions": 1,
-      "weighted_social_mentions": 7.0,
-      "hu_relevant_mentions": 7,
-      "social_index": 33,
+      "weighted_social_mentions": 6.5,
+      "hu_relevant_mentions": 6,
+      "social_index": 37,
       "social_sources": {
         "reddit": 1,
-        "youtube": 6,
-        "mastodon": 0
+        "youtube": 5,
+        "mastodon": 1
       },
       "raw_social_sources": {
         "reddit": 1,
-        "youtube": 6,
-        "mastodon": 1
+        "youtube": 5,
+        "mastodon": 2
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 6.0
+          "score": 5.0
         },
         {
           "topic": "termék és minőség",
-          "score": 2.0
+          "score": 2.5
         },
         {
           "topic": "bolti élmény",
           "score": 1.0
+        },
+        {
+          "topic": "munkaerő és foglalkoztatás",
+          "score": 0.5
+        },
+        {
+          "topic": "digitalizáció és önkiszolgálás",
+          "score": 0.5
         }
       ],
       "topic_sentiment": {
@@ -56,14 +64,28 @@
         },
         "termék és minőség": {
           "positive": 0.0,
-          "neutral": 1.0,
+          "neutral": 1.5,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
         },
         "árak és akciók": {
           "positive": 0.0,
-          "neutral": 6.0,
+          "neutral": 5.0,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        },
+        "munkaerő és foglalkoztatás": {
+          "positive": 0.0,
+          "neutral": 0.5,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        },
+        "digitalizáció és önkiszolgálás": {
+          "positive": 0.0,
+          "neutral": 0.5,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -80,19 +102,6 @@
           "url": "https://www.reddit.com/r/anyukavagyok/comments/1wdef68/lidl_termékvisszahívás/",
           "published": "2026-09-11T12:07:54+00:00",
           "query": "Lidl Magyarország",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "4630a8d40e9ec298",
-          "source": "youtube",
-          "company": "Lidl",
-          "title": "🇭🇺 LIDL Magyarország Akciós újság – 26. hét Érvényes 06.25 - 07.01 2026 - YouTube",
-          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 26. hét Érvényes 06.25 - 07.01 2026 YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9wVGQ2SHYwaFI4NHN4d1kzSEp5Q2xMaXREbEpjNENEc1dzaDhWekY5azU1YU1SMVdtR1FQdmpieDhka24yb0xqLVpVblZKUVVTTXhReVdB?oc=5",
-          "published": "Sun, 21 Jun 2026 00:20:24 GMT",
-          "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
           "item_sentiment": "neutral"
@@ -163,10 +172,24 @@
           "item_sentiment": "neutral"
         }
       ],
-      "background_items": [],
+      "background_items": [
+        {
+          "id": "77366401d53146c8",
+          "source": "mastodon",
+          "company": "Lidl",
+          "title": "",
+          "summary": "Viel me de afgelopen week op bij de # Lidl dat op duurdere vlees/vis producten zoals zalm, rundvlees wat blijkbaar diefstalgevoelige artikelen zijn, een gele sticker met ‘Security Protected’ zit. In die stickers zit een mechanisme dat gedeactiveerd wordt zodra het artikel langs de scanner van de kassa gaat. Het is geen overbodige luxe, want er wordt gejat bij het leven. Afgelopen december hield de politie in Staphorst een man aan, die de achterbak van zijn auto vol vis had liggen. In totaal ging",
+          "url": "https://mastodon.nl/@StellaQuasten/117413152565357568",
+          "published": "Fri, 09 Oct 2026 21:48:48 +0000",
+          "query": "#lidl",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        }
+      ],
       "quality_summary": {
-        "dashboard_items": 7,
-        "background_items": 0,
+        "dashboard_items": 6,
+        "background_items": 1,
         "discarded_items": 1,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
