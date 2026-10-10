@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-10-09T22:47:37.131786+00:00",
+  "updated_at": "2026-10-10T06:11:45.704724+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-10-09T22:47:37.131786+00:00",
+    "updated_at": "2026-10-10T06:11:45.704724+00:00",
     "leader_social": "Lidl",
     "leader_social_index": 37,
     "dominant_social_topic": "árak és akciók",
@@ -13,29 +13,29 @@
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 7,
-      "raw_social_mentions": 8,
-      "dashboard_mentions": 6,
+      "social_mentions": 8,
+      "raw_social_mentions": 9,
+      "dashboard_mentions": 7,
       "background_mentions": 1,
       "discarded_mentions": 1,
-      "weighted_social_mentions": 6.5,
-      "hu_relevant_mentions": 6,
+      "weighted_social_mentions": 7.5,
+      "hu_relevant_mentions": 7,
       "social_index": 37,
       "social_sources": {
         "reddit": 1,
-        "youtube": 5,
+        "youtube": 6,
         "mastodon": 1
       },
       "raw_social_sources": {
         "reddit": 1,
-        "youtube": 5,
+        "youtube": 6,
         "mastodon": 2
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 5.0
+          "score": 6.0
         },
         {
           "topic": "termék és minőség",
@@ -71,7 +71,7 @@
         },
         "árak és akciók": {
           "positive": 0.0,
-          "neutral": 5.0,
+          "neutral": 6.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -102,6 +102,19 @@
           "url": "https://www.reddit.com/r/anyukavagyok/comments/1wdef68/lidl_termékvisszahívás/",
           "published": "2026-09-11T12:07:54+00:00",
           "query": "Lidl Magyarország",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "4630a8d40e9ec298",
+          "source": "youtube",
+          "company": "Lidl",
+          "title": "🇭🇺 LIDL Magyarország Akciós újság – 26. hét Érvényes 06.25 - 07.01 2026 - YouTube",
+          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 26. hét Érvényes 06.25 - 07.01 2026 YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9wVGQ2SHYwaFI4NHN4d1kzSEp5Q2xMaXREbEpjNENEc1dzaDhWekY5azU1YU1SMVdtR1FQdmpieDhka24yb0xqLVpVblZKUVVTTXhReVdB?oc=5",
+          "published": "Sun, 21 Jun 2026 00:20:24 GMT",
+          "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
           "item_sentiment": "neutral"
@@ -188,7 +201,7 @@
         }
       ],
       "quality_summary": {
-        "dashboard_items": 6,
+        "dashboard_items": 7,
         "background_items": 1,
         "discarded_items": 1,
         "dashboard_relevance_threshold": 0.8,
