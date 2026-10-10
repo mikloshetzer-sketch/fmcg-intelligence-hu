@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-09T10:57:11Z",
+  "updated_at": "2026-10-10T10:10:06Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -399,7 +399,7 @@
         "Lidl": 45.9,
         "Auchan": 49.0,
         "ALDI": 49.97,
-        "SPAR": 52.1,
+        "SPAR": 50.8,
         "Tesco": 57.1667
       },
       "selected_products": {
@@ -444,10 +444,10 @@
           "price_type": "NORMAL"
         },
         "SPAR": {
-          "source_product_id": "5999139401725",
-          "source_product_name": "SPAR mélyalmos friss tojás S 10 db",
-          "amount": 521.0,
-          "unit_amount": 52.1,
+          "source_product_id": "5999139409493",
+          "source_product_name": "S-budget tojás 10db ¨s¨",
+          "amount": 508.0,
+          "unit_amount": 50.8,
           "unit": "db",
           "unit_title": "doboz",
           "packaging": "10",
@@ -780,7 +780,7 @@
       "category": "Gyümölcs",
       "expected_unit": "kg",
       "prices": {
-        "ALDI": 319.0,
+        "ALDI": 325.0,
         "Lidl": 325.0,
         "SPAR": 350.5,
         "Auchan": 399.0,
@@ -791,8 +791,8 @@
         "ALDI": {
           "source_product_id": "aldi-484058",
           "source_product_name": "Alma piros lédig",
-          "amount": 319.0,
-          "unit_amount": 319.0,
+          "amount": 325.0,
+          "unit_amount": 325.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1015,8 +1015,8 @@
         "Auchan": 433.0,
         "Tesco": 822.0,
         "SPAR": 863.0,
-        "Penny": 903.0,
-        "ALDI": 975.0
+        "ALDI": 879.0,
+        "Penny": 903.0
       },
       "selected_products": {
         "Lidl": {
@@ -1059,21 +1059,21 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Penny": {
-          "source_product_id": "penny-298",
-          "source_product_name": "Magyar fürtös paradicsom lé kg",
-          "amount": 903.0,
-          "unit_amount": 903.0,
+        "ALDI": {
+          "source_product_id": "aldi-166633",
+          "source_product_name": "Paradicsom fürtös lédig",
+          "amount": 879.0,
+          "unit_amount": 879.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "ALDI": {
-          "source_product_id": "aldi-166633",
-          "source_product_name": "Paradicsom fürtös lédig",
-          "amount": 975.0,
-          "unit_amount": 975.0,
+        "Penny": {
+          "source_product_id": "penny-298",
+          "source_product_name": "Magyar fürtös paradicsom lé kg",
+          "amount": 903.0,
+          "unit_amount": 903.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1473,14 +1473,24 @@
       "category": "Alapélelmiszer",
       "expected_unit": "kg",
       "prices": {
+        "Lidl": 178.0,
         "Penny": 178.0,
         "Auchan": 181.0,
         "Tesco": 182.0,
         "SPAR": 183.0,
-        "ALDI": 183.0,
-        "Lidl": 183.0
+        "ALDI": 183.0
       },
       "selected_products": {
+        "Lidl": {
+          "source_product_id": "lidl-0002118",
+          "source_product_name": "Belbake Búzafinomliszt BL-55,  1kg",
+          "amount": 178.0,
+          "unit_amount": 178.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "Penny": {
           "source_product_id": "penny-2621",
           "source_product_name": "Penny finomliszt",
@@ -1530,16 +1540,6 @@
           "unit_title": "csomag",
           "packaging": "1",
           "price_type": "NORMAL"
-        },
-        "Lidl": {
-          "source_product_id": "lidl-0002118",
-          "source_product_name": "Belbake Búzafinomliszt BL-55,  1kg",
-          "amount": 183.0,
-          "unit_amount": 183.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "1",
-          "price_type": "NORMAL"
         }
       },
       "coverage": 6
@@ -1555,7 +1555,7 @@
         "Lidl": 295.0,
         "SPAR": 295.0,
         "Penny": 295.0,
-        "Tesco": 329.0
+        "Tesco": 323.0
       },
       "selected_products": {
         "ALDI": {
@@ -1611,8 +1611,8 @@
         "Tesco": {
           "source_product_id": "5051007099431",
           "source_product_name": "Tesco kristálycukor 1 kg QQ",
-          "amount": 329.0,
-          "unit_amount": 329.0,
+          "amount": 323.0,
+          "unit_amount": 323.0,
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "1",
