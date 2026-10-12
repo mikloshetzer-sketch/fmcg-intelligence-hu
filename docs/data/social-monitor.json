@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-10-11T22:15:39.729049+00:00",
+  "updated_at": "2026-10-12T06:17:33.596055+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-10-11T22:15:39.729049+00:00",
+    "updated_at": "2026-10-12T06:17:33.596055+00:00",
     "leader_social": "Lidl",
     "leader_social_index": 37,
     "dominant_social_topic": "árak és akciók",
@@ -14,10 +14,10 @@
     {
       "company": "Lidl",
       "social_mentions": 8,
-      "raw_social_mentions": 9,
+      "raw_social_mentions": 8,
       "dashboard_mentions": 7,
       "background_mentions": 1,
-      "discarded_mentions": 1,
+      "discarded_mentions": 0,
       "weighted_social_mentions": 7.5,
       "hu_relevant_mentions": 7,
       "social_index": 37,
@@ -29,7 +29,7 @@
       "raw_social_sources": {
         "reddit": 1,
         "youtube": 6,
-        "mastodon": 2
+        "mastodon": 1
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
@@ -203,7 +203,7 @@
       "quality_summary": {
         "dashboard_items": 7,
         "background_items": 1,
-        "discarded_items": 1,
+        "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
       },
