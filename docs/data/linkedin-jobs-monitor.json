@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-05T12:27:11Z",
+  "updated_at": "2026-10-12T13:21:58Z",
   "status": "ok",
   "source": "linkedin_public_jobs_search",
   "method": "non_login_public_search_best_effort",
@@ -8,11 +8,11 @@
     {
       "id": "auchan",
       "company": "Auchan",
-      "linkedin_active_ads_hint": 2,
+      "linkedin_active_ads_hint": 7,
       "category_scores": {
         "store": 3,
-        "warehouse": 5,
-        "management": 4,
+        "warehouse": 2,
+        "management": 5,
         "office": 7,
         "expansion": 0
       },
@@ -24,11 +24,11 @@
           "query": "Auchan Magyarország",
           "url": "https://www.linkedin.com/jobs/search/?keywords=Auchan+Magyarorsz%C3%A1g&location=Hungary",
           "status": "fetched",
-          "count_hint": null,
+          "count_hint": 7,
           "category_scores": {
             "store": 0,
-            "warehouse": 2,
-            "management": 2,
+            "warehouse": 1,
+            "management": 1,
             "office": 4,
             "expansion": 0
           }
@@ -40,8 +40,8 @@
           "count_hint": 2,
           "category_scores": {
             "store": 3,
-            "warehouse": 3,
-            "management": 2,
+            "warehouse": 1,
+            "management": 4,
             "office": 3,
             "expansion": 0
           }
@@ -51,7 +51,7 @@
     {
       "id": "lidl",
       "company": "Lidl",
-      "linkedin_active_ads_hint": 929,
+      "linkedin_active_ads_hint": 900,
       "category_scores": {
         "store": 0,
         "warehouse": 6,
@@ -67,7 +67,7 @@
           "query": "Lidl Magyarország",
           "url": "https://www.linkedin.com/jobs/search/?keywords=Lidl+Magyarorsz%C3%A1g&location=Hungary",
           "status": "fetched",
-          "count_hint": 929,
+          "count_hint": 900,
           "category_scores": {
             "store": 0,
             "warehouse": 3,
@@ -94,12 +94,12 @@
     {
       "id": "aldi",
       "company": "ALDI",
-      "linkedin_active_ads_hint": 1,
+      "linkedin_active_ads_hint": 954,
       "category_scores": {
         "store": 0,
         "warehouse": 0,
         "management": 4,
-        "office": 2,
+        "office": 3,
         "expansion": 0
       },
       "dominant_signal": "management_recruitment_signal",
@@ -110,12 +110,12 @@
           "query": "ALDI Magyarország",
           "url": "https://www.linkedin.com/jobs/search/?keywords=ALDI+Magyarorsz%C3%A1g&location=Hungary",
           "status": "fetched",
-          "count_hint": null,
+          "count_hint": 954,
           "category_scores": {
             "store": 0,
             "warehouse": 0,
             "management": 2,
-            "office": 1,
+            "office": 2,
             "expansion": 0
           }
         },
@@ -142,7 +142,7 @@
         "store": 1,
         "warehouse": 2,
         "management": 4,
-        "office": 5,
+        "office": 4,
         "expansion": 0
       },
       "dominant_signal": "logistics_recruitment_signal",
@@ -153,12 +153,12 @@
           "query": "SPAR Magyarország",
           "url": "https://www.linkedin.com/jobs/search/?keywords=SPAR+Magyarorsz%C3%A1g&location=Hungary",
           "status": "fetched",
-          "count_hint": 4,
+          "count_hint": null,
           "category_scores": {
             "store": 1,
             "warehouse": 1,
             "management": 2,
-            "office": 3,
+            "office": 2,
             "expansion": 0
           }
         },
@@ -223,7 +223,7 @@
     {
       "id": "penny",
       "company": "Penny",
-      "linkedin_active_ads_hint": 1,
+      "linkedin_active_ads_hint": 2,
       "category_scores": {
         "store": 1,
         "warehouse": 0,
@@ -239,7 +239,7 @@
           "query": "Penny Magyarország",
           "url": "https://www.linkedin.com/jobs/search/?keywords=Penny+Magyarorsz%C3%A1g&location=Hungary",
           "status": "fetched",
-          "count_hint": 1,
+          "count_hint": null,
           "category_scores": {
             "store": 1,
             "warehouse": 0,
@@ -252,7 +252,7 @@
           "query": "Penny Market Hungary",
           "url": "https://www.linkedin.com/jobs/search/?keywords=Penny+Market+Hungary&location=Hungary",
           "status": "fetched",
-          "count_hint": null,
+          "count_hint": 2,
           "category_scores": {
             "store": 0,
             "warehouse": 0,
