@@ -1,24 +1,24 @@
 {
-  "updated_at": "2026-10-05T10:25:10.189744+00:00",
+  "updated_at": "2026-10-12T10:47:58.436812+00:00",
   "status": "ok",
   "version": "store-network-hu-v2.0-non-lidl-osm",
   "source": "openstreetmap_overpass_non_lidl_plus_fallback_plus_optional_overrides",
-  "store_count": 1169,
+  "store_count": 1167,
   "company_totals": {
     "ALDI": 187,
     "Auchan": 25,
     "Penny": 243,
-    "SPAR": 525,
-    "Tesco": 189
+    "SPAR": 524,
+    "Tesco": 188
   },
   "source_totals": {
-    "openstreetmap_overpass": 1169
+    "openstreetmap_overpass": 1167
   },
   "companies": [
     {
       "company": "ALDI",
-      "source": "openstreetmap_overpass",
-      "status": "ok",
+      "source": "fallback_previous_store_network",
+      "status": "fallback_previous",
       "stores": 187,
       "brand_values": [
         "ALDI",
@@ -26,14 +26,14 @@
       ],
       "notes": [
         "exact_brand_error=HTTPSConnectionPool(host='overpass.kumi.systems', port=443): Read timed out. (read timeout=150)",
-        "regex_brand=187 via https://overpass.kumi.systems/api/interpreter"
+        "regex_brand_error=HTTPSConnectionPool(host='overpass.kumi.systems', port=443): Read timed out. (read timeout=150)"
       ]
     },
     {
       "company": "SPAR",
       "source": "openstreetmap_overpass",
       "status": "ok",
-      "stores": 525,
+      "stores": 524,
       "brand_values": [
         "SPAR",
         "Spar",
@@ -41,22 +41,22 @@
         "Interspar"
       ],
       "notes": [
-        "exact_brand=525 via https://overpass-api.de/api/interpreter",
-        "regex_brand=525 via https://overpass-api.de/api/interpreter"
+        "exact_brand=524 via https://overpass-api.de/api/interpreter",
+        "regex_brand_error=HTTPSConnectionPool(host='overpass.kumi.systems', port=443): Read timed out. (read timeout=150)"
       ]
     },
     {
       "company": "Tesco",
       "source": "openstreetmap_overpass",
       "status": "ok",
-      "stores": 189,
+      "stores": 188,
       "brand_values": [
         "Tesco",
         "TESCO"
       ],
       "notes": [
-        "exact_brand_error=HTTPSConnectionPool(host='overpass.kumi.systems', port=443): Read timed out. (read timeout=150)",
-        "regex_brand=189 via https://overpass-api.de/api/interpreter"
+        "exact_brand=188 via https://overpass-api.de/api/interpreter",
+        "regex_brand=188 via https://overpass-api.de/api/interpreter"
       ]
     },
     {
@@ -69,14 +69,14 @@
         "AUCHAN"
       ],
       "notes": [
-        "exact_brand_error=HTTPSConnectionPool(host='overpass.kumi.systems', port=443): Read timed out. (read timeout=150)",
+        "exact_brand=24 via https://overpass.kumi.systems/api/interpreter",
         "regex_brand=25 via https://overpass-api.de/api/interpreter"
       ]
     },
     {
       "company": "Penny",
-      "source": "openstreetmap_overpass",
-      "status": "ok",
+      "source": "fallback_previous_store_network",
+      "status": "fallback_previous",
       "stores": 243,
       "brand_values": [
         "Penny",
@@ -86,7 +86,7 @@
       ],
       "notes": [
         "exact_brand_error=504 Server Error: Gateway Timeout for url: https://overpass.kumi.systems/api/interpreter",
-        "regex_brand=243 via https://overpass-api.de/api/interpreter"
+        "regex_brand=0 via https://overpass.kumi.systems/api/interpreter"
       ]
     }
   ],
