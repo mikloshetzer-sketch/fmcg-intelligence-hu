@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-10-13T14:27:44.297437+00:00",
+  "updated_at": "2026-10-13T22:59:22.439387+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-10-13T14:27:44.297437+00:00",
+    "updated_at": "2026-10-13T22:59:22.439387+00:00",
     "leader_social": "Lidl",
     "leader_social_index": 33,
     "dominant_social_topic": "árak és akciók",
@@ -13,23 +13,23 @@
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 7,
-      "raw_social_mentions": 7,
+      "social_mentions": 8,
+      "raw_social_mentions": 8,
       "dashboard_mentions": 6,
-      "background_mentions": 1,
+      "background_mentions": 2,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 6.5,
+      "weighted_social_mentions": 7.0,
       "hu_relevant_mentions": 6,
       "social_index": 33,
       "social_sources": {
         "reddit": 0,
         "youtube": 6,
-        "mastodon": 1
+        "mastodon": 2
       },
       "raw_social_sources": {
         "reddit": 0,
         "youtube": 6,
-        "mastodon": 1
+        "mastodon": 2
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
@@ -38,15 +38,15 @@
           "score": 6.0
         },
         {
+          "topic": "digitalizáció és önkiszolgálás",
+          "score": 1.5
+        },
+        {
           "topic": "munkaerő és foglalkoztatás",
-          "score": 0.5
+          "score": 1.0
         },
         {
           "topic": "termék és minőség",
-          "score": 0.5
-        },
-        {
-          "topic": "digitalizáció és önkiszolgálás",
           "score": 0.5
         }
       ],
@@ -60,19 +60,19 @@
         },
         "munkaerő és foglalkoztatás": {
           "positive": 0.0,
-          "neutral": 0.5,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
-        },
-        "termék és minőség": {
-          "positive": 0.0,
-          "neutral": 0.5,
+          "neutral": 1.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
         },
         "digitalizáció és önkiszolgálás": {
+          "positive": 0.0,
+          "neutral": 1.0,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        },
+        "termék és minőség": {
           "positive": 0.0,
           "neutral": 0.5,
           "negative": 0.0,
@@ -163,6 +163,19 @@
       ],
       "background_items": [
         {
+          "id": "fa0ed46b4de610c5",
+          "source": "mastodon",
+          "company": "Lidl",
+          "title": "",
+          "summary": "Also # Lidl finde ich mittlerweile maximal nervig. Blöde App, blöde Selbstscannerkassen und blöde Schlange an der Kasse mit Mensch Alles so stressig mit Entscheidungen... da lieber zu # Aldi .",
+          "url": "https://nrw.social/@Exxo/117434369424994866",
+          "published": "Tue, 13 Oct 2026 15:44:31 +0000",
+          "query": "#lidl",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        },
+        {
           "id": "77366401d53146c8",
           "source": "mastodon",
           "company": "Lidl",
@@ -178,7 +191,7 @@
       ],
       "quality_summary": {
         "dashboard_items": 6,
-        "background_items": 1,
+        "background_items": 2,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
@@ -459,35 +472,35 @@
     },
     {
       "company": "CBA",
-      "social_mentions": 2,
-      "raw_social_mentions": 2,
-      "dashboard_mentions": 2,
+      "social_mentions": 4,
+      "raw_social_mentions": 4,
+      "dashboard_mentions": 4,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 2.0,
-      "hu_relevant_mentions": 2,
-      "social_index": 16,
+      "weighted_social_mentions": 4.0,
+      "hu_relevant_mentions": 4,
+      "social_index": 29,
       "social_sources": {
         "reddit": 0,
-        "youtube": 2,
+        "youtube": 4,
         "mastodon": 0
       },
       "raw_social_sources": {
         "reddit": 0,
-        "youtube": 2,
+        "youtube": 4,
         "mastodon": 0
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 2.0
+          "score": 4.0
         }
       ],
       "topic_sentiment": {
         "árak és akciók": {
           "positive": 0.0,
-          "neutral": 2.0,
+          "neutral": 4.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -520,11 +533,37 @@
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
           "item_sentiment": "neutral"
+        },
+        {
+          "id": "b35cf2789b72f5ed",
+          "source": "youtube",
+          "company": "CBA",
+          "title": "CBA Príma akciós újság 07.16. - 07.22. - YouTube",
+          "summary": "CBA Príma akciós újság 07.16. - 07.22. YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9aTDExZmZoNTBvZk5WQjBNSS1PT3NZZHRlMzhlcFROdFZ6dVNiMWplXy1xVWV6eVlMT1J0bi1jcjNnMXdHWTAxaUJYY3FoVnlRbU5LUUpn?oc=5",
+          "published": "Mon, 13 Jul 2026 09:41:41 GMT",
+          "query": "site:youtube.com \"CBA Príma\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "9a1fea266272003d",
+          "source": "youtube",
+          "company": "CBA",
+          "title": "CBA Príma akciós újság 04.23. - 04.29. - YouTube",
+          "summary": "CBA Príma akciós újság 04.23. - 04.29. YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBULTZqM00ySGtMZF9FV0s4ekRtTG5lMlNDemNySGRwOGp1bTZPT2tPbmpxekRlX3d3NENkZVl5VW51V1VOekZMNk1RLTNsZDB0S3h4UVhB?oc=5",
+          "published": "Mon, 20 Apr 2026 15:11:20 GMT",
+          "query": "site:youtube.com \"CBA Príma\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
         }
       ],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 2,
+        "dashboard_items": 4,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
