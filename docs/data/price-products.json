@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-12T11:23:03Z",
+  "updated_at": "2026-10-13T11:13:14Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -857,7 +857,7 @@
       "category": "Gyümölcs",
       "expected_unit": "kg",
       "prices": {
-        "Lidl": 379.0,
+        "Lidl": 579.0,
         "Tesco": 699.0,
         "SPAR": 699.0,
         "ALDI": 699.0,
@@ -868,8 +868,8 @@
         "Lidl": {
           "source_product_id": "lidl-0080000",
           "source_product_name": "Banán kg",
-          "amount": 379.0,
-          "unit_amount": 379.0,
+          "amount": 579.0,
+          "unit_amount": 579.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1165,14 +1165,24 @@
       "category": "Zöldség",
       "expected_unit": "kg",
       "prices": {
+        "Tesco": 189.5,
         "Lidl": 189.5,
         "ALDI": 205.0,
         "Penny": 205.0,
-        "Tesco": 209.0,
         "SPAR": 236.0,
         "Auchan": 250.0
       },
       "selected_products": {
+        "Tesco": {
+          "source_product_id": "8588010257086",
+          "source_product_name": "GH VÖRÖSHAGYMA 2 KG ",
+          "amount": 379.0,
+          "unit_amount": 189.5,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "2",
+          "price_type": "NORMAL"
+        },
         "Lidl": {
           "source_product_id": "lidl-0083333",
           "source_product_name": "Vöröshagyma 2kg",
@@ -1198,16 +1208,6 @@
           "source_product_name": "Vöröshagyma lédig kg",
           "amount": 205.0,
           "unit_amount": 205.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Tesco": {
-          "source_product_id": "2860520000000",
-          "source_product_name": "VÖRÖSHAGYMA LÉDIG QQ",
-          "amount": 209.0,
-          "unit_amount": 209.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1406,7 +1406,7 @@
       "selected_products": {
         "Auchan": {
           "source_product_id": "5998017555239",
-          "source_product_name": "Kunsági éden étolaj 1l",
+          "source_product_name": "Kunsági Éden 100% finomított napraforgó-étolaj 1 l",
           "amount": 739.0,
           "unit_amount": 739.0,
           "unit": "l",
@@ -1554,13 +1554,13 @@
         "Auchan": 295.0,
         "Lidl": 295.0,
         "SPAR": 295.0,
-        "Penny": 295.0,
-        "Tesco": 323.0
+        "Tesco": 323.0,
+        "Penny": 329.0
       },
       "selected_products": {
         "ALDI": {
           "source_product_id": "4008671013004",
-          "source_product_name": "Sweet Family Kristálycukor 1kg",
+          "source_product_name": "Sweet Family kristálycukor 1 kg",
           "amount": 295.0,
           "unit_amount": 295.0,
           "unit": "kg",
@@ -1570,7 +1570,7 @@
         },
         "Auchan": {
           "source_product_id": "4008671013004",
-          "source_product_name": "Sweet Family Kristálycukor 1kg",
+          "source_product_name": "Sweet Family kristálycukor 1 kg",
           "amount": 295.0,
           "unit_amount": 295.0,
           "unit": "kg",
@@ -1598,21 +1598,21 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Penny": {
-          "source_product_id": "penny-26009",
-          "source_product_name": "Penny kristálycukor",
-          "amount": 295.0,
-          "unit_amount": 295.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
         "Tesco": {
           "source_product_id": "5051007099431",
           "source_product_name": "Tesco kristálycukor 1 kg QQ",
           "amount": 323.0,
           "unit_amount": 323.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Penny": {
+          "source_product_id": "penny-26009",
+          "source_product_name": "Penny kristálycukor",
+          "amount": 329.0,
+          "unit_amount": 329.0,
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "1",
@@ -1704,28 +1704,28 @@
       "category": "Alapélelmiszer",
       "expected_unit": "kg",
       "prices": {
+        "SPAR": 374.0,
         "Tesco": 529.0,
-        "SPAR": 549.0,
         "Lidl": 549.0,
         "Penny": 549.0,
         "Auchan": 599.0
       },
       "selected_products": {
-        "Tesco": {
-          "source_product_id": "5051007090148",
-          "source_product_name": "HEARTY FOOD RIZS 1KG ",
-          "amount": 529.0,
-          "unit_amount": 529.0,
+        "SPAR": {
+          "source_product_id": "5999033883481",
+          "source_product_name": "SPAR ¨B¨ minőségű rizs 1 kg",
+          "amount": 374.0,
+          "unit_amount": 374.0,
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "SPAR": {
-          "source_product_id": "5999139401138",
-          "source_product_name": "S-Budget ¨B¨ minőségű rizs 1 kg",
-          "amount": 549.0,
-          "unit_amount": 549.0,
+        "Tesco": {
+          "source_product_id": "5051007090148",
+          "source_product_name": "HEARTY FOOD RIZS 1KG ",
+          "amount": 529.0,
+          "unit_amount": 529.0,
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "1",
@@ -1840,8 +1840,8 @@
         "Auchan": 524.0,
         "ALDI": 330.71,
         "Penny": 674.75,
-        "SPAR": 449.67,
-        "Lidl": 463.18
+        "Lidl": 463.18,
+        "SPAR": 577.98
       },
       "selected_products": {
         "Tesco": {
@@ -1884,16 +1884,6 @@
           "packaging": "4",
           "price_type": "NORMAL"
         },
-        "SPAR": {
-          "source_product_id": "5999033894845",
-          "source_product_name": "S-Budget univerzális mosószergél 40 mosás 3 l",
-          "amount": 1349.0,
-          "unit_amount": 449.67,
-          "unit": "l",
-          "unit_title": "db",
-          "packaging": "3",
-          "price_type": "NORMAL"
-        },
         "Lidl": {
           "source_product_id": "lidl-0192173",
           "source_product_name": "Formil Black mosószer fekete ruhákhoz, 2,2l, 55 mosás",
@@ -1902,6 +1892,16 @@
           "unit": "l",
           "unit_title": "db",
           "packaging": "2.2",
+          "price_type": "NORMAL"
+        },
+        "SPAR": {
+          "source_product_id": "5900308777688",
+          "source_product_name": "Dr. Prakti Express Universal univerzális mosógél fehér és színes ruhákhoz 109 mosás 3,27 l",
+          "amount": 1890.0,
+          "unit_amount": 577.98,
+          "unit": "l",
+          "unit_title": "db",
+          "packaging": "3.27",
           "price_type": "NORMAL"
         }
       },
