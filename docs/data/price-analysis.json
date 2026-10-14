@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-13T11:13:14Z",
+  "updated_at": "2026-10-14T09:04:23Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "method": "product-level price leadership and spread analysis",
@@ -35,12 +35,12 @@
       "count": 7
     },
     {
-      "company": "Penny",
-      "count": 6
+      "company": "ALDI",
+      "count": 5
     },
     {
-      "company": "ALDI",
-      "count": 4
+      "company": "Penny",
+      "count": 5
     },
     {
       "company": "Tesco",
@@ -88,8 +88,8 @@
     },
     {
       "company": "Penny",
-      "price_index": 107,
-      "value_score": 93,
+      "price_index": 106,
+      "value_score": 94,
       "index_coverage": 25
     }
   ],
@@ -97,11 +97,11 @@
     {
       "category": "Alapélelmiszer",
       "leader": "SPAR",
-      "leader_index": 93,
+      "leader_index": 94,
       "ranking": [
         {
           "company": "SPAR",
-          "category_index": 93,
+          "category_index": 94,
           "coverage": 5
         },
         {
@@ -110,13 +110,13 @@
           "coverage": 4
         },
         {
-          "company": "Lidl",
+          "company": "Penny",
           "category_index": 99,
           "coverage": 5
         },
         {
-          "company": "Penny",
-          "category_index": 102,
+          "company": "Lidl",
+          "category_index": 100,
           "coverage": 5
         },
         {
@@ -208,21 +208,21 @@
     {
       "category": "Háztartás",
       "leader": "Tesco",
-      "leader_index": 77,
+      "leader_index": 72,
       "ranking": [
         {
           "company": "Tesco",
-          "category_index": 77,
+          "category_index": 72,
           "coverage": 2
         },
         {
           "company": "Auchan",
-          "category_index": 79,
+          "category_index": 83,
           "coverage": 2
         },
         {
           "company": "ALDI",
-          "category_index": 95,
+          "category_index": 94,
           "coverage": 2
         },
         {
@@ -232,12 +232,12 @@
         },
         {
           "company": "SPAR",
-          "category_index": 113,
+          "category_index": 117,
           "coverage": 2
         },
         {
           "company": "Penny",
-          "category_index": 135,
+          "category_index": 132,
           "coverage": 2
         }
       ]
@@ -356,16 +356,16 @@
     {
       "category": "Zöldség",
       "leader": "Lidl",
-      "leader_index": 83,
+      "leader_index": 82,
       "ranking": [
         {
           "company": "Lidl",
-          "category_index": 83,
+          "category_index": 82,
           "coverage": 4
         },
         {
           "company": "Auchan",
-          "category_index": 98,
+          "category_index": 99,
           "coverage": 4
         },
         {
@@ -409,10 +409,10 @@
       "category": "Háztartás",
       "cheapest_company": "Auchan",
       "cheapest_price": 45.0,
-      "most_expensive_company": "Penny",
-      "most_expensive_price": 124.75,
-      "average_price": 102.47,
-      "spread_pct": 177.22,
+      "most_expensive_company": "ALDI",
+      "most_expensive_price": 99.9,
+      "average_price": 85.95,
+      "spread_pct": 122.0,
       "competition_intensity": "nagy árszórás",
       "coverage": 5
     },
@@ -447,7 +447,7 @@
       "cheapest_price": 374.0,
       "most_expensive_company": "Auchan",
       "most_expensive_price": 599.0,
-      "average_price": 520.0,
+      "average_price": 502.0,
       "spread_pct": 60.16,
       "competition_intensity": "nagy árszórás",
       "coverage": 5
@@ -507,7 +507,7 @@
       "cheapest_price": 602.0,
       "most_expensive_company": "Penny",
       "most_expensive_price": 826.67,
-      "average_price": 721.67,
+      "average_price": 726.33,
       "spread_pct": 37.32,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
@@ -704,7 +704,7 @@
     {
       "product": "Toalettpapír",
       "category": "Háztartás",
-      "spread_pct": 177.22,
+      "spread_pct": 122.0,
       "competition_intensity": "nagy árszórás",
       "coverage": 5
     },

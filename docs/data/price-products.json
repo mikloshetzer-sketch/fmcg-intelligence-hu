@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-13T11:13:14Z",
+  "updated_at": "2026-10-14T09:04:23Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -1090,7 +1090,7 @@
       "prices": {
         "SPAR": 602.0,
         "ALDI": 679.0,
-        "Auchan": 698.0,
+        "Auchan": 726.0,
         "Tesco": 739.0,
         "Lidl": 785.33,
         "Penny": 826.67
@@ -1117,12 +1117,12 @@
           "price_type": "NORMAL"
         },
         "Auchan": {
-          "source_product_id": "2182050000006",
-          "source_product_name": "Étkezési paprika Ft/kg",
-          "amount": 698.0,
-          "unit_amount": 698.0,
+          "source_product_id": "5999886964221",
+          "source_product_name": "Étkezési paprika 1 kg",
+          "amount": 726.0,
+          "unit_amount": 726.0,
           "unit": "kg",
-          "unit_title": "kg",
+          "unit_title": "csomag",
           "packaging": "1",
           "price_type": "NORMAL"
         },
@@ -1707,7 +1707,7 @@
         "SPAR": 374.0,
         "Tesco": 529.0,
         "Lidl": 549.0,
-        "Penny": 549.0,
+        "Penny": 459.0,
         "Auchan": 599.0
       },
       "selected_products": {
@@ -1744,8 +1744,8 @@
         "Penny": {
           "source_product_id": "penny-27554",
           "source_product_name": "B rizs",
-          "amount": 549.0,
-          "unit_amount": 549.0,
+          "amount": 459.0,
+          "unit_amount": 459.0,
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "1",
@@ -1770,21 +1770,21 @@
       "category": "Háztartás",
       "expected_unit": "db",
       "prices": {
-        "SPAR": 102.5,
+        "SPAR": 93.33,
         "Auchan": 45.0,
-        "Tesco": 118.625,
-        "ALDI": 121.5,
-        "Penny": 124.75
+        "Tesco": 91.625,
+        "Penny": 99.88,
+        "ALDI": 99.9
       },
       "selected_products": {
         "SPAR": {
-          "source_product_id": "8004260013154",
-          "source_product_name": "Regina Delicate Refreshing Aloe toalettpapír 3 rétegű 16 tekercs",
-          "amount": 1640.0,
-          "unit_amount": 102.5,
+          "source_product_id": "8004260013031",
+          "source_product_name": "Regina Delicate Calming Chamomile toalettpapír 3 rétegű 24 tekercs",
+          "amount": 2240.0,
+          "unit_amount": 93.33,
           "unit": "db",
           "unit_title": "csomag",
-          "packaging": "16",
+          "packaging": "24",
           "price_type": "NORMAL"
         },
         "Auchan": {
@@ -1798,33 +1798,33 @@
           "price_type": "NORMAL"
         },
         "Tesco": {
-          "source_product_id": "5051007154383",
-          "source_product_name": "SF TOALETTPAPÍR 2RÉT 8TK FEHÉR .",
-          "amount": 949.0,
-          "unit_amount": 118.625,
+          "source_product_id": "8004260015004",
+          "source_product_name": "Nicky Soft Touch toalettpapír 2 rétegű 24 tekercs",
+          "amount": 2199.0,
+          "unit_amount": 91.625,
+          "unit": "db",
+          "unit_title": "csomag",
+          "packaging": "24",
+          "price_type": "NORMAL"
+        },
+        "Penny": {
+          "source_product_id": "penny-61163",
+          "source_product_name": "Wippy 8 tek.2 rét.toalettp.",
+          "amount": 799.0,
+          "unit_amount": 99.88,
           "unit": "db",
           "unit_title": "csomag",
           "packaging": "8",
           "price_type": "NORMAL"
         },
         "ALDI": {
-          "source_product_id": "aldi-525191",
-          "source_product_name": "Toalettpapír 3r. 10x220",
-          "amount": 1215.0,
-          "unit_amount": 121.5,
+          "source_product_id": "aldi-577406",
+          "source_product_name": "2 rétegű toalettpapír 10x150lap",
+          "amount": 999.0,
+          "unit_amount": 99.9,
           "unit": "db",
           "unit_title": "csomag",
           "packaging": "10",
-          "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-61303",
-          "source_product_name": "Wippy hárs 3rtg 4tek.toalettp.",
-          "amount": 499.0,
-          "unit_amount": 124.75,
-          "unit": "db",
-          "unit_title": "csomag",
-          "packaging": "4",
           "price_type": "NORMAL"
         }
       },
