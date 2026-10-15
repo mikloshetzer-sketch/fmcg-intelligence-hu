@@ -1,41 +1,41 @@
 {
-  "updated_at": "2026-10-14T21:51:44.165296+00:00",
+  "updated_at": "2026-10-15T04:58:53.465865+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-10-14T21:51:44.165296+00:00",
-    "leader_social": "Lidl",
-    "leader_social_index": 33,
+    "updated_at": "2026-10-15T04:58:53.465865+00:00",
+    "leader_social": "Penny",
+    "leader_social_index": 29,
     "dominant_social_topic": "árak és akciók",
     "overall_social_sentiment": "neutral"
   },
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 6,
-      "raw_social_mentions": 6,
-      "dashboard_mentions": 4,
+      "social_mentions": 4,
+      "raw_social_mentions": 4,
+      "dashboard_mentions": 2,
       "background_mentions": 2,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 5.0,
-      "hu_relevant_mentions": 4,
-      "social_index": 33,
+      "weighted_social_mentions": 3.0,
+      "hu_relevant_mentions": 2,
+      "social_index": 20,
       "social_sources": {
         "reddit": 0,
-        "youtube": 4,
+        "youtube": 2,
         "mastodon": 2
       },
       "raw_social_sources": {
         "reddit": 0,
-        "youtube": 4,
+        "youtube": 2,
         "mastodon": 2
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 4.0
+          "score": 2.0
         },
         {
           "topic": "digitalizáció és önkiszolgálás",
@@ -53,7 +53,7 @@
       "topic_sentiment": {
         "árak és akciók": {
           "positive": 0.0,
-          "neutral": 4.0,
+          "neutral": 2.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -96,19 +96,6 @@
           "item_sentiment": "neutral"
         },
         {
-          "id": "8e02755e824b8ffa",
-          "source": "youtube",
-          "company": "Lidl",
-          "title": "🇭🇺 LIDL Magyarország Akciós újság – 23. hét Érvényes 06.04 - 06.10 2026 TV verzió - YouTube",
-          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 23. hét Érvényes 06.04 - 06.10 2026 TV verzió YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFB2TUZkVlNJb3dzTzZZNndOcXVGQU9vcndDanNiclh2YlctWHNucnhZMVdlZS13VGFpelVGdmNBMDJCLUxpbXczeFdVeFNaQ3RDT0VtNmJn?oc=5",
-          "published": "Sat, 30 May 2026 23:22:33 GMT",
-          "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
           "id": "0df7879327f6edfd",
           "source": "youtube",
           "company": "Lidl",
@@ -116,19 +103,6 @@
           "summary": "🇭🇺 LIDL Magyarország Akciós újság – 18. hét Érvényes 04.30-től 2026 YouTube",
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFAxMmhRbF85djlKQVpmc0RULTNOemFReVJJZnJhZlpubXVlaEVUeEN6ZUluT09TZklOd2xaak5ZTjQ3MTFoLW1ySi1uNG1BZjd3WUFsZkFR?oc=5",
           "published": "Sun, 26 Apr 2026 19:29:34 GMT",
-          "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "4755f03efbcb8e9b",
-          "source": "youtube",
-          "company": "Lidl",
-          "title": "🇭🇺 LIDL Magyarország Akciós újság – 17. hét Érvényes 04.23-től 2026 TV verzió - YouTube",
-          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 17. hét Érvényes 04.23-től 2026 TV verzió YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA1STV5Mk5TLU9nQzd5ODBveTdiQjBuSzg5d3d5R2hoMXl5anBQcGo2cGVBR0FUenA3bGtEVkFNNkFpNTJwRW5mZ1kzOVFPQnZ3b1dRdzhB?oc=5",
-          "published": "Sun, 19 Apr 2026 19:01:16 GMT",
           "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
@@ -164,7 +138,7 @@
         }
       ],
       "quality_summary": {
-        "dashboard_items": 4,
+        "dashboard_items": 2,
         "background_items": 2,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
@@ -483,13 +457,13 @@
       "social_sentiment": "neutral",
       "latest_items": [
         {
-          "id": "b8082e456994a72b",
+          "id": "9590df02b44cace5",
           "source": "youtube",
           "company": "CBA",
-          "title": "CBA Príma akciós újság 09.17. - 09.23. - YouTube",
-          "summary": "CBA Príma akciós újság 09.17. - 09.23. YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1YX1h6RVVLOHJaVXdOME5UajQ1ZFpsRnpTLUkyTUswQ01wb2diWnk2SkFhaFc0WEh6OEo2VHRFZFota1VqQ1k3ZlE2dW5yeU13R09YWQ?oc=5",
-          "published": "Mon, 14 Sep 2026 07:44:06 GMT",
+          "title": "CBA Príma akciós újság 10.15. - 10.21. - YouTube",
+          "summary": "CBA Príma akciós újság 10.15. - 10.21. YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBaLUZtS0daQVptSDF2VGVpNjlKam9MMDh1WkNGTlNBQ3RpSG9aNm5kRk5rVzY1TXRuQ3lDZ2Z0RWNyNmRKSVN5VDNoT0RveDhBZnJMeU5B?oc=5",
+          "published": "Sun, 11 Oct 2026 12:47:46 GMT",
           "query": "site:youtube.com \"CBA Príma\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
@@ -542,7 +516,7 @@
           "summary": "CBA Príma akciós újság 05.21. - 05.27. YouTube",
           "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE03MGdRck1RVXhVS0ZHM3llYjE0ZFRkdVcwQTRtVmtmQ2QteWJDM0Nacmk5M0JoekdvOS1UNWtxeWxoTHN2UFhqOHlESm5qOWtvXzJDcw?oc=5",
           "published": "Sat, 16 May 2026 11:25:21 GMT",
-          "query": "site:youtube.com \"CBA Prima\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "query": "site:youtube.com \"CBA Príma\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
           "item_sentiment": "neutral"
