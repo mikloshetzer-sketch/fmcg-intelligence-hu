@@ -1,49 +1,49 @@
 {
-  "updated_at": "2026-10-15T11:54:00.775847+00:00",
+  "updated_at": "2026-10-15T17:14:42.979952+00:00",
   "status": "ok",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "companies": [
     {
       "company": "Lidl",
-      "mentions": 1,
-      "raw_mentions": 1,
-      "dashboard_mentions": 0,
+      "mentions": 3,
+      "raw_mentions": 3,
+      "dashboard_mentions": 2,
       "background_mentions": 1,
       "discarded_mentions": 0,
-      "weighted_mentions": 0.5,
-      "hu_relevant_mentions": 0,
-      "index": 16,
+      "weighted_mentions": 2.5,
+      "hu_relevant_mentions": 2,
+      "index": 20,
       "sources": {
         "reddit": 0,
-        "youtube": 0,
+        "youtube": 2,
         "mastodon": 1
       },
       "raw_sources": {
         "reddit": 0,
-        "youtube": 0,
+        "youtube": 2,
         "mastodon": 1
       },
       "sentiment": "neutral",
-      "topic": "digitalizáció és önkiszolgálás",
+      "topic": "árak és akciók",
       "errors": []
     },
     {
       "company": "SPAR",
-      "mentions": 0,
-      "raw_mentions": 0,
-      "dashboard_mentions": 0,
+      "mentions": 2,
+      "raw_mentions": 2,
+      "dashboard_mentions": 2,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_mentions": 0,
-      "hu_relevant_mentions": 0,
-      "index": 0,
+      "weighted_mentions": 2.0,
+      "hu_relevant_mentions": 2,
+      "index": 16,
       "sources": {
-        "reddit": 0,
+        "reddit": 2,
         "youtube": 0,
         "mastodon": 0
       },
       "raw_sources": {
-        "reddit": 0,
+        "reddit": 2,
         "youtube": 0,
         "mastodon": 0
       },
@@ -149,26 +149,26 @@
     },
     {
       "company": "CBA",
-      "mentions": 0,
-      "raw_mentions": 0,
-      "dashboard_mentions": 0,
+      "mentions": 7,
+      "raw_mentions": 7,
+      "dashboard_mentions": 7,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_mentions": 0,
-      "hu_relevant_mentions": 0,
-      "index": 0,
+      "weighted_mentions": 7.0,
+      "hu_relevant_mentions": 7,
+      "index": 29,
       "sources": {
         "reddit": 0,
-        "youtube": 0,
+        "youtube": 7,
         "mastodon": 0
       },
       "raw_sources": {
         "reddit": 0,
-        "youtube": 0,
+        "youtube": 7,
         "mastodon": 0
       },
       "sentiment": "neutral",
-      "topic": "általános vállalati említés",
+      "topic": "árak és akciók",
       "errors": []
     }
   ],
