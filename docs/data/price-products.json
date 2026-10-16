@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15T08:37:29Z",
+  "updated_at": "2026-10-16T08:32:44Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -318,7 +318,7 @@
       "category": "Tejtermék",
       "expected_unit": "kg",
       "prices": {
-        "ALDI": 1796.0,
+        "ALDI": 1876.0,
         "Lidl": 1996.0,
         "SPAR": 2032.0,
         "Auchan": 2388.0,
@@ -329,8 +329,8 @@
         "ALDI": {
           "source_product_id": "aldi-740220",
           "source_product_name": "Desira márkázott vaj 250g",
-          "amount": 449.0,
-          "unit_amount": 1796.0,
+          "amount": 469.0,
+          "unit_amount": 1876.0,
           "unit": "kg",
           "unit_title": "db",
           "packaging": "0.25",
@@ -858,9 +858,9 @@
       "expected_unit": "kg",
       "prices": {
         "Tesco": 729.0,
-        "Lidl": 579.0,
         "SPAR": 699.0,
         "ALDI": 699.0,
+        "Lidl": 699.0,
         "Penny": 699.0,
         "Auchan": 749.0
       },
@@ -870,16 +870,6 @@
           "source_product_name": "Banán lédig    ",
           "amount": 729.0,
           "unit_amount": 729.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Lidl": {
-          "source_product_id": "lidl-0080000",
-          "source_product_name": "Banán kg",
-          "amount": 579.0,
-          "unit_amount": 579.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -902,6 +892,16 @@
           "unit_amount": 699.0,
           "unit": "kg",
           "unit_title": "csomag",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Lidl": {
+          "source_product_id": "lidl-0080000",
+          "source_product_name": "Banán kg",
+          "amount": 699.0,
+          "unit_amount": 699.0,
+          "unit": "kg",
+          "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
         },
@@ -1313,7 +1313,7 @@
         "SPAR": 629.0,
         "Tesco": 650.0,
         "Penny": 650.0,
-        "Auchan": 730.0
+        "Auchan": 1398.0
       },
       "selected_products": {
         "ALDI": {
@@ -1367,10 +1367,10 @@
           "price_type": "NORMAL"
         },
         "Auchan": {
-          "source_product_id": "5999086458186",
-          "source_product_name": "Auchan Kedvenc spagetti száraztészta 4 tojásos 500 g",
-          "amount": 365.0,
-          "unit_amount": 730.0,
+          "source_product_id": "5997490112809",
+          "source_product_name": "Don Francesco fusilli durum száraztészta 500 g",
+          "amount": 699.0,
+          "unit_amount": 1398.0,
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "0.5",
@@ -1539,15 +1539,15 @@
       "category": "Alapélelmiszer",
       "expected_unit": "kg",
       "prices": {
-        "ALDI": 295.0,
         "Auchan": 295.0,
+        "ALDI": 315.0,
         "Lidl": 295.0,
         "SPAR": 295.0,
         "Tesco": 323.0,
         "Penny": 329.0
       },
       "selected_products": {
-        "ALDI": {
+        "Auchan": {
           "source_product_id": "4008671013004",
           "source_product_name": "Sweet Family kristálycukor 1 kg",
           "amount": 295.0,
@@ -1557,11 +1557,11 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Auchan": {
+        "ALDI": {
           "source_product_id": "4008671013004",
           "source_product_name": "Sweet Family kristálycukor 1 kg",
-          "amount": 295.0,
-          "unit_amount": 295.0,
+          "amount": 315.0,
+          "unit_amount": 315.0,
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "1",
