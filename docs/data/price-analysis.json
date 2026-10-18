@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T08:05:54Z",
+  "updated_at": "2026-10-18T08:22:06Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "method": "product-level price leadership and spread analysis",
@@ -75,15 +75,15 @@
       "index_coverage": 24
     },
     {
-      "company": "Tesco",
-      "price_index": 100,
-      "value_score": 100,
+      "company": "Auchan",
+      "price_index": 101,
+      "value_score": 99,
       "index_coverage": 25
     },
     {
-      "company": "Auchan",
-      "price_index": 103,
-      "value_score": 97,
+      "company": "Tesco",
+      "price_index": 101,
+      "value_score": 99,
       "index_coverage": 25
     },
     {
@@ -97,36 +97,36 @@
     {
       "category": "Alapélelmiszer",
       "leader": "ALDI",
-      "leader_index": 90,
+      "leader_index": 92,
       "ranking": [
         {
           "company": "ALDI",
-          "category_index": 90,
+          "category_index": 92,
           "coverage": 4
         },
         {
           "company": "SPAR",
-          "category_index": 91,
+          "category_index": 92,
           "coverage": 5
         },
         {
           "company": "Penny",
-          "category_index": 97,
+          "category_index": 99,
           "coverage": 5
         },
         {
           "company": "Lidl",
-          "category_index": 98,
-          "coverage": 5
-        },
-        {
-          "company": "Tesco",
           "category_index": 100,
           "coverage": 5
         },
         {
+          "company": "Tesco",
+          "category_index": 102,
+          "coverage": 5
+        },
+        {
           "company": "Auchan",
-          "category_index": 122,
+          "category_index": 114,
           "coverage": 5
         }
       ]
@@ -410,9 +410,9 @@
       "cheapest_company": "ALDI",
       "cheapest_price": 430.0,
       "most_expensive_company": "Auchan",
-      "most_expensive_price": 1398.0,
-      "average_price": 731.0,
-      "spread_pct": 225.12,
+      "most_expensive_price": 998.0,
+      "average_price": 657.5,
+      "spread_pct": 132.09,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
@@ -704,7 +704,7 @@
     {
       "product": "Száraztészta",
       "category": "Alapélelmiszer",
-      "spread_pct": 225.12,
+      "spread_pct": 132.09,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
