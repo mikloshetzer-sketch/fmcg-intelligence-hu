@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-12T13:31:06Z",
+  "updated_at": "2026-10-19T11:15:22Z",
   "status": "ok",
   "source": "linkedin-jobs-monitor.json",
   "method": "derived_recruitment_signal_model_v1",
@@ -7,15 +7,15 @@
   "leader": {
     "id": "auchan",
     "company": "Auchan",
-    "linkedin_active_ads_hint": 7,
+    "linkedin_active_ads_hint": 8,
     "source_confidence": "medium",
     "recruitment_pressure": 100,
     "recruitment_level": "ERŐS",
     "recruitment_focus": "Központi funkciók",
-    "expansion_signal": 57,
+    "expansion_signal": 58,
     "logistics_pressure": 40,
     "management_pressure": 100,
-    "store_pressure": 68,
+    "store_pressure": 70,
     "category_scores": {
       "store": 3,
       "warehouse": 2,
@@ -31,15 +31,15 @@
     {
       "id": "auchan",
       "company": "Auchan",
-      "linkedin_active_ads_hint": 7,
+      "linkedin_active_ads_hint": 8,
       "source_confidence": "medium",
       "recruitment_pressure": 100,
       "recruitment_level": "ERŐS",
       "recruitment_focus": "Központi funkciók",
-      "expansion_signal": 57,
+      "expansion_signal": 58,
       "logistics_pressure": 40,
       "management_pressure": 100,
-      "store_pressure": 68,
+      "store_pressure": 70,
       "category_scores": {
         "store": 3,
         "warehouse": 2,
@@ -54,7 +54,7 @@
     {
       "id": "lidl",
       "company": "Lidl",
-      "linkedin_active_ads_hint": 900,
+      "linkedin_active_ads_hint": 916,
       "source_confidence": "medium",
       "recruitment_pressure": 100,
       "recruitment_level": "ERŐS",
@@ -67,7 +67,7 @@
         "store": 0,
         "warehouse": 6,
         "management": 4,
-        "office": 7,
+        "office": 8,
         "expansion": 0
       },
       "store_count_context": 220,
@@ -79,7 +79,7 @@
       "company": "Tesco",
       "linkedin_active_ads_hint": 1,
       "source_confidence": "medium",
-      "recruitment_pressure": 88,
+      "recruitment_pressure": 98,
       "recruitment_level": "ERŐS",
       "recruitment_focus": "Központi funkciók",
       "expansion_signal": 45,
@@ -90,7 +90,7 @@
         "store": 2,
         "warehouse": 2,
         "management": 4,
-        "office": 6,
+        "office": 8,
         "expansion": 0
       },
       "store_count_context": 182,
@@ -98,43 +98,20 @@
       "interpretation": "Tesco esetében inkább vezetői vagy központi funkciókhoz kapcsolódó toborzási jel látszik."
     },
     {
-      "id": "aldi",
-      "company": "ALDI",
-      "linkedin_active_ads_hint": 954,
-      "source_confidence": "medium",
-      "recruitment_pressure": 87,
-      "recruitment_level": "ERŐS",
-      "recruitment_focus": "Vezetői toborzás",
-      "expansion_signal": 100,
-      "logistics_pressure": 9,
-      "management_pressure": 100,
-      "store_pressure": 100,
-      "category_scores": {
-        "store": 0,
-        "warehouse": 0,
-        "management": 4,
-        "office": 3,
-        "expansion": 0
-      },
-      "store_count_context": 188,
-      "dc_count_context": 3,
-      "interpretation": "ALDI esetében a LinkedIn alapú álláspiaci jel erősödő toborzási és lehetséges bővülési nyomást mutat."
-    },
-    {
       "id": "penny",
       "company": "Penny",
       "linkedin_active_ads_hint": 2,
       "source_confidence": "medium",
-      "recruitment_pressure": 87,
+      "recruitment_pressure": 94,
       "recruitment_level": "ERŐS",
       "recruitment_focus": "Központi funkciók",
-      "expansion_signal": 15,
-      "logistics_pressure": 9,
+      "expansion_signal": 27,
+      "logistics_pressure": 27,
       "management_pressure": 100,
       "store_pressure": 22,
       "category_scores": {
         "store": 1,
-        "warehouse": 0,
+        "warehouse": 1,
         "management": 5,
         "office": 8,
         "expansion": 0
@@ -148,9 +125,9 @@
       "company": "SPAR",
       "linkedin_active_ads_hint": 4,
       "source_confidence": "medium",
-      "recruitment_pressure": 79,
+      "recruitment_pressure": 84,
       "recruitment_level": "ERŐS",
-      "recruitment_focus": "Vezetői toborzás",
+      "recruitment_focus": "Központi funkciók",
       "expansion_signal": 42,
       "logistics_pressure": 47,
       "management_pressure": 100,
@@ -159,12 +136,35 @@
         "store": 1,
         "warehouse": 2,
         "management": 4,
-        "office": 4,
+        "office": 5,
         "expansion": 0
       },
       "store_count_context": 520,
       "dc_count_context": 7,
       "interpretation": "SPAR esetében inkább vezetői vagy központi funkciókhoz kapcsolódó toborzási jel látszik."
+    },
+    {
+      "id": "aldi",
+      "company": "ALDI",
+      "linkedin_active_ads_hint": 979,
+      "source_confidence": "medium",
+      "recruitment_pressure": 80,
+      "recruitment_level": "ERŐS",
+      "recruitment_focus": "Központi funkciók",
+      "expansion_signal": 100,
+      "logistics_pressure": 9,
+      "management_pressure": 72,
+      "store_pressure": 100,
+      "category_scores": {
+        "store": 0,
+        "warehouse": 0,
+        "management": 2,
+        "office": 4,
+        "expansion": 0
+      },
+      "store_count_context": 188,
+      "dc_count_context": 3,
+      "interpretation": "ALDI esetében a LinkedIn alapú álláspiaci jel erősödő toborzási és lehetséges bővülési nyomást mutat."
     }
   ]
 }
