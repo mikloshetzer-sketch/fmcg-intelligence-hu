@@ -1,33 +1,33 @@
 {
-  "updated_at": "2026-10-20T11:56:06.406734+00:00",
+  "updated_at": "2026-10-20T17:24:57.865582+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-10-20T11:56:06.406734+00:00",
-    "leader_social": "Penny",
-    "leader_social_index": 29,
+    "updated_at": "2026-10-20T17:24:57.865582+00:00",
+    "leader_social": "Lidl",
+    "leader_social_index": 38,
     "dominant_social_topic": "árak és akciók",
     "overall_social_sentiment": "neutral"
   },
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 1,
-      "raw_social_mentions": 1,
-      "dashboard_mentions": 0,
-      "background_mentions": 1,
-      "discarded_mentions": 0,
-      "weighted_social_mentions": 0.5,
-      "hu_relevant_mentions": 0,
-      "social_index": 16,
+      "social_mentions": 10,
+      "raw_social_mentions": 11,
+      "dashboard_mentions": 3,
+      "background_mentions": 7,
+      "discarded_mentions": 1,
+      "weighted_social_mentions": 6.5,
+      "hu_relevant_mentions": 3,
+      "social_index": 38,
       "social_sources": {
-        "reddit": 0,
+        "reddit": 9,
         "youtube": 0,
         "mastodon": 1
       },
       "raw_social_sources": {
-        "reddit": 0,
+        "reddit": 10,
         "youtube": 0,
         "mastodon": 1
       },
@@ -35,50 +35,201 @@
       "top_social_topics": [
         {
           "topic": "digitalizáció és önkiszolgálás",
-          "score": 1.0
+          "score": 7.0
+        },
+        {
+          "topic": "árak és akciók",
+          "score": 6.5
         },
         {
           "topic": "munkaerő és foglalkoztatás",
+          "score": 3.5
+        },
+        {
+          "topic": "bolti élmény",
+          "score": 2.0
+        },
+        {
+          "topic": "vásárlói panaszok",
           "score": 0.5
         }
       ],
       "topic_sentiment": {
+        "árak és akciók": {
+          "positive": 0.0,
+          "neutral": 6.0,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        },
+        "bolti élmény": {
+          "positive": 0.0,
+          "neutral": 2.0,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        },
         "munkaerő és foglalkoztatás": {
           "positive": 0.0,
-          "neutral": 0.5,
-          "negative": 0.0,
+          "neutral": 3.0,
+          "negative": 0.5,
           "mixed": 0.0,
           "dominant": "neutral"
         },
         "digitalizáció és önkiszolgálás": {
           "positive": 0.0,
-          "neutral": 0.5,
-          "negative": 0.0,
+          "neutral": 3.5,
+          "negative": 0.5,
           "mixed": 0.0,
           "dominant": "neutral"
+        },
+        "vásárlói panaszok": {
+          "positive": 0.0,
+          "neutral": 0.0,
+          "negative": 0.5,
+          "mixed": 0.0,
+          "dominant": "negative"
         }
       },
-      "social_sentiment": "neutral",
-      "latest_items": [],
+      "social_sentiment": "negative",
+      "latest_items": [
+        {
+          "id": "7908db17b2a649ab",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "Lidl Plus: how Points, coupons and Coupon Plus work (Lidl pages and terms, checked 18 Oct 2026)",
+          "summary": "Lidl Plus has grown beyond a simple coupon app, so here is a plain-English rundown of how Points, coupons and Coupon Plus fit together, based on Lidl's own pages and Terms of Use, checked today. Earning Lidl Points You earn 1 point for every £1 spent in store, rounded up to the nearest pound, so even a spend under £1 gets you 1 point. Scan your Lidl Plus card in the app, or give the mobile number linked to your account, at the till before your purchase is complete. Points land in your account wi",
+          "url": "https://www.reddit.com/r/ReferralHunterUK/comments/1x8v55a/lidl_plus_how_points_coupons_and_coupon_plus_work/",
+          "published": "2026-10-18T05:33:24+00:00",
+          "query": "Lidl Plus",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "cd329f3e6b35f297",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "Tagesübersicht Samstag 17.10.2026 : Die 10 beliebtesten Deals Deutschlands",
+          "summary": "Stand: 16:01 Uhr In den letzten 24 Stunden wurden 29 Deals gepostet. Davon 2 GRATIS ! Top 10 Deals Sortiert nach Beliebtheit (Upvotes & Temperatur) 1. [15,94€ statt 26,99€] LIDL Plus W5 Wäscheständer ausziehbar, 20m, schwarz oder weiß, 10€ (+1) (Bild) 2. Burnhard Grills, Öfen und Zubehör (+1) 3. [419,33€ statt 638,90€] BOSCH WGG244ZECO Serie 6 Waschmaschine, 9 kg, 1400 U/Min., Energieeffizienzklasse A (+1) 4. [179€ statt 199€] Flipper Zero Multifunktions-Hacking-Tool, RFID- & NFC-Reader, Infraro",
+          "url": "https://www.reddit.com/r/deals_de/comments/1x81vlv/tagesübersicht_samstag_17102026_die_10/",
+          "published": "2026-10-17T05:17:33+00:00",
+          "query": "Lidl Plus",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "aae56695ab169f6d",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "Unfassbare Frau im Lidl",
+          "summary": "Im Lidl ist ja der Monster für 75 cent im Angebot, aber nur 24 Stück und mit der App. Auf jeden Fall wollte ich mir die letzte Palette von dem Weißen in den Wagen stellen, kommt auf einmal eine ältere Frau von hinten und meint das Angebot wäre ja nicht nur für mich hier und hat sich die Hälfte einfach genommen. An der Kasse hat sie dann nichtmal Lidl Plus und damit den regulären 1.59 Preis bezahlt und ganz schön blöd ausgesehen. Absolut utopisch was bei manchen Leuten los ist, da kann ich einfac",
+          "url": "https://www.reddit.com/r/luftablassen/comments/1x3wnnr/unfassbare_frau_im_lidl/",
+          "published": "2026-10-12T08:44:25+00:00",
+          "query": "Lidl Plus",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        }
+      ],
       "background_items": [
         {
-          "id": "fa0ed46b4de610c5",
+          "id": "154416b1f2d252f0",
           "source": "mastodon",
           "company": "Lidl",
           "title": "",
-          "summary": "Also # Lidl finde ich mittlerweile maximal nervig. Blöde App, blöde Selbstscannerkassen und blöde Schlange an der Kasse mit Mensch Alles so stressig mit Entscheidungen... da lieber zu # Aldi .",
-          "url": "https://nrw.social/@Exxo/117434369424994866",
-          "published": "Tue, 13 Oct 2026 15:44:31 +0000",
+          "summary": "Der Ladespass geht weiter, heute fahr ich mittags zu # Lidl beide Ladepunkte sind belegt, gut geh halt einkaufen, siehe da Einer wurde zwischenzeitlich frei stell mich hin und konditioniere die Batterie soll man fuer die DC Schnellladung machen das dauert eine Ewigkeit und kostet mich 3% Kapazitaet, derweil der 2.te Ladepunkt wurde auch frei so endlich Auto ist bereit App auf QR-Code gescannt nichts gar nichts schau auf den Bildschirm 😳 Dieser Ladepunkt hat ein Problem ...🤪",
+          "url": "https://mstdn.social/@wobweger/117474074022875710",
+          "published": "Tue, 20 Oct 2026 16:01:55 +0000",
           "query": "#lidl",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "negative"
+        },
+        {
+          "id": "dd2498acbf8e4f99",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "Lidl Plus: Primadonna Natives Olivenöl 750 ml für 300 Punkte-Taler (ab 10 € Einkauf) @ Lidl",
+          "summary": "➡️ Zum Deal bei Lidl ⏰ Gültig bis: Sa, 31.10.2026 22:59 Uhr 300 Lidl-Punkte in der Lidl Plus App gegen den Prämien-Coupon für das Primadonna Native Olivenöl Extra (750 ml) eintauschen, statt der regulären 540 Punkte. Dazu die App öffnen, unter &quot;Lidl Punkte&quot; die Olivenöl-Prämie auswählen, die 300 Punkte eintauschen und den Coupon aktivieren. Bei einem Einkauf ab 10 € in einer deutschen Lidl-Filiale das Olivenöl kostenfrei mitnehmen. Der Coupon ist nach dem Eintausch 30 Tage gültig und e",
+          "url": "https://www.reddit.com/r/deals_de/comments/1xamapx/lidl_plus_primadonna_natives_olivenöl_750_ml_für/",
+          "published": "2026-10-20T08:09:07+00:00",
+          "query": "Lidl Plus",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "46cf26b8f47c145f",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "zlavy lidl plus",
+          "summary": "minulý týždeň sme sa rozprávali že by bolo dobré sa informovať o zľavách a akciách. tak mam nove zlavy. na niektorých Lidl plus účtoch sa zacali objavovať kupony na 50% zlavy na vybrané druhy drogérie. kúpil som tak niekoľko mesačnú zasobu 4 vrstvoveho toaletneho papiera a tabletky do umývačky lidl premium na rok, pričom jedla tabletka vysla 7,5 centu. neviem podľa akého kľúča rozdeľujú komu sa dane kupóny aktivujú, ale zo 6 lidl plus ku ktorým mam prístup boli tieto špeciálne kupóny na 2. submi",
+          "url": "https://www.reddit.com/r/Slovakia/comments/1x9wwwt/zlavy_lidl_plus/",
+          "published": "2026-10-19T13:28:58+00:00",
+          "query": "Lidl Plus",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "21d69c7471691e7c",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "[15,94€ statt 26,99€ | -41%] [Gutscheincode: Coupon in der App aktivieren] LIDL Plus W5 Wäscheständer ausziehbar, 20m, schwarz oder weiß, 10€ @ Lidl",
+          "summary": "➡️ Zum Deal bei Lidl Preis: 26,99€ → 15,94€ (41% Ersparnis) Gutscheincode: Coupon in der App aktivieren — an der Kasse / im Warenkorb eingeben ⏰ Gültig bis: Sa, 17.10.2026 21:59 Uhr In der LIDL Plus App einen 15€-Coupon (ab 25€ MBW) aktivieren. Der Wäscheständer ist auf 15€ reduziert, an der Kasse werden die 15€ abgezogen, sodass er für 9,99€ plus 5,95€ Versand auf 15,94€ Endpreis kommt. Der Ständer ist stufenlos von 110 bis 200 cm ausziehbar und bietet ca. 20 m Gesamttrockenlänge mit pulverbesc",
+          "url": "https://www.reddit.com/r/deals_de/comments/1x83z75/1594_statt_2699_41_gutscheincode_coupon_in_der/",
+          "published": "2026-10-17T07:24:22+00:00",
+          "query": "Lidl Plus",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "9b8de90c3ed52eea",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "Promoție lidl plus",
+          "summary": "Daca intrați pe lidl plus si adăugați animalul de companie primiți mancare gratis si un plush (doar la minim 50 de lei cheltuiți) submitted by /u/R0biB0biii to r/roFrugal [link] [comments]",
+          "url": "https://www.reddit.com/r/roFrugal/comments/1x43nqf/promoție_lidl_plus/",
+          "published": "2026-10-12T14:40:59+00:00",
+          "query": "Lidl Plus",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "e544fe19efe06a62",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "Prosseco gratis, in limita stocului, la Lidl",
+          "summary": "Daca cumparati de minim 150 de lei la Lidl, primiti o stricla de vin gratis. Trebuie sa scanati Lidl Plus si sa activati cuponul. Valabil doar azi. submitted by /u/Andrewfishy_ to r/roFrugal [link] [comments]",
+          "url": "https://www.reddit.com/r/roFrugal/comments/1x316tm/prosseco_gratis_in_limita_stocului_la_lidl/",
+          "published": "2026-10-11T06:46:12+00:00",
+          "query": "Lidl Plus",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "b84ac3489023b1f5",
+          "source": "reddit",
+          "company": "Lidl",
+          "title": "LidlPlus_NL",
+          "summary": "Lidl plus aanbiedingen om te delen [link]",
+          "url": "https://www.reddit.com/r/LidlPlus_NL/",
+          "published": "",
+          "query": "Lidl Plus",
           "hu_relevance": 0.5,
           "relevance_bucket": "background",
           "item_sentiment": "neutral"
         }
       ],
       "quality_summary": {
-        "dashboard_items": 0,
-        "background_items": 1,
-        "discarded_items": 0,
+        "dashboard_items": 3,
+        "background_items": 7,
+        "discarded_items": 1,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
       },
@@ -335,55 +486,29 @@
     },
     {
       "company": "Auchan",
-      "social_mentions": 2,
-      "raw_social_mentions": 2,
-      "dashboard_mentions": 2,
+      "social_mentions": 1,
+      "raw_social_mentions": 1,
+      "dashboard_mentions": 1,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 2.0,
-      "hu_relevant_mentions": 2,
-      "social_index": 20,
+      "weighted_social_mentions": 1.0,
+      "hu_relevant_mentions": 1,
+      "social_index": 16,
       "social_sources": {
-        "reddit": 1,
+        "reddit": 0,
         "youtube": 1,
         "mastodon": 0
       },
       "raw_social_sources": {
-        "reddit": 1,
+        "reddit": 0,
         "youtube": 1,
         "mastodon": 0
       },
-      "dominant_social_topic": "árak és akciók",
-      "top_social_topics": [
-        {
-          "topic": "árak és akciók",
-          "score": 1.0
-        }
-      ],
-      "topic_sentiment": {
-        "árak és akciók": {
-          "positive": 0.0,
-          "neutral": 1.0,
-          "negative": 0.0,
-          "mixed": 0.0,
-          "dominant": "neutral"
-        }
-      },
+      "dominant_social_topic": "általános vállalati említés",
+      "top_social_topics": [],
+      "topic_sentiment": {},
       "social_sentiment": "neutral",
       "latest_items": [
-        {
-          "id": "08c8f76e48005b86",
-          "source": "reddit",
-          "company": "Auchan",
-          "title": "A zuhanyzóban OkAuchan!",
-          "summary": "Megszólalt Jellinek Dániel ügyvédje, miután az Auchan Magyarország Kft.-ben is érdekelt milliárdost sajtóértesülések alapján kedden előállították a Volán-ügyben. submitted by /u/gergohungary to r/hungary [link] [comments]",
-          "url": "https://www.reddit.com/r/hungary/comments/1wkic2x/a_zuhanyzóban_okauchan/",
-          "published": "2026-09-19T10:09:54+00:00",
-          "query": "Auchan Magyarország",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
         {
           "id": "c6a816231d9b3a8c",
           "source": "youtube",
@@ -400,7 +525,7 @@
       ],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 2,
+        "dashboard_items": 1,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
