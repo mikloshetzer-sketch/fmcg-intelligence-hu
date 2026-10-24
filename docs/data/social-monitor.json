@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-10-24T11:23:32.743809+00:00",
+  "updated_at": "2026-10-24T16:09:07.604651+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-10-24T11:23:32.743809+00:00",
+    "updated_at": "2026-10-24T16:09:07.604651+00:00",
     "leader_social": "Penny",
     "leader_social_index": 29,
     "dominant_social_topic": "árak és akciók",
@@ -396,29 +396,29 @@
     },
     {
       "company": "CBA",
-      "social_mentions": 6,
-      "raw_social_mentions": 6,
-      "dashboard_mentions": 6,
+      "social_mentions": 8,
+      "raw_social_mentions": 8,
+      "dashboard_mentions": 8,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 6.0,
-      "hu_relevant_mentions": 6,
+      "weighted_social_mentions": 8.0,
+      "hu_relevant_mentions": 8,
       "social_index": 29,
       "social_sources": {
         "reddit": 0,
-        "youtube": 6,
+        "youtube": 8,
         "mastodon": 0
       },
       "raw_social_sources": {
         "reddit": 0,
-        "youtube": 6,
+        "youtube": 8,
         "mastodon": 0
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 5.0
+          "score": 7.0
         },
         {
           "topic": "bolti élmény",
@@ -435,7 +435,7 @@
         },
         "árak és akciók": {
           "positive": 0.0,
-          "neutral": 5.0,
+          "neutral": 7.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -465,6 +465,19 @@
           "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFB0eVdIY280OHlRUnRkQ3d3VnhiSGt3S2ZsQkc4Tnk0VXBqcmNvVjQyNi1tTzIzbFN3al9iU21EWGFvdER3TzlyVG91LURCd2V0bjJpbw?oc=5",
           "published": "Sun, 11 Oct 2026 12:56:52 GMT",
           "query": "site:youtube.com \"CBA Príma\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "9590df02b44cace5",
+          "source": "youtube",
+          "company": "CBA",
+          "title": "CBA Príma akciós újság 10.15. - 10.21. - YouTube",
+          "summary": "CBA Príma akciós újság 10.15. - 10.21. YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBaLUZtS0daQVptSDF2VGVpNjlKam9MMDh1WkNGTlNBQ3RpSG9aNm5kRk5rVzY1TXRuQ3lDZ2Z0RWNyNmRKSVN5VDNoT0RveDhBZnJMeU5B?oc=5",
+          "published": "Sun, 11 Oct 2026 12:47:46 GMT",
+          "query": "site:youtube.com \"CBA Prima\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
           "item_sentiment": "neutral"
@@ -520,11 +533,24 @@
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
           "item_sentiment": "neutral"
+        },
+        {
+          "id": "ad37c605a541e686",
+          "source": "youtube",
+          "company": "CBA",
+          "title": "CBA Príma akciós újság 05.21. - 05.27. - YouTube",
+          "summary": "CBA Príma akciós újság 05.21. - 05.27. YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE03MGdRck1RVXhVS0ZHM3llYjE0ZFRkdVcwQTRtVmtmQ2QteWJDM0Nacmk5M0JoekdvOS1UNWtxeWxoTHN2UFhqOHlESm5qOWtvXzJDcw?oc=5",
+          "published": "Sat, 16 May 2026 11:25:21 GMT",
+          "query": "site:youtube.com \"CBA Prima\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
         }
       ],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 6,
+        "dashboard_items": 8,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
