@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19T08:51:19.194751+00:00",
+  "updated_at": "2026-10-26T08:53:44.240487+00:00",
   "version": "store-network-hu-v2.0-non-lidl-osm",
   "scope": "Hungarian FMCG store network from OSM + optional overrides",
   "method_note": "Ez a verzió Lidl nélkül építi a bolthálózatot. ALDI, SPAR, Tesco, Auchan és Penny OSM/Overpass alapján frissül. Ha egy láncra 0 találat jön, a script megtartja a korábbi store-network-hu.json adott láncra vonatkozó adatait. Lidl külön, saját üzletlista alapján kerül majd be.",
@@ -22460,7 +22460,7 @@
       "city": "Kecskemét",
       "area": "Kecskemét",
       "region": "Dél-Alföld",
-      "address": "6000 Kecskemét, Talfája út 1",
+      "address": "6000 Kecskemét, 1",
       "lat": 46.933054,
       "lon": 19.666052,
       "source": "openstreetmap_overpass",
@@ -22471,7 +22471,7 @@
       "keywords": [
         "Tesco",
         "Tesco Kecskemét",
-        "6000 Kecskemét, Talfája út 1"
+        "6000 Kecskemét, 1"
       ]
     },
     {
@@ -24110,27 +24110,6 @@
         "Tesco",
         "Tesco Tahitótfalu",
         "2022 Tahitótfalu, Szentendrei út 5-15"
-      ]
-    },
-    {
-      "store_id": "tesco_tapolca_tesco_extra_10320676",
-      "company": "Tesco",
-      "name": "Tesco Extra",
-      "city": "Tapolca",
-      "area": "Tapolca",
-      "region": "n.a.",
-      "address": "8300 Tapolca, Veszprémi út 5",
-      "lat": 46.880605,
-      "lon": 17.45664,
-      "source": "openstreetmap_overpass",
-      "osm_type": "relation",
-      "osm_id": 10320676,
-      "brand": "Tesco",
-      "operator": "TESCO-GLOBAL Áruházak Zrt.",
-      "keywords": [
-        "Tesco Extra",
-        "Tesco Tapolca",
-        "8300 Tapolca, Veszprémi út 5"
       ]
     },
     {
