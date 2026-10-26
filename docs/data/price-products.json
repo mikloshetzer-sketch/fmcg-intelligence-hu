@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T08:45:45Z",
+  "updated_at": "2026-10-26T09:25:13Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -627,26 +627,16 @@
       "expected_unit": "kg",
       "prices": {
         "Auchan": 1699.0,
-        "ALDI": 1699.0,
         "Tesco": 1959.0,
         "Lidl": 1859.0,
         "SPAR": 1961.0,
+        "ALDI": 1979.0,
         "Penny": 1979.0
       },
       "selected_products": {
         "Auchan": {
           "source_product_id": "2117170000001",
           "source_product_name": "Pult Auchan Kedvenc friss csirkemellfilé \"A\" Ft/kg",
-          "amount": 1699.0,
-          "unit_amount": 1699.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "ALDI": {
-          "source_product_id": "aldi-320859",
-          "source_product_name": "Húsmester csirkemellfilé kg vákuumcsomagolt",
           "amount": 1699.0,
           "unit_amount": 1699.0,
           "unit": "kg",
@@ -684,6 +674,16 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
+        "ALDI": {
+          "source_product_id": "aldi-320859",
+          "source_product_name": "Húsmester csirkemellfilé kg vákuumcsomagolt",
+          "amount": 1979.0,
+          "unit_amount": 1979.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "Penny": {
           "source_product_id": "penny-10248",
           "source_product_name": "Kedvenc Hentese friss csirkemellfilé kg",
@@ -703,27 +703,27 @@
       "category": "Húsáru",
       "expected_unit": "kg",
       "prices": {
+        "Lidl": 2869.0,
         "Auchan": 2999.0,
-        "Lidl": 2999.0,
         "ALDI": 2999.0,
         "Penny": 2999.0,
         "Tesco": 3031.11,
         "SPAR": 3117.78
       },
       "selected_products": {
-        "Auchan": {
-          "source_product_id": "2117130000003",
-          "source_product_name": "Friss pulykamellfilé Ft/kg",
-          "amount": 2999.0,
-          "unit_amount": 2999.0,
+        "Lidl": {
+          "source_product_id": "lidl-0006908",
+          "source_product_name": "Húsfarm Friss pulykamellfilé csont és bőr nélkül , kg ",
+          "amount": 2869.0,
+          "unit_amount": 2869.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Lidl": {
-          "source_product_id": "2884940000000",
-          "source_product_name": "Pulykamell  kg",
+        "Auchan": {
+          "source_product_id": "2117130000003",
+          "source_product_name": "Friss pulykamellfilé Ft/kg",
           "amount": 2999.0,
           "unit_amount": 2999.0,
           "unit": "kg",
@@ -936,10 +936,10 @@
       "prices": {
         "Tesco": 939.0,
         "SPAR": 899.0,
-        "Penny": 999.0,
         "Auchan": 798.0,
         "ALDI": 899.0,
-        "Lidl": 899.0
+        "Lidl": 899.0,
+        "Penny": 1199.0
       },
       "selected_products": {
         "Tesco": {
@@ -957,16 +957,6 @@
           "source_product_name": "Citrom lédig",
           "amount": 899.0,
           "unit_amount": 899.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-306",
-          "source_product_name": "Citrom lédig kg",
-          "amount": 999.0,
-          "unit_amount": 999.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -997,6 +987,16 @@
           "source_product_name": "Citrom lédig",
           "amount": 899.0,
           "unit_amount": 899.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Penny": {
+          "source_product_id": "penny-306",
+          "source_product_name": "Citrom lédig kg",
+          "amount": 1199.0,
+          "unit_amount": 1199.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1165,17 +1165,17 @@
       "category": "Zöldség",
       "expected_unit": "kg",
       "prices": {
-        "Lidl": 189.5,
         "Tesco": 189.5,
+        "Lidl": 189.5,
         "ALDI": 205.0,
         "Penny": 205.0,
         "SPAR": 228.0,
         "Auchan": 237.0
       },
       "selected_products": {
-        "Lidl": {
-          "source_product_id": "lidl-0083333",
-          "source_product_name": "Vöröshagyma 2kg",
+        "Tesco": {
+          "source_product_id": "5995034201545",
+          "source_product_name": "GH VÖRÖSHAGYMA 2 KG ",
           "amount": 379.0,
           "unit_amount": 189.5,
           "unit": "kg",
@@ -1183,9 +1183,9 @@
           "packaging": "2",
           "price_type": "NORMAL"
         },
-        "Tesco": {
-          "source_product_id": "5995034201545",
-          "source_product_name": "GH VÖRÖSHAGYMA 2 KG ",
+        "Lidl": {
+          "source_product_id": "lidl-0083333",
+          "source_product_name": "Vöröshagyma 2kg",
           "amount": 379.0,
           "unit_amount": 189.5,
           "unit": "kg",
@@ -1319,27 +1319,27 @@
       "category": "Alapélelmiszer",
       "expected_unit": "kg",
       "prices": {
+        "ALDI": 490.0,
         "SPAR": 629.0,
-        "ALDI": 629.0,
         "Lidl": 629.0,
         "Tesco": 650.0,
         "Penny": 650.0,
         "Auchan": 998.0
       },
       "selected_products": {
+        "ALDI": {
+          "source_product_id": "aldi-108485",
+          "source_product_name": "Orsótészta 500g",
+          "amount": 245.0,
+          "unit_amount": 490.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "0.5",
+          "price_type": "NORMAL"
+        },
         "SPAR": {
           "source_product_id": "5999033897549",
           "source_product_name": "S-Budget Spagetti durum száraztészta 1000 g",
-          "amount": 629.0,
-          "unit_amount": 629.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "ALDI": {
-          "source_product_id": "aldi-182124",
-          "source_product_name": "Cucina spagetti durum 1kg",
           "amount": 629.0,
           "unit_amount": 629.0,
           "unit": "kg",
@@ -1818,8 +1818,8 @@
           "price_type": "NORMAL"
         },
         "Penny": {
-          "source_product_id": "penny-61331",
-          "source_product_name": "Wippy 3 rtg 10 tek.toalettp.",
+          "source_product_id": "penny-61363",
+          "source_product_name": "Wippy 4 rtg 10 tek. toalettp.",
           "amount": 1399.0,
           "unit_amount": 139.9,
           "unit": "db",
