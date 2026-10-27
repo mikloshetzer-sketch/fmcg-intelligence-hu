@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-26T09:25:13Z",
+  "updated_at": "2026-10-27T09:23:25Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -551,9 +551,9 @@
       "prices": {
         "Tesco": 1748.75,
         "SPAR": 1954.44,
+        "Lidl": 1598.0,
         "Auchan": 1699.0,
         "ALDI": 1749.0,
-        "Lidl": 1749.0,
         "Penny": 1749.0
       },
       "selected_products": {
@@ -577,6 +577,16 @@
           "packaging": "0.9",
           "price_type": "NORMAL"
         },
+        "Lidl": {
+          "source_product_id": "lidl-0001694",
+          "source_product_name": "Húsfarm Sertés darálthús 30%,  500g",
+          "amount": 799.0,
+          "unit_amount": 1598.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "0.5",
+          "price_type": "NORMAL"
+        },
         "Auchan": {
           "source_product_id": "2167650000007",
           "source_product_name": "Auchan Kedvenc sertés darált hús maximum 30% zsírtartalommal Ft/kg családi",
@@ -594,16 +604,6 @@
           "unit_amount": 1749.0,
           "unit": "kg",
           "unit_title": "csomag",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Lidl": {
-          "source_product_id": "lidl-0005545",
-          "source_product_name": "Húsfarm XXL Sertés darálthús 30%,  1000g",
-          "amount": 1749.0,
-          "unit_amount": 1749.0,
-          "unit": "kg",
-          "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
         },
@@ -934,7 +934,7 @@
       "category": "Gyümölcs",
       "expected_unit": "kg",
       "prices": {
-        "Tesco": 939.0,
+        "Tesco": 949.0,
         "SPAR": 899.0,
         "Auchan": 798.0,
         "ALDI": 899.0,
@@ -945,8 +945,8 @@
         "Tesco": {
           "source_product_id": "2850160000000",
           "source_product_name": "Citrom lédig    ",
-          "amount": 939.0,
-          "unit_amount": 939.0,
+          "amount": 949.0,
+          "unit_amount": 949.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1015,8 +1015,8 @@
         "Auchan": 433.0,
         "Tesco": 797.0,
         "SPAR": 865.0,
-        "Penny": 874.0,
-        "ALDI": 879.0
+        "ALDI": 869.0,
+        "Penny": 874.0
       },
       "selected_products": {
         "Lidl": {
@@ -1059,21 +1059,21 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Penny": {
-          "source_product_id": "penny-298",
-          "source_product_name": "Magyar fürtös paradicsom lé kg",
-          "amount": 874.0,
-          "unit_amount": 874.0,
+        "ALDI": {
+          "source_product_id": "aldi-166633",
+          "source_product_name": "Paradicsom fürtös lédig",
+          "amount": 869.0,
+          "unit_amount": 869.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "ALDI": {
-          "source_product_id": "aldi-166633",
-          "source_product_name": "Paradicsom fürtös lédig",
-          "amount": 879.0,
-          "unit_amount": 879.0,
+        "Penny": {
+          "source_product_id": "penny-298",
+          "source_product_name": "Magyar fürtös paradicsom lé kg",
+          "amount": 874.0,
+          "unit_amount": 874.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1324,7 +1324,7 @@
         "Lidl": 629.0,
         "Tesco": 650.0,
         "Penny": 650.0,
-        "Auchan": 998.0
+        "Auchan": 850.0
       },
       "selected_products": {
         "ALDI": {
@@ -1378,13 +1378,13 @@
           "price_type": "NORMAL"
         },
         "Auchan": {
-          "source_product_id": "5997490111710",
-          "source_product_name": "Dunakeszi spagetti 2 tojásos száraztészta 500 g",
-          "amount": 499.0,
-          "unit_amount": 998.0,
+          "source_product_id": "5997132503286",
+          "source_product_name": "Gyermelyi Vita Pasta XXL durum spagetti száraztészta 1 kg ",
+          "amount": 850.0,
+          "unit_amount": 850.0,
           "unit": "kg",
           "unit_title": "csomag",
-          "packaging": "0.5",
+          "packaging": "1",
           "price_type": "NORMAL"
         }
       },
@@ -1560,7 +1560,7 @@
       "selected_products": {
         "Auchan": {
           "source_product_id": "4008671013004",
-          "source_product_name": "Sweet Family Kristálycukor 1kg",
+          "source_product_name": "Sweet Family kristálycukor 1 kg",
           "amount": 295.0,
           "unit_amount": 295.0,
           "unit": "kg",
@@ -1570,7 +1570,7 @@
         },
         "ALDI": {
           "source_product_id": "4008671013004",
-          "source_product_name": "Sweet Family Kristálycukor 1kg",
+          "source_product_name": "Sweet Family kristálycukor 1 kg",
           "amount": 315.0,
           "unit_amount": 315.0,
           "unit": "kg",
@@ -1771,7 +1771,7 @@
       "expected_unit": "db",
       "prices": {
         "SPAR": 105.83,
-        "Auchan": 45.0,
+        "Auchan": 41.0,
         "Tesco": 124.938,
         "ALDI": 121.5,
         "Penny": 139.9
@@ -1790,8 +1790,8 @@
         "Auchan": {
           "source_product_id": "8606034950124",
           "source_product_name": "Perfex toalettpapír Soft & Light, Pure white 3 rétegű 125 lap 16 tekercs",
-          "amount": 720.0,
-          "unit_amount": 45.0,
+          "amount": 660.0,
+          "unit_amount": 41.0,
           "unit": "db",
           "unit_title": "csomag",
           "packaging": "16",
