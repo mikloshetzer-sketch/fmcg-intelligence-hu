@@ -1,30 +1,30 @@
 {
-  "updated_at": "2026-10-27T05:22:12.958126+00:00",
+  "updated_at": "2026-10-27T12:31:45.887620+00:00",
   "status": "ok",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "companies": [
     {
       "company": "Lidl",
-      "mentions": 0,
-      "raw_mentions": 0,
-      "dashboard_mentions": 0,
+      "mentions": 3,
+      "raw_mentions": 3,
+      "dashboard_mentions": 3,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_mentions": 0,
-      "hu_relevant_mentions": 0,
-      "index": 0,
+      "weighted_mentions": 3.0,
+      "hu_relevant_mentions": 3,
+      "index": 16,
       "sources": {
         "reddit": 0,
-        "youtube": 0,
+        "youtube": 3,
         "mastodon": 0
       },
       "raw_sources": {
         "reddit": 0,
-        "youtube": 0,
+        "youtube": 3,
         "mastodon": 0
       },
       "sentiment": "neutral",
-      "topic": "általános vállalati említés",
+      "topic": "árak és akciók",
       "errors": []
     },
     {
@@ -149,22 +149,22 @@
     },
     {
       "company": "CBA",
-      "mentions": 7,
-      "raw_mentions": 7,
-      "dashboard_mentions": 7,
+      "mentions": 8,
+      "raw_mentions": 8,
+      "dashboard_mentions": 8,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_mentions": 7.0,
-      "hu_relevant_mentions": 7,
+      "weighted_mentions": 8.0,
+      "hu_relevant_mentions": 8,
       "index": 29,
       "sources": {
         "reddit": 0,
-        "youtube": 7,
+        "youtube": 8,
         "mastodon": 0
       },
       "raw_sources": {
         "reddit": 0,
-        "youtube": 7,
+        "youtube": 8,
         "mastodon": 0
       },
       "sentiment": "neutral",
