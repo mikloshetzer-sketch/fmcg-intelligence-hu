@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-29T10:28:27Z",
+  "updated_at": "2026-10-30T10:30:06Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -626,7 +626,7 @@
       "category": "Húsáru",
       "expected_unit": "kg",
       "prices": {
-        "Lidl": 1859.0,
+        "Lidl": 1729.0,
         "Auchan": 1926.0,
         "SPAR": 1947.0,
         "Tesco": 1959.0,
@@ -637,8 +637,8 @@
         "Lidl": {
           "source_product_id": "2895800000000",
           "source_product_name": "Csirkemell tokány, kg ",
-          "amount": 1859.0,
-          "unit_amount": 1859.0,
+          "amount": 1729.0,
+          "unit_amount": 1729.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1014,7 +1014,7 @@
         "Lidl": 429.0,
         "Auchan": 433.0,
         "Tesco": 797.0,
-        "Penny": 874.0,
+        "Penny": 865.0,
         "ALDI": 899.0,
         "SPAR": 931.0
       },
@@ -1052,8 +1052,8 @@
         "Penny": {
           "source_product_id": "penny-298",
           "source_product_name": "Magyar fürtös paradicsom lé kg",
-          "amount": 874.0,
-          "unit_amount": 874.0,
+          "amount": 865.0,
+          "unit_amount": 865.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1474,16 +1474,26 @@
       "expected_unit": "kg",
       "prices": {
         "SPAR": 177.0,
+        "ALDI": 177.0,
         "Lidl": 177.0,
         "Penny": 178.0,
         "Tesco": 181.0,
-        "Auchan": 183.0,
-        "ALDI": 183.0
+        "Auchan": 183.0
       },
       "selected_products": {
         "SPAR": {
           "source_product_id": "5999033897754",
           "source_product_name": "S-Budget búzafinomliszt BL 55 1 kg",
+          "amount": 177.0,
+          "unit_amount": 177.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "ALDI": {
+          "source_product_id": "aldi-453625",
+          "source_product_name": "Happy Harvest búza finomliszt 1 kg",
           "amount": 177.0,
           "unit_amount": 177.0,
           "unit": "kg",
@@ -1524,16 +1534,6 @@
         "Auchan": {
           "source_product_id": "5999086469649",
           "source_product_name": "Auchan Tipp búzafinomliszt BL-55 1 kg",
-          "amount": 183.0,
-          "unit_amount": 183.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "ALDI": {
-          "source_product_id": "aldi-453625",
-          "source_product_name": "Happy Harvest búza finomliszt 1 kg",
           "amount": 183.0,
           "unit_amount": 183.0,
           "unit": "kg",

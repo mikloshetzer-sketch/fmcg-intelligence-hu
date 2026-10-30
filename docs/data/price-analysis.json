@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-29T10:28:27Z",
+  "updated_at": "2026-10-30T10:30:06Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "method": "product-level price leadership and spread analysis",
@@ -111,7 +111,7 @@
         },
         {
           "company": "ALDI",
-          "category_index": 100,
+          "category_index": 99,
           "coverage": 4
         },
         {
@@ -253,13 +253,13 @@
           "coverage": 4
         },
         {
-          "company": "Tesco",
+          "company": "Lidl",
           "category_index": 98,
           "coverage": 4
         },
         {
-          "company": "Lidl",
-          "category_index": 100,
+          "company": "Tesco",
+          "category_index": 98,
           "coverage": 4
         },
         {
@@ -274,7 +274,7 @@
         },
         {
           "company": "SPAR",
-          "category_index": 103,
+          "category_index": 104,
           "coverage": 4
         }
       ]
@@ -423,7 +423,7 @@
       "cheapest_price": 429.0,
       "most_expensive_company": "SPAR",
       "most_expensive_price": 931.0,
-      "average_price": 727.17,
+      "average_price": 725.67,
       "spread_pct": 117.02,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
@@ -609,6 +609,18 @@
       "coverage": 6
     },
     {
+      "product": "Csirkemellfilé",
+      "category": "Húsáru",
+      "cheapest_company": "Lidl",
+      "cheapest_price": 1729.0,
+      "most_expensive_company": "ALDI",
+      "most_expensive_price": 1979.0,
+      "average_price": 1919.83,
+      "spread_pct": 14.46,
+      "competition_intensity": "közepes árverseny",
+      "coverage": 6
+    },
+    {
       "product": "ESL tej 2,8%",
       "category": "Tejtermék",
       "cheapest_company": "SPAR",
@@ -645,18 +657,6 @@
       "coverage": 6
     },
     {
-      "product": "Csirkemellfilé",
-      "category": "Húsáru",
-      "cheapest_company": "Lidl",
-      "cheapest_price": 1859.0,
-      "most_expensive_company": "ALDI",
-      "most_expensive_price": 1979.0,
-      "average_price": 1941.5,
-      "spread_pct": 6.46,
-      "competition_intensity": "közepes árverseny",
-      "coverage": 6
-    },
-    {
       "product": "Étolaj",
       "category": "Alapélelmiszer",
       "cheapest_company": "Lidl",
@@ -687,7 +687,7 @@
       "cheapest_price": 177.0,
       "most_expensive_company": "Auchan",
       "most_expensive_price": 183.0,
-      "average_price": 179.83,
+      "average_price": 178.83,
       "spread_pct": 3.39,
       "competition_intensity": "erős árverseny",
       "coverage": 6
@@ -821,6 +821,13 @@
       "coverage": 6
     },
     {
+      "product": "Csirkemellfilé",
+      "category": "Húsáru",
+      "spread_pct": 14.46,
+      "competition_intensity": "közepes árverseny",
+      "coverage": 6
+    },
+    {
       "product": "ESL tej 2,8%",
       "category": "Tejtermék",
       "spread_pct": 11.7,
@@ -838,13 +845,6 @@
       "product": "ESL tej 1,5%",
       "category": "Tejtermék",
       "spread_pct": 6.9,
-      "competition_intensity": "közepes árverseny",
-      "coverage": 6
-    },
-    {
-      "product": "Csirkemellfilé",
-      "category": "Húsáru",
-      "spread_pct": 6.46,
       "competition_intensity": "közepes árverseny",
       "coverage": 6
     },
