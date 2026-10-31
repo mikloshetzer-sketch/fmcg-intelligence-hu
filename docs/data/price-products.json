@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-30T10:30:06Z",
+  "updated_at": "2026-10-31T09:59:30Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -473,7 +473,7 @@
       "expected_unit": "kg",
       "prices": {
         "Auchan": 1199.0,
-        "Tesco": 1246.0,
+        "Tesco": 1239.0,
         "SPAR": 1370.0,
         "Lidl": 1435.0,
         "Penny": 1435.0,
@@ -493,8 +493,8 @@
         "Tesco": {
           "source_product_id": "2870240000000",
           "source_product_name": "16. SERTES COMB pultos QQ",
-          "amount": 1246.0,
-          "unit_amount": 1246.0,
+          "amount": 1239.0,
+          "unit_amount": 1239.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -939,7 +939,7 @@
         "Tesco": 899.0,
         "ALDI": 899.0,
         "Lidl": 899.0,
-        "Penny": 1199.0
+        "Penny": 999.0
       },
       "selected_products": {
         "SPAR": {
@@ -995,8 +995,8 @@
         "Penny": {
           "source_product_id": "penny-306",
           "source_product_name": "Citrom lédig kg",
-          "amount": 1199.0,
-          "unit_amount": 1199.0,
+          "amount": 999.0,
+          "unit_amount": 999.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1244,8 +1244,8 @@
       "prices": {
         "Lidl": 194.5,
         "Auchan": 238.0,
+        "ALDI": 265.0,
         "Tesco": 269.0,
-        "ALDI": 269.0,
         "SPAR": 280.0,
         "Penny": 285.0
       },
@@ -1270,19 +1270,19 @@
           "packaging": "5",
           "price_type": "NORMAL"
         },
-        "Tesco": {
-          "source_product_id": "2853980000000",
-          "source_product_name": "Piros burgonya lédig QQ",
-          "amount": 269.0,
-          "unit_amount": 269.0,
+        "ALDI": {
+          "source_product_id": "aldi-329547",
+          "source_product_name": "Burgonya étkezési lédig",
+          "amount": 265.0,
+          "unit_amount": 265.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "ALDI": {
-          "source_product_id": "aldi-329547",
-          "source_product_name": "Burgonya étkezési lédig",
+        "Tesco": {
+          "source_product_id": "2853980000000",
+          "source_product_name": "Piros burgonya lédig QQ",
           "amount": 269.0,
           "unit_amount": 269.0,
           "unit": "kg",
@@ -1770,7 +1770,7 @@
       "category": "Háztartás",
       "expected_unit": "db",
       "prices": {
-        "SPAR": 105.83,
+        "SPAR": 91.0,
         "Auchan": 41.0,
         "Tesco": 124.938,
         "ALDI": 121.5,
@@ -1778,13 +1778,13 @@
       },
       "selected_products": {
         "SPAR": {
-          "source_product_id": "6414301080601",
-          "source_product_name": "Tento Family Delicate illatmentes toalettpapír 3 rétegű 24 tekercs",
-          "amount": 2540.0,
-          "unit_amount": 105.83,
+          "source_product_id": "8004260012768",
+          "source_product_name": "Ecoring toalettpapír, 4 tekercs, 2 rétegű, 4 db",
+          "amount": 364.0,
+          "unit_amount": 91.0,
           "unit": "db",
           "unit_title": "csomag",
-          "packaging": "24",
+          "packaging": "4",
           "price_type": "NORMAL"
         },
         "Auchan": {
