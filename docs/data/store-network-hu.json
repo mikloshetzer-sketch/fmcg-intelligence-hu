@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-26T08:53:44.240487+00:00",
+  "updated_at": "2026-11-02T11:03:56.890951+00:00",
   "version": "store-network-hu-v2.0-non-lidl-osm",
   "scope": "Hungarian FMCG store network from OSM + optional overrides",
   "method_note": "Ez a verzió Lidl nélkül építi a bolthálózatot. ALDI, SPAR, Tesco, Auchan és Penny OSM/Overpass alapján frissül. Ha egy láncra 0 találat jön, a script megtartja a korábbi store-network-hu.json adott láncra vonatkozó adatait. Lidl külön, saját üzletlista alapján kerül majd be.",
@@ -14642,6 +14642,27 @@
       ]
     },
     {
+      "store_id": "spar_siofok_spar_partner_1770420617",
+      "company": "SPAR",
+      "name": "Spar Partner",
+      "city": "Siófok",
+      "area": "Siófok",
+      "region": "Dél-Dunántúl",
+      "address": "8600 Siófok, Szűcs utca 3",
+      "lat": 46.904993,
+      "lon": 18.051596,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 1770420617,
+      "brand": "Spar",
+      "operator": "Sió Top-Ker Kft.",
+      "keywords": [
+        "Spar Partner",
+        "SPAR Siófok",
+        "8600 Siófok, Szűcs utca 3"
+      ]
+    },
+    {
       "store_id": "spar_solymar_spar_173515292",
       "company": "SPAR",
       "name": "Spar",
@@ -16784,27 +16805,6 @@
       ]
     },
     {
-      "store_id": "spar_na_spar_1770420617",
-      "company": "SPAR",
-      "name": "Spar",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 46.904993,
-      "lon": 18.051596,
-      "source": "openstreetmap_overpass",
-      "osm_type": "node",
-      "osm_id": 1770420617,
-      "brand": "Spar",
-      "operator": "Sió Top-Ker Kft.",
-      "keywords": [
-        "Spar",
-        "SPAR n.a.",
-        "n.a."
-      ]
-    },
-    {
       "store_id": "spar_na_spar_1780139075",
       "company": "SPAR",
       "name": "Spar",
@@ -17169,8 +17169,8 @@
       "area": "n.a.",
       "region": "n.a.",
       "address": "n.a.",
-      "lat": 47.546206,
-      "lon": 21.620828,
+      "lat": 47.54616,
+      "lon": 21.620833,
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 3118399883,
