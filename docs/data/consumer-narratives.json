@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-26T14:06:27Z",
+  "updated_at": "2026-11-02T16:58:30Z",
   "status": "ok",
   "source": "local_fmcg_osint_layers",
   "method": "keyword_weighted_consumer_narrative_engine_v1",
@@ -25,15 +25,15 @@
     "dominant_narrative_label": "Munkaerő / állás",
     "scores": {
       "promotion_attention": 0,
-      "price_sensitivity": 0,
+      "price_sensitivity": 50,
       "employment_attention": 100,
       "customer_experience": 0,
       "digital_attention": 0
     },
     "raw_scores": {
       "promotion_attention": 0.0,
-      "price_sensitivity": 0.0,
-      "employment_attention": 4.8,
+      "price_sensitivity": 3.0,
+      "employment_attention": 6.0,
       "customer_experience": 0.0,
       "digital_attention": 0.0
     },
@@ -41,13 +41,13 @@
       "news": {
         "promotion_attention": 0.0,
         "price_sensitivity": 0.0,
-        "employment_attention": 4.8,
+        "employment_attention": 6.0,
         "customer_experience": 0.0,
         "digital_attention": 0.0
       },
       "social": {
         "promotion_attention": 0.0,
-        "price_sensitivity": 0.0,
+        "price_sensitivity": 3.0,
         "employment_attention": 0.0,
         "customer_experience": 0.0,
         "digital_attention": 0.0
@@ -68,7 +68,7 @@
       }
     },
     "evidence_counts": {
-      "news_texts": 7,
+      "news_texts": 5,
       "social_texts": 1,
       "linkedin_texts": 1,
       "jobs_texts": 0
@@ -84,15 +84,15 @@
       "dominant_narrative_label": "Munkaerő / állás",
       "scores": {
         "promotion_attention": 0,
-        "price_sensitivity": 0,
+        "price_sensitivity": 50,
         "employment_attention": 100,
         "customer_experience": 0,
         "digital_attention": 0
       },
       "raw_scores": {
         "promotion_attention": 0.0,
-        "price_sensitivity": 0.0,
-        "employment_attention": 4.8,
+        "price_sensitivity": 3.0,
+        "employment_attention": 6.0,
         "customer_experience": 0.0,
         "digital_attention": 0.0
       },
@@ -100,13 +100,13 @@
         "news": {
           "promotion_attention": 0.0,
           "price_sensitivity": 0.0,
-          "employment_attention": 4.8,
+          "employment_attention": 6.0,
           "customer_experience": 0.0,
           "digital_attention": 0.0
         },
         "social": {
           "promotion_attention": 0.0,
-          "price_sensitivity": 0.0,
+          "price_sensitivity": 3.0,
           "employment_attention": 0.0,
           "customer_experience": 0.0,
           "digital_attention": 0.0
@@ -127,7 +127,7 @@
         }
       },
       "evidence_counts": {
-        "news_texts": 7,
+        "news_texts": 5,
         "social_texts": 1,
         "linkedin_texts": 1,
         "jobs_texts": 0
@@ -185,7 +185,7 @@
         }
       },
       "evidence_counts": {
-        "news_texts": 7,
+        "news_texts": 5,
         "social_texts": 1,
         "linkedin_texts": 1,
         "jobs_texts": 0
@@ -243,7 +243,7 @@
         }
       },
       "evidence_counts": {
-        "news_texts": 1,
+        "news_texts": 3,
         "social_texts": 1,
         "linkedin_texts": 1,
         "jobs_texts": 0
@@ -359,7 +359,7 @@
         }
       },
       "evidence_counts": {
-        "news_texts": 3,
+        "news_texts": 5,
         "social_texts": 1,
         "linkedin_texts": 1,
         "jobs_texts": 0
@@ -417,7 +417,7 @@
         }
       },
       "evidence_counts": {
-        "news_texts": 3,
+        "news_texts": 1,
         "social_texts": 1,
         "linkedin_texts": 1,
         "jobs_texts": 0
