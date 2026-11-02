@@ -2,14 +2,14 @@
   {
     "id": "lidl",
     "company": "Lidl",
-    "snapshot_date": "2026-10-26",
-    "total_verified_ads": 121,
-    "parsed_postings_count": 44,
-    "external_count_hint": 121,
-    "store_jobs": 8,
-    "warehouse_jobs": 15,
-    "office_jobs": 7,
-    "management_jobs": 14,
+    "snapshot_date": "2026-11-02",
+    "total_verified_ads": 113,
+    "parsed_postings_count": 19,
+    "external_count_hint": 113,
+    "store_jobs": 0,
+    "warehouse_jobs": 10,
+    "office_jobs": 5,
+    "management_jobs": 4,
     "recruitment_events": 0,
     "unknown_jobs": 0,
     "salary_visible_ads": 0,
@@ -22,7 +22,7 @@
     "linkedin_jobs_present": true,
     "indeed_present": true,
     "career_site_active_ads": null,
-    "profession_active_ads": 121,
+    "profession_active_ads": 113,
     "linkedin_active_ads": null,
     "indeed_active_ads": null,
     "salary_visible_in_examples": false,
@@ -33,7 +33,7 @@
     "training_visible": true,
     "full_time_visible": null,
     "part_time_visible": null,
-    "source_confidence": "medium",
+    "source_confidence": "medium-stale",
     "labor_pressure_status": "automatikus gyűjtés előzetes, fallback védelemmel",
     "source_statuses": [
       {
@@ -46,9 +46,9 @@
       {
         "source_name": "Profession",
         "source_type": "job_portal",
-        "status": "fetched",
-        "count_hint": 121,
-        "error": null
+        "status": "fetch_failed",
+        "count_hint": null,
+        "error": "Nem sikerült letölteni az oldalt."
       },
       {
         "source_name": "LinkedIn Jobs",
@@ -65,19 +65,19 @@
         "error": "Nem sikerült letölteni az oldalt."
       }
     ],
-    "notes": "Automatikusan gyűjtött előzetes adat. A rendszer karrieroldalakat, Profession adatokat és fallback kategóriabontást használ."
+    "notes": "Profession aktuálisan nem volt letölthető, ezért az utolsó jó hirdetésszámot és kategóriabontást tartotta meg a rendszer."
   },
   {
     "id": "aldi",
     "company": "ALDI",
-    "snapshot_date": "2026-10-26",
-    "total_verified_ads": 11,
-    "parsed_postings_count": 12,
-    "external_count_hint": 11,
-    "store_jobs": 6,
-    "warehouse_jobs": 5,
-    "office_jobs": 0,
-    "management_jobs": 1,
+    "snapshot_date": "2026-11-02",
+    "total_verified_ads": 3,
+    "parsed_postings_count": 58,
+    "external_count_hint": 3,
+    "store_jobs": 28,
+    "warehouse_jobs": 16,
+    "office_jobs": 3,
+    "management_jobs": 11,
     "recruitment_events": 0,
     "unknown_jobs": 0,
     "salary_visible_ads": 0,
@@ -90,7 +90,7 @@
     "linkedin_jobs_present": true,
     "indeed_present": false,
     "career_site_active_ads": null,
-    "profession_active_ads": 11,
+    "profession_active_ads": 3,
     "linkedin_active_ads": null,
     "indeed_active_ads": null,
     "salary_visible_in_examples": false,
@@ -101,7 +101,7 @@
     "training_visible": false,
     "full_time_visible": null,
     "part_time_visible": null,
-    "source_confidence": "medium",
+    "source_confidence": "medium-stale",
     "labor_pressure_status": "automatikus gyűjtés előzetes, fallback védelemmel",
     "source_statuses": [
       {
@@ -114,9 +114,9 @@
       {
         "source_name": "Profession",
         "source_type": "job_portal",
-        "status": "fetched",
-        "count_hint": 11,
-        "error": null
+        "status": "fetch_failed",
+        "count_hint": null,
+        "error": "Nem sikerült letölteni az oldalt."
       },
       {
         "source_name": "LinkedIn Jobs",
@@ -126,19 +126,19 @@
         "error": "Ez a forrás automatizáltan korlátozottan gyűjthető."
       }
     ],
-    "notes": "Automatikusan gyűjtött előzetes adat. A rendszer karrieroldalakat, Profession adatokat és fallback kategóriabontást használ."
+    "notes": "A mai részletes álláslista hiányos volt, ezért a rendszer az utolsó jó kategóriabontást és postinglistát tartotta meg."
   },
   {
     "id": "spar",
     "company": "SPAR",
-    "snapshot_date": "2026-10-26",
-    "total_verified_ads": 66,
-    "parsed_postings_count": 15,
-    "external_count_hint": 66,
-    "store_jobs": 7,
-    "warehouse_jobs": 2,
-    "office_jobs": 1,
-    "management_jobs": 5,
+    "snapshot_date": "2026-11-02",
+    "total_verified_ads": 83,
+    "parsed_postings_count": 92,
+    "external_count_hint": 83,
+    "store_jobs": 42,
+    "warehouse_jobs": 9,
+    "office_jobs": 13,
+    "management_jobs": 28,
     "recruitment_events": 0,
     "unknown_jobs": 0,
     "salary_visible_ads": 0,
@@ -151,7 +151,7 @@
     "linkedin_jobs_present": true,
     "indeed_present": false,
     "career_site_active_ads": null,
-    "profession_active_ads": 66,
+    "profession_active_ads": 83,
     "linkedin_active_ads": null,
     "indeed_active_ads": null,
     "salary_visible_in_examples": false,
@@ -162,7 +162,7 @@
     "training_visible": true,
     "full_time_visible": null,
     "part_time_visible": null,
-    "source_confidence": "medium",
+    "source_confidence": "medium-stale",
     "labor_pressure_status": "automatikus gyűjtés előzetes, fallback védelemmel",
     "source_statuses": [
       {
@@ -175,9 +175,9 @@
       {
         "source_name": "Profession",
         "source_type": "job_portal",
-        "status": "fetched",
-        "count_hint": 66,
-        "error": null
+        "status": "fetch_failed",
+        "count_hint": null,
+        "error": "Nem sikerült letölteni az oldalt."
       },
       {
         "source_name": "LinkedIn Jobs",
@@ -187,19 +187,19 @@
         "error": "Ez a forrás automatizáltan korlátozottan gyűjthető."
       }
     ],
-    "notes": "Automatikusan gyűjtött előzetes adat. A rendszer karrieroldalakat, Profession adatokat és fallback kategóriabontást használ."
+    "notes": "A mai részletes álláslista hiányos volt, ezért a rendszer az utolsó jó kategóriabontást és postinglistát tartotta meg."
   },
   {
     "id": "tesco",
     "company": "Tesco",
-    "snapshot_date": "2026-10-26",
-    "total_verified_ads": 123,
-    "parsed_postings_count": 19,
-    "external_count_hint": 123,
-    "store_jobs": 8,
-    "warehouse_jobs": 1,
-    "office_jobs": 5,
-    "management_jobs": 5,
+    "snapshot_date": "2026-11-02",
+    "total_verified_ads": 51,
+    "parsed_postings_count": 104,
+    "external_count_hint": 51,
+    "store_jobs": 40,
+    "warehouse_jobs": 6,
+    "office_jobs": 28,
+    "management_jobs": 30,
     "recruitment_events": 0,
     "unknown_jobs": 0,
     "salary_visible_ads": 0,
@@ -212,18 +212,18 @@
     "linkedin_jobs_present": true,
     "indeed_present": false,
     "career_site_active_ads": null,
-    "profession_active_ads": 123,
+    "profession_active_ads": 51,
     "linkedin_active_ads": null,
     "indeed_active_ads": null,
     "salary_visible_in_examples": false,
     "benefits_visible_in_examples": true,
     "commuting_support_visible": false,
-    "cafeteria_visible": false,
+    "cafeteria_visible": true,
     "bonus_visible": true,
     "training_visible": false,
     "full_time_visible": null,
     "part_time_visible": null,
-    "source_confidence": "medium",
+    "source_confidence": "medium-stale",
     "labor_pressure_status": "automatikus gyűjtés előzetes, fallback védelemmel",
     "source_statuses": [
       {
@@ -236,9 +236,9 @@
       {
         "source_name": "Profession",
         "source_type": "job_portal",
-        "status": "fetched",
-        "count_hint": 123,
-        "error": null
+        "status": "fetch_failed",
+        "count_hint": null,
+        "error": "Nem sikerült letölteni az oldalt."
       },
       {
         "source_name": "LinkedIn Jobs",
@@ -248,19 +248,19 @@
         "error": "Ez a forrás automatizáltan korlátozottan gyűjthető."
       }
     ],
-    "notes": "Automatikusan gyűjtött előzetes adat. A rendszer karrieroldalakat, Profession adatokat és fallback kategóriabontást használ."
+    "notes": "A mai részletes álláslista hiányos volt, ezért a rendszer az utolsó jó kategóriabontást és postinglistát tartotta meg."
   },
   {
     "id": "penny",
     "company": "PENNY",
-    "snapshot_date": "2026-10-26",
-    "total_verified_ads": 27,
-    "parsed_postings_count": 26,
-    "external_count_hint": 27,
-    "store_jobs": 9,
-    "warehouse_jobs": 4,
-    "office_jobs": 6,
-    "management_jobs": 6,
+    "snapshot_date": "2026-11-02",
+    "total_verified_ads": 37,
+    "parsed_postings_count": 2,
+    "external_count_hint": 37,
+    "store_jobs": 0,
+    "warehouse_jobs": 1,
+    "office_jobs": 0,
+    "management_jobs": 0,
     "recruitment_events": 1,
     "unknown_jobs": 0,
     "salary_visible_ads": 0,
@@ -273,7 +273,7 @@
     "linkedin_jobs_present": false,
     "indeed_present": false,
     "career_site_active_ads": null,
-    "profession_active_ads": 27,
+    "profession_active_ads": 37,
     "linkedin_active_ads": null,
     "indeed_active_ads": null,
     "salary_visible_in_examples": false,
@@ -284,7 +284,7 @@
     "training_visible": true,
     "full_time_visible": null,
     "part_time_visible": null,
-    "source_confidence": "medium",
+    "source_confidence": "medium-stale",
     "labor_pressure_status": "automatikus gyűjtés előzetes, fallback védelemmel",
     "source_statuses": [
       {
@@ -297,24 +297,24 @@
       {
         "source_name": "Profession",
         "source_type": "job_portal",
-        "status": "fetched",
-        "count_hint": 27,
-        "error": null
+        "status": "fetch_failed",
+        "count_hint": null,
+        "error": "Nem sikerült letölteni az oldalt."
       }
     ],
-    "notes": "Automatikusan gyűjtött előzetes adat. A rendszer karrieroldalakat, Profession adatokat és fallback kategóriabontást használ."
+    "notes": "Profession aktuálisan nem volt letölthető, ezért az utolsó jó hirdetésszámot és kategóriabontást tartotta meg a rendszer."
   },
   {
     "id": "auchan",
     "company": "Auchan",
-    "snapshot_date": "2026-10-26",
-    "total_verified_ads": 26,
-    "parsed_postings_count": 19,
-    "external_count_hint": 26,
-    "store_jobs": 13,
-    "warehouse_jobs": 1,
-    "office_jobs": 1,
-    "management_jobs": 4,
+    "snapshot_date": "2026-11-02",
+    "total_verified_ads": 19,
+    "parsed_postings_count": 105,
+    "external_count_hint": 19,
+    "store_jobs": 52,
+    "warehouse_jobs": 16,
+    "office_jobs": 15,
+    "management_jobs": 22,
     "recruitment_events": 0,
     "unknown_jobs": 0,
     "salary_visible_ads": 0,
@@ -327,7 +327,7 @@
     "linkedin_jobs_present": true,
     "indeed_present": false,
     "career_site_active_ads": null,
-    "profession_active_ads": 26,
+    "profession_active_ads": 19,
     "linkedin_active_ads": null,
     "indeed_active_ads": null,
     "salary_visible_in_examples": false,
@@ -338,7 +338,7 @@
     "training_visible": true,
     "full_time_visible": null,
     "part_time_visible": null,
-    "source_confidence": "medium",
+    "source_confidence": "medium-stale",
     "labor_pressure_status": "automatikus gyűjtés előzetes, fallback védelemmel",
     "source_statuses": [
       {
@@ -351,9 +351,9 @@
       {
         "source_name": "Profession",
         "source_type": "job_portal",
-        "status": "fetched",
-        "count_hint": 26,
-        "error": null
+        "status": "fetch_failed",
+        "count_hint": null,
+        "error": "Nem sikerült letölteni az oldalt."
       },
       {
         "source_name": "LinkedIn Jobs",
@@ -363,6 +363,6 @@
         "error": "Ez a forrás automatizáltan korlátozottan gyűjthető."
       }
     ],
-    "notes": "Automatikusan gyűjtött előzetes adat. A rendszer karrieroldalakat, Profession adatokat és fallback kategóriabontást használ."
+    "notes": "A mai részletes álláslista hiányos volt, ezért a rendszer az utolsó jó kategóriabontást és postinglistát tartotta meg."
   }
 ]
