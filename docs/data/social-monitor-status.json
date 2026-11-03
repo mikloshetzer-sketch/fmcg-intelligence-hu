@@ -1,26 +1,26 @@
 {
-  "updated_at": "2026-11-03T07:05:20.740402+00:00",
+  "updated_at": "2026-11-03T19:41:52.389493+00:00",
   "status": "ok",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "companies": [
     {
       "company": "Lidl",
-      "mentions": 1,
-      "raw_mentions": 1,
-      "dashboard_mentions": 0,
+      "mentions": 2,
+      "raw_mentions": 2,
+      "dashboard_mentions": 1,
       "background_mentions": 1,
       "discarded_mentions": 0,
-      "weighted_mentions": 0.5,
-      "hu_relevant_mentions": 0,
-      "index": 16,
+      "weighted_mentions": 1.5,
+      "hu_relevant_mentions": 1,
+      "index": 20,
       "sources": {
         "reddit": 0,
-        "youtube": 0,
+        "youtube": 1,
         "mastodon": 1
       },
       "raw_sources": {
         "reddit": 0,
-        "youtube": 0,
+        "youtube": 1,
         "mastodon": 1
       },
       "sentiment": "neutral",
@@ -125,22 +125,22 @@
     },
     {
       "company": "Auchan",
-      "mentions": 0,
-      "raw_mentions": 0,
-      "dashboard_mentions": 0,
+      "mentions": 1,
+      "raw_mentions": 1,
+      "dashboard_mentions": 1,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_mentions": 0,
-      "hu_relevant_mentions": 0,
-      "index": 0,
+      "weighted_mentions": 1.0,
+      "hu_relevant_mentions": 1,
+      "index": 16,
       "sources": {
         "reddit": 0,
-        "youtube": 0,
+        "youtube": 1,
         "mastodon": 0
       },
       "raw_sources": {
         "reddit": 0,
-        "youtube": 0,
+        "youtube": 1,
         "mastodon": 0
       },
       "sentiment": "neutral",
@@ -149,26 +149,26 @@
     },
     {
       "company": "CBA",
-      "mentions": 0,
-      "raw_mentions": 0,
-      "dashboard_mentions": 0,
+      "mentions": 3,
+      "raw_mentions": 3,
+      "dashboard_mentions": 3,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_mentions": 0,
-      "hu_relevant_mentions": 0,
-      "index": 0,
+      "weighted_mentions": 3.0,
+      "hu_relevant_mentions": 3,
+      "index": 16,
       "sources": {
         "reddit": 0,
-        "youtube": 0,
+        "youtube": 3,
         "mastodon": 0
       },
       "raw_sources": {
         "reddit": 0,
-        "youtube": 0,
+        "youtube": 3,
         "mastodon": 0
       },
       "sentiment": "neutral",
-      "topic": "általános vállalati említés",
+      "topic": "árak és akciók",
       "errors": []
     }
   ],
