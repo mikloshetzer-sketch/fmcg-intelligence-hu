@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03T11:25:55Z",
+  "updated_at": "2026-11-04T11:39:03Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "method": "product-level price leadership and spread analysis",
@@ -31,12 +31,12 @@
   ],
   "most_expensive_count": [
     {
-      "company": "Auchan",
-      "count": 7
+      "company": "Tesco",
+      "count": 8
     },
     {
-      "company": "Tesco",
-      "count": 7
+      "company": "Auchan",
+      "count": 6
     },
     {
       "company": "Penny",
@@ -126,7 +126,7 @@
         },
         {
           "company": "Auchan",
-          "category_index": 109,
+          "category_index": 108,
           "coverage": 5
         }
       ]
@@ -134,36 +134,36 @@
     {
       "category": "Frissáru",
       "leader": "Penny",
-      "leader_index": 92,
+      "leader_index": 95,
       "ranking": [
         {
           "company": "Penny",
-          "category_index": 92,
+          "category_index": 95,
           "coverage": 1
         },
         {
           "company": "Lidl",
-          "category_index": 96,
+          "category_index": 97,
           "coverage": 1
         },
         {
           "company": "ALDI",
-          "category_index": 98,
+          "category_index": 99,
           "coverage": 1
         },
         {
           "company": "Auchan",
-          "category_index": 98,
+          "category_index": 99,
           "coverage": 1
         },
         {
           "company": "SPAR",
-          "category_index": 98,
+          "category_index": 99,
           "coverage": 1
         },
         {
           "company": "Tesco",
-          "category_index": 117,
+          "category_index": 111,
           "coverage": 1
         }
       ]
@@ -519,20 +519,8 @@
       "cheapest_price": 1876.0,
       "most_expensive_company": "Tesco",
       "most_expensive_price": 2395.0,
-      "average_price": 2113.17,
+      "average_price": 2123.83,
       "spread_pct": 27.67,
-      "competition_intensity": "nagy árszórás",
-      "coverage": 6
-    },
-    {
-      "product": "Tojás",
-      "category": "Frissáru",
-      "cheapest_company": "Penny",
-      "cheapest_price": 46.63,
-      "most_expensive_company": "Tesco",
-      "most_expensive_price": 59.5,
-      "average_price": 50.82,
-      "spread_pct": 27.6,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
@@ -581,6 +569,18 @@
       "most_expensive_price": 506.67,
       "average_price": 446.06,
       "spread_pct": 18.22,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 6
+    },
+    {
+      "product": "Tojás",
+      "category": "Frissáru",
+      "cheapest_company": "Penny",
+      "cheapest_price": 47.63,
+      "most_expensive_company": "Tesco",
+      "most_expensive_price": 56.0,
+      "average_price": 50.4,
+      "spread_pct": 17.57,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
@@ -673,10 +673,10 @@
       "category": "Alapélelmiszer",
       "cheapest_company": "SPAR",
       "cheapest_price": 177.0,
-      "most_expensive_company": "Auchan",
-      "most_expensive_price": 183.0,
-      "average_price": 178.83,
-      "spread_pct": 3.39,
+      "most_expensive_company": "Tesco",
+      "most_expensive_price": 181.0,
+      "average_price": 177.83,
+      "spread_pct": 2.26,
       "competition_intensity": "erős árverseny",
       "coverage": 6
     },
@@ -772,13 +772,6 @@
       "coverage": 6
     },
     {
-      "product": "Tojás",
-      "category": "Frissáru",
-      "spread_pct": 27.6,
-      "competition_intensity": "nagy árszórás",
-      "coverage": 6
-    },
-    {
       "product": "Vöröshagyma",
       "category": "Zöldség",
       "spread_pct": 25.07,
@@ -803,6 +796,13 @@
       "product": "Natúr joghurt",
       "category": "Tejtermék",
       "spread_pct": 18.22,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 6
+    },
+    {
+      "product": "Tojás",
+      "category": "Frissáru",
+      "spread_pct": 17.57,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
@@ -858,7 +858,7 @@
     {
       "product": "Finomliszt",
       "category": "Alapélelmiszer",
-      "spread_pct": 3.39,
+      "spread_pct": 2.26,
       "competition_intensity": "erős árverseny",
       "coverage": 6
     },
