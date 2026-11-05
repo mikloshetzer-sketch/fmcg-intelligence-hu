@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-11-04T19:57:07.568863+00:00",
+  "updated_at": "2026-11-05T07:09:21.117717+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-11-04T19:57:07.568863+00:00",
+    "updated_at": "2026-11-05T07:09:21.117717+00:00",
     "leader_social": "Penny",
     "leader_social_index": 29,
     "dominant_social_topic": "árak és akciók",
@@ -126,33 +126,71 @@
     },
     {
       "company": "Tesco",
-      "social_mentions": 0,
-      "raw_social_mentions": 0,
+      "social_mentions": 1,
+      "raw_social_mentions": 1,
       "dashboard_mentions": 0,
-      "background_mentions": 0,
+      "background_mentions": 1,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 0,
+      "weighted_social_mentions": 0.5,
       "hu_relevant_mentions": 0,
-      "social_index": 0,
+      "social_index": 16,
       "social_sources": {
         "reddit": 0,
-        "youtube": 0,
+        "youtube": 1,
         "mastodon": 0
       },
       "raw_social_sources": {
         "reddit": 0,
-        "youtube": 0,
+        "youtube": 1,
         "mastodon": 0
       },
-      "dominant_social_topic": "általános vállalati említés",
-      "top_social_topics": [],
-      "topic_sentiment": {},
+      "dominant_social_topic": "árak és akciók",
+      "top_social_topics": [
+        {
+          "topic": "árak és akciók",
+          "score": 0.5
+        },
+        {
+          "topic": "bolti élmény",
+          "score": 0.5
+        }
+      ],
+      "topic_sentiment": {
+        "árak és akciók": {
+          "positive": 0.0,
+          "neutral": 0.5,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        },
+        "bolti élmény": {
+          "positive": 0.0,
+          "neutral": 0.5,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        }
+      },
       "social_sentiment": "neutral",
       "latest_items": [],
-      "background_items": [],
+      "background_items": [
+        {
+          "id": "5808819f5ad09a83",
+          "source": "youtube",
+          "company": "Tesco",
+          "title": "heti tesco bevásárlás - YouTube",
+          "summary": "heti tesco bevásárlás YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5BZkVfQ2ZZRWpscWJLTTlnc1AzcGhKdHZQbUZUbDdZanlIX2I4amVrMkNHOXIxcmV3cGwzcHR1MzB3cXB4dWI0MmdRQlgtOGRHYXBUYWV3?oc=5",
+          "published": "Wed, 16 Sep 2026 14:24:37 GMT",
+          "query": "site:youtube.com \"Tesco online bevásárlás\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        }
+      ],
       "quality_summary": {
         "dashboard_items": 0,
-        "background_items": 0,
+        "background_items": 1,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
@@ -162,32 +200,59 @@
     },
     {
       "company": "ALDI",
-      "social_mentions": 0,
-      "raw_social_mentions": 0,
-      "dashboard_mentions": 0,
+      "social_mentions": 1,
+      "raw_social_mentions": 1,
+      "dashboard_mentions": 1,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 0,
-      "hu_relevant_mentions": 0,
-      "social_index": 0,
+      "weighted_social_mentions": 1.0,
+      "hu_relevant_mentions": 1,
+      "social_index": 16,
       "social_sources": {
-        "reddit": 0,
+        "reddit": 1,
         "youtube": 0,
         "mastodon": 0
       },
       "raw_social_sources": {
-        "reddit": 0,
+        "reddit": 1,
         "youtube": 0,
         "mastodon": 0
       },
-      "dominant_social_topic": "általános vállalati említés",
-      "top_social_topics": [],
-      "topic_sentiment": {},
+      "dominant_social_topic": "termék és minőség",
+      "top_social_topics": [
+        {
+          "topic": "termék és minőség",
+          "score": 1.0
+        }
+      ],
+      "topic_sentiment": {
+        "termék és minőség": {
+          "positive": 0.0,
+          "neutral": 1.0,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        }
+      },
       "social_sentiment": "neutral",
-      "latest_items": [],
+      "latest_items": [
+        {
+          "id": "33fd6e93ccb00545",
+          "source": "reddit",
+          "company": "ALDI",
+          "title": "Új, mentes húskészítmények az Aldiban",
+          "summary": "Új, tartósítószer és ízfokozó hozzáadása nélkül készült húskészítményekkel rukkolt elő az Aldi. https://www.aldi.hu/termekek/mentes-huskeszitmenyek/k/1588161418666089 submitted by /u/GrouchySnow9407 to r/lidlaldihun [link] [comments]",
+          "url": "https://www.reddit.com/r/lidlaldihun/comments/1x5vicx/új_mentes_húskészítmények_az_aldiban/",
+          "published": "2026-10-14T16:15:50+00:00",
+          "query": "aldi.hu",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        }
+      ],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 0,
+        "dashboard_items": 1,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
@@ -388,29 +453,29 @@
     },
     {
       "company": "CBA",
-      "social_mentions": 5,
-      "raw_social_mentions": 5,
-      "dashboard_mentions": 5,
+      "social_mentions": 4,
+      "raw_social_mentions": 4,
+      "dashboard_mentions": 4,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 5.0,
-      "hu_relevant_mentions": 5,
+      "weighted_social_mentions": 4.0,
+      "hu_relevant_mentions": 4,
       "social_index": 29,
       "social_sources": {
         "reddit": 0,
-        "youtube": 5,
+        "youtube": 4,
         "mastodon": 0
       },
       "raw_social_sources": {
         "reddit": 0,
-        "youtube": 5,
+        "youtube": 4,
         "mastodon": 0
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 4.0
+          "score": 3.0
         },
         {
           "topic": "bolti élmény",
@@ -427,7 +492,7 @@
         },
         "árak és akciók": {
           "positive": 0.0,
-          "neutral": 4.0,
+          "neutral": 3.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -444,19 +509,6 @@
           "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1EcTJvR3hvWWdnRHJhZVMtbUlEWUNFUVlzcnBoT3JKem5ValZqaFp6ajVVWHJPQTBiY0JIQTA5aTZQUlNTNXVOYkFmaFRzaHh6Vk8tMA?oc=5",
           "published": "Fri, 16 Oct 2026 07:25:20 GMT",
           "query": "site:youtube.com \"CBA Príma\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
-          "id": "20afc4fe8149a548",
-          "source": "youtube",
-          "company": "CBA",
-          "title": "CBA Príma akciós újság 09.17. - 09.23. - YouTube",
-          "summary": "CBA Príma akciós újság 09.17. - 09.23. YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1EVEN5ejFqT3N5RUhLMG1KUDFibXVFZGw3NE1BMTJuelY0YXdabl94T3U2a25idjRyanVsSWdUYmRvaUp5UWprZkEzdy1WUGtpSWhITXRn?oc=5",
-          "published": "Mon, 14 Sep 2026 15:03:33 GMT",
-          "query": "site:youtube.com \"CBA Prima\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
           "item_sentiment": "neutral"
@@ -503,7 +555,7 @@
       ],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 5,
+        "dashboard_items": 4,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
