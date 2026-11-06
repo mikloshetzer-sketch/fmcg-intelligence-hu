@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-05T11:40:25Z",
+  "updated_at": "2026-11-06T11:38:57Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -395,14 +395,24 @@
       "category": "Frissáru",
       "expected_unit": "db",
       "prices": {
+        "Auchan": 32.0,
         "Penny": 47.63,
         "Lidl": 47.9,
         "SPAR": 49.9,
         "ALDI": 49.97,
-        "Auchan": 50.0,
         "Tesco": 52.5
       },
       "selected_products": {
+        "Auchan": {
+          "source_product_id": "5999086470591",
+          "source_product_name": "Auchan Kedvenc extrasárga mélyalmos friss tojás L méret 30 db",
+          "amount": 952.0,
+          "unit_amount": 32.0,
+          "unit": "db",
+          "unit_title": "doboz",
+          "packaging": "30",
+          "price_type": "NORMAL"
+        },
         "Penny": {
           "source_product_id": "penny-1996",
           "source_product_name": "Tálcás tojás s méretű 30db",
@@ -441,16 +451,6 @@
           "unit": "db",
           "unit_title": "doboz",
           "packaging": "30",
-          "price_type": "NORMAL"
-        },
-        "Auchan": {
-          "source_product_id": "5999086450890",
-          "source_product_name": "Auchan Tipp friss tojás A osztály S méret 10 db",
-          "amount": 501.0,
-          "unit_amount": 50.0,
-          "unit": "db",
-          "unit_title": "doboz",
-          "packaging": "10",
           "price_type": "NORMAL"
         },
         "Tesco": {
@@ -935,7 +935,7 @@
       "expected_unit": "kg",
       "prices": {
         "SPAR": 899.0,
-        "Tesco": 899.0,
+        "Tesco": 949.0,
         "ALDI": 740.0,
         "Auchan": 899.0,
         "Lidl": 899.0,
@@ -955,8 +955,8 @@
         "Tesco": {
           "source_product_id": "2850160000000",
           "source_product_name": "Citrom lédig    ",
-          "amount": 899.0,
-          "unit_amount": 899.0,
+          "amount": 949.0,
+          "unit_amount": 949.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1398,9 +1398,9 @@
       "prices": {
         "Lidl": 709.0,
         "Penny": 719.0,
+        "ALDI": 729.0,
         "Tesco": 745.0,
         "SPAR": 749.0,
-        "ALDI": 749.0,
         "Auchan": 750.0
       },
       "selected_products": {
@@ -1424,6 +1424,16 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
+        "ALDI": {
+          "source_product_id": "aldi-627450",
+          "source_product_name": "Bellasan napraforgó étolaj 1l",
+          "amount": 729.0,
+          "unit_amount": 729.0,
+          "unit": "l",
+          "unit_title": "db",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "Tesco": {
           "source_product_id": "6420155000092",
           "source_product_name": "GOLDEN IMPERIAL NAPRAFORGÓ ÉTOLAJ 1 L QQ",
@@ -1437,16 +1447,6 @@
         "SPAR": {
           "source_product_id": "9100000009421",
           "source_product_name": "S-Budget 100% finomított napraforgó-étolaj 1 l",
-          "amount": 749.0,
-          "unit_amount": 749.0,
-          "unit": "l",
-          "unit_title": "db",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "ALDI": {
-          "source_product_id": "aldi-627450",
-          "source_product_name": "Bellasan napraforgó étolaj 1l",
           "amount": 749.0,
           "unit_amount": 749.0,
           "unit": "l",
