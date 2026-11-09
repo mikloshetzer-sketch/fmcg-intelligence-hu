@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-11-09T06:59:29.439387+00:00",
+  "updated_at": "2026-11-09T22:36:30.941635+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-11-09T06:59:29.439387+00:00",
-    "leader_social": "Penny",
-    "leader_social_index": 29,
+    "updated_at": "2026-11-09T22:36:30.941635+00:00",
+    "leader_social": "Tesco",
+    "leader_social_index": 33,
     "dominant_social_topic": "árak és akciók",
     "overall_social_sentiment": "neutral"
   },
@@ -15,33 +15,33 @@
       "company": "Lidl",
       "social_mentions": 2,
       "raw_social_mentions": 2,
-      "dashboard_mentions": 1,
-      "background_mentions": 1,
+      "dashboard_mentions": 2,
+      "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 1.5,
-      "hu_relevant_mentions": 1,
-      "social_index": 20,
+      "weighted_social_mentions": 2.0,
+      "hu_relevant_mentions": 2,
+      "social_index": 16,
       "social_sources": {
         "reddit": 0,
-        "youtube": 1,
-        "mastodon": 1
+        "youtube": 2,
+        "mastodon": 0
       },
       "raw_social_sources": {
         "reddit": 0,
-        "youtube": 1,
-        "mastodon": 1
+        "youtube": 2,
+        "mastodon": 0
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 1.5
+          "score": 2.0
         }
       ],
       "topic_sentiment": {
         "árak és akciók": {
           "positive": 0.0,
-          "neutral": 1.5,
+          "neutral": 2.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -61,26 +61,25 @@
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
           "item_sentiment": "neutral"
-        }
-      ],
-      "background_items": [
+        },
         {
-          "id": "812c724225be6607",
-          "source": "mastodon",
+          "id": "8e02755e824b8ffa",
+          "source": "youtube",
           "company": "Lidl",
-          "title": "",
-          "summary": "Den som använder Lidl Plus möts nu av ett helt nytt bonussystem. Matkedjan gör om flera av reglerna för hur kunder tjänar och använder sin bonus. # Lidl # Kunder # Bonus Stor förändring för Lidls kunder – gäller från i dag",
-          "url": "https://friendica.helvetet.eu/display/a7e70941-52b505df-69a6e6cbdb370594",
-          "published": "Mon, 02 Nov 2026 14:31:00 +0000",
-          "query": "#lidl",
-          "hu_relevance": 0.5,
-          "relevance_bucket": "background",
+          "title": "🇭🇺 LIDL Magyarország Akciós újság – 23. hét Érvényes 06.04 - 06.10 2026 TV verzió - YouTube",
+          "summary": "🇭🇺 LIDL Magyarország Akciós újság – 23. hét Érvényes 06.04 - 06.10 2026 TV verzió YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFB2TUZkVlNJb3dzTzZZNndOcXVGQU9vcndDanNiclh2YlctWHNucnhZMVdlZS13VGFpelVGdmNBMDJCLUxpbXczeFdVeFNaQ3RDT0VtNmJn?oc=5",
+          "published": "Sat, 30 May 2026 23:22:33 GMT",
+          "query": "site:youtube.com \"Lidl Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
           "item_sentiment": "neutral"
         }
       ],
+      "background_items": [],
       "quality_summary": {
-        "dashboard_items": 1,
-        "background_items": 1,
+        "dashboard_items": 2,
+        "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
@@ -126,21 +125,21 @@
     },
     {
       "company": "Tesco",
-      "social_mentions": 1,
-      "raw_social_mentions": 1,
-      "dashboard_mentions": 0,
-      "background_mentions": 1,
-      "discarded_mentions": 0,
-      "weighted_social_mentions": 0.5,
-      "hu_relevant_mentions": 0,
-      "social_index": 16,
+      "social_mentions": 5,
+      "raw_social_mentions": 22,
+      "dashboard_mentions": 2,
+      "background_mentions": 3,
+      "discarded_mentions": 17,
+      "weighted_social_mentions": 3.5,
+      "hu_relevant_mentions": 2,
+      "social_index": 33,
       "social_sources": {
-        "reddit": 0,
+        "reddit": 4,
         "youtube": 1,
         "mastodon": 0
       },
       "raw_social_sources": {
-        "reddit": 0,
+        "reddit": 21,
         "youtube": 1,
         "mastodon": 0
       },
@@ -148,32 +147,118 @@
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 0.5
+          "score": 5.5
         },
         {
           "topic": "bolti élmény",
+          "score": 3.0
+        },
+        {
+          "topic": "munkaerő és foglalkoztatás",
+          "score": 1.0
+        },
+        {
+          "topic": "termék és minőség",
+          "score": 0.5
+        },
+        {
+          "topic": "digitalizáció és önkiszolgálás",
           "score": 0.5
         }
       ],
       "topic_sentiment": {
-        "árak és akciók": {
-          "positive": 0.0,
-          "neutral": 0.5,
+        "bolti élmény": {
+          "positive": 1.0,
+          "neutral": 1.0,
           "negative": 0.0,
-          "mixed": 0.0,
+          "mixed": 1.0,
+          "dominant": "positive"
+        },
+        "árak és akciók": {
+          "positive": 0.5,
+          "neutral": 1.0,
+          "negative": 0.0,
+          "mixed": 1.0,
           "dominant": "neutral"
         },
-        "bolti élmény": {
-          "positive": 0.0,
+        "munkaerő és foglalkoztatás": {
+          "positive": 0.5,
           "neutral": 0.5,
           "negative": 0.0,
           "mixed": 0.0,
-          "dominant": "neutral"
+          "dominant": "positive"
+        },
+        "termék és minőség": {
+          "positive": 0.5,
+          "neutral": 0.0,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "positive"
+        },
+        "digitalizáció és önkiszolgálás": {
+          "positive": 0.5,
+          "neutral": 0.0,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "positive"
         }
       },
-      "social_sentiment": "neutral",
-      "latest_items": [],
+      "social_sentiment": "positive",
+      "latest_items": [
+        {
+          "id": "6f2045878e79bccb",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "Are any supermarket or petrol station loyalty schemes actually worth it for fuel?",
+          "summary": "I currently commute around 100 miles each way to work, once or twice a week, so I end up spending quite a bit on petrol. I do try to shop around for cheaper fuel, but unless you’re filling up at a service station, there’s often only a few pence difference between petrol stations. I’m wondering whether any supermarket or petrol station loyalty schemes are actually worth sticking to one particular place for. I used to fill up at BP and, despite spending around £200 a month on fuel for a year, I th",
+          "url": "https://www.reddit.com/r/AskUK/comments/1xqwww7/are_any_supermarket_or_petrol_station_loyalty/",
+          "published": "2026-11-08T12:04:38+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "positive"
+        },
+        {
+          "id": "a00ebe9c32e19f3c",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "Best Shops for Various Needs",
+          "summary": "Hi all! I've recently moved to the UK from the US, and am after any tips people may have to make your money go further. The US is really upfront about rewards programs, discounts, sales and overall things just seem to be a bit cheaper there. I have a Tesco's clubcard and Boots rewards program for reference, but I saw a Tiktok of people saying Boots is really expensive even with the rewards program. I've also been seeing videos for household essentials like Who Gives a Crap for toilet paper or Sm",
+          "url": "https://www.reddit.com/r/frugaluk/comments/1xmpho0/best_shops_for_various_needs/",
+          "published": "2026-11-03T10:29:09+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "mixed"
+        }
+      ],
       "background_items": [
+        {
+          "id": "08459d4448a7ea4a",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "Tesco rate /10",
+          "summary": "Not my usual choice, but I wanted to try out some of the seasonal sandwiches Tesco currently has. The three sandwiches are: chicken, stuffing, and cranberry sauce; Red Leicester, caramelised onion chutney, pork pie inspired stuffing, and piccalilli relish; and cheddar cheese, spinach, and some sort of pickle spread. What would you rate /10? With a Tesco Clubcard I saved £4.35. submitted by /u/ang3l_kn1ves to r/MealDealRates [link] [comments]",
+          "url": "https://www.reddit.com/r/MealDealRates/comments/1xpcu0c/tesco_rate_10/",
+          "published": "2026-11-06T13:30:16+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "b291bf519d6d520d",
+          "source": "reddit",
+          "company": "Tesco",
+          "title": "Tesco Clubcard – Free to use for someone in Czechia!",
+          "summary": "I opened a Tesco Clubcard account during my visit to Prague, but I’m now heading back home and won’t be using it anymore. I thought it might come in handy for someone here, especially tourists, expats or anyone who doesn’t have a Czech phone number to register for their own Clubcard. As you probably know, many Tesco products are considerably cheaper with Clubcard discounts, so hopefully someone can make good use of it rather than paying full price. I’m happy to share the card details privately w",
+          "url": "https://www.reddit.com/r/Prague/comments/1xmo8gf/tesco_clubcard_free_to_use_for_someone_in_czechia/",
+          "published": "2026-11-03T09:11:15+00:00",
+          "query": "Tesco Clubcard",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "positive"
+        },
         {
           "id": "5808819f5ad09a83",
           "source": "youtube",
@@ -189,9 +274,9 @@
         }
       ],
       "quality_summary": {
-        "dashboard_items": 0,
-        "background_items": 1,
-        "discarded_items": 0,
+        "dashboard_items": 2,
+        "background_items": 3,
+        "discarded_items": 17,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
       },
