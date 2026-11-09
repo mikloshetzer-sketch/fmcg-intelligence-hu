@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-11-08T22:19:25.221318+00:00",
+  "updated_at": "2026-11-09T06:59:29.439387+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-11-08T22:19:25.221318+00:00",
+    "updated_at": "2026-11-09T06:59:29.439387+00:00",
     "leader_social": "Penny",
     "leader_social_index": 29,
     "dominant_social_topic": "árak és akciók",
@@ -126,33 +126,71 @@
     },
     {
       "company": "Tesco",
-      "social_mentions": 0,
-      "raw_social_mentions": 0,
+      "social_mentions": 1,
+      "raw_social_mentions": 1,
       "dashboard_mentions": 0,
-      "background_mentions": 0,
+      "background_mentions": 1,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 0,
+      "weighted_social_mentions": 0.5,
       "hu_relevant_mentions": 0,
-      "social_index": 0,
+      "social_index": 16,
       "social_sources": {
         "reddit": 0,
-        "youtube": 0,
+        "youtube": 1,
         "mastodon": 0
       },
       "raw_social_sources": {
         "reddit": 0,
-        "youtube": 0,
+        "youtube": 1,
         "mastodon": 0
       },
-      "dominant_social_topic": "általános vállalati említés",
-      "top_social_topics": [],
-      "topic_sentiment": {},
+      "dominant_social_topic": "árak és akciók",
+      "top_social_topics": [
+        {
+          "topic": "árak és akciók",
+          "score": 0.5
+        },
+        {
+          "topic": "bolti élmény",
+          "score": 0.5
+        }
+      ],
+      "topic_sentiment": {
+        "árak és akciók": {
+          "positive": 0.0,
+          "neutral": 0.5,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        },
+        "bolti élmény": {
+          "positive": 0.0,
+          "neutral": 0.5,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        }
+      },
       "social_sentiment": "neutral",
       "latest_items": [],
-      "background_items": [],
+      "background_items": [
+        {
+          "id": "5808819f5ad09a83",
+          "source": "youtube",
+          "company": "Tesco",
+          "title": "heti tesco bevásárlás - YouTube",
+          "summary": "heti tesco bevásárlás YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5BZkVfQ2ZZRWpscWJLTTlnc1AzcGhKdHZQbUZUbDdZanlIX2I4amVrMkNHOXIxcmV3cGwzcHR1MzB3cXB4dWI0MmdRQlgtOGRHYXBUYWV3?oc=5",
+          "published": "Wed, 16 Sep 2026 14:24:37 GMT",
+          "query": "site:youtube.com \"Tesco online bevásárlás\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        }
+      ],
       "quality_summary": {
         "dashboard_items": 0,
-        "background_items": 0,
+        "background_items": 1,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
@@ -388,29 +426,29 @@
     },
     {
       "company": "CBA",
-      "social_mentions": 5,
-      "raw_social_mentions": 5,
-      "dashboard_mentions": 5,
+      "social_mentions": 4,
+      "raw_social_mentions": 4,
+      "dashboard_mentions": 4,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 5.0,
-      "hu_relevant_mentions": 5,
+      "weighted_social_mentions": 4.0,
+      "hu_relevant_mentions": 4,
       "social_index": 29,
       "social_sources": {
         "reddit": 0,
-        "youtube": 5,
+        "youtube": 4,
         "mastodon": 0
       },
       "raw_social_sources": {
         "reddit": 0,
-        "youtube": 5,
+        "youtube": 4,
         "mastodon": 0
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 4.0
+          "score": 3.0
         },
         {
           "topic": "bolti élmény",
@@ -427,7 +465,7 @@
         },
         "árak és akciók": {
           "positive": 0.0,
-          "neutral": 4.0,
+          "neutral": 3.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -475,19 +513,6 @@
           "item_sentiment": "neutral"
         },
         {
-          "id": "b35cf2789b72f5ed",
-          "source": "youtube",
-          "company": "CBA",
-          "title": "CBA Príma akciós újság 07.16. - 07.22. - YouTube",
-          "summary": "CBA Príma akciós újság 07.16. - 07.22. YouTube",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9aTDExZmZoNTBvZk5WQjBNSS1PT3NZZHRlMzhlcFROdFZ6dVNiMWplXy1xVWV6eVlMT1J0bi1jcjNnMXdHWTAxaUJYY3FoVnlRbU5LUUpn?oc=5",
-          "published": "Mon, 13 Jul 2026 09:41:41 GMT",
-          "query": "site:youtube.com \"CBA Príma\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
-          "hu_relevance": 1.0,
-          "relevance_bucket": "dashboard",
-          "item_sentiment": "neutral"
-        },
-        {
           "id": "ad37c605a541e686",
           "source": "youtube",
           "company": "CBA",
@@ -503,7 +528,7 @@
       ],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 5,
+        "dashboard_items": 4,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
