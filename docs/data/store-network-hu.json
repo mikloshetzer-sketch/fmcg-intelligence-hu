@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-02T11:03:56.890951+00:00",
+  "updated_at": "2026-11-09T11:29:36.770617+00:00",
   "version": "store-network-hu-v2.0-non-lidl-osm",
   "scope": "Hungarian FMCG store network from OSM + optional overrides",
   "method_note": "Ez a verzió Lidl nélkül építi a bolthálózatot. ALDI, SPAR, Tesco, Auchan és Penny OSM/Overpass alapján frissül. Ha egy láncra 0 találat jön, a script megtartja a korábbi store-network-hu.json adott láncra vonatkozó adatait. Lidl külön, saját üzletlista alapján kerül majd be.",
@@ -2574,8 +2574,8 @@
       "area": "Miskolc",
       "region": "Észak-Magyarország",
       "address": "3525 Miskolc, Szentpáli utca 2-6",
-      "lat": 48.10668,
-      "lon": 20.78887,
+      "lat": 48.106508,
+      "lon": 20.78854,
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 12920466363,
@@ -6830,6 +6830,27 @@
       ]
     },
     {
+      "store_id": "penny_salgotarjan_penny_173555798",
+      "company": "Penny",
+      "name": "Penny",
+      "city": "Salgótarján",
+      "area": "Salgótarján",
+      "region": "Észak-Magyarország",
+      "address": "3100 Salgótarján, Bem József utca 7",
+      "lat": 48.104368,
+      "lon": 19.801984,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 173555798,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "Penny",
+        "Penny Salgótarján",
+        "3100 Salgótarján, Bem József utca 7"
+      ]
+    },
+    {
       "store_id": "penny_siklos_penny_690021095",
       "company": "Penny",
       "name": "Penny",
@@ -8405,27 +8426,6 @@
       ]
     },
     {
-      "store_id": "penny_na_penny_173555798",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 48.104368,
-      "lon": 19.801984,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 173555798,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
       "store_id": "penny_na_penny_184341380",
       "company": "Penny",
       "name": "Penny",
@@ -9588,8 +9588,8 @@
       "area": "Újfehértó",
       "region": "n.a.",
       "address": "4244 Újfehértó, Debreceni út 7-9",
-      "lat": 47.796767,
-      "lon": 21.682378,
+      "lat": 47.796743,
+      "lon": 21.68234,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 235029329,
@@ -14355,8 +14355,8 @@
       "area": "Pásztó",
       "region": "n.a.",
       "address": "3060 Pásztó, Fő utca 83-87",
-      "lat": 47.920555,
-      "lon": 19.700432,
+      "lat": 47.920536,
+      "lon": 19.700424,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 631292007,

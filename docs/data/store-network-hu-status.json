@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-02T11:03:56.890951+00:00",
+  "updated_at": "2026-11-09T11:29:36.770617+00:00",
   "status": "ok",
   "version": "store-network-hu-v2.0-non-lidl-osm",
   "source": "openstreetmap_overpass_non_lidl_plus_fallback_plus_optional_overrides",
@@ -25,8 +25,8 @@
         "Aldi"
       ],
       "notes": [
-        "exact_brand_error=HTTPSConnectionPool(host='overpass.kumi.systems', port=443): Read timed out. (read timeout=150)",
-        "regex_brand=189 via https://overpass-api.de/api/interpreter"
+        "exact_brand=189 via https://overpass-api.de/api/interpreter",
+        "regex_brand_error=504 Server Error: Gateway Timeout for url: https://overpass.kumi.systems/api/interpreter"
       ]
     },
     {
@@ -41,8 +41,8 @@
         "Interspar"
       ],
       "notes": [
-        "exact_brand=523 via https://overpass-api.de/api/interpreter",
-        "regex_brand=0 via https://overpass.kumi.systems/api/interpreter"
+        "exact_brand_error=HTTPSConnectionPool(host='overpass.kumi.systems', port=443): Read timed out. (read timeout=150)",
+        "regex_brand=523 via https://overpass-api.de/api/interpreter"
       ]
     },
     {
@@ -55,7 +55,7 @@
         "TESCO"
       ],
       "notes": [
-        "exact_brand_error=HTTPSConnectionPool(host='overpass.kumi.systems', port=443): Read timed out. (read timeout=150)",
+        "exact_brand_error=504 Server Error: Gateway Timeout for url: https://overpass.kumi.systems/api/interpreter",
         "regex_brand=187 via https://overpass-api.de/api/interpreter"
       ]
     },
@@ -69,7 +69,7 @@
         "AUCHAN"
       ],
       "notes": [
-        "exact_brand_error=HTTPSConnectionPool(host='overpass.kumi.systems', port=443): Read timed out. (read timeout=150)",
+        "exact_brand_error=504 Server Error: Gateway Timeout for url: https://overpass.kumi.systems/api/interpreter",
         "regex_brand=25 via https://overpass-api.de/api/interpreter"
       ]
     },
@@ -86,7 +86,7 @@
       ],
       "notes": [
         "exact_brand=243 via https://overpass-api.de/api/interpreter",
-        "regex_brand_error=HTTPSConnectionPool(host='overpass.kumi.systems', port=443): Read timed out. (read timeout=150)"
+        "regex_brand=243 via https://overpass-api.de/api/interpreter"
       ]
     }
   ],
