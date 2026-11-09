@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-02T11:53:16+00:00",
+  "updated_at": "2026-11-09T12:26:16+00:00",
   "status": "ok",
   "source_file": "docs/data/employer-review-texts.json",
   "method": "employee_reputation_index_v1_keyword_and_sentiment_based",
@@ -104,526 +104,73 @@
     },
     {
       "company": "Lidl",
-      "review_count": 44,
-      "employee_reputation_index": 79,
-      "index_level": "kedvező",
-      "positive_pct": 57,
-      "neutral_pct": 34,
-      "negative_pct": 9,
-      "positive_count": 25,
+      "review_count": 24,
+      "employee_reputation_index": 62,
+      "index_level": "vegyes",
+      "positive_pct": 29,
+      "neutral_pct": 62,
+      "negative_pct": 8,
+      "positive_count": 7,
       "neutral_count": 15,
-      "negative_count": 4,
+      "negative_count": 2,
       "stress_risk": {
-        "score": 82,
-        "level": "magas"
+        "score": 40,
+        "level": "alacsony"
       },
       "salary_risk": {
-        "score": 50,
+        "score": 62,
         "level": "közepes"
       },
       "leadership_risk": {
-        "score": 24,
+        "score": 37,
         "level": "alacsony"
       },
       "team_strength": {
-        "score": 83,
+        "score": 100,
         "level": "kedvező"
       },
       "dimension_scores": {
         "salary": {
-          "mention_count": 19,
-          "mention_share_pct": 43,
-          "positive_count": 9,
+          "mention_count": 14,
+          "mention_share_pct": 58,
+          "positive_count": 4,
           "negative_count": 2,
-          "risk_score": 50,
+          "risk_score": 62,
           "risk_level": "közepes"
         },
         "workload": {
-          "mention_count": 4,
-          "mention_share_pct": 9,
-          "positive_count": 1,
+          "mention_count": 3,
+          "mention_share_pct": 12,
+          "positive_count": 0,
           "negative_count": 0,
-          "risk_score": 34,
+          "risk_score": 40,
           "risk_level": "alacsony"
         },
         "leadership": {
-          "mention_count": 4,
-          "mention_share_pct": 9,
-          "positive_count": 3,
-          "negative_count": 0,
-          "risk_score": 24,
-          "risk_level": "alacsony"
-        },
-        "team": {
-          "mention_count": 5,
-          "mention_share_pct": 11,
-          "positive_count": 5,
-          "negative_count": 0,
-          "risk_score": 20,
-          "risk_level": "alacsony"
-        },
-        "schedule": {
-          "mention_count": 3,
-          "mention_share_pct": 7,
-          "positive_count": 0,
-          "negative_count": 0,
-          "risk_score": 38,
-          "risk_level": "alacsony"
-        },
-        "workplace_climate": {
-          "mention_count": 2,
-          "mention_share_pct": 5,
-          "positive_count": 0,
-          "negative_count": 2,
-          "risk_score": 82,
-          "risk_level": "magas"
-        },
-        "benefits": {
-          "mention_count": 3,
-          "mention_share_pct": 7,
-          "positive_count": 3,
-          "negative_count": 0,
-          "risk_score": 18,
-          "risk_level": "alacsony"
-        },
-        "development": {
           "mention_count": 1,
-          "mention_share_pct": 2,
-          "positive_count": 1,
-          "negative_count": 0,
-          "risk_score": 16,
-          "risk_level": "alacsony"
-        }
-      },
-      "topic_distribution": [
-        {
-          "topic": "bérezés",
-          "count": 19,
-          "share_pct": 43
-        },
-        {
-          "topic": "csapat",
-          "count": 5,
-          "share_pct": 11
-        },
-        {
-          "topic": "vezetés",
-          "count": 4,
-          "share_pct": 9
-        },
-        {
-          "topic": "munkaterhelés",
-          "count": 4,
-          "share_pct": 9
-        },
-        {
-          "topic": "általános munkáltatói tapasztalat",
-          "count": 3,
-          "share_pct": 7
-        },
-        {
-          "topic": "beosztás",
-          "count": 3,
-          "share_pct": 7
-        },
-        {
-          "topic": "juttatások",
-          "count": 3,
-          "share_pct": 7
-        },
-        {
-          "topic": "munkahelyi légkör",
-          "count": 2,
-          "share_pct": 5
-        },
-        {
-          "topic": "előrelépés",
-          "count": 1,
-          "share_pct": 2
-        }
-      ],
-      "source_distribution": [
-        {
-          "source": "gyakorikerdesek_direct_page",
-          "count": 24,
-          "share_pct": 55
-        },
-        {
-          "source": "profession_direct_review_page",
-          "count": 20,
-          "share_pct": 45
-        }
-      ],
-      "sample_quotes": [
-        {
-          "id": "8e2610d2d1136836",
-          "company": "Lidl",
-          "source": "profession_direct_review_page",
-          "source_url": "https://www.profession.hu/cegek/lidl-magyarorszag-bt/velemenyek",
-          "published_or_found_date": "",
-          "date_collected": "2026-11-02T11:46:04+00:00",
-          "topic": "bérezés",
-          "sentiment": "positive",
-          "quote": "Pozitívumok Vezetőség támogató és kedves. Bérezés arányaiban jó a hasonló helyekhez képest. Ajánlaná ismerőseinek Negatívumok Fizikai és",
-          "length": 136,
-          "review_signal_score": 20,
-          "confidence": "high",
-          "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
-        },
-        {
-          "id": "695cce1edebbf47d",
-          "company": "Lidl",
-          "source": "profession_direct_review_page",
-          "source_url": "https://www.profession.hu/cegek/lidl-magyarorszag-bt/velemenyek",
-          "published_or_found_date": "",
-          "date_collected": "2026-11-02T11:46:04+00:00",
-          "topic": "csapat",
-          "sentiment": "positive",
-          "quote": "Pozitívumok összetartó csapat, kellemes munkakörnyezet segítőkész kollégák f Ajánlaná ismerőseinek Negatívumok korai munk",
-          "length": 121,
-          "review_signal_score": 16,
-          "confidence": "high",
-          "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
-        },
-        {
-          "id": "eb7d0b6ecf37174e",
-          "company": "Lidl",
-          "source": "profession_direct_review_page",
-          "source_url": "https://www.profession.hu/cegek/lidl-magyarorszag-bt/velemenyek",
-          "published_or_found_date": "",
-          "date_collected": "2026-11-02T11:46:04+00:00",
-          "topic": "bérezés",
-          "sentiment": "positive",
-          "quote": "Pozitívumok Jó bérezés, extra juttatások, folyamatos fejlődési lehetőség Ajánlaná ismerőseinek Negatívumok Alkalmatla",
-          "length": 117,
-          "review_signal_score": 20,
-          "confidence": "high",
-          "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
-        },
-        {
-          "id": "31cd22e675cde87f",
-          "company": "Lidl",
-          "source": "profession_direct_review_page",
-          "source_url": "https://www.profession.hu/cegek/lidl-magyarorszag-bt/velemenyek",
-          "published_or_found_date": "",
-          "date_collected": "2026-11-02T11:46:04+00:00",
-          "topic": "vezetés",
-          "sentiment": "positive",
-          "quote": "Pozitívumok Sokat lehet fejlődni, kommunikáció logikus gondolkozás és idő nyomás alatt történő munkavégzésben. Negatívumok Nem ismeri",
-          "length": 133,
-          "review_signal_score": 14,
-          "confidence": "high",
-          "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
-        },
-        {
-          "id": "ed388bde3989e84e",
-          "company": "Lidl",
-          "source": "profession_direct_review_page",
-          "source_url": "https://www.profession.hu/cegek/lidl-magyarorszag-bt/velemenyek",
-          "published_or_found_date": "",
-          "date_collected": "2026-11-02T11:46:04+00:00",
-          "topic": "általános munkáltatói tapasztalat",
-          "sentiment": "positive",
-          "quote": "Pozitívumok Változatos feladatok és emberi kapcsolatok erősítése. Ajánlaná ismerőseinek Negatívumok Eredményes",
-          "length": 110,
-          "review_signal_score": 16,
-          "confidence": "high",
-          "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
-        }
-      ]
-    },
-    {
-      "company": "Aldi",
-      "review_count": 20,
-      "employee_reputation_index": 73,
-      "index_level": "kedvező",
-      "positive_pct": 70,
-      "neutral_pct": 15,
-      "negative_pct": 15,
-      "positive_count": 14,
-      "neutral_count": 3,
-      "negative_count": 3,
-      "stress_risk": {
-        "score": 82,
-        "level": "magas"
-      },
-      "salary_risk": {
-        "score": 47,
-        "level": "közepes"
-      },
-      "leadership_risk": {
-        "score": 17,
-        "level": "alacsony"
-      },
-      "team_strength": {
-        "score": 77,
-        "level": "kedvező"
-      },
-      "dimension_scores": {
-        "salary": {
-          "mention_count": 11,
-          "mention_share_pct": 55,
-          "positive_count": 9,
-          "negative_count": 1,
-          "risk_score": 47,
-          "risk_level": "közepes"
-        },
-        "workload": {
-          "mention_count": 1,
-          "mention_share_pct": 5,
-          "positive_count": 0,
-          "negative_count": 1,
-          "risk_score": 82,
-          "risk_level": "magas"
-        },
-        "leadership": {
-          "mention_count": 1,
-          "mention_share_pct": 5,
-          "positive_count": 1,
-          "negative_count": 0,
-          "risk_score": 17,
-          "risk_level": "alacsony"
-        },
-        "team": {
-          "mention_count": 4,
-          "mention_share_pct": 20,
-          "positive_count": 3,
-          "negative_count": 0,
-          "risk_score": 29,
-          "risk_level": "alacsony"
-        },
-        "schedule": {
-          "mention_count": 0,
-          "mention_share_pct": 0,
-          "positive_count": 0,
-          "negative_count": 0,
-          "risk_score": 0,
-          "risk_level": "alacsony"
-        },
-        "workplace_climate": {
-          "mention_count": 1,
-          "mention_share_pct": 5,
-          "positive_count": 0,
-          "negative_count": 1,
-          "risk_score": 82,
-          "risk_level": "magas"
-        },
-        "benefits": {
-          "mention_count": 1,
-          "mention_share_pct": 5,
+          "mention_share_pct": 4,
           "positive_count": 0,
           "negative_count": 0,
           "risk_score": 37,
           "risk_level": "alacsony"
         },
-        "development": {
-          "mention_count": 1,
-          "mention_share_pct": 5,
-          "positive_count": 1,
-          "negative_count": 0,
-          "risk_score": 17,
-          "risk_level": "alacsony"
-        }
-      },
-      "topic_distribution": [
-        {
-          "topic": "bérezés",
-          "count": 11,
-          "share_pct": 55
-        },
-        {
-          "topic": "csapat",
-          "count": 4,
-          "share_pct": 20
-        },
-        {
-          "topic": "juttatások",
-          "count": 1,
-          "share_pct": 5
-        },
-        {
-          "topic": "előrelépés",
-          "count": 1,
-          "share_pct": 5
-        },
-        {
-          "topic": "munkaterhelés",
-          "count": 1,
-          "share_pct": 5
-        },
-        {
-          "topic": "munkahelyi légkör",
-          "count": 1,
-          "share_pct": 5
-        },
-        {
-          "topic": "vezetés",
-          "count": 1,
-          "share_pct": 5
-        }
-      ],
-      "source_distribution": [
-        {
-          "source": "profession_direct_review_page",
-          "count": 20,
-          "share_pct": 100
-        }
-      ],
-      "sample_quotes": [
-        {
-          "id": "bc16c26860fd426f",
-          "company": "Aldi",
-          "source": "profession_direct_review_page",
-          "source_url": "https://www.profession.hu/cegek/aldi-magyarorszag-elelmiszer-bt/velemenyek",
-          "published_or_found_date": "",
-          "date_collected": "2026-11-02T11:47:31+00:00",
-          "topic": "bérezés",
-          "sentiment": "positive",
-          "quote": "Pozitívumok Munkatársak segítőkészek. Ingyen zöldség-gyümölcs, kv. Negatívumok Bérezés ni",
-          "length": 89,
-          "review_signal_score": 18,
-          "confidence": "high",
-          "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
-        },
-        {
-          "id": "a3455df4be8c1e34",
-          "company": "Aldi",
-          "source": "profession_direct_review_page",
-          "source_url": "https://www.profession.hu/cegek/aldi-magyarorszag-elelmiszer-bt/velemenyek",
-          "published_or_found_date": "",
-          "date_collected": "2026-11-02T11:47:31+00:00",
-          "topic": "bérezés",
-          "sentiment": "neutral",
-          "quote": "Pozitívumok A bérezés átlag feletti. Az iroda az M6, M0 felől könnyen megközelíthető. Negatívumok rossz komm",
-          "length": 108,
-          "review_signal_score": 16,
-          "confidence": "high",
-          "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
-        },
-        {
-          "id": "16146e0aafdac18d",
-          "company": "Aldi",
-          "source": "profession_direct_review_page",
-          "source_url": "https://www.profession.hu/cegek/aldi-magyarorszag-elelmiszer-bt/velemenyek",
-          "published_or_found_date": "",
-          "date_collected": "2026-11-02T11:47:31+00:00",
-          "topic": "bérezés",
-          "sentiment": "positive",
-          "quote": "Pozitívumok összetartó csapat remek bérezés könnyen elsajátítható Ajánlaná ismerőseinek Negatívumok nem tapasz",
-          "length": 110,
-          "review_signal_score": 18,
-          "confidence": "high",
-          "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
-        },
-        {
-          "id": "aabffdb410368b6b",
-          "company": "Aldi",
-          "source": "profession_direct_review_page",
-          "source_url": "https://www.profession.hu/cegek/aldi-magyarorszag-elelmiszer-bt/velemenyek",
-          "published_or_found_date": "",
-          "date_collected": "2026-11-02T11:47:31+00:00",
-          "topic": "juttatások",
-          "sentiment": "neutral",
-          "quote": "Pozitívumok Ingyenes a zöldség és a gyümölcs fogyasztás,a kávé is Negatívumok Kevés léts",
-          "length": 88,
-          "review_signal_score": 14,
-          "confidence": "high",
-          "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
-        },
-        {
-          "id": "986741cf9671e4ac",
-          "company": "Aldi",
-          "source": "profession_direct_review_page",
-          "source_url": "https://www.profession.hu/cegek/aldi-magyarorszag-elelmiszer-bt/velemenyek",
-          "published_or_found_date": "",
-          "date_collected": "2026-11-02T11:47:31+00:00",
-          "topic": "csapat",
-          "sentiment": "positive",
-          "quote": "Pozitívumok nagy létszámú csapatban együtt dolgozás . Ajánlaná ismerőseinek Negatívumok vásárló vi",
-          "length": 98,
-          "review_signal_score": 16,
-          "confidence": "high",
-          "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
-        }
-      ]
-    },
-    {
-      "company": "Penny",
-      "review_count": 28,
-      "employee_reputation_index": 52,
-      "index_level": "vegyes",
-      "positive_pct": 50,
-      "neutral_pct": 18,
-      "negative_pct": 32,
-      "positive_count": 14,
-      "neutral_count": 5,
-      "negative_count": 9,
-      "stress_risk": {
-        "score": 77,
-        "level": "magas"
-      },
-      "salary_risk": {
-        "score": 40,
-        "level": "alacsony"
-      },
-      "leadership_risk": {
-        "score": 51,
-        "level": "közepes"
-      },
-      "team_strength": {
-        "score": 78,
-        "level": "kedvező"
-      },
-      "dimension_scores": {
-        "salary": {
-          "mention_count": 5,
-          "mention_share_pct": 18,
-          "positive_count": 3,
-          "negative_count": 1,
-          "risk_score": 40,
-          "risk_level": "alacsony"
-        },
-        "workload": {
+        "team": {
           "mention_count": 0,
           "mention_share_pct": 0,
           "positive_count": 0,
           "negative_count": 0,
           "risk_score": 0,
-          "risk_level": "alacsony"
-        },
-        "leadership": {
-          "mention_count": 2,
-          "mention_share_pct": 7,
-          "positive_count": 1,
-          "negative_count": 1,
-          "risk_score": 51,
-          "risk_level": "közepes"
-        },
-        "team": {
-          "mention_count": 4,
-          "mention_share_pct": 14,
-          "positive_count": 3,
-          "negative_count": 0,
-          "risk_score": 26,
           "risk_level": "alacsony"
         },
         "schedule": {
           "mention_count": 3,
-          "mention_share_pct": 11,
-          "positive_count": 2,
-          "negative_count": 1,
-          "risk_score": 41,
+          "mention_share_pct": 12,
+          "positive_count": 0,
+          "negative_count": 0,
+          "risk_score": 40,
           "risk_level": "alacsony"
         },
         "workplace_climate": {
-          "mention_count": 9,
-          "mention_share_pct": 32,
-          "positive_count": 1,
-          "negative_count": 6,
-          "risk_score": 77,
-          "risk_level": "magas"
-        },
-        "benefits": {
           "mention_count": 0,
           "mention_share_pct": 0,
           "positive_count": 0,
@@ -631,136 +178,421 @@
           "risk_score": 0,
           "risk_level": "alacsony"
         },
-        "development": {
-          "mention_count": 1,
-          "mention_share_pct": 4,
-          "positive_count": 1,
+        "benefits": {
+          "mention_count": 3,
+          "mention_share_pct": 12,
+          "positive_count": 3,
           "negative_count": 0,
-          "risk_score": 17,
+          "risk_score": 20,
+          "risk_level": "alacsony"
+        },
+        "development": {
+          "mention_count": 0,
+          "mention_share_pct": 0,
+          "positive_count": 0,
+          "negative_count": 0,
+          "risk_score": 0,
           "risk_level": "alacsony"
         }
       },
       "topic_distribution": [
         {
-          "topic": "munkahelyi légkör",
-          "count": 9,
-          "share_pct": 32
-        },
-        {
           "topic": "bérezés",
-          "count": 5,
-          "share_pct": 18
+          "count": 14,
+          "share_pct": 58
         },
         {
-          "topic": "csapat",
-          "count": 4,
-          "share_pct": 14
-        },
-        {
-          "topic": "általános munkáltatói tapasztalat",
-          "count": 4,
-          "share_pct": 14
+          "topic": "munkaterhelés",
+          "count": 3,
+          "share_pct": 12
         },
         {
           "topic": "beosztás",
           "count": 3,
-          "share_pct": 11
+          "share_pct": 12
+        },
+        {
+          "topic": "juttatások",
+          "count": 3,
+          "share_pct": 12
         },
         {
           "topic": "vezetés",
-          "count": 2,
-          "share_pct": 7
-        },
-        {
-          "topic": "előrelépés",
           "count": 1,
           "share_pct": 4
         }
       ],
       "source_distribution": [
         {
-          "source": "profession_direct_review_page",
-          "count": 20,
-          "share_pct": 71
-        },
-        {
           "source": "gyakorikerdesek_direct_page",
-          "count": 8,
-          "share_pct": 29
+          "count": 24,
+          "share_pct": 100
         }
       ],
       "sample_quotes": [
         {
-          "id": "20407479a5e3af4f",
-          "company": "Penny",
-          "source": "profession_direct_review_page",
-          "source_url": "https://www.profession.hu/cegek/penny-market-kft/velemenyek",
+          "id": "469be87955cdd555",
+          "company": "Lidl",
+          "source": "gyakorikerdesek_direct_page",
+          "source_url": "https://www.gyakorikerdesek.hu/uzlet-es-penzugyek__karrier-fizetes__11120824-lidl-ben-mennyit-keres-pontosan-egy-bolti-alkalmazott",
           "published_or_found_date": "",
-          "date_collected": "2026-11-02T11:48:42+00:00",
+          "date_collected": "2026-11-09T12:16:49+00:00",
+          "topic": "bérezés",
+          "sentiment": "neutral",
+          "quote": "LIDL-ben mennyit keres pontosan egy bolti alkalmazott? Figyelt kérdés Van itt valaki aki LIDL-ben dolgozik/dolgozott bolti alkalmazott (pénztáros/árufeltöltő) pozícióban? Pontosan mennyi a nettó fizetésed havonta, amit kézhez kapsz pótlékokkal meg mindennel együtt? Mennyire lehet belőle megélni? Előre is köszönöm a válaszokat :) #fizetés #Lidl #pénz 19:49",
+          "length": 357,
+          "review_signal_score": 6,
+          "confidence": "medium",
+          "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
+        },
+        {
+          "id": "c669745c612faba9",
+          "company": "Lidl",
+          "source": "gyakorikerdesek_direct_page",
+          "source_url": "https://www.gyakorikerdesek.hu/uzlet-es-penzugyek__karrier-fizetes__11120824-lidl-ben-mennyit-keres-pontosan-egy-bolti-alkalmazott",
+          "published_or_found_date": "",
+          "date_collected": "2026-11-09T12:16:49+00:00",
+          "topic": "bérezés",
+          "sentiment": "neutral",
+          "quote": "Van itt valaki aki LIDL-ben dolgozik/dolgozott bolti alkalmazott (pénztáros/árufeltöltő) pozícióban?",
+          "length": 100,
+          "review_signal_score": 4,
+          "confidence": "medium",
+          "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
+        },
+        {
+          "id": "adc1cae34533421f",
+          "company": "Lidl",
+          "source": "gyakorikerdesek_direct_page",
+          "source_url": "https://www.gyakorikerdesek.hu/uzlet-es-penzugyek__karrier-fizetes__11120824-lidl-ben-mennyit-keres-pontosan-egy-bolti-alkalmazott",
+          "published_or_found_date": "",
+          "date_collected": "2026-11-09T12:16:49+00:00",
+          "topic": "vezetés",
+          "sentiment": "neutral",
+          "quote": "A beosztás is dinamikus,mondjuk nincsen sok emberre szükség,üzletvezető hazaküld aztán visszahív pár órával később.",
+          "length": 115,
+          "review_signal_score": 4,
+          "confidence": "medium",
+          "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
+        },
+        {
+          "id": "9f983ccaf26a1869",
+          "company": "Lidl",
+          "source": "gyakorikerdesek_direct_page",
+          "source_url": "https://www.gyakorikerdesek.hu/uzlet-es-penzugyek__karrier-fizetes__11120824-lidl-ben-mennyit-keres-pontosan-egy-bolti-alkalmazott",
+          "published_or_found_date": "",
+          "date_collected": "2026-11-09T12:16:49+00:00",
+          "topic": "bérezés",
+          "sentiment": "neutral",
+          "quote": "Főkategóriák Üzlet és pénzügyek Adózás, könyvelés Banki ügyek, kamat, hitel Biztosítások Karrier, fizetés Saját vállalkozás Egyéb kérdések Kezdőoldal Állatok Családi kapcsolatok Egészség Elektronikus eszközök Emberek Ételek, italok Ezotéria Felnőtt párkapcsolatok Fogyókúrák Gyerekvállalás, nevelés Ismerkedés Közlekedés Közoktatás, tanfolyamok Kultúra és közösség Otthon Politika Sport, mozgás Számítástechnika Szépség és divat Szexualitás Szórakozás Tini párkapcsolatok Tudományok Utazás Ünnepek Üzlet és pénzügyek Egyéb kérdések Népszerű témák: Állás Állásinterjú Álláskeresés Bér Bolt Budapest Diákmunka Diploma Egyetem Felmondás Fizetés Futár Gyár Interjú IT Karrier Lidl MÁV Megélhetés...",
+          "length": 694,
+          "review_signal_score": 4,
+          "confidence": "medium",
+          "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
+        },
+        {
+          "id": "3b04a72487bdf4e8",
+          "company": "Lidl",
+          "source": "gyakorikerdesek_direct_page",
+          "source_url": "https://www.gyakorikerdesek.hu/uzlet-es-penzugyek__karrier-fizetes__11120824-lidl-ben-mennyit-keres-pontosan-egy-bolti-alkalmazott",
+          "published_or_found_date": "",
+          "date_collected": "2026-11-09T12:16:49+00:00",
+          "topic": "bérezés",
+          "sentiment": "neutral",
+          "quote": "Népszerű témák: Állás Állásinterjú Álláskeresés Bér Bolt Budapest Diákmunka Diploma Egyetem Felmondás Fizetés Futár Gyár Interjú IT Karrier Lidl MÁV Megélhetés Megtakarítás Munka Munkahely Munkanélküli Munkanélküliség Önéletrajz Pályakezdő Pénz Pénzügy Szakma Tanulás",
+          "length": 267,
+          "review_signal_score": 6,
+          "confidence": "medium",
+          "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
+        }
+      ]
+    },
+    {
+      "company": "Aldi",
+      "review_count": 0,
+      "employee_reputation_index": 50,
+      "index_level": "vegyes",
+      "positive_pct": 0,
+      "neutral_pct": 0,
+      "negative_pct": 0,
+      "positive_count": 0,
+      "neutral_count": 0,
+      "negative_count": 0,
+      "stress_risk": {
+        "score": 0,
+        "level": "alacsony"
+      },
+      "salary_risk": {
+        "score": 0,
+        "level": "alacsony"
+      },
+      "leadership_risk": {
+        "score": 0,
+        "level": "alacsony"
+      },
+      "team_strength": {
+        "score": 100,
+        "level": "kedvező"
+      },
+      "dimension_scores": {
+        "salary": {
+          "mention_count": 0,
+          "mention_share_pct": 0,
+          "positive_count": 0,
+          "negative_count": 0,
+          "risk_score": 0,
+          "risk_level": "alacsony"
+        },
+        "workload": {
+          "mention_count": 0,
+          "mention_share_pct": 0,
+          "positive_count": 0,
+          "negative_count": 0,
+          "risk_score": 0,
+          "risk_level": "alacsony"
+        },
+        "leadership": {
+          "mention_count": 0,
+          "mention_share_pct": 0,
+          "positive_count": 0,
+          "negative_count": 0,
+          "risk_score": 0,
+          "risk_level": "alacsony"
+        },
+        "team": {
+          "mention_count": 0,
+          "mention_share_pct": 0,
+          "positive_count": 0,
+          "negative_count": 0,
+          "risk_score": 0,
+          "risk_level": "alacsony"
+        },
+        "schedule": {
+          "mention_count": 0,
+          "mention_share_pct": 0,
+          "positive_count": 0,
+          "negative_count": 0,
+          "risk_score": 0,
+          "risk_level": "alacsony"
+        },
+        "workplace_climate": {
+          "mention_count": 0,
+          "mention_share_pct": 0,
+          "positive_count": 0,
+          "negative_count": 0,
+          "risk_score": 0,
+          "risk_level": "alacsony"
+        },
+        "benefits": {
+          "mention_count": 0,
+          "mention_share_pct": 0,
+          "positive_count": 0,
+          "negative_count": 0,
+          "risk_score": 0,
+          "risk_level": "alacsony"
+        },
+        "development": {
+          "mention_count": 0,
+          "mention_share_pct": 0,
+          "positive_count": 0,
+          "negative_count": 0,
+          "risk_score": 0,
+          "risk_level": "alacsony"
+        }
+      },
+      "topic_distribution": [],
+      "source_distribution": [],
+      "sample_quotes": []
+    },
+    {
+      "company": "Penny",
+      "review_count": 8,
+      "employee_reputation_index": 83,
+      "index_level": "kedvező",
+      "positive_pct": 75,
+      "neutral_pct": 12,
+      "negative_pct": 12,
+      "positive_count": 6,
+      "neutral_count": 1,
+      "negative_count": 1,
+      "stress_risk": {
+        "score": 26,
+        "level": "alacsony"
+      },
+      "salary_risk": {
+        "score": 59,
+        "level": "közepes"
+      },
+      "leadership_risk": {
+        "score": 0,
+        "level": "alacsony"
+      },
+      "team_strength": {
+        "score": 82,
+        "level": "kedvező"
+      },
+      "dimension_scores": {
+        "salary": {
+          "mention_count": 4,
+          "mention_share_pct": 50,
+          "positive_count": 2,
+          "negative_count": 1,
+          "risk_score": 59,
+          "risk_level": "közepes"
+        },
+        "workload": {
+          "mention_count": 0,
+          "mention_share_pct": 0,
+          "positive_count": 0,
+          "negative_count": 0,
+          "risk_score": 0,
+          "risk_level": "alacsony"
+        },
+        "leadership": {
+          "mention_count": 0,
+          "mention_share_pct": 0,
+          "positive_count": 0,
+          "negative_count": 0,
+          "risk_score": 0,
+          "risk_level": "alacsony"
+        },
+        "team": {
+          "mention_count": 2,
+          "mention_share_pct": 25,
+          "positive_count": 2,
+          "negative_count": 0,
+          "risk_score": 26,
+          "risk_level": "alacsony"
+        },
+        "schedule": {
+          "mention_count": 2,
+          "mention_share_pct": 25,
+          "positive_count": 2,
+          "negative_count": 0,
+          "risk_score": 26,
+          "risk_level": "alacsony"
+        },
+        "workplace_climate": {
+          "mention_count": 0,
+          "mention_share_pct": 0,
+          "positive_count": 0,
+          "negative_count": 0,
+          "risk_score": 0,
+          "risk_level": "alacsony"
+        },
+        "benefits": {
+          "mention_count": 0,
+          "mention_share_pct": 0,
+          "positive_count": 0,
+          "negative_count": 0,
+          "risk_score": 0,
+          "risk_level": "alacsony"
+        },
+        "development": {
+          "mention_count": 0,
+          "mention_share_pct": 0,
+          "positive_count": 0,
+          "negative_count": 0,
+          "risk_score": 0,
+          "risk_level": "alacsony"
+        }
+      },
+      "topic_distribution": [
+        {
+          "topic": "bérezés",
+          "count": 4,
+          "share_pct": 50
+        },
+        {
+          "topic": "csapat",
+          "count": 2,
+          "share_pct": 25
+        },
+        {
+          "topic": "beosztás",
+          "count": 2,
+          "share_pct": 25
+        }
+      ],
+      "source_distribution": [
+        {
+          "source": "gyakorikerdesek_direct_page",
+          "count": 8,
+          "share_pct": 100
+        }
+      ],
+      "sample_quotes": [
+        {
+          "id": "28beccd9af03bb21",
+          "company": "Penny",
+          "source": "gyakorikerdesek_direct_page",
+          "source_url": "https://www.gyakorikerdesek.hu/emberek__munkahely-kollegak__13163147-a-tesco-lidl-spar-penny-negyes-kozul-melyikben-a-legjobb-dolgozni",
+          "published_or_found_date": "",
+          "date_collected": "2026-11-09T12:20:17+00:00",
           "topic": "csapat",
           "sentiment": "positive",
-          "quote": "Pozitívumok összetartó csapat, munka-magánélet nincs egyensúlyban Negatívumok közepes bé",
-          "length": 88,
-          "review_signal_score": 14,
-          "confidence": "high",
+          "quote": "4/7 anonim válasza: Így van, ez alapvetően nem az üzletlánctól, hanem az adott egységétől függ, hogy ott milyen a kollektíva. Tescoba én is dolgoztam úgy, hogy baromi jó volt a csapat, és így a munka is elviselhetőbb volt rögtön. De ez nagyjából minden munkahelyre igaz, nem csak a kereskedelemre. Ha van egy jó csapat, akikkel gördülékenyen megy a munka, esetleg még jóba is vagytok egymással, tudtok normálisan beszélgetni, nevetni, és nincs állandó szarkavarás, akkor nagyjából minden munkahely elviselhető lesz. Csak sajnos ez ritka mint a fehér holló. jan. 16. 09:53 Hasznos számodra ez a válasz?",
+          "length": 601,
+          "review_signal_score": 4,
+          "confidence": "medium",
           "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
         },
         {
-          "id": "eea37b077426da65",
+          "id": "249bf74e1fcf72d5",
           "company": "Penny",
-          "source": "profession_direct_review_page",
-          "source_url": "https://www.profession.hu/cegek/penny-market-kft/velemenyek",
+          "source": "gyakorikerdesek_direct_page",
+          "source_url": "https://www.gyakorikerdesek.hu/emberek__munkahely-kollegak__13163147-a-tesco-lidl-spar-penny-negyes-kozul-melyikben-a-legjobb-dolgozni",
           "published_or_found_date": "",
-          "date_collected": "2026-11-02T11:48:42+00:00",
-          "topic": "vezetés",
+          "date_collected": "2026-11-09T12:20:17+00:00",
+          "topic": "beosztás",
           "sentiment": "positive",
-          "quote": "Pozitívumok Legalább a vezetőhelyettesek ember módjára viselkednek. Negatívumok alkalmatla",
-          "length": 90,
-          "review_signal_score": 16,
-          "confidence": "high",
+          "quote": "Aki már többféle gyárban is dolgozott, melyik volt az, amelyik a legjobban tetszett? Mennyire volt megterhelő/bonyolult a munka, mennyi műszak volt, sokszor kellett-e hétvégén is bejárni, volt-e norma, ha igen, mennyire teljesíthető, kellemes volt-e a környezet? Én...",
+          "length": 268,
+          "review_signal_score": 4,
+          "confidence": "medium",
           "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
         },
         {
-          "id": "e84e6602e9c4a37f",
+          "id": "4c6d5a85c81c4b9f",
           "company": "Penny",
-          "source": "profession_direct_review_page",
-          "source_url": "https://www.profession.hu/cegek/penny-market-kft/velemenyek",
+          "source": "gyakorikerdesek_direct_page",
+          "source_url": "https://www.gyakorikerdesek.hu/emberek__munkahely-kollegak__13163147-a-tesco-lidl-spar-penny-negyes-kozul-melyikben-a-legjobb-dolgozni",
           "published_or_found_date": "",
-          "date_collected": "2026-11-02T11:48:42+00:00",
+          "date_collected": "2026-11-09T12:20:17+00:00",
           "topic": "bérezés",
           "sentiment": "positive",
-          "quote": "Pozitívumok Jó munkakörnyezet, jó dolgozói csapat, elfogadható fizetés. Negatívumok Tervezhete",
-          "length": 94,
-          "review_signal_score": 16,
-          "confidence": "high",
+          "quote": "Azért érdeklődők mivel Szintújítás felé vagyok Hétvégén munkahelyet váltanék \"Portás\" Recepciós munkakörbe Budapesten és nem tudom azt hogy merre fele induljak melyik út a helyes hol jó az órabér melyik becsületes melyik jelent be téged és melyik fizet ki téged...",
+          "length": 264,
+          "review_signal_score": 4,
+          "confidence": "medium",
           "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
         },
         {
-          "id": "7fb1899c80dac3a0",
+          "id": "3aa9db7a856dd33f",
           "company": "Penny",
-          "source": "profession_direct_review_page",
-          "source_url": "https://www.profession.hu/cegek/penny-market-kft/velemenyek",
+          "source": "gyakorikerdesek_direct_page",
+          "source_url": "https://www.gyakorikerdesek.hu/emberek__munkahely-kollegak__13163147-a-tesco-lidl-spar-penny-negyes-kozul-melyikben-a-legjobb-dolgozni",
           "published_or_found_date": "",
-          "date_collected": "2026-11-02T11:48:42+00:00",
-          "topic": "csapat",
+          "date_collected": "2026-11-09T12:20:17+00:00",
+          "topic": "bérezés",
           "sentiment": "neutral",
-          "quote": "Pozitívumok nem minden kolléga egy forma, volt aki normális volt Negatívumok alacsony b",
-          "length": 87,
-          "review_signal_score": 16,
-          "confidence": "high",
+          "quote": "Főkategóriák Emberek Barátok, barátságok Emberi tulajdonságok Lakóhely, szomszédok Magány, egyedüllét Munkahely, kollégák Tanárok, iskolatársak Társasági élet Egyéb kérdések Kezdőoldal Állatok Családi kapcsolatok Egészség Elektronikus eszközök Emberek Ételek, italok Ezotéria Felnőtt párkapcsolatok Fogyókúrák Gyerekvállalás, nevelés Ismerkedés Közlekedés Közoktatás, tanfolyamok Kultúra és közösség Otthon Politika Sport, mozgás Számítástechnika Szépség és divat Szexualitás Szórakozás Tini párkapcsolatok Tudományok Utazás Ünnepek Üzlet és pénzügyek Egyéb kérdések Népszerű témák: Állás Állásinterjú Álláskeresés Budapest Cég Diákmunka Egyetem Eladó Élet Ember Felmondás Fizetés Főnök Gyár Iroda...",
+          "length": 700,
+          "review_signal_score": 6,
+          "confidence": "medium",
           "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
         },
         {
-          "id": "652581893929f585",
+          "id": "7392bff54e672fc0",
           "company": "Penny",
-          "source": "profession_direct_review_page",
-          "source_url": "https://www.profession.hu/cegek/penny-market-kft/velemenyek",
+          "source": "gyakorikerdesek_direct_page",
+          "source_url": "https://www.gyakorikerdesek.hu/emberek__munkahely-kollegak__13163147-a-tesco-lidl-spar-penny-negyes-kozul-melyikben-a-legjobb-dolgozni",
           "published_or_found_date": "",
-          "date_collected": "2026-11-02T11:48:42+00:00",
-          "topic": "általános munkáltatói tapasztalat",
-          "sentiment": "neutral",
-          "quote": "Pozitívumok semmi pozitívat nem tudok mondani! csak rengeteg rossz dolog jut az eszembe! Negatívumok gusztustal",
-          "length": 111,
+          "date_collected": "2026-11-09T12:20:17+00:00",
+          "topic": "bérezés",
+          "sentiment": "negative",
+          "quote": "Népszerű témák: Állás Állásinterjú Álláskeresés Budapest Cég Diákmunka Egyetem Eladó Élet Ember Felmondás Fizetés Főnök Gyár Iroda Karrier Kolléga Közfoglalkoztatás Közmunka Munka Munkahely Munkanélküli Munkatárs Munkavállaló Önéletrajz Pénz Stressz Szabadság Szakma Tapasztalat",
+          "length": 278,
           "review_signal_score": 14,
           "confidence": "high",
           "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
@@ -769,38 +601,38 @@
     },
     {
       "company": "Spar",
-      "review_count": 20,
-      "employee_reputation_index": 86,
-      "index_level": "kedvező",
-      "positive_pct": 85,
+      "review_count": 0,
+      "employee_reputation_index": 50,
+      "index_level": "vegyes",
+      "positive_pct": 0,
       "neutral_pct": 0,
-      "negative_pct": 15,
-      "positive_count": 17,
+      "negative_pct": 0,
+      "positive_count": 0,
       "neutral_count": 0,
-      "negative_count": 3,
+      "negative_count": 0,
       "stress_risk": {
-        "score": 82,
-        "level": "magas"
+        "score": 0,
+        "level": "alacsony"
       },
       "salary_risk": {
-        "score": 40,
+        "score": 0,
         "level": "alacsony"
       },
       "leadership_risk": {
-        "score": 52,
-        "level": "közepes"
+        "score": 0,
+        "level": "alacsony"
       },
       "team_strength": {
-        "score": 80,
+        "score": 100,
         "level": "kedvező"
       },
       "dimension_scores": {
         "salary": {
-          "mention_count": 7,
-          "mention_share_pct": 35,
-          "positive_count": 6,
-          "negative_count": 1,
-          "risk_score": 40,
+          "mention_count": 0,
+          "mention_share_pct": 0,
+          "positive_count": 0,
+          "negative_count": 0,
+          "risk_score": 0,
           "risk_level": "alacsony"
         },
         "workload": {
@@ -812,36 +644,36 @@
           "risk_level": "alacsony"
         },
         "leadership": {
-          "mention_count": 2,
-          "mention_share_pct": 10,
-          "positive_count": 1,
-          "negative_count": 1,
-          "risk_score": 52,
-          "risk_level": "közepes"
+          "mention_count": 0,
+          "mention_share_pct": 0,
+          "positive_count": 0,
+          "negative_count": 0,
+          "risk_score": 0,
+          "risk_level": "alacsony"
         },
         "team": {
-          "mention_count": 7,
-          "mention_share_pct": 35,
-          "positive_count": 7,
+          "mention_count": 0,
+          "mention_share_pct": 0,
+          "positive_count": 0,
           "negative_count": 0,
-          "risk_score": 31,
+          "risk_score": 0,
           "risk_level": "alacsony"
         },
         "schedule": {
-          "mention_count": 1,
-          "mention_share_pct": 5,
-          "positive_count": 1,
+          "mention_count": 0,
+          "mention_share_pct": 0,
+          "positive_count": 0,
           "negative_count": 0,
-          "risk_score": 17,
+          "risk_score": 0,
           "risk_level": "alacsony"
         },
         "workplace_climate": {
-          "mention_count": 1,
-          "mention_share_pct": 5,
+          "mention_count": 0,
+          "mention_share_pct": 0,
           "positive_count": 0,
-          "negative_count": 1,
-          "risk_score": 82,
-          "risk_level": "magas"
+          "negative_count": 0,
+          "risk_score": 0,
+          "risk_level": "alacsony"
         },
         "benefits": {
           "mention_count": 0,
@@ -852,357 +684,214 @@
           "risk_level": "alacsony"
         },
         "development": {
-          "mention_count": 1,
-          "mention_share_pct": 5,
-          "positive_count": 1,
+          "mention_count": 0,
+          "mention_share_pct": 0,
+          "positive_count": 0,
           "negative_count": 0,
-          "risk_score": 17,
+          "risk_score": 0,
+          "risk_level": "alacsony"
+        }
+      },
+      "topic_distribution": [],
+      "source_distribution": [],
+      "sample_quotes": []
+    },
+    {
+      "company": "Tesco",
+      "review_count": 17,
+      "employee_reputation_index": 37,
+      "index_level": "kockázatos",
+      "positive_pct": 12,
+      "neutral_pct": 53,
+      "negative_pct": 35,
+      "positive_count": 2,
+      "neutral_count": 9,
+      "negative_count": 6,
+      "stress_risk": {
+        "score": 66,
+        "level": "közepes"
+      },
+      "salary_risk": {
+        "score": 75,
+        "level": "magas"
+      },
+      "leadership_risk": {
+        "score": 58,
+        "level": "közepes"
+      },
+      "team_strength": {
+        "score": 100,
+        "level": "kedvező"
+      },
+      "dimension_scores": {
+        "salary": {
+          "mention_count": 5,
+          "mention_share_pct": 29,
+          "positive_count": 0,
+          "negative_count": 3,
+          "risk_score": 75,
+          "risk_level": "magas"
+        },
+        "workload": {
+          "mention_count": 0,
+          "mention_share_pct": 0,
+          "positive_count": 0,
+          "negative_count": 0,
+          "risk_score": 0,
+          "risk_level": "alacsony"
+        },
+        "leadership": {
+          "mention_count": 3,
+          "mention_share_pct": 18,
+          "positive_count": 0,
+          "negative_count": 1,
+          "risk_score": 58,
+          "risk_level": "közepes"
+        },
+        "team": {
+          "mention_count": 0,
+          "mention_share_pct": 0,
+          "positive_count": 0,
+          "negative_count": 0,
+          "risk_score": 0,
+          "risk_level": "alacsony"
+        },
+        "schedule": {
+          "mention_count": 7,
+          "mention_share_pct": 41,
+          "positive_count": 0,
+          "negative_count": 2,
+          "risk_score": 66,
+          "risk_level": "közepes"
+        },
+        "workplace_climate": {
+          "mention_count": 0,
+          "mention_share_pct": 0,
+          "positive_count": 0,
+          "negative_count": 0,
+          "risk_score": 0,
+          "risk_level": "alacsony"
+        },
+        "benefits": {
+          "mention_count": 0,
+          "mention_share_pct": 0,
+          "positive_count": 0,
+          "negative_count": 0,
+          "risk_score": 0,
+          "risk_level": "alacsony"
+        },
+        "development": {
+          "mention_count": 0,
+          "mention_share_pct": 0,
+          "positive_count": 0,
+          "negative_count": 0,
+          "risk_score": 0,
           "risk_level": "alacsony"
         }
       },
       "topic_distribution": [
         {
-          "topic": "bérezés",
+          "topic": "beosztás",
           "count": 7,
-          "share_pct": 35
+          "share_pct": 41
         },
         {
-          "topic": "csapat",
-          "count": 7,
-          "share_pct": 35
+          "topic": "bérezés",
+          "count": 5,
+          "share_pct": 29
         },
         {
           "topic": "vezetés",
-          "count": 2,
-          "share_pct": 10
+          "count": 3,
+          "share_pct": 18
         },
         {
           "topic": "általános munkáltatói tapasztalat",
-          "count": 1,
-          "share_pct": 5
-        },
-        {
-          "topic": "előrelépés",
-          "count": 1,
-          "share_pct": 5
-        },
-        {
-          "topic": "beosztás",
-          "count": 1,
-          "share_pct": 5
-        },
-        {
-          "topic": "munkahelyi légkör",
-          "count": 1,
-          "share_pct": 5
+          "count": 2,
+          "share_pct": 12
         }
       ],
       "source_distribution": [
         {
-          "source": "profession_direct_review_page",
-          "count": 20,
+          "source": "gyakorikerdesek_direct_page",
+          "count": 17,
           "share_pct": 100
         }
       ],
       "sample_quotes": [
         {
-          "id": "de50a431ebff5701",
-          "company": "Spar",
-          "source": "profession_direct_review_page",
-          "source_url": "https://www.profession.hu/cegek/spar-magyarorszag-kft/velemenyek",
-          "published_or_found_date": "",
-          "date_collected": "2026-11-02T11:50:13+00:00",
-          "topic": "bérezés",
-          "sentiment": "positive",
-          "quote": "Pozitívumok Nem sok pozitívum van, de a bér ami félig meddig megállja a helyét, bár ezért a munkáért keveslem. Negatívumok A vezetősé",
-          "length": 133,
-          "review_signal_score": 18,
-          "confidence": "high",
-          "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
-        },
-        {
-          "id": "4df5e8d5f8d0cc87",
-          "company": "Spar",
-          "source": "profession_direct_review_page",
-          "source_url": "https://www.profession.hu/cegek/spar-magyarorszag-kft/velemenyek",
-          "published_or_found_date": "",
-          "date_collected": "2026-11-02T11:50:13+00:00",
-          "topic": "csapat",
-          "sentiment": "positive",
-          "quote": "Pozitívumok Összetartó csapatban szeretek dolgozni,aki segítenek és támogatnak engem Ajánlaná ismerőseinek Negatívumok Nem tapasz",
-          "length": 129,
-          "review_signal_score": 16,
-          "confidence": "high",
-          "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
-        },
-        {
-          "id": "9c2acb9bbbedbb78",
-          "company": "Spar",
-          "source": "profession_direct_review_page",
-          "source_url": "https://www.profession.hu/cegek/spar-magyarorszag-kft/velemenyek",
-          "published_or_found_date": "",
-          "date_collected": "2026-11-02T11:50:13+00:00",
-          "topic": "csapat",
-          "sentiment": "positive",
-          "quote": "Pozitívumok Családias környezet, nyugodt munkavégzési hely, kedves, diszkrét kollegák. Ajánlaná ismerőseinek Negatívumok 2 év alatt",
-          "length": 131,
-          "review_signal_score": 18,
-          "confidence": "high",
-          "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
-        },
-        {
-          "id": "791e68c64732c311",
-          "company": "Spar",
-          "source": "profession_direct_review_page",
-          "source_url": "https://www.profession.hu/cegek/spar-magyarorszag-kft/velemenyek",
-          "published_or_found_date": "",
-          "date_collected": "2026-11-02T11:50:13+00:00",
-          "topic": "csapat",
-          "sentiment": "positive",
-          "quote": "Pozitívumok A csapat összetartó, jó az alaphangulat . Ide sajnos ennyit tudok írni. Negatívumok Nem kiszám",
-          "length": 106,
-          "review_signal_score": 14,
-          "confidence": "high",
-          "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
-        },
-        {
-          "id": "1d91086aad1c1d05",
-          "company": "Spar",
-          "source": "profession_direct_review_page",
-          "source_url": "https://www.profession.hu/cegek/spar-magyarorszag-kft/velemenyek",
-          "published_or_found_date": "",
-          "date_collected": "2026-11-02T11:50:13+00:00",
-          "topic": "általános munkáltatói tapasztalat",
-          "sentiment": "positive",
-          "quote": "Pozitívumok Jól lehet keresni. Modern új, megbízható teherautó flotta! Negatívumok Rugalmatla",
-          "length": 93,
-          "review_signal_score": 14,
-          "confidence": "high",
-          "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
-        }
-      ]
-    },
-    {
-      "company": "Tesco",
-      "review_count": 45,
-      "employee_reputation_index": 70,
-      "index_level": "kedvező",
-      "positive_pct": 71,
-      "neutral_pct": 11,
-      "negative_pct": 18,
-      "positive_count": 32,
-      "neutral_count": 5,
-      "negative_count": 8,
-      "stress_risk": {
-        "score": 67,
-        "level": "közepes"
-      },
-      "salary_risk": {
-        "score": 31,
-        "level": "alacsony"
-      },
-      "leadership_risk": {
-        "score": 45,
-        "level": "közepes"
-      },
-      "team_strength": {
-        "score": 80,
-        "level": "kedvező"
-      },
-      "dimension_scores": {
-        "salary": {
-          "mention_count": 7,
-          "mention_share_pct": 16,
-          "positive_count": 6,
-          "negative_count": 1,
-          "risk_score": 31,
-          "risk_level": "alacsony"
-        },
-        "workload": {
-          "mention_count": 1,
-          "mention_share_pct": 2,
-          "positive_count": 1,
-          "negative_count": 0,
-          "risk_score": 16,
-          "risk_level": "alacsony"
-        },
-        "leadership": {
-          "mention_count": 11,
-          "mention_share_pct": 24,
-          "positive_count": 7,
-          "negative_count": 3,
-          "risk_score": 45,
-          "risk_level": "közepes"
-        },
-        "team": {
-          "mention_count": 7,
-          "mention_share_pct": 16,
-          "positive_count": 6,
-          "negative_count": 0,
-          "risk_score": 25,
-          "risk_level": "alacsony"
-        },
-        "schedule": {
-          "mention_count": 4,
-          "mention_share_pct": 9,
-          "positive_count": 2,
-          "negative_count": 1,
-          "risk_score": 40,
-          "risk_level": "alacsony"
-        },
-        "workplace_climate": {
-          "mention_count": 5,
-          "mention_share_pct": 11,
-          "positive_count": 0,
-          "negative_count": 3,
-          "risk_score": 67,
-          "risk_level": "közepes"
-        },
-        "benefits": {
-          "mention_count": 0,
-          "mention_share_pct": 0,
-          "positive_count": 0,
-          "negative_count": 0,
-          "risk_score": 0,
-          "risk_level": "alacsony"
-        },
-        "development": {
-          "mention_count": 4,
-          "mention_share_pct": 9,
-          "positive_count": 4,
-          "negative_count": 0,
-          "risk_score": 19,
-          "risk_level": "alacsony"
-        }
-      },
-      "topic_distribution": [
-        {
-          "topic": "vezetés",
-          "count": 11,
-          "share_pct": 24
-        },
-        {
-          "topic": "csapat",
-          "count": 7,
-          "share_pct": 16
-        },
-        {
-          "topic": "bérezés",
-          "count": 7,
-          "share_pct": 16
-        },
-        {
-          "topic": "általános munkáltatói tapasztalat",
-          "count": 6,
-          "share_pct": 13
-        },
-        {
-          "topic": "munkahelyi légkör",
-          "count": 5,
-          "share_pct": 11
-        },
-        {
-          "topic": "előrelépés",
-          "count": 4,
-          "share_pct": 9
-        },
-        {
-          "topic": "beosztás",
-          "count": 4,
-          "share_pct": 9
-        },
-        {
-          "topic": "munkaterhelés",
-          "count": 1,
-          "share_pct": 2
-        }
-      ],
-      "source_distribution": [
-        {
-          "source": "profession_direct_review_page",
-          "count": 40,
-          "share_pct": 89
-        },
-        {
+          "id": "6a64313327127259",
+          "company": "Tesco",
           "source": "gyakorikerdesek_direct_page",
-          "count": 5,
-          "share_pct": 11
-        }
-      ],
-      "sample_quotes": [
-        {
-          "id": "93287433d16c30bf",
-          "company": "Tesco",
-          "source": "profession_direct_review_page",
-          "source_url": "https://www.profession.hu/cegek/tesco-zrt/velemenyek",
+          "source_url": "https://www.gyakorikerdesek.hu/uzlet-es-penzugyek__karrier-fizetes__7340152-tenyleg-ennyire-kegyetlen-a-tesco-ban-dolgozni",
           "published_or_found_date": "",
-          "date_collected": "2026-11-02T11:51:37+00:00",
-          "topic": "csapat",
-          "sentiment": "positive",
-          "quote": "Pozitívumok összetartó csapat, kedves kollegák, remek időbeosztás Ajánlaná ismerőseinek Negatívumok Alacsony b",
-          "length": 110,
-          "review_signal_score": 20,
-          "confidence": "high",
-          "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
-        },
-        {
-          "id": "ca74a5133b636594",
-          "company": "Tesco",
-          "source": "profession_direct_review_page",
-          "source_url": "https://www.profession.hu/cegek/tesco-zrt/velemenyek",
-          "published_or_found_date": "",
-          "date_collected": "2026-11-02T11:51:37+00:00",
-          "topic": "előrelépés",
-          "sentiment": "positive",
-          "quote": "Pozitívumok Jók a fejlődési lehetőségek, cégen belül több munkakörben is kipróbálhatja magát az ember. Technikai eszközök kiválóak. Kötetlen munkarend. Változatos juttatások. Ajánlaná ismerőseinek Negatívumok Munka és m",
-          "length": 219,
-          "review_signal_score": 20,
-          "confidence": "high",
-          "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
-        },
-        {
-          "id": "b64f068809b19de6",
-          "company": "Tesco",
-          "source": "profession_direct_review_page",
-          "source_url": "https://www.profession.hu/cegek/tesco-zrt/velemenyek",
-          "published_or_found_date": "",
-          "date_collected": "2026-11-02T11:51:37+00:00",
+          "date_collected": "2026-11-09T12:24:42+00:00",
           "topic": "vezetés",
-          "sentiment": "positive",
-          "quote": "Pozitívumok összetartó csapat kellemes munka hej, fejlődés és előre lehetőségeket, támogatott vezetőség.k Ajánlaná ismerőseinek Negatívumok közepes bé",
-          "length": 150,
-          "review_signal_score": 18,
-          "confidence": "high",
+          "sentiment": "negative",
+          "quote": "Tényleg ennyire kegyetlen a TESCO-ban dolgozni? Figyelt kérdés A TESCO-ba jelentkeznék 4 órás kasszás állásra, mert mellette tanulni szeretnék. Kíváncsi voltam, hogy mennyi lehet a fizu, így rákerestem. De, sok olyat olvastam korábbi kérdésekben (2011,2012-es kérdésekben) hogy kegyetlenek a főnökök, alig akarnak szünetet adni, pl 4 órás a melója de 8-at kell dolgoznia (jó oké, azt 2 napnak számítják, de akkor is), vagy hogy 6 órás de 4x12 órázott egy héten, meg alig akarják a szünetet megadni és ilyenek. Ez még mindig igaz? Tényleg ennyire embertelenek a körülmények a TESCO-ban? #Tesco #munka #főnök #túlóra #körülmény #kegyetlenség #embertelen 12:50",
+          "length": 657,
+          "review_signal_score": 4,
+          "confidence": "medium",
           "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
         },
         {
-          "id": "cbc667088f517936",
+          "id": "8e1a8870f4e0dde7",
           "company": "Tesco",
-          "source": "profession_direct_review_page",
-          "source_url": "https://www.profession.hu/cegek/tesco-zrt/velemenyek",
+          "source": "gyakorikerdesek_direct_page",
+          "source_url": "https://www.gyakorikerdesek.hu/uzlet-es-penzugyek__karrier-fizetes__7340152-tenyleg-ennyire-kegyetlen-a-tesco-ban-dolgozni",
           "published_or_found_date": "",
-          "date_collected": "2026-11-02T11:51:37+00:00",
+          "date_collected": "2026-11-09T12:24:42+00:00",
           "topic": "általános munkáltatói tapasztalat",
           "sentiment": "positive",
-          "quote": "Pozitívumok Diákoknak kiváló diákmunka lehet ha birjak a porgest Ajánlaná ismerőseinek Negatívumok Keves a pi",
-          "length": 109,
-          "review_signal_score": 16,
-          "confidence": "high",
+          "quote": "4/11 A kérdező kommentje: Hát külföldön dolgoztam már mekiben, tudom milyen a kasszázás, ott állni 6-8 órát pisi és kajaszünet nélkül, szóval ez nem lenne gond! :) Csak annyi negatív tapasztalatot olvastam róla, hogy elment a kedvem... De lehet, hogy mégis megpróbálom. Végül is, ma már elvileg mindenhol minimum 3 hónap próbaidő van, ha nagyon nem jó akkor bármikor otthagyhatom őket. 13:41",
+          "length": 391,
+          "review_signal_score": 4,
+          "confidence": "medium",
           "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
         },
         {
-          "id": "b35ee6244d4edd63",
+          "id": "dc119314482633ad",
           "company": "Tesco",
-          "source": "profession_direct_review_page",
-          "source_url": "https://www.profession.hu/cegek/tesco-zrt/velemenyek",
+          "source": "gyakorikerdesek_direct_page",
+          "source_url": "https://www.gyakorikerdesek.hu/uzlet-es-penzugyek__karrier-fizetes__7340152-tenyleg-ennyire-kegyetlen-a-tesco-ban-dolgozni",
           "published_or_found_date": "",
-          "date_collected": "2026-11-02T11:51:37+00:00",
+          "date_collected": "2026-11-09T12:24:42+00:00",
+          "topic": "beosztás",
+          "sentiment": "negative",
+          "quote": "6/11 anonim válasza: Semmi kegyetlenség nincs, amiket felsoroltál, nagy része urban legend, meg amiket itt páran válaszoltak, azoknak is. \"4 órás a melója de 8-at kell dolgoznia\" A Tescoban egyetlen órát sem fogsz dolgozni ingyen. Sőt, még te leszel beb**va, ha tovább maradsz bent, vagy nem veszed ki a szüneted, ugyanis a hiperekben beléptetőkapu van, és arra épül a munkaidő nyilvántartás. Az, hogy 8 vagy akár több órás műszakok is vannak, igaz. Mivel a 4 órás szerződés nem azt jelenti, hogy hétfőtől péntekig napi 4 óra. Ez a kereskedelemben nem működik. Egyenlőtlen a munkaidő-beosztás. Cserébe este 6 után műszakpótlékot kapsz. Túlóra is előfordul, de az meg nagyon jól fizet (az Mt....",
+          "length": 694,
+          "review_signal_score": 6,
+          "confidence": "medium",
+          "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
+        },
+        {
+          "id": "0613703acbfcf75d",
+          "company": "Tesco",
+          "source": "gyakorikerdesek_direct_page",
+          "source_url": "https://www.gyakorikerdesek.hu/uzlet-es-penzugyek__karrier-fizetes__7340152-tenyleg-ennyire-kegyetlen-a-tesco-ban-dolgozni",
+          "published_or_found_date": "",
+          "date_collected": "2026-11-09T12:24:42+00:00",
+          "topic": "beosztás",
+          "sentiment": "neutral",
+          "quote": "9/11 anonim válasza: \" És egy bevásárlóközpontban lévő üzletben általában nincs több műszak, \" Tesco 5-22h van nyitva budapesti bevasarlokozpontban, 17 oran keresztul biztosan nem dolgozik senki egyhuzamban. 00:35 Hasznos számodra ez a válasz?",
+          "length": 243,
+          "review_signal_score": 4,
+          "confidence": "medium",
+          "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
+        },
+        {
+          "id": "775df712d759299c",
+          "company": "Tesco",
+          "source": "gyakorikerdesek_direct_page",
+          "source_url": "https://www.gyakorikerdesek.hu/uzlet-es-penzugyek__karrier-fizetes__7340152-tenyleg-ennyire-kegyetlen-a-tesco-ban-dolgozni",
+          "published_or_found_date": "",
+          "date_collected": "2026-11-09T12:24:42+00:00",
           "topic": "vezetés",
-          "sentiment": "positive",
-          "quote": "Pozitívumok Összetett csapat,jó körülményeket biztosító,rugalmas vezetőség Ajánlaná ismerőseinek Negatívumok Fizetés ke",
-          "length": 119,
-          "review_signal_score": 20,
-          "confidence": "high",
+          "sentiment": "neutral",
+          "quote": "A TESCO-ba jelentkeznék 4 órás kasszás állásra, mert mellette tanulni szeretnék. Kíváncsi voltam, hogy mennyi lehet a fizu, így rákerestem. De, sok olyat olvastam korábbi kérdésekben (2011,2012-es kérdésekben) hogy kegyetlenek a főnökök, alig akarnak szünetet adni, pl 4 órás a melója de 8-at kell dolgoznia (jó oké, azt 2 napnak számítják, de akkor is), vagy hogy 6 órás de 4x12 órázott egy héten, meg alig akarják a szünetet megadni és ilyenek.",
+          "length": 446,
+          "review_signal_score": 4,
+          "confidence": "medium",
           "privacy_note": "Személyes adatok automatikusan eltávolítva, ha felismerhetőek voltak."
         }
       ]
@@ -1211,57 +900,57 @@
   "ranking": [
     {
       "rank": 1,
-      "company": "Spar",
-      "employee_reputation_index": 86,
+      "company": "Penny",
+      "employee_reputation_index": 83,
       "index_level": "kedvező",
-      "review_count": 20,
-      "positive_pct": 85,
-      "negative_pct": 15
+      "review_count": 8,
+      "positive_pct": 75,
+      "negative_pct": 12
     },
     {
       "rank": 2,
       "company": "Lidl",
-      "employee_reputation_index": 79,
-      "index_level": "kedvező",
-      "review_count": 44,
-      "positive_pct": 57,
-      "negative_pct": 9
+      "employee_reputation_index": 62,
+      "index_level": "vegyes",
+      "review_count": 24,
+      "positive_pct": 29,
+      "negative_pct": 8
     },
     {
       "rank": 3,
-      "company": "Aldi",
-      "employee_reputation_index": 73,
-      "index_level": "kedvező",
-      "review_count": 20,
-      "positive_pct": 70,
-      "negative_pct": 15
-    },
-    {
-      "rank": 4,
-      "company": "Tesco",
-      "employee_reputation_index": 70,
-      "index_level": "kedvező",
-      "review_count": 45,
-      "positive_pct": 71,
-      "negative_pct": 18
-    },
-    {
-      "rank": 5,
-      "company": "Penny",
-      "employee_reputation_index": 52,
-      "index_level": "vegyes",
-      "review_count": 28,
-      "positive_pct": 50,
-      "negative_pct": 32
-    },
-    {
-      "rank": 6,
       "company": "Auchan",
       "employee_reputation_index": 50,
       "index_level": "vegyes",
       "review_count": 0,
       "positive_pct": 0,
       "negative_pct": 0
+    },
+    {
+      "rank": 4,
+      "company": "Aldi",
+      "employee_reputation_index": 50,
+      "index_level": "vegyes",
+      "review_count": 0,
+      "positive_pct": 0,
+      "negative_pct": 0
+    },
+    {
+      "rank": 5,
+      "company": "Spar",
+      "employee_reputation_index": 50,
+      "index_level": "vegyes",
+      "review_count": 0,
+      "positive_pct": 0,
+      "negative_pct": 0
+    },
+    {
+      "rank": 6,
+      "company": "Tesco",
+      "employee_reputation_index": 37,
+      "index_level": "kockázatos",
+      "review_count": 17,
+      "positive_pct": 12,
+      "negative_pct": 35
     }
   ]
 }
