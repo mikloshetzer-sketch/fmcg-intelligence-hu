@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-09T12:13:30Z",
+  "updated_at": "2026-11-10T11:53:51Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -935,7 +935,7 @@
       "expected_unit": "kg",
       "prices": {
         "SPAR": 899.0,
-        "Tesco": 939.0,
+        "Tesco": 949.0,
         "Penny": 1199.0,
         "Auchan": 899.0,
         "ALDI": 899.0,
@@ -955,8 +955,8 @@
         "Tesco": {
           "source_product_id": "2850160000000",
           "source_product_name": "Citrom lédig    ",
-          "amount": 939.0,
-          "unit_amount": 939.0,
+          "amount": 949.0,
+          "unit_amount": 949.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1092,7 +1092,7 @@
         "SPAR": 630.0,
         "Auchan": 699.0,
         "Tesco": 767.0,
-        "Penny": 865.33,
+        "Penny": 932.0,
         "Lidl": 1299.0
       },
       "selected_products": {
@@ -1139,8 +1139,8 @@
         "Penny": {
           "source_product_id": "penny-375",
           "source_product_name": "Hazai lecsópaprika 750gr",
-          "amount": 649.0,
-          "unit_amount": 865.33,
+          "amount": 699.0,
+          "unit_amount": 932.0,
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "0.75",
@@ -1324,7 +1324,7 @@
         "Lidl": 629.0,
         "Tesco": 650.0,
         "Penny": 650.0,
-        "Auchan": 850.0
+        "Auchan": 810.0
       },
       "selected_products": {
         "SPAR": {
@@ -1378,10 +1378,10 @@
           "price_type": "NORMAL"
         },
         "Auchan": {
-          "source_product_id": "5997132503286",
-          "source_product_name": "Gyermelyi Vita Pasta XXL durum spagetti száraztészta 1 kg ",
-          "amount": 850.0,
-          "unit_amount": 850.0,
+          "source_product_id": "5997132503293",
+          "source_product_name": "Gyermelyi Vita Pasta XXL durum fusilli száraztészta 1 kg",
+          "amount": 810.0,
+          "unit_amount": 810.0,
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "1",
@@ -1550,19 +1550,29 @@
       "category": "Alapélelmiszer",
       "expected_unit": "kg",
       "prices": {
-        "Auchan": 295.0,
-        "ALDI": 315.0,
         "SPAR": 295.0,
+        "Auchan": 313.0,
+        "ALDI": 315.0,
         "Lidl": 315.0,
         "Penny": 315.0,
         "Tesco": 323.0
       },
       "selected_products": {
+        "SPAR": {
+          "source_product_id": "5999139413568",
+          "source_product_name": "S-BUDGET Kristálycukor 1kg",
+          "amount": 295.0,
+          "unit_amount": 295.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "Auchan": {
           "source_product_id": "4008671013004",
           "source_product_name": "Sweet Family Kristálycukor 1kg",
-          "amount": 295.0,
-          "unit_amount": 295.0,
+          "amount": 313.0,
+          "unit_amount": 313.0,
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "1",
@@ -1573,16 +1583,6 @@
           "source_product_name": "Sweet Family Kristálycukor 1kg",
           "amount": 315.0,
           "unit_amount": 315.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "SPAR": {
-          "source_product_id": "5999139413568",
-          "source_product_name": "S-BUDGET Kristálycukor 1kg",
-          "amount": 295.0,
-          "unit_amount": 295.0,
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "1",
@@ -1772,7 +1772,7 @@
       "prices": {
         "SPAR": 105.63,
         "Auchan": 41.0,
-        "Tesco": 118.063,
+        "Tesco": 124.938,
         "ALDI": 121.5,
         "Penny": 124.75
       },
@@ -1798,10 +1798,10 @@
           "price_type": "NORMAL"
         },
         "Tesco": {
-          "source_product_id": "5059944689289",
-          "source_product_name": "SPRINGFORCE TOALETTPAPÍR 2 RÉT. 16 TEKERCS",
-          "amount": 1889.0,
-          "unit_amount": 118.063,
+          "source_product_id": "3838952028189",
+          "source_product_name": "PALOMA EXCLUSIVE D&P TOALETTPAPÍR 3 RÉ. 16 TEKERCS",
+          "amount": 1999.0,
+          "unit_amount": 124.938,
           "unit": "db",
           "unit_title": "csomag",
           "packaging": "16",
