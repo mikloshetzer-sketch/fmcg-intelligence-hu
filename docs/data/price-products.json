@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-10T11:53:51Z",
+  "updated_at": "2026-11-11T11:30:04Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -901,7 +901,7 @@
           "amount": 699.0,
           "unit_amount": 699.0,
           "unit": "kg",
-          "unit_title": "csomag",
+          "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
         },
@@ -1474,26 +1474,16 @@
       "expected_unit": "kg",
       "prices": {
         "SPAR": 177.0,
-        "Auchan": 177.0,
         "ALDI": 177.0,
         "Lidl": 177.0,
         "Penny": 177.0,
-        "Tesco": 181.0
+        "Tesco": 181.0,
+        "Auchan": 192.0
       },
       "selected_products": {
         "SPAR": {
           "source_product_id": "5999033897754",
           "source_product_name": "S-Budget búzafinomliszt BL 55 1 kg",
-          "amount": 177.0,
-          "unit_amount": 177.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Auchan": {
-          "source_product_id": "5999086469649",
-          "source_product_name": "Auchan Tipp búzafinomliszt BL-55 1 kg",
           "amount": 177.0,
           "unit_amount": 177.0,
           "unit": "kg",
@@ -1540,6 +1530,16 @@
           "unit_title": "csomag",
           "packaging": "1",
           "price_type": "NORMAL"
+        },
+        "Auchan": {
+          "source_product_id": "5999086469649",
+          "source_product_name": "Auchan Tipp búzafinomliszt BL-55 1 kg",
+          "amount": 192.0,
+          "unit_amount": 192.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "1",
+          "price_type": "NORMAL"
         }
       },
       "coverage": 6
@@ -1570,7 +1570,7 @@
         },
         "Auchan": {
           "source_product_id": "4008671013004",
-          "source_product_name": "Sweet Family Kristálycukor 1kg",
+          "source_product_name": "Sweet Family kristálycukor 1 kg",
           "amount": 313.0,
           "unit_amount": 313.0,
           "unit": "kg",
@@ -1580,7 +1580,7 @@
         },
         "ALDI": {
           "source_product_id": "4008671013004",
-          "source_product_name": "Sweet Family Kristálycukor 1kg",
+          "source_product_name": "Sweet Family kristálycukor 1 kg",
           "amount": 315.0,
           "unit_amount": 315.0,
           "unit": "kg",
@@ -1772,7 +1772,7 @@
       "prices": {
         "SPAR": 105.63,
         "Auchan": 41.0,
-        "Tesco": 124.938,
+        "Tesco": 118.063,
         "ALDI": 121.5,
         "Penny": 124.75
       },
@@ -1798,10 +1798,10 @@
           "price_type": "NORMAL"
         },
         "Tesco": {
-          "source_product_id": "3838952028189",
-          "source_product_name": "PALOMA EXCLUSIVE D&P TOALETTPAPÍR 3 RÉ. 16 TEKERCS",
-          "amount": 1999.0,
-          "unit_amount": 124.938,
+          "source_product_id": "5059944689289",
+          "source_product_name": "SPRINGFORCE TOALETTPAPÍR 2 RÉT. 16 TEKERCS",
+          "amount": 1889.0,
+          "unit_amount": 118.063,
           "unit": "db",
           "unit_title": "csomag",
           "packaging": "16",
