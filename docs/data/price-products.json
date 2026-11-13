@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-12T11:56:20Z",
+  "updated_at": "2026-11-13T11:39:19Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -395,24 +395,14 @@
       "category": "Frissáru",
       "expected_unit": "db",
       "prices": {
-        "Auchan": 32.0,
         "Penny": 47.63,
         "Lidl": 47.9,
         "SPAR": 49.9,
         "ALDI": 49.97,
+        "Auchan": 51.0,
         "Tesco": 52.5
       },
       "selected_products": {
-        "Auchan": {
-          "source_product_id": "5999086470591",
-          "source_product_name": "Auchan Kedvenc extrasárga mélyalmos friss tojás L méret 30 db",
-          "amount": 952.0,
-          "unit_amount": 32.0,
-          "unit": "db",
-          "unit_title": "doboz",
-          "packaging": "30",
-          "price_type": "NORMAL"
-        },
         "Penny": {
           "source_product_id": "penny-1996",
           "source_product_name": "Tálcás tojás s méretű 30db",
@@ -451,6 +441,16 @@
           "unit": "db",
           "unit_title": "doboz",
           "packaging": "30",
+          "price_type": "NORMAL"
+        },
+        "Auchan": {
+          "source_product_id": "5999086450890",
+          "source_product_name": "Auchan Tipp friss tojás A osztály S méret 10 db",
+          "amount": 512.0,
+          "unit_amount": 51.0,
+          "unit": "db",
+          "unit_title": "doboz",
+          "packaging": "10",
           "price_type": "NORMAL"
         },
         "Tesco": {
@@ -857,7 +857,7 @@
       "category": "Gyümölcs",
       "expected_unit": "kg",
       "prices": {
-        "Tesco": 729.0,
+        "Tesco": 699.0,
         "ALDI": 399.0,
         "SPAR": 699.0,
         "Lidl": 699.0,
@@ -868,8 +868,8 @@
         "Tesco": {
           "source_product_id": "2870100000000",
           "source_product_name": "Banán lédig    ",
-          "amount": 729.0,
-          "unit_amount": 729.0,
+          "amount": 699.0,
+          "unit_amount": 699.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1846,7 +1846,7 @@
       "selected_products": {
         "Tesco": {
           "source_product_id": "4009175936455",
-          "source_product_name": "Mosógél aktív szódával, 1,5 l",
+          "source_product_name": "Frosch Folyékony Mosószer aktív szóda 1,5 l",
           "amount": 3849.0,
           "unit_amount": 174.955,
           "unit": "l",

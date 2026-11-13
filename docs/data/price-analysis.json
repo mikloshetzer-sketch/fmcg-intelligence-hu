@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-11-12T11:56:20Z",
+  "updated_at": "2026-11-13T11:39:19Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "method": "product-level price leadership and spread analysis",
   "cheapest_count": [
     {
       "company": "Auchan",
-      "count": 9
+      "count": 8
     },
     {
       "company": "SPAR",
@@ -26,7 +26,7 @@
     },
     {
       "company": "Penny",
-      "count": 0
+      "count": 1
     }
   ],
   "most_expensive_count": [
@@ -70,8 +70,8 @@
     },
     {
       "company": "Auchan",
-      "price_index": 99,
-      "value_score": 101,
+      "price_index": 100,
+      "value_score": 100,
       "index_coverage": 25
     },
     {
@@ -82,8 +82,8 @@
     },
     {
       "company": "Tesco",
-      "price_index": 101,
-      "value_score": 99,
+      "price_index": 100,
+      "value_score": 100,
       "index_coverage": 25
     },
     {
@@ -133,37 +133,37 @@
     },
     {
       "category": "Frissáru",
-      "leader": "Auchan",
-      "leader_index": 69,
+      "leader": "Lidl",
+      "leader_index": 96,
       "ranking": [
         {
-          "company": "Auchan",
-          "category_index": 69,
+          "company": "Lidl",
+          "category_index": 96,
           "coverage": 1
         },
         {
           "company": "Penny",
-          "category_index": 102,
-          "coverage": 1
-        },
-        {
-          "company": "Lidl",
-          "category_index": 103,
+          "category_index": 96,
           "coverage": 1
         },
         {
           "company": "ALDI",
-          "category_index": 107,
+          "category_index": 100,
           "coverage": 1
         },
         {
           "company": "SPAR",
-          "category_index": 107,
+          "category_index": 100,
+          "coverage": 1
+        },
+        {
+          "company": "Auchan",
+          "category_index": 102,
           "coverage": 1
         },
         {
           "company": "Tesco",
-          "category_index": 113,
+          "category_index": 105,
           "coverage": 1
         }
       ]
@@ -195,7 +195,7 @@
         },
         {
           "company": "Tesco",
-          "category_index": 108,
+          "category_index": 107,
           "coverage": 3
         },
         {
@@ -447,7 +447,7 @@
       "cheapest_price": 399.0,
       "most_expensive_company": "Auchan",
       "most_expensive_price": 749.0,
-      "average_price": 662.33,
+      "average_price": 657.33,
       "spread_pct": 87.72,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
@@ -463,18 +463,6 @@
       "spread_pct": 65.51,
       "competition_intensity": "nagy árszórás",
       "coverage": 5
-    },
-    {
-      "product": "Tojás",
-      "category": "Frissáru",
-      "cheapest_company": "Auchan",
-      "cheapest_price": 32.0,
-      "most_expensive_company": "Tesco",
-      "most_expensive_price": 52.5,
-      "average_price": 46.65,
-      "spread_pct": 64.06,
-      "competition_intensity": "nagy árszórás",
-      "coverage": 6
     },
     {
       "product": "Étkezési burgonya",
@@ -633,6 +621,18 @@
       "coverage": 6
     },
     {
+      "product": "Tojás",
+      "category": "Frissáru",
+      "cheapest_company": "Penny",
+      "cheapest_price": 47.63,
+      "most_expensive_company": "Tesco",
+      "most_expensive_price": 52.5,
+      "average_price": 49.82,
+      "spread_pct": 10.22,
+      "competition_intensity": "közepes árverseny",
+      "coverage": 6
+    },
+    {
       "product": "Finomliszt",
       "category": "Alapélelmiszer",
       "cheapest_company": "SPAR",
@@ -737,13 +737,6 @@
       "coverage": 5
     },
     {
-      "product": "Tojás",
-      "category": "Frissáru",
-      "spread_pct": 64.06,
-      "competition_intensity": "nagy árszórás",
-      "coverage": 6
-    },
-    {
       "product": "Étkezési burgonya",
       "category": "Zöldség",
       "spread_pct": 61.44,
@@ -831,6 +824,13 @@
       "product": "ESL tej 2,8%",
       "category": "Tejtermék",
       "spread_pct": 11.7,
+      "competition_intensity": "közepes árverseny",
+      "coverage": 6
+    },
+    {
+      "product": "Tojás",
+      "category": "Frissáru",
+      "spread_pct": 10.22,
       "competition_intensity": "közepes árverseny",
       "coverage": 6
     },
