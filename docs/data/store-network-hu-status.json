@@ -1,18 +1,18 @@
 {
-  "updated_at": "2026-11-09T11:29:36.770617+00:00",
+  "updated_at": "2026-11-16T11:15:18.815826+00:00",
   "status": "ok",
   "version": "store-network-hu-v2.0-non-lidl-osm",
   "source": "openstreetmap_overpass_non_lidl_plus_fallback_plus_optional_overrides",
-  "store_count": 1167,
+  "store_count": 1166,
   "company_totals": {
     "ALDI": 189,
     "Auchan": 25,
     "Penny": 243,
     "SPAR": 523,
-    "Tesco": 187
+    "Tesco": 186
   },
   "source_totals": {
-    "openstreetmap_overpass": 1167
+    "openstreetmap_overpass": 1166
   },
   "companies": [
     {
@@ -41,7 +41,7 @@
         "Interspar"
       ],
       "notes": [
-        "exact_brand_error=HTTPSConnectionPool(host='overpass.kumi.systems', port=443): Read timed out. (read timeout=150)",
+        "exact_brand=0 via https://overpass.kumi.systems/api/interpreter",
         "regex_brand=523 via https://overpass-api.de/api/interpreter"
       ]
     },
@@ -49,14 +49,14 @@
       "company": "Tesco",
       "source": "openstreetmap_overpass",
       "status": "ok",
-      "stores": 187,
+      "stores": 186,
       "brand_values": [
         "Tesco",
         "TESCO"
       ],
       "notes": [
         "exact_brand_error=504 Server Error: Gateway Timeout for url: https://overpass.kumi.systems/api/interpreter",
-        "regex_brand=187 via https://overpass-api.de/api/interpreter"
+        "regex_brand=186 via https://overpass-api.de/api/interpreter"
       ]
     },
     {
@@ -69,14 +69,14 @@
         "AUCHAN"
       ],
       "notes": [
-        "exact_brand_error=504 Server Error: Gateway Timeout for url: https://overpass.kumi.systems/api/interpreter",
-        "regex_brand=25 via https://overpass-api.de/api/interpreter"
+        "exact_brand=25 via https://overpass-api.de/api/interpreter",
+        "regex_brand_error=504 Server Error: Gateway Timeout for url: https://overpass.kumi.systems/api/interpreter"
       ]
     },
     {
       "company": "Penny",
-      "source": "openstreetmap_overpass",
-      "status": "ok",
+      "source": "fallback_previous_store_network",
+      "status": "fallback_previous",
       "stores": 243,
       "brand_values": [
         "Penny",
@@ -85,8 +85,8 @@
         "PENNY Market"
       ],
       "notes": [
-        "exact_brand=243 via https://overpass-api.de/api/interpreter",
-        "regex_brand=243 via https://overpass-api.de/api/interpreter"
+        "exact_brand_error=HTTPSConnectionPool(host='overpass.kumi.systems', port=443): Read timed out. (read timeout=150)",
+        "regex_brand_error=504 Server Error: Gateway Timeout for url: https://overpass.kumi.systems/api/interpreter"
       ]
     }
   ],

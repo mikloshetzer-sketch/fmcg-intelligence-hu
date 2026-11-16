@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-09T11:29:36.770617+00:00",
+  "updated_at": "2026-11-16T11:15:18.815826+00:00",
   "version": "store-network-hu-v2.0-non-lidl-osm",
   "scope": "Hungarian FMCG store network from OSM + optional overrides",
   "method_note": "Ez a verzió Lidl nélkül építi a bolthálózatot. ALDI, SPAR, Tesco, Auchan és Penny OSM/Overpass alapján frissül. Ha egy láncra 0 találat jön, a script megtartja a korábbi store-network-hu.json adott láncra vonatkozó adatait. Lidl külön, saját üzletlista alapján kerül majd be.",
@@ -2301,8 +2301,8 @@
       "area": "Kecskemét",
       "region": "Dél-Alföld",
       "address": "6000 Kecskemét, Izsáki út 69",
-      "lat": 46.889455,
-      "lon": 19.640602,
+      "lat": 46.889463,
+      "lon": 19.640707,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 231258814,
@@ -11247,8 +11247,8 @@
       "area": "Budapest",
       "region": "Közép-Magyarország",
       "address": "1119 Budapest, Fehérvári út 97-99",
-      "lat": 47.463244,
-      "lon": 19.042168,
+      "lat": 47.463286,
+      "lon": 19.042186,
       "source": "openstreetmap_overpass",
       "osm_type": "node",
       "osm_id": 12307027976,
@@ -11436,13 +11436,13 @@
       "area": "Budapest",
       "region": "Közép-Magyarország",
       "address": "1154 Budapest, Szentmihályi út 142",
-      "lat": 47.55165,
-      "lon": 19.134183,
+      "lat": 47.551655,
+      "lon": 19.134165,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 120135969,
       "brand": "Spar",
-      "operator": "",
+      "operator": "SPAR Magyarország Kereskedelmi Kft.",
       "keywords": [
         "Spar",
         "SPAR Budapest",
@@ -11867,6 +11867,27 @@
         "Spar",
         "SPAR Budapest",
         "1144 Budapest, Ond vezér útja 34"
+      ]
+    },
+    {
+      "store_id": "spar_budapest_spar_305331334",
+      "company": "SPAR",
+      "name": "Spar",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1193 Budapest, Üllői út 248",
+      "lat": 47.455015,
+      "lon": 19.152614,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 305331334,
+      "brand": "Spar",
+      "operator": "",
+      "keywords": [
+        "Spar",
+        "SPAR Budapest",
+        "1193 Budapest, Üllői út 248"
       ]
     },
     {
@@ -13620,8 +13641,8 @@
       "area": "Kozármisleny",
       "region": "n.a.",
       "address": "7761 Kozármisleny, Vadvirág utca 1",
-      "lat": 46.053795,
-      "lon": 18.283601,
+      "lat": 46.053821,
+      "lon": 18.283604,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 825497622,
@@ -14534,6 +14555,27 @@
         "Spar",
         "SPAR Sajószentpéter",
         "3770 Sajószentpéter, Kossuth Lajos út 96"
+      ]
+    },
+    {
+      "store_id": "spar_salgotarjan_spar_546081355",
+      "company": "SPAR",
+      "name": "Spar",
+      "city": "Salgótarján",
+      "area": "Salgótarján",
+      "region": "Észak-Magyarország",
+      "address": "3104 Salgótarján, Budapesti út 57",
+      "lat": 48.075727,
+      "lon": 19.785049,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 546081355,
+      "brand": "Spar",
+      "operator": "",
+      "keywords": [
+        "Spar",
+        "SPAR Salgótarján",
+        "3104 Salgótarján, Budapesti út 57"
       ]
     },
     {
@@ -18765,8 +18807,8 @@
       "area": "n.a.",
       "region": "n.a.",
       "address": "Kossuth utca",
-      "lat": 46.219565,
-      "lon": 20.477715,
+      "lat": 46.21958,
+      "lon": 20.477615,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 242562824,
@@ -18989,27 +19031,6 @@
       ]
     },
     {
-      "store_id": "spar_na_spar_305331334",
-      "company": "SPAR",
-      "name": "Spar",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.455015,
-      "lon": 19.152614,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 305331334,
-      "brand": "Spar",
-      "operator": "",
-      "keywords": [
-        "Spar",
-        "SPAR n.a.",
-        "n.a."
-      ]
-    },
-    {
       "store_id": "spar_na_spar_314167262",
       "company": "SPAR",
       "name": "Spar",
@@ -19164,8 +19185,8 @@
       "area": "n.a.",
       "region": "n.a.",
       "address": "n.a.",
-      "lat": 47.545993,
-      "lon": 19.139002,
+      "lat": 47.545988,
+      "lon": 19.139018,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 372441944,
@@ -19337,27 +19358,6 @@
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 494453834,
-      "brand": "Spar",
-      "operator": "",
-      "keywords": [
-        "Spar",
-        "SPAR n.a.",
-        "n.a."
-      ]
-    },
-    {
-      "store_id": "spar_na_spar_546081355",
-      "company": "SPAR",
-      "name": "Spar",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 48.075727,
-      "lon": 19.785049,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 546081355,
       "brand": "Spar",
       "operator": "",
       "keywords": [
@@ -20645,27 +20645,6 @@
         "Tesco Extra",
         "Tesco Baja",
         "6500 Baja, Gránátos utca 11"
-      ]
-    },
-    {
-      "store_id": "tesco_balassagyarmat_tesco_extra_9769333",
-      "company": "Tesco",
-      "name": "Tesco Extra",
-      "city": "Balassagyarmat",
-      "area": "Balassagyarmat",
-      "region": "Észak-Magyarország",
-      "address": "2660 Balassagyarmat, Mikszáth Kálmán út 56",
-      "lat": 48.084796,
-      "lon": 19.297654,
-      "source": "openstreetmap_overpass",
-      "osm_type": "relation",
-      "osm_id": 9769333,
-      "brand": "Tesco",
-      "operator": "TESCO-GLOBAL Áruházak Zrt.",
-      "keywords": [
-        "Tesco Extra",
-        "Tesco Balassagyarmat",
-        "2660 Balassagyarmat, Mikszáth Kálmán út 56"
       ]
     },
     {
