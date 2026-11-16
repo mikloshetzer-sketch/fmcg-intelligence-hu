@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-16T07:14:53.234772+00:00",
+  "updated_at": "2026-11-16T22:29:49.983647+00:00",
   "version": "store-reputation-layer-v1.1-fast",
   "scope": "Hungarian FMCG store-level reputation signal",
   "method_note": "Áruházi reputációs jelzőréteg. Nyílt Google News RSS keresések alapján dolgozik. Nem Google Reviews scraping és nem teljes vásárlói értékelési adatbázis.",
@@ -7,23 +7,23 @@
     {
       "company": "Auchan",
       "stores": 5,
-      "store_mentions": 2,
-      "review_signal_index": 6.0,
+      "store_mentions": 1,
+      "review_signal_index": 3.0,
       "negative_stores": 0,
       "positive_stores": 0,
       "dominant_store_topic": "árak és akciók"
     },
     {
-      "company": "Tesco",
+      "company": "Lidl",
       "stores": 5,
-      "store_mentions": 0,
-      "review_signal_index": 0.0,
+      "store_mentions": 1,
+      "review_signal_index": 3.0,
       "negative_stores": 0,
       "positive_stores": 0,
-      "dominant_store_topic": "nincs elég adat"
+      "dominant_store_topic": "dolgozói kiszolgálás"
     },
     {
-      "company": "Lidl",
+      "company": "Tesco",
       "stores": 5,
       "store_mentions": 0,
       "review_signal_index": 0.0,
@@ -145,25 +145,12 @@
       "area": "Dunakeszi",
       "lat": 47.6325,
       "lon": 19.1395,
-      "store_mentions": 1,
-      "review_signal_index": 15,
+      "store_mentions": 0,
+      "review_signal_index": 0,
       "review_sentiment": "neutral",
       "dominant_store_topic": "nincs elég adat",
       "top_store_topics": [],
-      "latest_items": [
-        {
-          "id": "23abf696b6fd8e99",
-          "source": "google_news_rss",
-          "store_id": "auchan_dunakeszi",
-          "company": "Auchan",
-          "store_name": "Auchan Dunakeszi",
-          "title": "Családi program padlógázon – Jön az Auchan sebesség nap - Dunakeszipost",
-          "summary": "Családi program padlógázon – Jön az Auchan sebesség nap Dunakeszipost",
-          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNQUZuN3dzS29XYU4wb3daODRNVnFLemxkU1JqaEhwZ2tIb0kwcUNHbFBwOW9Idjl4QjJaeXlGUTRPZXFVSS1vM0JHX3dWYUFJVXRvTk9VYjZHNHByX1hHQ1Y0YTdMN0hVMGFsU0lMLUFRend5NEh1UXBVaWFnWkY5Q1IxWmZYQQ?oc=5",
-          "published": "Thu, 16 Jul 2026 07:00:00 GMT",
-          "query": "\"Auchan Dunakeszi\" vélemény"
-        }
-      ],
+      "latest_items": [],
       "method_note": "Áruházi reputációs jelzőréteg nyílt Google News RSS keresésekből. Nem Google Reviews scraping, nem teljes vásárlói review-adatbázis.",
       "errors": []
     },
@@ -294,12 +281,30 @@
       "area": "Csepel",
       "lat": 47.4307,
       "lon": 19.0701,
-      "store_mentions": 0,
-      "review_signal_index": 0,
+      "store_mentions": 1,
+      "review_signal_index": 15,
       "review_sentiment": "neutral",
-      "dominant_store_topic": "nincs elég adat",
-      "top_store_topics": [],
-      "latest_items": [],
+      "dominant_store_topic": "dolgozói kiszolgálás",
+      "top_store_topics": [
+        {
+          "topic": "dolgozói kiszolgálás",
+          "score": 1
+        }
+      ],
+      "latest_items": [
+        {
+          "id": "18b9ead779162f5f",
+          "source": "google_news_rss",
+          "store_id": "lidl_csepel",
+          "company": "Lidl",
+          "store_name": "Lidl Csepel",
+          "title": "Elgázolták a csepeli Lidl dolgozóját, amikor egy tolvaj után futott - 24.hu",
+          "summary": "Elgázolták a csepeli Lidl dolgozóját, amikor egy tolvaj után futott 24.hu",
+          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5aUkozNExkZlpkSXZjXzU2WXJMMmpkbGZWbnBlOEZGcE12MkJIX3o1a2VKamtLSi1LeFItU3ZYTjZlSEZMQ2VmeDI0OGp3Q05wNGpFOUVPX3RCVXo5Q2dNYVliZmVRSHVJbmlZVQ?oc=5",
+          "published": "Mon, 16 Nov 2026 17:37:00 GMT",
+          "query": "\"Lidl Csepel\" vélemény"
+        }
+      ],
       "method_note": "Áruházi reputációs jelzőréteg nyílt Google News RSS keresésekből. Nem Google Reviews scraping, nem teljes vásárlói review-adatbázis.",
       "errors": []
     },
