@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-15T11:35:05Z",
+  "updated_at": "2026-11-16T12:07:55Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -551,10 +551,10 @@
       "prices": {
         "SPAR": 1954.44,
         "Tesco": 1748.75,
-        "Penny": 1749.0,
         "Auchan": 1699.0,
         "ALDI": 1749.0,
-        "Lidl": 1749.0
+        "Lidl": 1749.0,
+        "Penny": 1749.0
       },
       "selected_products": {
         "SPAR": {
@@ -575,16 +575,6 @@
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "0.8",
-          "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-158",
-          "source_product_name": "Kedvenc Hentese sertés darálthús 30%zsírt.",
-          "amount": 1749.0,
-          "unit_amount": 1749.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "1",
           "price_type": "NORMAL"
         },
         "Auchan": {
@@ -616,6 +606,16 @@
           "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
+        },
+        "Penny": {
+          "source_product_id": "penny-158",
+          "source_product_name": "Kedvenc Hentese sertés darálthús 30%zsírt.",
+          "amount": 1749.0,
+          "unit_amount": 1749.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "1",
+          "price_type": "NORMAL"
         }
       },
       "coverage": 6
@@ -627,9 +627,9 @@
       "expected_unit": "kg",
       "prices": {
         "Tesco": 1959.0,
-        "Penny": 1859.0,
         "SPAR": 1723.0,
         "Lidl": 1859.0,
+        "Penny": 1859.0,
         "Auchan": 1926.0,
         "ALDI": 1979.0
       },
@@ -641,16 +641,6 @@
           "unit_amount": 1959.0,
           "unit": "kg",
           "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-1028",
-          "source_product_name": "Friss csirkemell csík kg",
-          "amount": 1859.0,
-          "unit_amount": 1859.0,
-          "unit": "kg",
-          "unit_title": "csomag",
           "packaging": "1",
           "price_type": "NORMAL"
         },
@@ -671,6 +661,16 @@
           "unit_amount": 1859.0,
           "unit": "kg",
           "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Penny": {
+          "source_product_id": "penny-1028",
+          "source_product_name": "Friss csirkemell csík kg",
+          "amount": 1859.0,
+          "unit_amount": 1859.0,
+          "unit": "kg",
+          "unit_title": "csomag",
           "packaging": "1",
           "price_type": "NORMAL"
         },
@@ -857,9 +857,9 @@
       "category": "Gyümölcs",
       "expected_unit": "kg",
       "prices": {
-        "Tesco": 729.0,
+        "Tesco": 739.0,
         "SPAR": 699.0,
-        "ALDI": 399.0,
+        "ALDI": 699.0,
         "Lidl": 699.0,
         "Penny": 699.0,
         "Auchan": 749.0
@@ -868,8 +868,8 @@
         "Tesco": {
           "source_product_id": "2870100000000",
           "source_product_name": "Banán lédig    ",
-          "amount": 729.0,
-          "unit_amount": 729.0,
+          "amount": 739.0,
+          "unit_amount": 739.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -888,8 +888,8 @@
         "ALDI": {
           "source_product_id": "aldi-166908",
           "source_product_name": "Banán lédig",
-          "amount": 399.0,
-          "unit_amount": 399.0,
+          "amount": 699.0,
+          "unit_amount": 699.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1093,7 +1093,7 @@
         "Auchan": 810.0,
         "Tesco": 830.0,
         "Penny": 932.0,
-        "Lidl": 1269.0
+        "Lidl": 1065.33
       },
       "selected_products": {
         "ALDI": {
@@ -1147,13 +1147,13 @@
           "price_type": "NORMAL"
         },
         "Lidl": {
-          "source_product_id": "lidl-0082535",
-          "source_product_name": "TV paprika kg",
-          "amount": 1269.0,
-          "unit_amount": 1269.0,
+          "source_product_id": "lidl-0082651",
+          "source_product_name": "Lecsópaprika 750g",
+          "amount": 799.0,
+          "unit_amount": 1065.33,
           "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
+          "unit_title": "csomag",
+          "packaging": "0.75",
           "price_type": "NORMAL"
         }
       },
@@ -1770,7 +1770,7 @@
       "category": "Háztartás",
       "expected_unit": "db",
       "prices": {
-        "SPAR": 105.83,
+        "SPAR": 105.63,
         "Auchan": 41.0,
         "Tesco": 118.625,
         "ALDI": 121.5,
@@ -1778,13 +1778,13 @@
       },
       "selected_products": {
         "SPAR": {
-          "source_product_id": "6414301080601",
-          "source_product_name": "Tento Family Delicate illatmentes toalettpapír 3 rétegű 24 tekercs",
-          "amount": 2540.0,
-          "unit_amount": 105.83,
+          "source_product_id": "5998648704372",
+          "source_product_name": "Ooops! Excellence Sensitive toalettpapír 3 rétegű 16 tekercs",
+          "amount": 1690.0,
+          "unit_amount": 105.63,
           "unit": "db",
           "unit_title": "csomag",
-          "packaging": "24",
+          "packaging": "16",
           "price_type": "NORMAL"
         },
         "Auchan": {
