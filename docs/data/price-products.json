@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17T12:33:14Z",
+  "updated_at": "2026-11-18T12:21:56Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -857,7 +857,7 @@
       "category": "Gyümölcs",
       "expected_unit": "kg",
       "prices": {
-        "Tesco": 739.0,
+        "Tesco": 729.0,
         "SPAR": 699.0,
         "ALDI": 699.0,
         "Lidl": 699.0,
@@ -868,8 +868,8 @@
         "Tesco": {
           "source_product_id": "2870100000000",
           "source_product_name": "Banán lédig    ",
-          "amount": 739.0,
-          "unit_amount": 739.0,
+          "amount": 729.0,
+          "unit_amount": 729.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1012,11 +1012,11 @@
       "expected_unit": "kg",
       "prices": {
         "Lidl": 419.0,
-        "Auchan": 433.0,
         "Tesco": 848.0,
         "ALDI": 899.0,
         "Penny": 931.0,
-        "SPAR": 1019.0
+        "SPAR": 1019.0,
+        "Auchan": 1296.0
       },
       "selected_products": {
         "Lidl": {
@@ -1026,16 +1026,6 @@
           "unit_amount": 419.0,
           "unit": "kg",
           "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Auchan": {
-          "source_product_id": "5998985599686",
-          "source_product_name": "Paradicsom 1 kg",
-          "amount": 433.0,
-          "unit_amount": 433.0,
-          "unit": "kg",
-          "unit_title": "csomag",
           "packaging": "1",
           "price_type": "NORMAL"
         },
@@ -1078,6 +1068,16 @@
           "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
+        },
+        "Auchan": {
+          "source_product_id": "2182560000008",
+          "source_product_name": "Fürtös paradicsom Ft/kg",
+          "amount": 1296.0,
+          "unit_amount": 1296.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
         }
       },
       "coverage": 6
@@ -1089,11 +1089,11 @@
       "expected_unit": "kg",
       "prices": {
         "ALDI": 629.0,
-        "SPAR": 658.0,
-        "Auchan": 810.0,
         "Tesco": 830.0,
+        "SPAR": 922.67,
         "Penny": 932.0,
-        "Lidl": 1065.33
+        "Lidl": 1065.33,
+        "Auchan": 1373.0
       },
       "selected_products": {
         "ALDI": {
@@ -1106,26 +1106,6 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "SPAR": {
-          "source_product_id": "5999139410222",
-          "source_product_name": "S-budget xxl lecsópaprika 1,5kg",
-          "amount": 987.0,
-          "unit_amount": 658.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "1.5",
-          "price_type": "NORMAL"
-        },
-        "Auchan": {
-          "source_product_id": "2182050000006",
-          "source_product_name": "Étkezési paprika Ft/kg",
-          "amount": 810.0,
-          "unit_amount": 810.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
         "Tesco": {
           "source_product_id": "2896050000000",
           "source_product_name": "PAPRIKA LÉDIG QQ",
@@ -1134,6 +1114,16 @@
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "SPAR": {
+          "source_product_id": "5999139410598",
+          "source_product_name": "S-Budget lecsópaprika",
+          "amount": 692.0,
+          "unit_amount": 922.67,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "0.75",
           "price_type": "NORMAL"
         },
         "Penny": {
@@ -1154,6 +1144,16 @@
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "0.75",
+          "price_type": "NORMAL"
+        },
+        "Auchan": {
+          "source_product_id": "2182050000006",
+          "source_product_name": "Étkezési paprika Ft/kg",
+          "amount": 1373.0,
+          "unit_amount": 1373.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
           "price_type": "NORMAL"
         }
       },
@@ -1246,8 +1246,8 @@
         "Penny": 285.0,
         "Tesco": 269.0,
         "ALDI": 255.0,
-        "SPAR": 284.0,
-        "Auchan": 314.0
+        "Auchan": 263.0,
+        "SPAR": 284.0
       },
       "selected_products": {
         "Lidl": {
@@ -1290,6 +1290,16 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
+        "Auchan": {
+          "source_product_id": "5999863235061",
+          "source_product_name": "Piros burgonya 5 kg",
+          "amount": 1313.0,
+          "unit_amount": 263.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "5",
+          "price_type": "NORMAL"
+        },
         "SPAR": {
           "source_product_id": "5999541553616",
           "source_product_name": "Burgonya piros lédig",
@@ -1298,16 +1308,6 @@
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Auchan": {
-          "source_product_id": "5999863235078",
-          "source_product_name": "Piros burgonya 10 kg",
-          "amount": 3143.0,
-          "unit_amount": 314.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "10",
           "price_type": "NORMAL"
         }
       },
@@ -1474,16 +1474,26 @@
       "expected_unit": "kg",
       "prices": {
         "SPAR": 177.0,
+        "Auchan": 177.0,
         "ALDI": 177.0,
         "Lidl": 177.0,
         "Penny": 177.0,
-        "Tesco": 181.0,
-        "Auchan": 192.0
+        "Tesco": 181.0
       },
       "selected_products": {
         "SPAR": {
           "source_product_id": "5999033897754",
           "source_product_name": "S-Budget búzafinomliszt BL 55 1 kg",
+          "amount": 177.0,
+          "unit_amount": 177.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Auchan": {
+          "source_product_id": "5999086469649",
+          "source_product_name": "Auchan Tipp búzafinomliszt BL-55 1 kg",
           "amount": 177.0,
           "unit_amount": 177.0,
           "unit": "kg",
@@ -1526,16 +1536,6 @@
           "source_product_name": "Tesco búzafinomliszt BL 55 1 kg QQ",
           "amount": 181.0,
           "unit_amount": 181.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Auchan": {
-          "source_product_id": "5999086469649",
-          "source_product_name": "Auchan Tipp búzafinomliszt BL-55 1 kg",
-          "amount": 192.0,
-          "unit_amount": 192.0,
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "1",
