@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19T12:16:16Z",
+  "updated_at": "2026-11-20T12:16:15Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -89,7 +89,7 @@
       "prices": {
         "SPAR": 265.0,
         "Tesco": 281.0,
-        "Auchan": 271.0,
+        "Auchan": 265.0,
         "ALDI": 295.0,
         "Lidl": 295.0,
         "Penny": 295.0
@@ -118,8 +118,8 @@
         "Auchan": {
           "source_product_id": "5998200560347",
           "source_product_name": "Riska ESL tej 2,8% 1 l",
-          "amount": 271.0,
-          "unit_amount": 271.0,
+          "amount": 265.0,
+          "unit_amount": 265.0,
           "unit": "l",
           "unit_title": "db",
           "packaging": "1",
@@ -241,7 +241,7 @@
       "category": "Tejtermék",
       "expected_unit": "kg",
       "prices": {
-        "SPAR": 2390.0,
+        "SPAR": 1990.0,
         "Auchan": 2141.0,
         "ALDI": 2390.0,
         "Lidl": 2390.0,
@@ -250,10 +250,10 @@
       },
       "selected_products": {
         "SPAR": {
-          "source_product_id": "spar-507158006",
-          "source_product_name": "S-Budget félzsíros, félkemény trappista sajt ",
-          "amount": 2390.0,
-          "unit_amount": 2390.0,
+          "source_product_id": "5998200460371",
+          "source_product_name": "Mizo trappista sajt",
+          "amount": 1990.0,
+          "unit_amount": 1990.0,
           "unit": "kg",
           "unit_title": "db",
           "packaging": "1",
@@ -626,7 +626,7 @@
       "category": "Húsáru",
       "expected_unit": "kg",
       "prices": {
-        "Tesco": 1959.0,
+        "Tesco": 1779.0,
         "Lidl": 1729.0,
         "Auchan": 1839.0,
         "Penny": 1859.0,
@@ -637,8 +637,8 @@
         "Tesco": {
           "source_product_id": "2856090000000",
           "source_product_name": "CSIRKE MELLFILÉ VÁKUMCS Ft/kg",
-          "amount": 1959.0,
-          "unit_amount": 1959.0,
+          "amount": 1779.0,
+          "unit_amount": 1779.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -704,10 +704,10 @@
       "expected_unit": "kg",
       "prices": {
         "ALDI": 2869.0,
+        "Auchan": 2999.0,
         "Lidl": 2999.0,
         "Penny": 2999.0,
         "Tesco": 3000.0,
-        "Auchan": 3089.0,
         "SPAR": 3117.78
       },
       "selected_products": {
@@ -716,6 +716,16 @@
           "source_product_name": "Húsmester pulykamellfilé kg vákuumcsomagolt",
           "amount": 2869.0,
           "unit_amount": 2869.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Auchan": {
+          "source_product_id": "2117130000003",
+          "source_product_name": "Friss pulykamellfilé Ft/kg",
+          "amount": 2999.0,
+          "unit_amount": 2999.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -749,16 +759,6 @@
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "0.45",
-          "price_type": "NORMAL"
-        },
-        "Auchan": {
-          "source_product_id": "2117130000003",
-          "source_product_name": "Friss pulykamellfilé Ft/kg",
-          "amount": 3089.0,
-          "unit_amount": 3089.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
           "price_type": "NORMAL"
         },
         "SPAR": {
@@ -939,7 +939,7 @@
         "Tesco": 899.0,
         "ALDI": 899.0,
         "Lidl": 899.0,
-        "Penny": 1199.0
+        "Penny": 1198.0
       },
       "selected_products": {
         "Auchan": {
@@ -993,13 +993,13 @@
           "price_type": "NORMAL"
         },
         "Penny": {
-          "source_product_id": "penny-306",
-          "source_product_name": "Citrom lédig kg",
-          "amount": 1199.0,
-          "unit_amount": 1199.0,
+          "source_product_id": "penny-107",
+          "source_product_name": "Citrom 500g",
+          "amount": 599.0,
+          "unit_amount": 1198.0,
           "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
+          "unit_title": "csomag",
+          "packaging": "0.5",
           "price_type": "NORMAL"
         }
       },
@@ -1629,14 +1629,14 @@
       "prices": {
         "SPAR": 61.33,
         "Tesco": 66.0,
+        "Auchan": 66.0,
         "ALDI": 66.0,
         "Lidl": 66.0,
-        "Penny": 66.0,
-        "Auchan": 86.0
+        "Penny": 66.0
       },
       "selected_products": {
         "SPAR": {
-          "source_product_id": "5999545594554",
+          "source_product_id": "5999545594349",
           "source_product_name": "Primavera szén-dioxiddal dúsított természetes ásványvíz 1,5 l",
           "amount": 92.0,
           "unit_amount": 61.33,
@@ -1648,6 +1648,16 @@
         "Tesco": {
           "source_product_id": "5051007167444",
           "source_product_name": "Tesco 1,5 l sava  ",
+          "amount": 99.0,
+          "unit_amount": 66.0,
+          "unit": "l",
+          "unit_title": "db",
+          "packaging": "1.5",
+          "price_type": "NORMAL"
+        },
+        "Auchan": {
+          "source_product_id": "5998835502026",
+          "source_product_name": "Pannon-Aqua szén-dioxiddal dúsított természetes ásványvíz 1,5 l",
           "amount": 99.0,
           "unit_amount": 66.0,
           "unit": "l",
@@ -1680,16 +1690,6 @@
           "source_product_name": "Kékforrás mentes ásványvíz",
           "amount": 99.0,
           "unit_amount": 66.0,
-          "unit": "l",
-          "unit_title": "db",
-          "packaging": "1.5",
-          "price_type": "NORMAL"
-        },
-        "Auchan": {
-          "source_product_id": "5998835502026",
-          "source_product_name": "Pannon-Aqua szén-dioxiddal dúsított természetes ásványvíz 1,5 l",
-          "amount": 129.0,
-          "unit_amount": 86.0,
           "unit": "l",
           "unit_title": "db",
           "packaging": "1.5",
@@ -1837,7 +1837,7 @@
       "expected_unit": "l",
       "prices": {
         "Tesco": 174.955,
-        "Auchan": 524.0,
+        "Auchan": 416.0,
         "ALDI": 333.1,
         "Penny": 674.75,
         "Lidl": 416.25,
@@ -1857,8 +1857,8 @@
         "Auchan": {
           "source_product_id": "5998147323968",
           "source_product_name": "Floren XXXL Color folyékony mosószer 70 mosás 4,75 l",
-          "amount": 2490.0,
-          "unit_amount": 524.0,
+          "amount": 1976.0,
+          "unit_amount": 416.0,
           "unit": "l",
           "unit_title": "db",
           "packaging": "4.75",
