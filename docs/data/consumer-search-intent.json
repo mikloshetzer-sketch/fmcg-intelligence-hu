@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-16T16:23:19Z",
+  "updated_at": "2026-11-23T18:43:33Z",
   "status": "ok",
   "source": "google_trends",
   "method": "pytrends_unofficial_best_effort_search_intent_v2_one_payload_per_company",
@@ -15,37 +15,37 @@
       "data_status": "ok",
       "dominant_intent": "store_access",
       "dominant_intent_label": "Bolt / nyitvatartás",
-      "dominant_intent_score": 39,
+      "dominant_intent_score": 38,
       "intent_share": [
         {
           "intent_id": "promotion",
           "intent_label": "Akció / promóció",
-          "score": 6,
-          "share_pct": 8.8
+          "score": 5,
+          "share_pct": 7.6
         },
         {
           "intent_id": "store_access",
           "intent_label": "Bolt / nyitvatartás",
-          "score": 39,
-          "share_pct": 57.4
+          "score": 38,
+          "share_pct": 57.6
         },
         {
           "intent_id": "price",
           "intent_label": "Ár / drágulás",
           "score": 6,
-          "share_pct": 8.8
+          "share_pct": 9.1
         },
         {
           "intent_id": "jobs",
           "intent_label": "Állás / karrier",
           "score": 6,
-          "share_pct": 8.8
+          "share_pct": 9.1
         },
         {
           "intent_id": "digital",
           "intent_label": "App / online",
           "score": 11,
-          "share_pct": 16.2
+          "share_pct": 16.7
         }
       ],
       "intents": [
@@ -54,14 +54,14 @@
           "intent_label": "Akció / promóció",
           "keyword": "Lidl akció",
           "data_status": "ok",
-          "intent_score": 6,
+          "intent_score": 5,
           "trend_direction": "up",
           "avg_last_7": 3.0,
           "avg_previous_7": 2.57,
-          "avg_last_30": 3.0,
-          "avg_period": 3.13,
+          "avg_last_30": 2.9,
+          "avg_period": 3.08,
           "peak_period": 5.0,
-          "search_volatility": 26,
+          "search_volatility": 23,
           "error": null
         },
         {
@@ -69,12 +69,12 @@
           "intent_label": "Bolt / nyitvatartás",
           "keyword": "Lidl nyitvatartás",
           "data_status": "ok",
-          "intent_score": 39,
-          "trend_direction": "down",
-          "avg_last_7": 21.14,
-          "avg_previous_7": 26.29,
-          "avg_last_30": 24.8,
-          "avg_period": 25.51,
+          "intent_score": 38,
+          "trend_direction": "stable",
+          "avg_last_7": 20.14,
+          "avg_previous_7": 21.43,
+          "avg_last_30": 24.0,
+          "avg_period": 25.19,
           "peak_period": 100.0,
           "search_volatility": 67,
           "error": null
@@ -86,12 +86,12 @@
           "data_status": "ok",
           "intent_score": 6,
           "trend_direction": "stable",
-          "avg_last_7": 4.14,
-          "avg_previous_7": 3.86,
-          "avg_last_30": 4.13,
-          "avg_period": 4.42,
-          "peak_period": 7.0,
-          "search_volatility": 22,
+          "avg_last_7": 4.0,
+          "avg_previous_7": 4.0,
+          "avg_last_30": 4.03,
+          "avg_period": 4.32,
+          "peak_period": 6.0,
+          "search_volatility": 19,
           "error": null
         },
         {
@@ -101,9 +101,9 @@
           "data_status": "ok",
           "intent_score": 6,
           "trend_direction": "down",
-          "avg_last_7": 2.0,
-          "avg_previous_7": 2.29,
-          "avg_last_30": 2.13,
+          "avg_last_7": 1.86,
+          "avg_previous_7": 2.14,
+          "avg_last_30": 2.17,
           "avg_period": 2.3,
           "peak_period": 4.0,
           "search_volatility": 36,
@@ -118,8 +118,8 @@
           "trend_direction": "stable",
           "avg_last_7": 0.0,
           "avg_previous_7": 0.0,
-          "avg_last_30": 0.97,
-          "avg_period": 0.94,
+          "avg_last_30": 0.73,
+          "avg_period": 0.85,
           "peak_period": 3.0,
           "search_volatility": 100,
           "error": null
@@ -140,31 +140,31 @@
           "intent_id": "promotion",
           "intent_label": "Akció / promóció",
           "score": 11,
-          "share_pct": 14.3
+          "share_pct": 13.9
         },
         {
           "intent_id": "store_access",
           "intent_label": "Bolt / nyitvatartás",
           "score": 35,
-          "share_pct": 45.5
+          "share_pct": 44.3
         },
         {
           "intent_id": "price",
           "intent_label": "Ár / drágulás",
-          "score": 10,
-          "share_pct": 13.0
+          "score": 11,
+          "share_pct": 13.9
         },
         {
           "intent_id": "jobs",
           "intent_label": "Állás / karrier",
-          "score": 11,
-          "share_pct": 14.3
+          "score": 12,
+          "share_pct": 15.2
         },
         {
           "intent_id": "digital",
           "intent_label": "App / online",
           "score": 10,
-          "share_pct": 13.0
+          "share_pct": 12.7
         }
       ],
       "intents": [
@@ -174,13 +174,13 @@
           "keyword": "ALDI akció",
           "data_status": "ok",
           "intent_score": 11,
-          "trend_direction": "stable",
-          "avg_last_7": 1.29,
-          "avg_previous_7": 1.29,
-          "avg_last_30": 1.63,
-          "avg_period": 1.85,
-          "peak_period": 6.0,
-          "search_volatility": 91,
+          "trend_direction": "up",
+          "avg_last_7": 1.43,
+          "avg_previous_7": 0.86,
+          "avg_last_30": 1.77,
+          "avg_period": 2.0,
+          "peak_period": 5.0,
+          "search_volatility": 87,
           "error": null
         },
         {
@@ -189,13 +189,13 @@
           "keyword": "ALDI nyitvatartás",
           "data_status": "ok",
           "intent_score": 35,
-          "trend_direction": "down",
-          "avg_last_7": 15.86,
-          "avg_previous_7": 19.29,
-          "avg_last_30": 20.53,
-          "avg_period": 21.79,
+          "trend_direction": "stable",
+          "avg_last_7": 16.0,
+          "avg_previous_7": 15.14,
+          "avg_last_30": 20.27,
+          "avg_period": 22.09,
           "peak_period": 100.0,
-          "search_volatility": 69,
+          "search_volatility": 68,
           "error": null
         },
         {
@@ -203,14 +203,14 @@
           "intent_label": "Ár / drágulás",
           "keyword": "ALDI ár",
           "data_status": "ok",
-          "intent_score": 10,
+          "intent_score": 11,
           "trend_direction": "up",
-          "avg_last_7": 1.71,
-          "avg_previous_7": 0.0,
-          "avg_last_30": 1.63,
-          "avg_period": 2.32,
+          "avg_last_7": 2.43,
+          "avg_previous_7": 0.86,
+          "avg_last_30": 1.73,
+          "avg_period": 2.45,
           "peak_period": 6.0,
-          "search_volatility": 76,
+          "search_volatility": 81,
           "error": null
         },
         {
@@ -218,13 +218,13 @@
           "intent_label": "Állás / karrier",
           "keyword": "ALDI állás",
           "data_status": "ok",
-          "intent_score": 11,
+          "intent_score": 12,
           "trend_direction": "up",
-          "avg_last_7": 0.86,
+          "avg_last_7": 1.29,
           "avg_previous_7": 0.43,
-          "avg_last_30": 1.03,
-          "avg_period": 1.26,
-          "peak_period": 4.0,
+          "avg_last_30": 1.0,
+          "avg_period": 1.25,
+          "peak_period": 5.0,
           "search_volatility": 100,
           "error": null
         },
@@ -237,7 +237,7 @@
           "trend_direction": "stable",
           "avg_last_7": 0.0,
           "avg_previous_7": 0.0,
-          "avg_last_30": 0.0,
+          "avg_last_30": 0.1,
           "avg_period": 0.06,
           "peak_period": 3.0,
           "search_volatility": 100,
@@ -259,25 +259,31 @@
           "intent_id": "promotion",
           "intent_label": "Akció / promóció",
           "score": 10,
-          "share_pct": 14.5
+          "share_pct": 12.7
         },
         {
           "intent_id": "store_access",
           "intent_label": "Bolt / nyitvatartás",
           "score": 36,
-          "share_pct": 52.2
+          "share_pct": 45.6
         },
         {
           "intent_id": "price",
           "intent_label": "Ár / drágulás",
           "score": 12,
-          "share_pct": 17.4
+          "share_pct": 15.2
         },
         {
           "intent_id": "jobs",
           "intent_label": "Állás / karrier",
           "score": 11,
-          "share_pct": 15.9
+          "share_pct": 13.9
+        },
+        {
+          "intent_id": "digital",
+          "intent_label": "App / online",
+          "score": 10,
+          "share_pct": 12.7
         }
       ],
       "intents": [
@@ -288,12 +294,12 @@
           "data_status": "ok",
           "intent_score": 10,
           "trend_direction": "up",
-          "avg_last_7": 3.29,
+          "avg_last_7": 1.71,
           "avg_previous_7": 1.14,
-          "avg_last_30": 2.67,
-          "avg_period": 3.17,
-          "peak_period": 7.0,
-          "search_volatility": 64,
+          "avg_last_30": 1.8,
+          "avg_period": 2.51,
+          "peak_period": 5.0,
+          "search_volatility": 79,
           "error": null
         },
         {
@@ -302,11 +308,11 @@
           "keyword": "Penny nyitvatartás",
           "data_status": "ok",
           "intent_score": 36,
-          "trend_direction": "down",
-          "avg_last_7": 17.0,
-          "avg_previous_7": 22.14,
-          "avg_last_30": 21.87,
-          "avg_period": 23.47,
+          "trend_direction": "stable",
+          "avg_last_7": 16.29,
+          "avg_previous_7": 17.57,
+          "avg_last_30": 21.43,
+          "avg_period": 23.45,
           "peak_period": 100.0,
           "search_volatility": 69,
           "error": null
@@ -317,11 +323,11 @@
           "keyword": "Penny ár",
           "data_status": "ok",
           "intent_score": 12,
-          "trend_direction": "down",
-          "avg_last_7": 0.86,
-          "avg_previous_7": 1.14,
-          "avg_last_30": 1.33,
-          "avg_period": 1.66,
+          "trend_direction": "up",
+          "avg_last_7": 1.71,
+          "avg_previous_7": 1.29,
+          "avg_last_30": 1.57,
+          "avg_period": 1.62,
           "peak_period": 6.0,
           "search_volatility": 100,
           "error": null
@@ -333,11 +339,11 @@
           "data_status": "ok",
           "intent_score": 11,
           "trend_direction": "up",
-          "avg_last_7": 0.71,
+          "avg_last_7": 0.43,
           "avg_previous_7": 0.0,
-          "avg_last_30": 0.17,
-          "avg_period": 0.17,
-          "peak_period": 4.0,
+          "avg_last_30": 0.3,
+          "avg_period": 0.34,
+          "peak_period": 3.0,
           "search_volatility": 100,
           "error": null
         },
@@ -345,16 +351,16 @@
           "intent_id": "digital",
           "intent_label": "App / online",
           "keyword": "Penny app",
-          "data_status": "no_data",
-          "intent_score": null,
-          "trend_direction": "n.a.",
-          "avg_last_7": null,
-          "avg_previous_7": null,
-          "avg_last_30": null,
-          "avg_period": null,
-          "peak_period": null,
-          "search_volatility": null,
-          "error": "all_zero_values"
+          "data_status": "ok",
+          "intent_score": 10,
+          "trend_direction": "stable",
+          "avg_last_7": 0.0,
+          "avg_previous_7": 0.0,
+          "avg_last_30": 0.0,
+          "avg_period": 0.06,
+          "peak_period": 3.0,
+          "search_volatility": 100,
+          "error": null
         }
       ],
       "payload_error": null,
@@ -372,25 +378,31 @@
           "intent_id": "promotion",
           "intent_label": "Akció / promóció",
           "score": 12,
-          "share_pct": 17.1
+          "share_pct": 14.8
         },
         {
           "intent_id": "store_access",
           "intent_label": "Bolt / nyitvatartás",
           "score": 38,
-          "share_pct": 54.3
+          "share_pct": 46.9
         },
         {
           "intent_id": "price",
           "intent_label": "Ár / drágulás",
-          "score": 9,
-          "share_pct": 12.9
+          "score": 10,
+          "share_pct": 12.3
         },
         {
           "intent_id": "jobs",
           "intent_label": "Állás / karrier",
           "score": 11,
-          "share_pct": 15.7
+          "share_pct": 13.6
+        },
+        {
+          "intent_id": "digital",
+          "intent_label": "App / online",
+          "score": 10,
+          "share_pct": 12.3
         }
       ],
       "intents": [
@@ -400,11 +412,11 @@
           "keyword": "SPAR akció",
           "data_status": "ok",
           "intent_score": 12,
-          "trend_direction": "up",
-          "avg_last_7": 1.29,
-          "avg_previous_7": 0.0,
-          "avg_last_30": 1.17,
-          "avg_period": 1.15,
+          "trend_direction": "stable",
+          "avg_last_7": 1.43,
+          "avg_previous_7": 1.43,
+          "avg_last_30": 1.43,
+          "avg_period": 1.38,
           "peak_period": 4.0,
           "search_volatility": 100,
           "error": null
@@ -415,13 +427,13 @@
           "keyword": "SPAR nyitvatartás",
           "data_status": "ok",
           "intent_score": 38,
-          "trend_direction": "down",
-          "avg_last_7": 22.29,
-          "avg_previous_7": 25.43,
-          "avg_last_30": 24.07,
-          "avg_period": 25.3,
+          "trend_direction": "stable",
+          "avg_last_7": 22.0,
+          "avg_previous_7": 22.0,
+          "avg_last_30": 24.33,
+          "avg_period": 25.85,
           "peak_period": 100.0,
-          "search_volatility": 59,
+          "search_volatility": 58,
           "error": null
         },
         {
@@ -429,14 +441,14 @@
           "intent_label": "Ár / drágulás",
           "keyword": "SPAR ár",
           "data_status": "ok",
-          "intent_score": 9,
+          "intent_score": 10,
           "trend_direction": "up",
-          "avg_last_7": 2.14,
-          "avg_previous_7": 0.57,
-          "avg_last_30": 1.83,
-          "avg_period": 2.34,
+          "avg_last_7": 2.29,
+          "avg_previous_7": 0.29,
+          "avg_last_30": 1.67,
+          "avg_period": 2.21,
           "peak_period": 7.0,
-          "search_volatility": 68,
+          "search_volatility": 77,
           "error": null
         },
         {
@@ -445,12 +457,12 @@
           "keyword": "SPAR állás",
           "data_status": "ok",
           "intent_score": 11,
-          "trend_direction": "down",
-          "avg_last_7": 0.43,
-          "avg_previous_7": 0.57,
-          "avg_last_30": 0.23,
-          "avg_period": 0.36,
-          "peak_period": 4.0,
+          "trend_direction": "up",
+          "avg_last_7": 0.86,
+          "avg_previous_7": 0.29,
+          "avg_last_30": 0.27,
+          "avg_period": 0.25,
+          "peak_period": 3.0,
           "search_volatility": 100,
           "error": null
         },
@@ -458,16 +470,16 @@
           "intent_id": "digital",
           "intent_label": "App / online",
           "keyword": "SPAR app",
-          "data_status": "no_data",
-          "intent_score": null,
-          "trend_direction": "n.a.",
-          "avg_last_7": null,
-          "avg_previous_7": null,
-          "avg_last_30": null,
-          "avg_period": null,
-          "peak_period": null,
-          "search_volatility": null,
-          "error": "all_zero_values"
+          "data_status": "ok",
+          "intent_score": 10,
+          "trend_direction": "stable",
+          "avg_last_7": 0.0,
+          "avg_previous_7": 0.0,
+          "avg_last_30": 0.0,
+          "avg_period": 0.08,
+          "peak_period": 2.0,
+          "search_volatility": 100,
+          "error": null
         }
       ],
       "payload_error": null,
@@ -485,31 +497,31 @@
           "intent_id": "promotion",
           "intent_label": "Akció / promóció",
           "score": 8,
-          "share_pct": 12.5
+          "share_pct": 12.1
         },
         {
           "intent_id": "store_access",
           "intent_label": "Bolt / nyitvatartás",
           "score": 35,
-          "share_pct": 54.7
+          "share_pct": 53.0
         },
         {
           "intent_id": "price",
           "intent_label": "Ár / drágulás",
           "score": 6,
-          "share_pct": 9.4
+          "share_pct": 9.1
         },
         {
           "intent_id": "jobs",
           "intent_label": "Állás / karrier",
-          "score": 8,
-          "share_pct": 12.5
+          "score": 9,
+          "share_pct": 13.6
         },
         {
           "intent_id": "digital",
           "intent_label": "Clubcard / digitális",
-          "score": 7,
-          "share_pct": 10.9
+          "score": 8,
+          "share_pct": 12.1
         }
       ],
       "intents": [
@@ -520,12 +532,12 @@
           "data_status": "ok",
           "intent_score": 8,
           "trend_direction": "up",
-          "avg_last_7": 1.71,
+          "avg_last_7": 1.86,
           "avg_previous_7": 1.14,
-          "avg_last_30": 1.8,
-          "avg_period": 1.89,
+          "avg_last_30": 1.7,
+          "avg_period": 1.87,
           "peak_period": 4.0,
-          "search_volatility": 57,
+          "search_volatility": 65,
           "error": null
         },
         {
@@ -535,10 +547,10 @@
           "data_status": "ok",
           "intent_score": 35,
           "trend_direction": "stable",
-          "avg_last_7": 14.14,
-          "avg_previous_7": 15.0,
-          "avg_last_30": 15.53,
-          "avg_period": 17.83,
+          "avg_last_7": 13.71,
+          "avg_previous_7": 12.71,
+          "avg_last_30": 15.33,
+          "avg_period": 17.92,
           "peak_period": 100.0,
           "search_volatility": 87,
           "error": null
@@ -550,12 +562,12 @@
           "data_status": "ok",
           "intent_score": 6,
           "trend_direction": "up",
-          "avg_last_7": 2.0,
+          "avg_last_7": 1.86,
           "avg_previous_7": 1.57,
-          "avg_last_30": 1.97,
+          "avg_last_30": 2.07,
           "avg_period": 2.4,
           "peak_period": 5.0,
-          "search_volatility": 41,
+          "search_volatility": 37,
           "error": null
         },
         {
@@ -563,14 +575,14 @@
           "intent_label": "Állás / karrier",
           "keyword": "Tesco állás",
           "data_status": "ok",
-          "intent_score": 8,
-          "trend_direction": "up",
-          "avg_last_7": 1.29,
-          "avg_previous_7": 1.0,
-          "avg_last_30": 1.07,
-          "avg_period": 1.34,
+          "intent_score": 9,
+          "trend_direction": "stable",
+          "avg_last_7": 1.14,
+          "avg_previous_7": 1.14,
+          "avg_last_30": 1.0,
+          "avg_period": 1.15,
           "peak_period": 3.0,
-          "search_volatility": 66,
+          "search_volatility": 74,
           "error": null
         },
         {
@@ -578,14 +590,14 @@
           "intent_label": "Clubcard / digitális",
           "keyword": "Tesco clubcard",
           "data_status": "ok",
-          "intent_score": 7,
+          "intent_score": 8,
           "trend_direction": "up",
-          "avg_last_7": 1.29,
-          "avg_previous_7": 1.0,
-          "avg_last_30": 1.67,
-          "avg_period": 1.83,
+          "avg_last_7": 1.57,
+          "avg_previous_7": 0.71,
+          "avg_last_30": 1.5,
+          "avg_period": 1.62,
           "peak_period": 4.0,
-          "search_volatility": 56,
+          "search_volatility": 67,
           "error": null
         }
       ],
@@ -603,32 +615,32 @@
         {
           "intent_id": "promotion",
           "intent_label": "Akció / promóció",
-          "score": 13,
-          "share_pct": 15.1
+          "score": 11,
+          "share_pct": 13.1
         },
         {
           "intent_id": "store_access",
           "intent_label": "Bolt / nyitvatartás",
           "score": 34,
-          "share_pct": 39.5
+          "share_pct": 40.5
         },
         {
           "intent_id": "price",
           "intent_label": "Ár / drágulás",
           "score": 10,
-          "share_pct": 11.6
+          "share_pct": 11.9
         },
         {
           "intent_id": "jobs",
           "intent_label": "Állás / karrier",
           "score": 11,
-          "share_pct": 12.8
+          "share_pct": 13.1
         },
         {
           "intent_id": "digital",
           "intent_label": "Online / digitális",
           "score": 18,
-          "share_pct": 20.9
+          "share_pct": 21.4
         }
       ],
       "intents": [
@@ -637,14 +649,14 @@
           "intent_label": "Akció / promóció",
           "keyword": "Auchan akció",
           "data_status": "ok",
-          "intent_score": 13,
-          "trend_direction": "up",
-          "avg_last_7": 2.57,
-          "avg_previous_7": 2.14,
-          "avg_last_30": 2.7,
-          "avg_period": 2.51,
+          "intent_score": 11,
+          "trend_direction": "stable",
+          "avg_last_7": 2.29,
+          "avg_previous_7": 2.29,
+          "avg_last_30": 2.4,
+          "avg_period": 2.85,
           "peak_period": 8.0,
-          "search_volatility": 94,
+          "search_volatility": 81,
           "error": null
         },
         {
@@ -653,13 +665,13 @@
           "keyword": "Auchan nyitvatartás",
           "data_status": "ok",
           "intent_score": 34,
-          "trend_direction": "down",
-          "avg_last_7": 14.0,
-          "avg_previous_7": 16.14,
-          "avg_last_30": 15.5,
-          "avg_period": 17.87,
+          "trend_direction": "stable",
+          "avg_last_7": 13.29,
+          "avg_previous_7": 13.29,
+          "avg_last_30": 15.2,
+          "avg_period": 17.66,
           "peak_period": 100.0,
-          "search_volatility": 80,
+          "search_volatility": 82,
           "error": null
         },
         {
@@ -668,13 +680,13 @@
           "keyword": "Auchan ár",
           "data_status": "ok",
           "intent_score": 10,
-          "trend_direction": "stable",
-          "avg_last_7": 3.29,
-          "avg_previous_7": 3.43,
-          "avg_last_30": 3.27,
-          "avg_period": 3.81,
-          "peak_period": 10.0,
-          "search_volatility": 61,
+          "trend_direction": "down",
+          "avg_last_7": 3.14,
+          "avg_previous_7": 4.29,
+          "avg_last_30": 3.5,
+          "avg_period": 3.96,
+          "peak_period": 9.0,
+          "search_volatility": 57,
           "error": null
         },
         {
@@ -686,8 +698,8 @@
           "trend_direction": "up",
           "avg_last_7": 0.43,
           "avg_previous_7": 0.0,
-          "avg_last_30": 0.23,
-          "avg_period": 0.13,
+          "avg_last_30": 0.1,
+          "avg_period": 0.19,
           "peak_period": 4.0,
           "search_volatility": 100,
           "error": null
@@ -699,12 +711,12 @@
           "data_status": "ok",
           "intent_score": 18,
           "trend_direction": "up",
-          "avg_last_7": 13.43,
-          "avg_previous_7": 10.71,
-          "avg_last_30": 13.53,
-          "avg_period": 16.0,
-          "peak_period": 33.0,
-          "search_volatility": 32,
+          "avg_last_7": 13.71,
+          "avg_previous_7": 10.57,
+          "avg_last_30": 13.67,
+          "avg_period": 15.91,
+          "peak_period": 32.0,
+          "search_volatility": 33,
           "error": null
         }
       ],
