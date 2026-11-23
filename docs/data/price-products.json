@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-22T12:03:17Z",
+  "updated_at": "2026-11-23T13:45:13Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -322,7 +322,7 @@
         "SPAR": 1960.0,
         "Lidl": 1996.0,
         "Penny": 2060.0,
-        "Auchan": 2196.0,
+        "Auchan": 2388.0,
         "Tesco": 2395.0
       },
       "selected_products": {
@@ -369,8 +369,8 @@
         "Auchan": {
           "source_product_id": "4000436150368",
           "source_product_name": "Ammerländer márkázott vaj 250 g",
-          "amount": 549.0,
-          "unit_amount": 2196.0,
+          "amount": 597.0,
+          "unit_amount": 2388.0,
           "unit": "kg",
           "unit_title": "db",
           "packaging": "0.25",
@@ -474,10 +474,10 @@
       "prices": {
         "Tesco": 1186.0,
         "Auchan": 1199.0,
-        "ALDI": 1199.0,
         "SPAR": 1365.0,
         "Lidl": 1369.0,
-        "Penny": 1435.0
+        "Penny": 1435.0,
+        "ALDI": 1465.0
       },
       "selected_products": {
         "Tesco": {
@@ -493,16 +493,6 @@
         "Auchan": {
           "source_product_id": "2173290000000",
           "source_product_name": "Süldő Sertés Comb bőrös, csontos védőgázas csomagolásban Ft/kg",
-          "amount": 1199.0,
-          "unit_amount": 1199.0,
-          "unit": "kg",
-          "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "ALDI": {
-          "source_product_id": "aldi-322198",
-          "source_product_name": "Húsmester sertéscomb darabolt kg vákuumcsomagolt",
           "amount": 1199.0,
           "unit_amount": 1199.0,
           "unit": "kg",
@@ -539,6 +529,16 @@
           "unit_title": "csomag",
           "packaging": "1",
           "price_type": "NORMAL"
+        },
+        "ALDI": {
+          "source_product_id": "aldi-322198",
+          "source_product_name": "Húsmester sertéscomb darabolt kg vákuumcsomagolt",
+          "amount": 1465.0,
+          "unit_amount": 1465.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
         }
       },
       "coverage": 6
@@ -549,31 +549,21 @@
       "category": "Húsáru",
       "expected_unit": "kg",
       "prices": {
-        "Lidl": 1499.0,
-        "Penny": 1749.0,
+        "Lidl": 1299.0,
         "Tesco": 1748.75,
         "Auchan": 1699.0,
         "ALDI": 1749.0,
+        "Penny": 1749.0,
         "SPAR": 1954.44
       },
       "selected_products": {
         "Lidl": {
-          "source_product_id": "lidl-6405201",
-          "source_product_name": "Húsfarm Sertés darálthús 20 %, 1kg ",
-          "amount": 1499.0,
-          "unit_amount": 1499.0,
+          "source_product_id": "lidl-0005545",
+          "source_product_name": "Húsfarm XXL Sertés darálthús 30%,  1000g",
+          "amount": 1299.0,
+          "unit_amount": 1299.0,
           "unit": "kg",
           "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-158",
-          "source_product_name": "Kedvenc Hentese sertés darálthús 30%zsírt.",
-          "amount": 1749.0,
-          "unit_amount": 1749.0,
-          "unit": "kg",
-          "unit_title": "csomag",
           "packaging": "1",
           "price_type": "NORMAL"
         },
@@ -607,6 +597,16 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
+        "Penny": {
+          "source_product_id": "penny-158",
+          "source_product_name": "Kedvenc Hentese sertés darálthús 30%zsírt.",
+          "amount": 1749.0,
+          "unit_amount": 1749.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "SPAR": {
           "source_product_id": "5999033810241",
           "source_product_name": "S-Budget sertés darálthús 900 g",
@@ -627,9 +627,9 @@
       "expected_unit": "kg",
       "prices": {
         "Tesco": 1779.0,
+        "Penny": 1859.0,
         "Auchan": 1839.0,
         "Lidl": 1859.0,
-        "Penny": 1859.0,
         "SPAR": 1924.0,
         "ALDI": 1979.0
       },
@@ -641,6 +641,16 @@
           "unit_amount": 1779.0,
           "unit": "kg",
           "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Penny": {
+          "source_product_id": "penny-1028",
+          "source_product_name": "Friss csirkemell csík kg",
+          "amount": 1859.0,
+          "unit_amount": 1859.0,
+          "unit": "kg",
+          "unit_title": "csomag",
           "packaging": "1",
           "price_type": "NORMAL"
         },
@@ -661,16 +671,6 @@
           "unit_amount": 1859.0,
           "unit": "kg",
           "unit_title": "kg",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-1028",
-          "source_product_name": "Friss csirkemell csík kg",
-          "amount": 1859.0,
-          "unit_amount": 1859.0,
-          "unit": "kg",
-          "unit_title": "csomag",
           "packaging": "1",
           "price_type": "NORMAL"
         },
@@ -935,11 +935,11 @@
       "expected_unit": "kg",
       "prices": {
         "Auchan": 499.0,
+        "Lidl": 659.0,
         "SPAR": 899.0,
-        "Penny": 1198.0,
         "Tesco": 899.0,
         "ALDI": 899.0,
-        "Lidl": 899.0
+        "Penny": 1199.0
       },
       "selected_products": {
         "Auchan": {
@@ -947,6 +947,16 @@
           "source_product_name": "Citrom Ft/kg",
           "amount": 499.0,
           "unit_amount": 499.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
+        "Lidl": {
+          "source_product_id": "lidl-0080160",
+          "source_product_name": "Citrom lédig",
+          "amount": 659.0,
+          "unit_amount": 659.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -960,16 +970,6 @@
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-107",
-          "source_product_name": "Citrom 500g",
-          "amount": 599.0,
-          "unit_amount": 1198.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "0.5",
           "price_type": "NORMAL"
         },
         "Tesco": {
@@ -992,11 +992,11 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
-        "Lidl": {
-          "source_product_id": "lidl-0080160",
-          "source_product_name": "Citrom lédig",
-          "amount": 899.0,
-          "unit_amount": 899.0,
+        "Penny": {
+          "source_product_id": "penny-306",
+          "source_product_name": "Citrom lédig kg",
+          "amount": 1199.0,
+          "unit_amount": 1199.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1165,14 +1165,24 @@
       "category": "Zöldség",
       "expected_unit": "kg",
       "prices": {
+        "Tesco": 135.0,
         "Penny": 205.0,
-        "Tesco": 189.5,
         "Lidl": 189.5,
         "ALDI": 195.0,
         "SPAR": 227.0,
         "Auchan": 237.0
       },
       "selected_products": {
+        "Tesco": {
+          "source_product_id": "2860520000000",
+          "source_product_name": "VÖRÖSHAGYMA LÉDIG QQ",
+          "amount": 135.0,
+          "unit_amount": 135.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "Penny": {
           "source_product_id": "penny-518",
           "source_product_name": "Vöröshagyma lédig kg",
@@ -1181,16 +1191,6 @@
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Tesco": {
-          "source_product_id": "5995034201545",
-          "source_product_name": "GH VÖRÖSHAGYMA 2 KG ",
-          "amount": 379.0,
-          "unit_amount": 189.5,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "2",
           "price_type": "NORMAL"
         },
         "Lidl": {
@@ -1770,7 +1770,7 @@
       "category": "Háztartás",
       "expected_unit": "db",
       "prices": {
-        "SPAR": 105.83,
+        "SPAR": 105.63,
         "Auchan": 41.0,
         "Tesco": 117.25,
         "ALDI": 121.5,
@@ -1778,13 +1778,13 @@
       },
       "selected_products": {
         "SPAR": {
-          "source_product_id": "6414301080601",
-          "source_product_name": "Tento Family Delicate illatmentes toalettpapír 3 rétegű 24 tekercs",
-          "amount": 2540.0,
-          "unit_amount": 105.83,
+          "source_product_id": "5998648704372",
+          "source_product_name": "Ooops! Excellence Sensitive toalettpapír 3 rétegű 16 tekercs",
+          "amount": 1690.0,
+          "unit_amount": 105.63,
           "unit": "db",
           "unit_title": "csomag",
-          "packaging": "24",
+          "packaging": "16",
           "price_type": "NORMAL"
         },
         "Auchan": {
