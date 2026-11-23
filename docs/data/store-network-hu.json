@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-16T11:15:18.815826+00:00",
+  "updated_at": "2026-11-23T12:36:42.715298+00:00",
   "version": "store-network-hu-v2.0-non-lidl-osm",
   "scope": "Hungarian FMCG store network from OSM + optional overrides",
   "method_note": "Ez a verzió Lidl nélkül építi a bolthálózatot. ALDI, SPAR, Tesco, Auchan és Penny OSM/Overpass alapján frissül. Ha egy láncra 0 találat jön, a script megtartja a korábbi store-network-hu.json adott láncra vonatkozó adatait. Lidl külön, saját üzletlista alapján kerül majd be.",
@@ -5388,8 +5388,8 @@
       "area": "Csurgó",
       "region": "n.a.",
       "address": "Csurgó",
-      "lat": 46.261201,
-      "lon": 17.095767,
+      "lat": 46.261217,
+      "lon": 17.095768,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 488123661,
@@ -6095,6 +6095,27 @@
       ]
     },
     {
+      "store_id": "penny_komarom_penny_123486085",
+      "company": "Penny",
+      "name": "Penny",
+      "city": "Komárom",
+      "area": "Komárom",
+      "region": "n.a.",
+      "address": "2900 Komárom, Mártírok útja 84",
+      "lat": 47.738247,
+      "lon": 18.141318,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 123486085,
+      "brand": "Penny",
+      "operator": "Penny-Market Kft.",
+      "keywords": [
+        "Penny",
+        "Penny Komárom",
+        "2900 Komárom, Mártírok útja 84"
+      ]
+    },
+    {
       "store_id": "penny_kunmadaras_penny_834629887",
       "company": "Penny",
       "name": "Penny",
@@ -6144,8 +6165,8 @@
       "area": "Kőszeg",
       "region": "n.a.",
       "address": "9730 Kőszeg, Pogányi út 1",
-      "lat": 47.380669,
-      "lon": 16.55559,
+      "lat": 47.380677,
+      "lon": 16.555593,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 135338105,
@@ -8342,27 +8363,6 @@
       ]
     },
     {
-      "store_id": "penny_na_penny_123486085",
-      "company": "Penny",
-      "name": "Penny",
-      "city": "n.a.",
-      "area": "n.a.",
-      "region": "n.a.",
-      "address": "n.a.",
-      "lat": 47.738247,
-      "lon": 18.141318,
-      "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 123486085,
-      "brand": "Penny",
-      "operator": "Penny-Market Kft.",
-      "keywords": [
-        "Penny",
-        "Penny n.a.",
-        "n.a."
-      ]
-    },
-    {
       "store_id": "penny_na_penny_165555253",
       "company": "Penny",
       "name": "Penny",
@@ -8895,8 +8895,8 @@
       "area": "n.a.",
       "region": "n.a.",
       "address": "n.a.",
-      "lat": 46.212248,
-      "lon": 20.47177,
+      "lat": 46.212237,
+      "lon": 20.471661,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 255896059,
@@ -11541,8 +11541,8 @@
       "area": "Budapest",
       "region": "Közép-Magyarország",
       "address": "1046 Budapest, Eperjesi utca 2",
-      "lat": 47.574139,
-      "lon": 19.103515,
+      "lat": 47.574126,
+      "lon": 19.103534,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 128157485,
@@ -12605,18 +12605,18 @@
       ]
     },
     {
-      "store_id": "spar_eger_spar_158020867",
+      "store_id": "spar_eger_spar_14393848260",
       "company": "SPAR",
       "name": "Spar",
       "city": "Eger",
       "area": "Eger",
       "region": "Észak-Magyarország",
       "address": "3300 Eger, Barkóczy utca 4",
-      "lat": 47.901243,
-      "lon": 20.370874,
+      "lat": 47.901103,
+      "lon": 20.370751,
       "source": "openstreetmap_overpass",
-      "osm_type": "way",
-      "osm_id": 158020867,
+      "osm_type": "node",
+      "osm_id": 14393848260,
       "brand": "Spar",
       "operator": "",
       "keywords": [
@@ -13662,8 +13662,8 @@
       "area": "Kőszeg",
       "region": "n.a.",
       "address": "9730 Kőszeg, Rákóczi Ferenc utca 80",
-      "lat": 47.382751,
-      "lon": 16.549265,
+      "lat": 47.382767,
+      "lon": 16.549273,
       "source": "openstreetmap_overpass",
       "osm_type": "way",
       "osm_id": 135393053,
@@ -20648,6 +20648,27 @@
       ]
     },
     {
+      "store_id": "tesco_balassagyarmat_tesco_9769333",
+      "company": "Tesco",
+      "name": "Tesco",
+      "city": "Balassagyarmat",
+      "area": "Balassagyarmat",
+      "region": "Észak-Magyarország",
+      "address": "2660 Balassagyarmat, Mikszáth Kálmán út 56",
+      "lat": 48.08476,
+      "lon": 19.297657,
+      "source": "openstreetmap_overpass",
+      "osm_type": "relation",
+      "osm_id": 9769333,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco",
+        "Tesco Balassagyarmat",
+        "2660 Balassagyarmat, Mikszáth Kálmán út 56"
+      ]
+    },
+    {
       "store_id": "tesco_balatonboglar_tesco_extra_1318775311",
       "company": "Tesco",
       "name": "Tesco Extra",
@@ -21191,6 +21212,90 @@
         "Tesco Expressz",
         "Tesco Budapest",
         "1081 Budapest, Népszínház utca 30"
+      ]
+    },
+    {
+      "store_id": "tesco_budapest_tesco_expressz_4796843424",
+      "company": "Tesco",
+      "name": "Tesco Expressz",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1141 Budapest",
+      "lat": 47.524219,
+      "lon": 19.13357,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 4796843424,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco Expressz",
+        "Tesco Budapest",
+        "1141 Budapest"
+      ]
+    },
+    {
+      "store_id": "tesco_budapest_tesco_expressz_14385507001",
+      "company": "Tesco",
+      "name": "Tesco Expressz",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1131 Budapest",
+      "lat": 47.540309,
+      "lon": 19.090753,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 14385507001,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco Expressz",
+        "Tesco Budapest",
+        "1131 Budapest"
+      ]
+    },
+    {
+      "store_id": "tesco_budapest_tesco_expressz_14385507002",
+      "company": "Tesco",
+      "name": "Tesco Expressz",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1075 Budapest, Rumbach Sebestyén utca 19",
+      "lat": 47.498365,
+      "lon": 19.057556,
+      "source": "openstreetmap_overpass",
+      "osm_type": "node",
+      "osm_id": 14385507002,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco Expressz",
+        "Tesco Budapest",
+        "1075 Budapest, Rumbach Sebestyén utca 19"
+      ]
+    },
+    {
+      "store_id": "tesco_budapest_tesco_expressz_26601508",
+      "company": "Tesco",
+      "name": "Tesco Expressz",
+      "city": "Budapest",
+      "area": "Budapest",
+      "region": "Közép-Magyarország",
+      "address": "1044 Budapest, Erdősor út 5",
+      "lat": 47.580053,
+      "lon": 19.099042,
+      "source": "openstreetmap_overpass",
+      "osm_type": "way",
+      "osm_id": 26601508,
+      "brand": "Tesco",
+      "operator": "TESCO-GLOBAL Áruházak Zrt.",
+      "keywords": [
+        "Tesco Expressz",
+        "Tesco Budapest",
+        "1044 Budapest, Erdősor út 5"
       ]
     },
     {
