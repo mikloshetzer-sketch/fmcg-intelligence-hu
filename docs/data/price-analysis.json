@@ -1,15 +1,15 @@
 {
-  "updated_at": "2026-11-23T13:45:13Z",
+  "updated_at": "2026-11-24T14:20:50Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "method": "product-level price leadership and spread analysis",
   "cheapest_count": [
     {
-      "company": "Auchan",
-      "count": 6
+      "company": "SPAR",
+      "count": 7
     },
     {
-      "company": "SPAR",
+      "company": "Auchan",
       "count": 6
     },
     {
@@ -22,7 +22,7 @@
     },
     {
       "company": "Lidl",
-      "count": 3
+      "count": 2
     },
     {
       "company": "Penny",
@@ -58,8 +58,8 @@
   "value_scores": [
     {
       "company": "Lidl",
-      "price_index": 94,
-      "value_score": 106,
+      "price_index": 95,
+      "value_score": 105,
       "index_coverage": 24
     },
     {
@@ -82,8 +82,8 @@
     },
     {
       "company": "SPAR",
-      "price_index": 102,
-      "value_score": 98,
+      "price_index": 101,
+      "value_score": 99,
       "index_coverage": 25
     },
     {
@@ -244,27 +244,27 @@
     },
     {
       "category": "Húsáru",
-      "leader": "Lidl",
-      "leader_index": 95,
+      "leader": "Auchan",
+      "leader_index": 96,
       "ranking": [
         {
-          "company": "Lidl",
-          "category_index": 95,
-          "coverage": 4
-        },
-        {
           "company": "Auchan",
-          "category_index": 97,
+          "category_index": 96,
           "coverage": 4
         },
         {
           "company": "Tesco",
-          "category_index": 97,
+          "category_index": 96,
+          "coverage": 4
+        },
+        {
+          "company": "Lidl",
+          "category_index": 100,
           "coverage": 4
         },
         {
           "company": "Penny",
-          "category_index": 102,
+          "category_index": 100,
           "coverage": 4
         },
         {
@@ -274,7 +274,7 @@
         },
         {
           "company": "SPAR",
-          "category_index": 106,
+          "category_index": 105,
           "coverage": 4
         }
       ]
@@ -318,17 +318,17 @@
     },
     {
       "category": "Tejtermék",
-      "leader": "ALDI",
-      "leader_index": 98,
+      "leader": "SPAR",
+      "leader_index": 95,
       "ranking": [
         {
-          "company": "ALDI",
-          "category_index": 98,
+          "company": "SPAR",
+          "category_index": 95,
           "coverage": 5
         },
         {
-          "company": "SPAR",
-          "category_index": 98,
+          "company": "ALDI",
+          "category_index": 99,
           "coverage": 5
         },
         {
@@ -338,7 +338,7 @@
         },
         {
           "company": "Lidl",
-          "category_index": 99,
+          "category_index": 100,
           "coverage": 5
         },
         {
@@ -348,7 +348,7 @@
         },
         {
           "company": "Tesco",
-          "category_index": 107,
+          "category_index": 108,
           "coverage": 5
         }
       ]
@@ -356,11 +356,11 @@
     {
       "category": "Zöldség",
       "leader": "Lidl",
-      "leader_index": 87,
+      "leader_index": 86,
       "ranking": [
         {
           "company": "Lidl",
-          "category_index": 87,
+          "category_index": 86,
           "coverage": 4
         },
         {
@@ -370,22 +370,22 @@
         },
         {
           "company": "ALDI",
-          "category_index": 91,
+          "category_index": 90,
           "coverage": 4
         },
         {
           "company": "Penny",
-          "category_index": 99,
+          "category_index": 102,
           "coverage": 4
         },
         {
           "company": "SPAR",
-          "category_index": 110,
+          "category_index": 109,
           "coverage": 4
         },
         {
           "company": "Auchan",
-          "category_index": 125,
+          "category_index": 124,
           "coverage": 4
         }
       ]
@@ -447,7 +447,7 @@
       "cheapest_price": 629.0,
       "most_expensive_company": "Auchan",
       "most_expensive_price": 1373.0,
-      "average_price": 983.78,
+      "average_price": 1027.83,
       "spread_pct": 118.28,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
@@ -483,20 +483,8 @@
       "cheapest_price": 194.5,
       "most_expensive_company": "SPAR",
       "most_expensive_price": 293.0,
-      "average_price": 252.72,
+      "average_price": 249.28,
       "spread_pct": 50.64,
-      "competition_intensity": "nagy árszórás",
-      "coverage": 6
-    },
-    {
-      "product": "Darált sertéshús",
-      "category": "Húsáru",
-      "cheapest_company": "Lidl",
-      "cheapest_price": 1299.0,
-      "most_expensive_company": "SPAR",
-      "most_expensive_price": 1954.44,
-      "average_price": 1699.87,
-      "spread_pct": 50.46,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
@@ -511,6 +499,18 @@
       "spread_pct": 46.79,
       "competition_intensity": "nagy árszórás",
       "coverage": 5
+    },
+    {
+      "product": "Trappista sajt",
+      "category": "Tejtermék",
+      "cheapest_company": "SPAR",
+      "cheapest_price": 1990.0,
+      "most_expensive_company": "Tesco",
+      "most_expensive_price": 2570.0,
+      "average_price": 2311.83,
+      "spread_pct": 29.15,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 6
     },
     {
       "product": "Vaj",
@@ -531,20 +531,8 @@
       "cheapest_price": 1186.0,
       "most_expensive_company": "ALDI",
       "most_expensive_price": 1465.0,
-      "average_price": 1336.5,
+      "average_price": 1325.5,
       "spread_pct": 23.52,
-      "competition_intensity": "nagy árszórás",
-      "coverage": 6
-    },
-    {
-      "product": "Trappista sajt",
-      "category": "Tejtermék",
-      "cheapest_company": "Auchan",
-      "cheapest_price": 2141.0,
-      "most_expensive_company": "Tesco",
-      "most_expensive_price": 2570.0,
-      "average_price": 2378.5,
-      "spread_pct": 20.04,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
@@ -557,6 +545,18 @@
       "most_expensive_price": 506.67,
       "average_price": 446.06,
       "spread_pct": 18.22,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 6
+    },
+    {
+      "product": "Darált sertéshús",
+      "category": "Húsáru",
+      "cheapest_company": "Auchan",
+      "cheapest_price": 1699.0,
+      "most_expensive_company": "SPAR",
+      "most_expensive_price": 1954.44,
+      "average_price": 1772.14,
+      "spread_pct": 15.03,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
@@ -751,18 +751,18 @@
       "coverage": 6
     },
     {
-      "product": "Darált sertéshús",
-      "category": "Húsáru",
-      "spread_pct": 50.46,
-      "competition_intensity": "nagy árszórás",
-      "coverage": 6
-    },
-    {
       "product": "Rizs",
       "category": "Alapélelmiszer",
       "spread_pct": 46.79,
       "competition_intensity": "nagy árszórás",
       "coverage": 5
+    },
+    {
+      "product": "Trappista sajt",
+      "category": "Tejtermék",
+      "spread_pct": 29.15,
+      "competition_intensity": "nagy árszórás",
+      "coverage": 6
     },
     {
       "product": "Vaj",
@@ -779,16 +779,16 @@
       "coverage": 6
     },
     {
-      "product": "Trappista sajt",
+      "product": "Natúr joghurt",
       "category": "Tejtermék",
-      "spread_pct": 20.04,
+      "spread_pct": 18.22,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },
     {
-      "product": "Natúr joghurt",
-      "category": "Tejtermék",
-      "spread_pct": 18.22,
+      "product": "Darált sertéshús",
+      "category": "Húsáru",
+      "spread_pct": 15.03,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
     },

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23T13:45:13Z",
+  "updated_at": "2026-11-24T14:20:50Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -241,7 +241,7 @@
       "category": "Tejtermék",
       "expected_unit": "kg",
       "prices": {
-        "SPAR": 2390.0,
+        "SPAR": 1990.0,
         "Auchan": 2141.0,
         "ALDI": 2390.0,
         "Lidl": 2390.0,
@@ -250,10 +250,10 @@
       },
       "selected_products": {
         "SPAR": {
-          "source_product_id": "spar-507158006",
-          "source_product_name": "S-Budget félzsíros, félkemény trappista sajt ",
-          "amount": 2390.0,
-          "unit_amount": 2390.0,
+          "source_product_id": "5998200460371",
+          "source_product_name": "Mizo trappista sajt",
+          "amount": 1990.0,
+          "unit_amount": 1990.0,
           "unit": "kg",
           "unit_title": "db",
           "packaging": "1",
@@ -444,7 +444,7 @@
           "price_type": "NORMAL"
         },
         "SPAR": {
-          "source_product_id": "5999139409493",
+          "source_product_id": "5999139409547",
           "source_product_name": "S-budget tojás 10db ¨s¨",
           "amount": 519.0,
           "unit_amount": 51.9,
@@ -476,7 +476,7 @@
         "Auchan": 1199.0,
         "SPAR": 1365.0,
         "Lidl": 1369.0,
-        "Penny": 1435.0,
+        "Penny": 1369.0,
         "ALDI": 1465.0
       },
       "selected_products": {
@@ -523,8 +523,8 @@
         "Penny": {
           "source_product_id": "penny-150",
           "source_product_name": "Kedvenc Hentese sertéscomb csont nélk. kg",
-          "amount": 1435.0,
-          "unit_amount": 1435.0,
+          "amount": 1369.0,
+          "unit_amount": 1369.0,
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "1",
@@ -549,21 +549,21 @@
       "category": "Húsáru",
       "expected_unit": "kg",
       "prices": {
-        "Lidl": 1299.0,
+        "Penny": 1749.0,
         "Tesco": 1748.75,
         "Auchan": 1699.0,
+        "Lidl": 1732.67,
         "ALDI": 1749.0,
-        "Penny": 1749.0,
         "SPAR": 1954.44
       },
       "selected_products": {
-        "Lidl": {
-          "source_product_id": "lidl-0005545",
-          "source_product_name": "Húsfarm XXL Sertés darálthús 30%,  1000g",
-          "amount": 1299.0,
-          "unit_amount": 1299.0,
+        "Penny": {
+          "source_product_id": "penny-158",
+          "source_product_name": "Kedvenc Hentese sertés darálthús 30%zsírt.",
+          "amount": 1749.0,
+          "unit_amount": 1749.0,
           "unit": "kg",
-          "unit_title": "kg",
+          "unit_title": "csomag",
           "packaging": "1",
           "price_type": "NORMAL"
         },
@@ -587,19 +587,19 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
+        "Lidl": {
+          "source_product_id": "lidl-0201483",
+          "source_product_name": "Metzgerfrisch Friss sertés darálthús 30%  zsírtartalommal, 1500g",
+          "amount": 2599.0,
+          "unit_amount": 1732.67,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "1.5",
+          "price_type": "NORMAL"
+        },
         "ALDI": {
           "source_product_id": "aldi-323242",
           "source_product_name": "Darált sertéshús 30 % 1kg",
-          "amount": 1749.0,
-          "unit_amount": 1749.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Penny": {
-          "source_product_id": "penny-158",
-          "source_product_name": "Kedvenc Hentese sertés darálthús 30%zsírt.",
           "amount": 1749.0,
           "unit_amount": 1749.0,
           "unit": "kg",
@@ -1089,9 +1089,9 @@
       "expected_unit": "kg",
       "prices": {
         "ALDI": 629.0,
-        "Tesco": 830.0,
-        "Penny": 932.0,
         "SPAR": 940.0,
+        "Tesco": 961.0,
+        "Penny": 1065.33,
         "Lidl": 1198.67,
         "Auchan": 1373.0
       },
@@ -1106,11 +1106,21 @@
           "packaging": "1",
           "price_type": "NORMAL"
         },
+        "SPAR": {
+          "source_product_id": "5999139410581",
+          "source_product_name": "S-Budget lecsópaprika",
+          "amount": 705.0,
+          "unit_amount": 940.0,
+          "unit": "kg",
+          "unit_title": "csomag",
+          "packaging": "0.75",
+          "price_type": "NORMAL"
+        },
         "Tesco": {
           "source_product_id": "2896050000000",
           "source_product_name": "PAPRIKA LÉDIG QQ",
-          "amount": 830.0,
-          "unit_amount": 830.0,
+          "amount": 961.0,
+          "unit_amount": 961.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1119,18 +1129,8 @@
         "Penny": {
           "source_product_id": "penny-375",
           "source_product_name": "Hazai lecsópaprika 750gr",
-          "amount": 699.0,
-          "unit_amount": 932.0,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "0.75",
-          "price_type": "NORMAL"
-        },
-        "SPAR": {
-          "source_product_id": "5999139410581",
-          "source_product_name": "S-Budget lecsópaprika",
-          "amount": 705.0,
-          "unit_amount": 940.0,
+          "amount": 799.0,
+          "unit_amount": 1065.33,
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "0.75",
@@ -1246,7 +1246,7 @@
         "Penny": 245.0,
         "Auchan": 249.0,
         "ALDI": 255.0,
-        "Tesco": 279.8,
+        "Tesco": 259.2,
         "SPAR": 293.0
       },
       "selected_products": {
@@ -1293,8 +1293,8 @@
         "Tesco": {
           "source_product_id": "5999544670310",
           "source_product_name": "GROWERS HARVEST BURGONYA 5 kg",
-          "amount": 1399.0,
-          "unit_amount": 279.8,
+          "amount": 1296.0,
+          "unit_amount": 259.2,
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "5",
@@ -1560,7 +1560,7 @@
       "selected_products": {
         "Auchan": {
           "source_product_id": "4008671013004",
-          "source_product_name": "Sweet Family Kristálycukor 1kg",
+          "source_product_name": "Sweet Family kristálycukor 1 kg",
           "amount": 313.0,
           "unit_amount": 313.0,
           "unit": "kg",
@@ -1570,7 +1570,7 @@
         },
         "ALDI": {
           "source_product_id": "4008671013004",
-          "source_product_name": "Sweet Family Kristálycukor 1kg",
+          "source_product_name": "Sweet Family kristálycukor 1 kg",
           "amount": 315.0,
           "unit_amount": 315.0,
           "unit": "kg",
