@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-11-26T08:43:50.746663+00:00",
+  "updated_at": "2026-11-26T21:48:16.974408+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-11-26T08:43:50.746663+00:00",
+    "updated_at": "2026-11-26T21:48:16.974408+00:00",
     "leader_social": "Penny",
     "leader_social_index": 29,
     "dominant_social_topic": "árak és akciók",
@@ -13,33 +13,47 @@
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 0,
-      "raw_social_mentions": 0,
+      "social_mentions": 1,
+      "raw_social_mentions": 1,
       "dashboard_mentions": 0,
-      "background_mentions": 0,
+      "background_mentions": 1,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 0,
+      "weighted_social_mentions": 0.5,
       "hu_relevant_mentions": 0,
-      "social_index": 0,
+      "social_index": 16,
       "social_sources": {
         "reddit": 0,
         "youtube": 0,
-        "mastodon": 0
+        "mastodon": 1
       },
       "raw_social_sources": {
         "reddit": 0,
         "youtube": 0,
-        "mastodon": 0
+        "mastodon": 1
       },
       "dominant_social_topic": "általános vállalati említés",
       "top_social_topics": [],
       "topic_sentiment": {},
-      "social_sentiment": "neutral",
+      "social_sentiment": "positive",
       "latest_items": [],
-      "background_items": [],
+      "background_items": [
+        {
+          "id": "066fc9d9ab1685cf",
+          "source": "mastodon",
+          "company": "Lidl",
+          "title": "",
+          "summary": "Grrr, le (peu) de nombre de fois où je vais à # LIDL car j'ai vu un produit intéressant, voir bon, dans leur # Prospectus à dates, et quand t'arrive sur place, y'en a pas car: \"on l'a pas reçu\", ils l'ont pas encore mis en rayon, ils l'ont mis la veille y'en a plus, ou photo non contractuelle c'est tout autre chose. Aujourd'hui, 1 heure après l'ouverture, y'en a plus...Il devait y'en avoir 4 pour tout le # Magasin ...vu l'offre surement acheté par le même client. # Consumérisme # Marketing # Arn",
+          "url": "https://mastodon.roflcopter.fr/@lbr59/117682422967559675",
+          "published": "Thu, 26 Nov 2026 11:07:48 +0000",
+          "query": "#lidl",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "positive"
+        }
+      ],
       "quality_summary": {
         "dashboard_items": 0,
-        "background_items": 0,
+        "background_items": 1,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
@@ -49,32 +63,59 @@
     },
     {
       "company": "SPAR",
-      "social_mentions": 0,
-      "raw_social_mentions": 0,
-      "dashboard_mentions": 0,
+      "social_mentions": 1,
+      "raw_social_mentions": 1,
+      "dashboard_mentions": 1,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 0,
-      "hu_relevant_mentions": 0,
-      "social_index": 0,
+      "weighted_social_mentions": 1.0,
+      "hu_relevant_mentions": 1,
+      "social_index": 16,
       "social_sources": {
         "reddit": 0,
-        "youtube": 0,
+        "youtube": 1,
         "mastodon": 0
       },
       "raw_social_sources": {
         "reddit": 0,
-        "youtube": 0,
+        "youtube": 1,
         "mastodon": 0
       },
-      "dominant_social_topic": "általános vállalati említés",
-      "top_social_topics": [],
-      "topic_sentiment": {},
+      "dominant_social_topic": "árak és akciók",
+      "top_social_topics": [
+        {
+          "topic": "árak és akciók",
+          "score": 1.0
+        }
+      ],
+      "topic_sentiment": {
+        "árak és akciók": {
+          "positive": 0.0,
+          "neutral": 1.0,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        }
+      },
       "social_sentiment": "neutral",
-      "latest_items": [],
+      "latest_items": [
+        {
+          "id": "0e9a113a3899ce19",
+          "source": "youtube",
+          "company": "SPAR",
+          "title": "SPAR - Adni Öröm! adománygyűjtő akció 2026 – Az adomány útja - YouTube",
+          "summary": "SPAR - Adni Öröm! adománygyűjtő akció 2026 – Az adomány útja YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9jYUNJU012a0RNbENHMEF0RmNwTWUzNk92emp6ZjZmNnkwRUlGTWlTUExRcWxDcHdNUXJPWURJRzQySG1VVnZ2dTA1OXhRUjhmMENMZV93?oc=5",
+          "published": "Thu, 26 Nov 2026 09:14:07 GMT",
+          "query": "site:youtube.com \"SPAR Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        }
+      ],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 0,
+        "dashboard_items": 1,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
@@ -400,35 +441,35 @@
     },
     {
       "company": "CBA",
-      "social_mentions": 5,
-      "raw_social_mentions": 5,
-      "dashboard_mentions": 5,
+      "social_mentions": 6,
+      "raw_social_mentions": 6,
+      "dashboard_mentions": 6,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 5.0,
-      "hu_relevant_mentions": 5,
+      "weighted_social_mentions": 6.0,
+      "hu_relevant_mentions": 6,
       "social_index": 29,
       "social_sources": {
         "reddit": 0,
-        "youtube": 5,
+        "youtube": 6,
         "mastodon": 0
       },
       "raw_social_sources": {
         "reddit": 0,
-        "youtube": 5,
+        "youtube": 6,
         "mastodon": 0
       },
       "dominant_social_topic": "árak és akciók",
       "top_social_topics": [
         {
           "topic": "árak és akciók",
-          "score": 5.0
+          "score": 6.0
         }
       ],
       "topic_sentiment": {
         "árak és akciók": {
           "positive": 0.0,
-          "neutral": 5.0,
+          "neutral": 6.0,
           "negative": 0.0,
           "mixed": 0.0,
           "dominant": "neutral"
@@ -457,6 +498,19 @@
           "summary": "CBA Príma akciós újság 11.12. - 11.18. YouTube",
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBJVmdKUUd0VUxVWnZObWhEWFRMRUx3MkFqS0pjanBnOGpvU2YzX3lqZ1JNcFFySVdqTEpxZy16RVZabk45OVJrVlBTcEM1WnhPc0FNLUZR?oc=5",
           "published": "Mon, 09 Nov 2026 13:57:42 GMT",
+          "query": "site:youtube.com \"CBA Príma\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "213fe190f1f19c0c",
+          "source": "youtube",
+          "company": "CBA",
+          "title": "CBA Príma akciós újság 11.05. - 11.30. - YouTube",
+          "summary": "CBA Príma akciós újság 11.05. - 11.30. YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBVVzNpQjRVQkRIOWI2Y2F6ZmxQWkxJdzFsb3p0NzZudjlrcW1nYjZ4WXk2My1YVHg3QWcyLVMxbUpISDJneThQNVk0TjU0S1hNc0YtcXdR?oc=5",
+          "published": "Thu, 05 Nov 2026 17:32:39 GMT",
           "query": "site:youtube.com \"CBA Príma\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
           "hu_relevance": 1.0,
           "relevance_bucket": "dashboard",
@@ -504,7 +558,7 @@
       ],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 5,
+        "dashboard_items": 6,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
