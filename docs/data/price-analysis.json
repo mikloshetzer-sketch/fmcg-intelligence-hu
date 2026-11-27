@@ -1,19 +1,19 @@
 {
-  "updated_at": "2026-11-26T13:16:06Z",
+  "updated_at": "2026-11-27T13:13:56Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "method": "product-level price leadership and spread analysis",
   "cheapest_count": [
     {
       "company": "Auchan",
-      "count": 8
-    },
-    {
-      "company": "SPAR",
-      "count": 5
+      "count": 9
     },
     {
       "company": "Lidl",
+      "count": 4
+    },
+    {
+      "company": "SPAR",
       "count": 4
     },
     {
@@ -36,15 +36,11 @@
     },
     {
       "company": "SPAR",
-      "count": 5
+      "count": 6
     },
     {
       "company": "Auchan",
       "count": 4
-    },
-    {
-      "company": "Penny",
-      "count": 3
     },
     {
       "company": "ALDI",
@@ -52,6 +48,10 @@
     },
     {
       "company": "Lidl",
+      "count": 2
+    },
+    {
+      "company": "Penny",
       "count": 2
     }
   ],
@@ -76,14 +76,8 @@
     },
     {
       "company": "Tesco",
-      "price_index": 99,
-      "value_score": 101,
-      "index_coverage": 25
-    },
-    {
-      "company": "SPAR",
-      "price_index": 105,
-      "value_score": 95,
+      "price_index": 98,
+      "value_score": 102,
       "index_coverage": 25
     },
     {
@@ -91,19 +85,20 @@
       "price_index": 106,
       "value_score": 94,
       "index_coverage": 25
+    },
+    {
+      "company": "SPAR",
+      "price_index": 107,
+      "value_score": 93,
+      "index_coverage": 25
     }
   ],
   "category_leaders": [
     {
       "category": "Alapélelmiszer",
-      "leader": "SPAR",
-      "leader_index": 95,
+      "leader": "Auchan",
+      "leader_index": 97,
       "ranking": [
-        {
-          "company": "SPAR",
-          "category_index": 95,
-          "coverage": 5
-        },
         {
           "company": "Auchan",
           "category_index": 97,
@@ -115,17 +110,22 @@
           "coverage": 5
         },
         {
+          "company": "Tesco",
+          "category_index": 98,
+          "coverage": 5
+        },
+        {
           "company": "ALDI",
           "category_index": 100,
           "coverage": 4
         },
         {
-          "company": "Penny",
-          "category_index": 105,
+          "company": "SPAR",
+          "category_index": 103,
           "coverage": 5
         },
         {
-          "company": "Tesco",
+          "company": "Penny",
           "category_index": 105,
           "coverage": 5
         }
@@ -254,7 +254,7 @@
         },
         {
           "company": "Penny",
-          "category_index": 97,
+          "category_index": 98,
           "coverage": 4
         },
         {
@@ -264,12 +264,12 @@
         },
         {
           "company": "ALDI",
-          "category_index": 100,
+          "category_index": 101,
           "coverage": 4
         },
         {
           "company": "Lidl",
-          "category_index": 102,
+          "category_index": 101,
           "coverage": 4
         },
         {
@@ -356,11 +356,11 @@
     {
       "category": "Zöldség",
       "leader": "Lidl",
-      "leader_index": 81,
+      "leader_index": 80,
       "ranking": [
         {
           "company": "Lidl",
-          "category_index": 81,
+          "category_index": 80,
           "coverage": 4
         },
         {
@@ -370,7 +370,7 @@
         },
         {
           "company": "Tesco",
-          "category_index": 94,
+          "category_index": 96,
           "coverage": 4
         },
         {
@@ -483,7 +483,7 @@
       "cheapest_price": 194.5,
       "most_expensive_company": "SPAR",
       "most_expensive_price": 298.0,
-      "average_price": 264.12,
+      "average_price": 267.42,
       "spread_pct": 53.21,
       "competition_intensity": "nagy árszórás",
       "coverage": 6
@@ -491,11 +491,11 @@
     {
       "product": "Rizs",
       "category": "Alapélelmiszer",
-      "cheapest_company": "SPAR",
+      "cheapest_company": "Auchan",
       "cheapest_price": 374.0,
-      "most_expensive_company": "Penny",
+      "most_expensive_company": "SPAR",
       "most_expensive_price": 549.0,
-      "average_price": 445.0,
+      "average_price": 451.2,
       "spread_pct": 46.79,
       "competition_intensity": "nagy árszórás",
       "coverage": 5
@@ -579,7 +579,7 @@
       "cheapest_price": 1699.0,
       "most_expensive_company": "SPAR",
       "most_expensive_price": 1909.0,
-      "average_price": 1800.67,
+      "average_price": 1779.0,
       "spread_pct": 12.36,
       "competition_intensity": "közepes árverseny",
       "coverage": 6
