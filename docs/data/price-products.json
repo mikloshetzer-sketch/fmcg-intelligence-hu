@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-27T13:13:56Z",
+  "updated_at": "2026-11-28T12:29:19Z",
   "source": "GVH Árfigyelő API",
   "status": "ok",
   "basket_size": 25,
@@ -551,8 +551,8 @@
       "prices": {
         "Penny": 1399.0,
         "SPAR": 1954.44,
+        "Lidl": 1549.0,
         "Auchan": 1699.0,
-        "Lidl": 1732.67,
         "Tesco": 1748.75,
         "ALDI": 1749.0
       },
@@ -577,6 +577,16 @@
           "packaging": "0.9",
           "price_type": "NORMAL"
         },
+        "Lidl": {
+          "source_product_id": "lidl-0005545",
+          "source_product_name": "Húsfarm XXL Sertés darálthús 30%,  1000g",
+          "amount": 1549.0,
+          "unit_amount": 1549.0,
+          "unit": "kg",
+          "unit_title": "kg",
+          "packaging": "1",
+          "price_type": "NORMAL"
+        },
         "Auchan": {
           "source_product_id": "2167650000007",
           "source_product_name": "Auchan Kedvenc sertés darált hús maximum 30% zsírtartalommal Ft/kg családi",
@@ -585,16 +595,6 @@
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
-          "price_type": "NORMAL"
-        },
-        "Lidl": {
-          "source_product_id": "lidl-0201483",
-          "source_product_name": "Metzgerfrisch Friss sertés darálthús 30%  zsírtartalommal, 1500g",
-          "amount": 2599.0,
-          "unit_amount": 1732.67,
-          "unit": "kg",
-          "unit_title": "csomag",
-          "packaging": "1.5",
           "price_type": "NORMAL"
         },
         "Tesco": {
@@ -628,7 +628,7 @@
       "prices": {
         "Auchan": 1699.0,
         "ALDI": 1699.0,
-        "Lidl": 1729.0,
+        "Lidl": 1699.0,
         "Tesco": 1779.0,
         "Penny": 1859.0,
         "SPAR": 1909.0
@@ -655,10 +655,10 @@
           "price_type": "NORMAL"
         },
         "Lidl": {
-          "source_product_id": "2895800000000",
-          "source_product_name": "Csirkemell tokány, kg ",
-          "amount": 1729.0,
-          "unit_amount": 1729.0,
+          "source_product_id": "lidl-0009810",
+          "source_product_name": "Húsfarm Csirkemellfilé , kg",
+          "amount": 1699.0,
+          "unit_amount": 1699.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1016,7 +1016,7 @@
         "Penny": 799.0,
         "SPAR": 840.0,
         "ALDI": 899.0,
-        "Auchan": 1251.0
+        "Auchan": 999.0
       },
       "selected_products": {
         "Lidl": {
@@ -1070,12 +1070,12 @@
           "price_type": "NORMAL"
         },
         "Auchan": {
-          "source_product_id": "5998985599686",
-          "source_product_name": "Paradicsom 1 kg",
-          "amount": 1251.0,
-          "unit_amount": 1251.0,
+          "source_product_id": "2101790000008",
+          "source_product_name": "Paradicsom  Ft/kg",
+          "amount": 999.0,
+          "unit_amount": 999.0,
           "unit": "kg",
-          "unit_title": "csomag",
+          "unit_title": "kg",
           "packaging": "1",
           "price_type": "NORMAL"
         }
@@ -1092,7 +1092,7 @@
         "Auchan": 1047.0,
         "Penny": 1065.33,
         "SPAR": 1082.67,
-        "Tesco": 1121.0,
+        "Tesco": 1157.0,
         "Lidl": 1198.67
       },
       "selected_products": {
@@ -1139,8 +1139,8 @@
         "Tesco": {
           "source_product_id": "2896050000000",
           "source_product_name": "PAPRIKA LÉDIG QQ",
-          "amount": 1121.0,
-          "unit_amount": 1121.0,
+          "amount": 1157.0,
+          "unit_amount": 1157.0,
           "unit": "kg",
           "unit_title": "kg",
           "packaging": "1",
@@ -1456,7 +1456,7 @@
         },
         "Penny": {
           "source_product_id": "penny-32227",
-          "source_product_name": "Penny napraforgó étolaj",
+          "source_product_name": "Gust/penny napraforgóétolaj",
           "amount": 719.0,
           "unit_amount": 719.0,
           "unit": "l",
@@ -1555,7 +1555,7 @@
         "Lidl": 315.0,
         "SPAR": 315.0,
         "Penny": 315.0,
-        "Tesco": 316.0
+        "Tesco": 326.0
       },
       "selected_products": {
         "Auchan": {
@@ -1611,8 +1611,8 @@
         "Tesco": {
           "source_product_id": "5051007099431",
           "source_product_name": "Tesco kristálycukor 1 kg QQ",
-          "amount": 316.0,
-          "unit_amount": 316.0,
+          "amount": 326.0,
+          "unit_amount": 326.0,
           "unit": "kg",
           "unit_title": "csomag",
           "packaging": "1",
