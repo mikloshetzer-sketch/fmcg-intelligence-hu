@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-11-27T21:31:00.166197+00:00",
+  "updated_at": "2026-11-28T08:15:16.364082+00:00",
   "version": "social-signal-layer-v1.4-quality-topic-sentiment",
   "scope": "Hungarian FMCG retail chains",
   "method_note": "Ez social signal réteg, nem teljes social analytics. A mutató friss, nyílt forrású említésekből készül, company-profiles.json alapú magyar piaci relevancia-szűréssel. A V1.4 verzió csak dashboard és background relevanciájú elemeket számol az indexbe.",
   "intelligence_summary": {
-    "updated_at": "2026-11-27T21:31:00.166197+00:00",
+    "updated_at": "2026-11-28T08:15:16.364082+00:00",
     "leader_social": "Penny",
     "leader_social_index": 29,
     "dominant_social_topic": "árak és akciók",
@@ -13,30 +13,67 @@
   "items": [
     {
       "company": "Lidl",
-      "social_mentions": 1,
-      "raw_social_mentions": 1,
+      "social_mentions": 2,
+      "raw_social_mentions": 2,
       "dashboard_mentions": 0,
-      "background_mentions": 1,
+      "background_mentions": 2,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 0.5,
+      "weighted_social_mentions": 1.0,
       "hu_relevant_mentions": 0,
       "social_index": 16,
       "social_sources": {
         "reddit": 0,
         "youtube": 0,
-        "mastodon": 1
+        "mastodon": 2
       },
       "raw_social_sources": {
         "reddit": 0,
         "youtube": 0,
-        "mastodon": 1
+        "mastodon": 2
       },
-      "dominant_social_topic": "általános vállalati említés",
-      "top_social_topics": [],
-      "topic_sentiment": {},
+      "dominant_social_topic": "digitalizáció és önkiszolgálás",
+      "top_social_topics": [
+        {
+          "topic": "digitalizáció és önkiszolgálás",
+          "score": 1.0
+        },
+        {
+          "topic": "munkaerő és foglalkoztatás",
+          "score": 0.5
+        }
+      ],
+      "topic_sentiment": {
+        "munkaerő és foglalkoztatás": {
+          "positive": 0.0,
+          "neutral": 0.5,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        },
+        "digitalizáció és önkiszolgálás": {
+          "positive": 0.0,
+          "neutral": 0.5,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        }
+      },
       "social_sentiment": "positive",
       "latest_items": [],
       "background_items": [
+        {
+          "id": "21a613a361f442a5",
+          "source": "mastodon",
+          "company": "Lidl",
+          "title": "",
+          "summary": "Flexibele Studenten Bijbaan | Promotor | Lidl Scan&Go – €17,5 Per Uur – Deeltijd – Geen Ervaring Bekijk hier de vacature: https:// vacatures-in-enschede.nl/vacat ure/flexibele-studenten-bijbaan-promotor-lidl-scan175-per-uur-deeltijd-geen-ervaring/ # vacature # enschede # lidl",
+          "url": "https://vacatureforum.nl/@enschede/117690679308046876",
+          "published": "Fri, 27 Nov 2026 22:07:30 +0000",
+          "query": "#lidl",
+          "hu_relevance": 0.5,
+          "relevance_bucket": "background",
+          "item_sentiment": "neutral"
+        },
         {
           "id": "066fc9d9ab1685cf",
           "source": "mastodon",
@@ -53,7 +90,7 @@
       ],
       "quality_summary": {
         "dashboard_items": 0,
-        "background_items": 1,
+        "background_items": 2,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
         "background_relevance_threshold": 0.5
@@ -162,32 +199,72 @@
     },
     {
       "company": "ALDI",
-      "social_mentions": 0,
-      "raw_social_mentions": 0,
-      "dashboard_mentions": 0,
+      "social_mentions": 2,
+      "raw_social_mentions": 2,
+      "dashboard_mentions": 2,
       "background_mentions": 0,
       "discarded_mentions": 0,
-      "weighted_social_mentions": 0,
-      "hu_relevant_mentions": 0,
-      "social_index": 0,
+      "weighted_social_mentions": 2.0,
+      "hu_relevant_mentions": 2,
+      "social_index": 16,
       "social_sources": {
         "reddit": 0,
-        "youtube": 0,
+        "youtube": 2,
         "mastodon": 0
       },
       "raw_social_sources": {
         "reddit": 0,
-        "youtube": 0,
+        "youtube": 2,
         "mastodon": 0
       },
-      "dominant_social_topic": "általános vállalati említés",
-      "top_social_topics": [],
-      "topic_sentiment": {},
+      "dominant_social_topic": "árak és akciók",
+      "top_social_topics": [
+        {
+          "topic": "árak és akciók",
+          "score": 2.0
+        }
+      ],
+      "topic_sentiment": {
+        "árak és akciók": {
+          "positive": 0.0,
+          "neutral": 2.0,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "dominant": "neutral"
+        }
+      },
       "social_sentiment": "neutral",
-      "latest_items": [],
+      "latest_items": [
+        {
+          "id": "e88a8e05861337f5",
+          "source": "youtube",
+          "company": "ALDI",
+          "title": "Aldi akciós újság - 2026.09.10 - 2026.09.16 - YouTube",
+          "summary": "Aldi akciós újság - 2026.09.10 - 2026.09.16 YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE16T29TQi12Sl9pdExkS3NWN040VGpEdXlyYWZJOTg3SFVHeTFLV1RjTzgycWZpVmpNYjBqREtTZTF0UXhVTGZuWXJLZjN6ckxxVzduUnJ3?oc=5",
+          "published": "Sat, 05 Sep 2026 09:10:21 GMT",
+          "query": "site:youtube.com \"ALDI Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        },
+        {
+          "id": "a421a3952168270f",
+          "source": "youtube",
+          "company": "ALDI",
+          "title": "Aldi akciós újság - 31. hét - 2026.07.30 - 2026.08.05 - YouTube",
+          "summary": "Aldi akciós újság - 31. hét - 2026.07.30 - 2026.08.05 YouTube",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBoT0hsYXRTWnlud3prcHNMOVdUV0xYOExnR3FTNFBTTV9HN0NEMkxRMUc2MDRETmNzV2NmUXIwbzl3SW5Vb3BDeF9fZEdjQ2xHWnFMem53?oc=5",
+          "published": "Sat, 25 Jul 2026 06:57:42 GMT",
+          "query": "site:youtube.com \"ALDI Magyarország\" (review OR panasz OR akció OR vásárlás OR bolt OR üzlet)",
+          "hu_relevance": 1.0,
+          "relevance_bucket": "dashboard",
+          "item_sentiment": "neutral"
+        }
+      ],
       "background_items": [],
       "quality_summary": {
-        "dashboard_items": 0,
+        "dashboard_items": 2,
         "background_items": 0,
         "discarded_items": 0,
         "dashboard_relevance_threshold": 0.8,
